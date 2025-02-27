@@ -1,0 +1,133 @@
+{
+  "minecraft:recipes/decorations/crafting_table": {
+    "criteria": {
+      "unlock_right_away": "2025-02-27 17:50:26 -0300"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:sunflower_plains": "2025-02-27 17:50:30 -0300",
+      "minecraft:snowy_plains": "2025-02-27 20:14:25 -0300",
+      "minecraft:ocean": "2025-02-27 20:14:05 -0300",
+      "minecraft:savanna": "2025-02-27 20:15:06 -0300",
+      "minecraft:plains": "2025-02-27 20:08:26 -0300"
+    },
+    "done": false
+  },
+  "enhanced_playthrough:recipes/building_blocks/limestone_brick_wall": {
+    "criteria": {
+      "has_limestone_brick": "2025-02-27 20:17:35 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/steel_pickaxe": {
+    "criteria": {
+      "has_steel_ingot": "2025-02-27 20:07:28 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/building_blocks/limestone_brick_stair_from_stone_cutting_limestone_brick": {
+    "criteria": {
+      "has_limestone_brick": "2025-02-27 20:17:35 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/steel_hoe": {
+    "criteria": {
+      "has_steel_ingot": "2025-02-27 20:07:28 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/building_blocks/limestone_brick_stair": {
+    "criteria": {
+      "has_limestone_brick": "2025-02-27 20:17:35 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/building_blocks/limestone_brick_slab": {
+    "criteria": {
+      "has_limestone_brick": "2025-02-27 20:17:35 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/steel_sword": {
+    "criteria": {
+      "has_steel_ingot": "2025-02-27 20:07:28 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/steel_leggings": {
+    "criteria": {
+      "has_steel_ingot": "2025-02-27 20:07:28 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/steel_block": {
+    "criteria": {
+      "has_steel_ingot": "2025-02-27 20:07:28 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/steel_helmet": {
+    "criteria": {
+      "has_steel_ingot": "2025-02-27 20:07:28 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/building_blocks/limestone_brick_slab_from_stone_cutting_limestone_brick": {
+    "criteria": {
+      "has_limestone_brick": "2025-02-27 20:17:35 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/steel_shovel": {
+    "criteria": {
+      "has_steel_ingot": "2025-02-27 20:07:28 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/steel_polisher": {
+    "criteria": {
+      "has_steel_ingot": "2025-02-27 20:07:28 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/steel_ingot": {
+    "criteria": {
+      "has_steel_ingot": "2025-02-27 20:07:28 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:survival/steel_isnt_enough": {
+    "criteria": {
+      "requirement": "2025-02-27 20:07:28 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/steel_boots": {
+    "criteria": {
+      "has_steel_ingot": "2025-02-27 20:07:28 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/building_blocks/limestone_brick_wall_from_stone_cutting_limestone_brick": {
+    "criteria": {
+      "has_limestone_brick": "2025-02-27 20:17:35 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/steel_axe": {
+    "criteria": {
+      "has_steel_ingot": "2025-02-27 20:07:28 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/steel_chestplate": {
+    "criteria": {
+      "has_steel_ingot": "2025-02-27 20:07:28 -0300"
+    },
+    "done": true
+  },
+  "DataVersion": 3465
+}
