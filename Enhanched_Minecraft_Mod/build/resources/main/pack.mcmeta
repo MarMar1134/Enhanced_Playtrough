@@ -9,6 +9,36 @@
     "block": [{
       "namespace": "minecraft",
       "path": "recipes/mud_bricks.json"
-    }]
+    },
+      {
+        "namespace": "minecraft",
+        "path": "recipes/stone_bricks.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "recipes/comparator.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "recipes/furnace.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "recipes/blast_furnace.json"
+      }],
+    "item": [
+      {
+        "namespace": "minecraft",
+        "path": "recipes/cookie.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "recipes/bread.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "recipes/pumpkin_pie.json"
+      }
+    ]
   }
 }

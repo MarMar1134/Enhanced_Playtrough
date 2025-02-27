@@ -7,11 +7,11 @@
     }
   },
   "pattern": [
-    "AAA",
-    "AAA"
+    "AA",
+    "AA"
   ],
   "result": {
-    "count": 6,
+    "count": 4,
     "item": "enhanced_playthrough:polished_stone"
   },
   "show_notification": true

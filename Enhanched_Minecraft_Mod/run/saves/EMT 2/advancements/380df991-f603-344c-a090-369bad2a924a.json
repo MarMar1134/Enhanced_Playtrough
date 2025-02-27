@@ -3286,13 +3286,13 @@
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/packed_mud": {
+  "enhanced_playthrough:recipes/misc/mud_brick": {
     "criteria": {
-      "has_mud": "2025-01-03 15:27:15 -0300"
+      "has_clay_ball": "2025-01-03 15:25:27 -0300"
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/misc/mud_brick": {
+  "minecraft:recipes/misc/brick": {
     "criteria": {
       "has_clay_ball": "2025-01-03 15:25:27 -0300"
     },
@@ -3304,15 +3304,243 @@
     },
     "done": true
   },
-  "minecraft:recipes/misc/brick": {
-    "criteria": {
-      "has_clay_ball": "2025-01-03 15:25:27 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:recipes/wheat_flour_from_grinding_wheat": {
     "criteria": {
       "has_wheat": "2025-01-03 15:25:32 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/packed_mud": {
+    "criteria": {
+      "has_mud": "2025-01-03 15:27:15 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/brass_nugget__from_blasting_brass_chestplate": {
+    "criteria": {
+      "has_brass_chestplate": "2025-02-25 12:30:10 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/brass_nugget__from_smelting_brass_chestplate": {
+    "criteria": {
+      "has_brass_chestplate": "2025-02-25 12:30:10 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/bronzium_chestplate_from_smithing_brass_chestplate_with_bronze_ingot": {
+    "criteria": {
+      "has_brass_chestplate": "2025-02-25 12:30:10 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/host_armor_trim_smithing_template_smithing_trim": {
+    "criteria": {
+      "has_smithing_trim_template": "2025-02-25 12:30:15 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/host_armor_trim_smithing_template": {
+    "criteria": {
+      "has_host_armor_trim_smithing_template": "2025-02-25 12:30:15 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/silver_leggings": {
+    "criteria": {
+      "has_silver_ingot": "2025-02-25 12:33:02 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/silver_hoe": {
+    "criteria": {
+      "has_silver_ingot": "2025-02-25 12:33:02 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/green_gold_ingot_from_super_alloying_silver_ingot_and_gold_ingot": {
+    "criteria": {
+      "has_silver_ingot": "2025-02-25 12:33:02 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/silver_pickaxe": {
+    "criteria": {
+      "has_silver_ingot": "2025-02-25 12:33:02 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/silver_polisher": {
+    "criteria": {
+      "has_silver_ingot": "2025-02-25 12:33:02 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/green_gold_ingot_from_super_alloying_gold_ingot_and_silver_ingot": {
+    "criteria": {
+      "has_silver_ingot": "2025-02-25 12:33:02 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/silver_nugget": {
+    "criteria": {
+      "has_silver_ingot": "2025-02-25 12:33:02 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/silver_axe": {
+    "criteria": {
+      "has_silver_ingot": "2025-02-25 12:33:02 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/silver_block": {
+    "criteria": {
+      "has_silver_ingot": "2025-02-25 12:33:02 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/silver_helmet": {
+    "criteria": {
+      "has_silver_ingot": "2025-02-25 12:33:02 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/silver_boots": {
+    "criteria": {
+      "has_silver_ingot": "2025-02-25 12:33:02 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/silver_ingot": {
+    "criteria": {
+      "has_silver_ingot": "2025-02-25 12:33:02 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/silver_sword": {
+    "criteria": {
+      "has_silver_ingot": "2025-02-25 12:33:02 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/silver_shovel": {
+    "criteria": {
+      "has_silver_ingot": "2025-02-25 12:33:02 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/silver_chestplate": {
+    "criteria": {
+      "has_silver_ingot": "2025-02-25 12:33:02 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/grinder": {
+    "criteria": {
+      "has_iron_ingot": "2025-02-25 12:33:06 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/iron_polisher": {
+    "criteria": {
+      "has_iron_ingot": "2025-02-25 12:33:06 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/building_blocks/polished_limestone_wall": {
+    "criteria": {
+      "has_polished_limestone": "2025-02-25 12:35:38 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/building_blocks/polished_limestone_stair_from_stone_cutting_polished_limestone": {
+    "criteria": {
+      "has_polished_limestone": "2025-02-25 12:35:38 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/building_blocks/polished_limestone_wall_from_stone_cutting_polished_limestone": {
+    "criteria": {
+      "has_polished_limestone": "2025-02-25 12:35:38 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/building_blocks/polished_limestone_stair": {
+    "criteria": {
+      "has_polished_limestone": "2025-02-25 12:35:38 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/building_blocks/polished_limestone_slab": {
+    "criteria": {
+      "has_polished_limestone": "2025-02-25 12:35:38 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/building_blocks/polished_limestone_slab_from_stone_cutting_polished_limestone": {
+    "criteria": {
+      "has_polished_limestone": "2025-02-25 12:35:38 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/brewing/magma_cream": {
+    "criteria": {
+      "has_blaze_powder": "2025-02-25 15:17:33 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/fire_charge": {
+    "criteria": {
+      "has_blaze_powder": "2025-02-25 15:17:33 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/ender_eye": {
+    "criteria": {
+      "has_blaze_powder": "2025-02-25 15:17:33 -0300"
+    },
+    "done": true
+  },
+  "minecraft:nether/brew_potion": {
+    "criteria": {
+      "potion": "2025-02-25 15:18:11 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/sapphire_from_gem_polishing_raw_sapphire": {
+    "criteria": {
+      "has_raw_sapphire": "2025-02-25 15:24:52 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/rubi_from_gem_polishing_raw_rubi": {
+    "criteria": {
+      "has_raw_rubi": "2025-02-25 15:24:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/garnet_from_gem_polishing_raw_garnet": {
+    "criteria": {
+      "has_raw_garnet": "2025-02-25 15:25:03 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:gems/polish_rubi": {
+    "criteria": {
+      "requirement": "2025-02-25 15:26:17 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/diamond_from_gem_polishing_raw_diamond": {
+    "criteria": {
+      "has_raw_diamond": "2025-02-25 15:30:52 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:gems/root": {
+    "criteria": {
+      "get_materials": "2025-02-25 15:30:54 -0300"
     },
     "done": true
   },

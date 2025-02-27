@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "enhanced_playthrough:block/apple_planks",
-    "side": "enhanced_playthrough:block/apple_planks",
-    "top": "enhanced_playthrough:block/apple_planks"
-  }
-}

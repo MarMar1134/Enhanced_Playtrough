@@ -1,7 +1,7 @@
 {
   "type": "enhanced_playthrough:ore_alloying",
   "alloytime": 200,
-  "category": "ore_alloy",
+  "category": "simple_alloy",
   "group": "steel_ingot",
   "ingredients": [
     {

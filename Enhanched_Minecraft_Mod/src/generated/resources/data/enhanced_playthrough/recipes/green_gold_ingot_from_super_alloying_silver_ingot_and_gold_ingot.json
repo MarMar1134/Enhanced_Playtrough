@@ -1,7 +1,7 @@
 {
   "type": "enhanced_playthrough:super_ore_alloying",
   "alloytime": 100,
-  "category": "super_ore_alloy",
+  "category": "complex_alloy",
   "group": "green_gold_ingot",
   "ingredients": [
     {
