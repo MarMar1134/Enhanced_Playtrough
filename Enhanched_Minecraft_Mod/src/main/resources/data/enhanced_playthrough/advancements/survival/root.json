@@ -25,7 +25,7 @@
       "italic": true
     },
     "frame": "task",
-    "background": "enhanced_playthrough:textures/block/apple_log.png",
+    "background": "enhanced_playthrough:textures/block/bronze_block.png",
     "hidden": false,
     "show_toast": false,
     "announce_to_chat": false

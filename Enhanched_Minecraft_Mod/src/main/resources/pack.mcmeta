@@ -38,6 +38,22 @@
       {
         "namespace": "minecraft",
         "path": "recipes/pumpkin_pie.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "loot_tables/blocks/emerald_ore.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "loot_tables/blocks/deepslate_emerald_ore.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "loot_tables/blocks/deepslate_diamond_ore.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "loot_tables/blocks/diamond_ore.json"
       }
     ]
   }

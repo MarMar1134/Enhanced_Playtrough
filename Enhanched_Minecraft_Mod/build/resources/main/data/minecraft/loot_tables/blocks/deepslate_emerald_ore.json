@@ -33,7 +33,7 @@
                   "add": false,
                   "count": {
                     "type": "minecraft:uniform",
-                    "max": 4.0,
+                    "max": 3.0,
                     "min": 1.0
                   },
                   "function": "minecraft:set_count"
@@ -50,7 +50,7 @@
                   }
                 }
               ],
-              "name": "enhanced_minecraft:raw_emerald"
+              "name": "enhanced_playthrough:raw_emerald"
             }
           ]
         }
@@ -65,7 +65,7 @@
           "predicate": {
             "enchantments": [
               {
-                "enchantment": "enhanced_minecraft:fine_mining",
+                "enchantment": "enhanced_playthrough:fine_mining",
                 "levels": {
                   "min": 1
                 }

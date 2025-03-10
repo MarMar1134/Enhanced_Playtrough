@@ -1,33 +1,34 @@
-[27feb.2025 20:04:56.802] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, MOD_DEV, --assetIndex, 5, --assetsDir, C:\Users\admin\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.3.0, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412]
-[27feb.2025 20:04:56.820] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.9 by Oracle Corporation; OS Windows 10 arch amd64 version 10.0
-[27feb.2025 20:04:57.147] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
-[27feb.2025 20:04:57.331] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6
-[27feb.2025 20:04:57.769] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6
-[27feb.2025 20:04:58.040] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/admin/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
-[27feb.2025 20:04:58.094] [pool-2-thread-1/INFO] [EARLYDISPLAY/]: GL info: AMD Radeon(TM) Vega 3 Graphics GL version 4.6.0 Core Profile Context 23.11.1.231017, ATI Technologies Inc.
-[27feb.2025 20:04:59.117] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\admin\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.3.0\d7ebc62120f202109e300e084ca1a31a7b946a62\javafmllanguage-1.20.1-47.3.0.jar is missing mods.toml file
-[27feb.2025 20:04:59.131] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\admin\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.3.0\1bf3e845ea0ce750096da8c71c8364b188ab74d4\lowcodelanguage-1.20.1-47.3.0.jar is missing mods.toml file
-[27feb.2025 20:04:59.144] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\admin\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.3.0\6093682e943ddccbabf70539319d7f2fe64db2e7\mclanguage-1.20.1-47.3.0.jar is missing mods.toml file
-[27feb.2025 20:04:59.160] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\admin\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.3.0\3b6be96aba3e323f3c918e8ef6a96312d82d76ad\fmlcore-1.20.1-47.3.0.jar is missing mods.toml file
-[27feb.2025 20:04:59.419] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
-[27feb.2025 20:05:10.279] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\admin\.gradle\caches\forge_gradle\assets, --assetIndex, 5]
-[27feb.2025 20:05:39.124] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/admin/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1/forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/assets/.mcassetsroot' uses unexpected schema
-[27feb.2025 20:05:39.125] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/admin/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1/forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/data/.mcassetsroot' uses unexpected schema
-[27feb.2025 20:05:39.156] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[27feb.2025 20:05:39.167] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
-[27feb.2025 20:05:39.866] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.3.1 build 7
-[27feb.2025 20:05:40.968] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.3.0, for MC 1.20.1 with MCP 20230612.114412
-[27feb.2025 20:05:40.977] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.3.0 Initialized
-[27feb.2025 20:05:41.693] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager...
-[27feb.2025 20:05:41.698] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager took 3.272 ms
-[27feb.2025 20:05:44.459] [Datafixer Bootstrap/INFO] [com.mojang.datafixers.DataFixerBuilder/]: 188 Datafixer optimizations took 14969 milliseconds
-[27feb.2025 20:05:44.991] [Render thread/INFO] [net.minecraftforge.gametest.ForgeGameTestHooks/]: Enabled Gametest Namespaces: [enhanced_playthrough]
-[27feb.2025 20:05:45.264] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: vanilla, mod_resources
-[27feb.2025 20:05:45.830] [Worker-Main-3/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_all_no_pua-15.0.06.hex, loading
-[27feb.2025 20:05:47.736] [Worker-Main-1/WARN] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Unable to find texture tutorialmod:textures/trims/models/armor/kaupen.png
-[27feb.2025 20:05:47.736] [Worker-Main-1/WARN] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Unable to find texture tutorialmod:textures/trims/models/armor/kaupen_leggings.png
-[27feb.2025 20:05:47.778] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
-[27feb.2025 20:05:47.778] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/eye_leggings_alexandrite
+[10mar.2025 17:02:26.153] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, MOD_DEV, --assetIndex, 5, --assetsDir, C:\Users\marma\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.3.0, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412]
+[10mar.2025 17:02:26.169] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.14 by Eclipse Adoptium; OS Windows 11 arch amd64 version 10.0
+[10mar.2025 17:02:26.345] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
+[10mar.2025 17:02:26.524] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6
+[10mar.2025 17:02:26.757] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6
+[10mar.2025 17:02:26.980] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/marma/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
+[10mar.2025 17:02:27.032] [pool-2-thread-1/INFO] [EARLYDISPLAY/]: GL info: NVIDIA GeForce GTX 1650/PCIe/SSE2 GL version 4.6.0 NVIDIA 560.94, NVIDIA Corporation
+[10mar.2025 17:02:28.621] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\marma\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.3.0\d7ebc62120f202109e300e084ca1a31a7b946a62\javafmllanguage-1.20.1-47.3.0.jar is missing mods.toml file
+[10mar.2025 17:02:28.632] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\marma\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.3.0\1bf3e845ea0ce750096da8c71c8364b188ab74d4\lowcodelanguage-1.20.1-47.3.0.jar is missing mods.toml file
+[10mar.2025 17:02:28.637] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\marma\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.3.0\6093682e943ddccbabf70539319d7f2fe64db2e7\mclanguage-1.20.1-47.3.0.jar is missing mods.toml file
+[10mar.2025 17:02:28.637] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\marma\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.3.0\3b6be96aba3e323f3c918e8ef6a96312d82d76ad\fmlcore-1.20.1-47.3.0.jar is missing mods.toml file
+[10mar.2025 17:02:28.806] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[10mar.2025 17:02:32.080] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\marma\.gradle\caches\forge_gradle\assets, --assetIndex, 5]
+[10mar.2025 17:02:37.327] [Datafixer Bootstrap/INFO] [com.mojang.datafixers.DataFixerBuilder/]: 188 Datafixer optimizations took 179 milliseconds
+[10mar.2025 17:02:39.582] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/marma/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1/forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/assets/.mcassetsroot' uses unexpected schema
+[10mar.2025 17:02:39.583] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/marma/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1/forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/data/.mcassetsroot' uses unexpected schema
+[10mar.2025 17:02:39.602] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[10mar.2025 17:02:39.609] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
+[10mar.2025 17:02:39.759] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.3.1 build 7
+[10mar.2025 17:02:40.100] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.3.0, for MC 1.20.1 with MCP 20230612.114412
+[10mar.2025 17:02:40.100] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.3.0 Initialized
+[10mar.2025 17:02:40.295] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager...
+[10mar.2025 17:02:40.301] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager took 4.752 ms
+[10mar.2025 17:02:41.814] [Render thread/INFO] [net.minecraftforge.gametest.ForgeGameTestHooks/]: Enabled Gametest Namespaces: [enhanced_playthrough]
+[10mar.2025 17:02:42.038] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: vanilla, mod_resources
+[10mar.2025 17:02:42.445] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
+[10mar.2025 17:02:42.497] [Worker-Main-6/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_all_no_pua-15.0.06.hex, loading
+[10mar.2025 17:02:42.894] [Worker-Main-4/WARN] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Unable to find texture tutorialmod:textures/trims/models/armor/kaupen.png
+[10mar.2025 17:02:42.895] [Worker-Main-4/WARN] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Unable to find texture tutorialmod:textures/trims/models/armor/kaupen_leggings.png
+[10mar.2025 17:02:42.989] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
+[10mar.2025 17:02:42.989] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/eye_leggings_alexandrite
 java.lang.IllegalArgumentException: null
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.loadPaletteEntryFromImage(PalettedPermutations.java:104) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.lambda$run$5(PalettedPermutations.java:56) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
@@ -41,8 +42,8 @@ java.lang.IllegalArgumentException: null
 	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
-[27feb.2025 20:05:47.788] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
-[27feb.2025 20:05:47.788] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/rib_leggings_alexandrite
+[10mar.2025 17:02:42.997] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
+[10mar.2025 17:02:42.998] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/rib_leggings_alexandrite
 java.lang.IllegalArgumentException: null
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.loadPaletteEntryFromImage(PalettedPermutations.java:104) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.lambda$run$5(PalettedPermutations.java:56) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
@@ -56,8 +57,8 @@ java.lang.IllegalArgumentException: null
 	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
-[27feb.2025 20:05:47.801] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
-[27feb.2025 20:05:47.802] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/wild_alexandrite
+[10mar.2025 17:02:43.020] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
+[10mar.2025 17:02:43.020] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/wild_alexandrite
 java.lang.IllegalArgumentException: null
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.loadPaletteEntryFromImage(PalettedPermutations.java:104) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.lambda$run$5(PalettedPermutations.java:56) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
@@ -71,8 +72,8 @@ java.lang.IllegalArgumentException: null
 	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
-[27feb.2025 20:05:47.804] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
-[27feb.2025 20:05:47.804] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/wayfinder_leggings_alexandrite
+[10mar.2025 17:02:43.024] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
+[10mar.2025 17:02:43.024] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/wayfinder_leggings_alexandrite
 java.lang.IllegalArgumentException: null
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.loadPaletteEntryFromImage(PalettedPermutations.java:104) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.lambda$run$5(PalettedPermutations.java:56) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
@@ -86,8 +87,8 @@ java.lang.IllegalArgumentException: null
 	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
-[27feb.2025 20:05:47.807] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
-[27feb.2025 20:05:47.807] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/host_alexandrite
+[10mar.2025 17:02:43.031] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
+[10mar.2025 17:02:43.031] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/host_alexandrite
 java.lang.IllegalArgumentException: null
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.loadPaletteEntryFromImage(PalettedPermutations.java:104) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.lambda$run$5(PalettedPermutations.java:56) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
@@ -101,8 +102,8 @@ java.lang.IllegalArgumentException: null
 	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
-[27feb.2025 20:05:47.811] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
-[27feb.2025 20:05:47.812] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/wild_leggings_alexandrite
+[10mar.2025 17:02:43.040] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
+[10mar.2025 17:02:43.040] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/wild_leggings_alexandrite
 java.lang.IllegalArgumentException: null
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.loadPaletteEntryFromImage(PalettedPermutations.java:104) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.lambda$run$5(PalettedPermutations.java:56) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
@@ -116,8 +117,8 @@ java.lang.IllegalArgumentException: null
 	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
-[27feb.2025 20:05:47.814] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
-[27feb.2025 20:05:47.814] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/ward_alexandrite
+[10mar.2025 17:02:43.049] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
+[10mar.2025 17:02:43.049] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/ward_alexandrite
 java.lang.IllegalArgumentException: null
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.loadPaletteEntryFromImage(PalettedPermutations.java:104) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.lambda$run$5(PalettedPermutations.java:56) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
@@ -131,8 +132,8 @@ java.lang.IllegalArgumentException: null
 	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
-[27feb.2025 20:05:47.818] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
-[27feb.2025 20:05:47.818] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/wayfinder_alexandrite
+[10mar.2025 17:02:43.059] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
+[10mar.2025 17:02:43.060] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/wayfinder_alexandrite
 java.lang.IllegalArgumentException: null
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.loadPaletteEntryFromImage(PalettedPermutations.java:104) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.lambda$run$5(PalettedPermutations.java:56) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
@@ -146,8 +147,8 @@ java.lang.IllegalArgumentException: null
 	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
-[27feb.2025 20:05:47.820] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
-[27feb.2025 20:05:47.820] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/raiser_leggings_alexandrite
+[10mar.2025 17:02:43.065] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
+[10mar.2025 17:02:43.065] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/raiser_leggings_alexandrite
 java.lang.IllegalArgumentException: null
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.loadPaletteEntryFromImage(PalettedPermutations.java:104) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.lambda$run$5(PalettedPermutations.java:56) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
@@ -161,8 +162,8 @@ java.lang.IllegalArgumentException: null
 	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
-[27feb.2025 20:05:47.832] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
-[27feb.2025 20:05:47.832] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/dune_alexandrite
+[10mar.2025 17:02:43.072] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
+[10mar.2025 17:02:43.072] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/dune_alexandrite
 java.lang.IllegalArgumentException: null
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.loadPaletteEntryFromImage(PalettedPermutations.java:104) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.lambda$run$5(PalettedPermutations.java:56) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
@@ -176,8 +177,8 @@ java.lang.IllegalArgumentException: null
 	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
-[27feb.2025 20:05:47.833] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
-[27feb.2025 20:05:47.833] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/tide_alexandrite
+[10mar.2025 17:02:43.073] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
+[10mar.2025 17:02:43.073] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/tide_alexandrite
 java.lang.IllegalArgumentException: null
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.loadPaletteEntryFromImage(PalettedPermutations.java:104) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.lambda$run$5(PalettedPermutations.java:56) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
@@ -191,8 +192,8 @@ java.lang.IllegalArgumentException: null
 	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
-[27feb.2025 20:05:47.835] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
-[27feb.2025 20:05:47.835] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/vex_alexandrite
+[10mar.2025 17:02:43.075] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
+[10mar.2025 17:02:43.075] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/vex_alexandrite
 java.lang.IllegalArgumentException: null
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.loadPaletteEntryFromImage(PalettedPermutations.java:104) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.lambda$run$5(PalettedPermutations.java:56) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
@@ -206,8 +207,8 @@ java.lang.IllegalArgumentException: null
 	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
-[27feb.2025 20:05:47.836] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
-[27feb.2025 20:05:47.837] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/spire_alexandrite
+[10mar.2025 17:02:43.077] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
+[10mar.2025 17:02:43.077] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/spire_alexandrite
 java.lang.IllegalArgumentException: null
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.loadPaletteEntryFromImage(PalettedPermutations.java:104) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.lambda$run$5(PalettedPermutations.java:56) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
@@ -221,8 +222,8 @@ java.lang.IllegalArgumentException: null
 	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
-[27feb.2025 20:05:47.839] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
-[27feb.2025 20:05:47.850] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/vex_leggings_alexandrite
+[10mar.2025 17:02:43.079] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
+[10mar.2025 17:02:43.079] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/vex_leggings_alexandrite
 java.lang.IllegalArgumentException: null
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.loadPaletteEntryFromImage(PalettedPermutations.java:104) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.lambda$run$5(PalettedPermutations.java:56) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
@@ -236,8 +237,8 @@ java.lang.IllegalArgumentException: null
 	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
-[27feb.2025 20:05:47.851] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
-[27feb.2025 20:05:47.851] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/rib_alexandrite
+[10mar.2025 17:02:43.080] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
+[10mar.2025 17:02:43.080] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/rib_alexandrite
 java.lang.IllegalArgumentException: null
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.loadPaletteEntryFromImage(PalettedPermutations.java:104) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.lambda$run$5(PalettedPermutations.java:56) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
@@ -251,8 +252,8 @@ java.lang.IllegalArgumentException: null
 	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
-[27feb.2025 20:05:47.853] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
-[27feb.2025 20:05:47.853] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/dune_leggings_alexandrite
+[10mar.2025 17:02:43.082] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
+[10mar.2025 17:02:43.082] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/dune_leggings_alexandrite
 java.lang.IllegalArgumentException: null
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.loadPaletteEntryFromImage(PalettedPermutations.java:104) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.lambda$run$5(PalettedPermutations.java:56) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
@@ -266,8 +267,8 @@ java.lang.IllegalArgumentException: null
 	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
-[27feb.2025 20:05:47.854] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
-[27feb.2025 20:05:47.854] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/snout_leggings_alexandrite
+[10mar.2025 17:02:43.084] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
+[10mar.2025 17:02:43.084] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/snout_leggings_alexandrite
 java.lang.IllegalArgumentException: null
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.loadPaletteEntryFromImage(PalettedPermutations.java:104) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.lambda$run$5(PalettedPermutations.java:56) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
@@ -281,8 +282,8 @@ java.lang.IllegalArgumentException: null
 	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
-[27feb.2025 20:05:47.856] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
-[27feb.2025 20:05:47.856] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/coast_alexandrite
+[10mar.2025 17:02:43.103] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
+[10mar.2025 17:02:43.107] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/coast_alexandrite
 java.lang.IllegalArgumentException: null
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.loadPaletteEntryFromImage(PalettedPermutations.java:104) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.lambda$run$5(PalettedPermutations.java:56) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
@@ -296,8 +297,8 @@ java.lang.IllegalArgumentException: null
 	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
-[27feb.2025 20:05:47.857] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
-[27feb.2025 20:05:47.858] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/shaper_alexandrite
+[10mar.2025 17:02:43.120] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
+[10mar.2025 17:02:43.120] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/shaper_alexandrite
 java.lang.IllegalArgumentException: null
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.loadPaletteEntryFromImage(PalettedPermutations.java:104) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.lambda$run$5(PalettedPermutations.java:56) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
@@ -311,8 +312,8 @@ java.lang.IllegalArgumentException: null
 	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
-[27feb.2025 20:05:47.859] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
-[27feb.2025 20:05:47.860] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/silence_alexandrite
+[10mar.2025 17:02:43.124] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
+[10mar.2025 17:02:43.124] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/silence_alexandrite
 java.lang.IllegalArgumentException: null
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.loadPaletteEntryFromImage(PalettedPermutations.java:104) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.lambda$run$5(PalettedPermutations.java:56) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
@@ -326,8 +327,8 @@ java.lang.IllegalArgumentException: null
 	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
-[27feb.2025 20:05:47.861] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
-[27feb.2025 20:05:47.861] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/snout_alexandrite
+[10mar.2025 17:02:43.145] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
+[10mar.2025 17:02:43.145] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/snout_alexandrite
 java.lang.IllegalArgumentException: null
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.loadPaletteEntryFromImage(PalettedPermutations.java:104) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.lambda$run$5(PalettedPermutations.java:56) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
@@ -341,8 +342,8 @@ java.lang.IllegalArgumentException: null
 	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
-[27feb.2025 20:05:47.864] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
-[27feb.2025 20:05:47.865] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/spire_leggings_alexandrite
+[10mar.2025 17:02:43.149] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
+[10mar.2025 17:02:43.149] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/spire_leggings_alexandrite
 java.lang.IllegalArgumentException: null
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.loadPaletteEntryFromImage(PalettedPermutations.java:104) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.lambda$run$5(PalettedPermutations.java:56) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
@@ -356,8 +357,8 @@ java.lang.IllegalArgumentException: null
 	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
-[27feb.2025 20:05:47.868] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
-[27feb.2025 20:05:47.869] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/eye_alexandrite
+[10mar.2025 17:02:43.157] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
+[10mar.2025 17:02:43.157] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/eye_alexandrite
 java.lang.IllegalArgumentException: null
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.loadPaletteEntryFromImage(PalettedPermutations.java:104) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.lambda$run$5(PalettedPermutations.java:56) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
@@ -371,8 +372,8 @@ java.lang.IllegalArgumentException: null
 	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
-[27feb.2025 20:05:47.871] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
-[27feb.2025 20:05:47.871] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/ward_leggings_alexandrite
+[10mar.2025 17:02:43.162] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
+[10mar.2025 17:02:43.164] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/ward_leggings_alexandrite
 java.lang.IllegalArgumentException: null
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.loadPaletteEntryFromImage(PalettedPermutations.java:104) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.lambda$run$5(PalettedPermutations.java:56) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
@@ -386,8 +387,8 @@ java.lang.IllegalArgumentException: null
 	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
-[27feb.2025 20:05:47.872] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
-[27feb.2025 20:05:47.873] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/sentry_alexandrite
+[10mar.2025 17:02:43.168] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
+[10mar.2025 17:02:43.168] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/sentry_alexandrite
 java.lang.IllegalArgumentException: null
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.loadPaletteEntryFromImage(PalettedPermutations.java:104) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.lambda$run$5(PalettedPermutations.java:56) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
@@ -401,8 +402,8 @@ java.lang.IllegalArgumentException: null
 	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
-[27feb.2025 20:05:47.874] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
-[27feb.2025 20:05:47.874] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/raiser_alexandrite
+[10mar.2025 17:02:43.172] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
+[10mar.2025 17:02:43.173] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/raiser_alexandrite
 java.lang.IllegalArgumentException: null
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.loadPaletteEntryFromImage(PalettedPermutations.java:104) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.lambda$run$5(PalettedPermutations.java:56) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
@@ -416,8 +417,8 @@ java.lang.IllegalArgumentException: null
 	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
-[27feb.2025 20:05:47.876] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
-[27feb.2025 20:05:47.876] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/sentry_leggings_alexandrite
+[10mar.2025 17:02:43.177] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
+[10mar.2025 17:02:43.179] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/sentry_leggings_alexandrite
 java.lang.IllegalArgumentException: null
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.loadPaletteEntryFromImage(PalettedPermutations.java:104) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.lambda$run$5(PalettedPermutations.java:56) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
@@ -431,8 +432,8 @@ java.lang.IllegalArgumentException: null
 	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
-[27feb.2025 20:05:47.877] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
-[27feb.2025 20:05:47.877] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/tide_leggings_alexandrite
+[10mar.2025 17:02:43.184] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
+[10mar.2025 17:02:43.184] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/tide_leggings_alexandrite
 java.lang.IllegalArgumentException: null
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.loadPaletteEntryFromImage(PalettedPermutations.java:104) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.lambda$run$5(PalettedPermutations.java:56) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
@@ -446,8 +447,8 @@ java.lang.IllegalArgumentException: null
 	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
-[27feb.2025 20:05:47.879] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
-[27feb.2025 20:05:47.879] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/host_leggings_alexandrite
+[10mar.2025 17:02:43.194] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
+[10mar.2025 17:02:43.194] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/host_leggings_alexandrite
 java.lang.IllegalArgumentException: null
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.loadPaletteEntryFromImage(PalettedPermutations.java:104) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.lambda$run$5(PalettedPermutations.java:56) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
@@ -461,8 +462,8 @@ java.lang.IllegalArgumentException: null
 	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
-[27feb.2025 20:05:47.881] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
-[27feb.2025 20:05:47.881] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/shaper_leggings_alexandrite
+[10mar.2025 17:02:43.197] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
+[10mar.2025 17:02:43.197] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/shaper_leggings_alexandrite
 java.lang.IllegalArgumentException: null
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.loadPaletteEntryFromImage(PalettedPermutations.java:104) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.lambda$run$5(PalettedPermutations.java:56) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
@@ -476,8 +477,8 @@ java.lang.IllegalArgumentException: null
 	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
-[27feb.2025 20:05:47.883] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
-[27feb.2025 20:05:47.883] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/silence_leggings_alexandrite
+[10mar.2025 17:02:43.203] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
+[10mar.2025 17:02:43.203] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/silence_leggings_alexandrite
 java.lang.IllegalArgumentException: null
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.loadPaletteEntryFromImage(PalettedPermutations.java:104) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.lambda$run$5(PalettedPermutations.java:56) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
@@ -491,8 +492,8 @@ java.lang.IllegalArgumentException: null
 	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
-[27feb.2025 20:05:47.885] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
-[27feb.2025 20:05:47.885] [Worker-Main-1/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/coast_leggings_alexandrite
+[10mar.2025 17:02:43.205] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: Failed to load palette image enhanced_playthrough:trims/color_palettes/sapphire
+[10mar.2025 17:02:43.205] [Worker-Main-4/ERROR] [net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations/]: unable to apply palette to minecraft:trims/models/armor/coast_leggings_alexandrite
 java.lang.IllegalArgumentException: null
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.loadPaletteEntryFromImage(PalettedPermutations.java:104) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
 	at net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations.lambda$run$5(PalettedPermutations.java:56) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
@@ -506,552 +507,182 @@ java.lang.IllegalArgumentException: null
 	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
-[27feb.2025 20:05:49.255] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
-[27feb.2025 20:05:49.991] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: UP_TO_DATE Current: 47.3.0 Target: null
-[27feb.2025 20:05:51.025] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'enhanced_playthrough:blockstates/adobe_furnace.json' missing model for variant: 'enhanced_playthrough:adobe_furnace#burning=false,facing=down'
-[27feb.2025 20:05:51.025] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'enhanced_playthrough:blockstates/adobe_furnace.json' missing model for variant: 'enhanced_playthrough:adobe_furnace#burning=true,facing=up'
-[27feb.2025 20:05:51.026] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'enhanced_playthrough:blockstates/adobe_furnace.json' missing model for variant: 'enhanced_playthrough:adobe_furnace#burning=true,facing=down'
-[27feb.2025 20:05:51.026] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'enhanced_playthrough:blockstates/adobe_furnace.json' missing model for variant: 'enhanced_playthrough:adobe_furnace#burning=false,facing=up'
-[27feb.2025 20:05:51.026] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'enhanced_playthrough:blockstates/soul_furnace.json' missing model for variant: 'enhanced_playthrough:soul_furnace#burning=true,facing=down'
-[27feb.2025 20:05:51.026] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'enhanced_playthrough:blockstates/soul_furnace.json' missing model for variant: 'enhanced_playthrough:soul_furnace#burning=false,facing=up'
-[27feb.2025 20:05:51.026] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'enhanced_playthrough:blockstates/soul_furnace.json' missing model for variant: 'enhanced_playthrough:soul_furnace#burning=true,facing=up'
-[27feb.2025 20:05:51.026] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'enhanced_playthrough:blockstates/soul_furnace.json' missing model for variant: 'enhanced_playthrough:soul_furnace#burning=false,facing=down'
-[27feb.2025 20:05:51.026] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'enhanced_playthrough:blockstates/adobe_alloying_furnace.json' missing model for variant: 'enhanced_playthrough:adobe_alloying_furnace#burning=true,facing=up'
-[27feb.2025 20:05:51.026] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'enhanced_playthrough:blockstates/adobe_alloying_furnace.json' missing model for variant: 'enhanced_playthrough:adobe_alloying_furnace#burning=true,facing=down'
-[27feb.2025 20:05:51.027] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'enhanced_playthrough:blockstates/adobe_alloying_furnace.json' missing model for variant: 'enhanced_playthrough:adobe_alloying_furnace#burning=false,facing=up'
-[27feb.2025 20:05:51.027] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'enhanced_playthrough:blockstates/adobe_alloying_furnace.json' missing model for variant: 'enhanced_playthrough:adobe_alloying_furnace#burning=false,facing=down'
-[27feb.2025 20:05:51.027] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'enhanced_playthrough:blockstates/super_alloying_furnace.json' missing model for variant: 'enhanced_playthrough:super_alloying_furnace#burning=false,facing=up'
-[27feb.2025 20:05:51.027] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'enhanced_playthrough:blockstates/super_alloying_furnace.json' missing model for variant: 'enhanced_playthrough:super_alloying_furnace#burning=true,facing=up'
-[27feb.2025 20:05:51.027] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'enhanced_playthrough:blockstates/super_alloying_furnace.json' missing model for variant: 'enhanced_playthrough:super_alloying_furnace#burning=true,facing=down'
-[27feb.2025 20:05:51.028] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'enhanced_playthrough:blockstates/super_alloying_furnace.json' missing model for variant: 'enhanced_playthrough:super_alloying_furnace#burning=false,facing=down'
-[27feb.2025 20:05:51.029] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'enhanced_playthrough:blockstates/soul_alloy_furnace.json' missing model for variant: 'enhanced_playthrough:soul_alloy_furnace#burning=false,facing=down'
-[27feb.2025 20:05:51.029] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'enhanced_playthrough:blockstates/soul_alloy_furnace.json' missing model for variant: 'enhanced_playthrough:soul_alloy_furnace#burning=true,facing=up'
-[27feb.2025 20:05:51.032] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'enhanced_playthrough:blockstates/soul_alloy_furnace.json' missing model for variant: 'enhanced_playthrough:soul_alloy_furnace#burning=true,facing=down'
-[27feb.2025 20:05:51.032] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'enhanced_playthrough:blockstates/soul_alloy_furnace.json' missing model for variant: 'enhanced_playthrough:soul_alloy_furnace#burning=false,facing=up'
-[27feb.2025 20:05:51.032] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'enhanced_playthrough:blockstates/gem_polisher.json' missing model for variant: 'enhanced_playthrough:gem_polisher#facing=up'
-[27feb.2025 20:05:51.033] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'enhanced_playthrough:blockstates/gem_polisher.json' missing model for variant: 'enhanced_playthrough:gem_polisher#facing=down'
-[27feb.2025 20:05:51.033] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'enhanced_playthrough:blockstates/grinder.json' missing model for variant: 'enhanced_playthrough:grinder#facing=up,on=false'
-[27feb.2025 20:05:51.033] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'enhanced_playthrough:blockstates/grinder.json' missing model for variant: 'enhanced_playthrough:grinder#facing=down,on=false'
-[27feb.2025 20:05:51.033] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'enhanced_playthrough:blockstates/grinder.json' missing model for variant: 'enhanced_playthrough:grinder#facing=down,on=true'
-[27feb.2025 20:05:51.033] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'enhanced_playthrough:blockstates/grinder.json' missing model for variant: 'enhanced_playthrough:grinder#facing=up,on=true'
-[27feb.2025 20:05:51.043] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'enhanced_playthrough:walnut#inventory' referenced from: enhanced_playthrough:walnut#inventory: java.io.FileNotFoundException: enhanced_playthrough:models/item/walnut.json
-[27feb.2025 20:05:56.531] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:item.goat_horn.play
-[27feb.2025 20:05:56.532] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
-[27feb.2025 20:05:56.785] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device OpenAL Soft on Altavoces (USB Audio Device)
-[27feb.2025 20:05:56.786] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
-[27feb.2025 20:05:57.070] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
-[27feb.2025 20:05:57.095] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
-[27feb.2025 20:05:57.098] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
-[27feb.2025 20:05:57.109] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
-[27feb.2025 20:05:57.121] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
-[27feb.2025 20:05:57.153] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
-[27feb.2025 20:05:57.154] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
-[27feb.2025 20:05:57.154] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
-[27feb.2025 20:05:57.155] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
-[27feb.2025 20:05:57.873] [Render thread/WARN] [net.minecraft.client.renderer.ShaderInstance/]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
-[27feb.2025 20:05:58.067] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
-[27feb.2025 20:05:58.074] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
-[27feb.2025 20:05:58.075] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
-[27feb.2025 20:05:58.081] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 jei:textures/atlas/gui.png-atlas
-[27feb.2025 20:05:58.562] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient/]: Could not authorize you against Realms server: Invalid session id
-[27feb.2025 20:06:07.721] [Render thread/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: Injecting existing registry data into this CLIENT instance
-[27feb.2025 20:06:12.411] [Worker-Main-3/ERROR] [net.minecraftforge.common.ForgeHooks/]: Couldn't parse element loot_tables:minecraft:blocks/emerald_ore
-com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'enhanced_minecraft:raw_emerald'
-	at net.minecraft.util.GsonHelper.lambda$convertToItem$0(GsonHelper.java:145) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
-	at net.minecraft.util.GsonHelper.convertToItem(GsonHelper.java:145) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.util.GsonHelper.getAsItem(GsonHelper.java:153) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.entries.LootItem$Serializer.deserialize(LootItem.java:55) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.entries.LootItem$Serializer.deserialize(LootItem.java:40) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer$Serializer.deserializeCustom(LootPoolSingletonContainer.java:151) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer$Serializer.deserializeCustom(LootPoolSingletonContainer.java:129) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Serializer.deserialize(LootPoolEntryContainer.java:86) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Serializer.deserialize(LootPoolEntryContainer.java:74) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.GsonAdapterFactory$JsonAdapter.deserialize(GsonAdapterFactory.java:102) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at com.google.gson.internal.bind.TreeTypeAdapter.read(TreeTypeAdapter.java:76) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.internal.bind.TypeAdapterRuntimeTypeWrapper.read(TypeAdapterRuntimeTypeWrapper.java:40) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.internal.bind.ArrayTypeAdapter.read(ArrayTypeAdapter.java:72) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1214) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1319) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1290) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.internal.bind.TreeTypeAdapter$GsonContextImpl.deserialize(TreeTypeAdapter.java:179) ~[gson-2.10.jar%23130!/:?]
-	at net.minecraft.util.GsonHelper.convertToObject(GsonHelper.java:463) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.util.GsonHelper.getAsObject(GsonHelper.java:471) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.entries.CompositeEntryBase$1.deserializeCustom(CompositeEntryBase.java:61) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.entries.CompositeEntryBase$1.deserializeCustom(CompositeEntryBase.java:53) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Serializer.deserialize(LootPoolEntryContainer.java:86) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Serializer.deserialize(LootPoolEntryContainer.java:74) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.GsonAdapterFactory$JsonAdapter.deserialize(GsonAdapterFactory.java:102) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at com.google.gson.internal.bind.TreeTypeAdapter.read(TreeTypeAdapter.java:76) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.internal.bind.TypeAdapterRuntimeTypeWrapper.read(TypeAdapterRuntimeTypeWrapper.java:40) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.internal.bind.ArrayTypeAdapter.read(ArrayTypeAdapter.java:72) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1214) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1319) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1290) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.internal.bind.TreeTypeAdapter$GsonContextImpl.deserialize(TreeTypeAdapter.java:179) ~[gson-2.10.jar%23130!/:?]
-	at net.minecraft.util.GsonHelper.convertToObject(GsonHelper.java:463) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.util.GsonHelper.getAsObject(GsonHelper.java:471) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.LootPool$Serializer.deserialize(LootPool.java:192) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.LootPool$Serializer.deserialize(LootPool.java:189) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at com.google.gson.internal.bind.TreeTypeAdapter.read(TreeTypeAdapter.java:76) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.internal.bind.TypeAdapterRuntimeTypeWrapper.read(TypeAdapterRuntimeTypeWrapper.java:40) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.internal.bind.ArrayTypeAdapter.read(ArrayTypeAdapter.java:72) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1214) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1319) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1290) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.internal.bind.TreeTypeAdapter$GsonContextImpl.deserialize(TreeTypeAdapter.java:179) ~[gson-2.10.jar%23130!/:?]
-	at net.minecraft.util.GsonHelper.convertToObject(GsonHelper.java:463) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.util.GsonHelper.getAsObject(GsonHelper.java:481) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.LootTable$Serializer.deserialize(LootTable.java:294) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.LootTable$Serializer.deserialize(LootTable.java:291) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at com.google.gson.internal.bind.TreeTypeAdapter.read(TreeTypeAdapter.java:76) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1214) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1319) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1261) ~[gson-2.10.jar%23130!/:?]
-	at net.minecraftforge.common.ForgeHooks.loadLootTable(ForgeHooks.java:871) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23190%23197!/:?]
-	at net.minecraftforge.common.ForgeHooks.lambda$getLootTableDeserializer$3(ForgeHooks.java:848) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23190%23197!/:?]
-	at net.minecraft.world.level.storage.loot.LootDataType.deserialize(LootDataType.java:45) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.LootDataManager.lambda$scheduleElementParse$4(LootDataManager.java:56) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at java.util.HashMap.forEach(HashMap.java:1421) ~[?:?]
-	at net.minecraft.world.level.storage.loot.LootDataManager.lambda$scheduleElementParse$5(LootDataManager.java:55) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804) ~[?:?]
-	at java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796) ~[?:?]
-	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373) ~[?:?]
-	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182) ~[?:?]
-	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
-	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
-	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
-[27feb.2025 20:06:12.637] [Worker-Main-3/ERROR] [net.minecraftforge.common.ForgeHooks/]: Couldn't parse element loot_tables:minecraft:blocks/deepslate_diamond_ore
-com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'enhanced_minecraft:raw_diamond'
-	at net.minecraft.util.GsonHelper.lambda$convertToItem$0(GsonHelper.java:145) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
-	at net.minecraft.util.GsonHelper.convertToItem(GsonHelper.java:145) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.util.GsonHelper.getAsItem(GsonHelper.java:153) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.entries.LootItem$Serializer.deserialize(LootItem.java:55) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.entries.LootItem$Serializer.deserialize(LootItem.java:40) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer$Serializer.deserializeCustom(LootPoolSingletonContainer.java:151) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer$Serializer.deserializeCustom(LootPoolSingletonContainer.java:129) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Serializer.deserialize(LootPoolEntryContainer.java:86) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Serializer.deserialize(LootPoolEntryContainer.java:74) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.GsonAdapterFactory$JsonAdapter.deserialize(GsonAdapterFactory.java:102) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at com.google.gson.internal.bind.TreeTypeAdapter.read(TreeTypeAdapter.java:76) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.internal.bind.TypeAdapterRuntimeTypeWrapper.read(TypeAdapterRuntimeTypeWrapper.java:40) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.internal.bind.ArrayTypeAdapter.read(ArrayTypeAdapter.java:72) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1214) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1319) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1290) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.internal.bind.TreeTypeAdapter$GsonContextImpl.deserialize(TreeTypeAdapter.java:179) ~[gson-2.10.jar%23130!/:?]
-	at net.minecraft.util.GsonHelper.convertToObject(GsonHelper.java:463) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.util.GsonHelper.getAsObject(GsonHelper.java:471) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.entries.CompositeEntryBase$1.deserializeCustom(CompositeEntryBase.java:61) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.entries.CompositeEntryBase$1.deserializeCustom(CompositeEntryBase.java:53) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Serializer.deserialize(LootPoolEntryContainer.java:86) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Serializer.deserialize(LootPoolEntryContainer.java:74) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.GsonAdapterFactory$JsonAdapter.deserialize(GsonAdapterFactory.java:102) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at com.google.gson.internal.bind.TreeTypeAdapter.read(TreeTypeAdapter.java:76) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.internal.bind.TypeAdapterRuntimeTypeWrapper.read(TypeAdapterRuntimeTypeWrapper.java:40) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.internal.bind.ArrayTypeAdapter.read(ArrayTypeAdapter.java:72) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1214) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1319) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1290) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.internal.bind.TreeTypeAdapter$GsonContextImpl.deserialize(TreeTypeAdapter.java:179) ~[gson-2.10.jar%23130!/:?]
-	at net.minecraft.util.GsonHelper.convertToObject(GsonHelper.java:463) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.util.GsonHelper.getAsObject(GsonHelper.java:471) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.LootPool$Serializer.deserialize(LootPool.java:192) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.LootPool$Serializer.deserialize(LootPool.java:189) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at com.google.gson.internal.bind.TreeTypeAdapter.read(TreeTypeAdapter.java:76) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.internal.bind.TypeAdapterRuntimeTypeWrapper.read(TypeAdapterRuntimeTypeWrapper.java:40) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.internal.bind.ArrayTypeAdapter.read(ArrayTypeAdapter.java:72) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1214) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1319) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1290) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.internal.bind.TreeTypeAdapter$GsonContextImpl.deserialize(TreeTypeAdapter.java:179) ~[gson-2.10.jar%23130!/:?]
-	at net.minecraft.util.GsonHelper.convertToObject(GsonHelper.java:463) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.util.GsonHelper.getAsObject(GsonHelper.java:481) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.LootTable$Serializer.deserialize(LootTable.java:294) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.LootTable$Serializer.deserialize(LootTable.java:291) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at com.google.gson.internal.bind.TreeTypeAdapter.read(TreeTypeAdapter.java:76) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1214) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1319) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1261) ~[gson-2.10.jar%23130!/:?]
-	at net.minecraftforge.common.ForgeHooks.loadLootTable(ForgeHooks.java:871) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23190%23197!/:?]
-	at net.minecraftforge.common.ForgeHooks.lambda$getLootTableDeserializer$3(ForgeHooks.java:848) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23190%23197!/:?]
-	at net.minecraft.world.level.storage.loot.LootDataType.deserialize(LootDataType.java:45) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.LootDataManager.lambda$scheduleElementParse$4(LootDataManager.java:56) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at java.util.HashMap.forEach(HashMap.java:1421) ~[?:?]
-	at net.minecraft.world.level.storage.loot.LootDataManager.lambda$scheduleElementParse$5(LootDataManager.java:55) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804) ~[?:?]
-	at java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796) ~[?:?]
-	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373) ~[?:?]
-	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182) ~[?:?]
-	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
-	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
-	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
-[27feb.2025 20:06:12.735] [Worker-Main-3/ERROR] [net.minecraftforge.common.ForgeHooks/]: Couldn't parse element loot_tables:minecraft:blocks/deepslate_emerald_ore
-com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'enhanced_minecraft:raw_emerald'
-	at net.minecraft.util.GsonHelper.lambda$convertToItem$0(GsonHelper.java:145) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
-	at net.minecraft.util.GsonHelper.convertToItem(GsonHelper.java:145) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.util.GsonHelper.getAsItem(GsonHelper.java:153) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.entries.LootItem$Serializer.deserialize(LootItem.java:55) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.entries.LootItem$Serializer.deserialize(LootItem.java:40) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer$Serializer.deserializeCustom(LootPoolSingletonContainer.java:151) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer$Serializer.deserializeCustom(LootPoolSingletonContainer.java:129) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Serializer.deserialize(LootPoolEntryContainer.java:86) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Serializer.deserialize(LootPoolEntryContainer.java:74) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.GsonAdapterFactory$JsonAdapter.deserialize(GsonAdapterFactory.java:102) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at com.google.gson.internal.bind.TreeTypeAdapter.read(TreeTypeAdapter.java:76) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.internal.bind.TypeAdapterRuntimeTypeWrapper.read(TypeAdapterRuntimeTypeWrapper.java:40) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.internal.bind.ArrayTypeAdapter.read(ArrayTypeAdapter.java:72) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1214) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1319) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1290) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.internal.bind.TreeTypeAdapter$GsonContextImpl.deserialize(TreeTypeAdapter.java:179) ~[gson-2.10.jar%23130!/:?]
-	at net.minecraft.util.GsonHelper.convertToObject(GsonHelper.java:463) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.util.GsonHelper.getAsObject(GsonHelper.java:471) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.entries.CompositeEntryBase$1.deserializeCustom(CompositeEntryBase.java:61) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.entries.CompositeEntryBase$1.deserializeCustom(CompositeEntryBase.java:53) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Serializer.deserialize(LootPoolEntryContainer.java:86) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Serializer.deserialize(LootPoolEntryContainer.java:74) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.GsonAdapterFactory$JsonAdapter.deserialize(GsonAdapterFactory.java:102) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at com.google.gson.internal.bind.TreeTypeAdapter.read(TreeTypeAdapter.java:76) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.internal.bind.TypeAdapterRuntimeTypeWrapper.read(TypeAdapterRuntimeTypeWrapper.java:40) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.internal.bind.ArrayTypeAdapter.read(ArrayTypeAdapter.java:72) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1214) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1319) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1290) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.internal.bind.TreeTypeAdapter$GsonContextImpl.deserialize(TreeTypeAdapter.java:179) ~[gson-2.10.jar%23130!/:?]
-	at net.minecraft.util.GsonHelper.convertToObject(GsonHelper.java:463) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.util.GsonHelper.getAsObject(GsonHelper.java:471) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.LootPool$Serializer.deserialize(LootPool.java:192) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.LootPool$Serializer.deserialize(LootPool.java:189) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at com.google.gson.internal.bind.TreeTypeAdapter.read(TreeTypeAdapter.java:76) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.internal.bind.TypeAdapterRuntimeTypeWrapper.read(TypeAdapterRuntimeTypeWrapper.java:40) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.internal.bind.ArrayTypeAdapter.read(ArrayTypeAdapter.java:72) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1214) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1319) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1290) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.internal.bind.TreeTypeAdapter$GsonContextImpl.deserialize(TreeTypeAdapter.java:179) ~[gson-2.10.jar%23130!/:?]
-	at net.minecraft.util.GsonHelper.convertToObject(GsonHelper.java:463) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.util.GsonHelper.getAsObject(GsonHelper.java:481) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.LootTable$Serializer.deserialize(LootTable.java:294) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.LootTable$Serializer.deserialize(LootTable.java:291) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at com.google.gson.internal.bind.TreeTypeAdapter.read(TreeTypeAdapter.java:76) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1214) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1319) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1261) ~[gson-2.10.jar%23130!/:?]
-	at net.minecraftforge.common.ForgeHooks.loadLootTable(ForgeHooks.java:871) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23190%23197!/:?]
-	at net.minecraftforge.common.ForgeHooks.lambda$getLootTableDeserializer$3(ForgeHooks.java:848) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23190%23197!/:?]
-	at net.minecraft.world.level.storage.loot.LootDataType.deserialize(LootDataType.java:45) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.LootDataManager.lambda$scheduleElementParse$4(LootDataManager.java:56) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at java.util.HashMap.forEach(HashMap.java:1421) ~[?:?]
-	at net.minecraft.world.level.storage.loot.LootDataManager.lambda$scheduleElementParse$5(LootDataManager.java:55) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804) ~[?:?]
-	at java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796) ~[?:?]
-	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373) ~[?:?]
-	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182) ~[?:?]
-	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
-	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
-	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
-[27feb.2025 20:06:12.819] [Worker-Main-3/ERROR] [net.minecraftforge.common.ForgeHooks/]: Couldn't parse element loot_tables:minecraft:blocks/diamond_ore
-com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'enhanced_minecraft:raw_diamond'
-	at net.minecraft.util.GsonHelper.lambda$convertToItem$0(GsonHelper.java:145) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
-	at net.minecraft.util.GsonHelper.convertToItem(GsonHelper.java:145) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.util.GsonHelper.getAsItem(GsonHelper.java:153) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.entries.LootItem$Serializer.deserialize(LootItem.java:55) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.entries.LootItem$Serializer.deserialize(LootItem.java:40) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer$Serializer.deserializeCustom(LootPoolSingletonContainer.java:151) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer$Serializer.deserializeCustom(LootPoolSingletonContainer.java:129) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Serializer.deserialize(LootPoolEntryContainer.java:86) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Serializer.deserialize(LootPoolEntryContainer.java:74) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.GsonAdapterFactory$JsonAdapter.deserialize(GsonAdapterFactory.java:102) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at com.google.gson.internal.bind.TreeTypeAdapter.read(TreeTypeAdapter.java:76) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.internal.bind.TypeAdapterRuntimeTypeWrapper.read(TypeAdapterRuntimeTypeWrapper.java:40) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.internal.bind.ArrayTypeAdapter.read(ArrayTypeAdapter.java:72) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1214) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1319) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1290) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.internal.bind.TreeTypeAdapter$GsonContextImpl.deserialize(TreeTypeAdapter.java:179) ~[gson-2.10.jar%23130!/:?]
-	at net.minecraft.util.GsonHelper.convertToObject(GsonHelper.java:463) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.util.GsonHelper.getAsObject(GsonHelper.java:471) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.entries.CompositeEntryBase$1.deserializeCustom(CompositeEntryBase.java:61) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.entries.CompositeEntryBase$1.deserializeCustom(CompositeEntryBase.java:53) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Serializer.deserialize(LootPoolEntryContainer.java:86) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Serializer.deserialize(LootPoolEntryContainer.java:74) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.GsonAdapterFactory$JsonAdapter.deserialize(GsonAdapterFactory.java:102) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at com.google.gson.internal.bind.TreeTypeAdapter.read(TreeTypeAdapter.java:76) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.internal.bind.TypeAdapterRuntimeTypeWrapper.read(TypeAdapterRuntimeTypeWrapper.java:40) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.internal.bind.ArrayTypeAdapter.read(ArrayTypeAdapter.java:72) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1214) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1319) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1290) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.internal.bind.TreeTypeAdapter$GsonContextImpl.deserialize(TreeTypeAdapter.java:179) ~[gson-2.10.jar%23130!/:?]
-	at net.minecraft.util.GsonHelper.convertToObject(GsonHelper.java:463) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.util.GsonHelper.getAsObject(GsonHelper.java:471) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.LootPool$Serializer.deserialize(LootPool.java:192) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.LootPool$Serializer.deserialize(LootPool.java:189) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at com.google.gson.internal.bind.TreeTypeAdapter.read(TreeTypeAdapter.java:76) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.internal.bind.TypeAdapterRuntimeTypeWrapper.read(TypeAdapterRuntimeTypeWrapper.java:40) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.internal.bind.ArrayTypeAdapter.read(ArrayTypeAdapter.java:72) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1214) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1319) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1290) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.internal.bind.TreeTypeAdapter$GsonContextImpl.deserialize(TreeTypeAdapter.java:179) ~[gson-2.10.jar%23130!/:?]
-	at net.minecraft.util.GsonHelper.convertToObject(GsonHelper.java:463) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.util.GsonHelper.getAsObject(GsonHelper.java:481) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.LootTable$Serializer.deserialize(LootTable.java:294) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.LootTable$Serializer.deserialize(LootTable.java:291) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at com.google.gson.internal.bind.TreeTypeAdapter.read(TreeTypeAdapter.java:76) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1214) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1319) ~[gson-2.10.jar%23130!/:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1261) ~[gson-2.10.jar%23130!/:?]
-	at net.minecraftforge.common.ForgeHooks.loadLootTable(ForgeHooks.java:871) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23190%23197!/:?]
-	at net.minecraftforge.common.ForgeHooks.lambda$getLootTableDeserializer$3(ForgeHooks.java:848) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23190%23197!/:?]
-	at net.minecraft.world.level.storage.loot.LootDataType.deserialize(LootDataType.java:45) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at net.minecraft.world.level.storage.loot.LootDataManager.lambda$scheduleElementParse$4(LootDataManager.java:56) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at java.util.HashMap.forEach(HashMap.java:1421) ~[?:?]
-	at net.minecraft.world.level.storage.loot.LootDataManager.lambda$scheduleElementParse$5(LootDataManager.java:55) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?]
-	at java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804) ~[?:?]
-	at java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796) ~[?:?]
-	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373) ~[?:?]
-	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182) ~[?:?]
-	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
-	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
-	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
-[27feb.2025 20:06:13.688] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 13 recipes
-[27feb.2025 20:06:13.799] [Render thread/ERROR] [net.minecraft.server.ServerAdvancementManager/]: Parsing error loading custom advancement enhanced_playthrough:gems/get_all_gems: Unknown item id 'enhanced_minecraft:saphire'
-[27feb.2025 20:06:13.917] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 1655 advancements
-[27feb.2025 20:06:15.690] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 1.20.1
-[27feb.2025 20:06:15.694] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
-[27feb.2025 20:06:21.129] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
-[27feb.2025 20:06:26.333] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparando zona de aparición: 0%
-[27feb.2025 20:06:26.339] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparando zona de aparición: 0%
-[27feb.2025 20:06:26.339] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparando zona de aparición: 0%
-[27feb.2025 20:06:26.341] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparando zona de aparición: 0%
-[27feb.2025 20:06:26.412] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparando zona de aparición: 0%
-[27feb.2025 20:06:26.412] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparando zona de aparición: 0%
-[27feb.2025 20:06:26.412] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparando zona de aparición: 0%
-[27feb.2025 20:06:26.412] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparando zona de aparición: 0%
-[27feb.2025 20:06:26.413] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparando zona de aparición: 0%
-[27feb.2025 20:06:26.642] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparando zona de aparición: 0%
-[27feb.2025 20:06:27.397] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparando zona de aparición: 0%
-[27feb.2025 20:06:27.397] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparando zona de aparición: 0%
-[27feb.2025 20:06:27.397] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparando zona de aparición: 0%
-[27feb.2025 20:06:28.349] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparando zona de aparición: 0%
-[27feb.2025 20:06:28.349] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparando zona de aparición: 0%
-[27feb.2025 20:06:29.479] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparando zona de aparición: 0%
-[27feb.2025 20:06:29.479] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparando zona de aparición: 0%
-[27feb.2025 20:06:30.611] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparando zona de aparición: 0%
-[27feb.2025 20:06:30.611] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparando zona de aparición: 0%
-[27feb.2025 20:06:30.862] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparando zona de aparición: 0%
-[27feb.2025 20:06:31.655] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparando zona de aparición: 0%
-[27feb.2025 20:06:31.845] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparando zona de aparición: 0%
-[27feb.2025 20:06:32.629] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparando zona de aparición: 0%
-[27feb.2025 20:06:32.830] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparando zona de aparición: 0%
-[27feb.2025 20:06:33.277] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparando zona de aparición: 5%
-[27feb.2025 20:06:33.782] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparando zona de aparición: 5%
-[27feb.2025 20:06:34.314] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparando zona de aparición: 5%
-[27feb.2025 20:06:34.788] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparando zona de aparición: 6%
-[27feb.2025 20:06:39.588] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 18317 ms
-[27feb.2025 20:06:40.294] [Server thread/INFO] [net.minecraftforge.server.permission.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
-[27feb.2025 20:06:43.712] [Server thread/WARN] [net.minecraft.server.MinecraftServer/]: Can't keep up! Is the server overloaded? Running 3417ms or 68 ticks behind
-[27feb.2025 20:06:44.190] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 8, from 10
-[27feb.2025 20:06:44.194] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing simulation distance to 8, from 0
-[27feb.2025 20:06:44.538] [Render thread/WARN] [io.netty.util.internal.SystemPropertyUtil/]: Unable to parse the boolean system property 'java.net.preferIPv6Addresses':system - using the default value: false
-[27feb.2025 20:06:49.311] [Netty Local Client IO #0/INFO] [net.minecraftforge.network.NetworkHooks/]: Connected to a modded server.
-[27feb.2025 20:06:49.647] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:e01d6f14] logged in with entity id 189 at (19.461446905992698, 73.0, 4.94135386819414)
-[27feb.2025 20:06:49.798] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev se conectó
-[27feb.2025 20:06:52.300] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver received class net.minecraftforge.client.event.ClientPlayerNetworkEvent$LoggingIn
-[27feb.2025 20:06:52.300] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver transitioning state from DISABLED to ENABLED
-[27feb.2025 20:06:52.391] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:super_ore_alloying/enhanced_playthrough:brass_ingot_from_super_alloying_raw_copper_and_raw_zinc
-[27feb.2025 20:06:52.392] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:super_ore_alloying/enhanced_playthrough:bronzium_ingot_from_super_alloying_bronze_ingot_and_brass_ingot
-[27feb.2025 20:06:52.393] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:super_ore_alloying/enhanced_playthrough:bronze_ingot_from_super_alloying_tin_ingot_and_copper_ingot
-[27feb.2025 20:06:52.400] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:super_ore_alloying/enhanced_playthrough:bronze_ingot_from_super_alloying_raw_tin_and_raw_copper
-[27feb.2025 20:06:52.400] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:super_ore_alloying/enhanced_playthrough:green_gold_ingot_from_super_alloying_raw_silver_and_raw_gold
-[27feb.2025 20:06:52.401] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:super_ore_alloying/enhanced_playthrough:bronze_ingot_from_super_alloying_raw_copper_and_raw_tin
-[27feb.2025 20:06:52.401] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:ore_alloying/enhanced_playthrough:brass_ingot_from_alloying_raw_zinc_and_raw_copper
-[27feb.2025 20:06:52.402] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:super_ore_alloying/enhanced_playthrough:bronze_ingot_from_super_alloying_copper_ingot_and_tin_ingot
-[27feb.2025 20:06:52.402] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:super_ore_alloying/enhanced_playthrough:brass_ingot_from_super_alloying_raw_zinc_and_raw_copper
-[27feb.2025 20:06:52.404] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:ore_alloying/enhanced_playthrough:steel_ingot_from_alloying_coal_and_raw_iron
-[27feb.2025 20:06:52.405] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:super_ore_alloying/enhanced_playthrough:brass_ingot_from_super_alloying_copper_ingot_and_zinc_ingot
-[27feb.2025 20:06:52.408] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:super_ore_alloying/enhanced_playthrough:brass_ingot_from_super_alloying_zinc_ingot_and_copper_ingot
-[27feb.2025 20:06:52.409] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:super_ore_alloying/enhanced_playthrough:steel_ingot_from_super_alloying_coal_and_iron_ingot
-[27feb.2025 20:06:52.409] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:super_ore_alloying/enhanced_playthrough:steel_ingot_from_super_alloying_iron_ingot_and_coal
-[27feb.2025 20:06:52.410] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:super_ore_alloying/enhanced_playthrough:bronzium_ingot_from_super_alloying_brass_ingot_and_bronze_ingot
-[27feb.2025 20:06:52.410] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:super_ore_alloying/enhanced_playthrough:green_gold_ingot_from_super_alloying_raw_gold_and_raw_silver
-[27feb.2025 20:06:52.413] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:super_ore_alloying/enhanced_playthrough:green_gold_ingot_from_super_alloying_silver_ingot_and_gold_ingot
-[27feb.2025 20:06:52.413] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:ore_alloying/enhanced_playthrough:brass_ingot_from_alloying_raw_copper_and_raw_zinc
-[27feb.2025 20:06:52.414] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:super_ore_alloying/enhanced_playthrough:steel_ingot_from_super_alloying_raw_iron_and_coal
-[27feb.2025 20:06:52.414] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:ore_alloying/enhanced_playthrough:steel_ingot_from_alloying_raw_iron_and_coal
-[27feb.2025 20:06:52.415] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:super_ore_alloying/enhanced_playthrough:rose_gold_ingot_from_super_alloying_copper_ingot_and_gold_ingot
-[27feb.2025 20:06:52.416] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:super_ore_alloying/enhanced_playthrough:rose_gold_ingot_from_super_alloying_raw_gold_and_raw_copper
-[27feb.2025 20:06:52.417] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:ore_alloying/enhanced_playthrough:bronze_ingot_from_alloying_raw_copper_and_raw_tin
-[27feb.2025 20:06:52.420] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:ore_alloying/enhanced_playthrough:bronze_ingot_from_alloying_raw_tin_and_raw_copper
-[27feb.2025 20:06:52.421] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:super_ore_alloying/enhanced_playthrough:steel_ingot_from_super_alloying_coal_and_raw_iron
-[27feb.2025 20:06:52.423] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:super_ore_alloying/enhanced_playthrough:rose_gold_ingot_from_super_alloying_gold_ingot_and_copper_ingot
-[27feb.2025 20:06:52.426] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:super_ore_alloying/enhanced_playthrough:rose_gold_ingot_from_super_alloying_raw_copper_and_raw_gold
-[27feb.2025 20:06:52.429] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:super_ore_alloying/enhanced_playthrough:green_gold_ingot_from_super_alloying_gold_ingot_and_silver_ingot
-[27feb.2025 20:06:54.729] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver received class net.minecraftforge.client.event.RecipesUpdatedEvent
-[27feb.2025 20:06:54.816] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver received class net.minecraftforge.event.TagsUpdatedEvent
-[27feb.2025 20:06:54.816] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver transitioning state from ENABLED to JEI_STARTED
-[27feb.2025 20:06:54.817] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Starting JEI...
-[27feb.2025 20:06:54.831] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes...
-[27feb.2025 20:06:54.836] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes took 4.882 ms
-[27feb.2025 20:06:54.837] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes...
-[27feb.2025 20:06:54.860] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering fluid subtypes: jei:debug took 21.91 milliseconds
-[27feb.2025 20:06:54.861] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes took 23.65 ms
-[27feb.2025 20:06:54.864] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients...
-[27feb.2025 20:06:55.034] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering ingredients: jei:minecraft took 170.3 milliseconds
-[27feb.2025 20:06:55.035] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients took 171.7 ms
-[27feb.2025 20:06:55.055] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories...
-[27feb.2025 20:06:55.087] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering categories: jei:minecraft took 30.80 milliseconds
-[27feb.2025 20:06:55.225] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering categories: enhanced_playthrough:jei_plugin took 136.9 milliseconds
-[27feb.2025 20:06:55.227] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories took 171.3 ms
-[27feb.2025 20:06:55.228] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions...
-[27feb.2025 20:06:55.232] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions took 3.766 ms
-[27feb.2025 20:06:55.235] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts...
-[27feb.2025 20:06:55.237] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts took 1.326 ms
-[27feb.2025 20:06:55.239] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins...
-[27feb.2025 20:06:55.240] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins took 1.217 ms
-[27feb.2025 20:06:55.240] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building recipe registry...
-[27feb.2025 20:06:55.294] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building recipe registry took 53.32 ms
-[27feb.2025 20:06:55.297] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes...
-[27feb.2025 20:06:55.754] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering recipes: jei:minecraft took 455.6 milliseconds
-[27feb.2025 20:06:55.756] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes took 458.1 ms
-[27feb.2025 20:06:55.762] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers...
-[27feb.2025 20:06:55.766] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers took 4.132 ms
-[27feb.2025 20:06:55.790] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building runtime...
-[27feb.2025 20:06:55.839] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers...
-[27feb.2025 20:06:55.852] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers took 12.56 ms
-[27feb.2025 20:06:55.859] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime...
-[27feb.2025 20:06:55.869] [Render thread/INFO] [mezz.jei.gui.startup.JeiGuiStarter/]: Starting JEI GUI
-[27feb.2025 20:06:55.870] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient list...
-[27feb.2025 20:06:55.877] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient list took 6.594 ms
-[27feb.2025 20:06:55.877] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient filter...
-[27feb.2025 20:06:56.840] [Render thread/INFO] [mezz.jei.gui.ingredients.IngredientFilter/]: Adding 1702 ingredients
-[27feb.2025 20:06:57.283] [Render thread/INFO] [mezz.jei.gui.ingredients.IngredientFilter/]: Added 1702 ingredients
-[27feb.2025 20:06:57.285] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient filter took 1.407 s
-[27feb.2025 20:06:57.470] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering Runtime: jei:forge_gui took 1.609 seconds
-[27feb.2025 20:06:57.470] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime took 1.610 s
-[27feb.2025 20:06:57.471] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building runtime took 1.680 s
-[27feb.2025 20:06:57.472] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime...
-[27feb.2025 20:06:57.473] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime took 896.1 μs
-[27feb.2025 20:06:57.474] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Starting JEI took 2.656 s
-[27feb.2025 20:06:57.769] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 2 advancements
-[27feb.2025 20:07:28.358] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev acaba de conseguir el progreso [No tiende a-cero]
-[27feb.2025 20:07:28.529] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Dev acaba de conseguir el progreso [No tiende a-cero]
-[27feb.2025 20:07:28.548] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 18 advancements
-[27feb.2025 20:07:30.844] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
-[27feb.2025 20:07:30.879] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[EMT 2.Alfa]'/minecraft:overworld
-[27feb.2025 20:07:30.908] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[EMT 2.Alfa]'/minecraft:the_end
-[27feb.2025 20:07:30.911] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[EMT 2.Alfa]'/minecraft:the_nether
-[27feb.2025 20:07:31.502] [Render thread/WARN] [net.minecraft.client.renderer.texture.TextureManager/]: Failed to load texture: enhanced_playthrough:textures/block/apple_log.png
-java.io.FileNotFoundException: enhanced_playthrough:textures/block/apple_log.png
-	at net.minecraft.server.packs.resources.ResourceProvider.lambda$getResourceOrThrow$0(ResourceProvider.java:21) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar:?]
-	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
-	at net.minecraft.server.packs.resources.ResourceProvider.getResourceOrThrow(ResourceProvider.java:21) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar:?]
-	at net.minecraft.client.renderer.texture.SimpleTexture$TextureImage.load(SimpleTexture.java:83) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar:?]
-	at net.minecraft.client.renderer.texture.SimpleTexture.getTextureImage(SimpleTexture.java:58) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar:?]
-	at net.minecraft.client.renderer.texture.SimpleTexture.load(SimpleTexture.java:29) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar:?]
-	at net.minecraft.client.renderer.texture.TextureManager.loadTexture(TextureManager.java:96) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar:?]
-	at net.minecraft.client.renderer.texture.TextureManager.register(TextureManager.java:66) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar:?]
-	at net.minecraft.client.renderer.texture.TextureManager.getTexture(TextureManager.java:119) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar:?]
-	at com.mojang.blaze3d.systems.RenderSystem._setShaderTexture(RenderSystem.java:1232) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar:?]
-	at com.mojang.blaze3d.systems.RenderSystem.setShaderTexture(RenderSystem.java:1225) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar:?]
-	at net.minecraft.client.gui.GuiGraphics.innerBlit(GuiGraphics.java:354) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar:?]
-	at net.minecraft.client.gui.GuiGraphics.blit(GuiGraphics.java:350) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar:?]
-	at net.minecraft.client.gui.GuiGraphics.blit(GuiGraphics.java:342) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar:?]
-	at net.minecraft.client.gui.GuiGraphics.blit(GuiGraphics.java:346) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar:?]
-	at net.minecraft.client.gui.screens.advancements.AdvancementTab.drawContents(AdvancementTab.java:109) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar:?]
-	at net.minecraft.client.gui.screens.advancements.AdvancementsScreen.renderInside(AdvancementsScreen.java:144) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar:?]
-	at net.minecraft.client.gui.screens.advancements.AdvancementsScreen.render(AdvancementsScreen.java:115) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar:?]
-	at net.minecraft.client.gui.screens.Screen.renderWithTooltip(Screen.java:109) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar:?]
-	at net.minecraftforge.client.ForgeHooksClient.drawScreenInternal(ForgeHooksClient.java:427) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar:?]
-	at net.minecraftforge.client.ForgeHooksClient.drawScreen(ForgeHooksClient.java:420) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar:?]
-	at net.minecraft.client.renderer.GameRenderer.render(GameRenderer.java:965) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar:?]
-	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1146) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar:?]
-	at net.minecraft.client.Minecraft.run(Minecraft.java:718) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar:?]
-	at net.minecraft.client.main.Main.main(Main.java:218) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
-	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
-	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
-	at net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:111) ~[fmlloader-1.20.1-47.3.0.jar:?]
-	at net.minecraftforge.fml.loading.targets.CommonLaunchHandler.clientService(CommonLaunchHandler.java:99) ~[fmlloader-1.20.1-47.3.0.jar:?]
-	at net.minecraftforge.fml.loading.targets.ForgeClientUserdevLaunchHandler.devService(ForgeClientUserdevLaunchHandler.java:19) ~[fmlloader-1.20.1-47.3.0.jar:?]
-	at net.minecraftforge.fml.loading.targets.CommonDevLaunchHandler.lambda$makeService$7(CommonDevLaunchHandler.java:135) ~[fmlloader-1.20.1-47.3.0.jar:?]
-	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) ~[modlauncher-10.0.9.jar:?]
-	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) ~[modlauncher-10.0.9.jar:?]
-	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) ~[modlauncher-10.0.9.jar:?]
-	at cpw.mods.modlauncher.Launcher.run(Launcher.java:108) ~[modlauncher-10.0.9.jar:?]
-	at cpw.mods.modlauncher.Launcher.main(Launcher.java:78) ~[modlauncher-10.0.9.jar:?]
-	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
-	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
-	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[27feb.2025 20:07:56.359] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Captura de pantalla guardada como 2025-02-27_20.07.56.png
-[27feb.2025 20:08:18.363] [Server thread/INFO] [net.minecraft.server.commands.LocateCommand/]: Locating element minecraft:village_plains took 241 ms
-[27feb.2025 20:08:18.362] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] La estructura de tipo minecraft:village_plains más cercana está en [176, ~, -208]. (A 265 bloques de distancia)
-[27feb.2025 20:08:25.865] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Dev: Dev teletransportado a 176.500000, 73.000000, -207.500000]
-[27feb.2025 20:08:25.865] [Server thread/WARN] [net.minecraft.server.MinecraftServer/]: Can't keep up! Is the server overloaded? Running 4922ms or 98 ticks behind
-[27feb.2025 20:08:25.921] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Dev teletransportado a 176.500000, 73.000000, -207.500000
-[27feb.2025 20:14:17.967] [Server thread/INFO] [net.minecraft.server.commands.LocateCommand/]: Locating element minecraft:village_snowy took 2491 ms
-[27feb.2025 20:14:17.968] [Server thread/WARN] [net.minecraft.server.MinecraftServer/]: Can't keep up! Is the server overloaded? Running 2473ms or 49 ticks behind
-[27feb.2025 20:14:17.984] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] La estructura de tipo minecraft:village_snowy más cercana está en [-2512, ~, 2448]. (A 3785 bloques de distancia)
-[27feb.2025 20:14:24.842] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Dev: Dev teletransportado a -2511.500000, 62.937500, 2448.500000]
-[27feb.2025 20:14:24.847] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Dev teletransportado a -2511.500000, 62.937500, 2448.500000
-[27feb.2025 20:14:29.477] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Dev: Tu modo de juego cambió a Espectador]
-[27feb.2025 20:14:29.491] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Tu modo de juego cambió a Espectador
-[27feb.2025 20:14:31.882] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Dev: Tu modo de juego cambió a Creativo]
-[27feb.2025 20:14:31.883] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Tu modo de juego cambió a Creativo
-[27feb.2025 20:14:54.093] [Server thread/INFO] [net.minecraft.server.commands.LocateCommand/]: Locating element minecraft:village_savanna took 3368 ms
-[27feb.2025 20:14:54.094] [Server thread/WARN] [net.minecraft.server.MinecraftServer/]: Can't keep up! Is the server overloaded? Running 3501ms or 70 ticks behind
-[27feb.2025 20:14:54.560] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] La estructura de tipo minecraft:village_savanna más cercana está en [-3040, ~, 1248]. (A 1311 bloques de distancia)
-[27feb.2025 20:15:05.825] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Dev: Dev teletransportado a -3039.500000, 68.744332, 1248.500000]
-[27feb.2025 20:15:05.830] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Dev teletransportado a -3039.500000, 68.744332, 1248.500000
-[27feb.2025 20:15:14.644] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Dev: Se eliminaron 65 objeto(s) del jugador Dev]
-[27feb.2025 20:15:14.658] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Se eliminaron 65 objeto(s) del jugador Dev
-[27feb.2025 20:15:48.325] [Server thread/WARN] [net.minecraft.server.MinecraftServer/]: Can't keep up! Is the server overloaded? Running 2131ms or 42 ticks behind
-[27feb.2025 20:15:50.860] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Dev: Tiempo cambiado a 1000 ticks]
-[27feb.2025 20:15:50.972] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Tiempo cambiado a 1000 ticks
-[27feb.2025 20:17:35.904] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 24 advancements
-[27feb.2025 20:18:57.543] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Captura de pantalla guardada como 2025-02-27_20.18.57.png
-[27feb.2025 20:19:21.474] [Server thread/WARN] [net.minecraft.server.MinecraftServer/]: Can't keep up! Is the server overloaded? Running 2030ms or 40 ticks behind
-[27feb.2025 20:19:32.943] [Server thread/INFO] [net.minecraft.server.commands.LocateCommand/]: Locating element minecraft:village_plains took 3714 ms
-[27feb.2025 20:19:32.945] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] La estructura de tipo minecraft:village_plains más cercana está en [-1472, ~, 1264]. (A 1578 bloques de distancia)
-[27feb.2025 20:19:38.330] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Dev: Dev teletransportado a -1471.500000, 64.000000, 1264.500000]
-[27feb.2025 20:19:38.427] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Dev teletransportado a -1471.500000, 64.000000, 1264.500000
-[27feb.2025 20:19:39.667] [Server thread/WARN] [net.minecraft.server.MinecraftServer/]: Can't keep up! Is the server overloaded? Running 3223ms or 64 ticks behind
-[27feb.2025 20:19:45.136] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Dev: Tu modo de juego cambió a Espectador]
-[27feb.2025 20:19:45.455] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Tu modo de juego cambió a Espectador
-[27feb.2025 20:19:49.490] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Dev: Tu modo de juego cambió a Creativo]
-[27feb.2025 20:19:49.490] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Tu modo de juego cambió a Creativo
-[27feb.2025 20:19:53.136] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Dev: Tu modo de juego cambió a Espectador]
-[27feb.2025 20:19:53.139] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Tu modo de juego cambió a Espectador
-[27feb.2025 20:19:56.222] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Dev: Tu modo de juego cambió a Creativo]
-[27feb.2025 20:19:56.350] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Tu modo de juego cambió a Creativo
-[27feb.2025 20:21:18.219] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Captura de pantalla guardada como 2025-02-27_20.21.18.png
-[27feb.2025 20:21:19.995] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
-[27feb.2025 20:21:20.039] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[EMT 2.Alfa]'/minecraft:overworld
-[27feb.2025 20:21:20.163] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[EMT 2.Alfa]'/minecraft:the_end
-[27feb.2025 20:21:20.187] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[EMT 2.Alfa]'/minecraft:the_nether
-[27feb.2025 20:21:20.641] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver received class net.minecraftforge.client.event.ClientPlayerNetworkEvent$LoggingOut
-[27feb.2025 20:21:20.642] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver transitioning state from JEI_STARTED to DISABLED
-[27feb.2025 20:21:20.644] [Render thread/INFO] [mezz.jei.library.startup.JeiStarter/]: Stopping JEI
-[27feb.2025 20:21:20.644] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime Unavailable...
-[27feb.2025 20:21:20.647] [Render thread/INFO] [mezz.jei.forge.plugins.forge.ForgeGuiPlugin/]: Stopping JEI GUI
-[27feb.2025 20:21:20.653] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime Unavailable took 8.470 ms
-[27feb.2025 20:21:20.718] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Dev lost connection: Desconectado/a
-[27feb.2025 20:21:20.718] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev se desconectó
-[27feb.2025 20:21:20.759] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Stopping singleplayer server as player logged out
-[27feb.2025 20:21:20.778] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
-[27feb.2025 20:21:20.798] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
-[27feb.2025 20:21:20.799] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
-[27feb.2025 20:21:22.883] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[EMT 2.Alfa]'/minecraft:overworld
-[27feb.2025 20:21:27.327] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[EMT 2.Alfa]'/minecraft:the_end
-[27feb.2025 20:21:27.330] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[EMT 2.Alfa]'/minecraft:the_nether
-[27feb.2025 20:21:27.366] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (EMT 2_Alfa): All chunks are saved
-[27feb.2025 20:21:27.367] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[27feb.2025 20:21:27.367] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[27feb.2025 20:21:27.367] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage: All dimensions are saved
-[27feb.2025 20:21:30.026] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!
+[10mar.2025 17:02:43.862] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: OUTDATED Current: 47.3.0 Target: 47.4.0
+[10mar.2025 17:02:45.463] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'enhanced_playthrough:blockstates/adobe_furnace.json' missing model for variant: 'enhanced_playthrough:adobe_furnace#burning=false,facing=down'
+[10mar.2025 17:02:45.463] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'enhanced_playthrough:blockstates/adobe_furnace.json' missing model for variant: 'enhanced_playthrough:adobe_furnace#burning=true,facing=up'
+[10mar.2025 17:02:45.463] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'enhanced_playthrough:blockstates/adobe_furnace.json' missing model for variant: 'enhanced_playthrough:adobe_furnace#burning=true,facing=down'
+[10mar.2025 17:02:45.463] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'enhanced_playthrough:blockstates/adobe_furnace.json' missing model for variant: 'enhanced_playthrough:adobe_furnace#burning=false,facing=up'
+[10mar.2025 17:02:45.464] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'enhanced_playthrough:blockstates/soul_furnace.json' missing model for variant: 'enhanced_playthrough:soul_furnace#burning=true,facing=down'
+[10mar.2025 17:02:45.464] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'enhanced_playthrough:blockstates/soul_furnace.json' missing model for variant: 'enhanced_playthrough:soul_furnace#burning=false,facing=up'
+[10mar.2025 17:02:45.464] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'enhanced_playthrough:blockstates/soul_furnace.json' missing model for variant: 'enhanced_playthrough:soul_furnace#burning=true,facing=up'
+[10mar.2025 17:02:45.464] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'enhanced_playthrough:blockstates/soul_furnace.json' missing model for variant: 'enhanced_playthrough:soul_furnace#burning=false,facing=down'
+[10mar.2025 17:02:45.464] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'enhanced_playthrough:blockstates/adobe_alloying_furnace.json' missing model for variant: 'enhanced_playthrough:adobe_alloying_furnace#burning=true,facing=up'
+[10mar.2025 17:02:45.465] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'enhanced_playthrough:blockstates/adobe_alloying_furnace.json' missing model for variant: 'enhanced_playthrough:adobe_alloying_furnace#burning=true,facing=down'
+[10mar.2025 17:02:45.465] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'enhanced_playthrough:blockstates/adobe_alloying_furnace.json' missing model for variant: 'enhanced_playthrough:adobe_alloying_furnace#burning=false,facing=up'
+[10mar.2025 17:02:45.465] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'enhanced_playthrough:blockstates/adobe_alloying_furnace.json' missing model for variant: 'enhanced_playthrough:adobe_alloying_furnace#burning=false,facing=down'
+[10mar.2025 17:02:45.465] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'enhanced_playthrough:blockstates/super_alloying_furnace.json' missing model for variant: 'enhanced_playthrough:super_alloying_furnace#burning=false,facing=up'
+[10mar.2025 17:02:45.465] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'enhanced_playthrough:blockstates/super_alloying_furnace.json' missing model for variant: 'enhanced_playthrough:super_alloying_furnace#burning=true,facing=up'
+[10mar.2025 17:02:45.465] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'enhanced_playthrough:blockstates/super_alloying_furnace.json' missing model for variant: 'enhanced_playthrough:super_alloying_furnace#burning=true,facing=down'
+[10mar.2025 17:02:45.465] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'enhanced_playthrough:blockstates/super_alloying_furnace.json' missing model for variant: 'enhanced_playthrough:super_alloying_furnace#burning=false,facing=down'
+[10mar.2025 17:02:45.465] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'enhanced_playthrough:blockstates/soul_alloy_furnace.json' missing model for variant: 'enhanced_playthrough:soul_alloy_furnace#burning=false,facing=down'
+[10mar.2025 17:02:45.466] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'enhanced_playthrough:blockstates/soul_alloy_furnace.json' missing model for variant: 'enhanced_playthrough:soul_alloy_furnace#burning=true,facing=up'
+[10mar.2025 17:02:45.466] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'enhanced_playthrough:blockstates/soul_alloy_furnace.json' missing model for variant: 'enhanced_playthrough:soul_alloy_furnace#burning=true,facing=down'
+[10mar.2025 17:02:45.466] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'enhanced_playthrough:blockstates/soul_alloy_furnace.json' missing model for variant: 'enhanced_playthrough:soul_alloy_furnace#burning=false,facing=up'
+[10mar.2025 17:02:45.466] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'enhanced_playthrough:blockstates/gem_polisher.json' missing model for variant: 'enhanced_playthrough:gem_polisher#facing=up'
+[10mar.2025 17:02:45.466] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'enhanced_playthrough:blockstates/gem_polisher.json' missing model for variant: 'enhanced_playthrough:gem_polisher#facing=down'
+[10mar.2025 17:02:45.466] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'enhanced_playthrough:blockstates/grinder.json' missing model for variant: 'enhanced_playthrough:grinder#facing=up,on=false'
+[10mar.2025 17:02:45.466] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'enhanced_playthrough:blockstates/grinder.json' missing model for variant: 'enhanced_playthrough:grinder#facing=down,on=false'
+[10mar.2025 17:02:45.466] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'enhanced_playthrough:blockstates/grinder.json' missing model for variant: 'enhanced_playthrough:grinder#facing=down,on=true'
+[10mar.2025 17:02:45.466] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'enhanced_playthrough:blockstates/grinder.json' missing model for variant: 'enhanced_playthrough:grinder#facing=up,on=true'
+[10mar.2025 17:02:45.474] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'enhanced_playthrough:walnut#inventory' referenced from: enhanced_playthrough:walnut#inventory: java.io.FileNotFoundException: enhanced_playthrough:models/item/walnut.json
+[10mar.2025 17:02:47.499] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:item.goat_horn.play
+[10mar.2025 17:02:47.499] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
+[10mar.2025 17:02:47.576] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device OpenAL Soft on Headphones (High Definition Audio Device)
+[10mar.2025 17:02:47.576] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
+[10mar.2025 17:02:47.667] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
+[10mar.2025 17:02:47.685] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
+[10mar.2025 17:02:47.686] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[10mar.2025 17:02:47.687] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[10mar.2025 17:02:47.688] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
+[10mar.2025 17:02:47.693] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
+[10mar.2025 17:02:47.693] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[10mar.2025 17:02:47.693] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[10mar.2025 17:02:47.694] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[10mar.2025 17:02:48.100] [Render thread/WARN] [net.minecraft.client.renderer.ShaderInstance/]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
+[10mar.2025 17:02:48.145] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
+[10mar.2025 17:02:48.146] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[10mar.2025 17:02:48.146] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[10mar.2025 17:02:48.149] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 jei:textures/atlas/gui.png-atlas
+[10mar.2025 17:02:48.504] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient/]: Could not authorize you against Realms server: Invalid session id
+[10mar.2025 17:02:51.946] [Render thread/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: Injecting existing registry data into this CLIENT instance
+[10mar.2025 17:02:54.287] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 13 recipes
+[10mar.2025 17:02:54.365] [Render thread/ERROR] [net.minecraft.server.ServerAdvancementManager/]: Parsing error loading custom advancement enhanced_playthrough:gems/get_all_gems: Unknown item id 'enhanced_minecraft:saphire'
+[10mar.2025 17:02:54.410] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 1655 advancements
+[10mar.2025 17:02:54.831] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 1.20.1
+[10mar.2025 17:02:54.831] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
+[10mar.2025 17:02:56.435] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
+[10mar.2025 17:02:58.854] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparando zona de aparición: 0%
+[10mar.2025 17:02:58.877] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparando zona de aparición: 0%
+[10mar.2025 17:02:58.877] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparando zona de aparición: 0%
+[10mar.2025 17:02:58.877] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparando zona de aparición: 0%
+[10mar.2025 17:02:58.877] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparando zona de aparición: 0%
+[10mar.2025 17:02:58.956] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparando zona de aparición: 0%
+[10mar.2025 17:02:59.455] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparando zona de aparición: 0%
+[10mar.2025 17:02:59.968] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparando zona de aparición: 1%
+[10mar.2025 17:03:00.460] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparando zona de aparición: 82%
+[10mar.2025 17:03:00.586] [Server thread/INFO] [net.minecraftforge.server.permission.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
+[10mar.2025 17:03:00.591] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 4139 ms
+[10mar.2025 17:03:00.903] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 8, from 10
+[10mar.2025 17:03:00.905] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing simulation distance to 8, from 0
+[10mar.2025 17:03:01.043] [Render thread/WARN] [io.netty.util.internal.SystemPropertyUtil/]: Unable to parse the boolean system property 'java.net.preferIPv6Addresses':system - using the default value: false
+[10mar.2025 17:03:01.733] [Netty Local Client IO #0/INFO] [net.minecraftforge.network.NetworkHooks/]: Connected to a modded server.
+[10mar.2025 17:03:01.823] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:bf24efa9] logged in with entity id 153 at (-1243.6204055256117, -34.0, 1483.061867591974)
+[10mar.2025 17:03:01.893] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev se conectó
+[10mar.2025 17:03:01.975] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver received class net.minecraftforge.client.event.ClientPlayerNetworkEvent$LoggingIn
+[10mar.2025 17:03:01.976] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver transitioning state from DISABLED to ENABLED
+[10mar.2025 17:03:01.988] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:super_ore_alloying/enhanced_playthrough:green_gold_ingot_from_super_alloying_raw_gold_and_raw_silver
+[10mar.2025 17:03:01.989] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:super_ore_alloying/enhanced_playthrough:bronze_ingot_from_super_alloying_tin_ingot_and_copper_ingot
+[10mar.2025 17:03:01.993] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:super_ore_alloying/enhanced_playthrough:rose_gold_ingot_from_super_alloying_raw_gold_and_raw_copper
+[10mar.2025 17:03:01.993] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:super_ore_alloying/enhanced_playthrough:bronzium_ingot_from_super_alloying_bronze_ingot_and_brass_ingot
+[10mar.2025 17:03:01.994] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:super_ore_alloying/enhanced_playthrough:brass_ingot_from_super_alloying_copper_ingot_and_zinc_ingot
+[10mar.2025 17:03:01.994] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:super_ore_alloying/enhanced_playthrough:steel_ingot_from_super_alloying_coal_and_raw_iron
+[10mar.2025 17:03:01.997] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:super_ore_alloying/enhanced_playthrough:bronze_ingot_from_super_alloying_raw_copper_and_raw_tin
+[10mar.2025 17:03:01.997] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:super_ore_alloying/enhanced_playthrough:bronze_ingot_from_super_alloying_copper_ingot_and_tin_ingot
+[10mar.2025 17:03:01.998] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:ore_alloying/enhanced_playthrough:steel_ingot_from_alloying_raw_iron_and_coal
+[10mar.2025 17:03:01.998] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:super_ore_alloying/enhanced_playthrough:steel_ingot_from_super_alloying_raw_iron_and_coal
+[10mar.2025 17:03:01.998] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:ore_alloying/enhanced_playthrough:brass_ingot_from_alloying_raw_copper_and_raw_zinc
+[10mar.2025 17:03:01.999] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:super_ore_alloying/enhanced_playthrough:steel_ingot_from_super_alloying_iron_ingot_and_coal
+[10mar.2025 17:03:01.999] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:super_ore_alloying/enhanced_playthrough:bronze_ingot_from_super_alloying_raw_tin_and_raw_copper
+[10mar.2025 17:03:02.000] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:super_ore_alloying/enhanced_playthrough:bronzium_ingot_from_super_alloying_brass_ingot_and_bronze_ingot
+[10mar.2025 17:03:02.000] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:super_ore_alloying/enhanced_playthrough:green_gold_ingot_from_super_alloying_silver_ingot_and_gold_ingot
+[10mar.2025 17:03:02.001] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:super_ore_alloying/enhanced_playthrough:green_gold_ingot_from_super_alloying_raw_silver_and_raw_gold
+[10mar.2025 17:03:02.002] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:super_ore_alloying/enhanced_playthrough:brass_ingot_from_super_alloying_raw_copper_and_raw_zinc
+[10mar.2025 17:03:02.002] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:ore_alloying/enhanced_playthrough:bronze_ingot_from_alloying_raw_copper_and_raw_tin
+[10mar.2025 17:03:02.003] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:super_ore_alloying/enhanced_playthrough:steel_ingot_from_super_alloying_coal_and_iron_ingot
+[10mar.2025 17:03:02.004] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:ore_alloying/enhanced_playthrough:brass_ingot_from_alloying_raw_zinc_and_raw_copper
+[10mar.2025 17:03:02.005] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:super_ore_alloying/enhanced_playthrough:rose_gold_ingot_from_super_alloying_raw_copper_and_raw_gold
+[10mar.2025 17:03:02.006] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:ore_alloying/enhanced_playthrough:bronze_ingot_from_alloying_raw_tin_and_raw_copper
+[10mar.2025 17:03:02.008] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:ore_alloying/enhanced_playthrough:steel_ingot_from_alloying_coal_and_raw_iron
+[10mar.2025 17:03:02.008] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:super_ore_alloying/enhanced_playthrough:rose_gold_ingot_from_super_alloying_copper_ingot_and_gold_ingot
+[10mar.2025 17:03:02.009] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:super_ore_alloying/enhanced_playthrough:brass_ingot_from_super_alloying_raw_zinc_and_raw_copper
+[10mar.2025 17:03:02.009] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:super_ore_alloying/enhanced_playthrough:brass_ingot_from_super_alloying_zinc_ingot_and_copper_ingot
+[10mar.2025 17:03:02.010] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:super_ore_alloying/enhanced_playthrough:rose_gold_ingot_from_super_alloying_gold_ingot_and_copper_ingot
+[10mar.2025 17:03:02.010] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: enhanced_playthrough:super_ore_alloying/enhanced_playthrough:green_gold_ingot_from_super_alloying_gold_ingot_and_silver_ingot
+[10mar.2025 17:03:02.192] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver received class net.minecraftforge.client.event.RecipesUpdatedEvent
+[10mar.2025 17:03:02.208] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver received class net.minecraftforge.event.TagsUpdatedEvent
+[10mar.2025 17:03:02.208] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver transitioning state from ENABLED to JEI_STARTED
+[10mar.2025 17:03:02.209] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Starting JEI...
+[10mar.2025 17:03:02.224] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes...
+[10mar.2025 17:03:02.228] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes took 4.307 ms
+[10mar.2025 17:03:02.229] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes...
+[10mar.2025 17:03:02.233] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes took 3.941 ms
+[10mar.2025 17:03:02.236] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients...
+[10mar.2025 17:03:02.308] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering ingredients: jei:minecraft took 70.84 milliseconds
+[10mar.2025 17:03:02.308] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients took 71.89 ms
+[10mar.2025 17:03:02.327] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories...
+[10mar.2025 17:03:02.353] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering categories: jei:minecraft took 25.90 milliseconds
+[10mar.2025 17:03:02.383] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering categories: enhanced_playthrough:jei_plugin took 29.46 milliseconds
+[10mar.2025 17:03:02.385] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories took 57.81 ms
+[10mar.2025 17:03:02.386] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions...
+[10mar.2025 17:03:02.390] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions took 4.184 ms
+[10mar.2025 17:03:02.394] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts...
+[10mar.2025 17:03:02.395] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts took 1.338 ms
+[10mar.2025 17:03:02.397] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins...
+[10mar.2025 17:03:02.399] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins took 1.585 ms
+[10mar.2025 17:03:02.399] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building recipe registry...
+[10mar.2025 17:03:02.415] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building recipe registry took 15.62 ms
+[10mar.2025 17:03:02.418] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes...
+[10mar.2025 17:03:02.670] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering recipes: jei:minecraft took 250.6 milliseconds
+[10mar.2025 17:03:02.673] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes took 253.6 ms
+[10mar.2025 17:03:02.678] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers...
+[10mar.2025 17:03:02.682] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers took 3.829 ms
+[10mar.2025 17:03:02.686] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building runtime...
+[10mar.2025 17:03:02.693] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers...
+[10mar.2025 17:03:02.703] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers took 9.978 ms
+[10mar.2025 17:03:02.709] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime...
+[10mar.2025 17:03:02.713] [Render thread/INFO] [mezz.jei.gui.startup.JeiGuiStarter/]: Starting JEI GUI
+[10mar.2025 17:03:02.714] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient list...
+[10mar.2025 17:03:02.719] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient list took 4.970 ms
+[10mar.2025 17:03:02.719] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient filter...
+[10mar.2025 17:03:02.804] [Render thread/INFO] [mezz.jei.gui.ingredients.IngredientFilter/]: Adding 1702 ingredients
+[10mar.2025 17:03:03.140] [Render thread/INFO] [mezz.jei.gui.ingredients.IngredientFilter/]: Added 1702 ingredients
+[10mar.2025 17:03:03.142] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient filter took 423.3 ms
+[10mar.2025 17:03:03.258] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering Runtime: jei:forge_gui took 548.3 milliseconds
+[10mar.2025 17:03:03.258] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime took 549.5 ms
+[10mar.2025 17:03:03.259] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building runtime took 571.8 ms
+[10mar.2025 17:03:03.260] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime...
+[10mar.2025 17:03:03.261] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime took 621.1 μs
+[10mar.2025 17:03:03.261] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Starting JEI took 1.051 s
+[10mar.2025 17:03:03.492] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 162 advancements
+[10mar.2025 17:03:12.465] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 163 advancements
+[10mar.2025 17:03:50.792] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Dev: Se aplicó Minado fino al ítem de Dev]
+[10mar.2025 17:03:50.808] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Se aplicó Minado fino al ítem de Dev
+[10mar.2025 17:03:58.656] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev acaba de conseguir el progreso [¡DIAMANTES!]
+[10mar.2025 17:03:58.658] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev acaba de conseguir el progreso [Estás acá, Lucy?]
+[10mar.2025 17:03:58.668] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Dev acaba de conseguir el progreso [¡DIAMANTES!]
+[10mar.2025 17:03:58.669] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Dev acaba de conseguir el progreso [Estás acá, Lucy?]
+[10mar.2025 17:03:58.701] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 175 advancements
+[10mar.2025 17:04:18.937] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[10mar.2025 17:04:18.956] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[EMT 2.Alfa]'/minecraft:overworld
+[10mar.2025 17:04:18.978] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[EMT 2.Alfa]'/minecraft:the_end
+[10mar.2025 17:04:18.979] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[EMT 2.Alfa]'/minecraft:the_nether
+[10mar.2025 17:04:19.418] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver received class net.minecraftforge.client.event.ClientPlayerNetworkEvent$LoggingOut
+[10mar.2025 17:04:19.418] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver transitioning state from JEI_STARTED to DISABLED
+[10mar.2025 17:04:19.418] [Render thread/INFO] [mezz.jei.library.startup.JeiStarter/]: Stopping JEI
+[10mar.2025 17:04:19.418] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime Unavailable...
+[10mar.2025 17:04:19.419] [Render thread/INFO] [mezz.jei.forge.plugins.forge.ForgeGuiPlugin/]: Stopping JEI GUI
+[10mar.2025 17:04:19.424] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime Unavailable took 5.387 ms
+[10mar.2025 17:04:19.450] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Dev lost connection: Desconectado/a
+[10mar.2025 17:04:19.450] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev se desconectó
+[10mar.2025 17:04:19.486] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Stopping singleplayer server as player logged out
+[10mar.2025 17:04:19.505] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
+[10mar.2025 17:04:19.506] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
+[10mar.2025 17:04:19.506] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
+[10mar.2025 17:04:20.185] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[EMT 2.Alfa]'/minecraft:overworld
+[10mar.2025 17:04:22.725] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[EMT 2.Alfa]'/minecraft:the_end
+[10mar.2025 17:04:22.728] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[EMT 2.Alfa]'/minecraft:the_nether
+[10mar.2025 17:04:22.776] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (EMT 2_Alfa): All chunks are saved
+[10mar.2025 17:04:22.776] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[10mar.2025 17:04:22.776] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[10mar.2025 17:04:22.776] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage: All dimensions are saved
+[10mar.2025 17:04:24.073] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!
