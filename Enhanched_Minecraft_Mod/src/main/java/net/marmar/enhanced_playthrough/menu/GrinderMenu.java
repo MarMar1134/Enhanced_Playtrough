@@ -1,16 +1,23 @@
 package net.marmar.enhanced_playthrough.menu;
 
 import net.marmar.enhanced_playthrough.block.ModBlocks;
+import net.marmar.enhanced_playthrough.block.custom.GrinderBlock;
 import net.marmar.enhanced_playthrough.block.custom.entity.GrinderBlockEntity;
 import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.world.RandomSequence;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.*;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.levelgen.feature.stateproviders.RandomizedIntStateProvider;
 import net.minecraftforge.items.SlotItemHandler;
 import org.jetbrains.annotations.NotNull;
+
+import java.util.Random;
+import java.util.random.RandomGenerator;
 
 public class GrinderMenu extends AbstractContainerMenu {
     public final GrinderBlockEntity blockEntity;
@@ -19,7 +26,7 @@ public class GrinderMenu extends AbstractContainerMenu {
 
     public GrinderMenu(int containerID, Inventory inv, FriendlyByteBuf extraData){
         this(containerID, inv, inv.player.level().getBlockEntity(extraData.readBlockPos()),
-                new SimpleContainerData(5));
+                new SimpleContainerData(4));
     }
     public GrinderMenu(int containerID, Inventory inv, BlockEntity entity, ContainerData data){
         super(ModMenuTypes.GRINDER_MENU.get(), containerID);
@@ -37,27 +44,15 @@ public class GrinderMenu extends AbstractContainerMenu {
     public boolean isCrafting() {
         return data.get(0) > 0;
     }
-    public boolean isBurning(){
-        return data.get(2) > 0;
-    }
 
     private void addSlots(GrinderBlockEntity entity){
         //Input
         entity.getInputLazyHandler().ifPresent(itemStackHandler ->
-                addSlot(new SlotItemHandler(itemStackHandler, 0, 53, 19)));
-
-        //Fuel
-        entity.getFuelLazyHandler().ifPresent(itemStackHandler ->
-                addSlot(new SlotItemHandler(itemStackHandler, 0, 53, 59){
-                    @Override
-                    public boolean mayPlace(@NotNull ItemStack stack) {
-                        return entity.canBurn(stack);
-                    }
-                }));
+                addSlot(new SlotItemHandler(itemStackHandler, 0, 49, 32)));
 
         //Output
         entity.getOutputLazyHandler().ifPresent(itemStackHandler ->
-                addSlot(new SlotItemHandler(itemStackHandler, 0, 124, 24){
+                addSlot(new SlotItemHandler(itemStackHandler, 0, 132, 32){
                     @Override
                     public boolean mayPlace(@NotNull ItemStack stack) {
                         return false;
@@ -67,18 +62,20 @@ public class GrinderMenu extends AbstractContainerMenu {
 
     public int getScaledProgress() {
         int progress = this.data.get(0);
-        int maxProgress = this.data.get(4);  // Max Progress
+        int maxProgress = this.data.get(3);  // Max Progress
         int grindProgressSize = 25; // This is the height in pixels of your arrow
 
         return maxProgress != 0 && progress != 0 ? progress * grindProgressSize / maxProgress : 0;
     }
 
-    public int getFireDecrease(){
-        int burnTime = this.data.get(2);
-        int maxBurnTime = this.data.get(3);
-        int fireSize = 13;
+//    public int flashingLight(){
+//        int random = RandomGenerator.nextInt();
+//
+//        return random > 2 ? 17 : 0;
+//    }
 
-        return maxBurnTime != 0 && burnTime != 0 ? fireSize - maxBurnTime / burnTime : 0;
+    public boolean isOn(){
+        return this.data.get(2) != 0;
     }
 
     // CREDIT GOES TO: diesieben07 | https://github.com/diesieben07/SevenCommons
@@ -97,7 +94,7 @@ public class GrinderMenu extends AbstractContainerMenu {
     private static final int TE_INVENTORY_FIRST_SLOT_INDEX = VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT;
 
     // THIS YOU HAVE TO DEFINE!
-    private static final int TE_INVENTORY_SLOT_COUNT = 3;  // must be the number of slots you have!
+    private static final int TE_INVENTORY_SLOT_COUNT = 2;  // must be the number of slots you have!
     @Override
     public ItemStack quickMoveStack(Player playerIn, int pIndex) {
         Slot sourceSlot = slots.get(pIndex);

@@ -35,24 +35,29 @@ public class GemPolisherBlock extends BaseEntityBlock implements EntityBlock {
         super(pProperties);
         registerDefaultState(defaultBlockState().setValue(FACING, Direction.SOUTH));
     }
+
     @Nullable
     @Override
     public BlockEntity newBlockEntity(BlockPos blockPos, BlockState blockState) {
         return new GemPolisherBlockEntity(blockPos,blockState);
     }
+
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
         super.createBlockStateDefinition(pBuilder);
         pBuilder.add(FACING);
     }
+
     @Override
     public @NotNull VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
         return SHAPE;
     }
+
     @Override
     public RenderShape getRenderShape(BlockState pState) {
         return RenderShape.MODEL;
     }
+
     @Override
     public void onRemove(BlockState pState, Level pLevel, BlockPos pPos, BlockState pNewState, boolean pIsMoving) {
         if (pState.getBlock() != pNewState.getBlock()) {
@@ -63,6 +68,7 @@ public class GemPolisherBlock extends BaseEntityBlock implements EntityBlock {
             super.onRemove(pState, pLevel, pPos, pNewState, pIsMoving);
         }
     }
+
     @Override
     public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
         if (!pLevel.isClientSide()) {
@@ -84,11 +90,6 @@ public class GemPolisherBlock extends BaseEntityBlock implements EntityBlock {
 
         return createTickerHelper(pBlockEntityType, ModBlockEntities.GEM_POLISHER_BLOCK_ENTITY.get(),
                 (pLevel1, pPos, pState1, pBlockEntity) -> pBlockEntity.tick(pLevel1, pPos, pState1));
-    }
-
-    @Override
-    public boolean hasAnalogOutputSignal(BlockState pState) {
-        return true;
     }
 
     @Nullable

@@ -892,6 +892,12 @@
     },
     "done": true
   },
+  "enhanced_playthrough:recipes/diamond_from_gem_polishing_raw_diamond": {
+    "criteria": {
+      "has_raw_diamond": "2025-03-10 17:03:12 -0300"
+    },
+    "done": true
+  },
   "minecraft:recipes/combat/diamond_leggings": {
     "criteria": {
       "has_diamond": "2025-03-10 17:03:58 -0300"
@@ -913,12 +919,6 @@
   "minecraft:recipes/decorations/jukebox": {
     "criteria": {
       "has_diamond": "2025-03-10 17:03:58 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/diamond_from_gem_polishing_raw_diamond": {
-    "criteria": {
-      "has_raw_diamond": "2025-03-10 17:03:12 -0300"
     },
     "done": true
   },
@@ -979,6 +979,120 @@
   "minecraft:recipes/tools/diamond_axe": {
     "criteria": {
       "has_diamond": "2025-03-10 17:03:58 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/redstone_torch": {
+    "criteria": {
+      "has_redstone": "2025-03-10 17:57:04 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/clock": {
+    "criteria": {
+      "has_redstone": "2025-03-10 17:57:04 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/note_block": {
+    "criteria": {
+      "has_redstone": "2025-03-10 17:57:04 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/target": {
+    "criteria": {
+      "has_redstone": "2025-03-10 17:57:04 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/compass": {
+    "criteria": {
+      "has_redstone": "2025-03-10 17:57:04 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/comparator": {
+    "criteria": {
+      "has_redstone": "2025-03-10 17:57:04 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/dropper": {
+    "criteria": {
+      "has_redstone": "2025-03-10 17:57:04 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/redstone_block": {
+    "criteria": {
+      "has_redstone": "2025-03-10 17:57:04 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/piston": {
+    "criteria": {
+      "has_redstone": "2025-03-10 17:57:04 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/cookie": {
+    "criteria": {
+      "has_wheat": "2025-03-10 17:57:11 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/bread": {
+    "criteria": {
+      "has_wheat": "2025-03-10 17:57:11 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/mud_brick": {
+    "criteria": {
+      "has_wheat": "2025-03-10 17:57:11 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/hay_block": {
+    "criteria": {
+      "has_wheat": "2025-03-10 17:57:11 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/food/wheat_flour": {
+    "criteria": {
+      "has_wheat": "2025-03-10 17:57:11 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/wheat_flour_from_grinding_wheat": {
+    "criteria": {
+      "has_wheat": "2025-03-10 17:57:11 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/sugar_from_grinding_sugar_cane": {
+    "criteria": {
+      "has_sugar_cane": "2025-03-10 18:47:24 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/paper": {
+    "criteria": {
+      "has_reeds": "2025-03-10 18:47:24 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/sugar_from_sugar_cane": {
+    "criteria": {
+      "has_sugar_cane": "2025-03-10 18:47:24 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/food/yeast": {
+    "criteria": {
+      "has_sugar": "2025-03-10 18:47:30 -0300"
     },
     "done": true
   },

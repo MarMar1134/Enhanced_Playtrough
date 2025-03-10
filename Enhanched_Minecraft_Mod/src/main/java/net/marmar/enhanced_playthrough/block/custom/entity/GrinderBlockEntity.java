@@ -33,8 +33,6 @@ import org.jetbrains.annotations.Nullable;
 import java.util.Optional;
 
 public class GrinderBlockEntity extends BlockEntity implements MenuProvider {
-    private final ItemStackHandler itemHandler = new ItemStackHandler(4);
-
     private final ItemStackHandler inputHandler = new ItemStackHandler(1){
         @Override
         protected void onContentsChanged(int slot) {
@@ -42,13 +40,7 @@ public class GrinderBlockEntity extends BlockEntity implements MenuProvider {
             setChanged();
         }
     };
-    private final ItemStackHandler fuelHandler = new ItemStackHandler(1){
-        @Override
-        protected void onContentsChanged(int slot) {
-            super.onContentsChanged(slot);
-            setChanged();
-        }
-    };
+
     private final ItemStackHandler outputHandler = new ItemStackHandler(1){
         @Override
         protected void onContentsChanged(int slot) {
@@ -58,18 +50,12 @@ public class GrinderBlockEntity extends BlockEntity implements MenuProvider {
     };
 
     private final LazyOptional<ItemStackHandler> inputLazyHandler = LazyOptional.of(() -> this.inputHandler);
-    private final LazyOptional<ItemStackHandler> fuelLazyHandler = LazyOptional.of(() -> this.fuelHandler);
     private final LazyOptional<ItemStackHandler> outputLazyHandler = LazyOptional.of(() -> this.outputHandler);
 
-    private static final int INPUT_SLOT = 0;
-    private static final int FUEL_SLOT = 1;
-
-    private static final int OUTPUT_SLOT = 2;
-    private LazyOptional<ItemStackHandler> lazyItemHandler= LazyOptional.empty();
     protected final ContainerData Data;
     private int progress = 0;
-    private int burnTime = 0, maxBurnTime = 0;
-    private int maxProgress = 250;
+    private int maxProgress = 200;
+    private int isTurnedOn = 0;
 
     public GrinderBlockEntity(BlockPos pPos, BlockState pBlockState) {
         super(ModBlockEntities.ITEM_GRINDER_BLOCK_ENTITY.get(), pPos, pBlockState);
@@ -78,9 +64,8 @@ public class GrinderBlockEntity extends BlockEntity implements MenuProvider {
             public int get(int i) {
                 return switch (i){
                     case 0, 1 -> GrinderBlockEntity.this.progress;
-                    case 2 -> GrinderBlockEntity.this.burnTime;
-                    case 3 -> GrinderBlockEntity.this.maxBurnTime;
-                    case 4 -> GrinderBlockEntity.this.maxProgress;
+                    case 2 -> GrinderBlockEntity.this.isTurnedOn;
+                    case 3 -> GrinderBlockEntity.this.maxProgress;
                     default -> 0;
                 };
             }
@@ -89,27 +74,22 @@ public class GrinderBlockEntity extends BlockEntity implements MenuProvider {
             public void set(int i, int i1) {
                 switch (i){
                     case 0, 1 -> GrinderBlockEntity.this.progress = i1;
-                    case 2 -> GrinderBlockEntity.this.burnTime = i1;
-                    case 3 -> GrinderBlockEntity.this.maxBurnTime = i1;
-                    case 4 -> GrinderBlockEntity.this.maxProgress = i1;
+                    case 2 -> GrinderBlockEntity.this.isTurnedOn = i1;
+                    case 3 -> GrinderBlockEntity.this.maxProgress = i1;
                 };
             }
 
             @Override
             public int getCount() {
-                return 5;
+                return 4;
             }
         };
     }
 
+    //Item handler getters
     public LazyOptional<ItemStackHandler> getInputLazyHandler(){
         return this.inputLazyHandler;
     }
-
-    public LazyOptional<ItemStackHandler> getFuelLazyHandler(){
-        return this.fuelLazyHandler;
-    }
-
     public LazyOptional<ItemStackHandler> getOutputLazyHandler(){
         return this.outputLazyHandler;
     }
@@ -117,9 +97,7 @@ public class GrinderBlockEntity extends BlockEntity implements MenuProvider {
     @Override
     public @NotNull <T> LazyOptional<T> getCapability(@NotNull Capability<T> cap, @Nullable Direction side) {
         if (cap == ForgeCapabilities.ITEM_HANDLER){
-            if (side == Direction.UP){
-                return fuelLazyHandler.cast();
-            } else if (side == Direction.DOWN){
+            if (side == Direction.DOWN){
                 return outputLazyHandler.cast();
             } else {
                 return inputLazyHandler.cast();
@@ -128,20 +106,11 @@ public class GrinderBlockEntity extends BlockEntity implements MenuProvider {
         return super.getCapability(cap, side);
     }
 
-
-    public int getBurnTime(ItemStack stack) {
-        return ForgeHooks.getBurnTime(stack, RecipeType.SMELTING);
-    }
-    public boolean canBurn(ItemStack stack) {
-        return getBurnTime(stack) > 0;
-    }
-
     public void drops() {
         SimpleContainer inventory = new SimpleContainer(3);
 
         inventory.setItem(0, inputHandler.getStackInSlot(0));
-        inventory.setItem(1, fuelHandler.getStackInSlot(0));
-        inventory.setItem(2, outputHandler.getStackInSlot(0));
+        inventory.setItem(1, outputHandler.getStackInSlot(0));
 
         Containers.dropContents(this.level, this.worldPosition, inventory);
     }
@@ -150,7 +119,6 @@ public class GrinderBlockEntity extends BlockEntity implements MenuProvider {
     public void invalidateCaps() {
         super.invalidateCaps();
         inputLazyHandler.invalidate();
-        fuelLazyHandler.invalidate();
         outputLazyHandler.invalidate();
     }
 
@@ -168,11 +136,10 @@ public class GrinderBlockEntity extends BlockEntity implements MenuProvider {
     @Override
     protected void saveAdditional(CompoundTag pTag) {
         pTag.put("grinder.input", inputHandler.serializeNBT());
-        pTag.put("grinder.fuel", fuelHandler.serializeNBT());
         pTag.put("grinder.output", outputHandler.serializeNBT());
+        pTag.putInt("grinder.turn_on", isTurnedOn);
 
         pTag.putInt("grinder.progress", progress);
-        pTag.putInt("grinder.burnTime", burnTime);
         super.saveAdditional(pTag);
     }
 
@@ -180,20 +147,22 @@ public class GrinderBlockEntity extends BlockEntity implements MenuProvider {
     public void load(CompoundTag pTag) {
         super.load(pTag);
         inputHandler.deserializeNBT(pTag.getCompound("grinder.input"));
-        fuelHandler.deserializeNBT(pTag.getCompound("grinder.fuel"));
         outputHandler.deserializeNBT(pTag.getCompound("grinder.output"));
 
+        isTurnedOn = pTag.getInt("grinder.turn_on");
         progress = pTag.getInt("grinder.progress");
-        burnTime = pTag.getInt("grinder.burnTime");
     }
+
     private void sendUpdate() {
         setChanged();
 
         if(this.level != null)
             this.level.sendBlockUpdated(this.worldPosition, getBlockState(), getBlockState(), Block.UPDATE_ALL);
     }
+
     public void tick(Level pLevel, BlockPos pPos, BlockState pState) {
-        if (isBurning()){
+
+        if (hasNeighbourSignal(pLevel, pPos)){
             if (hasRecipe()){
                 increaseGrindProgress();
 
@@ -203,19 +172,15 @@ public class GrinderBlockEntity extends BlockEntity implements MenuProvider {
             }
             pState = pState.setValue(GrinderBlock.ON, true);
 
-            decreaseBurnTime();
+            setIsTurnedOn(1);
 
             sendUpdate();
-        } else if (hasRecipe()){
-            if (canBurn(this.fuelHandler.getStackInSlot(0))){
-                burn();
-
-                sendUpdate();
-            }
         } else {
             pState = pState.setValue(GrinderBlock.ON, false);
 
             resetGrindProgress();
+
+            setIsTurnedOn(0);
 
             sendUpdate();
         }
@@ -231,16 +196,12 @@ public class GrinderBlockEntity extends BlockEntity implements MenuProvider {
         pLevel.setBlock(pPos, pState, 1);
         setChanged(pLevel, pPos, pState);
     }
-    private void burn(){
-        this.maxBurnTime = getBurnTime(this.fuelHandler.getStackInSlot(0));
-        this.burnTime = this.maxBurnTime;
-        this.fuelHandler.getStackInSlot(0).shrink(1);
-    }
-    private boolean isBurning(){
-        return burnTime > 0;
-    }
-    private void decreaseBurnTime(){
-        burnTime -= 2;
+
+    private boolean hasNeighbourSignal(Level level, BlockPos blockPos){
+        if (level.isClientSide()){
+            return false;
+        }
+        return level.hasNeighborSignal(blockPos);
     }
 
     private boolean hasRecipe() {
@@ -292,5 +253,9 @@ public class GrinderBlockEntity extends BlockEntity implements MenuProvider {
     private boolean hasProcessFinished(){
 
         return progress >= maxProgress;
+    }
+
+    public void setIsTurnedOn(int isTurnedOn) {
+        this.isTurnedOn = isTurnedOn;
     }
 }

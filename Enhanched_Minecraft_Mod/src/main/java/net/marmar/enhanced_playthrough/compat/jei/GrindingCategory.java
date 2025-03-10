@@ -52,8 +52,8 @@ public class GrindingCategory implements IRecipeCategory<GrindingRecipe> {
 
     @Override
     public void setRecipe(IRecipeLayoutBuilder recipeLayoutBuilder, GrindingRecipe grindingRecipe, IFocusGroup iFocusGroup) {
-        recipeLayoutBuilder.addSlot(RecipeIngredientRole.INPUT, 53, 19).addIngredients(grindingRecipe.getIngredient());
+        recipeLayoutBuilder.addSlot(RecipeIngredientRole.INPUT, 49, 32).addIngredients(grindingRecipe.getIngredient());
 
-        recipeLayoutBuilder.addSlot(RecipeIngredientRole.OUTPUT, 124, 24).addItemStack(grindingRecipe.getResultItem(null));
+        recipeLayoutBuilder.addSlot(RecipeIngredientRole.OUTPUT, 132, 32).addItemStack(grindingRecipe.getResultItem(null));
     }
 }

@@ -43,15 +43,18 @@ public class GrinderBlock extends BaseEntityBlock implements EntityBlock {
     public BlockEntity newBlockEntity(BlockPos blockPos, BlockState blockState) {
         return new GrinderBlockEntity(blockPos, blockState);
     }
+
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
         super.createBlockStateDefinition(pBuilder);
         pBuilder.add(FACING, ON);
     }
+
     @Override
     public @NotNull VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
         return SHAPE;
     }
+
     @Override
     public RenderShape getRenderShape(BlockState pState) {
         return RenderShape.MODEL;
@@ -90,10 +93,7 @@ public class GrinderBlock extends BaseEntityBlock implements EntityBlock {
         return createTickerHelper(pBlockEntityType, ModBlockEntities.ITEM_GRINDER_BLOCK_ENTITY.get(),
                 (pLevel1, pPos, pState1, pBlockEntity) -> pBlockEntity.tick(pLevel1, pPos, pState1));
     }
-    @Override
-    public boolean hasAnalogOutputSignal(BlockState pState) {
-        return true;
-    }
+
     @Nullable
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext pContext) {

@@ -37,18 +37,19 @@ public class GrinderScreen extends AbstractContainerScreen<GrinderMenu> {
         guiGraphics.blit(Texture, x, y, 0, 0, imageWidth, imageHeight);
 
         renderProgressArrow(guiGraphics, x, y);
-        renderFire(guiGraphics, x, y);
+
+        renderPowerOn(guiGraphics, x, y);
     }
 
     private void renderProgressArrow(GuiGraphics guiGraphics, int x, int y) {
         if(menu.isCrafting()) {
-            guiGraphics.blit(Texture, x + 82, y + 22, 176, 14, menu.getScaledProgress(), 17);
+            guiGraphics.blit(Texture, x + 84, y + 31, 176, 0, menu.getScaledProgress(), 17);
         }
     }
 
-    private void renderFire(GuiGraphics guiGraphics, int x, int y){
-        if(menu.isBurning()){
-            guiGraphics.blit(Texture, x + 54, y + 40 + 12 - menu.getFireDecrease(), 176, 12 - menu.getFireDecrease(), 14, menu.getFireDecrease() + 1);
+    private void renderPowerOn(GuiGraphics graphics, int x, int y){
+        if (menu.isOn()){
+            graphics.blit(Texture, x + 18, y + 36, 176, 17, 17, 7);
         }
     }
 
