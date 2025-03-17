@@ -22,6 +22,200 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
+        this.tag(BlockTags.SAPLINGS).add(
+                ModBlocks.WALNUT_SAPLING.get(),
+                ModBlocks.APPLE_SAPLING.get(),
+                ModBlocks.GREEN_APPLE_SAPLING.get(),
+                ModBlocks.ORANGE_SAPLING.get(),
+                ModBlocks.LEMON_SAPLING.get(),
+                ModBlocks.LIME_SAPLING.get()
+        );
+
+        this.tag(BlockTags.SLABS).add(
+                ModBlocks.WALNUT_SLAB.get(),
+                ModBlocks.APPLE_SLAB.get(),
+                ModBlocks.ORANGE_SLAB.get(),
+                ModBlocks.LEMON_SLAB.get()
+        );
+
+        this.tag(BlockTags.STAIRS).add(
+                ModBlocks.WALNUT_STAIRS.get(),
+                ModBlocks.APPLE_STAIRS.get(),
+                ModBlocks.ORANGE_STAIRS.get(),
+                ModBlocks.LEMON_STAIRS.get()
+        );
+
+        this.tag(BlockTags.FENCES).add(
+                ModBlocks.WALNUT_FENCE.get(),
+                ModBlocks.APPLE_FENCE.get(),
+                ModBlocks.ORANGE_FENCE.get(),
+                ModBlocks.LEMON_FENCE.get()
+        );
+
+        this.tag(BlockTags.FENCE_GATES).add(
+                ModBlocks.WALNUT_FENCEGATE.get(),
+                ModBlocks.APPLE_FENCEGATE.get(),
+                ModBlocks.ORANGE_FENCEGATE.get(),
+                ModBlocks.LEMON_FENCEGATE.get()
+        );
+
+        this.tag(BlockTags.WOODEN_BUTTONS).add(
+                ModBlocks.WALNUT_BUTTON.get(),
+                ModBlocks.APPLE_BUTTON.get(),
+                ModBlocks.ORANGE_BUTTON.get(),
+                ModBlocks.LEMON_BUTTON.get()
+        );
+
+        this.tag(BlockTags.PRESSURE_PLATES).add(
+                ModBlocks.WALNUT_PRESSURE_PLATE.get(),
+                ModBlocks.APPLE_PRESSURE_PLATE.get(),
+                ModBlocks.ORANGE_PRESSURE_PLATE.get(),
+                ModBlocks.LEMON_PRESSURE_PLATE.get()
+        );
+
+        this.tag(BlockTags.LOGS_THAT_BURN).add(
+                //Walnut
+                ModBlocks.WALNUT_LOG.get(),
+                ModBlocks.STRIPPED_WALNUT_LOG.get(),
+                ModBlocks.WALNUT_WOOD.get(),
+                ModBlocks.STRIPPED_WALNUT_WOOD.get(),
+
+                //Apple
+                ModBlocks.APPLE_LOG.get(),
+                ModBlocks.STRIPPED_APPLE_LOG.get(),
+                ModBlocks.APPLE_WOOD.get(),
+                ModBlocks.STRIPPED_APPLE_WOOD.get(),
+
+                //Orange
+                ModBlocks.ORANGE_LOG.get(),
+                ModBlocks.STRIPPED_ORANGE_LOG.get(),
+                ModBlocks.ORANGE_WOOD.get(),
+                ModBlocks.STRIPPED_ORANGE_WOOD.get(),
+
+                //Lemon
+                ModBlocks.LEMON_LOG.get(),
+                ModBlocks.STRIPPED_LEMON_LOG.get(),
+                ModBlocks.LEMON_WOOD.get(),
+                ModBlocks.STRIPPED_LEMON_WOOD.get()
+        );
+
+        this.tag(BlockTags.OVERWORLD_NATURAL_LOGS).add(
+                ModBlocks.WALNUT_LOG.get(),
+                ModBlocks.APPLE_LOG.get(),
+                ModBlocks.ORANGE_LOG.get(),
+                ModBlocks.LEMON_LOG.get()
+        );
+
+        this.tag(BlockTags.LEAVES).add(
+                ModBlocks.WALNUT_LEAVES.get(),
+                ModBlocks.APPLE_LEAVES.get(),
+                ModBlocks.GREEN_APPLE_LEAVES.get(),
+                ModBlocks.ORANGE_LEAVES.get(),
+                ModBlocks.LEMON_LEAVES.get(),
+                ModBlocks.LIME_LEAVES.get()
+        );
+
+        this.tag(BlockTags.SWORD_EFFICIENT).add(
+                ModBlocks.WALNUT_LEAVES.get(),
+                ModBlocks.APPLE_LEAVES.get(),
+                ModBlocks.GREEN_APPLE_LEAVES.get(),
+                ModBlocks.ORANGE_LEAVES.get(),
+                ModBlocks.LEMON_LEAVES.get(),
+                ModBlocks.LIME_LEAVES.get()
+        );
+
+        this.tag(BlockTags.MINEABLE_WITH_HOE).add(
+                ModBlocks.WALNUT_LEAVES.get(),
+                ModBlocks.APPLE_LEAVES.get(),
+                ModBlocks.GREEN_APPLE_LEAVES.get(),
+                ModBlocks.ORANGE_LEAVES.get(),
+                ModBlocks.LEMON_LEAVES.get(),
+                ModBlocks.LIME_LEAVES.get()
+        );
+
+        this.tag(BlockTags.PLANKS).add(
+                ModBlocks.WALNUT_PLANKS.get(),
+                ModBlocks.APPLE_PLANKS.get(),
+                ModBlocks.ORANGE_PLANKS.get(),
+                ModBlocks.LEMON_PLANKS.get()
+        );
+
+        this.tag(BlockTags.WOODEN_DOORS).add(
+                ModBlocks.WALNUT_DOOR.get(),
+                ModBlocks.APPLE_DOOR.get(),
+                ModBlocks.ORANGE_DOOR.get(),
+                ModBlocks.LEMON_DOOR.get()
+        );
+
+        this.tag(BlockTags.WOODEN_TRAPDOORS).add(
+                ModBlocks.WALNUT_TRAPDOOR.get(),
+                ModBlocks.APPLE_TRAPDOOR.get(),
+                ModBlocks.ORANGE_TRAPDOOR.get(),
+                ModBlocks.LEMON_TRAPDOOR.get()
+        );
+
+        this.tag(BlockTags.MINEABLE_WITH_AXE).add(
+                //Walnut
+                ModBlocks.WALNUT_PLANKS.get(),
+                ModBlocks.WALNUT_STAIRS.get(),
+                ModBlocks.WALNUT_SLAB.get(),
+                ModBlocks.WALNUT_BUTTON.get(),
+                ModBlocks.WALNUT_FENCE.get(),
+                ModBlocks.WALNUT_FENCEGATE.get(),
+                ModBlocks.WALNUT_PRESSURE_PLATE.get(),
+                ModBlocks.WALNUT_DOOR.get(),
+                ModBlocks.WALNUT_TRAPDOOR.get(),
+                ModBlocks.WALNUT_LOG.get(),
+                ModBlocks.STRIPPED_WALNUT_LOG.get(),
+                ModBlocks.WALNUT_WOOD.get(),
+                ModBlocks.STRIPPED_WALNUT_WOOD.get(),
+
+                //Apple
+                ModBlocks.APPLE_PLANKS.get(),
+                ModBlocks.APPLE_STAIRS.get(),
+                ModBlocks.APPLE_SLAB.get(),
+                ModBlocks.APPLE_BUTTON.get(),
+                ModBlocks.APPLE_FENCE.get(),
+                ModBlocks.APPLE_FENCEGATE.get(),
+                ModBlocks.APPLE_PRESSURE_PLATE.get(),
+                ModBlocks.APPLE_DOOR.get(),
+                ModBlocks.APPLE_TRAPDOOR.get(),
+                ModBlocks.APPLE_LOG.get(),
+                ModBlocks.STRIPPED_APPLE_LOG.get(),
+                ModBlocks.APPLE_WOOD.get(),
+                ModBlocks.STRIPPED_APPLE_WOOD.get(),
+
+                //Orange
+                ModBlocks.ORANGE_PLANKS.get(),
+                ModBlocks.ORANGE_STAIRS.get(),
+                ModBlocks.ORANGE_SLAB.get(),
+                ModBlocks.ORANGE_BUTTON.get(),
+                ModBlocks.ORANGE_FENCE.get(),
+                ModBlocks.ORANGE_FENCEGATE.get(),
+                ModBlocks.ORANGE_PRESSURE_PLATE.get(),
+                ModBlocks.ORANGE_DOOR.get(),
+                ModBlocks.ORANGE_TRAPDOOR.get(),
+                ModBlocks.ORANGE_LOG.get(),
+                ModBlocks.STRIPPED_ORANGE_LOG.get(),
+                ModBlocks.ORANGE_WOOD.get(),
+                ModBlocks.STRIPPED_ORANGE_WOOD.get(),
+
+                //Lemon
+                ModBlocks.LEMON_PLANKS.get(),
+                ModBlocks.LEMON_STAIRS.get(),
+                ModBlocks.LEMON_SLAB.get(),
+                ModBlocks.LEMON_BUTTON.get(),
+                ModBlocks.LEMON_FENCE.get(),
+                ModBlocks.LEMON_FENCEGATE.get(),
+                ModBlocks.LEMON_PRESSURE_PLATE.get(),
+                ModBlocks.LEMON_DOOR.get(),
+                ModBlocks.LEMON_TRAPDOOR.get(),
+                ModBlocks.LEMON_LOG.get(),
+                ModBlocks.STRIPPED_LEMON_LOG.get(),
+                ModBlocks.LEMON_WOOD.get(),
+                ModBlocks.STRIPPED_LEMON_WOOD.get()
+        );
+
         this.tag(ModTags.Blocks.BASIC_FURNACE).add(
                 ModBlocks.ADOBE_FURNACE.get(),
                 ModBlocks.SOUL_FURNACE.get()

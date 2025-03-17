@@ -71,6 +71,83 @@ public class MexicanLanguageProvider extends AbstractModLanguageProvider{
         addAdvancementDesc("gems", "get_all_gems", "Consigue todas las gemas y conviertete en el señor del caos");
 
         //Blocks
+            //Wood
+                //Apple
+                addBlock(ModBlocks.APPLE_SAPLING, "Brote de manzano");
+                addBlock(ModBlocks.APPLE_LEAVES, "Hojas de manzano");
+                addBlock(ModBlocks.APPLE_LOG, "Tronco de manzano");
+                addBlock(ModBlocks.STRIPPED_APPLE_LOG, "Tronco de manzano pelado");
+                addBlock(ModBlocks.APPLE_WOOD, "Leño de manzana");
+                addBlock(ModBlocks.STRIPPED_APPLE_WOOD, "Leño de manzano pelado");
+                addBlock(ModBlocks.APPLE_PLANKS, "Tablones de manzano");
+                addBlock(ModBlocks.APPLE_SLAB, "Baldosa de manzano");
+                addBlock(ModBlocks.APPLE_STAIRS, "Escaleras de manzano");
+                addBlock(ModBlocks.APPLE_FENCE, "Varandilla de manzano");
+                addBlock(ModBlocks.APPLE_FENCEGATE, "Puerta de varandilla de manzano");
+                addBlock(ModBlocks.APPLE_DOOR, "Puerta de manzano");
+                addBlock(ModBlocks.APPLE_TRAPDOOR, "Trampilla de manzano");
+                addBlock(ModBlocks.APPLE_BUTTON, "Botón de manzano");
+                addBlock(ModBlocks.APPLE_PRESSURE_PLATE, "Placa de presión de manzano");
+
+                //Green apple
+                addBlock(ModBlocks.GREEN_APPLE_SAPLING, "Brote de manzano verde");
+                addBlock(ModBlocks.GREEN_APPLE_LEAVES, "Hojas de manzano verde");
+
+                //Walnut
+                addBlock(ModBlocks.WALNUT_SAPLING, "Brote de nogal");
+                addBlock(ModBlocks.WALNUT_LEAVES, "Hojas de nogal");
+                addBlock(ModBlocks.WALNUT_LOG, "Tronco de nogal");
+                addBlock(ModBlocks.STRIPPED_WALNUT_LOG, "Tronco de nogal pelado");
+                addBlock(ModBlocks.WALNUT_WOOD, "Leño de nogal");
+                addBlock(ModBlocks.STRIPPED_WALNUT_WOOD, "Leño de nogal pelado");
+                addBlock(ModBlocks.WALNUT_PLANKS, "Tablones de nogal");
+                addBlock(ModBlocks.WALNUT_SLAB, "Baldosa de nogal");
+                addBlock(ModBlocks.WALNUT_STAIRS, "Escaleras de nogal");
+                addBlock(ModBlocks.WALNUT_FENCE, "Varandilla de nogal");
+                addBlock(ModBlocks.WALNUT_FENCEGATE, "Puerta de varandilla de nogal");
+                addBlock(ModBlocks.WALNUT_DOOR, "Puerta de nogal");
+                addBlock(ModBlocks.WALNUT_TRAPDOOR, "Trampilla de nogal");
+                addBlock(ModBlocks.WALNUT_BUTTON, "Botón de nogal");
+                addBlock(ModBlocks.WALNUT_PRESSURE_PLATE, "Placa de presión de nogal");
+
+                //Orange
+                addBlock(ModBlocks.ORANGE_SAPLING, "Brote de naranjo");
+                addBlock(ModBlocks.ORANGE_LEAVES, "Hojas de naranjo");
+                addBlock(ModBlocks.ORANGE_LOG, "Tronco de naranjo");
+                addBlock(ModBlocks.STRIPPED_ORANGE_LOG, "Tronco de naranjo pelado");
+                addBlock(ModBlocks.ORANGE_WOOD, "Leño de naranjo");
+                addBlock(ModBlocks.STRIPPED_ORANGE_WOOD, "Leño de naranjo pelado");
+                addBlock(ModBlocks.ORANGE_PLANKS, "Tablones de naranjo");
+                addBlock(ModBlocks.ORANGE_SLAB, "Baldosa de naranjo");
+                addBlock(ModBlocks.ORANGE_STAIRS, "Escaleras de naranjo");
+                addBlock(ModBlocks.ORANGE_FENCE, "Varandilla de naranjo");
+                addBlock(ModBlocks.ORANGE_FENCEGATE, "Puerta de varandilla de naranjo");
+                addBlock(ModBlocks.ORANGE_DOOR, "Puerta de naranjo");
+                addBlock(ModBlocks.ORANGE_TRAPDOOR, "Trampilla de naranjo");
+                addBlock(ModBlocks.ORANGE_BUTTON, "Botón de naranjo");
+                addBlock(ModBlocks.ORANGE_PRESSURE_PLATE, "Placa de presión de naranjo");
+
+                //Lemon
+                addBlock(ModBlocks.LEMON_SAPLING, "Brote de limonero");
+                addBlock(ModBlocks.LEMON_LEAVES, "Hojas de limonero");
+                addBlock(ModBlocks.LEMON_LOG, "Tronco de limonero");
+                addBlock(ModBlocks.STRIPPED_LEMON_LOG, "Tronco de limonero pelado");
+                addBlock(ModBlocks.LEMON_WOOD, "Leño de limonero");
+                addBlock(ModBlocks.STRIPPED_LEMON_WOOD, "Leño de limonero pelado");
+                addBlock(ModBlocks.LEMON_PLANKS, "Tablones de limonero");
+                addBlock(ModBlocks.LEMON_SLAB, "Baldosa de limonero");
+                addBlock(ModBlocks.LEMON_STAIRS, "Escaleras de limonero");
+                addBlock(ModBlocks.LEMON_FENCE, "Varandilla de limonero");
+                addBlock(ModBlocks.LEMON_FENCEGATE, "Puerta de varandilla de limonero");
+                addBlock(ModBlocks.LEMON_DOOR, "Puerta de limonero");
+                addBlock(ModBlocks.LEMON_TRAPDOOR, "Trampilla de limonero");
+                addBlock(ModBlocks.LEMON_BUTTON, "Botón de limonero");
+                addBlock(ModBlocks.LEMON_PRESSURE_PLATE, "Placa de presión de limonero");
+
+                //Lime
+                addBlock(ModBlocks.LIME_SAPLING, "Brote de limera");
+                addBlock(ModBlocks.LIME_LEAVES, "Hojas de limera");
+
         //Polished stone
         addBlock(ModBlocks.POLISHED_STONE, "Piedra pulida");
         addBlock(ModBlocks.POLISHED_STONE_SLAB, "Baldosa de piedra pulida");
@@ -300,7 +377,12 @@ public class MexicanLanguageProvider extends AbstractModLanguageProvider{
 
         //Fruits
         addItem(ModItems.TOMATO, "Tomate");
+        addItem(ModItems.LEMON, "Limón");
+        addItem(ModItems.LIME, "Lima");
+        addItem(ModItems.ORANGE, "Naranja");
         addItem(ModItems.WALNUT, "Nuez");
+        addItem(ModItems.PEELED_WALNUT, "Nuez pelada");
+        addItem(ModItems.GREEN_APPLE, "Manzana verde");
 
         //Vegetables
         addItem(ModItems.CORN, "Maiz");

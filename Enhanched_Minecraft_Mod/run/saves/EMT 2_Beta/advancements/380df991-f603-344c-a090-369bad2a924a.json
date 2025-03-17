@@ -1,0 +1,139 @@
+{
+  "minecraft:recipes/decorations/lime_stained_glass_pane_from_glass_pane": {
+    "criteria": {
+      "has_lime_dye": "2025-03-17 16:12:09 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/white_dye_from_grinding_bone_meal": {
+    "criteria": {
+      "has_bone_meal": "2025-03-17 16:09:30 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/dye_lime_wool": {
+    "criteria": {
+      "has_needed_dye": "2025-03-17 16:12:09 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/white_dye": {
+    "criteria": {
+      "has_bone_meal": "2025-03-17 16:09:30 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/yellow_candle": {
+    "criteria": {
+      "has_yellow_dye": "2025-03-17 16:11:21 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/crafting_table": {
+    "criteria": {
+      "unlock_right_away": "2025-03-17 16:06:59 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/chest": {
+    "criteria": {
+      "has_lots_of_items": "2025-03-17 16:12:09 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/lime_candle": {
+    "criteria": {
+      "has_lime_dye": "2025-03-17 16:12:09 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/dye_yellow_wool": {
+    "criteria": {
+      "has_needed_dye": "2025-03-17 16:11:21 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/bone_meal": {
+    "criteria": {
+      "has_the_recipe": "2025-03-17 16:09:30 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/dye_lime_bed": {
+    "criteria": {
+      "has_needed_dye": "2025-03-17 16:12:09 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/dye_lime_carpet": {
+    "criteria": {
+      "has_needed_dye": "2025-03-17 16:12:09 -0300"
+    },
+    "done": true
+  },
+  "minecraft:husbandry/root": {
+    "criteria": {
+      "consumed_item": "2025-03-17 16:10:47 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/orange_dye_from_red_yellow": {
+    "criteria": {
+      "has_yellow_dye": "2025-03-17 16:11:21 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/yellow_dye_from_grinding_lemon": {
+    "criteria": {
+      "has_lemon": "2025-03-17 16:10:52 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/dye_yellow_carpet": {
+    "criteria": {
+      "has_needed_dye": "2025-03-17 16:11:21 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/yellow_stained_glass_pane_from_glass_pane": {
+    "criteria": {
+      "has_yellow_dye": "2025-03-17 16:11:21 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/lime_dye_from_grinding_lime": {
+    "criteria": {
+      "has_lime": "2025-03-17 16:10:43 -0300"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:sunflower_plains": "2025-03-17 16:07:00 -0300",
+      "minecraft:river": "2025-03-17 16:07:12 -0300",
+      "minecraft:forest": "2025-03-17 16:08:15 -0300",
+      "minecraft:flower_forest": "2025-03-17 16:07:14 -0300",
+      "minecraft:plains": "2025-03-17 16:08:05 -0300"
+    },
+    "done": false
+  },
+  "minecraft:recipes/building_blocks/dye_yellow_bed": {
+    "criteria": {
+      "has_needed_dye": "2025-03-17 16:11:21 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/brewing/bone_meal": {
+    "criteria": {
+      "has_bone_meal": "2025-03-17 16:09:30 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/bone_block": {
+    "criteria": {
+      "has_bone_meal": "2025-03-17 16:09:30 -0300"
+    },
+    "done": true
+  },
+  "DataVersion": 3465
+}

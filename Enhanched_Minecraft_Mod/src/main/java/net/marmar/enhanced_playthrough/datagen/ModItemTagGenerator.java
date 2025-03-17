@@ -23,6 +23,67 @@ public class ModItemTagGenerator extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
+        this.tag(ItemTags.LOGS_THAT_BURN).add(
+                //Walnut
+                ModBlocks.WALNUT_LOG.get().asItem(),
+                ModBlocks.STRIPPED_WALNUT_LOG.get().asItem(),
+                ModBlocks.WALNUT_WOOD.get().asItem(),
+                ModBlocks.STRIPPED_WALNUT_WOOD.get().asItem(),
+
+                //Apple
+                ModBlocks.APPLE_LOG.get().asItem(),
+                ModBlocks.STRIPPED_APPLE_LOG.get().asItem(),
+                ModBlocks.APPLE_WOOD.get().asItem(),
+                ModBlocks.STRIPPED_APPLE_WOOD.get().asItem(),
+
+                //Orange
+                ModBlocks.ORANGE_LOG.get().asItem(),
+                ModBlocks.STRIPPED_ORANGE_LOG.get().asItem(),
+                ModBlocks.ORANGE_WOOD.get().asItem(),
+                ModBlocks.STRIPPED_ORANGE_WOOD.get().asItem(),
+
+                //Lemon
+                ModBlocks.LEMON_LOG.get().asItem(),
+                ModBlocks.STRIPPED_LEMON_LOG.get().asItem(),
+                ModBlocks.LEMON_WOOD.get().asItem(),
+                ModBlocks.STRIPPED_LEMON_WOOD.get().asItem()
+        );
+
+        this.tag(ItemTags.PLANKS).add(
+                ModBlocks.WALNUT_PLANKS.get().asItem(),
+                ModBlocks.APPLE_PLANKS.get().asItem(),
+                ModBlocks.ORANGE_PLANKS.get().asItem(),
+                ModBlocks.LEMON_PLANKS.get().asItem()
+        );
+
+        this.tag(ModTags.Items.WALNUT_LOGS).add(
+                ModBlocks.WALNUT_LOG.get().asItem(),
+                ModBlocks.STRIPPED_WALNUT_LOG.get().asItem(),
+                ModBlocks.WALNUT_WOOD.get().asItem(),
+                ModBlocks.STRIPPED_WALNUT_WOOD.get().asItem()
+        );
+
+        this.tag(ModTags.Items.APPLE_LOGS).add(
+                ModBlocks.APPLE_LOG.get().asItem(),
+                ModBlocks.STRIPPED_APPLE_LOG.get().asItem(),
+                ModBlocks.APPLE_WOOD.get().asItem(),
+                ModBlocks.STRIPPED_APPLE_WOOD.get().asItem()
+        );
+
+        this.tag(ModTags.Items.ORANGE_LOGS).add(
+                ModBlocks.ORANGE_LOG.get().asItem(),
+                ModBlocks.STRIPPED_ORANGE_LOG.get().asItem(),
+                ModBlocks.ORANGE_WOOD.get().asItem(),
+                ModBlocks.STRIPPED_ORANGE_WOOD.get().asItem()
+        );
+
+        this.tag(ModTags.Items.LEMON_LOGS).add(
+                ModBlocks.LEMON_LOG.get().asItem(),
+                ModBlocks.STRIPPED_LEMON_LOG.get().asItem(),
+                ModBlocks.LEMON_WOOD.get().asItem(),
+                ModBlocks.STRIPPED_LEMON_WOOD.get().asItem()
+        );
+
         this.tag(Tags.Items.RAW_MATERIALS).add(
                 ModItems.RAW_TIN.get(),
                 ModItems.RAW_ZINC.get(),

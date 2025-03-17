@@ -38,6 +38,10 @@ public class ModTags {
         public static final TagKey<Item> POLISHER_TOOL = itemTag("polisher_tool");
         public static final TagKey<Item> ALLOY_INGREDIENT = itemTag("alloy_ingredient");
         public static final TagKey<Item> BLAST_ALLOY_INGREDIENT = itemTag("blast_alloy_ingredient");
+        public static final TagKey<Item> WALNUT_LOGS = itemTag("walnut_logs");
+        public static final TagKey<Item> APPLE_LOGS = itemTag("apple_logs");
+        public static final TagKey<Item> ORANGE_LOGS = itemTag("orange_logs");
+        public static final TagKey<Item> LEMON_LOGS = itemTag("lemon_logs");
         private static TagKey<Item> itemTag(String name){
             return ItemTags.create(new ResourceLocation(EnhancedPlaythrough.MOD_ID, name));
         }

@@ -20,10 +20,20 @@ public class ModFoodPropieties {
             .nutrition(8).saturationMod(0.5f).build();
 
     //Fruit
+    public static final FoodProperties ORANGE = new FoodProperties.Builder()
+            .nutrition(3).saturationMod(0.2f).build();
+    public static final FoodProperties LEMON = new FoodProperties.Builder()
+            .nutrition(2).saturationMod(0.2f).build();
+    public static final FoodProperties LIME = new FoodProperties.Builder()
+            .nutrition(1).saturationMod(0.2f).build();
+    public static final FoodProperties GREEN_APPLE = new FoodProperties.Builder()
+            .nutrition(5).saturationMod(0.4f).build();
     public static final FoodProperties TOMATO = new FoodProperties.Builder()
             .nutrition(6).saturationMod(0.5f).build();
     public static final FoodProperties CORN = new FoodProperties.Builder()
             .nutrition(2).saturationMod(0.1f).build();
+    public static final FoodProperties PEELED_WALNUT = new FoodProperties.Builder()
+            .nutrition(4).saturationMod(0.4f).build();
     //Vegetables
     public static final FoodProperties RICE = new FoodProperties.Builder()
             .nutrition(1).saturationMod(0.1f).effect(()-> new MobEffectInstance(MobEffects.CONFUSION, 100), 0.2f)

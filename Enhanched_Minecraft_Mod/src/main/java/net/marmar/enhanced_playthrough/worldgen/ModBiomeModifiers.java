@@ -7,6 +7,7 @@ import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BiomeTags;
+import net.minecraft.world.level.biome.Biomes;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.world.BiomeModifier;
@@ -14,6 +15,13 @@ import net.minecraftforge.common.world.ForgeBiomeModifiers;
 import net.minecraftforge.registries.ForgeRegistries;
 
 public class ModBiomeModifiers {
+    //Trees
+    public static final ResourceKey<BiomeModifier> ADD_WALNUT = registerKey("add_walnut");
+    public static final ResourceKey<BiomeModifier> ADD_APPLE = registerKey("add_apple");
+    public static final ResourceKey<BiomeModifier> ADD_ORANGE = registerKey("add_orange");
+    public static final ResourceKey<BiomeModifier> ADD_LEMON = registerKey("add_lemon");
+    public static final ResourceKey<BiomeModifier> ADD_LIME = registerKey("add_lime");
+
     //Nature
     public static final ResourceKey<BiomeModifier> ADD_LIMESTONE = registerKey("add_limestone");
     public static final ResourceKey<BiomeModifier> ADD_GRAVEL_MUD = registerKey("add_gravel_mud");
@@ -140,6 +148,37 @@ public class ModBiomeModifiers {
                 biomes.getOrThrow(BiomeTags.IS_NETHER),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.NETHER_GARNET_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
+
+        //Trees
+            //Walnut
+            context.register(ADD_WALNUT, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                    biomes.getOrThrow(BiomeTags.IS_TAIGA),
+                    HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.WALNUT_PLACED_KEY)),
+                    GenerationStep.Decoration.VEGETAL_DECORATION));
+
+            //Apple
+            context.register(ADD_APPLE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                HolderSet.direct(biomes.getOrThrow(Biomes.FOREST)),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.APPLE_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+
+            //Orange
+            context.register(ADD_ORANGE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                HolderSet.direct(biomes.getOrThrow(Biomes.FLOWER_FOREST)),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.ORANGE_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+
+            //Lemon
+            context.register(ADD_LEMON, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                HolderSet.direct(biomes.getOrThrow(Biomes.BIRCH_FOREST)),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.LEMON_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+
+            //Lime
+            context.register(ADD_LIME, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                HolderSet.direct(biomes.getOrThrow(Biomes.BIRCH_FOREST)),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.LIME_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
     }
 
     private static ResourceKey<BiomeModifier> registerKey(String name) {

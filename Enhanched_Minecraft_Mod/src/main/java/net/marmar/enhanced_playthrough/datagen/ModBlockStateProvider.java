@@ -9,7 +9,9 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
+import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.function.Function;
@@ -101,6 +103,145 @@ public class ModBlockStateProvider extends BlockStateProvider{
         makeEggplantCrop((CropBlock) ModBlocks.EGGPLANT_CROP.get(), "eggplant_stage","eggplant_stage");
         makeTomatoCrop((CropBlock) ModBlocks.TOMATO_CROP.get(), "tomato_stage","tomato_stage");
         makeCornCrop((CropBlock) ModBlocks.CORN_CROP.get(), "corn_stage","corn_stage");
+
+        //Wood
+            //walnut
+            saplingBlock(ModBlocks.WALNUT_SAPLING);
+
+            logBlock((RotatedPillarBlock) ModBlocks.WALNUT_LOG.get());
+            blockItem(ModBlocks.WALNUT_LOG);
+
+            axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_WALNUT_LOG.get(), blockTexture(ModBlocks.STRIPPED_WALNUT_LOG.get()),
+                    new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/stripped_walnut_log_top"));
+            blockItem(ModBlocks.STRIPPED_WALNUT_LOG);
+
+            axisBlock((RotatedPillarBlock) ModBlocks.WALNUT_WOOD.get(), blockTexture(ModBlocks.WALNUT_LOG.get()), blockTexture(ModBlocks.WALNUT_LOG.get()));
+            blockItem(ModBlocks.WALNUT_WOOD);
+
+            axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_WALNUT_WOOD.get(), blockTexture(ModBlocks.STRIPPED_WALNUT_LOG.get()), blockTexture(ModBlocks.STRIPPED_WALNUT_LOG.get()));
+            blockItem(ModBlocks.STRIPPED_WALNUT_WOOD);
+
+            leavesBlock(ModBlocks.WALNUT_LEAVES);
+
+            blockWithItem(ModBlocks.WALNUT_PLANKS);
+
+            doorBlockWithRenderType((DoorBlock) ModBlocks.WALNUT_DOOR.get(), modLoc("block/walnut_door_bottom"), modLoc("block/walnut_door_top"), "cutout");
+
+            trapdoorBlockWithRenderType((TrapDoorBlock) ModBlocks.WALNUT_TRAPDOOR.get(), modLoc("block/walnut_trapdoor"), true, "cutout");
+
+            buttonBlock((ButtonBlock) ModBlocks.WALNUT_BUTTON.get(), blockTexture(ModBlocks.WALNUT_PLANKS.get()));
+
+            pressurePlateBlock((PressurePlateBlock) ModBlocks.WALNUT_PRESSURE_PLATE.get(), blockTexture(ModBlocks.WALNUT_PLANKS.get()));
+
+            slabBlock((SlabBlock) ModBlocks.WALNUT_SLAB.get(), blockTexture(ModBlocks.WALNUT_PLANKS.get()), blockTexture(ModBlocks.WALNUT_PLANKS.get()));
+            stairsBlock((StairBlock) ModBlocks.WALNUT_STAIRS.get(), blockTexture(ModBlocks.WALNUT_PLANKS.get()));
+            fenceBlock((FenceBlock) ModBlocks.WALNUT_FENCE.get(), blockTexture(ModBlocks.WALNUT_PLANKS.get()));
+            fenceGateBlock((FenceGateBlock) ModBlocks.WALNUT_FENCEGATE.get(), blockTexture(ModBlocks.WALNUT_PLANKS.get()));
+
+            //Apple
+            saplingBlock(ModBlocks.APPLE_SAPLING);
+            saplingBlock(ModBlocks.GREEN_APPLE_SAPLING);
+
+            logBlock((RotatedPillarBlock) ModBlocks.APPLE_LOG.get());
+            blockItem(ModBlocks.APPLE_LOG);
+
+            axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_APPLE_LOG.get(), blockTexture(ModBlocks.STRIPPED_APPLE_LOG.get()),
+                    new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/stripped_apple_log_top"));
+            blockItem(ModBlocks.STRIPPED_APPLE_LOG);
+
+            axisBlock((RotatedPillarBlock) ModBlocks.APPLE_WOOD.get(), blockTexture(ModBlocks.APPLE_LOG.get()), blockTexture(ModBlocks.APPLE_LOG.get()));
+            blockItem(ModBlocks.APPLE_WOOD);
+
+            axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_APPLE_WOOD.get(), blockTexture(ModBlocks.STRIPPED_APPLE_LOG.get()), blockTexture(ModBlocks.STRIPPED_APPLE_LOG.get()));
+            blockItem(ModBlocks.STRIPPED_APPLE_WOOD);
+
+            leavesBlock(ModBlocks.APPLE_LEAVES);
+            leavesBlock(ModBlocks.GREEN_APPLE_LEAVES);
+
+            blockWithItem(ModBlocks.APPLE_PLANKS);
+
+            doorBlockWithRenderType((DoorBlock) ModBlocks.APPLE_DOOR.get(), modLoc("block/apple_door_bottom"), modLoc("block/apple_door_top"), "cutout");
+
+            trapdoorBlockWithRenderType((TrapDoorBlock) ModBlocks.APPLE_TRAPDOOR.get(), modLoc("block/apple_trapdoor"), true, "cutout");
+
+            buttonBlock((ButtonBlock) ModBlocks.APPLE_BUTTON.get(), blockTexture(ModBlocks.APPLE_PLANKS.get()));
+
+            pressurePlateBlock((PressurePlateBlock) ModBlocks.APPLE_PRESSURE_PLATE.get(), blockTexture(ModBlocks.APPLE_PLANKS.get()));
+
+            slabBlock((SlabBlock) ModBlocks.APPLE_SLAB.get(), blockTexture(ModBlocks.APPLE_PLANKS.get()), blockTexture(ModBlocks.APPLE_PLANKS.get()));
+            stairsBlock((StairBlock) ModBlocks.APPLE_STAIRS.get(), blockTexture(ModBlocks.APPLE_PLANKS.get()));
+            fenceBlock((FenceBlock) ModBlocks.APPLE_FENCE.get(), blockTexture(ModBlocks.APPLE_PLANKS.get()));
+            fenceGateBlock((FenceGateBlock) ModBlocks.APPLE_FENCEGATE.get(), blockTexture(ModBlocks.APPLE_PLANKS.get()));
+
+            //Orange
+            saplingBlock(ModBlocks.ORANGE_SAPLING);
+
+            logBlock((RotatedPillarBlock) ModBlocks.ORANGE_LOG.get());
+            blockItem(ModBlocks.ORANGE_LOG);
+
+            axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_ORANGE_LOG.get(), blockTexture(ModBlocks.STRIPPED_ORANGE_LOG.get()),
+                    new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/stripped_orange_log_top"));
+            blockItem(ModBlocks.STRIPPED_ORANGE_LOG);
+
+            axisBlock((RotatedPillarBlock) ModBlocks.ORANGE_WOOD.get(), blockTexture(ModBlocks.ORANGE_LOG.get()), blockTexture(ModBlocks.ORANGE_LOG.get()));
+            blockItem(ModBlocks.ORANGE_WOOD);
+
+            axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_ORANGE_WOOD.get(), blockTexture(ModBlocks.STRIPPED_ORANGE_LOG.get()), blockTexture(ModBlocks.STRIPPED_ORANGE_LOG.get()));
+            blockItem(ModBlocks.STRIPPED_ORANGE_WOOD);
+
+            leavesBlock(ModBlocks.ORANGE_LEAVES);
+
+            blockWithItem(ModBlocks.ORANGE_PLANKS);
+
+            doorBlockWithRenderType((DoorBlock) ModBlocks.ORANGE_DOOR.get(), modLoc("block/orange_door_bottom"), modLoc("block/orange_door_top"), "cutout");
+
+            trapdoorBlockWithRenderType((TrapDoorBlock) ModBlocks.ORANGE_TRAPDOOR.get(), modLoc("block/orange_trapdoor"), true, "cutout");
+
+            buttonBlock((ButtonBlock) ModBlocks.ORANGE_BUTTON.get(), blockTexture(ModBlocks.ORANGE_PLANKS.get()));
+
+            pressurePlateBlock((PressurePlateBlock) ModBlocks.ORANGE_PRESSURE_PLATE.get(), blockTexture(ModBlocks.ORANGE_PLANKS.get()));
+
+            slabBlock((SlabBlock) ModBlocks.ORANGE_SLAB.get(), blockTexture(ModBlocks.ORANGE_PLANKS.get()), blockTexture(ModBlocks.ORANGE_PLANKS.get()));
+            stairsBlock((StairBlock) ModBlocks.ORANGE_STAIRS.get(), blockTexture(ModBlocks.ORANGE_PLANKS.get()));
+            fenceBlock((FenceBlock) ModBlocks.ORANGE_FENCE.get(), blockTexture(ModBlocks.ORANGE_PLANKS.get()));
+            fenceGateBlock((FenceGateBlock) ModBlocks.ORANGE_FENCEGATE.get(), blockTexture(ModBlocks.ORANGE_PLANKS.get()));
+
+            //Lemon
+            saplingBlock(ModBlocks.LEMON_SAPLING);
+
+            logBlock((RotatedPillarBlock) ModBlocks.LEMON_LOG.get());
+            blockItem(ModBlocks.LEMON_LOG);
+
+            axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_LEMON_LOG.get(), blockTexture(ModBlocks.STRIPPED_LEMON_LOG.get()),
+                    new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/stripped_lemon_log_top"));
+            blockItem(ModBlocks.STRIPPED_LEMON_LOG);
+
+            axisBlock((RotatedPillarBlock) ModBlocks.LEMON_WOOD.get(), blockTexture(ModBlocks.LEMON_LOG.get()), blockTexture(ModBlocks.LEMON_LOG.get()));
+            blockItem(ModBlocks.LEMON_WOOD);
+
+            axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_LEMON_WOOD.get(), blockTexture(ModBlocks.STRIPPED_LEMON_LOG.get()), blockTexture(ModBlocks.STRIPPED_LEMON_LOG.get()));
+            blockItem(ModBlocks.STRIPPED_LEMON_WOOD);
+
+            leavesBlock(ModBlocks.LEMON_LEAVES);
+
+            blockWithItem(ModBlocks.LEMON_PLANKS);
+
+            doorBlockWithRenderType((DoorBlock) ModBlocks.LEMON_DOOR.get(), modLoc("block/lemon_door_bottom"), modLoc("block/lemon_door_top"), "cutout");
+
+            trapdoorBlockWithRenderType((TrapDoorBlock) ModBlocks.LEMON_TRAPDOOR.get(), modLoc("block/lemon_trapdoor"), true, "cutout");
+
+            buttonBlock((ButtonBlock) ModBlocks.LEMON_BUTTON.get(), blockTexture(ModBlocks.LEMON_PLANKS.get()));
+
+            pressurePlateBlock((PressurePlateBlock) ModBlocks.LEMON_PRESSURE_PLATE.get(), blockTexture(ModBlocks.LEMON_PLANKS.get()));
+
+            slabBlock((SlabBlock) ModBlocks.LEMON_SLAB.get(), blockTexture(ModBlocks.LEMON_PLANKS.get()), blockTexture(ModBlocks.LEMON_PLANKS.get()));
+            stairsBlock((StairBlock) ModBlocks.LEMON_STAIRS.get(), blockTexture(ModBlocks.LEMON_PLANKS.get()));
+            fenceBlock((FenceBlock) ModBlocks.LEMON_FENCE.get(), blockTexture(ModBlocks.LEMON_PLANKS.get()));
+            fenceGateBlock((FenceGateBlock) ModBlocks.LEMON_FENCEGATE.get(), blockTexture(ModBlocks.LEMON_PLANKS.get()));
+
+            //Lime
+            saplingBlock(ModBlocks.LIME_SAPLING);
+            leavesBlock(ModBlocks.LIME_LEAVES);
     }
     //Crops
         //Yerba mate
@@ -172,5 +313,31 @@ public class ModBlockStateProvider extends BlockStateProvider{
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject){
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
+    }
+
+    private void blockItem(RegistryObject<Block> blockRegistryObject) {
+        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile(EnhancedPlaythrough.MOD_ID +
+                ":block/" + ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath()));
+    }
+
+    private void leavesBlock(RegistryObject<Block> blockRegistryObject) {
+        simpleBlockWithItem(blockRegistryObject.get(),
+                models().singleTexture(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), new ResourceLocation("minecraft:block/leaves"),
+                        "all", blockTexture(blockRegistryObject.get())).renderType("cutout"));
+    }
+
+    private void saplingBlock(RegistryObject<Block> blockRegistryObject) {
+        simpleBlock(blockRegistryObject.get(),
+                models().cross(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
+    }
+
+    public void hangingSignBlock(Block signBlock, Block wallSignBlock, ResourceLocation texture) {
+        ModelFile sign = models().sign(String.valueOf(signBlock), texture);
+        hangingSignBlock(signBlock, wallSignBlock, sign);
+    }
+
+    public void hangingSignBlock(Block signBlock, Block wallSignBlock, ModelFile sign) {
+        simpleBlock(signBlock, sign);
+        simpleBlock(wallSignBlock, sign);
     }
 }

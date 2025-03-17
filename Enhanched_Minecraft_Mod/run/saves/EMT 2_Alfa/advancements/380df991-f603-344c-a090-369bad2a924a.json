@@ -8,6 +8,7 @@
   "minecraft:adventure/adventuring_time": {
     "criteria": {
       "minecraft:sunflower_plains": "2025-02-27 17:50:30 -0300",
+      "minecraft:river": "2025-03-17 14:52:20 -0300",
       "minecraft:snowy_plains": "2025-02-27 20:14:25 -0300",
       "minecraft:forest": "2025-03-08 16:26:01 -0300",
       "minecraft:ocean": "2025-02-27 20:14:05 -0300",
@@ -1093,6 +1094,36 @@
   "enhanced_playthrough:recipes/food/yeast": {
     "criteria": {
       "has_sugar": "2025-03-10 18:47:30 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/white_dye_from_grinding_bone_meal": {
+    "criteria": {
+      "has_bone_meal": "2025-03-17 14:51:55 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/white_dye": {
+    "criteria": {
+      "has_bone_meal": "2025-03-17 14:51:55 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/bone_meal": {
+    "criteria": {
+      "has_the_recipe": "2025-03-17 14:51:55 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/brewing/bone_meal": {
+    "criteria": {
+      "has_bone_meal": "2025-03-17 14:51:55 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/bone_block": {
+    "criteria": {
+      "has_bone_meal": "2025-03-17 14:51:55 -0300"
     },
     "done": true
   },

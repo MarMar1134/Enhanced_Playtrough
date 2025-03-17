@@ -1,7 +1,7 @@
 {
   "type": "enhanced_playthrough:grinding",
   "category": "grind",
-  "group": "dyes",
+  "group": "light_gray_dye",
   "ingredient": {
     "item": "minecraft:white_tulip"
   },

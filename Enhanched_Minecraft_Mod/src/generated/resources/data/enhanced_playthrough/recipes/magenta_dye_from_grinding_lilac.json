@@ -1,7 +1,7 @@
 {
   "type": "enhanced_playthrough:grinding",
   "category": "grind",
-  "group": "dyes",
+  "group": "magenta_dye",
   "ingredient": {
     "item": "minecraft:lilac"
   },

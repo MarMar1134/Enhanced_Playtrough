@@ -54,6 +54,10 @@
       {
         "namespace": "minecraft",
         "path": "loot_tables/blocks/diamond_ore.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "loot_tables/blocks/oak_leaves.json"
       }
     ]
   }

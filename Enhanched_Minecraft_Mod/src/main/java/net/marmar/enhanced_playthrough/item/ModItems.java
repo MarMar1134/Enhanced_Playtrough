@@ -454,10 +454,20 @@ public class ModItems {
                 "corn_seeds", () -> new ItemNameBlockItem(ModBlocks.CORN_CROP.get(), new Item.Properties()));
 
         //Fruit
+        public static final RegistryObject<Item> ORANGE = ITEMS.register(
+                "orange",() -> new Item(new Item.Properties().food(ModFoodPropieties.ORANGE)));
+        public static final RegistryObject<Item> LEMON = ITEMS.register(
+                "lemon",() -> new Item(new Item.Properties().food(ModFoodPropieties.LEMON)));
+        public static final RegistryObject<Item> LIME = ITEMS.register(
+                "lime",() -> new Item(new Item.Properties().food(ModFoodPropieties.LIME)));
+        public static final RegistryObject<Item> GREEN_APPLE = ITEMS.register(
+                "green_apple",() -> new Item(new Item.Properties().food(ModFoodPropieties.GREEN_APPLE)));
         public static final RegistryObject<Item> TOMATO = ITEMS.register(
                 "tomato",() -> new Item(new Item.Properties().food(ModFoodPropieties.TOMATO)));
         public static final RegistryObject<Item> WALNUT = ITEMS.register(
                 "walnut",() -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> PEELED_WALNUT = ITEMS.register(
+            "peeled_walnut",() -> new Item(new Item.Properties().food(ModFoodPropieties.PEELED_WALNUT)));
 
         //Vegetables
         public static final RegistryObject<Item> RICE_GRAINS = ITEMS.register(

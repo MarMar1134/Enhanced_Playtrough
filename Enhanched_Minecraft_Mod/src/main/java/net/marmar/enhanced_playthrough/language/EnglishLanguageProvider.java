@@ -71,6 +71,83 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
             addAdvancementDesc("gems", "get_all_gems", "Collect all the gems and become the lord of chaos");
 
         //Blocks
+            //Wood
+                //Apple
+                addBlock(ModBlocks.APPLE_SAPLING, "Apple sapling");
+                addBlock(ModBlocks.APPLE_LEAVES, "Apple leaves");
+                addBlock(ModBlocks.APPLE_LOG, "Apple log");
+                addBlock(ModBlocks.STRIPPED_APPLE_LOG, "Stripped apple log");
+                addBlock(ModBlocks.APPLE_WOOD, "Apple wood");
+                addBlock(ModBlocks.STRIPPED_APPLE_WOOD, "Stripped apple wood");
+                addBlock(ModBlocks.APPLE_PLANKS, "Apple planks");
+                addBlock(ModBlocks.APPLE_SLAB, "Apple slab");
+                addBlock(ModBlocks.APPLE_STAIRS, "Apple stairs");
+                addBlock(ModBlocks.APPLE_FENCE, "Apple fence");
+                addBlock(ModBlocks.APPLE_FENCEGATE, "Apple fence gate");
+                addBlock(ModBlocks.APPLE_DOOR, "Apple door");
+                addBlock(ModBlocks.APPLE_TRAPDOOR, "Apple trapdoor");
+                addBlock(ModBlocks.APPLE_BUTTON, "Apple button");
+                addBlock(ModBlocks.APPLE_PRESSURE_PLATE, "Apple pressure plate");
+
+                //Green apple
+                addBlock(ModBlocks.GREEN_APPLE_SAPLING, "Green apple sapling");
+                addBlock(ModBlocks.GREEN_APPLE_LEAVES, "Green apple leaves");
+
+                //Walnut
+                addBlock(ModBlocks.WALNUT_SAPLING, "Walnut sapling");
+                addBlock(ModBlocks.WALNUT_LEAVES, "Walnut leaves");
+                addBlock(ModBlocks.WALNUT_LOG, "Walnut log");
+                addBlock(ModBlocks.STRIPPED_WALNUT_LOG, "Stripped walnut log");
+                addBlock(ModBlocks.WALNUT_WOOD, "Walnut wood");
+                addBlock(ModBlocks.STRIPPED_WALNUT_WOOD, "Stripped walnut wood");
+                addBlock(ModBlocks.WALNUT_PLANKS, "Walnut planks");
+                addBlock(ModBlocks.WALNUT_SLAB, "Walnut slab");
+                addBlock(ModBlocks.WALNUT_STAIRS, "Walnut stairs");
+                addBlock(ModBlocks.WALNUT_FENCE, "Walnut fence");
+                addBlock(ModBlocks.WALNUT_FENCEGATE, "Walnut fence gate");
+                addBlock(ModBlocks.WALNUT_DOOR, "Walnut door");
+                addBlock(ModBlocks.WALNUT_TRAPDOOR, "Walnut trapdoor");
+                addBlock(ModBlocks.WALNUT_BUTTON, "Walnut button");
+                addBlock(ModBlocks.WALNUT_PRESSURE_PLATE, "Walnut pressure plate");
+
+                //Orange
+                addBlock(ModBlocks.ORANGE_SAPLING, "Orange sapling");
+                addBlock(ModBlocks.ORANGE_LEAVES, "Orange leaves");
+                addBlock(ModBlocks.ORANGE_LOG, "Orange log");
+                addBlock(ModBlocks.STRIPPED_ORANGE_LOG, "Stripped orange log");
+                addBlock(ModBlocks.ORANGE_WOOD, "Orange wood");
+                addBlock(ModBlocks.STRIPPED_ORANGE_WOOD, "Stripped orange wood");
+                addBlock(ModBlocks.ORANGE_PLANKS, "Orange planks");
+                addBlock(ModBlocks.ORANGE_SLAB, "Orange slab");
+                addBlock(ModBlocks.ORANGE_STAIRS, "Orange stairs");
+                addBlock(ModBlocks.ORANGE_FENCE, "Orange fence");
+                addBlock(ModBlocks.ORANGE_FENCEGATE, "Orange fence gate");
+                addBlock(ModBlocks.ORANGE_DOOR, "Orange door");
+                addBlock(ModBlocks.ORANGE_TRAPDOOR, "Orange trapdoor");
+                addBlock(ModBlocks.ORANGE_BUTTON, "Orange button");
+                addBlock(ModBlocks.ORANGE_PRESSURE_PLATE, "Orange pressure plate");
+
+                //Lemon
+                addBlock(ModBlocks.LEMON_SAPLING, "Lemon sapling");
+                addBlock(ModBlocks.LEMON_LEAVES, "Lemon leaves");
+                addBlock(ModBlocks.LEMON_LOG, "Lemon log");
+                addBlock(ModBlocks.STRIPPED_LEMON_LOG, "Stripped lemon log");
+                addBlock(ModBlocks.LEMON_WOOD, "Orange wood");
+                addBlock(ModBlocks.STRIPPED_LEMON_WOOD, "Stripped lemon wood");
+                addBlock(ModBlocks.LEMON_PLANKS, "Lemon planks");
+                addBlock(ModBlocks.LEMON_SLAB, "Lemon slab");
+                addBlock(ModBlocks.LEMON_STAIRS, "Lemon stairs");
+                addBlock(ModBlocks.LEMON_FENCE, "Lemon fence");
+                addBlock(ModBlocks.LEMON_FENCEGATE, "Lemon fence gate");
+                addBlock(ModBlocks.LEMON_DOOR, "Lemon door");
+                addBlock(ModBlocks.LEMON_TRAPDOOR, "Lemon trapdoor");
+                addBlock(ModBlocks.LEMON_BUTTON, "Lemon button");
+                addBlock(ModBlocks.LEMON_PRESSURE_PLATE, "Lemon pressure plate");
+
+                //Lime
+                addBlock(ModBlocks.LIME_SAPLING, "Lime sapling");
+                addBlock(ModBlocks.LIME_LEAVES, "Lime leaves");
+
             //Polished stone
             addBlock(ModBlocks.POLISHED_STONE, "Polished stone");
             addBlock(ModBlocks.POLISHED_STONE_SLAB, "Polished stone slab");
@@ -300,7 +377,12 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
 
                 //Fruits
                 addItem(ModItems.TOMATO, "Tomato");
+                addItem(ModItems.LEMON, "Lemon");
+                addItem(ModItems.LIME, "Lime");
+                addItem(ModItems.ORANGE, "Orange");
                 addItem(ModItems.WALNUT, "Walnut");
+                addItem(ModItems.PEELED_WALNUT, "Peeled walnut");
+                addItem(ModItems.GREEN_APPLE, "Green apple");
 
                 //Vegetables
                 addItem(ModItems.CORN, "Corn");

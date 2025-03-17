@@ -57,6 +57,72 @@ public class ModItemModelProvider extends ItemModelProvider {
             blockWithItem(ModBlocks.SOUL_MUD_BRICK_STAIRS);
             wallItem(ModBlocks.SOUL_MUD_BRICK_WALL, ModBlocks.SOUL_MUD_BRICKS);
 
+            //Wood
+                //walnut
+                saplingItem(ModBlocks.WALNUT_SAPLING);
+
+                simpleBlockItem(ModBlocks.WALNUT_DOOR);
+                trapdoorItem(ModBlocks.WALNUT_TRAPDOOR);
+
+                buttonItem(ModBlocks.WALNUT_BUTTON, ModBlocks.WALNUT_PLANKS);
+
+                blockWithItem(ModBlocks.WALNUT_PRESSURE_PLATE);
+
+                blockWithItem(ModBlocks.WALNUT_SLAB);
+                blockWithItem(ModBlocks.WALNUT_STAIRS);
+                fenceItem(ModBlocks.WALNUT_FENCE, ModBlocks.WALNUT_PLANKS);
+                blockWithItem(ModBlocks.WALNUT_FENCEGATE);
+
+                //Apple
+                saplingItem(ModBlocks.APPLE_SAPLING);
+                saplingItem(ModBlocks.GREEN_APPLE_SAPLING);
+
+                simpleBlockItem(ModBlocks.APPLE_DOOR);
+                trapdoorItem(ModBlocks.APPLE_TRAPDOOR);
+
+                buttonItem(ModBlocks.APPLE_BUTTON, ModBlocks.APPLE_PLANKS);
+
+                blockWithItem(ModBlocks.APPLE_PRESSURE_PLATE);
+
+                blockWithItem(ModBlocks.APPLE_SLAB);
+                blockWithItem(ModBlocks.APPLE_STAIRS);
+                fenceItem(ModBlocks.APPLE_FENCE, ModBlocks.APPLE_PLANKS);
+                blockWithItem(ModBlocks.APPLE_FENCEGATE);
+
+
+                //Orange
+                saplingItem(ModBlocks.ORANGE_SAPLING);
+
+                simpleBlockItem(ModBlocks.ORANGE_DOOR);
+                trapdoorItem(ModBlocks.ORANGE_TRAPDOOR);
+
+                buttonItem(ModBlocks.ORANGE_BUTTON, ModBlocks.ORANGE_PLANKS);
+
+                blockWithItem(ModBlocks.ORANGE_PRESSURE_PLATE);
+
+                blockWithItem(ModBlocks.ORANGE_SLAB);
+                blockWithItem(ModBlocks.ORANGE_STAIRS);
+                fenceItem(ModBlocks.ORANGE_FENCE, ModBlocks.ORANGE_PLANKS);
+                blockWithItem(ModBlocks.ORANGE_FENCEGATE);
+
+                //Lemon
+                saplingItem(ModBlocks.LEMON_SAPLING);
+
+                simpleBlockItem(ModBlocks.LEMON_DOOR);
+                trapdoorItem(ModBlocks.LEMON_TRAPDOOR);
+
+                buttonItem(ModBlocks.LEMON_BUTTON, ModBlocks.LEMON_PLANKS);
+
+                blockWithItem(ModBlocks.LEMON_PRESSURE_PLATE);
+
+                blockWithItem(ModBlocks.LEMON_SLAB);
+                blockWithItem(ModBlocks.LEMON_STAIRS);
+                fenceItem(ModBlocks.LEMON_FENCE, ModBlocks.LEMON_PLANKS);
+                blockWithItem(ModBlocks.LEMON_FENCEGATE);
+
+                //Lime
+                saplingItem(ModBlocks.LIME_SAPLING);
+
         simpleItem(ModItems.RICE_GRAINS);
         simpleItem(ModItems.RICE_BOWL);
         simpleItem(ModItems.YERBA_MATE);
@@ -81,6 +147,17 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.PUMPKIN_FLOUR);
 
         simpleItem(ModItems.YEAST);
+
+        simpleItem(ModItems.GREEN_APPLE);
+
+        simpleItem(ModItems.ORANGE);
+
+        simpleItem(ModItems.LEMON);
+
+        simpleItem(ModItems.LIME);
+
+        simpleItem(ModItems.WALNUT);
+        simpleItem(ModItems.PEELED_WALNUT);
 
         //Seeds
         simpleItem(ModItems.YERBA_MATE_SEEDS);

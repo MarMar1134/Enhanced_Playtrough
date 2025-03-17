@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "enhanced_playthrough:lemon_planks"
+    }
+  },
+  "pattern": [
+    "AA"
+  ],
+  "result": {
+    "item": "enhanced_playthrough:lemon_pressure_plate"
+  },
+  "show_notification": true
+}

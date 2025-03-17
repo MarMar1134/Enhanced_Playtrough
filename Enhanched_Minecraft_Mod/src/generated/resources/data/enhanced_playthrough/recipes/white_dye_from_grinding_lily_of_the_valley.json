@@ -1,7 +1,7 @@
 {
   "type": "enhanced_playthrough:grinding",
   "category": "grind",
-  "group": "dyes",
+  "group": "white_dye",
   "ingredient": {
     "item": "minecraft:lily_of_the_valley"
   },

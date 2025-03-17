@@ -28,6 +28,21 @@
             },
             {
               "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "enchantments": [
+                      {
+                        "enchantment": "enhanced_playthrough:fine_mining",
+                        "levels": {
+                          "min": 1
+                        }
+                      }
+                    ]
+                  }
+                }
+              ],
               "functions": [
                 {
                   "add": false,
@@ -39,9 +54,6 @@
                   "function": "minecraft:set_count"
                 },
                 {
-                  "function": "minecraft:explosion_decay"
-                },
-                {
                   "enchantment": "minecraft:fortune",
                   "formula": "minecraft:uniform_bonus_count",
                   "function": "minecraft:apply_bonus",
@@ -50,53 +62,35 @@
                   }
                 }
               ],
+              "name": "minecraft:diamond"
+            },
+            {
+              "type": "minecraft:item",
+              "functions": [
+                {
+                  "add": false,
+                  "count": {
+                    "type": "minecraft:uniform",
+                    "max": 2.0,
+                    "min": 1.0
+                  },
+                  "function": "minecraft:set_count"
+                },
+                {
+                  "enchantment": "minecraft:fortune",
+                  "formula": "minecraft:uniform_bonus_count",
+                  "function": "minecraft:apply_bonus",
+                  "parameters": {
+                    "bonusMultiplier": 1
+                  }
+                },
+                {
+                  "function": "minecraft:explosion_decay"
+                }
+              ],
               "name": "enhanced_playthrough:raw_diamond"
             }
           ]
-        }
-      ],
-      "rolls": 1.0
-    },
-    {
-      "bonus_rolls": 0.0,
-      "conditions": [
-        {
-          "condition": "minecraft:match_tool",
-          "predicate": {
-            "enchantments": [
-              {
-                "enchantment": "enhanced_playthrough:fine_mining",
-                "levels": {
-                  "min": 1
-                }
-              }
-            ]
-          }
-        }
-      ],
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:diamond"
-        }
-      ],
-      "functions": [
-        {
-          "add": false,
-          "count": {
-            "type": "minecraft:uniform",
-            "max": 1.0,
-            "min": 1.0
-          },
-          "function": "minecraft:set_count"
-        },
-        {
-          "enchantment": "minecraft:fortune",
-          "formula": "minecraft:uniform_bonus_count",
-          "function": "minecraft:apply_bonus",
-          "parameters": {
-            "bonusMultiplier": 1
-          }
         }
       ],
       "rolls": 1.0

@@ -1,4 +1,4 @@
-// 1.20.1	2025-02-27T14:25:51.7902463	Tags for minecraft:block mod id enhanced_playthrough
+// 1.20.1	2025-03-17T14:46:26.1015485	Tags for minecraft:block mod id enhanced_playthrough
 e6fa99c5023af44c49111c3ab003d4a2131da11d data/enhanced_playthrough/tags/blocks/alloy_furnace.json
 47a02117dd60bac3b440fb46f534e4d5442d0e64 data/enhanced_playthrough/tags/blocks/basic_furnace.json
 d3c28a03337da0044db4602dc42545d2a430a227 data/enhanced_playthrough/tags/blocks/needs_brass_tool.json
@@ -12,9 +12,23 @@ a71b39253b98a5b49c236554384a6b9cd0087cf7 data/enhanced_playthrough/tags/blocks/n
 653b9f6c150b1865b17242dcd65106f9775502fc data/forge/tags/blocks/ores.json
 98c8337310ed121b816c834fde588afce4b7c192 data/forge/tags/blocks/stone.json
 6cc9252c22677ead333b8e16bb7739e9cf466f9a data/minecraft/tags/blocks/beacon_base_blocks.json
+27e60c70e70af1db39bde73645a398c6b70bec63 data/minecraft/tags/blocks/fences.json
+bfecdab9baabf8268fd1903dba73ff07fa8fd1e1 data/minecraft/tags/blocks/fence_gates.json
+e6b33c19b8f9affa593da912431dc3d087fef999 data/minecraft/tags/blocks/leaves.json
+cc7f01de72464bfac0275de5c6aaeeb445bc06d0 data/minecraft/tags/blocks/logs_that_burn.json
+e700fb1bf9137bf8cdd9b95907c50db453f3094e data/minecraft/tags/blocks/mineable/axe.json
+e6b33c19b8f9affa593da912431dc3d087fef999 data/minecraft/tags/blocks/mineable/hoe.json
 3629e6868b450f65176a946868ada71280c14b86 data/minecraft/tags/blocks/mineable/pickaxe.json
 66f2b9a34f8e1d208954d5e0f42c2ae22b01d6db data/minecraft/tags/blocks/needs_iron_tool.json
 b2ab1282bf45ff9931782f08960a1e2d89659e9a data/minecraft/tags/blocks/needs_stone_tool.json
-7363b3937fce2b46e4f8523990fc82adb6a01264 data/minecraft/tags/blocks/slabs.json
-950a0d2040ac089081bfb1e50473620636bb81eb data/minecraft/tags/blocks/stairs.json
+34fcc954121e727482e6b9d94d2c998b7d9338f8 data/minecraft/tags/blocks/overworld_natural_logs.json
+09c1bed1eb894a8dc53a3c61aa274cfa3f6f7197 data/minecraft/tags/blocks/planks.json
+7a8133bffd05a155a8ad345699aef62815d1a031 data/minecraft/tags/blocks/pressure_plates.json
+42fbb5b826aeef1ab4b40b9b2d8874432db83515 data/minecraft/tags/blocks/saplings.json
+60e0e2f755daeb64f532fe09490dc0078ccea593 data/minecraft/tags/blocks/slabs.json
+36a7f0328b5b6a21ca99e28ebbe490f0feb9f3f0 data/minecraft/tags/blocks/stairs.json
+e6b33c19b8f9affa593da912431dc3d087fef999 data/minecraft/tags/blocks/sword_efficient.json
 f3966c5c2605ba29f4bdb846693bd442f14f9efa data/minecraft/tags/blocks/walls.json
+e375e05d2f37e53d24c1942511515ee6772bed57 data/minecraft/tags/blocks/wooden_buttons.json
+561aec59497f419ae403266bf617c3787757a810 data/minecraft/tags/blocks/wooden_doors.json
+055fae93a8e6c36cf3667dc1b02a6e7a23c9cc24 data/minecraft/tags/blocks/wooden_trapdoors.json

@@ -7,11 +7,17 @@ import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
+import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
+import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
+import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
+import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
 import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
@@ -19,6 +25,14 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
 import java.util.List;
 
 public class ModConfiguredFeatures {
+    //Trees
+    public static final ResourceKey<ConfiguredFeature<?, ?>> WALNUT_KEY = registerKey("walnut");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> APPLE_KEY = registerKey("apple");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> GREEN_APPLE_KEY = registerKey("green_apple");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> ORANGE_KEY = registerKey("orange");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> LEMON_KEY = registerKey("lemon");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> LIME_KEY = registerKey("lime");
+
     //Nature
     public static final ResourceKey<ConfiguredFeature<?, ?>> LIMESTONE_KEY = registerKey("limestone");
     public static final ResourceKey<ConfiguredFeature<?, ?>> GRAVEL_MUD_KEY = registerKey("gravel_mud");
@@ -133,6 +147,67 @@ public class ModConfiguredFeatures {
                 ModBlocks.NETHER_GARNET_ORE.get().defaultBlockState()));
 
         register(context, NETHER_GARNET_ORE_KEY, Feature.ORE, new OreConfiguration(garnetOres, 5));
+
+        //trees
+            //Walnut
+            register(context, WALNUT_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                    BlockStateProvider.simple(ModBlocks.WALNUT_LOG.get()),
+                    new StraightTrunkPlacer(4, 2, 1),
+
+                    BlockStateProvider.simple(ModBlocks.WALNUT_LEAVES.get()),
+                    new BlobFoliagePlacer(ConstantInt.of(3),ConstantInt.of(2),3),
+
+                    new TwoLayersFeatureSize(2, 1, 3)).build());
+
+            //Apple
+            register(context, APPLE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                    BlockStateProvider.simple(ModBlocks.APPLE_LOG.get()),
+                    new StraightTrunkPlacer(3, 2, 1),
+
+                    BlockStateProvider.simple(ModBlocks.APPLE_LEAVES.get()),
+                    new BlobFoliagePlacer(ConstantInt.of(3),ConstantInt.of(2),3),
+
+                    new TwoLayersFeatureSize(2, 1, 2)).build());
+
+            //Green apple
+            register(context, GREEN_APPLE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                    BlockStateProvider.simple(ModBlocks.APPLE_LOG.get()),
+                    new StraightTrunkPlacer(3, 2, 1),
+
+                    BlockStateProvider.simple(ModBlocks.GREEN_APPLE_LEAVES.get()),
+                    new BlobFoliagePlacer(ConstantInt.of(2),ConstantInt.of(1),2),
+
+                    new TwoLayersFeatureSize(2, 1, 2)).build());
+
+            //Orange
+            register(context, ORANGE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                    BlockStateProvider.simple(ModBlocks.ORANGE_LOG.get()),
+                    new StraightTrunkPlacer(3, 1, 1),
+
+                    BlockStateProvider.simple(ModBlocks.ORANGE_LEAVES.get()),
+                    new BlobFoliagePlacer(ConstantInt.of(2),ConstantInt.of(0),2),
+
+                    new TwoLayersFeatureSize(1, 1, 2)).build());
+
+            //Lemon
+            register(context, LEMON_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                    BlockStateProvider.simple(ModBlocks.LEMON_LOG.get()),
+                    new StraightTrunkPlacer(4, 2, 1),
+
+                    BlockStateProvider.simple(ModBlocks.LEMON_LEAVES.get()),
+                    new BlobFoliagePlacer(ConstantInt.of(2),ConstantInt.of(0),2),
+
+                    new TwoLayersFeatureSize(2, 1, 2)).build());
+
+            //Lime
+            register(context, LIME_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                    BlockStateProvider.simple(ModBlocks.LEMON_LOG.get()),
+                    new StraightTrunkPlacer(3, 1, 1),
+
+                    BlockStateProvider.simple(ModBlocks.LIME_LEAVES.get()),
+                    new BlobFoliagePlacer(ConstantInt.of(2),ConstantInt.of(0),2),
+
+                    new TwoLayersFeatureSize(1, 1, 2)).build());
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {

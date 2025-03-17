@@ -1,10 +1,13 @@
 package net.marmar.enhanced_playthrough.worldgen;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
+import net.marmar.enhanced_playthrough.block.ModBlocks;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.data.worldgen.placement.PlacementUtils;
+import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
@@ -16,6 +19,13 @@ import net.minecraft.world.level.levelgen.placement.PlacementModifier;
 import java.util.List;
 
 public class ModPlacedFeatures {
+    //Trees
+    public static final ResourceKey<PlacedFeature> WALNUT_PLACED_KEY = registerKey("walnut_placed");
+    public static final ResourceKey<PlacedFeature> APPLE_PLACED_KEY = registerKey("apple_placed");
+    public static final ResourceKey<PlacedFeature> ORANGE_PLACED_KEY = registerKey("orange_placed");
+    public static final ResourceKey<PlacedFeature> LEMON_PLACED_KEY = registerKey("lemon_placed");
+    public static final ResourceKey<PlacedFeature> LIME_PLACED_KEY = registerKey("lime_placed");
+
     //Nature
     public static final ResourceKey<PlacedFeature> LIMESTONE_PLACED_KEY = registerKey("limestone_placed");
     public static final ResourceKey<PlacedFeature> GRAVEL_MUD_PLACED_KEY = registerKey("gravel_mud_placed");
@@ -120,6 +130,32 @@ public class ModPlacedFeatures {
         register(context, NETHER_GARNET_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_GARNET_ORE_KEY),
                 ModOrePlacement.commonOrePlacement(5,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(64))));
+
+        //Trees
+            //Walnut
+            register(context, WALNUT_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.WALNUT_KEY),
+                    VegetationPlacements.treePlacement(PlacementUtils.countExtra(2, 0.1f, 3),
+                            ModBlocks.WALNUT_SAPLING.get()));
+
+            //Apple
+            register(context, APPLE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.APPLE_KEY),
+                    VegetationPlacements.treePlacement(PlacementUtils.countExtra(1, 0.1f, 1),
+                            ModBlocks.APPLE_SAPLING.get()));
+
+            //Orange
+            register(context, ORANGE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ORANGE_KEY),
+                    VegetationPlacements.treePlacement(PlacementUtils.countExtra(1, 0.1f, 1),
+                            ModBlocks.ORANGE_SAPLING.get()));
+
+            //Lemon
+            register(context, LEMON_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.LEMON_KEY),
+                    VegetationPlacements.treePlacement(PlacementUtils.countExtra(1, 0.1f, 1),
+                            ModBlocks.LEMON_SAPLING.get()));
+
+            //Lime
+            register(context, LIME_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.LIME_KEY),
+                    VegetationPlacements.treePlacement(PlacementUtils.countExtra(2, 0.1f, 1),
+                            ModBlocks.LIME_SAPLING.get()));
     }
 
 

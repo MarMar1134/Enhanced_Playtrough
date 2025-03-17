@@ -1,6 +1,7 @@
 package net.marmar.enhanced_playthrough.datagen;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
+import net.marmar.enhanced_playthrough.Util.ModTags;
 import net.marmar.enhanced_playthrough.block.ModBlocks;
 import net.marmar.enhanced_playthrough.item.ModItems;
 import net.marmar.enhanced_playthrough.recipe.GemPolishingRecipe;
@@ -27,6 +28,7 @@ import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.SmithingTransformRecipe;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
 import java.util.Iterator;
@@ -296,49 +298,53 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         gemPolishing(consumer, ModItems.RAW_GARNET.get(), "gems", ModItems.GARNET.get());
 
         //Grinding recipes
-        itemGrinding(consumer, ModItems.YERBA_MATE.get(), "food", ModItems.GROUNDED_YERBA_MATE.get(), 2);
-        itemGrinding(consumer, Items.WHEAT, "food", ModItems.WHEAT_FLOUR.get(), 2);
-        itemGrinding(consumer, Items.PUMPKIN, "food", ModItems.PUMPKIN_FLOUR.get(), 2);
-        itemGrinding(consumer, Items.SUGAR_CANE, "food", Items.SUGAR, 3);
-        itemGrinding(consumer, Items.BONE, "misc", Items.BONE_MEAL, 3);
-        itemGrinding(consumer, ItemTags.WOOL, "misc", Items.STRING, 4);
+        itemGrinding(consumer, ModItems.YERBA_MATE.get(), "grounded_yerba_mate", ModItems.GROUNDED_YERBA_MATE.get(), 2);
+        itemGrinding(consumer, Items.WHEAT, "wheat_flour", ModItems.WHEAT_FLOUR.get(), 2);
+        itemGrinding(consumer, Items.PUMPKIN, "pumpkin_flour", ModItems.PUMPKIN_FLOUR.get(), 2);
+        itemGrinding(consumer, Items.SUGAR_CANE, "sugar", Items.SUGAR, 3);
+        itemGrinding(consumer, Items.BONE, "bone_meal", Items.BONE_MEAL, 3);
+        itemGrinding(consumer, ItemTags.WOOL, "string", Items.STRING, 4);
 
             //Dyes
-            itemGrinding(consumer, Items.BONE_MEAL, "dyes", Items.WHITE_DYE, 3);
-            itemGrinding(consumer, Items.LILY_OF_THE_VALLEY, "dyes", Items.WHITE_DYE, 3);
+            itemGrinding(consumer, Items.BONE_MEAL, "white_dye", Items.WHITE_DYE, 3);
+            itemGrinding(consumer, Items.LILY_OF_THE_VALLEY, "white_dye", Items.WHITE_DYE, 3);
 
-            itemGrinding(consumer, Items.AZURE_BLUET, "dyes", Items.LIGHT_GRAY_DYE, 3);
-            itemGrinding(consumer, Items.OXEYE_DAISY, "dyes", Items.LIGHT_GRAY_DYE, 3);
-            itemGrinding(consumer, Items.WHITE_TULIP, "dyes", Items.LIGHT_GRAY_DYE, 3);
+            itemGrinding(consumer, Items.AZURE_BLUET, "light_gray_dye", Items.LIGHT_GRAY_DYE, 3);
+            itemGrinding(consumer, Items.OXEYE_DAISY, "light_gray_dye", Items.LIGHT_GRAY_DYE, 3);
+            itemGrinding(consumer, Items.WHITE_TULIP, "light_gray_dye", Items.LIGHT_GRAY_DYE, 3);
 
-            itemGrinding(consumer, Items.WITHER_ROSE, "dyes", Items.BLACK_DYE, 3);
+            itemGrinding(consumer, Items.WITHER_ROSE, "black_dye", Items.BLACK_DYE, 3);
 
-            itemGrinding(consumer, Items.COCOA_BEANS, "dyes", Items.BROWN_DYE, 3);
+            itemGrinding(consumer, Items.COCOA_BEANS, "brown_dye", Items.BROWN_DYE, 3);
 
-            itemGrinding(consumer, Items.POPPY, "dyes", Items.RED_DYE, 3);
-            itemGrinding(consumer, Items.RED_TULIP, "dyes", Items.RED_DYE, 3);
-            itemGrinding(consumer, Items.ROSE_BUSH, "dyes", Items.RED_DYE, 6);
-            itemGrinding(consumer, Items.BEETROOT, "dyes", Items.RED_DYE, 2);
+            itemGrinding(consumer, Items.POPPY, "red_dye", Items.RED_DYE, 3);
+            itemGrinding(consumer, Items.RED_TULIP, "red_dye", Items.RED_DYE, 3);
+            itemGrinding(consumer, Items.ROSE_BUSH, "red_dye", Items.RED_DYE, 6);
+            itemGrinding(consumer, Items.BEETROOT, "red_dye", Items.RED_DYE, 2);
 
-            itemGrinding(consumer, Items.ORANGE_TULIP, "dyes", Items.ORANGE_DYE, 3);
-            itemGrinding(consumer, Items.TORCHFLOWER, "dyes", Items.ORANGE_DYE, 3);
+            itemGrinding(consumer, ModItems.ORANGE.get(), "orange_dye", Items.ORANGE_DYE, 2);
+            itemGrinding(consumer, Items.ORANGE_TULIP, "orange_dye", Items.ORANGE_DYE, 3);
+            itemGrinding(consumer, Items.TORCHFLOWER, "orange_dye", Items.ORANGE_DYE, 3);
 
-            itemGrinding(consumer, Items.DANDELION, "dyes", Items.YELLOW_DYE, 3);
-            itemGrinding(consumer, Items.SUNFLOWER, "dyes", Items.YELLOW_DYE, 6);
+            itemGrinding(consumer, ModItems.LEMON.get(), "yellow_dye", Items.YELLOW_DYE, 2);
+            itemGrinding(consumer, Items.DANDELION, "yellow_dye", Items.YELLOW_DYE, 3);
+            itemGrinding(consumer, Items.SUNFLOWER, "yellow_dye", Items.YELLOW_DYE, 6);
 
-            itemGrinding(consumer, Items.PITCHER_PLANT, "dyes", Items.CYAN_DYE, 6);
+            itemGrinding(consumer, Items.PITCHER_PLANT, "cyan_dye", Items.CYAN_DYE, 6);
 
-            itemGrinding(consumer, Items.BLUE_ORCHID, "dyes", Items.LIGHT_BLUE_DYE, 3);
+            itemGrinding(consumer, Items.BLUE_ORCHID, "light_blue_dye", Items.LIGHT_BLUE_DYE, 3);
 
-            itemGrinding(consumer, Items.LAPIS_LAZULI, "dyes", Items.BLUE_DYE, 3);
-            itemGrinding(consumer, Items.CORNFLOWER, "dyes", Items.BLUE_DYE, 3);
+            itemGrinding(consumer, Items.LAPIS_LAZULI, "blue_dye", Items.BLUE_DYE, 3);
+            itemGrinding(consumer, Items.CORNFLOWER, "blue_dye", Items.BLUE_DYE, 3);
 
-            itemGrinding(consumer, Items.ALLIUM, "dyes", Items.MAGENTA_DYE, 3);
-            itemGrinding(consumer, Items.LILAC, "dyes", Items.MAGENTA_DYE, 6);
+            itemGrinding(consumer, ModItems.LIME.get(), "lime_dye", Items.LIME_DYE, 2);
 
-            itemGrinding(consumer, Items.PINK_TULIP, "dyes", Items.PINK_DYE, 3);
-            itemGrinding(consumer, Items.PEONY, "dyes", Items.PINK_DYE, 6);
-            itemGrinding(consumer, Items.PINK_PETALS, "dyes", Items.PINK_DYE, 3);
+            itemGrinding(consumer, Items.ALLIUM, "magenta_dye", Items.MAGENTA_DYE, 3);
+            itemGrinding(consumer, Items.LILAC, "magenta_dye", Items.MAGENTA_DYE, 6);
+
+            itemGrinding(consumer, Items.PINK_TULIP, "pink_dye", Items.PINK_DYE, 3);
+            itemGrinding(consumer, Items.PEONY, "pink_dye", Items.PINK_DYE, 6);
+            itemGrinding(consumer, Items.PINK_PETALS, "pink_dye", Items.PINK_DYE, 3);
 
         //Stone cutting recipes
             //Stone
@@ -563,6 +569,323 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .save(consumer);
 
         //Block recipes
+            //Wood
+                //walnut wood
+                ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WALNUT_WOOD.get(), 3)
+                        .pattern("AA")
+                        .pattern("AA")
+                        .define('A', ModBlocks.WALNUT_LOG.get())
+                        .unlockedBy(getHasName(ModBlocks.WALNUT_LOG.get()), has(ModBlocks.WALNUT_LOG.get()))
+                        .save(consumer);
+
+                ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.STRIPPED_WALNUT_WOOD.get(), 3)
+                        .pattern("AA")
+                        .pattern("AA")
+                        .define('A', ModBlocks.STRIPPED_WALNUT_LOG.get())
+                        .unlockedBy(getHasName(ModBlocks.STRIPPED_WALNUT_LOG.get()), has(ModBlocks.STRIPPED_WALNUT_LOG.get()))
+                        .save(consumer);
+
+                ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WALNUT_PLANKS.get(), 4)
+                        .requires(ModTags.Items.WALNUT_LOGS)
+                        .unlockedBy(getHasName(ModBlocks.WALNUT_LOG.get()), has(ModBlocks.WALNUT_LOG.get()))
+                        .unlockedBy(getHasName(ModBlocks.WALNUT_WOOD.get()), has(ModBlocks.WALNUT_WOOD.get()))
+                        .unlockedBy(getHasName(ModBlocks.STRIPPED_WALNUT_LOG.get()), has(ModBlocks.STRIPPED_WALNUT_LOG.get()))
+                        .unlockedBy(getHasName(ModBlocks.STRIPPED_WALNUT_WOOD.get()), has(ModBlocks.STRIPPED_WALNUT_WOOD.get()))
+                        .save(consumer);
+
+                ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WALNUT_DOOR.get(), 3)
+                        .pattern("AA")
+                        .pattern("AA")
+                        .pattern("AA")
+                        .define('A', ModBlocks.WALNUT_PLANKS.get())
+                        .unlockedBy(getHasName(ModBlocks.WALNUT_PLANKS.get()), has(ModBlocks.WALNUT_PLANKS.get()))
+                        .save(consumer);
+
+                ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WALNUT_TRAPDOOR.get(), 2)
+                        .pattern("AAA")
+                        .pattern("AAA")
+                        .define('A', ModBlocks.WALNUT_PLANKS.get())
+                        .unlockedBy(getHasName(ModBlocks.WALNUT_PLANKS.get()), has(ModBlocks.WALNUT_PLANKS.get()))
+                        .save(consumer);
+
+                ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.WALNUT_BUTTON.get())
+                        .requires(ModBlocks.WALNUT_PLANKS.get())
+                        .unlockedBy(getHasName(ModBlocks.WALNUT_PLANKS.get()), has(ModBlocks.WALNUT_PLANKS.get()))
+                        .save(consumer);
+
+                ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.WALNUT_PRESSURE_PLATE.get())
+                        .pattern("AA")
+                        .define('A', ModBlocks.WALNUT_PLANKS.get())
+                        .unlockedBy(getHasName(ModBlocks.WALNUT_PLANKS.get()), has(ModBlocks.WALNUT_PLANKS.get()))
+                        .save(consumer);
+
+                ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WALNUT_SLAB.get(), 6)
+                        .pattern("AAA")
+                        .define('A', ModBlocks.WALNUT_PLANKS.get())
+                        .unlockedBy(getHasName(ModBlocks.WALNUT_PLANKS.get()), has(ModBlocks.WALNUT_PLANKS.get()))
+                        .save(consumer);
+
+                ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WALNUT_STAIRS.get(), 4)
+                        .pattern("A  ")
+                        .pattern("AA ")
+                        .pattern("AAA")
+                        .define('A', ModBlocks.WALNUT_PLANKS.get())
+                        .unlockedBy(getHasName(ModBlocks.WALNUT_PLANKS.get()), has(ModBlocks.WALNUT_PLANKS.get()))
+                        .save(consumer);
+
+                ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WALNUT_FENCE.get(), 3)
+                        .pattern("ABA")
+                        .pattern("ABA")
+                        .define('A', ModBlocks.WALNUT_PLANKS.get())
+                        .define('B', Items.STICK)
+                        .unlockedBy(getHasName(ModBlocks.WALNUT_PLANKS.get()), has(ModBlocks.WALNUT_PLANKS.get()))
+                        .save(consumer);
+
+                ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WALNUT_FENCEGATE.get())
+                        .pattern("BAB")
+                        .pattern("BAB")
+                        .define('A', ModBlocks.WALNUT_PLANKS.get())
+                        .define('B', Items.STICK)
+                        .unlockedBy(getHasName(ModBlocks.WALNUT_PLANKS.get()), has(ModBlocks.WALNUT_PLANKS.get()))
+                        .save(consumer);
+
+                //Apple wood
+                ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.APPLE_WOOD.get(), 3)
+                        .pattern("AA")
+                        .pattern("AA")
+                        .define('A', ModBlocks.APPLE_LOG.get())
+                        .unlockedBy(getHasName(ModBlocks.APPLE_LOG.get()), has(ModBlocks.APPLE_LOG.get()))
+                        .save(consumer);
+
+                ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.STRIPPED_APPLE_WOOD.get(), 3)
+                        .pattern("AA")
+                        .pattern("AA")
+                        .define('A', ModBlocks.STRIPPED_APPLE_LOG.get())
+                        .unlockedBy(getHasName(ModBlocks.STRIPPED_APPLE_LOG.get()), has(ModBlocks.STRIPPED_APPLE_LOG.get()))
+                        .save(consumer);
+
+                ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.APPLE_PLANKS.get(), 4)
+                        .requires(ModTags.Items.APPLE_LOGS)
+                        .unlockedBy(getHasName(ModBlocks.APPLE_LOG.get()), has(ModBlocks.APPLE_LOG.get()))
+                        .unlockedBy(getHasName(ModBlocks.APPLE_WOOD.get()), has(ModBlocks.APPLE_WOOD.get()))
+                        .unlockedBy(getHasName(ModBlocks.STRIPPED_APPLE_LOG.get()), has(ModBlocks.STRIPPED_APPLE_LOG.get()))
+                        .unlockedBy(getHasName(ModBlocks.STRIPPED_APPLE_WOOD.get()), has(ModBlocks.STRIPPED_APPLE_WOOD.get()))
+                        .save(consumer);
+
+                ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.APPLE_DOOR.get(), 3)
+                        .pattern("AA")
+                        .pattern("AA")
+                        .pattern("AA")
+                        .define('A', ModBlocks.APPLE_PLANKS.get())
+                        .unlockedBy(getHasName(ModBlocks.APPLE_PLANKS.get()), has(ModBlocks.APPLE_PLANKS.get()))
+                        .save(consumer);
+
+                ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.APPLE_TRAPDOOR.get(), 2)
+                        .pattern("AAA")
+                        .pattern("AAA")
+                        .define('A', ModBlocks.APPLE_PLANKS.get())
+                        .unlockedBy(getHasName(ModBlocks.APPLE_PLANKS.get()), has(ModBlocks.APPLE_PLANKS.get()))
+                        .save(consumer);
+
+                ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.APPLE_BUTTON.get())
+                        .requires(ModBlocks.APPLE_PLANKS.get())
+                        .unlockedBy(getHasName(ModBlocks.WALNUT_PLANKS.get()), has(ModBlocks.APPLE_PLANKS.get()))
+                        .save(consumer);
+
+                ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.APPLE_PRESSURE_PLATE.get())
+                        .pattern("AA")
+                        .define('A', ModBlocks.APPLE_PLANKS.get())
+                        .unlockedBy(getHasName(ModBlocks.APPLE_PLANKS.get()), has(ModBlocks.APPLE_PLANKS.get()))
+                        .save(consumer);
+
+                ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.APPLE_SLAB.get(), 6)
+                        .pattern("AAA")
+                        .define('A', ModBlocks.APPLE_PLANKS.get())
+                        .unlockedBy(getHasName(ModBlocks.APPLE_PLANKS.get()), has(ModBlocks.APPLE_PLANKS.get()))
+                        .save(consumer);
+
+                ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.APPLE_STAIRS.get(), 4)
+                        .pattern("A  ")
+                        .pattern("AA ")
+                        .pattern("AAA")
+                        .define('A', ModBlocks.APPLE_PLANKS.get())
+                        .unlockedBy(getHasName(ModBlocks.APPLE_PLANKS.get()), has(ModBlocks.APPLE_PLANKS.get()))
+                        .save(consumer);
+
+                ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.APPLE_FENCE.get(), 3)
+                        .pattern("ABA")
+                        .pattern("ABA")
+                        .define('A', ModBlocks.APPLE_PLANKS.get())
+                        .define('B', Items.STICK)
+                        .unlockedBy(getHasName(ModBlocks.APPLE_PLANKS.get()), has(ModBlocks.APPLE_PLANKS.get()))
+                        .save(consumer);
+
+                ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.APPLE_FENCEGATE.get())
+                        .pattern("BAB")
+                        .pattern("BAB")
+                        .define('A', ModBlocks.APPLE_PLANKS.get())
+                        .define('B', Tags.Items.RODS_WOODEN)
+                        .unlockedBy(getHasName(ModBlocks.APPLE_PLANKS.get()), has(ModBlocks.APPLE_PLANKS.get()))
+                        .save(consumer);
+
+                //Orange wood
+                ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_WOOD.get(), 3)
+                        .pattern("AA")
+                        .pattern("AA")
+                        .define('A', ModBlocks.ORANGE_LOG.get())
+                        .unlockedBy(getHasName(ModBlocks.ORANGE_LOG.get()), has(ModBlocks.ORANGE_LOG.get()))
+                        .save(consumer);
+
+                ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.STRIPPED_ORANGE_WOOD.get(), 3)
+                        .pattern("AA")
+                        .pattern("AA")
+                        .define('A', ModBlocks.STRIPPED_ORANGE_LOG.get())
+                        .unlockedBy(getHasName(ModBlocks.STRIPPED_ORANGE_LOG.get()), has(ModBlocks.STRIPPED_ORANGE_LOG.get()))
+                        .save(consumer);
+
+                ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_PLANKS.get(), 4)
+                        .requires(ModTags.Items.ORANGE_LOGS)
+                        .unlockedBy(getHasName(ModBlocks.ORANGE_LOG.get()), has(ModBlocks.ORANGE_LOG.get()))
+                        .unlockedBy(getHasName(ModBlocks.ORANGE_WOOD.get()), has(ModBlocks.ORANGE_WOOD.get()))
+                        .unlockedBy(getHasName(ModBlocks.STRIPPED_ORANGE_LOG.get()), has(ModBlocks.STRIPPED_ORANGE_LOG.get()))
+                        .unlockedBy(getHasName(ModBlocks.STRIPPED_ORANGE_WOOD.get()), has(ModBlocks.STRIPPED_ORANGE_WOOD.get()))
+                        .save(consumer);
+
+                ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_DOOR.get(), 3)
+                        .pattern("AA")
+                        .pattern("AA")
+                        .pattern("AA")
+                        .define('A', ModBlocks.ORANGE_PLANKS.get())
+                        .unlockedBy(getHasName(ModBlocks.ORANGE_PLANKS.get()), has(ModBlocks.ORANGE_PLANKS.get()))
+                        .save(consumer);
+
+                ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_TRAPDOOR.get(), 2)
+                        .pattern("AAA")
+                        .pattern("AAA")
+                        .define('A', ModBlocks.ORANGE_PLANKS.get())
+                        .unlockedBy(getHasName(ModBlocks.ORANGE_PLANKS.get()), has(ModBlocks.ORANGE_PLANKS.get()))
+                        .save(consumer);
+
+                ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.ORANGE_BUTTON.get())
+                        .requires(ModBlocks.ORANGE_PLANKS.get())
+                        .unlockedBy(getHasName(ModBlocks.ORANGE_PLANKS.get()), has(ModBlocks.ORANGE_PLANKS.get()))
+                        .save(consumer);
+
+                ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ORANGE_PRESSURE_PLATE.get())
+                        .pattern("AA")
+                        .define('A', ModBlocks.ORANGE_PLANKS.get())
+                        .unlockedBy(getHasName(ModBlocks.ORANGE_PLANKS.get()), has(ModBlocks.ORANGE_PLANKS.get()))
+                        .save(consumer);
+
+                ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_SLAB.get(), 6)
+                        .pattern("AAA")
+                        .define('A', ModBlocks.ORANGE_PLANKS.get())
+                        .unlockedBy(getHasName(ModBlocks.ORANGE_PLANKS.get()), has(ModBlocks.ORANGE_PLANKS.get()))
+                        .save(consumer);
+
+                ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_STAIRS.get(), 4)
+                        .pattern("A  ")
+                        .pattern("AA ")
+                        .pattern("AAA")
+                        .define('A', ModBlocks.ORANGE_PLANKS.get())
+                        .unlockedBy(getHasName(ModBlocks.ORANGE_PLANKS.get()), has(ModBlocks.ORANGE_PLANKS.get()))
+                        .save(consumer);
+
+                ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_FENCE.get(), 3)
+                        .pattern("ABA")
+                        .pattern("ABA")
+                        .define('A', ModBlocks.ORANGE_PLANKS.get())
+                        .define('B', Items.STICK)
+                        .unlockedBy(getHasName(ModBlocks.ORANGE_PLANKS.get()), has(ModBlocks.ORANGE_PLANKS.get()))
+                        .save(consumer);
+
+                ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_FENCEGATE.get())
+                        .pattern("BAB")
+                        .pattern("BAB")
+                        .define('A', ModBlocks.ORANGE_PLANKS.get())
+                        .define('B', Items.STICK)
+                        .unlockedBy(getHasName(ModBlocks.ORANGE_PLANKS.get()), has(ModBlocks.ORANGE_PLANKS.get()))
+                        .save(consumer);
+
+                //Lemon wood
+                ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LEMON_WOOD.get(), 3)
+                        .pattern("AA")
+                        .pattern("AA")
+                        .define('A', ModBlocks.LEMON_LOG.get())
+                        .unlockedBy(getHasName(ModBlocks.LEMON_LOG.get()), has(ModBlocks.LEMON_LOG.get()))
+                        .save(consumer);
+
+                ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.STRIPPED_LEMON_WOOD.get(), 3)
+                        .pattern("AA")
+                        .pattern("AA")
+                        .define('A', ModBlocks.STRIPPED_LEMON_LOG.get())
+                        .unlockedBy(getHasName(ModBlocks.STRIPPED_LEMON_LOG.get()), has(ModBlocks.STRIPPED_LEMON_LOG.get()))
+                        .save(consumer);
+
+                ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LEMON_PLANKS.get(), 4)
+                        .requires(ModTags.Items.LEMON_LOGS)
+                        .unlockedBy(getHasName(ModBlocks.LEMON_LOG.get()), has(ModBlocks.LEMON_LOG.get()))
+                        .unlockedBy(getHasName(ModBlocks.LEMON_WOOD.get()), has(ModBlocks.LEMON_WOOD.get()))
+                        .unlockedBy(getHasName(ModBlocks.STRIPPED_LEMON_LOG.get()), has(ModBlocks.STRIPPED_LEMON_LOG.get()))
+                        .unlockedBy(getHasName(ModBlocks.STRIPPED_LEMON_WOOD.get()), has(ModBlocks.STRIPPED_LEMON_WOOD.get()))
+                        .save(consumer);
+
+                ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LEMON_DOOR.get(), 3)
+                        .pattern("AA")
+                        .pattern("AA")
+                        .pattern("AA")
+                        .define('A', ModBlocks.LEMON_PLANKS.get())
+                        .unlockedBy(getHasName(ModBlocks.LEMON_PLANKS.get()), has(ModBlocks.LEMON_PLANKS.get()))
+                        .save(consumer);
+
+                ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LEMON_TRAPDOOR.get(), 2)
+                        .pattern("AAA")
+                        .pattern("AAA")
+                        .define('A', ModBlocks.LEMON_PLANKS.get())
+                        .unlockedBy(getHasName(ModBlocks.LEMON_PLANKS.get()), has(ModBlocks.LEMON_PLANKS.get()))
+                        .save(consumer);
+
+                ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.LEMON_BUTTON.get())
+                        .requires(ModBlocks.LEMON_PLANKS.get())
+                        .unlockedBy(getHasName(ModBlocks.LEMON_PLANKS.get()), has(ModBlocks.LEMON_PLANKS.get()))
+                        .save(consumer);
+
+                ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LEMON_PRESSURE_PLATE.get())
+                        .pattern("AA")
+                        .define('A', ModBlocks.LEMON_PLANKS.get())
+                        .unlockedBy(getHasName(ModBlocks.LEMON_PLANKS.get()), has(ModBlocks.LEMON_PLANKS.get()))
+                        .save(consumer);
+
+                ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LEMON_SLAB.get(), 6)
+                        .pattern("AAA")
+                        .define('A', ModBlocks.LEMON_PLANKS.get())
+                        .unlockedBy(getHasName(ModBlocks.LEMON_PLANKS.get()), has(ModBlocks.LEMON_PLANKS.get()))
+                        .save(consumer);
+
+                ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LEMON_STAIRS.get(), 4)
+                        .pattern("A  ")
+                        .pattern("AA ")
+                        .pattern("AAA")
+                        .define('A', ModBlocks.LEMON_PLANKS.get())
+                        .unlockedBy(getHasName(ModBlocks.LEMON_PLANKS.get()), has(ModBlocks.LEMON_PLANKS.get()))
+                        .save(consumer);
+
+                ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LEMON_FENCE.get(), 3)
+                        .pattern("ABA")
+                        .pattern("ABA")
+                        .define('A', ModBlocks.LEMON_PLANKS.get())
+                        .define('B', Items.STICK)
+                        .unlockedBy(getHasName(ModBlocks.LEMON_PLANKS.get()), has(ModBlocks.LEMON_PLANKS.get()))
+                        .save(consumer);
+
+                ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LEMON_FENCEGATE.get())
+                        .pattern("BAB")
+                        .pattern("BAB")
+                        .define('A', ModBlocks.LEMON_PLANKS.get())
+                        .define('B', Items.STICK)
+                        .unlockedBy(getHasName(ModBlocks.LEMON_PLANKS.get()), has(ModBlocks.LEMON_PLANKS.get()))
+                        .save(consumer);
+
             //Ore blocks
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.SILVER_BLOCK.get(), 1)
                     .pattern("TTT")
