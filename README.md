@@ -1,3 +1,23 @@
 # Enhanced Playtrough
-Welcome to the Enhanced Playtrough mod! Still in development, this mod provides a refreshed experience to the game, adding new things such as new ores and minerals, new trades and new tools. Soon in the future, there will be new crops and wood types so everyone can enjoy his favorite fruits and vegetables! Enjoy the mod, my friend,
-  Mar Mar.
+
+Welcome to _Enhanced playthrough_, A vanilla-like mod for Minecraft 1.20.1
+### About the mod
+- #### _Enhanced progress_
+Enhanced Playthrough (also mentioned as **_"EP2"_**) adds lots of features to vanilla minecraft,
+refactoring early and mid-game with new intermediate tiers and expanding late-game with side tiers that do not replace
+**_Netherite_**, but instead co-exists with it and makes it a _situational tier_.
+- #### _Enhanced nature_
+With the new construction materials, plants and crops, the overhaul experience of
+the player is so extensible that seems like an endless _playthrough_.
+- #### _Enhanced commerce_
+With the new gems added, the trade system has been rebalanced and you no longer can buy
+diamond gear with simple emeralds, _you will need more valuable gems for that pal_.
+### Legal information
+Enhanced playthrough is licenced under the MIT licence and is available for everyone that want to
+make addons or forks of the mod.
+There is only one author (myself, of course), but if it´ll be more authors, the would be accredited for his work.
+### Extra information and acknowledgments
+Special thanks to all the open-source developers that provided me the resources and knowledge to develop
+this project, but specially to:
+- **Kaupenjoe**, for his tutorials for Forge 1.20.1 and above
+- **TurtyWurty**, for his capabilities tutorials and block entity tutorials
