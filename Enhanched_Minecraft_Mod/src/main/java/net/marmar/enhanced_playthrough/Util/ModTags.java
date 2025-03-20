@@ -17,6 +17,7 @@ public class ModTags {
         public static final TagKey<Block> NEEDS_ROSE_GOLD_TOOL = blockTag("needs_rose_gold_tool");
         public static final TagKey<Block> NEEDS_BRONZIUM_TOOL = blockTag("needs_bronzium_tool");
         public static final TagKey<Block> NEEDS_GREEN_GOLD_TOOL = blockTag("needs_green_gold_tool");
+        public static final TagKey<Block> NEEDS_BLUE_GOLD_TOOL = blockTag("needs_blue_gold_tool");
         public static final TagKey<Block> NEEDS_STEEL_TOOL= blockTag("needs_steel_tool");
         public static final TagKey<Block> BASIC_FURNACE = blockTag("basic_furnace");
         public static final TagKey<Block> ALLOY_FURNACE = blockTag("alloy_furnace");
@@ -34,6 +35,8 @@ public class ModTags {
         public static final TagKey<Item> STEEL = itemTag("steel");
         public static final TagKey<Item> SILVER = itemTag("silver");
         public static final TagKey<Item> ROSE_GOLD = itemTag("rose_gold");
+        public static final TagKey<Item> GREEN_GOLD = itemTag("green_gold");
+        public static final TagKey<Item> BLUE_GOLD = itemTag("blue_gold");
         public static final TagKey<Item> RAW_GEM = itemTag("raw_gem");
         public static final TagKey<Item> POLISHER_TOOL = itemTag("polisher_tool");
         public static final TagKey<Item> ALLOY_INGREDIENT = itemTag("alloy_ingredient");

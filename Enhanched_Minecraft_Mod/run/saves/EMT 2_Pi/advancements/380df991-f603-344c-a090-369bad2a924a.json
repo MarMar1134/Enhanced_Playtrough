@@ -1,0 +1,32 @@
+{
+  "minecraft:recipes/decorations/crafting_table": {
+    "criteria": {
+      "unlock_right_away": "2025-03-20 17:38:26 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:gem_root": {
+    "criteria": {
+      "spawn": "2025-03-20 17:38:26 -0300"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:sunflower_plains": "2025-03-20 17:38:27 -0300",
+      "minecraft:wooded_badlands": "2025-03-20 17:41:51 -0300",
+      "minecraft:badlands": "2025-03-20 17:40:49 -0300",
+      "minecraft:river": "2025-03-20 17:38:38 -0300",
+      "minecraft:dripstone_caves": "2025-03-20 17:41:03 -0300",
+      "minecraft:flower_forest": "2025-03-20 17:38:40 -0300"
+    },
+    "done": false
+  },
+  "enhanced_playthrough:steel_isnt_enough": {
+    "criteria": {
+      "has_item": "2025-03-20 17:40:12 -0300"
+    },
+    "done": true
+  },
+  "DataVersion": 3465
+}

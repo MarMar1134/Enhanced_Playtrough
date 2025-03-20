@@ -27,6 +27,10 @@
     "enhanced_playthrough:steel_helmet",
     "enhanced_playthrough:steel_chestplate",
     "enhanced_playthrough:steel_leggings",
-    "enhanced_playthrough:steel_boots"
+    "enhanced_playthrough:steel_boots",
+    "enhanced_playthrough:blue_golden_helmet",
+    "enhanced_playthrough:blue_golden_chestplate",
+    "enhanced_playthrough:blue_golden_leggings",
+    "enhanced_playthrough:blue_golden_boots"
   ]
 }

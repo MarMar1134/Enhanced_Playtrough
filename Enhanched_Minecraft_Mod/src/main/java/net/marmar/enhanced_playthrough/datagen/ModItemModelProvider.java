@@ -204,11 +204,15 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.GREEN_GOLD_INGOT);
         simpleItem(ModItems.GREEN_GOLD_NUGGET);
 
+        simpleItem(ModItems.BLUE_GOLD_INGOT);
+        simpleItem(ModItems.BLUE_GOLD_NUGGET);
+
         simpleItem(ModItems.RAW_RUBI);
         simpleItem(ModItems.RAW_SAPPHIRE);
         simpleItem(ModItems.RAW_GARNET);
         simpleItem(ModItems.RAW_EMERALD);
         simpleItem(ModItems.RAW_DIAMOND);
+        simpleItem(ModItems.COBALT);
 
         simpleItem(ModItems.RUBI);
         simpleItem(ModItems.SAPPHIRE);
@@ -320,6 +324,19 @@ public class ModItemModelProvider extends ItemModelProvider {
             trimmedArmorItem(ModItems.GREEN_GOLDEN_CHESTPLATE);
             trimmedArmorItem(ModItems.GREEN_GOLDEN_LEGGINGS);
             trimmedArmorItem(ModItems.GREEN_GOLDEN_BOOTS);
+
+            //Blue gold
+            HandheldItem(ModItems.BLUE_GOLDEN_SWORD);
+            HandheldItem(ModItems.BLUE_GOLDEN_PICKAXE);
+            HandheldItem(ModItems.BLUE_GOLDEN_AXE);
+            HandheldItem(ModItems.BLUE_GOLDEN_SHOVEL);
+            HandheldItem(ModItems.BLUE_GOLDEN_HOE);
+            HandheldItem(ModItems.BLUE_GOLDEN_POLISHER);
+
+            trimmedArmorItem(ModItems.BLUE_GOLDEN_HELMET);
+            trimmedArmorItem(ModItems.BLUE_GOLDEN_CHESTPLATE);
+            trimmedArmorItem(ModItems.BLUE_GOLDEN_LEGGINGS);
+            trimmedArmorItem(ModItems.BLUE_GOLDEN_BOOTS);
 
             //Diamond
             HandheldItem(ModItems.DIAMOND_POLISHER);

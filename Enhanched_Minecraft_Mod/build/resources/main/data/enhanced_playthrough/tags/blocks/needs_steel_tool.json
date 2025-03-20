@@ -29,12 +29,14 @@
     "minecraft:polished_deepslate_slab",
     "minecraft:polished_deepslate_stairs",
     "minecraft:polished_deepslate_wall",
+    "enhanced_playthrough:cobalt_ore",
     "enhanced_playthrough:deepslate_tin_ore",
     "enhanced_playthrough:deepslate_zinc_ore",
     "enhanced_playthrough:deepslate_sulfur_ore",
     "enhanced_playthrough:deepslate_silver_ore",
     "enhanced_playthrough:deepslate_rubi_ore",
     "enhanced_playthrough:deepslate_sapphire_ore",
+    "enhanced_playthrough:deepslate_cobalt_ore",
     "enhanced_playthrough:steel_block"
   ]
 }

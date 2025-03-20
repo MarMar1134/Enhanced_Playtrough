@@ -275,6 +275,11 @@ public class ModBlocks {
         public static final RegistryObject<Block> NETHER_GARNET_ORE = registerBlock("nether_garnet_ore",
                 () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.DEEPSLATE_EMERALD_ORE).sound(SoundType.NETHER_ORE).requiresCorrectToolForDrops()));
 
+        public static final RegistryObject<Block> COBALT_ORE = registerBlock("cobalt_ore",
+                () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)));
+        public static final RegistryObject<Block> DEEPSLATE_COBALT_ORE = registerBlock("deepslate_cobalt_ore",
+                () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_DIAMOND_ORE)));
+
         //Ores blocks
         public static final RegistryObject<Block> SILVER_BLOCK = registerBlock("silver_block",
                 () -> new Block(BlockBehaviour.Properties.copy(Blocks.GOLD_BLOCK)));
@@ -293,6 +298,8 @@ public class ModBlocks {
         public static final RegistryObject<Block> STEEL_BLOCK = registerBlock("steel_block",
                 () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
         public static final RegistryObject<Block> GREEN_GOLD_BLOCK = registerBlock("green_gold_block",
+                () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+        public static final RegistryObject<Block> BLUE_GOLD_BLOCK = registerBlock("blue_gold_block",
                 () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
     //Entity blocks

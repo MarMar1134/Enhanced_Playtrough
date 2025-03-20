@@ -1,0 +1,60 @@
+{
+  "parent": "enhanced_playthrough:gem_root",
+  "criteria": {
+    "has_materials": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:emerald"
+            ]
+          },
+          {
+            "items": [
+              "enhanced_playthrough:sapphire"
+            ]
+          },
+          {
+            "items": [
+              "enhanced_playthrough:rubi"
+            ]
+          },
+          {
+            "items": [
+              "enhanced_playthrough:garnet"
+            ]
+          },
+          {
+            "items": [
+              "minecraft:diamond"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/block/emerald_block.png",
+    "description": {
+      "translate": "advancements.desc.gems.get_all_gems"
+    },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "item": "enhanced_playthrough:netherite_polisher",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.title.gems.get_all_gems"
+    }
+  },
+  "requirements": [
+    [
+      "has_materials"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

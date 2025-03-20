@@ -1,0 +1,39 @@
+{
+  "parent": "enhanced_playthrough:polish_sapphire",
+  "criteria": {
+    "has_material": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:rubi"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/block/emerald_block.png",
+    "description": {
+      "translate": "advancements.desc.gems.polish_rubi"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "enhanced_playthrough:rubi"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.title.gems.polish_rubi"
+    }
+  },
+  "requirements": [
+    [
+      "has_material"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -109,7 +109,8 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         Items.GOLD_INGOT,
                         ModItems.TIN_INGOT.get(),
                         ModItems.ZINC_INGOT.get(),
-                        ModItems.SILVER_INGOT.get()
+                        ModItems.SILVER_INGOT.get(),
+                        ModItems.COBALT.get()
                 );
 
         this.tag(Tags.Items.INGOTS).add(
@@ -121,7 +122,8 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 ModItems.ROSE_GOLD_INGOT.get(),
                 ModItems.BRONZIUM_INGOT.get(),
                 ModItems.STEEL_INGOT.get(),
-                ModItems.GREEN_GOLD_INGOT.get()
+                ModItems.GREEN_GOLD_INGOT.get(),
+                ModItems.BLUE_GOLD_INGOT.get()
         );
 
         this.tag(Tags.Items.NUGGETS).add(
@@ -133,7 +135,8 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 ModItems.BRASS_NUGGET.get(),
                 ModItems.ROSE_GOLD_NUGGET.get(),
                 ModItems.BRONZIUM_NUGGET.get(),
-                ModItems.GREEN_GOLD_NUGGET.get()
+                ModItems.GREEN_GOLD_NUGGET.get(),
+                ModItems.BLUE_GOLD_NUGGET.get()
         );
 
         this.tag(ItemTags.STONE_CRAFTING_MATERIALS).add(
@@ -180,6 +183,22 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 ModItems.STEEL_HELMET.get(), ModItems.STEEL_CHESTPLATE.get(), ModItems.STEEL_LEGGINGS.get(), ModItems.STEEL_BOOTS.get()
                 );
 
+        this.tag(ModTags.Items.GREEN_GOLD).add(
+                ModItems.GREEN_GOLD_INGOT.get(), ModItems.GREEN_GOLD_NUGGET.get(), ModBlocks.GREEN_GOLD_BLOCK.get().asItem(),
+                ModItems.GREEN_GOLDEN_SWORD.get(),
+                ModItems.GREEN_GOLDEN_PICKAXE.get(), ModItems.GREEN_GOLDEN_AXE.get(), ModItems.GREEN_GOLDEN_SHOVEL.get(), ModItems.GREEN_GOLDEN_HOE.get(),
+                ModItems.GREEN_GOLDEN_POLISHER.get(),
+                ModItems.GREEN_GOLDEN_HELMET.get(), ModItems.GREEN_GOLDEN_CHESTPLATE.get(), ModItems.GREEN_GOLDEN_LEGGINGS.get(), ModItems.GREEN_GOLDEN_BOOTS.get()
+        );
+
+        this.tag(ModTags.Items.BLUE_GOLD).add(
+                ModItems.BLUE_GOLD_INGOT.get(), ModItems.BLUE_GOLD_NUGGET.get(), ModBlocks.BLUE_GOLD_BLOCK.get().asItem(),
+                ModItems.BLUE_GOLDEN_SWORD.get(),
+                ModItems.BLUE_GOLDEN_PICKAXE.get(), ModItems.BLUE_GOLDEN_AXE.get(), ModItems.BLUE_GOLDEN_SHOVEL.get(), ModItems.BLUE_GOLDEN_HOE.get(),
+                ModItems.BLUE_GOLDEN_POLISHER.get(),
+                ModItems.BLUE_GOLDEN_HELMET.get(), ModItems.BLUE_GOLDEN_CHESTPLATE.get(), ModItems.BLUE_GOLDEN_LEGGINGS.get(), ModItems.BLUE_GOLDEN_BOOTS.get()
+        );
+
         this.tag(ModTags.Items.SILVER).add(
                 ModItems.SILVER_INGOT.get(), ModItems.SILVER_NUGGET.get(), ModBlocks.SILVER_BLOCK.get().asItem(),
                 ModItems.SILVER_SWORD.get(),
@@ -195,7 +214,8 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 ModItems.ROSE_GOLDEN_HELMET.get(), ModItems.ROSE_GOLDEN_CHESTPLATE.get(), ModItems.ROSE_GOLDEN_LEGGINGS.get(), ModItems.ROSE_GOLDEN_BOOTS.get(),
                 ModItems.BRONZIUM_HELMET.get(), ModItems.BRONZIUM_CHESTPLATE.get(), ModItems.BRONZIUM_LEGGINGS.get(), ModItems.BRONZIUM_BOOTS.get(),
                 ModItems.GREEN_GOLDEN_HELMET.get(), ModItems.GREEN_GOLDEN_CHESTPLATE.get(), ModItems.GREEN_GOLDEN_LEGGINGS.get(), ModItems.GREEN_GOLDEN_BOOTS.get(),
-                ModItems.STEEL_HELMET.get(), ModItems.STEEL_CHESTPLATE.get(), ModItems.STEEL_LEGGINGS.get(), ModItems.STEEL_BOOTS.get()
+                ModItems.STEEL_HELMET.get(), ModItems.STEEL_CHESTPLATE.get(), ModItems.STEEL_LEGGINGS.get(), ModItems.STEEL_BOOTS.get(),
+                ModItems.BLUE_GOLDEN_HELMET.get(), ModItems.BLUE_GOLDEN_CHESTPLATE.get(), ModItems.BLUE_GOLDEN_LEGGINGS.get(), ModItems.BLUE_GOLDEN_BOOTS.get()
                 );
 
         this.tag(ModTags.Items.RAW_GEM).add(
@@ -217,6 +237,7 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 ModItems.GREEN_GOLDEN_POLISHER.get(),
                 ModItems.IRON_POLISHER.get(),
                 ModItems.STEEL_POLISHER.get(),
+                ModItems.BLUE_GOLDEN_POLISHER.get(),
                 ModItems.DIAMOND_POLISHER.get(),
                 ModItems.NETHERITE_POLISHER.get()
         );
@@ -233,12 +254,14 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 ModItems.ROSE_GOLD_INGOT.get(),
                 ModItems.BRONZIUM_INGOT.get(),
                 ModItems.STEEL_INGOT.get(),
-                ModItems.GREEN_GOLD_INGOT.get()
+                ModItems.GREEN_GOLD_INGOT.get(),
+                ModItems.BLUE_GOLD_INGOT.get()
         );
 
         this.tag(ItemTags.PIGLIN_LOVED).add(
                 ModItems.ROSE_GOLD_INGOT.get(),
-                ModItems.GREEN_GOLD_INGOT.get()
+                ModItems.GREEN_GOLD_INGOT.get(),
+                ModItems.BLUE_GOLD_INGOT.get()
         );
     }
 

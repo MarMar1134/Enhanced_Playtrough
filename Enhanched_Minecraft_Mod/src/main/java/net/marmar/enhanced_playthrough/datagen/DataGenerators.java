@@ -1,7 +1,9 @@
 package net.marmar.enhanced_playthrough.datagen;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
-import net.marmar.enhanced_playthrough.language.*;
+import net.marmar.enhanced_playthrough.datagen.advancement.GemAdvancementGenerator;
+import net.marmar.enhanced_playthrough.datagen.advancement.SurvivalAdvancementsGenerator;
+import net.marmar.enhanced_playthrough.datagen.language.*;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -18,6 +20,9 @@ import java.util.concurrent.CompletableFuture;
 public class DataGenerators {
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event){
+        GemAdvancementGenerator gem_advancements = new GemAdvancementGenerator();
+        SurvivalAdvancementsGenerator survival_advancements = new SurvivalAdvancementsGenerator();
+
         DataGenerator generator = event.getGenerator();
         PackOutput packOutput = generator.getPackOutput();
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
@@ -34,6 +39,8 @@ public class DataGenerators {
         generator.addProvider(event.includeServer(), new ModGlobalLootModifiersProvider(packOutput));
 
         generator.addProvider(event.includeServer(), new ModPoiTypesTagProvider(packOutput, LookupProvider, existingFileHelper));
+
+        generator.addProvider(event.includeServer(), new ForgeAdvancementProvider(packOutput, LookupProvider, existingFileHelper, List.of(gem_advancements, survival_advancements)));
 
         ModBlockTagGenerator blockTagGenerator= generator.addProvider(event.includeServer(),
         new ModBlockTagGenerator(packOutput, LookupProvider, existingFileHelper));

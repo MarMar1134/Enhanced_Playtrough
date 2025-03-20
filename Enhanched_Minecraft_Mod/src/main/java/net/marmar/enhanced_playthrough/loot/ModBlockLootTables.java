@@ -96,31 +96,31 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         //ores
         this.add(ModBlocks.NETHER_COPPER_ORE.get(),
-                block -> createCopperOreDrops(ModBlocks.NETHER_COPPER_ORE.get()));
+                block -> createOreDrops(ModBlocks.NETHER_COPPER_ORE.get(), 2, 5, Items.RAW_COPPER));
 
         this.add(ModBlocks.TIN_ORE.get(),
-                block -> createTinOreDrops(ModBlocks.TIN_ORE.get()));
+                block -> createOreDrops(ModBlocks.TIN_ORE.get(), 1, 4, ModItems.RAW_TIN.get()));
         this.add(ModBlocks.DEEPSLATE_TIN_ORE.get(),
-                block -> createTinOreDrops(ModBlocks.DEEPSLATE_TIN_ORE.get()));
+                block -> createOreDrops(ModBlocks.TIN_ORE.get(), 2, 6, ModItems.RAW_TIN.get()));
 
         this.add(ModBlocks.ZINC_ORE.get(),
-                block -> createZincOreDrops(ModBlocks.ZINC_ORE.get()));
+                block -> createOreDrops(ModBlocks.ZINC_ORE.get(), 1, 3, ModItems.RAW_ZINC.get()));
         this.add(ModBlocks.DEEPSLATE_ZINC_ORE.get(),
-                block -> createZincOreDrops(ModBlocks.DEEPSLATE_ZINC_ORE.get()));
+                block -> createOreDrops(ModBlocks.ZINC_ORE.get(), 2, 5, ModItems.RAW_ZINC.get()));
         this.add(ModBlocks.NETHER_ZINC_ORE.get(),
-                block -> createNetherZincOreDrops(ModBlocks.NETHER_ZINC_ORE.get()));
+                block -> createOreDrops(ModBlocks.ZINC_ORE.get(), 3, 7, ModItems.RAW_ZINC.get()));
 
         this.add(ModBlocks.SULFUR_ORE.get(),
-                block -> createSulfurOreDrops(ModBlocks.SULFUR_ORE.get()));
+                block -> createOreDrops(ModBlocks.SULFUR_ORE.get(), 2, 5, ModItems.SULFUR.get()));
         this.add(ModBlocks.DEEPSLATE_SULFUR_ORE.get(),
-                block -> createSulfurOreDrops(ModBlocks.DEEPSLATE_SULFUR_ORE.get()));
+                block -> createOreDrops(ModBlocks.SULFUR_ORE.get(), 3, 7, ModItems.SULFUR.get()));
         this.add(ModBlocks.NETHER_SULFUR_ORE.get(),
-                block -> createNetherSulfurOreDrops(ModBlocks.NETHER_SULFUR_ORE.get()));
+                block -> createOreDrops(ModBlocks.SULFUR_ORE.get(), 4, 9, ModItems.SULFUR.get()));
 
         this.add(ModBlocks.SILVER_ORE.get(),
-                block -> createSilverOreDrops(ModBlocks.SILVER_ORE.get()));
+                block -> createOreDrops(ModBlocks.SILVER_ORE.get(), ModItems.RAW_SILVER.get()));
         this.add(ModBlocks.DEEPSLATE_SILVER_ORE.get(),
-                block -> createSilverOreDrops(ModBlocks.DEEPSLATE_SILVER_ORE.get()));
+                block -> createOreDrops(ModBlocks.DEEPSLATE_SILVER_ORE.get(), ModItems.RAW_SILVER.get()));
 
         this.add(ModBlocks.RUBI_ORE.get(),
                 block -> createGemsDrops(ModBlocks.RUBI_ORE.get(), ModItems.RAW_RUBI.get(), 2, ModItems.RUBI.get(), 1));
@@ -135,6 +135,11 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.NETHER_GARNET_ORE.get(),
                 block -> createGemsDrops(ModBlocks.NETHER_GARNET_ORE.get(), ModItems.RAW_GARNET.get(), 2, ModItems.GARNET.get(), 1));
 
+        this.add(ModBlocks.COBALT_ORE.get(),
+                block -> createOreDrops(ModBlocks.COBALT_ORE.get(), ModItems.COBALT.get()));
+        this.add(ModBlocks.DEEPSLATE_COBALT_ORE.get(),
+                block -> createOreDrops(ModBlocks.DEEPSLATE_COBALT_ORE.get(), ModItems.COBALT.get()));
+
         //ore blocks
         this.dropSelf(ModBlocks.SILVER_BLOCK.get());
         this.dropSelf(ModBlocks.TIN_BLOCK.get());
@@ -145,6 +150,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.BRONZIUM_BLOCK.get());
         this.dropSelf(ModBlocks.STEEL_BLOCK.get());
         this.dropSelf(ModBlocks.GREEN_GOLD_BLOCK.get());
+        this.dropSelf(ModBlocks.BLUE_GOLD_BLOCK.get());
 
         //Tree drops
             //walnut
@@ -325,6 +331,25 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                                 .when(BonusLevelTableCondition.bonusLevelFlatChance(Enchantments.BLOCK_FORTUNE, 0.05F, 0.055555557F, 0.0625F, 0.08333334F, 0.087F)
                                 )));
     }
+
+    protected LootTable.Builder createOreDrops(Block pBlock, ItemLike drop){
+        return createOreDrops(pBlock, 1, 1, drop);
+    }
+
+    /**
+     *
+     * @param pBlock specifies the block that will have the loot table
+     * @param minDrops specifies the minimum quantity of items that can drop the block
+     * @param maxDrops specifies the maximum quantity of items that can drop the block
+     * @param drop specifies the item that will be dropped
+     * @return the loot table for the specified block
+     */
+    protected LootTable.Builder createOreDrops(Block pBlock, int minDrops, int maxDrops, ItemLike drop){
+        return createSilkTouchDispatchTable(pBlock, this.applyExplosionDecay(pBlock, LootItem.lootTableItem(drop)
+                .apply(SetItemCountFunction.setCount(UniformGenerator.between(minDrops, maxDrops)))
+                .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))));
+    }
+
     /**
      *
      * @param pBlock references the block that will have the loot table.
@@ -334,72 +359,6 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         return createSilkTouchDispatchTable(pBlock, this.applyExplosionDecay(pBlock, LootItem.lootTableItem(Items.RAW_COPPER)
                 .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 5.0F)))
                 .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))));
-    }
-
-    /**
-     *
-     * @param pBlock references the block that will have the loot table.
-     * @return the JSON file of the loot table for the specified block
-     */
-    protected LootTable.Builder createTinOreDrops(Block pBlock) {
-        return createSilkTouchDispatchTable(pBlock, this.applyExplosionDecay(pBlock, LootItem.lootTableItem(ModItems.RAW_TIN.get())
-                .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 3.0F)))
-                .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))));
-    }
-
-    /**
-     *
-     * @param pBlock references the block that will have the loot table.
-     * @return the JSON file of the loot table for the specified block
-     */
-    protected LootTable.Builder createZincOreDrops(Block pBlock){
-        return createSilkTouchDispatchTable(pBlock, this.applyExplosionDecay(pBlock, LootItem.lootTableItem(ModItems.RAW_ZINC.get())
-                .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 4.0F)))
-                .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))));
-    }
-
-    /**
-     *
-     * @param pBlock references the block that will have the loot table.
-     * @return the JSON file of the loot table for the specified block
-     */
-    protected LootTable.Builder createNetherZincOreDrops(Block pBlock){
-        return createSilkTouchDispatchTable(pBlock, this.applyExplosionDecay(pBlock, LootItem.lootTableItem(ModItems.RAW_ZINC.get())
-                .apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0F, 7.0F)))
-                .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))));
-    }
-
-    /**
-     *
-     * @param pBlock references the block that will have the loot table.
-     * @return the JSON file of the loot table for the specified block
-     */
-    protected LootTable.Builder createSulfurOreDrops(Block pBlock) {
-        return createSilkTouchDispatchTable(pBlock, this.applyExplosionDecay(pBlock, LootItem.lootTableItem(ModItems.SULFUR.get())
-                .apply(SetItemCountFunction.setCount(UniformGenerator.between(3.0F, 6.0F)))
-                .apply(ApplyBonusCount.addUniformBonusCount(Enchantments.BLOCK_FORTUNE))));
-    }
-
-    /**
-     *
-     * @param pBlock references the block that will have the loot table.
-     * @return the JSON file of the loot table for the specified block
-     */
-    protected LootTable.Builder createNetherSulfurOreDrops(Block pBlock) {
-        return createSilkTouchDispatchTable(pBlock, this.applyExplosionDecay(pBlock, LootItem.lootTableItem(ModItems.SULFUR.get())
-                .apply(SetItemCountFunction.setCount(UniformGenerator.between(5.0F, 9.0F)))
-                .apply(ApplyBonusCount.addUniformBonusCount(Enchantments.BLOCK_FORTUNE))));
-    }
-
-    /**
-     *
-     * @param pBlock references the block that will have the loot table.
-     * @return the JSON file of the loot table for the specified block
-     */
-    protected LootTable.Builder createSilverOreDrops(Block pBlock) {
-        return createSilkTouchDispatchTable(pBlock, this.applyExplosionDecay(pBlock, LootItem.lootTableItem(ModItems.RAW_SILVER.get())
-                .apply(SetItemCountFunction.setCount(UniformGenerator.between(1,1))))
-                .apply(ApplyBonusCount.addUniformBonusCount(Enchantments.BLOCK_FORTUNE)));
     }
 
     /**

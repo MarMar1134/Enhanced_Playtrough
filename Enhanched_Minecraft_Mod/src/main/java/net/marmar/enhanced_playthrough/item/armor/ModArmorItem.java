@@ -14,13 +14,13 @@ import java.util.Map;
 public class ModArmorItem extends ArmorItem {
     private static final Map<ArmorMaterial, MobEffectInstance> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, MobEffectInstance>())
-                    .put(ModArmorMaterials.SILVER, new MobEffectInstance(MobEffects.DIG_SPEED, 200, 0,
+                    .put(ModArmorMaterial.SILVER, new MobEffectInstance(MobEffects.DIG_SPEED, 200, 0,
                             true,false, false))
-                    .put(ModArmorMaterials.ROSE_GOLD, new MobEffectInstance(MobEffects.DIG_SPEED, 200, 0,
+                    .put(ModArmorMaterial.ROSE_GOLD, new MobEffectInstance(MobEffects.DIG_SPEED, 200, 0,
                             true,false, false))
-                    .put(ModArmorMaterials.BRONZIUM, new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 200, 0,
+                    .put(ModArmorMaterial.BRONZIUM, new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 200, 0,
                             true, false, false))
-                    .put(ModArmorMaterials.GREEN_GOLD, new MobEffectInstance(MobEffects.DIG_SPEED, 200, 1,
+                    .put(ModArmorMaterial.GREEN_GOLD, new MobEffectInstance(MobEffects.DIG_SPEED, 200, 1,
                             true,false, false))
                     .build();
 

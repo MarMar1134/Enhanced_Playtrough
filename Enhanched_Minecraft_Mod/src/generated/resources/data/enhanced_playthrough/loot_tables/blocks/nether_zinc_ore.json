@@ -24,7 +24,7 @@
                   }
                 }
               ],
-              "name": "enhanced_playthrough:nether_zinc_ore"
+              "name": "enhanced_playthrough:zinc_ore"
             },
             {
               "type": "minecraft:item",
@@ -34,7 +34,7 @@
                   "count": {
                     "type": "minecraft:uniform",
                     "max": 7.0,
-                    "min": 2.0
+                    "min": 3.0
                   },
                   "function": "minecraft:set_count"
                 },

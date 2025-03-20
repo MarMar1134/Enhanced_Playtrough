@@ -1,0 +1,39 @@
+{
+  "parent": "enhanced_playthrough:gem_root",
+  "criteria": {
+    "has_material": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:garnet"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/block/emerald_block.png",
+    "description": {
+      "translate": "advancements.desc.gems.polish_garnet"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "enhanced_playthrough:garnet"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.title.gems.polish_garnet"
+    }
+  },
+  "requirements": [
+    [
+      "has_material"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

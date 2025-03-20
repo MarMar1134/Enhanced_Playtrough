@@ -1,0 +1,39 @@
+{
+  "parent": "enhanced_playthrough:polish_garnet",
+  "criteria": {
+    "has_material": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:diamond"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/block/emerald_block.png",
+    "description": {
+      "translate": "advancements.desc.gems.polish_diamond"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "minecraft:diamond"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.title.gems.polish_diamond"
+    }
+  },
+  "requirements": [
+    [
+      "has_material"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -49,9 +49,12 @@ public class ModConfiguredFeatures {
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> SILVER_ORE_KEY = registerKey("silver_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> EXTRA_SILVER_ORE_KEY = registerKey("extra_silver_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BADLANDS_SILVER_ORE_KEY = registerKey("badlands_silver_ore");
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> SULFUR_ORE_KEY = registerKey("sulfur_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_SULFUR_ORE_KEY = registerKey("nether_sulfur_ore");
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> COBALT_KEY = registerKey("cobalt_ore");
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> RUBI_ORE_KEY = registerKey("rubi_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SAPPHIRE_ORE_KEY = registerKey("sapphire_ore");
@@ -114,6 +117,7 @@ public class ModConfiguredFeatures {
 
         register(context, SILVER_ORE_KEY, Feature.ORE, new OreConfiguration(silverOres, 7));
         register(context, EXTRA_SILVER_ORE_KEY, Feature.ORE, new OreConfiguration(silverOres, 3));
+        register(context, BADLANDS_SILVER_ORE_KEY, Feature.ORE, new OreConfiguration(silverOres, 4));
 
         //Sulphur ore
         List<OreConfiguration.TargetBlockState> sulphurOres = List.of(OreConfiguration.target(stoneReplaceable,
@@ -125,6 +129,12 @@ public class ModConfiguredFeatures {
                 ModBlocks.NETHER_SULFUR_ORE.get().defaultBlockState()));
 
         register(context, NETHER_SULFUR_ORE_KEY, Feature.ORE, new OreConfiguration(netherSulphurOres, 10));
+
+        //Cobalt ore
+        List<OreConfiguration.TargetBlockState> cobaltOres = List.of(OreConfiguration.target(stoneReplaceable,
+                ModBlocks.COBALT_ORE.get().defaultBlockState()), OreConfiguration.target(deepslateReplaceable, ModBlocks.DEEPSLATE_COBALT_ORE.get().defaultBlockState()));
+
+        register(context, COBALT_KEY, Feature.ORE, new OreConfiguration(cobaltOres, 5));
 
         //Sapphire ore
         List<OreConfiguration.TargetBlockState> saphireOres = List.of(OreConfiguration.target(stoneReplaceable,

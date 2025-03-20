@@ -1,0 +1,39 @@
+{
+  "parent": "enhanced_playthrough:gem_root",
+  "criteria": {
+    "has_material": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:emerald"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/block/emerald_block.png",
+    "description": {
+      "translate": "advancements.desc.gems.polish_emerald"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "minecraft:emerald"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.title.gems.polish_emerald"
+    }
+  },
+  "requirements": [
+    [
+      "has_material"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

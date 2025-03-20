@@ -312,6 +312,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.NETHER_GARNET_ORE.get(),
                 ModBlocks.DEEPSLATE_SULFUR_ORE.get(),
                 ModBlocks.NETHER_SULFUR_ORE.get(),
+                ModBlocks.COBALT_ORE.get(),
+                ModBlocks.DEEPSLATE_COBALT_ORE.get(),
 
                 //ore blocks
                 ModBlocks.SILVER_BLOCK.get(),
@@ -322,7 +324,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.BRONZIUM_BLOCK.get(),
                 ModBlocks.ROSE_GOLD_BLOCK.get(),
                 ModBlocks.STEEL_BLOCK.get(),
-                ModBlocks.GREEN_GOLD_BLOCK.get()
+                ModBlocks.GREEN_GOLD_BLOCK.get(),
+                ModBlocks.BLUE_GOLD_BLOCK.get()
         );
 
         this.tag(Tags.Blocks.NEEDS_WOOD_TOOL).add(
@@ -419,17 +422,23 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 Blocks.POLISHED_DEEPSLATE_SLAB,
                 Blocks.POLISHED_DEEPSLATE_STAIRS,
                 Blocks.POLISHED_DEEPSLATE_WALL,
+                ModBlocks.COBALT_ORE.get(),
                 ModBlocks.DEEPSLATE_TIN_ORE.get(),
                 ModBlocks.DEEPSLATE_ZINC_ORE.get(),
                 ModBlocks.DEEPSLATE_SULFUR_ORE.get(),
                 ModBlocks.DEEPSLATE_SILVER_ORE.get(),
                 ModBlocks.DEEPSLATE_RUBI_ORE.get(),
                 ModBlocks.DEEPSLATE_SAPPHIRE_ORE.get(),
+                ModBlocks.DEEPSLATE_COBALT_ORE.get(),
                 ModBlocks.STEEL_BLOCK.get()
         );
 
         this.tag(ModTags.Blocks.NEEDS_GREEN_GOLD_TOOL).add(
                 ModBlocks.GREEN_GOLD_BLOCK.get()
+        );
+
+        this.tag(ModTags.Blocks.NEEDS_BLUE_GOLD_TOOL).add(
+                ModBlocks.BLUE_GOLD_BLOCK.get()
         );
 
         this.tag(Tags.Blocks.ORES).add(
@@ -440,6 +449,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.SILVER_ORE.get(),
                 ModBlocks.RUBI_ORE.get(),
                 ModBlocks.SAPPHIRE_ORE.get(),
+                ModBlocks.COBALT_ORE.get(),
                 ModBlocks.DEEPSLATE_TIN_ORE.get(),
                 ModBlocks.DEEPSLATE_ZINC_ORE.get(),
                 ModBlocks.NETHER_ZINC_ORE.get(),
@@ -447,7 +457,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.DEEPSLATE_RUBI_ORE.get(),
                 ModBlocks.DEEPSLATE_SAPPHIRE_ORE.get(),
                 ModBlocks.DEEPSLATE_SULFUR_ORE.get(),
-                ModBlocks.NETHER_SULFUR_ORE.get()
+                ModBlocks.NETHER_SULFUR_ORE.get(),
+                ModBlocks.DEEPSLATE_COBALT_ORE.get()
         );
 
         this.tag(BlockTags.BEACON_BASE_BLOCKS).add(
@@ -459,7 +470,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.ROSE_GOLD_BLOCK.get(),
                 ModBlocks.BRONZIUM_BLOCK.get(),
                 ModBlocks.STEEL_BLOCK.get(),
-                ModBlocks.GREEN_GOLD_BLOCK.get()
+                ModBlocks.GREEN_GOLD_BLOCK.get(),
+                ModBlocks.BLUE_GOLD_BLOCK.get()
         );
     }
 }

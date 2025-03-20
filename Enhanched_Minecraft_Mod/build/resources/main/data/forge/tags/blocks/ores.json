@@ -7,6 +7,7 @@
     "enhanced_playthrough:silver_ore",
     "enhanced_playthrough:rubi_ore",
     "enhanced_playthrough:sapphire_ore",
+    "enhanced_playthrough:cobalt_ore",
     "enhanced_playthrough:deepslate_tin_ore",
     "enhanced_playthrough:deepslate_zinc_ore",
     "enhanced_playthrough:nether_zinc_ore",
@@ -14,6 +15,7 @@
     "enhanced_playthrough:deepslate_rubi_ore",
     "enhanced_playthrough:deepslate_sapphire_ore",
     "enhanced_playthrough:deepslate_sulfur_ore",
-    "enhanced_playthrough:nether_sulfur_ore"
+    "enhanced_playthrough:nether_sulfur_ore",
+    "enhanced_playthrough:deepslate_cobalt_ore"
   ]
 }

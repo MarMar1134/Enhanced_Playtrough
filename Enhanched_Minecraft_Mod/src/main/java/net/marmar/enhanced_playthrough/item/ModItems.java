@@ -4,7 +4,7 @@ import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.Util.ModTiers;
 import net.marmar.enhanced_playthrough.block.ModBlocks;
 import net.marmar.enhanced_playthrough.item.armor.ModArmorItem;
-import net.marmar.enhanced_playthrough.item.armor.ModArmorMaterials;
+import net.marmar.enhanced_playthrough.item.armor.ModArmorMaterial;
 import net.marmar.enhanced_playthrough.item.templates.BronziumSmithingUpgradeTemplate;
 import net.marmar.enhanced_playthrough.item.custom.MateItem;
 import net.marmar.enhanced_playthrough.item.custom.PolisherItem;
@@ -45,6 +45,8 @@ public class ModItems {
                 "raw_emerald", () -> new Item(new Item.Properties()));
         public static final RegistryObject<Item> RAW_DIAMOND = ITEMS.register(
                 "raw_diamond", () -> new Item(new Item.Properties()));
+        public static final RegistryObject<Item> COBALT = ITEMS.register(
+                "cobalt", () -> new Item(new Item.Properties()));
 
         //melted
         public static final RegistryObject<Item> COPPER_NUGGET = ITEMS.register(
@@ -93,6 +95,11 @@ public class ModItems {
         public static final RegistryObject<Item> GREEN_GOLD_NUGGET = ITEMS.register(
                 "green_gold_nugget", () -> new Item(new Item.Properties()));
 
+        public static final RegistryObject<Item> BLUE_GOLD_INGOT = ITEMS.register(
+                "blue_gold_ingot", () -> new Item(new Item.Properties()));
+        public static final RegistryObject<Item> BLUE_GOLD_NUGGET = ITEMS.register(
+                "blue_gold_nugget", () -> new Item(new Item.Properties()));
+
         public static final RegistryObject<Item> RUBI = ITEMS.register(
                 "rubi", () -> new Item(new Item.Properties()));
         public static final RegistryObject<Item> SAPPHIRE = ITEMS.register(
@@ -111,11 +118,11 @@ public class ModItems {
     //Weapons, tools and armors
         //Stone
         public static final RegistryObject<Item> STONE_POLISHER = ITEMS.register(
-                "stone_polisher",() -> new PolisherItem(Tiers.STONE,0, new Item.Properties()));
+                "stone_polisher",() -> new PolisherItem(Tiers.STONE, new Item.Properties()));
 
         //Gold
         public static final RegistryObject<Item> GOLD_POLISHER = ITEMS.register(
-                "gold_polisher",() -> new PolisherItem(Tiers.GOLD,0, new Item.Properties()));
+                "gold_polisher",() -> new PolisherItem(Tiers.GOLD, new Item.Properties()));
 
         //Silver
         public static final RegistryObject<Item> SILVER_SWORD = ITEMS.register(
@@ -131,10 +138,10 @@ public class ModItems {
         public static final RegistryObject<Item> SILVER_HOE = ITEMS.register(
                 "silver_hoe",() -> new HoeItem(ModTiers.SILVER, 2, -2.4F, new Item.Properties()));
         public static final RegistryObject<Item> SILVER_POLISHER = ITEMS.register(
-                "silver_polisher",() -> new PolisherItem(ModTiers.SILVER,0, new Item.Properties()));
+                "silver_polisher",() -> new PolisherItem(ModTiers.SILVER, new Item.Properties()));
 
         public static final RegistryObject<Item> SILVER_HELMET = ITEMS.register(
-                "silver_helmet", () -> new ModArmorItem(ModArmorMaterials.SILVER, ArmorItem.Type.HELMET, new Item.Properties()){
+                "silver_helmet", () -> new ModArmorItem(ModArmorMaterial.SILVER, ArmorItem.Type.HELMET, new Item.Properties()){
                     @Override
                     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
                         pTooltipComponents.add(Component.translatable("desc.enhanced_playthrough.silver_armor").withStyle(ChatFormatting.GRAY).withStyle(ChatFormatting.ITALIC));
@@ -142,7 +149,7 @@ public class ModItems {
                     }
                 });
         public static final RegistryObject<Item> SILVER_CHESTPLATE = ITEMS.register(
-                "silver_chestplate", () -> new ArmorItem(ModArmorMaterials.SILVER, ArmorItem.Type.CHESTPLATE, new Item.Properties()){
+                "silver_chestplate", () -> new ArmorItem(ModArmorMaterial.SILVER, ArmorItem.Type.CHESTPLATE, new Item.Properties()){
                     @Override
                     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
                         pTooltipComponents.add(Component.translatable("desc.enhanced_playthrough.silver_armor").withStyle(ChatFormatting.GRAY).withStyle(ChatFormatting.ITALIC));
@@ -150,7 +157,7 @@ public class ModItems {
                     }
                 });
         public static final RegistryObject<Item> SILVER_LEGGINGS = ITEMS.register(
-                "silver_leggings", () -> new ArmorItem(ModArmorMaterials.SILVER, ArmorItem.Type.LEGGINGS, new Item.Properties()){
+                "silver_leggings", () -> new ArmorItem(ModArmorMaterial.SILVER, ArmorItem.Type.LEGGINGS, new Item.Properties()){
                     @Override
                     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
                         pTooltipComponents.add(Component.translatable("desc.enhanced_playthrough.silver_armor").withStyle(ChatFormatting.GRAY).withStyle(ChatFormatting.ITALIC));
@@ -158,7 +165,7 @@ public class ModItems {
                     }
                 });
         public static final RegistryObject<Item> SILVER_BOOTS = ITEMS.register(
-                "silver_boots", () -> new ArmorItem(ModArmorMaterials.SILVER, ArmorItem.Type.BOOTS, new Item.Properties()){
+                "silver_boots", () -> new ArmorItem(ModArmorMaterial.SILVER, ArmorItem.Type.BOOTS, new Item.Properties()){
                     @Override
                     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
                         pTooltipComponents.add(Component.translatable("desc.enhanced_playthrough.silver_armor").withStyle(ChatFormatting.GRAY).withStyle(ChatFormatting.ITALIC));
@@ -178,16 +185,16 @@ public class ModItems {
         public static final RegistryObject<Item> BRONZE_HOE = ITEMS.register(
                 "bronze_hoe",() -> new HoeItem(ModTiers.BRONZE, 1, -2F,  new Item.Properties()));
         public static final RegistryObject<Item> BRONZE_POLISHER = ITEMS.register(
-                "bronze_polisher",() -> new PolisherItem(ModTiers.BRONZE,0, new Item.Properties()));
+                "bronze_polisher",() -> new PolisherItem(ModTiers.BRONZE, new Item.Properties()));
 
          public static final RegistryObject<Item> BRONZE_HELMET = ITEMS.register(
-                "bronze_helmet", () -> new ArmorItem(ModArmorMaterials.BRONZE, ArmorItem.Type.HELMET, new Item.Properties()));
+                "bronze_helmet", () -> new ArmorItem(ModArmorMaterial.BRONZE, ArmorItem.Type.HELMET, new Item.Properties()));
         public static final RegistryObject<Item> BRONZE_CHESTPLATE = ITEMS.register(
-                "bronze_chestplate", () -> new ArmorItem(ModArmorMaterials.BRONZE, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+                "bronze_chestplate", () -> new ArmorItem(ModArmorMaterial.BRONZE, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
         public static final RegistryObject<Item> BRONZE_LEGGINGS = ITEMS.register(
-                "bronze_leggings", () -> new ArmorItem(ModArmorMaterials.BRONZE, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+                "bronze_leggings", () -> new ArmorItem(ModArmorMaterial.BRONZE, ArmorItem.Type.LEGGINGS, new Item.Properties()));
         public static final RegistryObject<Item> BRONZE_BOOTS = ITEMS.register(
-                "bronze_boots", () -> new ArmorItem(ModArmorMaterials.BRONZE, ArmorItem.Type.BOOTS, new Item.Properties()));
+                "bronze_boots", () -> new ArmorItem(ModArmorMaterial.BRONZE, ArmorItem.Type.BOOTS, new Item.Properties()));
 
         //Brass
         public static final RegistryObject<Item> BRASS_SWORD = ITEMS.register(
@@ -201,16 +208,16 @@ public class ModItems {
         public static final RegistryObject<Item> BRASS_HOE = ITEMS.register(
                 "brass_hoe",() -> new HoeItem(ModTiers.BRASS, 1, -2F,  new Item.Properties()));
         public static final RegistryObject<Item> BRASS_POLISHER = ITEMS.register(
-                "brass_polisher",() -> new PolisherItem(ModTiers.BRASS,0, new Item.Properties()));
+                "brass_polisher",() -> new PolisherItem(ModTiers.BRASS, new Item.Properties()));
 
         public static final RegistryObject<Item> BRASS_HELMET = ITEMS.register(
-                "brass_helmet", () -> new ArmorItem(ModArmorMaterials.BRASS, ArmorItem.Type.HELMET, new Item.Properties()));
+                "brass_helmet", () -> new ArmorItem(ModArmorMaterial.BRASS, ArmorItem.Type.HELMET, new Item.Properties()));
         public static final RegistryObject<Item> BRASS_CHESTPLATE = ITEMS.register(
-                "brass_chestplate", () -> new ArmorItem(ModArmorMaterials.BRASS, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+                "brass_chestplate", () -> new ArmorItem(ModArmorMaterial.BRASS, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
         public static final RegistryObject<Item> BRASS_LEGGINGS = ITEMS.register(
-                "brass_leggings", () -> new ArmorItem(ModArmorMaterials.BRASS, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+                "brass_leggings", () -> new ArmorItem(ModArmorMaterial.BRASS, ArmorItem.Type.LEGGINGS, new Item.Properties()));
         public static final RegistryObject<Item> BRASS_BOOTS = ITEMS.register(
-                "brass_boots", () -> new ArmorItem(ModArmorMaterials.BRASS, ArmorItem.Type.BOOTS, new Item.Properties()));
+                "brass_boots", () -> new ArmorItem(ModArmorMaterial.BRASS, ArmorItem.Type.BOOTS, new Item.Properties()));
 
         //Rose Gold
         public static final RegistryObject<Item> ROSE_GOLDEN_SWORD = ITEMS.register(
@@ -224,10 +231,10 @@ public class ModItems {
         public static final RegistryObject<Item> ROSE_GOLDEN_HOE = ITEMS.register(
                 "rose_golden_hoe",() -> new HoeItem(ModTiers.ROSE_GOLD, 2, -2.4F, new Item.Properties()));
         public static final RegistryObject<Item> ROSE_GOLDEN_POLISHER = ITEMS.register(
-                "rose_golden_polisher", () -> new PolisherItem(ModTiers.ROSE_GOLD, 0, new Item.Properties()));
+                "rose_golden_polisher", () -> new PolisherItem(ModTiers.ROSE_GOLD, new Item.Properties()));
 
         public static final RegistryObject<Item> ROSE_GOLDEN_HELMET = ITEMS.register(
-                "rose_golden_helmet", () -> new ModArmorItem(ModArmorMaterials.ROSE_GOLD, ArmorItem.Type.HELMET, new Item.Properties()){
+                "rose_golden_helmet", () -> new ModArmorItem(ModArmorMaterial.ROSE_GOLD, ArmorItem.Type.HELMET, new Item.Properties()){
                     @Override
                     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
                         pTooltipComponents.add(Component.translatable("desc.enhanced_playthrough.rose_gold_armor").withStyle(ChatFormatting.LIGHT_PURPLE).withStyle(ChatFormatting.ITALIC));
@@ -240,7 +247,7 @@ public class ModItems {
                     }
                 });
         public static final RegistryObject<Item> ROSE_GOLDEN_CHESTPLATE = ITEMS.register(
-                "rose_golden_chestplate", () -> new ArmorItem(ModArmorMaterials.ROSE_GOLD, ArmorItem.Type.CHESTPLATE, new Item.Properties()){
+                "rose_golden_chestplate", () -> new ArmorItem(ModArmorMaterial.ROSE_GOLD, ArmorItem.Type.CHESTPLATE, new Item.Properties()){
                     @Override
                     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
                         pTooltipComponents.add(Component.translatable("desc.enhanced_playthrough.rose_gold_armor").withStyle(ChatFormatting.LIGHT_PURPLE).withStyle(ChatFormatting.ITALIC));
@@ -253,7 +260,7 @@ public class ModItems {
                     }
                 });
         public static final RegistryObject<Item> ROSE_GOLDEN_LEGGINGS = ITEMS.register(
-                "rose_golden_leggings", () -> new ArmorItem(ModArmorMaterials.ROSE_GOLD, ArmorItem.Type.LEGGINGS, new Item.Properties()){
+                "rose_golden_leggings", () -> new ArmorItem(ModArmorMaterial.ROSE_GOLD, ArmorItem.Type.LEGGINGS, new Item.Properties()){
                     @Override
                     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
                         pTooltipComponents.add(Component.translatable("desc.enhanced_playthrough.rose_gold_armor").withStyle(ChatFormatting.LIGHT_PURPLE).withStyle(ChatFormatting.ITALIC));
@@ -266,7 +273,7 @@ public class ModItems {
                     }
                 });
         public static final RegistryObject<Item> ROSE_GOLDEN_BOOTS = ITEMS.register(
-                "rose_golden_boots", () -> new ArmorItem(ModArmorMaterials.ROSE_GOLD, ArmorItem.Type.BOOTS, new Item.Properties()){
+                "rose_golden_boots", () -> new ArmorItem(ModArmorMaterial.ROSE_GOLD, ArmorItem.Type.BOOTS, new Item.Properties()){
                     @Override
                     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
                         pTooltipComponents.add(Component.translatable("desc.enhanced_playthrough.rose_gold_armor").withStyle(ChatFormatting.LIGHT_PURPLE).withStyle(ChatFormatting.ITALIC));
@@ -291,10 +298,10 @@ public class ModItems {
         public static final RegistryObject<Item> BRONZIUM_HOE = ITEMS.register(
                 "bronzium_hoe",() -> new HoeItem(ModTiers.BRONZIUM, 1, -2F,  new Item.Properties()));
         public static final RegistryObject<Item> BRONZIUM_POLISHER = ITEMS.register(
-                "bronzium_polisher",() -> new PolisherItem(ModTiers.BRONZIUM,0, new Item.Properties()));
+                "bronzium_polisher",() -> new PolisherItem(ModTiers.BRONZIUM, new Item.Properties()));
 
         public static final RegistryObject<Item> BRONZIUM_HELMET = ITEMS.register(
-                "bronzium_helmet", () -> new ModArmorItem(ModArmorMaterials.BRONZIUM, ArmorItem.Type.HELMET, new Item.Properties()){
+                "bronzium_helmet", () -> new ModArmorItem(ModArmorMaterial.BRONZIUM, ArmorItem.Type.HELMET, new Item.Properties()){
                     @Override
                     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
                         pTooltipComponents.add(Component.translatable("desc.enhanced_playthrough.bronzium_armor").withStyle(ChatFormatting.GOLD).withStyle(ChatFormatting.ITALIC));
@@ -302,7 +309,7 @@ public class ModItems {
                     }
                 });
         public static final RegistryObject<Item> BRONZIUM_CHESTPLATE = ITEMS.register(
-                "bronzium_chestplate", () -> new ArmorItem(ModArmorMaterials.BRONZIUM, ArmorItem.Type.CHESTPLATE, new Item.Properties()){
+                "bronzium_chestplate", () -> new ArmorItem(ModArmorMaterial.BRONZIUM, ArmorItem.Type.CHESTPLATE, new Item.Properties()){
                     @Override
                     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
                         pTooltipComponents.add(Component.translatable("desc.enhanced_playthrough.bronzium_armor").withStyle(ChatFormatting.GOLD).withStyle(ChatFormatting.ITALIC));
@@ -310,7 +317,7 @@ public class ModItems {
                     }
                 });
         public static final RegistryObject<Item> BRONZIUM_LEGGINGS = ITEMS.register(
-                "bronzium_leggings", () -> new ArmorItem(ModArmorMaterials.BRONZIUM, ArmorItem.Type.LEGGINGS, new Item.Properties()){
+                "bronzium_leggings", () -> new ArmorItem(ModArmorMaterial.BRONZIUM, ArmorItem.Type.LEGGINGS, new Item.Properties()){
                     @Override
                     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
                         pTooltipComponents.add(Component.translatable("desc.enhanced_playthrough.bronzium_armor").withStyle(ChatFormatting.GOLD).withStyle(ChatFormatting.ITALIC));
@@ -318,7 +325,7 @@ public class ModItems {
                     }
                 });
         public static final RegistryObject<Item> BRONZIUM_BOOTS = ITEMS.register(
-                "bronzium_boots", () -> new ArmorItem(ModArmorMaterials.BRONZIUM, ArmorItem.Type.BOOTS, new Item.Properties()){
+                "bronzium_boots", () -> new ArmorItem(ModArmorMaterial.BRONZIUM, ArmorItem.Type.BOOTS, new Item.Properties()){
                     @Override
                     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
                         pTooltipComponents.add(Component.translatable("desc.enhanced_playthrough.bronzium_armor").withStyle(ChatFormatting.GOLD).withStyle(ChatFormatting.ITALIC));
@@ -328,7 +335,7 @@ public class ModItems {
 
         //Iron
         public static final RegistryObject<Item> IRON_POLISHER = ITEMS.register(
-                "iron_polisher",() -> new PolisherItem(Tiers.IRON,0, new Item.Properties()));
+                "iron_polisher",() -> new PolisherItem(Tiers.IRON, new Item.Properties()));
 
         //Steel
         public static final RegistryObject<Item> STEEL_SWORD = ITEMS.register(
@@ -342,16 +349,16 @@ public class ModItems {
         public static final RegistryObject<Item> STEEL_HOE = ITEMS.register(
                 "steel_hoe",() -> new HoeItem(ModTiers.STEEL, 1, -2F,  new Item.Properties()));
         public static final RegistryObject<Item> STEEL_POLISHER = ITEMS.register(
-            "steel_polisher",() -> new PolisherItem(ModTiers.STEEL,0, new Item.Properties()));
+            "steel_polisher",() -> new PolisherItem(ModTiers.STEEL, new Item.Properties()));
 
         public static final RegistryObject<Item> STEEL_HELMET = ITEMS.register(
-            "steel_helmet", () -> new ArmorItem(ModArmorMaterials.STEEL, ArmorItem.Type.HELMET, new Item.Properties()));
+            "steel_helmet", () -> new ArmorItem(ModArmorMaterial.STEEL, ArmorItem.Type.HELMET, new Item.Properties()));
         public static final RegistryObject<Item> STEEL_CHESTPLATE = ITEMS.register(
-            "steel_chestplate", () -> new ArmorItem(ModArmorMaterials.STEEL, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+            "steel_chestplate", () -> new ArmorItem(ModArmorMaterial.STEEL, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
         public static final RegistryObject<Item> STEEL_LEGGINGS = ITEMS.register(
-            "steel_leggings", () -> new ArmorItem(ModArmorMaterials.STEEL, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+            "steel_leggings", () -> new ArmorItem(ModArmorMaterial.STEEL, ArmorItem.Type.LEGGINGS, new Item.Properties()));
         public static final RegistryObject<Item> STEEL_BOOTS = ITEMS.register(
-            "steel_boots", () -> new ArmorItem(ModArmorMaterials.STEEL, ArmorItem.Type.BOOTS, new Item.Properties()));
+            "steel_boots", () -> new ArmorItem(ModArmorMaterial.STEEL, ArmorItem.Type.BOOTS, new Item.Properties()));
 
         //Green Gold
         public static final RegistryObject<Item> GREEN_GOLDEN_SWORD = ITEMS.register(
@@ -365,10 +372,10 @@ public class ModItems {
         public static final RegistryObject<Item> GREEN_GOLDEN_HOE = ITEMS.register(
                 "green_golden_hoe",() -> new HoeItem(ModTiers.GREEN_GOLD, 2, -2.4F, new Item.Properties()));
         public static final RegistryObject<Item> GREEN_GOLDEN_POLISHER = ITEMS.register(
-                "green_golden_polisher", () -> new PolisherItem(ModTiers.GREEN_GOLD, 0, new Item.Properties()));
+                "green_golden_polisher", () -> new PolisherItem(ModTiers.GREEN_GOLD, new Item.Properties()));
 
         public static final RegistryObject<Item> GREEN_GOLDEN_HELMET = ITEMS.register(
-                "green_golden_helmet", () -> new ModArmorItem(ModArmorMaterials.GREEN_GOLD, ArmorItem.Type.HELMET, new Item.Properties()){
+                "green_golden_helmet", () -> new ModArmorItem(ModArmorMaterial.GREEN_GOLD, ArmorItem.Type.HELMET, new Item.Properties()){
                     @Override
                     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
                         pTooltipComponents.add(Component.translatable("desc.enhanced_playthrough.green_gold_armor").withStyle(ChatFormatting.DARK_GREEN).withStyle(ChatFormatting.ITALIC));
@@ -381,7 +388,7 @@ public class ModItems {
                     }
                 });
         public static final RegistryObject<Item> GREEN_GOLDEN_CHESTPLATE = ITEMS.register(
-                "green_golden_chestplate", () -> new ArmorItem(ModArmorMaterials.GREEN_GOLD, ArmorItem.Type.CHESTPLATE, new Item.Properties()){
+                "green_golden_chestplate", () -> new ArmorItem(ModArmorMaterial.GREEN_GOLD, ArmorItem.Type.CHESTPLATE, new Item.Properties()){
                     @Override
                     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
                         pTooltipComponents.add(Component.translatable("desc.enhanced_playthrough.green_gold_armor").withStyle(ChatFormatting.DARK_GREEN).withStyle(ChatFormatting.ITALIC));
@@ -394,7 +401,7 @@ public class ModItems {
                     }
                 });
         public static final RegistryObject<Item> GREEN_GOLDEN_LEGGINGS = ITEMS.register(
-                "green_golden_leggings", () -> new ArmorItem(ModArmorMaterials.GREEN_GOLD, ArmorItem.Type.LEGGINGS, new Item.Properties()){
+                "green_golden_leggings", () -> new ArmorItem(ModArmorMaterial.GREEN_GOLD, ArmorItem.Type.LEGGINGS, new Item.Properties()){
                     @Override
                     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
                         pTooltipComponents.add(Component.translatable("desc.enhanced_playthrough.green_gold_armor").withStyle(ChatFormatting.DARK_GREEN).withStyle(ChatFormatting.ITALIC));
@@ -407,7 +414,7 @@ public class ModItems {
                     }
                 });
         public static final RegistryObject<Item> GREEN_GOLDEN_BOOTS = ITEMS.register(
-                "green_golden_boots", () -> new ArmorItem(ModArmorMaterials.GREEN_GOLD, ArmorItem.Type.BOOTS, new Item.Properties()){
+                "green_golden_boots", () -> new ArmorItem(ModArmorMaterial.GREEN_GOLD, ArmorItem.Type.BOOTS, new Item.Properties()){
                     @Override
                     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
                         pTooltipComponents.add(Component.translatable("desc.enhanced_playthrough.green_gold_armor").withStyle(ChatFormatting.DARK_GREEN).withStyle(ChatFormatting.ITALIC));
@@ -420,13 +427,80 @@ public class ModItems {
                     }
                 });
 
+        //Blue gold
+        public static final RegistryObject<Item> BLUE_GOLDEN_SWORD = ITEMS.register(
+                "blue_golden_sword",() -> new SwordItem(ModTiers.BLUE_GOLD, 3, -2.4F, new Item.Properties()));
+        public static final RegistryObject<Item> BLUE_GOLDEN_PICKAXE = ITEMS.register(
+                "blue_golden_pickaxe",() -> new PickaxeItem(ModTiers.BLUE_GOLD, -2, -2.8F, new Item.Properties()));
+        public static final RegistryObject<Item> BLUE_GOLDEN_AXE = ITEMS.register(
+                "blue_golden_axe",() -> new AxeItem(ModTiers.BLUE_GOLD, 4, -2.4F, new Item.Properties()));
+        public static final RegistryObject<Item> BLUE_GOLDEN_SHOVEL = ITEMS.register(
+                "blue_golden_shovel",() -> new ShovelItem(ModTiers.BLUE_GOLD, -2, -2.4F, new Item.Properties()));
+        public static final RegistryObject<Item> BLUE_GOLDEN_HOE = ITEMS.register(
+                "blue_golden_hoe",() -> new HoeItem(ModTiers.BLUE_GOLD, -2, -2.4F, new Item.Properties()));
+        public static final RegistryObject<Item> BLUE_GOLDEN_POLISHER = ITEMS.register(
+                "blue_golden_polisher", () -> new PolisherItem(ModTiers.BLUE_GOLD, new Item.Properties()));
+
+        public static final RegistryObject<Item> BLUE_GOLDEN_HELMET = ITEMS.register(
+                "blue_golden_helmet", () -> new ModArmorItem(ModArmorMaterial.BLUE_GOLD, ArmorItem.Type.HELMET, new Item.Properties()){
+                    @Override
+                    public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
+                        pTooltipComponents.add(Component.translatable("desc.enhanced_playthrough.blue_gold_armor").withStyle(ChatFormatting.DARK_BLUE).withStyle(ChatFormatting.ITALIC));
+                        super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
+                    }
+
+                    @Override
+                    public boolean makesPiglinsNeutral(ItemStack stack, LivingEntity wearer) {
+                        return true;
+                    }
+                });
+        public static final RegistryObject<Item> BLUE_GOLDEN_CHESTPLATE = ITEMS.register(
+                "blue_golden_chestplate", () -> new ArmorItem(ModArmorMaterial.BLUE_GOLD, ArmorItem.Type.CHESTPLATE, new Item.Properties()){
+                    @Override
+                    public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
+                        pTooltipComponents.add(Component.translatable("desc.enhanced_playthrough.blue_gold_armor").withStyle(ChatFormatting.DARK_BLUE).withStyle(ChatFormatting.ITALIC));
+                        super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
+                    }
+
+                    @Override
+                    public boolean makesPiglinsNeutral(ItemStack stack, LivingEntity wearer) {
+                        return true;
+                    }
+                });
+        public static final RegistryObject<Item> BLUE_GOLDEN_LEGGINGS = ITEMS.register(
+                "blue_golden_leggings", () -> new ArmorItem(ModArmorMaterial.BLUE_GOLD, ArmorItem.Type.LEGGINGS, new Item.Properties()){
+                    @Override
+                    public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
+                        pTooltipComponents.add(Component.translatable("desc.enhanced_playthrough.blue_gold_armor").withStyle(ChatFormatting.DARK_BLUE).withStyle(ChatFormatting.ITALIC));
+                        super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
+                    }
+
+                    @Override
+                    public boolean makesPiglinsNeutral(ItemStack stack, LivingEntity wearer) {
+                        return true;
+                    }
+                });
+        public static final RegistryObject<Item> BLUE_GOLDEN_BOOTS = ITEMS.register(
+                "blue_golden_boots", () -> new ArmorItem(ModArmorMaterial.BLUE_GOLD, ArmorItem.Type.BOOTS, new Item.Properties()){
+                    @Override
+                    public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
+                        pTooltipComponents.add(Component.translatable("desc.enhanced_playthrough.blue_gold_armor").withStyle(ChatFormatting.DARK_BLUE).withStyle(ChatFormatting.ITALIC));
+                        super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
+                    }
+
+                    @Override
+                    public boolean makesPiglinsNeutral(ItemStack stack, LivingEntity wearer) {
+                        return true;
+                    }
+                });
+
         //Diamond
         public static final RegistryObject<Item> DIAMOND_POLISHER = ITEMS.register(
-                "diamond_polisher",() -> new PolisherItem(Tiers.DIAMOND,0, new Item.Properties()));
+                "diamond_polisher",() -> new PolisherItem(Tiers.DIAMOND, new Item.Properties()));
 
         //Netherite
         public static final RegistryObject<Item> NETHERITE_POLISHER = ITEMS.register(
-                "netherite_polisher",() -> new PolisherItem(Tiers.NETHERITE,0, new Item.Properties()));
+                "netherite_polisher",() -> new PolisherItem(Tiers.NETHERITE, new Item.Properties()));
 
     //Plants
     public static final RegistryObject<Item> YERBA_MATE = ITEMS.register(

@@ -86,6 +86,9 @@ public class ModBlockStateProvider extends BlockStateProvider{
 
         blockWithItem(ModBlocks.NETHER_GARNET_ORE);
 
+        blockWithItem(ModBlocks.COBALT_ORE);
+        blockWithItem(ModBlocks.DEEPSLATE_COBALT_ORE);
+
         //Ores blocks
         blockWithItem(ModBlocks.SILVER_BLOCK);
         blockWithItem(ModBlocks.TIN_BLOCK);
@@ -96,6 +99,7 @@ public class ModBlockStateProvider extends BlockStateProvider{
         blockWithItem(ModBlocks.ROSE_GOLD_BLOCK);
         blockWithItem(ModBlocks.STEEL_BLOCK);
         blockWithItem(ModBlocks.GREEN_GOLD_BLOCK);
+        blockWithItem(ModBlocks.BLUE_GOLD_BLOCK);
 
         //Crops
         makeYerbaMateCrop((CropBlock) ModBlocks.YERBA_MATE_CROP.get(), "yerba_mate_stage","yerba_mate_stage");

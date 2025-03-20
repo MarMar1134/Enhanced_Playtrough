@@ -24,7 +24,7 @@
                   }
                 }
               ],
-              "name": "enhanced_playthrough:deepslate_tin_ore"
+              "name": "enhanced_playthrough:tin_ore"
             },
             {
               "type": "minecraft:item",
@@ -33,8 +33,8 @@
                   "add": false,
                   "count": {
                     "type": "minecraft:uniform",
-                    "max": 3.0,
-                    "min": 1.0
+                    "max": 6.0,
+                    "min": 2.0
                   },
                   "function": "minecraft:set_count"
                 },

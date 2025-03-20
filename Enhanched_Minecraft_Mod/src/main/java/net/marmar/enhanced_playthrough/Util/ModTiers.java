@@ -54,4 +54,10 @@ public class ModTiers {
             new ResourceLocation(EnhancedPlaythrough.MOD_ID, "green_gold_ingot"), List.of(Tiers.IRON),
             List.of(Tiers.DIAMOND)
     );
+    public static final Tier BLUE_GOLD = TierSortingRegistry.registerTier(
+            new ForgeTier(3, 1200, 13f, 4f, 24,
+                    ModTags.Blocks.NEEDS_BLUE_GOLD_TOOL, () -> Ingredient.of(ModItems.BLUE_GOLD_INGOT.get())),
+            new ResourceLocation(EnhancedPlaythrough.MOD_ID, "blue_gold_ingot"), List.of(Tiers.DIAMOND),
+            List.of(Tiers.NETHERITE)
+    );
 }

@@ -1,0 +1,30 @@
+{
+  "criteria": {
+    "spawn": {
+      "conditions": {},
+      "trigger": "minecraft:tick"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "background": "minecraft:textures/block/emerald_block.png",
+    "description": {
+      "translate": "advancements.desc.gems.root"
+    },
+    "frame": "goal",
+    "hidden": true,
+    "icon": {
+      "item": "enhanced_playthrough:gem_polisher"
+    },
+    "show_toast": false,
+    "title": {
+      "translate": "advancements.title.gems.root"
+    }
+  },
+  "requirements": [
+    [
+      "spawn"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
