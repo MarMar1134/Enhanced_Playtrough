@@ -22,6 +22,8 @@ public class ModArmorItem extends ArmorItem {
                             true, false, false))
                     .put(ModArmorMaterial.GREEN_GOLD, new MobEffectInstance(MobEffects.DIG_SPEED, 200, 1,
                             true,false, false))
+                    .put(ModArmorMaterial.BLUE_GOLD, new MobEffectInstance(MobEffects.DIG_SPEED, 200, 1,
+                            true,false, false))
                     .build();
 
 

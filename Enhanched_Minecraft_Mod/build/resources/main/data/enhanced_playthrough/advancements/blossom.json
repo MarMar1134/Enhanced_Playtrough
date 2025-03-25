@@ -1,0 +1,39 @@
+{
+  "parent": "enhanced_playthrough:survival_root",
+  "criteria": {
+    "has_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:rose_gold_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "enhanced_playthrough:textures/block/bronze_block.png",
+    "description": {
+      "translate": "advancements.desc.survival.blossom"
+    },
+    "frame": "task",
+    "hidden": true,
+    "icon": {
+      "item": "enhanced_playthrough:rose_gold_ingot"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.title.survival.blossom"
+    }
+  },
+  "requirements": [
+    [
+      "has_item"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

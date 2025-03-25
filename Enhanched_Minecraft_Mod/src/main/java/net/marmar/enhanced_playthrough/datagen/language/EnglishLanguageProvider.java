@@ -40,17 +40,30 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
         addDescription("rose_gold_armor", "When full equipped: gives Haste to the player");
         addDescription("bronzium_armor", "When full equipped: gives Fire Resistance to the player");
         addDescription("green_gold_armor", "When full equipped: gives Haste II to the player");
+        addDescription("blue_gold_armor", "When full equipped: gives Haste II to the player");
 
         //Advancements
             //Survival
             addAdvancementTitle("survival", "root", "Enhanced Playthrough");
             addAdvancementTitle("survival", "unity_makes_strength", "Unity makes strength");
+            addAdvancementTitle("survival", "blossom", "Blossom");
+            addAdvancementTitle("survival", "buttercup", "Buttercup");
+            addAdvancementTitle("survival", "bubbles", "Bubbles");
+            addAdvancementTitle("survival", "the_goldenpuff_girls", "The Goldenpuff Girls");
+            addAdvancementTitle("survival", "thats_new", "That´s... new");
+            addAdvancementTitle("survival", "abrassive_heat", "Platón, the blacksmith");
             addAdvancementTitle("survival", "mighty_bronze", "Mighty bronze");
             addAdvancementTitle("survival", "steel_isnt_enough", "Steel isn´t enough");
 
             addAdvancementDesc("survival", "root", "You started a new journey on this fantastic world, welcome!");
             addAdvancementDesc("survival", "unity_makes_strength", "Craft an alloy furnace");
-            addAdvancementDesc("survival", "mighty_bronze", "Get a bronze pickaxe");
+            addAdvancementDesc("survival", "blossom", "Alloy some gold with copper to get rose gold");
+            addAdvancementDesc("survival", "buttercup", "Alloy some gold with silver to get green gold");
+            addAdvancementDesc("survival", "bubbles", "Alloy some gold with cobalt to get blue gold");
+            addAdvancementDesc("survival", "the_goldenpuff_girls", "Get the three gold alloys");
+            addAdvancementDesc("survival", "thats_new", "Get a bronze ingot");
+            addAdvancementDesc("survival", "abrassive_heat", "Get a brass ingot");
+            addAdvancementDesc("survival", "mighty_bronze", "Craft a bronze pickaxe");
             addAdvancementDesc("survival", "steel_isnt_enough", "Use your alloy furnace to get some steel");
 
             //Gems
@@ -201,6 +214,8 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
             addBlock(ModBlocks.RUBI_ORE, "Rubi ore");
             addBlock(ModBlocks.DEEPSLATE_RUBI_ORE, "Deepslate rubi ore");
             addBlock(ModBlocks.NETHER_GARNET_ORE, "Nether garnet ore");
+            addBlock(ModBlocks.COBALT_ORE, "Cobalt ore");
+            addBlock(ModBlocks.DEEPSLATE_COBALT_ORE, "Deepslate cobalt ore");
 
             //Ore blocks
             addBlock(ModBlocks.TIN_BLOCK, "Block of tin");
@@ -212,6 +227,7 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
             addBlock(ModBlocks.BRONZIUM_BLOCK, "Block of bronzium");
             addBlock(ModBlocks.GREEN_GOLD_BLOCK, "Block of green gold");
             addBlock(ModBlocks.STEEL_BLOCK, "Block of steel");
+            addBlock(ModBlocks.BLUE_GOLD_BLOCK, "Block of blue gold");
 
             //Block entities
             addBlock(ModBlocks.ADOBE_FURNACE, "Mud furnace");
@@ -252,10 +268,13 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
             addItem(ModItems.GREEN_GOLD_INGOT, "Green gold ingot");
             addItem(ModItems.GREEN_GOLD_NUGGET, "Green gold nugget");
             addItem(ModItems.STEEL_INGOT, "Steel ingot");
+            addItem(ModItems.BLUE_GOLD_INGOT, "Blue gold ingot");
+            addItem(ModItems.BLUE_GOLD_NUGGET, "Blue gold nugget");
             addItem(ModItems.SAPPHIRE, "Sapphire");
             addItem(ModItems.RUBI, "Ruby");
             addItem(ModItems.GARNET, "Garnet");
             addItem(ModItems.MUD_BRICK, "Mud brick");
+            addItem(ModItems.COBALT, "Cobalt");
 
             //Acids and potions
             addAcid("sulfuric_acid", "Sulfuric acid");
@@ -273,7 +292,7 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
             addItem(ModItems.SILVER_BOOTS, "Silver boots");
 
             //Gold equipment
-            addItem(ModItems.GOLD_POLISHER, "Golden polisher");
+            addItem(ModItems.GOLDEN_POLISHER, "Golden polisher");
 
             //Stone equipment
             addItem(ModItems.STONE_POLISHER, "Stone polisher");
@@ -352,6 +371,18 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
             addItem(ModItems.STEEL_CHESTPLATE, "Steel chestplate");
             addItem(ModItems.STEEL_LEGGINGS, "Steel leggings");
             addItem(ModItems.STEEL_BOOTS, "Steel boots");
+
+            //Blue gold equipment
+            addItem(ModItems.BLUE_GOLDEN_SWORD, "Blue Golden sword");
+            addItem(ModItems.BLUE_GOLDEN_PICKAXE, "Blue Golden pickaxe");
+            addItem(ModItems.BLUE_GOLDEN_AXE, "Blue Golden axe");
+            addItem(ModItems.BLUE_GOLDEN_SHOVEL, "Blue Golden shovel");
+            addItem(ModItems.BLUE_GOLDEN_HOE, "Blue Golden hoe");
+            addItem(ModItems.BLUE_GOLDEN_POLISHER, "Blue Golden polisher");
+            addItem(ModItems.BLUE_GOLDEN_HELMET, "Blue Golden helmet");
+            addItem(ModItems.BLUE_GOLDEN_CHESTPLATE, "Blue Golden chestplate");
+            addItem(ModItems.BLUE_GOLDEN_LEGGINGS, "Blue Golden leggings");
+            addItem(ModItems.BLUE_GOLDEN_BOOTS, "Blue Golden boots");
 
             //Diamond equipment
             addItem(ModItems.DIAMOND_POLISHER, "Diamond polisher");

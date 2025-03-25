@@ -226,7 +226,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         //Armors and tools
             //Gold
-            HandheldItem(ModItems.GOLD_POLISHER);
+            HandheldItem(ModItems.GOLDEN_POLISHER);
 
             //Silver
             HandheldItem(ModItems.SILVER_SWORD);

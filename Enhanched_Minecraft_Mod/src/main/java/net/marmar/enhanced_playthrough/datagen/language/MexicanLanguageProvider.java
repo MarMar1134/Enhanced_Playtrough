@@ -40,18 +40,31 @@ public class MexicanLanguageProvider extends AbstractModLanguageProvider{
         addDescription("rose_gold_armor", "Con toda la equipación: otorga Apuro al jugador");
         addDescription("bronzium_armor", "Con toda la equipación: otorga Resistencia al fuego al jugador");
         addDescription("green_gold_armor", "Con toda la equipación: otorga Apuro II al jugador");
+        addDescription("blue_gold_armor", "Con toda la equipación: otorga Apuro II al jugador");
 
         //Advancements
         //Survival
         addAdvancementTitle("survival", "root", "Enhanced Playthrough");
         addAdvancementTitle("survival", "unity_makes_strength", "La unión hace la fuerza");
+        addAdvancementTitle("survival", "blossom", "Bombón");
+        addAdvancementTitle("survival", "buttercup", "Bellota");
+        addAdvancementTitle("survival", "bubbles", "Búrbuja");
+        addAdvancementTitle("survival", "the_goldenpuff_girls", "Las chicas súper-doradas");
+        addAdvancementTitle("survival", "thats_new", "Eso... es nuevo");
+        addAdvancementTitle("survival", "abrassive_heat", "Platón el herrero");
         addAdvancementTitle("survival", "mighty_bronze", "Bronceado divino");
         addAdvancementTitle("survival", "steel_isnt_enough", "No tiende a-cero");
 
         addAdvancementDesc("survival", "root", "Iniciaste una nueva aventura en este mundo fantástico, ¡bienvenido!");
         addAdvancementDesc("survival", "unity_makes_strength", "Craftea un horno de aleación");
+        addAdvancementDesc("survival", "blossom", "Funde oro y cobre para obtener oro rosado");
+        addAdvancementDesc("survival", "buttercup", "Funde oro y plata para obtener oro verde");
+        addAdvancementDesc("survival", "bubbles", "Funde oro y cobalto para obtener oro azul");
+        addAdvancementDesc("survival", "the_goldenpuff_girls", "Consigue las tres aleaciones de oro");
+        addAdvancementDesc("survival", "thats_new", "Obtén un lingote de bronce");
+        addAdvancementDesc("survival", "abrassive_heat", "Obtén un lingote de latón");
         addAdvancementDesc("survival", "mighty_bronze", "Obten un pico de bronce");
-        addAdvancementDesc("survival", "steel_isnt_enough", "Utiliza tu horno de aleación para fundir algo de acero");
+        addAdvancementDesc("survival", "steel_isnt_enough", "Utilica tu horno de aleación para fundir algo de acero");
 
         //Gems
         addAdvancementTitle("gems", "root", "Los colores del mundo");
@@ -64,7 +77,7 @@ public class MexicanLanguageProvider extends AbstractModLanguageProvider{
 
         addAdvancementDesc("gems", "root", "Nuestro mundo reluce en colores, y las gemas representan bien eso");
         addAdvancementDesc("gems", "polish_emerald", "Consigue algunas esmeraldas y cuidalas de los, ¿quienes?");
-        addAdvancementDesc("gems", "polish_sapphire", "Consigue algunos safiros y visita un rato el mar");
+        addAdvancementDesc("gems", "polish_sapphire", "Consigue algunos záfiros y visita un rato el mar");
         addAdvancementDesc("gems", "polish_rubi", "Consigue algunos rubies y mostrale a los cerdos quién manda");
         addAdvancementDesc("gems", "polish_garnet", "Consigue algunos granates y demuestra tu pasión");
         addAdvancementDesc("gems", "polish_diamond", "Consigue algunos diamantes para poder ver mejor el cielo");
@@ -186,21 +199,23 @@ public class MexicanLanguageProvider extends AbstractModLanguageProvider{
 
         //Ores
         addBlock(ModBlocks.TIN_ORE, "Mineral de estaño");
-        addBlock(ModBlocks.DEEPSLATE_TIN_ORE, "Mineral de estaño profundo");
+        addBlock(ModBlocks.DEEPSLATE_TIN_ORE, "Mineral de estaño de pizarra profunda");
         addBlock(ModBlocks.ZINC_ORE, "Mineral de zinc");
-        addBlock(ModBlocks.DEEPSLATE_ZINC_ORE, "Mineral de zinc profundo");
+        addBlock(ModBlocks.DEEPSLATE_ZINC_ORE, "Mineral de zinc de pizarra profunda");
         addBlock(ModBlocks.NETHER_ZINC_ORE, "Mineral de zinc del nether");
         addBlock(ModBlocks.NETHER_COPPER_ORE, "Mineral de cobre del nether");
         addBlock(ModBlocks.SULFUR_ORE, "Mineral de azufre");
-        addBlock(ModBlocks.DEEPSLATE_SULFUR_ORE, "Mineral de azufre profundo");
+        addBlock(ModBlocks.DEEPSLATE_SULFUR_ORE, "Mineral de azufre de pizarra profunda");
         addBlock(ModBlocks.NETHER_SULFUR_ORE, "Mineral de azufre del nether");
         addBlock(ModBlocks.SILVER_ORE, "Mineral de plata");
-        addBlock(ModBlocks.DEEPSLATE_SILVER_ORE, "Mineral de plata profundo");
+        addBlock(ModBlocks.DEEPSLATE_SILVER_ORE, "Mineral de plata de pizarra profunda");
         addBlock(ModBlocks.SAPPHIRE_ORE, "Mineral de zafiro");
-        addBlock(ModBlocks.DEEPSLATE_SAPPHIRE_ORE, "Mineral de zaphiro profundo");
+        addBlock(ModBlocks.DEEPSLATE_SAPPHIRE_ORE, "Mineral de zaphiro de pizarra profunda");
         addBlock(ModBlocks.RUBI_ORE, "Mineral de rubi");
-        addBlock(ModBlocks.DEEPSLATE_RUBI_ORE, "Mineral de rubi profundo");
+        addBlock(ModBlocks.DEEPSLATE_RUBI_ORE, "Mineral de rubi de pizarra profunda");
         addBlock(ModBlocks.NETHER_GARNET_ORE, "Mineral de granate del nether");
+        addBlock(ModBlocks.COBALT_ORE, "Mineral de cobalto");
+        addBlock(ModBlocks.DEEPSLATE_COBALT_ORE, "Mineral de cobalto de pizarra profunda");
 
         //Ore blocks
         addBlock(ModBlocks.TIN_BLOCK, "Bloque de estaño");
@@ -212,6 +227,7 @@ public class MexicanLanguageProvider extends AbstractModLanguageProvider{
         addBlock(ModBlocks.BRONZIUM_BLOCK, "Bloque de broncio");
         addBlock(ModBlocks.GREEN_GOLD_BLOCK, "Bloque de oro verde");
         addBlock(ModBlocks.STEEL_BLOCK, "Bloque de acero");
+        addBlock(ModBlocks.BLUE_GOLD_BLOCK, "Bloque de oro azul");
 
         //Block entities
         addBlock(ModBlocks.ADOBE_FURNACE, "Horno de barro");
@@ -252,10 +268,13 @@ public class MexicanLanguageProvider extends AbstractModLanguageProvider{
         addItem(ModItems.GREEN_GOLD_INGOT, "Lingote de oro verde");
         addItem(ModItems.GREEN_GOLD_NUGGET, "Pepita de oro verde");
         addItem(ModItems.STEEL_INGOT, "Lingote de acero");
+        addItem(ModItems.BLUE_GOLD_INGOT, "Lingote de oro azul");
+        addItem(ModItems.BLUE_GOLD_NUGGET, "Pepita de oro verde");
         addItem(ModItems.SAPPHIRE, "Zafiro");
         addItem(ModItems.RUBI, "Rubí");
         addItem(ModItems.GARNET, "Granate");
         addItem(ModItems.MUD_BRICK, "Ladrillo de adobe");
+        addItem(ModItems.COBALT, "Cobalto");
 
         //Acids and potions
         addAcid("sulfuric_acid", "Ácido sulfurico");
@@ -273,7 +292,7 @@ public class MexicanLanguageProvider extends AbstractModLanguageProvider{
         addItem(ModItems.SILVER_BOOTS, "Botas de plata");
 
         //Gold equipment
-        addItem(ModItems.GOLD_POLISHER, "Pulidora de plata");
+        addItem(ModItems.GOLDEN_POLISHER, "Pulidora de plata");
 
         //Stone equipment
         addItem(ModItems.STONE_POLISHER, "Pulidora de piedra");
@@ -352,6 +371,18 @@ public class MexicanLanguageProvider extends AbstractModLanguageProvider{
         addItem(ModItems.STEEL_CHESTPLATE, "Pechera de acero");
         addItem(ModItems.STEEL_LEGGINGS, "Grebas de acero");
         addItem(ModItems.STEEL_BOOTS, "Botas de acero");
+
+        //Blue gold equipment
+        addItem(ModItems.BLUE_GOLDEN_SWORD, "Espada de oro azul");
+        addItem(ModItems.BLUE_GOLDEN_PICKAXE, "Pico de oro azul");
+        addItem(ModItems.BLUE_GOLDEN_AXE, "Hacha de oro azul");
+        addItem(ModItems.BLUE_GOLDEN_SHOVEL, "Pala de oro azul");
+        addItem(ModItems.BLUE_GOLDEN_HOE, "Azada de oro azul");
+        addItem(ModItems.BLUE_GOLDEN_POLISHER, "Pulidora de oro azul");
+        addItem(ModItems.BLUE_GOLDEN_HELMET, "Yelmo de oro azul");
+        addItem(ModItems.BLUE_GOLDEN_CHESTPLATE, "Pechera de oro azul");
+        addItem(ModItems.BLUE_GOLDEN_LEGGINGS, "Grebas de oro azul");
+        addItem(ModItems.BLUE_GOLDEN_BOOTS, "Botas de oro azul");
 
         //Diamond equipment
         addItem(ModItems.DIAMOND_POLISHER, "Pulidora de diamante");

@@ -60,6 +60,7 @@ public class ModTabs {
                         output.accept(ModBlocks.ROSE_GOLD_BLOCK.get());
                         output.accept(ModBlocks.STEEL_BLOCK.get());
                         output.accept(ModBlocks.GREEN_GOLD_BLOCK.get());
+                        output.accept(ModBlocks.BLUE_GOLD_BLOCK.get());
                     }).build());
     public static final RegistryObject<CreativeModeTab> MINERALS = TABS.register(
             "minerals", () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.TIN_ORE.get()))
@@ -81,6 +82,9 @@ public class ModTabs {
                         output.accept(ModBlocks.SILVER_ORE.get());
                         output.accept(ModBlocks.DEEPSLATE_SILVER_ORE.get());
 
+                        output.accept(ModBlocks.COBALT_ORE.get());
+                        output.accept(ModBlocks.DEEPSLATE_COBALT_ORE.get());
+
                         output.accept(ModBlocks.SAPPHIRE_ORE.get());
                         output.accept(ModBlocks.DEEPSLATE_SAPPHIRE_ORE.get());
 
@@ -96,6 +100,8 @@ public class ModTabs {
                         output.accept(ModItems.RAW_ZINC.get());
 
                         output.accept(ModItems.RAW_SILVER.get());
+
+                        output.accept(ModItems.COBALT.get());
 
                         output.accept(ModItems.RAW_EMERALD.get());
 
@@ -131,14 +137,18 @@ public class ModTabs {
                         output.accept(ModBlocks.GEM_POLISHER.get());
                         output.accept(ModBlocks.GRINDER.get());
 
+                        output.accept(ModItems.RAW_SILVER.get());
                         output.accept(ModItems.SILVER_INGOT.get());
                         output.accept(ModItems.SILVER_NUGGET.get());
 
+                        output.accept(Items.RAW_COPPER);
                         output.accept((ModItems.COPPER_NUGGET.get()));
 
+                        output.accept(ModItems.RAW_TIN.get());
                         output.accept((ModItems.TIN_INGOT.get()));
                         output.accept((ModItems.TIN_NUGGET.get()));
 
+                        output.accept(ModItems.RAW_ZINC.get());
                         output.accept(ModItems.ZINC_INGOT.get());
                         output.accept(ModItems.ZINC_NUGGET.get());
 
@@ -154,10 +164,13 @@ public class ModTabs {
                         output.accept(ModItems.BRONZIUM_INGOT.get());
                         output.accept(ModItems.BRONZIUM_NUGGET.get());
 
-                        output.accept(ModItems.STEEL_INGOT.get());
-
                         output.accept(ModItems.GREEN_GOLD_INGOT.get());
                         output.accept(ModItems.GREEN_GOLD_NUGGET.get());
+
+                        output.accept(ModItems.STEEL_INGOT.get());
+
+                        output.accept(ModItems.BLUE_GOLD_INGOT.get());
+                        output.accept(ModItems.BLUE_GOLD_NUGGET.get());
 
                         output.accept(ModItems.BRONZIUM_SMITHING_UPGRADE_TEMPLATE.get());
 
@@ -203,6 +216,13 @@ public class ModTabs {
                         output.accept(ModItems.BRONZIUM_HOE.get());
                         output.accept(ModItems.BRONZIUM_POLISHER.get());
 
+                        //Green Gold
+                        output.accept(ModItems.GREEN_GOLDEN_PICKAXE.get());
+                        output.accept(ModItems.GREEN_GOLDEN_AXE.get());
+                        output.accept(ModItems.GREEN_GOLDEN_SHOVEL.get());
+                        output.accept(ModItems.GREEN_GOLDEN_HOE.get());
+                        output.accept(ModItems.GREEN_GOLDEN_POLISHER.get());
+
                         //Steel
                         output.accept(ModItems.STEEL_PICKAXE.get());
                         output.accept(ModItems.STEEL_AXE.get());
@@ -211,12 +231,12 @@ public class ModTabs {
                         output.accept(ModItems.STEEL_POLISHER.get());
                         output.accept(ModItems.STEEL_POLISHER.get());
 
-                        //Green Gold
-                        output.accept(ModItems.GREEN_GOLDEN_PICKAXE.get());
-                        output.accept(ModItems.GREEN_GOLDEN_AXE.get());
-                        output.accept(ModItems.GREEN_GOLDEN_SHOVEL.get());
-                        output.accept(ModItems.GREEN_GOLDEN_HOE.get());
-                        output.accept(ModItems.GREEN_GOLDEN_POLISHER.get());
+                        //Blue Gold
+                        output.accept(ModItems.BLUE_GOLDEN_PICKAXE.get());
+                        output.accept(ModItems.BLUE_GOLDEN_AXE.get());
+                        output.accept(ModItems.BLUE_GOLDEN_SHOVEL.get());
+                        output.accept(ModItems.BLUE_GOLDEN_HOE.get());
+                        output.accept(ModItems.BLUE_GOLDEN_POLISHER.get());
                     }).build());
     public static final RegistryObject<CreativeModeTab> WEAPONS = TABS.register(
             "weapons",() -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.STEEL_SWORD.get()))
@@ -257,6 +277,13 @@ public class ModTabs {
                         output.accept(ModItems.BRONZIUM_LEGGINGS.get());
                         output.accept(ModItems.BRONZIUM_BOOTS.get());
 
+                        //Green gold
+                        output.accept(ModItems.GREEN_GOLDEN_SWORD.get());
+                        output.accept(ModItems.GREEN_GOLDEN_HELMET.get());
+                        output.accept(ModItems.GREEN_GOLDEN_CHESTPLATE.get());
+                        output.accept(ModItems.GREEN_GOLDEN_LEGGINGS.get());
+                        output.accept(ModItems.GREEN_GOLDEN_BOOTS.get());
+
                         //Steel
                         output.accept(ModItems.STEEL_SWORD.get());
                         output.accept(ModItems.STEEL_HELMET.get());
@@ -264,12 +291,12 @@ public class ModTabs {
                         output.accept(ModItems.STEEL_LEGGINGS.get());
                         output.accept(ModItems.STEEL_BOOTS.get());
 
-                        //Green gold
-                        output.accept(ModItems.GREEN_GOLDEN_SWORD.get());
-                        output.accept(ModItems.GREEN_GOLDEN_HELMET.get());
-                        output.accept(ModItems.GREEN_GOLDEN_CHESTPLATE.get());
-                        output.accept(ModItems.GREEN_GOLDEN_LEGGINGS.get());
-                        output.accept(ModItems.GREEN_GOLDEN_BOOTS.get());
+                        //Blue gold
+                        output.accept(ModItems.BLUE_GOLDEN_SWORD.get());
+                        output.accept(ModItems.BLUE_GOLDEN_HELMET.get());
+                        output.accept(ModItems.BLUE_GOLDEN_CHESTPLATE.get());
+                        output.accept(ModItems.BLUE_GOLDEN_LEGGINGS.get());
+                        output.accept(ModItems.BLUE_GOLDEN_BOOTS.get());
                     })
                     .build());
     public static final RegistryObject<CreativeModeTab> JEWELERY = TABS.register(
@@ -277,7 +304,8 @@ public class ModTabs {
                     .title(Component.translatable("creativetab.jewelery"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModBlocks.GEM_POLISHER.get());
-                        output.accept(ModItems.GOLD_POLISHER.get());
+
+                        output.accept(ModItems.GOLDEN_POLISHER.get());
                         output.accept(ModItems.SILVER_POLISHER.get());
                         output.accept((ModItems.STONE_POLISHER.get()));
                         output.accept((ModItems.BRONZE_POLISHER.get()));
@@ -285,8 +313,9 @@ public class ModTabs {
                         output.accept(ModItems.ROSE_GOLDEN_POLISHER.get());
                         output.accept(ModItems.BRONZIUM_POLISHER.get());
                         output.accept(ModItems.IRON_POLISHER.get());
-                        output.accept(ModItems.STEEL_POLISHER.get());
                         output.accept(ModItems.GREEN_GOLDEN_POLISHER.get());
+                        output.accept(ModItems.STEEL_POLISHER.get());
+                        output.accept(ModItems.BLUE_GOLDEN_POLISHER.get());
                         output.accept(ModItems.DIAMOND_POLISHER.get());
                         output.accept(ModItems.NETHERITE_POLISHER.get());
 

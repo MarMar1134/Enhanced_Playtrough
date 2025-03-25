@@ -121,7 +121,7 @@ public class ModItems {
                 "stone_polisher",() -> new PolisherItem(Tiers.STONE, new Item.Properties()));
 
         //Gold
-        public static final RegistryObject<Item> GOLD_POLISHER = ITEMS.register(
+        public static final RegistryObject<Item> GOLDEN_POLISHER = ITEMS.register(
                 "gold_polisher",() -> new PolisherItem(Tiers.GOLD, new Item.Properties()));
 
         //Silver

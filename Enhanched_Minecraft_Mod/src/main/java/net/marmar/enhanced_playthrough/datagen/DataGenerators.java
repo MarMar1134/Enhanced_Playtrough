@@ -2,7 +2,7 @@ package net.marmar.enhanced_playthrough.datagen;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.datagen.advancement.GemAdvancementGenerator;
-import net.marmar.enhanced_playthrough.datagen.advancement.SurvivalAdvancementsGenerator;
+import net.marmar.enhanced_playthrough.datagen.advancement.SurvivalAdvancementGenerator;
 import net.marmar.enhanced_playthrough.datagen.language.*;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
@@ -21,7 +21,7 @@ public class DataGenerators {
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event){
         GemAdvancementGenerator gem_advancements = new GemAdvancementGenerator();
-        SurvivalAdvancementsGenerator survival_advancements = new SurvivalAdvancementsGenerator();
+        SurvivalAdvancementGenerator survival_advancements = new SurvivalAdvancementGenerator();
 
         DataGenerator generator = event.getGenerator();
         PackOutput packOutput = generator.getPackOutput();

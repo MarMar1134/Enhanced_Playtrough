@@ -1,0 +1,39 @@
+{
+  "parent": "enhanced_playthrough:survival_root",
+  "criteria": {
+    "has_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:bronze_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "enhanced_playthrough:textures/block/bronze_block.png",
+    "description": {
+      "translate": "advancements.desc.survival.thats_new"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "enhanced_playthrough:bronze_ingot"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.title.survival.thats_new"
+    }
+  },
+  "requirements": [
+    [
+      "has_item"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

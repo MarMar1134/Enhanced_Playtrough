@@ -17,16 +17,16 @@
     "announce_to_chat": false,
     "background": "enhanced_playthrough:textures/block/bronze_block.png",
     "description": {
-      "translate": ""
+      "translate": "advancements.desc.survival.unity_makes_strength"
     },
     "frame": "task",
-    "hidden": true,
+    "hidden": false,
     "icon": {
       "item": "enhanced_playthrough:adobe_alloying_furnace"
     },
     "show_toast": false,
     "title": {
-      "translate": ""
+      "translate": "advancements.title.survival.unity_makes_strength"
     }
   },
   "requirements": [

@@ -26,7 +26,7 @@ public class GemAdvancementGenerator implements ForgeAdvancementProvider.Advance
     @Override
     public void generate(HolderLookup.Provider provider, Consumer<Advancement> consumer, ExistingFileHelper existingFileHelper) {
         Advancement gems_root = Advancement.Builder.advancement()
-                .display(ModBlocks.GEM_POLISHER.get().asItem(), Component.translatable("advancements.title.gems.root"), Component.translatable("advancements.desc.gems.root"), GEMS_BACKGROUND, FrameType.GOAL, false, false, true)
+                .display(ModBlocks.GEM_POLISHER.get().asItem(), Component.translatable("advancements.title.gems.root"), Component.translatable("advancements.desc.gems.root"), GEMS_BACKGROUND, FrameType.TASK, false, false, true)
                 .addCriterion("spawn", PlayerTrigger.TriggerInstance.tick())
                 .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "gem_root"), existingFileHelper);
 

@@ -1,5 +1,5 @@
 {
-  "parent": "enhanced_playthrough:survival_root",
+  "parent": "enhanced_playthrough:thats_new",
   "criteria": {
     "has_item": {
       "conditions": {
@@ -18,7 +18,7 @@
     "announce_to_chat": true,
     "background": "enhanced_playthrough:textures/block/bronze_block.png",
     "description": {
-      "translate": ""
+      "translate": "advancements.desc.survival.mighty_bronze"
     },
     "frame": "task",
     "hidden": false,
@@ -28,7 +28,7 @@
     },
     "show_toast": true,
     "title": {
-      "translate": ""
+      "translate": "advancements.title.survival.mighty_bronze"
     }
   },
   "requirements": [

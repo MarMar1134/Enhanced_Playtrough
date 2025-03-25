@@ -1176,7 +1176,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     .save(consumer);
 
             //Gold recipes
-            ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.GOLD_POLISHER.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.GOLDEN_POLISHER.get())
                     .pattern(" I")
                     .pattern("# ")
                     .define('I', Items.GOLD_INGOT)

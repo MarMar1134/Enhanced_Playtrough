@@ -228,7 +228,7 @@ public class ModItemTagGenerator extends ItemTagsProvider {
 
         this.tag(ModTags.Items.POLISHER_TOOL).add(
                 ModItems.SILVER_POLISHER.get(),
-                ModItems.GOLD_POLISHER.get(),
+                ModItems.GOLDEN_POLISHER.get(),
                 ModItems.STONE_POLISHER.get(),
                 ModItems.BRASS_POLISHER.get(),
                 ModItems.BRONZE_POLISHER.get(),
