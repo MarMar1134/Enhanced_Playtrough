@@ -11,7 +11,7 @@
     "description": {
       "translate": "advancements.desc.gems.root"
     },
-    "frame": "goal",
+    "frame": "task",
     "hidden": true,
     "icon": {
       "item": "enhanced_playthrough:gem_polisher"

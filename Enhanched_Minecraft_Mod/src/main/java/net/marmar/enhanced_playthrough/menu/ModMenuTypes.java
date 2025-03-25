@@ -1,6 +1,14 @@
 package net.marmar.enhanced_playthrough.menu;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
+import net.marmar.enhanced_playthrough.menu.alloyfurnace.AdobeAlloyFurnaceMenu;
+import net.marmar.enhanced_playthrough.menu.alloyfurnace.SoulAlloyFurnaceMenu;
+import net.marmar.enhanced_playthrough.menu.alloyfurnace.SuperAlloyFurnaceMenu;
+import net.marmar.enhanced_playthrough.menu.basicfurnace.AdobeFurnaceMenu;
+import net.marmar.enhanced_playthrough.menu.basicfurnace.SoulFurnaceMenu;
+import net.marmar.enhanced_playthrough.menu.gempolisher.GemPolisherMenu;
+import net.marmar.enhanced_playthrough.menu.grinder.MechanicalGrinderMenu;
+import net.marmar.enhanced_playthrough.menu.grinder.PrimalGrinderMenu;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraftforge.common.extensions.IForgeMenuType;
@@ -29,11 +37,16 @@ public class ModMenuTypes {
     public static final RegistryObject<MenuType<GemPolisherMenu>> GEM_POLISHER_MENU =
             registerMenuType("gem_polisher_menu", GemPolisherMenu::new);
 
-    public static final RegistryObject<MenuType<GrinderMenu>> GRINDER_MENU =
-            registerMenuType("grinder_menu", GrinderMenu::new);
+    public static final RegistryObject<MenuType<PrimalGrinderMenu>> PRIMAL_GRINDER_MENU =
+            registerMenuType("primal_grinder_menu", PrimalGrinderMenu::new);
+    public static final RegistryObject<MenuType<MechanicalGrinderMenu>> MECHANICAL_GRINDER_MENU =
+            registerMenuType("mechanical_grinder_menu", MechanicalGrinderMenu::new);
+
+    //Register methods
     private static <T extends AbstractContainerMenu> RegistryObject<MenuType<T>> registerMenuType(String name, IContainerFactory<T> factory) {
         return MENUS.register(name, () -> IForgeMenuType.create(factory));
     }
+
     public static void Register(IEventBus eventBus){
         MENUS.register(eventBus);
     }

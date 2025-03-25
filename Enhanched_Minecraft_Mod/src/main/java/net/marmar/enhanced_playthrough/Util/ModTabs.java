@@ -117,7 +117,7 @@ public class ModTabs {
 
                         output.accept(ModItems.SAPPHIRE.get());
 
-                        output.accept(ModItems.RUBI.get());
+                        output.accept(ModItems.RUBY.get());
 
                         output.accept(ModItems.GARNET.get());
 
@@ -135,7 +135,9 @@ public class ModTabs {
                         output.accept(ModBlocks.SOUL_ALLOY_FURNACE.get());
 
                         output.accept(ModBlocks.GEM_POLISHER.get());
-                        output.accept(ModBlocks.GRINDER.get());
+
+                        output.accept(ModBlocks.PRIMAL_GRINDER.get());
+                        output.accept(ModBlocks.MECHANICAL_GRINDER.get());
 
                         output.accept(ModItems.RAW_SILVER.get());
                         output.accept(ModItems.SILVER_INGOT.get());
@@ -300,7 +302,7 @@ public class ModTabs {
                     })
                     .build());
     public static final RegistryObject<CreativeModeTab> JEWELERY = TABS.register(
-            "jewelery", () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.RUBI.get()))
+            "jewelery", () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.RUBY.get()))
                     .title(Component.translatable("creativetab.jewelery"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModBlocks.GEM_POLISHER.get());
@@ -326,7 +328,7 @@ public class ModTabs {
                         output.accept(ModItems.SAPPHIRE.get());
 
                         output.accept(ModItems.RAW_RUBI.get());
-                        output.accept(ModItems.RUBI.get());
+                        output.accept(ModItems.RUBY.get());
 
                         output.accept(ModItems.RAW_GARNET.get());
                         output.accept(ModItems.GARNET.get());

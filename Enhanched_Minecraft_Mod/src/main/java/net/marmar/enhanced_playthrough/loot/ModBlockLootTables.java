@@ -1,10 +1,10 @@
 package net.marmar.enhanced_playthrough.loot;
 
 import net.marmar.enhanced_playthrough.block.ModBlocks;
-import net.marmar.enhanced_playthrough.block.custom.crops.CornCropBlock;
-import net.marmar.enhanced_playthrough.block.custom.crops.TomatoCropBlock;
-import net.marmar.enhanced_playthrough.block.custom.crops.YerbaMateCropBlock;
-import net.marmar.enhanced_playthrough.block.custom.crops.ZapalloCropBlock;
+import net.marmar.enhanced_playthrough.block.crops.CornCropBlock;
+import net.marmar.enhanced_playthrough.block.crops.TomatoCropBlock;
+import net.marmar.enhanced_playthrough.block.crops.YerbaMateCropBlock;
+import net.marmar.enhanced_playthrough.block.crops.ZapalloCropBlock;
 import net.marmar.enhanced_playthrough.enchantment.ModEnchantments;
 import net.marmar.enhanced_playthrough.item.ModItems;
 import net.minecraft.advancements.critereon.EnchantmentPredicate;
@@ -123,9 +123,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 block -> createOreDrops(ModBlocks.DEEPSLATE_SILVER_ORE.get(), ModItems.RAW_SILVER.get()));
 
         this.add(ModBlocks.RUBI_ORE.get(),
-                block -> createGemsDrops(ModBlocks.RUBI_ORE.get(), ModItems.RAW_RUBI.get(), 2, ModItems.RUBI.get(), 1));
+                block -> createGemsDrops(ModBlocks.RUBI_ORE.get(), ModItems.RAW_RUBI.get(), 2, ModItems.RUBY.get(), 1));
         this.add(ModBlocks.DEEPSLATE_RUBI_ORE.get(),
-                block -> createGemsDrops(ModBlocks.DEEPSLATE_RUBI_ORE.get(), ModItems.RAW_RUBI.get(), 3, ModItems.RUBI.get(), 2));
+                block -> createGemsDrops(ModBlocks.DEEPSLATE_RUBI_ORE.get(), ModItems.RAW_RUBI.get(), 3, ModItems.RUBY.get(), 2));
 
         this.add(ModBlocks.SAPPHIRE_ORE.get(),
                 block -> createGemsDrops(ModBlocks.SAPPHIRE_ORE.get(), ModItems.RAW_SAPPHIRE.get(), 3, ModItems.SAPPHIRE.get(), 2));
@@ -299,7 +299,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.SOUL_ALLOY_FURNACE.get());
 
         this.dropSelf(ModBlocks.GEM_POLISHER.get());
-        this.dropSelf(ModBlocks.GRINDER.get());
+
+        this.dropSelf(ModBlocks.PRIMAL_GRINDER.get());
+        this.dropSelf(ModBlocks.MECHANICAL_GRINDER.get());
     }
 
     //Loot table creators

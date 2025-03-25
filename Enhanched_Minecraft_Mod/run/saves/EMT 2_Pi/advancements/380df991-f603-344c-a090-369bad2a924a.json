@@ -75,6 +75,1074 @@
     },
     "done": true
   },
+  "minecraft:recipes/redstone/lever": {
+    "criteria": {
+      "has_cobblestone": "2025-03-24 23:55:03 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/stone_sword": {
+    "criteria": {
+      "has_cobblestone": "2025-03-24 23:55:03 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/cobblestone_wall": {
+    "criteria": {
+      "has_cobblestone": "2025-03-24 23:55:03 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/stone_axe": {
+    "criteria": {
+      "has_cobblestone": "2025-03-24 23:55:03 -0300"
+    },
+    "done": true
+  },
+  "minecraft:story/mine_stone": {
+    "criteria": {
+      "get_stone": "2025-03-24 23:55:03 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/furnace": {
+    "criteria": {
+      "has_cobblestone": "2025-03-24 23:55:03 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/furnace": {
+    "criteria": {
+      "has_the_recipe": "2025-03-24 23:55:03 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/cobblestone_slab_from_cobblestone_stonecutting": {
+    "criteria": {
+      "has_cobblestone": "2025-03-24 23:55:03 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/stone": {
+    "criteria": {
+      "has_cobblestone": "2025-03-24 23:55:03 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/adobe_furnace": {
+    "criteria": {
+      "has_cobblestone": "2025-03-24 23:55:03 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/stone_pickaxe": {
+    "criteria": {
+      "has_cobblestone": "2025-03-24 23:55:03 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/cobblestone_slab": {
+    "criteria": {
+      "has_cobblestone": "2025-03-24 23:55:03 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/cobblestone_wall_from_cobblestone_stonecutting": {
+    "criteria": {
+      "has_cobblestone": "2025-03-24 23:55:03 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/cobblestone_stairs_from_cobblestone_stonecutting": {
+    "criteria": {
+      "has_cobblestone": "2025-03-24 23:55:03 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/cobblestone_stairs": {
+    "criteria": {
+      "has_cobblestone": "2025-03-24 23:55:03 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/stone_hoe": {
+    "criteria": {
+      "has_cobblestone": "2025-03-24 23:55:03 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/stone_shovel": {
+    "criteria": {
+      "has_cobblestone": "2025-03-24 23:55:03 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/bronze_ingot_from_alloying_raw_tin_and_raw_copper": {
+    "criteria": {
+      "has_raw_tin": "2025-03-24 23:55:18 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tin_ingot_from_soul_basic_smelting_raw_tin": {
+    "criteria": {
+      "has_raw_tin": "2025-03-24 23:55:18 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/bronze_ingot_from_alloying_raw_copper_and_raw_tin": {
+    "criteria": {
+      "has_raw_tin": "2025-03-24 23:55:18 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/adobe_alloying_furnace": {
+    "criteria": {
+      "has_raw_tin": "2025-03-24 23:55:18 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/chest": {
+    "criteria": {
+      "has_lots_of_items": "2025-03-24 23:55:18 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/bronze_ingot_from_super_alloying_raw_tin_and_raw_copper": {
+    "criteria": {
+      "has_raw_tin": "2025-03-24 23:55:18 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/bronze_ingot_from_super_alloying_raw_copper_and_raw_tin": {
+    "criteria": {
+      "has_raw_tin": "2025-03-24 23:55:18 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/tin_ingot__from_blasting_raw_tin": {
+    "criteria": {
+      "has_raw_tin": "2025-03-24 23:55:18 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tin_ingot_from_basic_smelting_raw_tin": {
+    "criteria": {
+      "has_raw_tin": "2025-03-24 23:55:18 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/tin_nugget__from_campfire_raw_tin": {
+    "criteria": {
+      "has_raw_tin": "2025-03-24 23:55:18 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/tin_ingot__from_smelting_raw_tin": {
+    "criteria": {
+      "has_raw_tin": "2025-03-24 23:55:18 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/granite_slab_from_granite_stonecutting": {
+    "criteria": {
+      "has_granite": "2025-03-24 23:55:19 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/granite_wall_from_granite_stonecutting": {
+    "criteria": {
+      "has_granite": "2025-03-24 23:55:19 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/polished_granite_from_granite_stonecutting": {
+    "criteria": {
+      "has_granite": "2025-03-24 23:55:19 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/granite_slab": {
+    "criteria": {
+      "has_granite": "2025-03-24 23:55:19 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/granite_stairs": {
+    "criteria": {
+      "has_granite": "2025-03-24 23:55:19 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/granite_stairs_from_granite_stonecutting": {
+    "criteria": {
+      "has_granite": "2025-03-24 23:55:19 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/granite_wall": {
+    "criteria": {
+      "has_granite": "2025-03-24 23:55:19 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/polished_granite_slab_from_granite_stonecutting": {
+    "criteria": {
+      "has_granite": "2025-03-24 23:55:19 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/polished_granite": {
+    "criteria": {
+      "has_granite": "2025-03-24 23:55:19 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/polished_granite_stairs_from_granite_stonecutting": {
+    "criteria": {
+      "has_granite": "2025-03-24 23:55:19 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/building_blocks/cobbeled_limestone_stair_from_stone_cutting_cobbeled_limestone": {
+    "criteria": {
+      "has_cobbeled_limestone": "2025-03-24 23:55:20 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/building_blocks/cobbeled_limestone_slab_from_stone_cutting_cobbeled_limestone": {
+    "criteria": {
+      "has_cobbeled_limestone": "2025-03-24 23:55:20 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/building_blocks/cobbeled_limestone_wall": {
+    "criteria": {
+      "has_cobbeled_limestone": "2025-03-24 23:55:20 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/building_blocks/limestone__from_smelting_cobbeled_limestone": {
+    "criteria": {
+      "has_cobbeled_limestone": "2025-03-24 23:55:20 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/building_blocks/limestone__from_blasting_cobbeled_limestone": {
+    "criteria": {
+      "has_cobbeled_limestone": "2025-03-24 23:55:20 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/building_blocks/cobbeled_limestone_stair": {
+    "criteria": {
+      "has_cobbeled_limestone": "2025-03-24 23:55:20 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/building_blocks/cobbeled_limestone_slab": {
+    "criteria": {
+      "has_cobbeled_limestone": "2025-03-24 23:55:20 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/building_blocks/cobbeled_limestone_wall_from_stone_cutting_cobbeled_limestone": {
+    "criteria": {
+      "has_cobbeled_limestone": "2025-03-24 23:55:20 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/andesite_stairs": {
+    "criteria": {
+      "has_andesite": "2025-03-24 23:55:33 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/andesite_wall_from_andesite_stonecutting": {
+    "criteria": {
+      "has_andesite": "2025-03-24 23:55:33 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/copper_nugget__from_campfire_raw_copper": {
+    "criteria": {
+      "has_raw_copper": "2025-03-24 23:55:33 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/polished_andesite_slab_from_andesite_stonecutting": {
+    "criteria": {
+      "has_andesite": "2025-03-24 23:55:33 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/andesite_slab_from_andesite_stonecutting": {
+    "criteria": {
+      "has_andesite": "2025-03-24 23:55:33 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/rose_gold_ingot_from_super_alloying_raw_gold_and_raw_copper": {
+    "criteria": {
+      "has_raw_copper": "2025-03-24 23:55:33 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/andesite_stairs_from_andesite_stonecutting": {
+    "criteria": {
+      "has_andesite": "2025-03-24 23:55:33 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/copper_ingot_from_blasting_raw_copper": {
+    "criteria": {
+      "has_raw_copper": "2025-03-24 23:55:33 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/copper_ingot_from_basic_smelting_raw_copper": {
+    "criteria": {
+      "has_raw_copper": "2025-03-24 23:55:33 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/raw_copper_block": {
+    "criteria": {
+      "has_raw_copper": "2025-03-24 23:55:33 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/brass_ingot_from_alloying_raw_copper_and_raw_zinc": {
+    "criteria": {
+      "has_raw_copper": "2025-03-24 23:55:33 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/rose_gold_ingot_from_super_alloying_raw_copper_and_raw_gold": {
+    "criteria": {
+      "has_raw_copper": "2025-03-24 23:55:33 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/brass_ingot_from_super_alloying_raw_zinc_and_raw_copper": {
+    "criteria": {
+      "has_raw_copper": "2025-03-24 23:55:33 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/brass_ingot_from_alloying_raw_zinc_and_raw_copper": {
+    "criteria": {
+      "has_raw_copper": "2025-03-24 23:55:33 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/polished_andesite_from_andesite_stonecutting": {
+    "criteria": {
+      "has_andesite": "2025-03-24 23:55:33 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/brass_ingot_from_super_alloying_raw_copper_and_raw_zinc": {
+    "criteria": {
+      "has_raw_copper": "2025-03-24 23:55:33 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/polished_andesite": {
+    "criteria": {
+      "has_andesite": "2025-03-24 23:55:33 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/copper_ingot_from_soul_basic_smelting_raw_copper": {
+    "criteria": {
+      "has_raw_copper": "2025-03-24 23:55:33 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/andesite_wall": {
+    "criteria": {
+      "has_andesite": "2025-03-24 23:55:33 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/andesite_slab": {
+    "criteria": {
+      "has_andesite": "2025-03-24 23:55:33 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/polished_andesite_stairs_from_andesite_stonecutting": {
+    "criteria": {
+      "has_andesite": "2025-03-24 23:55:33 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/copper_ingot_from_smelting_raw_copper": {
+    "criteria": {
+      "has_raw_copper": "2025-03-24 23:55:33 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/brewing/gunpowder": {
+    "criteria": {
+      "has_sulfur": "2025-03-24 23:55:41 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/cherry_boat": {
+    "criteria": {
+      "in_water": "2025-03-24 23:55:54 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/bamboo_raft": {
+    "criteria": {
+      "in_water": "2025-03-24 23:55:54 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/spruce_boat": {
+    "criteria": {
+      "in_water": "2025-03-24 23:55:54 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/birch_boat": {
+    "criteria": {
+      "in_water": "2025-03-24 23:55:54 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/oak_boat": {
+    "criteria": {
+      "in_water": "2025-03-24 23:55:54 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/mangrove_boat": {
+    "criteria": {
+      "in_water": "2025-03-24 23:55:54 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/acacia_boat": {
+    "criteria": {
+      "in_water": "2025-03-24 23:55:54 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/jungle_boat": {
+    "criteria": {
+      "in_water": "2025-03-24 23:55:54 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/dark_oak_boat": {
+    "criteria": {
+      "in_water": "2025-03-24 23:55:54 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/polished_deepslate": {
+    "criteria": {
+      "has_cobbled_deepslate": "2025-03-24 23:56:02 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/deepslate_tile_stairs_from_cobbled_deepslate_stonecutting": {
+    "criteria": {
+      "has_cobbled_deepslate": "2025-03-24 23:56:02 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/deepslate_brick_stairs_from_cobbled_deepslate_stonecutting": {
+    "criteria": {
+      "has_cobbled_deepslate": "2025-03-24 23:56:02 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/chiseled_deepslate_from_cobbled_deepslate_stonecutting": {
+    "criteria": {
+      "has_cobbled_deepslate": "2025-03-24 23:56:02 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/cobbled_deepslate_slab": {
+    "criteria": {
+      "has_cobbled_deepslate": "2025-03-24 23:56:02 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/cobbled_deepslate_wall_from_cobbled_deepslate_stonecutting": {
+    "criteria": {
+      "has_cobbled_deepslate": "2025-03-24 23:56:02 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/cobbled_deepslate_wall": {
+    "criteria": {
+      "has_cobbled_deepslate": "2025-03-24 23:56:02 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/polished_deepslate_wall_from_cobbled_deepslate_stonecutting": {
+    "criteria": {
+      "has_cobbled_deepslate": "2025-03-24 23:56:02 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/cobbled_deepslate_stairs_from_cobbled_deepslate_stonecutting": {
+    "criteria": {
+      "has_cobbled_deepslate": "2025-03-24 23:56:02 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/deepslate": {
+    "criteria": {
+      "has_cobbled_deepslate": "2025-03-24 23:56:02 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/polished_deepslate_stairs_from_cobbled_deepslate_stonecutting": {
+    "criteria": {
+      "has_cobbled_deepslate": "2025-03-24 23:56:02 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/deepslate_brick_wall_from_cobbled_deepslate_stonecutting": {
+    "criteria": {
+      "has_cobbled_deepslate": "2025-03-24 23:56:02 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/polished_deepslate_from_cobbled_deepslate_stonecutting": {
+    "criteria": {
+      "has_cobbled_deepslate": "2025-03-24 23:56:02 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/polished_deepslate_slab_from_cobbled_deepslate_stonecutting": {
+    "criteria": {
+      "has_cobbled_deepslate": "2025-03-24 23:56:02 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/deepslate_brick_slab_from_cobbled_deepslate_stonecutting": {
+    "criteria": {
+      "has_cobbled_deepslate": "2025-03-24 23:56:02 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/cobbled_deepslate_slab_from_cobbled_deepslate_stonecutting": {
+    "criteria": {
+      "has_cobbled_deepslate": "2025-03-24 23:56:02 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/deepslate_tile_slab_from_cobbled_deepslate_stonecutting": {
+    "criteria": {
+      "has_cobbled_deepslate": "2025-03-24 23:56:02 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/cobbled_deepslate_stairs": {
+    "criteria": {
+      "has_cobbled_deepslate": "2025-03-24 23:56:02 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/deepslate_tile_wall_from_cobbled_deepslate_stonecutting": {
+    "criteria": {
+      "has_cobbled_deepslate": "2025-03-24 23:56:02 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/deepslate_bricks_from_cobbled_deepslate_stonecutting": {
+    "criteria": {
+      "has_cobbled_deepslate": "2025-03-24 23:56:02 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/super_alloying_furnace": {
+    "criteria": {
+      "has_cobbled_deepslate": "2025-03-24 23:56:02 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/deepslate_tiles_from_cobbled_deepslate_stonecutting": {
+    "criteria": {
+      "has_cobbled_deepslate": "2025-03-24 23:56:02 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/raw_iron_block": {
+    "criteria": {
+      "has_raw_iron": "2025-03-24 23:56:04 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/steel_ingot_from_alloying_coal_and_raw_iron": {
+    "criteria": {
+      "has_raw_iron": "2025-03-24 23:56:04 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/steel_ingot_from_super_alloying_raw_iron_and_coal": {
+    "criteria": {
+      "has_raw_iron": "2025-03-24 23:56:04 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/iron_ingot_from_smelting_raw_iron": {
+    "criteria": {
+      "has_raw_iron": "2025-03-24 23:56:04 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/steel_ingot_from_super_alloying_coal_and_raw_iron": {
+    "criteria": {
+      "has_raw_iron": "2025-03-24 23:56:04 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/steel_ingot_from_alloying_raw_iron_and_coal": {
+    "criteria": {
+      "has_raw_iron": "2025-03-24 23:56:04 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/iron_ingot_from_blasting_raw_iron": {
+    "criteria": {
+      "has_raw_iron": "2025-03-24 23:56:04 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/zinc_ingot_from_soul_basic_smelting_raw_zinc": {
+    "criteria": {
+      "has_raw_zinc": "2025-03-24 23:56:15 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/zinc_ingot_from_basic_smelting_raw_zinc": {
+    "criteria": {
+      "has_raw_zinc": "2025-03-24 23:56:15 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/zinc_ingot__from_smelting_raw_zinc": {
+    "criteria": {
+      "has_raw_zinc": "2025-03-24 23:56:15 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/zinc_ingot__from_blasting_raw_zinc": {
+    "criteria": {
+      "has_raw_zinc": "2025-03-24 23:56:15 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/green_gold_ingot_from_super_alloying_raw_silver_and_raw_gold": {
+    "criteria": {
+      "has_raw_silver": "2025-03-24 23:56:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/silver_ingot__from_blasting_raw_silver": {
+    "criteria": {
+      "has_raw_silver": "2025-03-24 23:56:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/green_gold_ingot_from_super_alloying_raw_gold_and_raw_silver": {
+    "criteria": {
+      "has_raw_silver": "2025-03-24 23:56:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/silver_ingot__from_smelting_raw_silver": {
+    "criteria": {
+      "has_raw_silver": "2025-03-24 23:56:55 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/gold_ingot_from_blasting_raw_gold": {
+    "criteria": {
+      "has_raw_gold": "2025-03-24 23:58:43 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/gold_ingot_from_smelting_raw_gold": {
+    "criteria": {
+      "has_raw_gold": "2025-03-24 23:58:43 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/raw_gold_block": {
+    "criteria": {
+      "has_raw_gold": "2025-03-24 23:58:43 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/brass_boots": {
+    "criteria": {
+      "has_brass_ingot": "2025-03-25 00:00:15 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/brass_axe": {
+    "criteria": {
+      "has_brass_ingot": "2025-03-25 00:00:15 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/brass_nugget": {
+    "criteria": {
+      "has_brass_ingot": "2025-03-25 00:00:15 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/brass_chestplate": {
+    "criteria": {
+      "has_brass_ingot": "2025-03-25 00:00:15 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/brass_sword": {
+    "criteria": {
+      "has_brass_ingot": "2025-03-25 00:00:15 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/brass_helmet": {
+    "criteria": {
+      "has_brass_ingot": "2025-03-25 00:00:15 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/brass_block": {
+    "criteria": {
+      "has_brass_ingot": "2025-03-25 00:00:15 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/brass_leggings": {
+    "criteria": {
+      "has_brass_ingot": "2025-03-25 00:00:15 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/brass_ingot": {
+    "criteria": {
+      "has_brass_ingot": "2025-03-25 00:00:15 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/brass_pickaxe": {
+    "criteria": {
+      "has_brass_ingot": "2025-03-25 00:00:15 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/brass_shovel": {
+    "criteria": {
+      "has_brass_ingot": "2025-03-25 00:00:15 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:abrassive_heat": {
+    "criteria": {
+      "has_item": "2025-03-25 00:00:15 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/brass_polisher": {
+    "criteria": {
+      "has_brass_ingot": "2025-03-25 00:00:15 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/brass_hoe": {
+    "criteria": {
+      "has_brass_ingot": "2025-03-25 00:00:15 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/bronzium_ingot_from_super_alloying_brass_ingot_and_bronze_ingot": {
+    "criteria": {
+      "has_brass_ingot": "2025-03-25 00:00:15 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/bronzium_ingot_from_super_alloying_bronze_ingot_and_brass_ingot": {
+    "criteria": {
+      "has_brass_ingot": "2025-03-25 00:00:15 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/bronze_helmet": {
+    "criteria": {
+      "has_bronze_ingot": "2025-03-25 00:00:32 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/bronze_shovel": {
+    "criteria": {
+      "has_bronze_ingot": "2025-03-25 00:00:32 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/bronze_boots": {
+    "criteria": {
+      "has_bronze_ingot": "2025-03-25 00:00:32 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/bronze_nugget": {
+    "criteria": {
+      "has_bronze_ingot": "2025-03-25 00:00:32 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/bronze_hoe": {
+    "criteria": {
+      "has_bronze_ingot": "2025-03-25 00:00:32 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:thats_new": {
+    "criteria": {
+      "has_item": "2025-03-25 00:00:32 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/bronze_polisher": {
+    "criteria": {
+      "has_bronze_ingot": "2025-03-25 00:00:32 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/bronze_axe": {
+    "criteria": {
+      "has_bronze_ingot": "2025-03-25 00:00:32 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/bronze_sword": {
+    "criteria": {
+      "has_bronze_ingot": "2025-03-25 00:00:32 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/bronze_leggings": {
+    "criteria": {
+      "has_bronze_ingot": "2025-03-25 00:00:32 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/bronze_block": {
+    "criteria": {
+      "has_bronze_ingot": "2025-03-25 00:00:32 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/bronze_ingot": {
+    "criteria": {
+      "has_bronze_ingot": "2025-03-25 00:00:32 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/bronze_chestplate": {
+    "criteria": {
+      "has_bronze_ingot": "2025-03-25 00:00:32 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/bronze_pickaxe": {
+    "criteria": {
+      "has_bronze_ingot": "2025-03-25 00:00:32 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:survival_root": {
+    "criteria": {
+      "has_block": "2025-03-25 00:00:45 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/rose_gold_block": {
+    "criteria": {
+      "has_rose_gold_ingot": "2025-03-25 00:01:03 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/rose_gold_ingot": {
+    "criteria": {
+      "has_rose_gold_ingot": "2025-03-25 00:01:03 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/rose_golden_hoe": {
+    "criteria": {
+      "has_rose_gold_ingot": "2025-03-25 00:01:03 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:blossom": {
+    "criteria": {
+      "has_item": "2025-03-25 00:01:03 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/rose_golden_boots": {
+    "criteria": {
+      "has_rose_gold_ingot": "2025-03-25 00:01:03 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/rose_golden_sword": {
+    "criteria": {
+      "has_rose_gold_ingot": "2025-03-25 00:01:03 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/rose_golden_helmet": {
+    "criteria": {
+      "has_rose_gold_ingot": "2025-03-25 00:01:03 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/rose_golden_pickaxe": {
+    "criteria": {
+      "has_rose_gold_ingot": "2025-03-25 00:01:03 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/rose_golden_leggings": {
+    "criteria": {
+      "has_rose_gold_ingot": "2025-03-25 00:01:03 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/rose_golden_shovel": {
+    "criteria": {
+      "has_rose_gold_ingot": "2025-03-25 00:01:03 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/rose_golden_chestplate": {
+    "criteria": {
+      "has_rose_gold_ingot": "2025-03-25 00:01:03 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/rose_golden_axe": {
+    "criteria": {
+      "has_rose_gold_ingot": "2025-03-25 00:01:03 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/rose_gold_nugget": {
+    "criteria": {
+      "has_rose_gold_ingot": "2025-03-25 00:01:03 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/diamond_leggings": {
+    "criteria": {
+      "has_diamond": "2025-03-25 00:01:29 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/diamond_sword": {
+    "criteria": {
+      "has_diamond": "2025-03-25 00:01:29 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/jukebox": {
+    "criteria": {
+      "has_diamond": "2025-03-25 00:01:29 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/diamond_chestplate": {
+    "criteria": {
+      "has_diamond": "2025-03-25 00:01:29 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/diamond_pickaxe": {
+    "criteria": {
+      "has_diamond": "2025-03-25 00:01:29 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/diamond_polisher": {
+    "criteria": {
+      "has_diamond": "2025-03-25 00:01:29 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:polish_diamond": {
+    "criteria": {
+      "has_material": "2025-03-25 00:01:29 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/diamond_hoe": {
+    "criteria": {
+      "has_diamond": "2025-03-25 00:01:29 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/diamond_shovel": {
+    "criteria": {
+      "has_diamond": "2025-03-25 00:01:29 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/diamond_boots": {
+    "criteria": {
+      "has_diamond": "2025-03-25 00:01:29 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/diamond_helmet": {
+    "criteria": {
+      "has_diamond": "2025-03-25 00:01:29 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/diamond_block": {
+    "criteria": {
+      "has_diamond": "2025-03-25 00:01:29 -0300"
+    },
+    "done": true
+  },
+  "minecraft:story/mine_diamond": {
+    "criteria": {
+      "diamond": "2025-03-25 00:01:29 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/diamond_axe": {
+    "criteria": {
+      "has_diamond": "2025-03-25 00:01:29 -0300"
+    },
+    "done": true
+  },
+  "minecraft:story/shiny_gear": {
+    "criteria": {
+      "diamond_helmet": "2025-03-25 00:01:43 -0300"
+    },
+    "done": true
+  },
+  "minecraft:nether/netherite_armor": {
+    "criteria": {
+      "netherite_armor": "2025-03-25 00:01:52 -0300"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/waxed_cut_copper_stairs_from_honeycomb": {
     "criteria": {
       "has_cut_copper_stairs": "2025-03-25 00:02:21 -0300",
@@ -86,12 +1154,6 @@
     "criteria": {
       "has_the_recipe": "2025-03-25 00:02:21 -0300",
       "has_weathered_copper": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "minecraft:recipes/redstone/lever": {
-    "criteria": {
-      "has_cobblestone": "2025-03-24 23:55:03 -0300"
     },
     "done": true
   },
@@ -124,14 +1186,7 @@
   },
   "minecraft:recipes/building_blocks/stone_bricks": {
     "criteria": {
-      "has_stone": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/polished_deepslate": {
-    "criteria": {
-      "has_cobbled_deepslate": "2025-03-24 23:56:02 -0300"
     },
     "done": true
   },
@@ -343,12 +1398,6 @@
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/deepslate_tile_stairs_from_cobbled_deepslate_stonecutting": {
-    "criteria": {
-      "has_cobbled_deepslate": "2025-03-24 23:56:02 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/light_gray_concrete_powder": {
     "criteria": {
       "has_sand": "2025-03-25 00:02:21 -0300",
@@ -494,12 +1543,6 @@
     },
     "done": true
   },
-  "minecraft:recipes/combat/diamond_leggings": {
-    "criteria": {
-      "has_diamond": "2025-03-25 00:01:29 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/decorations/gray_stained_glass_pane": {
     "criteria": {
       "has_glass": "2025-03-25 00:02:21 -0300",
@@ -587,13 +1630,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/pink_dye_from_grinding_pink_tulip": {
-    "criteria": {
-      "has_pink_tulip": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/cherry_slab": {
     "criteria": {
       "has_the_recipe": "2025-03-25 00:02:21 -0300",
@@ -642,13 +1678,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/cyan_dye_from_grinding_pitcher_plant": {
-    "criteria": {
-      "has_pitcher_plant": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/decorations/orange_candle": {
     "criteria": {
       "has_the_recipe": "2025-03-25 00:02:21 -0300",
@@ -660,12 +1689,6 @@
     "criteria": {
       "has_stone_bricks": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/combat/brass_boots": {
-    "criteria": {
-      "has_brass_ingot": "2025-03-25 00:00:15 -0300"
     },
     "done": true
   },
@@ -794,12 +1817,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/bronze_ingot_from_alloying_raw_tin_and_raw_copper": {
-    "criteria": {
-      "has_raw_tin": "2025-03-24 23:55:18 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/misc/gold_ingot_from_gold_block": {
     "criteria": {
       "has_gold_block": "2025-03-25 00:02:21 -0300",
@@ -817,13 +1834,6 @@
   "minecraft:recipes/food/baked_potato_from_campfire_cooking": {
     "criteria": {
       "has_potato": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/white_dye_from_grinding_bone_meal": {
-    "criteria": {
-      "has_bone_meal": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
     },
     "done": true
@@ -860,12 +1870,6 @@
   "minecraft:husbandry/make_a_sign_glow": {
     "criteria": {
       "make_a_sign_glow": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/green_gold_ingot_from_super_alloying_raw_silver_and_raw_gold": {
-    "criteria": {
-      "has_raw_silver": "2025-03-24 23:56:55 -0300"
     },
     "done": true
   },
@@ -986,13 +1990,6 @@
     "criteria": {
       "has_glass": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/grinder": {
-    "criteria": {
-      "has_the_recipe": "2025-03-25 00:02:21 -0300",
-      "has_iron_ingot": "2025-03-25 00:02:21 -0300"
     },
     "done": true
   },
@@ -1121,13 +2118,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/magenta_dye_from_grinding_allium": {
-    "criteria": {
-      "has_allium": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/redstone/oak_trapdoor": {
     "criteria": {
       "has_the_recipe": "2025-03-25 00:02:21 -0300",
@@ -1164,22 +2154,10 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/tin_ingot_from_soul_basic_smelting_raw_tin": {
-    "criteria": {
-      "has_raw_tin": "2025-03-24 23:55:18 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/brewing/magma_cream": {
     "criteria": {
       "has_blaze_powder": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/deepslate_brick_stairs_from_cobbled_deepslate_stonecutting": {
-    "criteria": {
-      "has_cobbled_deepslate": "2025-03-24 23:56:02 -0300"
     },
     "done": true
   },
@@ -1203,22 +2181,10 @@
     },
     "done": true
   },
-  "minecraft:recipes/combat/stone_sword": {
-    "criteria": {
-      "has_cobblestone": "2025-03-24 23:55:03 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:recipes/misc/silver_nugget__from_smelting_silver_axe": {
     "criteria": {
       "has_silver_axe": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "minecraft:recipes/decorations/cobblestone_wall": {
-    "criteria": {
-      "has_cobblestone": "2025-03-24 23:55:03 -0300"
     },
     "done": true
   },
@@ -1233,12 +2199,6 @@
     "criteria": {
       "has_smithing_trim_template": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/zinc_ingot_from_soul_basic_smelting_raw_zinc": {
-    "criteria": {
-      "has_raw_zinc": "2025-03-24 23:56:15 -0300"
     },
     "done": true
   },
@@ -1403,28 +2363,10 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/bronze_ingot_from_alloying_raw_copper_and_raw_tin": {
-    "criteria": {
-      "has_raw_tin": "2025-03-24 23:55:18 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/misc/brown_dye": {
     "criteria": {
       "has_cocoa_beans": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "minecraft:recipes/tools/stone_axe": {
-    "criteria": {
-      "has_cobblestone": "2025-03-24 23:55:03 -0300"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/raw_iron_block": {
-    "criteria": {
-      "has_raw_iron": "2025-03-24 23:56:04 -0300"
     },
     "done": true
   },
@@ -1526,12 +2468,6 @@
     },
     "done": true
   },
-  "minecraft:recipes/combat/diamond_sword": {
-    "criteria": {
-      "has_diamond": "2025-03-25 00:01:29 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/decorations/cyan_stained_glass_pane": {
     "criteria": {
       "has_glass": "2025-03-25 00:02:21 -0300",
@@ -1557,12 +2493,6 @@
     "criteria": {
       "has_log": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "minecraft:recipes/decorations/jukebox": {
-    "criteria": {
-      "has_diamond": "2025-03-25 00:01:29 -0300"
     },
     "done": true
   },
@@ -1642,13 +2572,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/grounded_yerba_mate_from_grinding_yerba_mate": {
-    "criteria": {
-      "has_yerba_mate": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/diorite_slab": {
     "criteria": {
       "has_diorite": "2025-03-25 00:02:21 -0300",
@@ -1666,12 +2589,6 @@
     "criteria": {
       "has_stone_bricks": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/tools/brass_axe": {
-    "criteria": {
-      "has_brass_ingot": "2025-03-25 00:00:15 -0300"
     },
     "done": true
   },
@@ -1788,28 +2705,10 @@
     },
     "done": true
   },
-  "minecraft:recipes/combat/diamond_chestplate": {
-    "criteria": {
-      "has_diamond": "2025-03-25 00:01:29 -0300"
-    },
-    "done": true
-  },
-  "minecraft:story/mine_stone": {
-    "criteria": {
-      "get_stone": "2025-03-24 23:55:03 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/waxed_oxidized_cut_copper_slab_from_waxed_oxidized_cut_copper_stonecutting": {
     "criteria": {
       "has_waxed_oxidized_cut_copper": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "minecraft:recipes/decorations/furnace": {
-    "criteria": {
-      "has_cobblestone": "2025-03-24 23:55:03 -0300"
     },
     "done": true
   },
@@ -1838,12 +2737,6 @@
     "criteria": {
       "has_beetroot": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/andesite_stairs": {
-    "criteria": {
-      "has_andesite": "2025-03-24 23:55:33 -0300"
     },
     "done": true
   },
@@ -1882,23 +2775,11 @@
     },
     "done": true
   },
-  "minecraft:recipes/misc/gold_ingot_from_blasting_raw_gold": {
-    "criteria": {
-      "has_raw_gold": "2025-03-24 23:58:43 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/green_concrete_powder": {
     "criteria": {
       "has_sand": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300",
       "has_gravel": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/adobe_alloying_furnace": {
-    "criteria": {
-      "has_raw_tin": "2025-03-24 23:55:18 -0300"
     },
     "done": true
   },
@@ -1918,22 +2799,9 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/misc/brass_nugget": {
-    "criteria": {
-      "has_brass_ingot": "2025-03-25 00:00:15 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/dye_orange_carpet": {
     "criteria": {
       "has_needed_dye": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/orange_dye_from_grinding_orange": {
-    "criteria": {
-      "has_orange": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
     },
     "done": true
@@ -2034,12 +2902,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/combat/bronze_helmet": {
-    "criteria": {
-      "has_bronze_ingot": "2025-03-25 00:00:32 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:recipes/building_blocks/orange_door": {
     "criteria": {
       "has_orange_planks": "2025-03-25 00:02:21 -0300",
@@ -2061,12 +2923,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/combat/brass_chestplate": {
-    "criteria": {
-      "has_brass_ingot": "2025-03-25 00:00:15 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/misc/sentry_armor_trim_smithing_template": {
     "criteria": {
       "has_sentry_armor_trim_smithing_template": "2025-03-25 00:02:21 -0300",
@@ -2078,12 +2934,6 @@
     "criteria": {
       "has_oxidized_copper": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/building_blocks/cobbeled_limestone_stair_from_stone_cutting_cobbeled_limestone": {
-    "criteria": {
-      "has_cobbeled_limestone": "2025-03-24 23:55:20 -0300"
     },
     "done": true
   },
@@ -2157,19 +3007,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/light_gray_dye_from_grinding_white_tulip": {
-    "criteria": {
-      "has_white_tulip": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/rose_gold_block": {
-    "criteria": {
-      "has_rose_gold_ingot": "2025-03-25 00:01:03 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/misc/gold_ingot_from_smelting_gold_ore": {
     "criteria": {
       "has_gold_ore": "2025-03-25 00:02:21 -0300",
@@ -2195,12 +3032,6 @@
     "criteria": {
       "has_limestone_brick": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/combat/brass_sword": {
-    "criteria": {
-      "has_brass_ingot": "2025-03-25 00:00:15 -0300"
     },
     "done": true
   },
@@ -2328,12 +3159,6 @@
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/granite_slab_from_granite_stonecutting": {
-    "criteria": {
-      "has_granite": "2025-03-24 23:55:19 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:recipes/misc/rose_gold_nugget__from_smelting_rose_golden_hoe": {
     "criteria": {
       "has_rose_golden_hoe": "2025-03-25 00:02:21 -0300",
@@ -2407,13 +3232,6 @@
   "minecraft:recipes/building_blocks/waxed_exposed_cut_copper_from_waxed_exposed_copper_stonecutting": {
     "criteria": {
       "has_waxed_exposed_copper": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/red_dye_from_grinding_poppy": {
-    "criteria": {
-      "has_poppy": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
     },
     "done": true
@@ -2516,12 +3334,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:survival_root": {
-    "criteria": {
-      "has_block": "2025-03-25 00:00:45 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/combat/leather_chestplate": {
     "criteria": {
       "has_leather": "2025-03-25 00:02:21 -0300",
@@ -2589,12 +3401,6 @@
     "criteria": {
       "has_wood_slab": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/rose_gold_ingot": {
-    "criteria": {
-      "has_rose_gold_ingot": "2025-03-25 00:01:03 -0300"
     },
     "done": true
   },
@@ -2674,12 +3480,6 @@
     },
     "done": true
   },
-  "minecraft:recipes/decorations/andesite_wall_from_andesite_stonecutting": {
-    "criteria": {
-      "has_andesite": "2025-03-24 23:55:33 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:recipes/building_blocks/polished_stone_stair_from_stone_cutting_stone": {
     "criteria": {
       "has_stone": "2025-03-25 00:02:21 -0300",
@@ -2753,22 +3553,9 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/tools/bronze_shovel": {
-    "criteria": {
-      "has_bronze_ingot": "2025-03-25 00:00:32 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/smooth_red_sandstone_slab": {
     "criteria": {
       "has_smooth_red_sandstone": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/light_gray_dye_from_grinding_azure_bluet": {
-    "criteria": {
-      "has_azure_bluet": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
     },
     "done": true
@@ -2877,12 +3664,6 @@
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/chiseled_deepslate_from_cobbled_deepslate_stonecutting": {
-    "criteria": {
-      "has_cobbled_deepslate": "2025-03-24 23:56:02 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:get_all_gems": {
     "criteria": {
       "has_materials": "2025-03-25 00:02:21 -0300"
@@ -2931,13 +3712,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/light_blue_dye_from_grinding_blue_orchid": {
-    "criteria": {
-      "has_blue_orchid": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/cut_copper_stairs_from_copper_block_stonecutting": {
     "criteria": {
       "has_copper_block": "2025-03-25 00:02:21 -0300",
@@ -2952,28 +3726,10 @@
     },
     "done": true
   },
-  "minecraft:recipes/decorations/chest": {
-    "criteria": {
-      "has_lots_of_items": "2025-03-24 23:55:18 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/decorations/mud_brick_wall": {
     "criteria": {
       "has_mud_bricks": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "minecraft:story/shiny_gear": {
-    "criteria": {
-      "diamond_helmet": "2025-03-25 00:01:43 -0300"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/cobbled_deepslate_slab": {
-    "criteria": {
-      "has_cobbled_deepslate": "2025-03-24 23:56:02 -0300"
     },
     "done": true
   },
@@ -3122,12 +3878,6 @@
     },
     "done": true
   },
-  "minecraft:recipes/decorations/cobbled_deepslate_wall_from_cobbled_deepslate_stonecutting": {
-    "criteria": {
-      "has_cobbled_deepslate": "2025-03-24 23:56:02 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/mossy_cobblestone_stairs_from_mossy_cobblestone_stonecutting": {
     "criteria": {
       "has_mossy_cobblestone": "2025-03-25 00:02:21 -0300",
@@ -3155,12 +3905,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/zinc_ingot_from_basic_smelting_raw_zinc": {
-    "criteria": {
-      "has_raw_zinc": "2025-03-24 23:56:15 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/dye_pink_bed": {
     "criteria": {
       "has_needed_dye": "2025-03-25 00:02:21 -0300",
@@ -3172,12 +3916,6 @@
     "criteria": {
       "has_log": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/copper_nugget__from_campfire_raw_copper": {
-    "criteria": {
-      "has_raw_copper": "2025-03-24 23:55:33 -0300"
     },
     "done": true
   },
@@ -3209,12 +3947,6 @@
       "has_walnut_wood": "2025-03-25 00:02:21 -0300",
       "has_walnut_log": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/combat/bronze_boots": {
-    "criteria": {
-      "has_bronze_ingot": "2025-03-25 00:00:32 -0300"
     },
     "done": true
   },
@@ -3250,12 +3982,6 @@
     "criteria": {
       "has_stone": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "minecraft:recipes/misc/furnace": {
-    "criteria": {
-      "has_the_recipe": "2025-03-24 23:55:03 -0300"
     },
     "done": true
   },
@@ -3330,12 +4056,6 @@
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/cobblestone_slab_from_cobblestone_stonecutting": {
-    "criteria": {
-      "has_cobblestone": "2025-03-24 23:55:03 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/combat/turtle_helmet": {
     "criteria": {
       "has_scute": "2025-03-25 00:02:21 -0300",
@@ -3346,13 +4066,6 @@
   "enhanced_playthrough:recipes/misc/copper_ingot__from_smelting_nether_copper_ore": {
     "criteria": {
       "has_nether_copper_ore": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/sugar_from_grinding_sugar_cane": {
-    "criteria": {
-      "has_sugar_cane": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
     },
     "done": true
@@ -3378,12 +4091,6 @@
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/polished_andesite_slab_from_andesite_stonecutting": {
-    "criteria": {
-      "has_andesite": "2025-03-24 23:55:33 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:recipes/building_blocks/lemon_stair": {
     "criteria": {
       "has_lemon_planks": "2025-03-25 00:02:21 -0300",
@@ -3405,12 +4112,6 @@
     },
     "done": true
   },
-  "minecraft:recipes/transportation/cherry_boat": {
-    "criteria": {
-      "in_water": "2025-03-24 23:55:54 -0300"
-    },
-    "done": true
-  },
   "minecraft:end/dragon_breath": {
     "criteria": {
       "dragon_breath": "2025-03-25 00:02:21 -0300"
@@ -3422,12 +4123,6 @@
       "has_sand": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300",
       "has_gravel": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "minecraft:recipes/tools/diamond_pickaxe": {
-    "criteria": {
-      "has_diamond": "2025-03-25 00:01:29 -0300"
     },
     "done": true
   },
@@ -3488,12 +4183,6 @@
     "criteria": {
       "has_disc_fragment_5": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/tools/diamond_polisher": {
-    "criteria": {
-      "has_diamond": "2025-03-25 00:01:29 -0300"
     },
     "done": true
   },
@@ -3558,12 +4247,6 @@
     },
     "done": true
   },
-  "minecraft:recipes/decorations/granite_wall_from_granite_stonecutting": {
-    "criteria": {
-      "has_granite": "2025-03-24 23:55:19 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/redstone/cherry_trapdoor": {
     "criteria": {
       "has_the_recipe": "2025-03-25 00:02:21 -0300",
@@ -3583,18 +4266,6 @@
       "has_iron_nugget": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300",
       "has_iron_ingot": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/combat/brass_helmet": {
-    "criteria": {
-      "has_brass_ingot": "2025-03-25 00:00:15 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/brass_block": {
-    "criteria": {
-      "has_brass_ingot": "2025-03-25 00:00:15 -0300"
     },
     "done": true
   },
@@ -3630,12 +4301,6 @@
     "criteria": {
       "has_the_recipe": "2025-03-25 00:02:21 -0300",
       "has_raw_rubi": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/tools/rose_golden_hoe": {
-    "criteria": {
-      "has_rose_gold_ingot": "2025-03-25 00:01:03 -0300"
     },
     "done": true
   },
@@ -3692,19 +4357,6 @@
     "criteria": {
       "has_walnut_planks": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/yellow_dye_from_grinding_sunflower": {
-    "criteria": {
-      "has_sunflower": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/bronze_nugget": {
-    "criteria": {
-      "has_bronze_ingot": "2025-03-25 00:00:32 -0300"
     },
     "done": true
   },
@@ -3778,22 +4430,10 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/bronze_ingot_from_super_alloying_raw_tin_and_raw_copper": {
-    "criteria": {
-      "has_raw_tin": "2025-03-24 23:55:18 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/decorations/light_blue_stained_glass_pane": {
     "criteria": {
       "has_glass": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/bronze_ingot_from_super_alloying_raw_copper_and_raw_tin": {
-    "criteria": {
-      "has_raw_tin": "2025-03-24 23:55:18 -0300"
     },
     "done": true
   },
@@ -4012,12 +4652,6 @@
     },
     "done": true
   },
-  "minecraft:recipes/decorations/cobbled_deepslate_wall": {
-    "criteria": {
-      "has_cobbled_deepslate": "2025-03-24 23:56:02 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/packed_mud": {
     "criteria": {
       "has_mud": "2025-03-25 00:02:21 -0300",
@@ -4039,28 +4673,10 @@
     },
     "done": true
   },
-  "enhanced_playthrough:blossom": {
-    "criteria": {
-      "has_item": "2025-03-25 00:01:03 -0300"
-    },
-    "done": true
-  },
-  "minecraft:recipes/decorations/polished_deepslate_wall_from_cobbled_deepslate_stonecutting": {
-    "criteria": {
-      "has_cobbled_deepslate": "2025-03-24 23:56:02 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/smooth_sandstone_slab": {
     "criteria": {
       "has_smooth_sandstone": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/combat/rose_golden_boots": {
-    "criteria": {
-      "has_rose_gold_ingot": "2025-03-25 00:01:03 -0300"
     },
     "done": true
   },
@@ -4078,22 +4694,10 @@
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/stone": {
-    "criteria": {
-      "has_cobblestone": "2025-03-24 23:55:03 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/decorations/green_carpet": {
     "criteria": {
       "has_green_wool": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/combat/brass_leggings": {
-    "criteria": {
-      "has_brass_ingot": "2025-03-25 00:00:15 -0300"
     },
     "done": true
   },
@@ -4108,24 +4712,6 @@
     "criteria": {
       "has_stone": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:polish_diamond": {
-    "criteria": {
-      "has_material": "2025-03-25 00:01:29 -0300"
-    },
-    "done": true
-  },
-  "minecraft:recipes/transportation/bamboo_raft": {
-    "criteria": {
-      "in_water": "2025-03-24 23:55:54 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/adobe_furnace": {
-    "criteria": {
-      "has_cobblestone": "2025-03-24 23:55:03 -0300"
     },
     "done": true
   },
@@ -4168,13 +4754,6 @@
     "criteria": {
       "has_the_recipe": "2025-03-25 00:02:21 -0300",
       "has_purple_wool": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/brown_dye_from_grinding_cocoa_beans": {
-    "criteria": {
-      "has_cocoa_beans": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
     },
     "done": true
   },
@@ -4273,12 +4852,6 @@
       "has_glass_pane": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300",
       "has_orange_dye": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/silver_ingot__from_blasting_raw_silver": {
-    "criteria": {
-      "has_raw_silver": "2025-03-24 23:56:55 -0300"
     },
     "done": true
   },
@@ -4595,18 +5168,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/steel_ingot_from_alloying_coal_and_raw_iron": {
-    "criteria": {
-      "has_raw_iron": "2025-03-24 23:56:04 -0300"
-    },
-    "done": true
-  },
-  "minecraft:recipes/transportation/spruce_boat": {
-    "criteria": {
-      "in_water": "2025-03-24 23:55:54 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/diorite": {
     "criteria": {
       "has_quartz": "2025-03-25 00:02:21 -0300",
@@ -4635,28 +5196,10 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/combat/rose_golden_sword": {
-    "criteria": {
-      "has_rose_gold_ingot": "2025-03-25 00:01:03 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/decorations/spruce_hanging_sign": {
     "criteria": {
       "has_stripped_logs": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/tools/bronze_hoe": {
-    "criteria": {
-      "has_bronze_ingot": "2025-03-25 00:00:32 -0300"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/polished_granite_from_granite_stonecutting": {
-    "criteria": {
-      "has_granite": "2025-03-24 23:55:19 -0300"
     },
     "done": true
   },
@@ -4727,12 +5270,6 @@
     "criteria": {
       "has_redstone": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/steel_ingot_from_super_alloying_raw_iron_and_coal": {
-    "criteria": {
-      "has_raw_iron": "2025-03-24 23:56:04 -0300"
     },
     "done": true
   },
@@ -4864,13 +5401,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/black_dye_from_grinding_wither_rose": {
-    "criteria": {
-      "has_wither_rose": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/misc/emerald_from_smelting_deepslate_emerald_ore": {
     "criteria": {
       "has_deepslate_emerald_ore": "2025-03-25 00:02:21 -0300",
@@ -4934,12 +5464,6 @@
     },
     "done": true
   },
-  "minecraft:recipes/transportation/birch_boat": {
-    "criteria": {
-      "in_water": "2025-03-24 23:55:54 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/cut_copper_from_copper_block_stonecutting": {
     "criteria": {
       "has_copper_block": "2025-03-25 00:02:21 -0300",
@@ -4951,12 +5475,6 @@
     "criteria": {
       "has_waxed_copper_block": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/cobbled_deepslate_stairs_from_cobbled_deepslate_stonecutting": {
-    "criteria": {
-      "has_cobbled_deepslate": "2025-03-24 23:56:02 -0300"
     },
     "done": true
   },
@@ -4978,12 +5496,6 @@
     "criteria": {
       "has_tide_armor_trim_smithing_template": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/green_gold_ingot_from_super_alloying_raw_gold_and_raw_silver": {
-    "criteria": {
-      "has_raw_silver": "2025-03-24 23:56:55 -0300"
     },
     "done": true
   },
@@ -5022,12 +5534,6 @@
     },
     "done": true
   },
-  "minecraft:recipes/tools/diamond_hoe": {
-    "criteria": {
-      "has_diamond": "2025-03-25 00:01:29 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/transportation/activator_rail": {
     "criteria": {
       "has_rail": "2025-03-25 00:02:21 -0300",
@@ -5039,12 +5545,6 @@
     "criteria": {
       "has_the_recipe": "2025-03-25 00:02:21 -0300",
       "has_planks": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "minecraft:recipes/tools/diamond_shovel": {
-    "criteria": {
-      "has_diamond": "2025-03-25 00:01:29 -0300"
     },
     "done": true
   },
@@ -5074,22 +5574,10 @@
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/deepslate": {
-    "criteria": {
-      "has_cobbled_deepslate": "2025-03-24 23:56:02 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:recipes/tin_ingot_from_soul_basic_smelting_tin_ore": {
     "criteria": {
       "has_tin_ore": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/granite_slab": {
-    "criteria": {
-      "has_granite": "2025-03-24 23:55:19 -0300"
     },
     "done": true
   },
@@ -5226,12 +5714,6 @@
     },
     "done": true
   },
-  "minecraft:recipes/transportation/oak_boat": {
-    "criteria": {
-      "in_water": "2025-03-24 23:55:54 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:recipes/green_dye_from_basic_smelting_cactus": {
     "criteria": {
       "has_cactus": "2025-03-25 00:02:21 -0300",
@@ -5302,18 +5784,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/combat/rose_golden_helmet": {
-    "criteria": {
-      "has_rose_gold_ingot": "2025-03-25 00:01:03 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/tools/rose_golden_pickaxe": {
-    "criteria": {
-      "has_rose_gold_ingot": "2025-03-25 00:01:03 -0300"
-    },
-    "done": true
-  },
   "minecraft:husbandry/kill_axolotl_target": {
     "criteria": {
       "kill_axolotl_target": "2025-03-25 00:02:21 -0300"
@@ -5369,12 +5839,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/building_blocks/cobbeled_limestone_slab_from_stone_cutting_cobbeled_limestone": {
-    "criteria": {
-      "has_cobbeled_limestone": "2025-03-24 23:55:20 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:recipes/misc/zinc_ingot__from_blasting_zinc_ore": {
     "criteria": {
       "has_zinc_ore": "2025-03-25 00:02:21 -0300",
@@ -5421,12 +5885,6 @@
     "criteria": {
       "has_limestone": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/andesite_slab_from_andesite_stonecutting": {
-    "criteria": {
-      "has_andesite": "2025-03-24 23:55:33 -0300"
     },
     "done": true
   },
@@ -5557,12 +6015,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:thats_new": {
-    "criteria": {
-      "has_item": "2025-03-25 00:00:32 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/tools/lead": {
     "criteria": {
       "has_slime_ball": "2025-03-25 00:02:21 -0300",
@@ -5588,12 +6040,6 @@
   "enhanced_playthrough:the_goldenpuff_girls": {
     "criteria": {
       "has_item": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/polished_deepslate_stairs_from_cobbled_deepslate_stonecutting": {
-    "criteria": {
-      "has_cobbled_deepslate": "2025-03-24 23:56:02 -0300"
     },
     "done": true
   },
@@ -5749,13 +6195,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/orange_dye_from_grinding_torchflower": {
-    "criteria": {
-      "has_torchflower": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/misc/iron_ingot_from_smelting_deepslate_iron_ore": {
     "criteria": {
       "has_deepslate_iron_ore": "2025-03-25 00:02:21 -0300",
@@ -5840,18 +6279,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/misc/tin_ingot__from_blasting_raw_tin": {
-    "criteria": {
-      "has_raw_tin": "2025-03-24 23:55:18 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/tin_ingot_from_basic_smelting_raw_tin": {
-    "criteria": {
-      "has_raw_tin": "2025-03-24 23:55:18 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:recipes/bronzium_hoe_from_smithing_bronze_hoe_with_brass_ingot": {
     "criteria": {
       "has_bronze_hoe": "2025-03-25 00:02:21 -0300",
@@ -5863,12 +6290,6 @@
     "criteria": {
       "has_exposed_copper": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "minecraft:nether/netherite_armor": {
-    "criteria": {
-      "netherite_armor": "2025-03-25 00:01:52 -0300"
     },
     "done": true
   },
@@ -5911,12 +6332,6 @@
     "criteria": {
       "has_the_recipe": "2025-03-25 00:02:21 -0300",
       "has_planks": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/brass_ingot": {
-    "criteria": {
-      "has_brass_ingot": "2025-03-25 00:00:15 -0300"
     },
     "done": true
   },
@@ -6070,12 +6485,6 @@
     },
     "done": true
   },
-  "minecraft:recipes/combat/diamond_boots": {
-    "criteria": {
-      "has_diamond": "2025-03-25 00:01:29 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/waxed_weathered_cut_copper_stairs_from_honeycomb": {
     "criteria": {
       "has_the_recipe": "2025-03-25 00:02:21 -0300",
@@ -6093,37 +6502,6 @@
   "minecraft:recipes/building_blocks/mossy_cobblestone_stairs": {
     "criteria": {
       "has_mossy_cobblestone": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/tools/brass_pickaxe": {
-    "criteria": {
-      "has_brass_ingot": "2025-03-25 00:00:15 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/zinc_ingot__from_smelting_raw_zinc": {
-    "criteria": {
-      "has_raw_zinc": "2025-03-24 23:56:15 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/tools/bronze_polisher": {
-    "criteria": {
-      "has_bronze_ingot": "2025-03-25 00:00:32 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/silver_ingot__from_smelting_raw_silver": {
-    "criteria": {
-      "has_raw_silver": "2025-03-24 23:56:55 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/magenta_dye_from_grinding_lilac": {
-    "criteria": {
-      "has_lilac": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
     },
     "done": true
@@ -6255,12 +6633,6 @@
     },
     "done": true
   },
-  "minecraft:recipes/transportation/mangrove_boat": {
-    "criteria": {
-      "in_water": "2025-03-24 23:55:54 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/redstone/spruce_button": {
     "criteria": {
       "has_the_recipe": "2025-03-25 00:02:21 -0300",
@@ -6296,12 +6668,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/building_blocks/cobbeled_limestone_wall": {
-    "criteria": {
-      "has_cobbeled_limestone": "2025-03-24 23:55:20 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/stone_brick_slab_from_stone_stonecutting": {
     "criteria": {
       "has_stone": "2025-03-25 00:02:21 -0300",
@@ -6320,12 +6686,6 @@
     "criteria": {
       "has_oxeye_daisy": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/rose_gold_ingot_from_super_alloying_raw_gold_and_raw_copper": {
-    "criteria": {
-      "has_raw_copper": "2025-03-24 23:55:33 -0300"
     },
     "done": true
   },
@@ -6367,13 +6727,6 @@
   "minecraft:recipes/transportation/detector_rail": {
     "criteria": {
       "has_rail": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/white_dye_from_grinding_lily_of_the_valley": {
-    "criteria": {
-      "has_lily_of_the_valley": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
     },
     "done": true
@@ -6509,12 +6862,6 @@
     },
     "done": true
   },
-  "minecraft:recipes/misc/gold_ingot_from_smelting_raw_gold": {
-    "criteria": {
-      "has_raw_gold": "2025-03-24 23:58:43 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:recipes/building_blocks/polished_stone": {
     "criteria": {
       "has_stone": "2025-03-25 00:02:21 -0300",
@@ -6529,29 +6876,10 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/pink_dye_from_grinding_peony": {
-    "criteria": {
-      "has_peony": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/combat/rose_golden_leggings": {
-    "criteria": {
-      "has_rose_gold_ingot": "2025-03-25 00:01:03 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/misc/shaper_armor_trim_smithing_template": {
     "criteria": {
       "has_shaper_armor_trim_smithing_template": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/andesite_stairs_from_andesite_stonecutting": {
-    "criteria": {
-      "has_andesite": "2025-03-24 23:55:33 -0300"
     },
     "done": true
   },
@@ -6595,18 +6923,6 @@
     "criteria": {
       "has_the_recipe": "2025-03-25 00:02:21 -0300",
       "has_planks": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "minecraft:recipes/decorations/deepslate_brick_wall_from_cobbled_deepslate_stonecutting": {
-    "criteria": {
-      "has_cobbled_deepslate": "2025-03-24 23:56:02 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/tools/bronze_axe": {
-    "criteria": {
-      "has_bronze_ingot": "2025-03-25 00:00:32 -0300"
     },
     "done": true
   },
@@ -6694,12 +7010,6 @@
     },
     "done": true
   },
-  "minecraft:recipes/misc/copper_ingot_from_blasting_raw_copper": {
-    "criteria": {
-      "has_raw_copper": "2025-03-24 23:55:33 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/misc/wild_armor_trim_smithing_template": {
     "criteria": {
       "has_the_recipe": "2025-03-25 00:02:21 -0300",
@@ -6737,12 +7047,6 @@
   "minecraft:husbandry/ride_a_boat_with_a_goat": {
     "criteria": {
       "ride_a_boat_with_a_goat": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/copper_ingot_from_basic_smelting_raw_copper": {
-    "criteria": {
-      "has_raw_copper": "2025-03-24 23:55:33 -0300"
     },
     "done": true
   },
@@ -6787,19 +7091,6 @@
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/polished_deepslate_from_cobbled_deepslate_stonecutting": {
-    "criteria": {
-      "has_cobbled_deepslate": "2025-03-24 23:56:02 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/pink_dye_from_grinding_pink_petals": {
-    "criteria": {
-      "has_pink_petals": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/food/cooked_beef_from_smoking": {
     "criteria": {
       "has_beef": "2025-03-25 00:02:21 -0300",
@@ -6839,12 +7130,6 @@
     "criteria": {
       "has_nether_bricks": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/polished_deepslate_slab_from_cobbled_deepslate_stonecutting": {
-    "criteria": {
-      "has_cobbled_deepslate": "2025-03-24 23:56:02 -0300"
     },
     "done": true
   },
@@ -6960,22 +7245,10 @@
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/raw_copper_block": {
-    "criteria": {
-      "has_raw_copper": "2025-03-24 23:55:33 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/waxed_exposed_cut_copper_slab_from_waxed_exposed_copper_stonecutting": {
     "criteria": {
       "has_waxed_exposed_copper": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/granite_stairs": {
-    "criteria": {
-      "has_granite": "2025-03-24 23:55:19 -0300"
     },
     "done": true
   },
@@ -7076,12 +7349,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/misc/tin_nugget__from_campfire_raw_tin": {
-    "criteria": {
-      "has_raw_tin": "2025-03-24 23:55:18 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/decorations/acacia_hanging_sign": {
     "criteria": {
       "has_stripped_logs": "2025-03-25 00:02:21 -0300",
@@ -7128,12 +7395,6 @@
     "criteria": {
       "has_salmon": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/brass_ingot_from_alloying_raw_copper_and_raw_zinc": {
-    "criteria": {
-      "has_raw_copper": "2025-03-24 23:55:33 -0300"
     },
     "done": true
   },
@@ -7228,12 +7489,6 @@
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/raw_gold_block": {
-    "criteria": {
-      "has_raw_gold": "2025-03-24 23:58:43 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/dye_red_wool": {
     "criteria": {
       "has_needed_dye": "2025-03-25 00:02:21 -0300",
@@ -7292,12 +7547,6 @@
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/granite_stairs_from_granite_stonecutting": {
-    "criteria": {
-      "has_granite": "2025-03-24 23:55:19 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/prismarine_brick_stairs_from_prismarine_stonecutting": {
     "criteria": {
       "has_prismarine_brick": "2025-03-25 00:02:21 -0300",
@@ -7333,13 +7582,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/bone_meal_from_grinding_bone": {
-    "criteria": {
-      "has_bone": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/dye_light_blue_wool": {
     "criteria": {
       "has_needed_dye": "2025-03-25 00:02:21 -0300",
@@ -7365,12 +7607,6 @@
     "criteria": {
       "has_slime_ball": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/rose_gold_ingot_from_super_alloying_raw_copper_and_raw_gold": {
-    "criteria": {
-      "has_raw_copper": "2025-03-24 23:55:33 -0300"
     },
     "done": true
   },
@@ -7402,13 +7638,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/pumpkin_flour_from_grinding_pumpkin": {
-    "criteria": {
-      "has_pumpkin": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:recipes/bronzium_chestplate_from_smithing_brass_chestplate_with_bronze_ingot": {
     "criteria": {
       "has_brass_chestplate": "2025-03-25 00:02:21 -0300",
@@ -7434,24 +7663,6 @@
     "criteria": {
       "has_spider_eye": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "minecraft:recipes/misc/iron_ingot_from_smelting_raw_iron": {
-    "criteria": {
-      "has_raw_iron": "2025-03-24 23:56:04 -0300"
-    },
-    "done": true
-  },
-  "minecraft:recipes/tools/stone_pickaxe": {
-    "criteria": {
-      "has_cobblestone": "2025-03-24 23:55:03 -0300"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/deepslate_brick_slab_from_cobbled_deepslate_stonecutting": {
-    "criteria": {
-      "has_cobbled_deepslate": "2025-03-24 23:56:02 -0300"
     },
     "done": true
   },
@@ -7604,12 +7815,6 @@
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/cobbled_deepslate_slab_from_cobbled_deepslate_stonecutting": {
-    "criteria": {
-      "has_cobbled_deepslate": "2025-03-24 23:56:02 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/decorations/mangrove_fence": {
     "criteria": {
       "has_the_recipe": "2025-03-25 00:02:21 -0300",
@@ -7701,12 +7906,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/misc/tin_ingot__from_smelting_raw_tin": {
-    "criteria": {
-      "has_raw_tin": "2025-03-24 23:55:18 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/magenta_concrete_powder": {
     "criteria": {
       "has_sand": "2025-03-25 00:02:21 -0300",
@@ -7791,12 +7990,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/building_blocks/limestone__from_smelting_cobbeled_limestone": {
-    "criteria": {
-      "has_cobbeled_limestone": "2025-03-24 23:55:20 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/stone_brick_slab_from_stone_bricks_stonecutting": {
     "criteria": {
       "has_stone_bricks": "2025-03-25 00:02:21 -0300",
@@ -7857,12 +8050,6 @@
     "criteria": {
       "has_stone": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/deepslate_tile_slab_from_cobbled_deepslate_stonecutting": {
-    "criteria": {
-      "has_cobbled_deepslate": "2025-03-24 23:56:02 -0300"
     },
     "done": true
   },
@@ -7994,12 +8181,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/brass_ingot_from_super_alloying_raw_zinc_and_raw_copper": {
-    "criteria": {
-      "has_raw_copper": "2025-03-24 23:55:33 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/chiseled_sandstone_from_sandstone_stonecutting": {
     "criteria": {
       "has_sandstone": "2025-03-25 00:02:21 -0300",
@@ -8014,34 +8195,10 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/brass_ingot_from_alloying_raw_zinc_and_raw_copper": {
-    "criteria": {
-      "has_raw_copper": "2025-03-24 23:55:33 -0300"
-    },
-    "done": true
-  },
-  "minecraft:recipes/decorations/granite_wall": {
-    "criteria": {
-      "has_granite": "2025-03-24 23:55:19 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/decorations/white_banner": {
     "criteria": {
       "has_white_wool": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/tools/brass_shovel": {
-    "criteria": {
-      "has_brass_ingot": "2025-03-25 00:00:15 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/combat/bronze_sword": {
-    "criteria": {
-      "has_bronze_ingot": "2025-03-25 00:00:32 -0300"
     },
     "done": true
   },
@@ -8164,12 +8321,6 @@
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/cobbled_deepslate_stairs": {
-    "criteria": {
-      "has_cobbled_deepslate": "2025-03-24 23:56:02 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/mossy_stone_brick_stairs": {
     "criteria": {
       "has_mossy_stone_bricks": "2025-03-25 00:02:21 -0300",
@@ -8202,18 +8353,6 @@
     "criteria": {
       "has_bronze_helmet": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/polished_granite_slab_from_granite_stonecutting": {
-    "criteria": {
-      "has_granite": "2025-03-24 23:55:19 -0300"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/polished_andesite_from_andesite_stonecutting": {
-    "criteria": {
-      "has_andesite": "2025-03-24 23:55:33 -0300"
     },
     "done": true
   },
@@ -8280,23 +8419,10 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/string_from_grinding": {
-    "criteria": {
-      "TagKey[minecraft:item / minecraft:wool]": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/food/baked_potato_from_smoking": {
     "criteria": {
       "has_potato": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:abrassive_heat": {
-    "criteria": {
-      "has_item": "2025-03-25 00:00:15 -0300"
     },
     "done": true
   },
@@ -8310,13 +8436,6 @@
   "minecraft:recipes/building_blocks/smooth_sandstone_stairs": {
     "criteria": {
       "has_smooth_sandstone": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/light_gray_dye_from_grinding_oxeye_daisy": {
-    "criteria": {
-      "has_oxeye_daisy": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
     },
     "done": true
@@ -8384,12 +8503,6 @@
     },
     "done": true
   },
-  "minecraft:recipes/combat/diamond_helmet": {
-    "criteria": {
-      "has_diamond": "2025-03-25 00:01:29 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/waxed_exposed_cut_copper_stairs_from_waxed_exposed_cut_copper_stonecutting": {
     "criteria": {
       "has_waxed_exposed_cut_copper": "2025-03-25 00:02:21 -0300",
@@ -8401,12 +8514,6 @@
     "criteria": {
       "has_zinc_ore": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/combat/bronze_leggings": {
-    "criteria": {
-      "has_bronze_ingot": "2025-03-25 00:00:32 -0300"
     },
     "done": true
   },
@@ -8434,12 +8541,6 @@
     "criteria": {
       "has_cod": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/brass_ingot_from_super_alloying_raw_copper_and_raw_zinc": {
-    "criteria": {
-      "has_raw_copper": "2025-03-24 23:55:33 -0300"
     },
     "done": true
   },
@@ -8487,12 +8588,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/tools/brass_polisher": {
-    "criteria": {
-      "has_brass_ingot": "2025-03-25 00:00:15 -0300"
-    },
-    "done": true
-  },
   "minecraft:adventure/salvage_sherd": {
     "criteria": {
       "has_sherd": "2025-03-25 00:02:21 -0300",
@@ -8523,12 +8618,6 @@
     "criteria": {
       "has_brass_helmet": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/tools/brass_hoe": {
-    "criteria": {
-      "has_brass_ingot": "2025-03-25 00:00:15 -0300"
     },
     "done": true
   },
@@ -8695,12 +8784,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/steel_ingot_from_super_alloying_coal_and_raw_iron": {
-    "criteria": {
-      "has_raw_iron": "2025-03-24 23:56:04 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/bamboo_slab": {
     "criteria": {
       "has_the_recipe": "2025-03-25 00:02:21 -0300",
@@ -8712,12 +8795,6 @@
     "criteria": {
       "has_lemon_planks": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/tools/rose_golden_shovel": {
-    "criteria": {
-      "has_rose_gold_ingot": "2025-03-25 00:01:03 -0300"
     },
     "done": true
   },
@@ -8739,12 +8816,6 @@
     "criteria": {
       "has_the_recipe": "2025-03-25 00:02:21 -0300",
       "has_nether_zinc_ore": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/polished_andesite": {
-    "criteria": {
-      "has_andesite": "2025-03-24 23:55:33 -0300"
     },
     "done": true
   },
@@ -8779,20 +8850,6 @@
   "minecraft:recipes/building_blocks/purpur_block": {
     "criteria": {
       "has_chorus_fruit_popped": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/red_dye_from_grinding_beetroot": {
-    "criteria": {
-      "has_beetroot": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/yellow_dye_from_grinding_lemon": {
-    "criteria": {
-      "has_lemon": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
     },
     "done": true
@@ -8873,12 +8930,6 @@
     "criteria": {
       "has_the_recipe": "2025-03-25 00:02:21 -0300",
       "has_mutton": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/polished_granite": {
-    "criteria": {
-      "has_granite": "2025-03-24 23:55:19 -0300"
     },
     "done": true
   },
@@ -9257,12 +9308,6 @@
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/cobblestone_slab": {
-    "criteria": {
-      "has_cobblestone": "2025-03-24 23:55:03 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:recipes/tools/iron_polisher": {
     "criteria": {
       "has_the_recipe": "2025-03-25 00:02:21 -0300",
@@ -9274,12 +9319,6 @@
     "criteria": {
       "has_blackstone": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/copper_ingot_from_soul_basic_smelting_raw_copper": {
-    "criteria": {
-      "has_raw_copper": "2025-03-24 23:55:33 -0300"
     },
     "done": true
   },
@@ -9380,13 +9419,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/red_dye_from_grinding_red_tulip": {
-    "criteria": {
-      "has_red_tulip": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/yellow_stained_glass": {
     "criteria": {
       "has_glass": "2025-03-25 00:02:21 -0300",
@@ -9412,12 +9444,6 @@
     "criteria": {
       "has_limestone": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/zinc_ingot__from_blasting_raw_zinc": {
-    "criteria": {
-      "has_raw_zinc": "2025-03-24 23:56:15 -0300"
     },
     "done": true
   },
@@ -9508,12 +9534,6 @@
     "criteria": {
       "has_bronze_hoe": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "minecraft:recipes/transportation/acacia_boat": {
-    "criteria": {
-      "in_water": "2025-03-24 23:55:54 -0300"
     },
     "done": true
   },
@@ -9622,12 +9642,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/building_blocks/limestone__from_blasting_cobbeled_limestone": {
-    "criteria": {
-      "has_cobbeled_limestone": "2025-03-24 23:55:20 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/decorations/brown_stained_glass_pane_from_glass_pane": {
     "criteria": {
       "has_glass_pane": "2025-03-25 00:02:21 -0300",
@@ -9639,12 +9653,6 @@
   "minecraft:husbandry/obtain_sniffer_egg": {
     "criteria": {
       "obtain_sniffer_egg": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/combat/rose_golden_chestplate": {
-    "criteria": {
-      "has_rose_gold_ingot": "2025-03-25 00:01:03 -0300"
     },
     "done": true
   },
@@ -9783,12 +9791,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/steel_ingot_from_alloying_raw_iron_and_coal": {
-    "criteria": {
-      "has_raw_iron": "2025-03-24 23:56:04 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/misc/pink_dye_from_red_white_dye": {
     "criteria": {
       "has_white_dye": "2025-03-25 00:02:21 -0300",
@@ -9817,28 +9819,10 @@
     },
     "done": true
   },
-  "minecraft:recipes/decorations/deepslate_tile_wall_from_cobbled_deepslate_stonecutting": {
-    "criteria": {
-      "has_cobbled_deepslate": "2025-03-24 23:56:02 -0300"
-    },
-    "done": true
-  },
-  "minecraft:recipes/misc/iron_ingot_from_blasting_raw_iron": {
-    "criteria": {
-      "has_raw_iron": "2025-03-24 23:56:04 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:recipes/building_blocks/apple_trapdoor": {
     "criteria": {
       "has_apple_planks": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/bronze_block": {
-    "criteria": {
-      "has_bronze_ingot": "2025-03-25 00:00:32 -0300"
     },
     "done": true
   },
@@ -9945,12 +9929,6 @@
     "criteria": {
       "has_the_recipe": "2025-03-25 00:02:21 -0300",
       "has_silver_pickaxe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/building_blocks/cobbeled_limestone_stair": {
-    "criteria": {
-      "has_cobbeled_limestone": "2025-03-24 23:55:20 -0300"
     },
     "done": true
   },
@@ -10080,13 +10058,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/lime_dye_from_grinding_lime": {
-    "criteria": {
-      "has_lime": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:recipes/building_blocks/polished_stone_wall_from_stone_cutting_polished_stone": {
     "criteria": {
       "has_polished_stone": "2025-03-25 00:02:21 -0300",
@@ -10108,12 +10079,6 @@
       "has_mud_brick": "2025-03-25 00:02:21 -0300",
       "has_packed_mud": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/bronze_ingot": {
-    "criteria": {
-      "has_bronze_ingot": "2025-03-25 00:00:32 -0300"
     },
     "done": true
   },
@@ -10281,12 +10246,6 @@
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/deepslate_bricks_from_cobbled_deepslate_stonecutting": {
-    "criteria": {
-      "has_cobbled_deepslate": "2025-03-24 23:56:02 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/misc/gray_dye": {
     "criteria": {
       "has_white_dye": "2025-03-25 00:02:21 -0300",
@@ -10376,12 +10335,6 @@
     },
     "done": true
   },
-  "minecraft:recipes/decorations/cobblestone_wall_from_cobblestone_stonecutting": {
-    "criteria": {
-      "has_cobblestone": "2025-03-24 23:55:03 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/polished_andesite_slab_from_polished_andesite_stonecutting": {
     "criteria": {
       "has_polished_andesite": "2025-03-25 00:02:21 -0300",
@@ -10400,12 +10353,6 @@
     "criteria": {
       "has_stone_slab": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/diamond_block": {
-    "criteria": {
-      "has_diamond": "2025-03-25 00:01:29 -0300"
     },
     "done": true
   },
@@ -10499,18 +10446,6 @@
     },
     "done": true
   },
-  "minecraft:recipes/decorations/andesite_wall": {
-    "criteria": {
-      "has_andesite": "2025-03-24 23:55:33 -0300"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/andesite_slab": {
-    "criteria": {
-      "has_andesite": "2025-03-24 23:55:33 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/misc/light_gray_dye_from_oxeye_daisy": {
     "criteria": {
       "has_oxeye_daisy": "2025-03-25 00:02:21 -0300",
@@ -10561,18 +10496,6 @@
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/cobblestone_stairs_from_cobblestone_stonecutting": {
-    "criteria": {
-      "has_cobblestone": "2025-03-24 23:55:03 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/tools/rose_golden_axe": {
-    "criteria": {
-      "has_rose_gold_ingot": "2025-03-25 00:01:03 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/misc/wheat": {
     "criteria": {
       "has_hay_block": "2025-03-25 00:02:21 -0300",
@@ -10584,18 +10507,6 @@
     "criteria": {
       "has_dark_prismarine": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/super_alloying_furnace": {
-    "criteria": {
-      "has_cobbled_deepslate": "2025-03-24 23:56:02 -0300"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/polished_andesite_stairs_from_andesite_stonecutting": {
-    "criteria": {
-      "has_andesite": "2025-03-24 23:55:33 -0300"
     },
     "done": true
   },
@@ -10662,13 +10573,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/blue_dye_from_grinding_cornflower": {
-    "criteria": {
-      "has_cornflower": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/diorite_slab_from_diorite_stonecutting": {
     "criteria": {
       "has_diorite": "2025-03-25 00:02:21 -0300",
@@ -10711,12 +10615,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/combat/bronze_chestplate": {
-    "criteria": {
-      "has_bronze_ingot": "2025-03-25 00:00:32 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/misc/copper_ingot_from_smelting_deepslate_copper_ore": {
     "criteria": {
       "has_deepslate_copper_ore": "2025-03-25 00:02:21 -0300",
@@ -10734,12 +10632,6 @@
     "criteria": {
       "has_stripped_walnut_log": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/rose_gold_nugget": {
-    "criteria": {
-      "has_rose_gold_ingot": "2025-03-25 00:01:03 -0300"
     },
     "done": true
   },
@@ -10894,12 +10786,6 @@
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/cobblestone_stairs": {
-    "criteria": {
-      "has_cobblestone": "2025-03-24 23:55:03 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/bamboo_stairs": {
     "criteria": {
       "has_the_recipe": "2025-03-25 00:02:21 -0300",
@@ -10935,12 +10821,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/bronzium_ingot_from_super_alloying_brass_ingot_and_bronze_ingot": {
-    "criteria": {
-      "has_brass_ingot": "2025-03-25 00:00:15 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/bamboo_block": {
     "criteria": {
       "has_bamboo": "2025-03-25 00:02:21 -0300",
@@ -10966,12 +10846,6 @@
     "criteria": {
       "has_bronze_axe": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/deepslate_tiles_from_cobbled_deepslate_stonecutting": {
-    "criteria": {
-      "has_cobbled_deepslate": "2025-03-24 23:56:02 -0300"
     },
     "done": true
   },
@@ -11175,22 +11049,10 @@
     },
     "done": true
   },
-  "minecraft:recipes/tools/stone_hoe": {
-    "criteria": {
-      "has_cobblestone": "2025-03-24 23:55:03 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/food/dried_kelp": {
     "criteria": {
       "has_dried_kelp_block": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "minecraft:recipes/brewing/gunpowder": {
-    "criteria": {
-      "has_sulfur": "2025-03-24 23:55:41 -0300"
     },
     "done": true
   },
@@ -11288,28 +11150,10 @@
     },
     "done": true
   },
-  "minecraft:story/mine_diamond": {
-    "criteria": {
-      "diamond": "2025-03-25 00:01:29 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/cut_copper_stairs_from_cut_copper_stonecutting": {
     "criteria": {
       "has_cut_copper": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/polished_granite_stairs_from_granite_stonecutting": {
-    "criteria": {
-      "has_granite": "2025-03-24 23:55:19 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/tools/bronze_pickaxe": {
-    "criteria": {
-      "has_bronze_ingot": "2025-03-25 00:00:32 -0300"
     },
     "done": true
   },
@@ -11385,12 +11229,6 @@
     },
     "done": true
   },
-  "minecraft:recipes/tools/diamond_axe": {
-    "criteria": {
-      "has_diamond": "2025-03-25 00:01:29 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/end_stone_bricks_from_end_stone_stonecutting": {
     "criteria": {
       "has_end_stone": "2025-03-25 00:02:21 -0300",
@@ -11401,13 +11239,6 @@
   "minecraft:recipes/building_blocks/end_stone_brick_stairs_from_end_stone_stonecutting": {
     "criteria": {
       "has_end_stone": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/wheat_flour_from_grinding_wheat": {
-    "criteria": {
-      "has_wheat": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
     },
     "done": true
@@ -11481,12 +11312,6 @@
     },
     "done": true
   },
-  "minecraft:recipes/tools/stone_shovel": {
-    "criteria": {
-      "has_cobblestone": "2025-03-24 23:55:03 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/waxed_weathered_cut_copper": {
     "criteria": {
       "has_the_recipe": "2025-03-25 00:02:21 -0300",
@@ -11553,13 +11378,6 @@
   "enhanced_playthrough:recipes/misc/brass_nugget__from_smelting_brass_axe": {
     "criteria": {
       "has_brass_axe": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/red_dye_from_grinding_rose_bush": {
-    "criteria": {
-      "has_rose_bush": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
     },
     "done": true
@@ -11667,13 +11485,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/blue_dye_from_grinding_lapis_lazuli": {
-    "criteria": {
-      "has_lapis_lazuli": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/brewing/brewing_stand": {
     "criteria": {
       "has_blaze_rod": "2025-03-25 00:02:21 -0300",
@@ -11764,24 +11575,6 @@
     },
     "done": true
   },
-  "minecraft:recipes/misc/copper_ingot_from_smelting_raw_copper": {
-    "criteria": {
-      "has_raw_copper": "2025-03-24 23:55:33 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/building_blocks/cobbeled_limestone_slab": {
-    "criteria": {
-      "has_cobbeled_limestone": "2025-03-24 23:55:20 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/building_blocks/cobbeled_limestone_wall_from_stone_cutting_cobbeled_limestone": {
-    "criteria": {
-      "has_cobbeled_limestone": "2025-03-24 23:55:20 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/snow_block": {
     "criteria": {
       "has_snowball": "2025-03-25 00:02:21 -0300",
@@ -11810,13 +11603,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/yellow_dye_from_grinding_dandelion": {
-    "criteria": {
-      "has_dandelion": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/misc/iron_ingot_from_nuggets": {
     "criteria": {
       "has_iron_nugget": "2025-03-25 00:02:21 -0300",
@@ -11828,12 +11614,6 @@
     "criteria": {
       "has_blackstone": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "minecraft:recipes/transportation/jungle_boat": {
-    "criteria": {
-      "in_water": "2025-03-24 23:55:54 -0300"
     },
     "done": true
   },
@@ -11858,12 +11638,6 @@
     },
     "done": true
   },
-  "minecraft:recipes/transportation/dark_oak_boat": {
-    "criteria": {
-      "in_water": "2025-03-24 23:55:54 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/decorations/honeycomb_block": {
     "criteria": {
       "has_honeycomb": "2025-03-25 00:02:21 -0300",
@@ -11875,13 +11649,6 @@
     "criteria": {
       "has_the_recipe": "2025-03-25 00:02:21 -0300",
       "has_waxed_cut_copper": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/orange_dye_from_grinding_orange_tulip": {
-    "criteria": {
-      "has_orange_tulip": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
     },
     "done": true
   },
@@ -11930,12 +11697,6 @@
     "criteria": {
       "has_redstone": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/bronzium_ingot_from_super_alloying_bronze_ingot_and_brass_ingot": {
-    "criteria": {
-      "has_brass_ingot": "2025-03-25 00:00:15 -0300"
     },
     "done": true
   },
@@ -12054,6 +11815,132 @@
     "criteria": {
       "has_bone_meal": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/mechanical_grinder": {
+    "criteria": {
+      "has_primal_grinder": "2025-03-25 14:05:57 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/pumpkin_flour_from_mechanical_grinding_pumpkin": {
+    "criteria": {
+      "has_pumpkin": "2025-03-25 14:06:17 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/pumpkin_flour_from_primal_grinding_pumpkin": {
+    "criteria": {
+      "has_pumpkin": "2025-03-25 14:06:17 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/string_from_mechanical_grinding": {
+    "criteria": {
+      "TagKey[minecraft:item / minecraft:wool]": "2025-03-25 14:13:58 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/string_from_primal_grinding": {
+    "criteria": {
+      "TagKey[minecraft:item / minecraft:wool]": "2025-03-25 14:13:58 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/blue_gold_block": {
+    "criteria": {
+      "has_blue_gold_ingot": "2025-03-25 14:38:38 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/blue_golden_pickaxe": {
+    "criteria": {
+      "has_blue_gold_ingot": "2025-03-25 14:38:38 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/blue_gold_ingot": {
+    "criteria": {
+      "has_blue_gold_ingot": "2025-03-25 14:38:38 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/blue_golden_shovel": {
+    "criteria": {
+      "has_blue_gold_ingot": "2025-03-25 14:38:38 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/blue_golden_axe": {
+    "criteria": {
+      "has_blue_gold_ingot": "2025-03-25 14:38:38 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/blue_gold_nugget": {
+    "criteria": {
+      "has_blue_gold_ingot": "2025-03-25 14:38:38 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/blue_golden_chestplate": {
+    "criteria": {
+      "has_blue_gold_ingot": "2025-03-25 14:38:38 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/blue_golden_sword": {
+    "criteria": {
+      "has_blue_gold_ingot": "2025-03-25 14:38:38 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/blue_golden_boots": {
+    "criteria": {
+      "has_blue_gold_ingot": "2025-03-25 14:38:38 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/blue_golden_leggings": {
+    "criteria": {
+      "has_blue_gold_ingot": "2025-03-25 14:38:38 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/blue_golden_hoe": {
+    "criteria": {
+      "has_blue_gold_ingot": "2025-03-25 14:38:38 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/blue_golden_helmet": {
+    "criteria": {
+      "has_blue_gold_ingot": "2025-03-25 14:38:38 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/blue_gold_ingot_from_super_alloying_gold_ingot_and_cobalt": {
+    "criteria": {
+      "has_cobalt": "2025-03-25 14:38:58 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/blue_gold_ingot_from_super_alloying_raw_gold_and_cobalt": {
+    "criteria": {
+      "has_cobalt": "2025-03-25 14:38:58 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/blue_gold_ingot_from_super_alloying_cobalt_and_gold_ingot": {
+    "criteria": {
+      "has_cobalt": "2025-03-25 14:38:58 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/blue_gold_ingot_from_super_alloying_cobalt_and_raw_gold": {
+    "criteria": {
+      "has_cobalt": "2025-03-25 14:38:58 -0300"
     },
     "done": true
   },

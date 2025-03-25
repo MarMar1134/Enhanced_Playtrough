@@ -29,7 +29,8 @@ public class MexicanLanguageProvider extends AbstractModLanguageProvider{
         addJeiCategory("adobe_alloying_furnace", "Aleación");
         addJeiCategory("super_alloying_furnace", "Alta aleación");
         addJeiCategory("gem_polisher", "Pulido de gemas");
-        addJeiCategory("grinder", "Molienda");
+        addJeiCategory("primal_grinder", "Molienda");
+        addJeiCategory("mechanical_grinder", "Molienda mecánizada");
 
         //GUI elements
         addGuiElements("gem_polisher_screen", "Usos");
@@ -236,7 +237,8 @@ public class MexicanLanguageProvider extends AbstractModLanguageProvider{
         addBlock(ModBlocks.SOUL_ALLOY_FURNACE, "Horno de aleación de ladrillos de almas");
         addBlock(ModBlocks.SUPER_ALLOYING_FURNACE, "Alto horno de aleación");
         addBlock(ModBlocks.GEM_POLISHER, "Mesa de pulido");
-        addBlock(ModBlocks.GRINDER, "Moledora");
+        addBlock(ModBlocks.PRIMAL_GRINDER, "Moledora");
+        addBlock(ModBlocks.MECHANICAL_GRINDER, "Moledora mecánizada");
 
         //Items
         //Raw ores
@@ -271,7 +273,7 @@ public class MexicanLanguageProvider extends AbstractModLanguageProvider{
         addItem(ModItems.BLUE_GOLD_INGOT, "Lingote de oro azul");
         addItem(ModItems.BLUE_GOLD_NUGGET, "Pepita de oro verde");
         addItem(ModItems.SAPPHIRE, "Zafiro");
-        addItem(ModItems.RUBI, "Rubí");
+        addItem(ModItems.RUBY, "Rubí");
         addItem(ModItems.GARNET, "Granate");
         addItem(ModItems.MUD_BRICK, "Ladrillo de adobe");
         addItem(ModItems.COBALT, "Cobalto");

@@ -1,0 +1,12 @@
+{
+  "type": "enhanced_playthrough:mechanical_grinding",
+  "category": "mechanical_grind",
+  "group": "white_dye",
+  "ingredient": {
+    "item": "minecraft:lily_of_the_valley"
+  },
+  "output": {
+    "count": 4,
+    "item": "minecraft:white_dye"
+  }
+}

@@ -113,6 +113,55 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         ModItems.COBALT.get()
                 );
 
+        this.tag(ModTags.Items.PRIMAL_GRIND_INGREDIENT).addTags(ItemTags.WOOL).add(
+                ModItems.YERBA_MATE.get(),
+                Items.WHEAT,
+                Items.PUMPKIN,
+                Items.SUGAR_CANE,
+                Items.BONE,
+                Items.BONE_MEAL,
+                Items.LILY_OF_THE_VALLEY,
+                Items.AZURE_BLUET,
+                Items.OXEYE_DAISY,
+                Items.WHITE_TULIP,
+                Items.COCOA_BEANS,
+                Items.POPPY,
+                Items.RED_TULIP,
+                Items.BEETROOT,
+                Items.TORCHFLOWER,
+                Items.ORANGE_TULIP,
+                ModItems.ORANGE.get(),
+                ModItems.LEMON.get(),
+                Items.DANDELION,
+                Items.BLUE_ORCHID,
+                Items.CORNFLOWER,
+                ModItems.LIME.get(),
+                Items.ALLIUM,
+                Items.PINK_TULIP,
+                Items.PINK_PETALS
+        );
+
+        this.tag(ModTags.Items.MECHANICAL_GRIND_INGREDIENT)
+                .addTags(ModTags.Items.PRIMAL_GRIND_INGREDIENT,
+                        ModTags.Items.SILVER,
+                        ModTags.Items.GOLD,
+                        ModTags.Items.BRASS,
+                        ModTags.Items.BRONZE,
+                        ModTags.Items.ROSE_GOLD,
+                        ModTags.Items.IRON,
+                        ModTags.Items.BRONZIUM,
+                        ModTags.Items.GREEN_GOLD,
+                        ModTags.Items.STEEL,
+                        ModTags.Items.BLUE_GOLD
+                )
+                .add(
+                Items.WITHER_ROSE,
+                Items.ROSE_BUSH,
+                Items.SUNFLOWER,
+                Items.LAPIS_LAZULI,
+                Items.PEONY
+        );
+
         this.tag(Tags.Items.INGOTS).add(
                 ModItems.SILVER_INGOT.get(),
                 ModItems.TIN_INGOT.get(),
@@ -143,6 +192,11 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 ModBlocks.COBBLED_LIMESTONE.get().asItem()
         );
 
+        this.tag(ModTags.Items.GOLD).add(
+                Items.GOLDEN_AXE, Items.GOLDEN_PICKAXE, Items.GOLDEN_SHOVEL, Items.GOLDEN_SWORD, ModItems.GOLDEN_POLISHER.get(), Items.GOLDEN_HOE,
+                Items.GOLDEN_HELMET, Items.GOLDEN_CHESTPLATE, Items.GOLDEN_LEGGINGS, Items.GOLDEN_BOOTS
+        );
+
         this.tag(ModTags.Items.BRONZE).add(
                 ModItems.BRONZE_INGOT.get(), ModItems.BRONZE_NUGGET.get(), ModBlocks.BRONZE_BLOCK.get().asItem(),
                 ModItems.BRONZE_SWORD.get(),
@@ -165,6 +219,11 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 ModItems.ROSE_GOLDEN_PICKAXE.get(), ModItems.ROSE_GOLDEN_AXE.get(), ModItems.ROSE_GOLDEN_SHOVEL.get(), ModItems.ROSE_GOLDEN_HOE.get(),
                 ModItems.ROSE_GOLDEN_POLISHER.get(),
                 ModItems.ROSE_GOLDEN_HELMET.get(), ModItems.ROSE_GOLDEN_CHESTPLATE.get(), ModItems.ROSE_GOLDEN_LEGGINGS.get(), ModItems.ROSE_GOLDEN_BOOTS.get()
+        );
+
+        this.tag(ModTags.Items.IRON).add(
+                Items.IRON_AXE, Items.IRON_PICKAXE, Items.IRON_SHOVEL, Items.IRON_SWORD, ModItems.IRON_POLISHER.get(), Items.IRON_HOE,
+                Items.IRON_HELMET, Items.IRON_CHESTPLATE, Items.IRON_LEGGINGS, Items.IRON_BOOTS
         );
 
         this.tag(ModTags.Items.BRONZIUM).add(
@@ -243,7 +302,7 @@ public class ModItemTagGenerator extends ItemTagsProvider {
         );
 
         this.tag(ItemTags.BEACON_PAYMENT_ITEMS).add(
-                ModItems.RUBI.get(),
+                ModItems.RUBY.get(),
                 ModItems.SAPPHIRE.get(),
                 ModItems.GARNET.get(),
                 ModItems.SILVER_INGOT.get(),

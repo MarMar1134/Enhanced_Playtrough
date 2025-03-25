@@ -2,7 +2,7 @@ package net.marmar.enhanced_playthrough.datagen;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.block.ModBlocks;
-import net.marmar.enhanced_playthrough.block.custom.crops.*;
+import net.marmar.enhanced_playthrough.block.crops.*;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;

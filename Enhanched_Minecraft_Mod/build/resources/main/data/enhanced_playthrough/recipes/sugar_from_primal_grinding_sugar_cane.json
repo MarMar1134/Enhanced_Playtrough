@@ -1,0 +1,12 @@
+{
+  "type": "enhanced_playthrough:primal_grinding",
+  "category": "mechanical_grind",
+  "group": "sugar",
+  "ingredient": {
+    "item": "minecraft:sugar_cane"
+  },
+  "output": {
+    "count": 2,
+    "item": "minecraft:sugar"
+  }
+}

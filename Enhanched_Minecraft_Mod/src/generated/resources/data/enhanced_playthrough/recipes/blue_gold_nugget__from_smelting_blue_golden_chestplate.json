@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.5,
+  "group": "blue_gold_nugget",
+  "ingredient": {
+    "item": "enhanced_playthrough:blue_golden_chestplate"
+  },
+  "result": "enhanced_playthrough:blue_gold_nugget"
+}

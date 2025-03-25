@@ -5,17 +5,17 @@ import net.marmar.enhanced_playthrough.Util.ModTags;
 import net.marmar.enhanced_playthrough.block.ModBlocks;
 import net.marmar.enhanced_playthrough.item.ModItems;
 import net.marmar.enhanced_playthrough.recipe.GemPolishingRecipe;
-import net.marmar.enhanced_playthrough.recipe.GrindingRecipe;
+import net.marmar.enhanced_playthrough.recipe.grind.AbstractGrindRecipe;
 import net.marmar.enhanced_playthrough.recipe.ModRecipes;
-import net.marmar.enhanced_playthrough.recipe.alloy.AlloyingFurnaceRecipe;
-import net.marmar.enhanced_playthrough.recipe.alloy.SuperAlloyingRecipe;
-import net.marmar.enhanced_playthrough.recipe.basic.BasicSmeltingRecipe;
-import net.marmar.enhanced_playthrough.recipe.basic.SoulBasicSmeltingRecipe;
-import net.marmar.enhanced_playthrough.recipe.builder.ModAlloyingRecipeBuilder;
-import net.marmar.enhanced_playthrough.recipe.builder.ModBasicRecipeBuilder;
-import net.marmar.enhanced_playthrough.recipe.builder.ModBasicSmeltBuilder;
-import net.marmar.enhanced_playthrough.recipe.builder.ModSmithingTransformRecipeBuilder;
-import net.marmar.enhanced_playthrough.recipe.category.AlloyRecipeCategory;
+import net.marmar.enhanced_playthrough.recipe.alloy.AlloyRecipe;
+import net.marmar.enhanced_playthrough.recipe.alloy.BlastAlloyRecipe;
+import net.marmar.enhanced_playthrough.recipe.basicsmelt.BasicSmeltRecipe;
+import net.marmar.enhanced_playthrough.recipe.basicsmelt.SoulBasicSmeltRecipe;
+import net.marmar.enhanced_playthrough.recipe.recipebuilder.ModAlloyRecipeBuilder;
+import net.marmar.enhanced_playthrough.recipe.recipebuilder.ModBasicRecipeBuilder;
+import net.marmar.enhanced_playthrough.recipe.recipebuilder.ModBasicSmeltBuilder;
+import net.marmar.enhanced_playthrough.recipe.recipebuilder.ModSmithingTransformRecipeBuilder;
+import net.marmar.enhanced_playthrough.recipe.recipecategory.AlloyRecipeCategory;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.tags.ItemTags;
@@ -59,28 +59,47 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         //copper
         public static final List<ItemLike> COPPER_SMELTABLES = List.of(Items.RAW_COPPER, Blocks.COPPER_ORE, Blocks.DEEPSLATE_COPPER_ORE, ModBlocks.NETHER_COPPER_ORE.get());
         public static final List<ItemLike> NETHER_COPPER_SMELTABLES = List.of(ModBlocks.NETHER_COPPER_ORE.get());
-        public static final List<ItemLike> COPPER_NUGGET_SMELTABLES = List.of(Items.RAW_COPPER);
+        public static final List<ItemLike> COPPER_NUGGETS_AND_DUST_SMELTABLES = List.of(Items.RAW_COPPER);
 
         //brass
-        public static final List<ItemLike> BRASS_NUGGETS_SMELTABLES = List.of(ModItems.BRASS_AXE.get(), ModItems.BRASS_HOE.get(), ModItems.BRASS_PICKAXE.get(), ModItems.BRASS_POLISHER.get(),
-                    ModItems.BRASS_SHOVEL.get(), ModItems.BRASS_SWORD.get(), ModItems.BRASS_HELMET.get(), ModItems.BRASS_CHESTPLATE.get(), ModItems.BRASS_LEGGINGS.get(), ModItems.BRASS_BOOTS.get());
+        public static final List<ItemLike> BRASS_NUGGETS_AND_DUST_SMELTABLES = List.of(ModItems.BRASS_AXE.get(),
+                ModItems.BRASS_HOE.get(), ModItems.BRASS_PICKAXE.get(), ModItems.BRASS_POLISHER.get(),
+                ModItems.BRASS_SHOVEL.get(), ModItems.BRASS_SWORD.get(),
+                ModItems.BRASS_HELMET.get(), ModItems.BRASS_CHESTPLATE.get(), ModItems.BRASS_LEGGINGS.get(), ModItems.BRASS_BOOTS.get());
 
         //bronze
-        public static final List<ItemLike> BRONZE_NUGGETS_SMELTABLES = List.of(ModItems.BRONZE_AXE.get(),
-                ModItems.BRONZE_HOE.get(), ModItems.BRONZE_PICKAXE.get(), ModItems.BRONZE_SHOVEL.get(),
-                ModItems.BRONZE_SWORD.get());
+        public static final List<ItemLike> BRONZE_NUGGETS_AND_DUST_SMELTABLES = List.of(ModItems.BRONZE_AXE.get(),
+                ModItems.BRONZE_HOE.get(), ModItems.BRONZE_PICKAXE.get(), ModItems.BRONZE_SHOVEL.get(), ModItems.BRONZE_SWORD.get(),
+                ModItems.BRONZE_HELMET.get(), ModItems.BRONZE_CHESTPLATE.get(), ModItems.BRONZE_LEGGINGS.get(), ModItems.BRONZE_BOOTS.get());
 
         //silver
         public static final List<ItemLike> SILVER_SMELTABLES = List.of(ModItems.RAW_SILVER.get(), ModBlocks.SILVER_ORE.get(),
                 ModBlocks.DEEPSLATE_SILVER_ORE.get());
-        public static final List<ItemLike> SILVER_NUGGETS_SMELTABLES = List.of(ModItems.SILVER_AXE.get(),
-                ModItems.SILVER_HOE.get(), ModItems.SILVER_PICKAXE.get(), ModItems.SILVER_SHOVEL.get(),
-                ModItems.SILVER_SWORD.get());
+        public static final List<ItemLike> SILVER_NUGGETS_AND_DUST_SMELTABLES = List.of(ModItems.SILVER_AXE.get(),
+                ModItems.SILVER_HOE.get(), ModItems.SILVER_PICKAXE.get(), ModItems.SILVER_POLISHER.get(),
+                ModItems.SILVER_SHOVEL.get(), ModItems.SILVER_SWORD.get(),
+                ModItems.SILVER_HELMET.get(), ModItems.SILVER_CHESTPLATE.get(), ModItems.SILVER_LEGGINGS.get(), ModItems.SILVER_BOOTS.get());
+
+        //Cobalt
+        public static final List<ItemLike> COBALT_SMELTABLES = List.of(ModBlocks.COBALT_ORE.get(), ModBlocks.DEEPSLATE_COBALT_ORE.get());
 
         //rose gold
-        public static final List<ItemLike> ROSE_GOLD_NUGGETS_SMELTABLES = List.of(ModItems.ROSE_GOLDEN_AXE.get(),
-                ModItems.ROSE_GOLDEN_HOE.get(), ModItems.ROSE_GOLDEN_PICKAXE.get(), ModItems.ROSE_GOLDEN_SHOVEL.get(),
-                ModItems.ROSE_GOLDEN_SWORD.get());
+        public static final List<ItemLike> ROSE_GOLD_NUGGETS_AND_DUST_SMELTABLES = List.of(ModItems.ROSE_GOLDEN_AXE.get(),
+                ModItems.ROSE_GOLDEN_HOE.get(), ModItems.ROSE_GOLDEN_PICKAXE.get(),ModItems.ROSE_GOLDEN_POLISHER.get(),
+                ModItems.ROSE_GOLDEN_SHOVEL.get(), ModItems.ROSE_GOLDEN_SWORD.get(),
+                ModItems.ROSE_GOLDEN_HELMET.get(), ModItems.ROSE_GOLDEN_CHESTPLATE.get(), ModItems.ROSE_GOLDEN_LEGGINGS.get(), ModItems.ROSE_GOLDEN_BOOTS.get());
+
+        //Green gold
+        public static final List<ItemLike> GREEN_GOLD_NUGGETS_AND_DUST_SMELTABLES = List.of(ModItems.GREEN_GOLDEN_AXE.get(),
+                ModItems.GREEN_GOLDEN_HOE.get(), ModItems.GREEN_GOLDEN_PICKAXE.get(), ModItems.GREEN_GOLDEN_POLISHER.get(),
+                ModItems.GREEN_GOLDEN_SHOVEL.get(), ModItems.GREEN_GOLDEN_SWORD.get(),
+                ModItems.GREEN_GOLDEN_HELMET.get(), ModItems.GREEN_GOLDEN_CHESTPLATE.get(), ModItems.GREEN_GOLDEN_LEGGINGS.get(), ModItems.GREEN_GOLDEN_BOOTS.get());
+
+        //Blue gold
+        public static final List<ItemLike> BLUE_GOLD_NUGGETS_AND_DUST_SMELTABLES = List.of(ModItems.BLUE_GOLDEN_AXE.get(),
+                ModItems.BLUE_GOLDEN_HOE.get(), ModItems.BLUE_GOLDEN_PICKAXE.get(), ModItems.BLUE_GOLDEN_POLISHER.get(),
+                ModItems.BLUE_GOLDEN_SHOVEL.get(), ModItems.BLUE_GOLDEN_SWORD.get(),
+                ModItems.BLUE_GOLDEN_HELMET.get(), ModItems.BLUE_GOLDEN_CHESTPLATE.get(), ModItems.BLUE_GOLDEN_LEGGINGS.get(), ModItems.BLUE_GOLDEN_BOOTS.get());
 
     public static final List<ItemLike> LIMESTONE_SMELTABLES = List.of(ModBlocks.COBBLED_LIMESTONE.get());
 
@@ -145,11 +164,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
             smoking(consumer, CORN_COOKABLES, RecipeCategory.FOOD, ModItems.COOKED_CORN.get(),
                     2f, 100, "corn");
 
-            byCampfire(consumer, ZAPALLO_COOKABLES, RecipeCategory.FOOD, ModItems.COOKED_ZAPALLO.get(),
+            smeltingByCampfire(consumer, ZAPALLO_COOKABLES, RecipeCategory.FOOD, ModItems.COOKED_ZAPALLO.get(),
                     2f, 100, "zapallo");
-            byCampfire(consumer, EGGPLANT_COOKABLES, RecipeCategory.FOOD, ModItems.COOKED_EGGPLANT.get(),
+            smeltingByCampfire(consumer, EGGPLANT_COOKABLES, RecipeCategory.FOOD, ModItems.COOKED_EGGPLANT.get(),
                     2f, 100, "eggplant");
-            byCampfire(consumer, CORN_COOKABLES, RecipeCategory.FOOD, ModItems.COOKED_CORN.get(),
+            smeltingByCampfire(consumer, CORN_COOKABLES, RecipeCategory.FOOD, ModItems.COOKED_CORN.get(),
                     2f, 100, "corn");
 
             //copper
@@ -161,7 +180,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
             oreBlasting(consumer, NETHER_COPPER_SMELTABLES, RecipeCategory.MISC, Items.COPPER_INGOT,
                     2f, 200, "copper_ingot");
 
-            byCampfire(consumer, COPPER_NUGGET_SMELTABLES, RecipeCategory.MISC, ModItems.COPPER_NUGGET.get(),
+            smeltingByCampfire(consumer, COPPER_NUGGETS_AND_DUST_SMELTABLES, RecipeCategory.MISC, ModItems.COPPER_NUGGET.get(),
                 1.0f, 300, "copper_nugget");
 
             //tin
@@ -171,7 +190,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 2f, 100, "tin_ingot");
             oreBlasting(consumer, TIN_SMELTABLES, RecipeCategory.MISC, ModItems.TIN_INGOT.get(),
                     2f, 200, "tin_ingot");
-            byCampfire(consumer, TIN_NUGGET_SMELTABLES, RecipeCategory.MISC, ModItems.TIN_NUGGET.get(),
+            smeltingByCampfire(consumer, TIN_NUGGET_SMELTABLES, RecipeCategory.MISC, ModItems.TIN_NUGGET.get(),
                     1.0f, 300, "tin_nugget");
 
             //Zinc
@@ -181,19 +200,19 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     1.5F, 100, "zinc_ingot");
             oreBlasting(consumer, ZINC_SMELTABLES, RecipeCategory.MISC, ModItems.ZINC_INGOT.get(),
                     1.5F, 200, "zinc_ingot");
-            byCampfire(consumer, ZINC_NUGGET_SMELTABLES, RecipeCategory.MISC, ModItems.ZINC_NUGGET.get(),
+            smeltingByCampfire(consumer, ZINC_NUGGET_SMELTABLES, RecipeCategory.MISC, ModItems.ZINC_NUGGET.get(),
                     1.0F, 300, "zinc_nugget");
 
             //brass
-            oreSmelting(consumer, BRASS_NUGGETS_SMELTABLES, RecipeCategory.MISC, ModItems.BRASS_NUGGET.get(),
+            oreSmelting(consumer, BRASS_NUGGETS_AND_DUST_SMELTABLES, RecipeCategory.MISC, ModItems.BRASS_NUGGET.get(),
                     0.5f, 100, "brass_nugget");
-            oreBlasting(consumer, BRASS_NUGGETS_SMELTABLES, RecipeCategory.MISC, ModItems.BRASS_NUGGET.get(),
+            oreBlasting(consumer, BRASS_NUGGETS_AND_DUST_SMELTABLES, RecipeCategory.MISC, ModItems.BRASS_NUGGET.get(),
                     0.5f, 200, "brass_nugget");
 
             //bronze
-            oreSmelting(consumer, BRONZE_NUGGETS_SMELTABLES, RecipeCategory.MISC, ModItems.BRONZE_NUGGET.get(),
+            oreSmelting(consumer, BRONZE_NUGGETS_AND_DUST_SMELTABLES, RecipeCategory.MISC, ModItems.BRONZE_NUGGET.get(),
                     0.5f, 100, "bronze_nugget");
-            oreBlasting(consumer, BRONZE_NUGGETS_SMELTABLES, RecipeCategory.MISC, ModItems.BRONZE_NUGGET.get(),
+            oreBlasting(consumer, BRONZE_NUGGETS_AND_DUST_SMELTABLES, RecipeCategory.MISC, ModItems.BRONZE_NUGGET.get(),
                     0.5f, 200, "bronze_nugget");
 
             //silver
@@ -201,16 +220,34 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 2f, 100, "silver_ingot");
             oreBlasting(consumer, SILVER_SMELTABLES, RecipeCategory.MISC, ModItems.SILVER_INGOT.get(),
                     2f, 200, "silver_ingot");
-            oreSmelting(consumer, SILVER_NUGGETS_SMELTABLES, RecipeCategory.MISC, ModItems.SILVER_NUGGET.get(),
+            oreSmelting(consumer, SILVER_NUGGETS_AND_DUST_SMELTABLES, RecipeCategory.MISC, ModItems.SILVER_NUGGET.get(),
                     0.5f, 100, "silver_nugget");
-            oreBlasting(consumer, SILVER_NUGGETS_SMELTABLES, RecipeCategory.MISC, ModItems.SILVER_NUGGET.get(),
+            oreBlasting(consumer, SILVER_NUGGETS_AND_DUST_SMELTABLES, RecipeCategory.MISC, ModItems.SILVER_NUGGET.get(),
                     0.5f, 200, "silver_nugget");
 
+            //Cobalt
+            oreSmelting(consumer, COPPER_SMELTABLES, RecipeCategory.MISC, ModItems.COBALT.get(),
+                    2f, 100, "cobalt");
+            oreBlasting(consumer, COPPER_SMELTABLES, RecipeCategory.MISC, ModItems.COBALT.get(),
+                    2f, 200, "cobalt");
+
             //rose gold
-            oreSmelting(consumer, ROSE_GOLD_NUGGETS_SMELTABLES, RecipeCategory.MISC, ModItems.ROSE_GOLD_NUGGET.get(),
+            oreSmelting(consumer, ROSE_GOLD_NUGGETS_AND_DUST_SMELTABLES, RecipeCategory.MISC, ModItems.ROSE_GOLD_NUGGET.get(),
                     0.5f, 100, "rose_gold_nugget");
-            oreBlasting(consumer, ROSE_GOLD_NUGGETS_SMELTABLES, RecipeCategory.MISC, ModItems.ROSE_GOLD_NUGGET.get(),
+            oreBlasting(consumer, ROSE_GOLD_NUGGETS_AND_DUST_SMELTABLES, RecipeCategory.MISC, ModItems.ROSE_GOLD_NUGGET.get(),
                     0.5f, 200, "rose_gold_nugget");
+
+            //Green gold
+            oreSmelting(consumer, GREEN_GOLD_NUGGETS_AND_DUST_SMELTABLES, RecipeCategory.MISC, ModItems.GREEN_GOLD_NUGGET.get(),
+                    0.5f, 100, "green_gold_nugget");
+            oreBlasting(consumer, GREEN_GOLD_NUGGETS_AND_DUST_SMELTABLES, RecipeCategory.MISC, ModItems.GREEN_GOLD_NUGGET.get(),
+                    0.5f, 200, "green_gold_nugget");
+
+            //Blue gold
+            oreSmelting(consumer, BLUE_GOLD_NUGGETS_AND_DUST_SMELTABLES, RecipeCategory.MISC, ModItems.BLUE_GOLD_NUGGET.get(),
+                    0.5f, 100, "blue_gold_nugget");
+            oreBlasting(consumer, BLUE_GOLD_NUGGETS_AND_DUST_SMELTABLES, RecipeCategory.MISC, ModItems.BLUE_GOLD_NUGGET.get(),
+                    0.5f, 200, "blue_gold_nugget");
 
             //limestone
             oreSmelting(consumer, LIMESTONE_SMELTABLES, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIMESTONE.get(),
@@ -265,6 +302,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
             superOreAlloying(consumer, ModItems.BRONZE_INGOT.get(), ModItems.BRASS_INGOT.get(), ModItems.BRONZIUM_INGOT.get(),
                     AlloyRecipeCategory.COMPLEX_ALLOY, "bronzium_ingot");
 
+            //Green gold
+            superOreAlloying(consumer, Items.RAW_GOLD, ModItems.RAW_SILVER.get(), ModItems.GREEN_GOLD_INGOT.get(),
+                    AlloyRecipeCategory.SIMPLE_ALLOY, "green_gold_ingot");
+            superOreAlloying(consumer, ModItems.RAW_SILVER.get(), Items.RAW_GOLD, ModItems.GREEN_GOLD_INGOT.get(),
+                    AlloyRecipeCategory.SIMPLE_ALLOY, "green_gold_ingot");
+            superOreAlloying(consumer, Items.GOLD_INGOT, ModItems.SILVER_INGOT.get(), ModItems.GREEN_GOLD_INGOT.get(), 2,
+                    AlloyRecipeCategory.COMPLEX_ALLOY, "green_gold_ingot");
+            superOreAlloying(consumer, ModItems.SILVER_INGOT.get(), Items.GOLD_INGOT, ModItems.GREEN_GOLD_INGOT.get(), 2,
+                    AlloyRecipeCategory.COMPLEX_ALLOY, "green_gold_ingot");
+
             //Steel
             oreAlloying(consumer, Items.COAL, Items.RAW_IRON, ModItems.STEEL_INGOT.get(),
                     AlloyRecipeCategory.SIMPLE_ALLOY, "steel_ingot");
@@ -280,71 +327,133 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
             superOreAlloying(consumer, Items.IRON_INGOT, Items.COAL, ModItems.STEEL_INGOT.get(), 2,
                     AlloyRecipeCategory.COMPLEX_ALLOY, "steel_ingot");
 
-            //Green gold
-            superOreAlloying(consumer, Items.RAW_GOLD, ModItems.RAW_SILVER.get(), ModItems.GREEN_GOLD_INGOT.get(),
-                    AlloyRecipeCategory.SIMPLE_ALLOY, "green_gold_ingot");
-            superOreAlloying(consumer, ModItems.RAW_SILVER.get(), Items.RAW_GOLD, ModItems.GREEN_GOLD_INGOT.get(),
-                    AlloyRecipeCategory.SIMPLE_ALLOY, "green_gold_ingot");
-            superOreAlloying(consumer, Items.GOLD_INGOT, ModItems.SILVER_INGOT.get(), ModItems.GREEN_GOLD_INGOT.get(), 2,
-                    AlloyRecipeCategory.COMPLEX_ALLOY, "green_gold_ingot");
-            superOreAlloying(consumer, ModItems.SILVER_INGOT.get(), Items.GOLD_INGOT, ModItems.GREEN_GOLD_INGOT.get(), 2,
-                    AlloyRecipeCategory.COMPLEX_ALLOY, "green_gold_ingot");
+            //Blue gold
+            superOreAlloying(consumer, Items.RAW_GOLD, ModItems.COBALT.get(), ModItems.BLUE_GOLD_INGOT.get(),
+                    AlloyRecipeCategory.SIMPLE_ALLOY, "blue_gold_ingot");
+            superOreAlloying(consumer, ModItems.COBALT.get(), Items.RAW_GOLD, ModItems.BLUE_GOLD_INGOT.get(),
+                    AlloyRecipeCategory.SIMPLE_ALLOY, "blue_gold_ingot");
+            superOreAlloying(consumer, Items.GOLD_INGOT, ModItems.COBALT.get(), ModItems.BLUE_GOLD_INGOT.get(), 2,
+                    AlloyRecipeCategory.COMPLEX_ALLOY, "blue_gold_ingot");
+            superOreAlloying(consumer, ModItems.COBALT.get(), Items.GOLD_INGOT, ModItems.BLUE_GOLD_INGOT.get(), 2,
+                    AlloyRecipeCategory.COMPLEX_ALLOY, "blue_gold_ingot");
 
         //Polishing recipes
         gemPolishing(consumer, ModItems.RAW_EMERALD.get(), "gems", Items.EMERALD);
         gemPolishing(consumer, ModItems.RAW_SAPPHIRE.get(), "gems", ModItems.SAPPHIRE.get());
-        gemPolishing(consumer, ModItems.RAW_RUBI.get(), "gems", ModItems.RUBI.get());
+        gemPolishing(consumer, ModItems.RAW_RUBI.get(), "gems", ModItems.RUBY.get());
         gemPolishing(consumer, ModItems.RAW_DIAMOND.get(), "gems", Items.DIAMOND);
         gemPolishing(consumer, ModItems.RAW_GARNET.get(), "gems", ModItems.GARNET.get());
 
         //Grinding recipes
-        itemGrinding(consumer, ModItems.YERBA_MATE.get(), "grounded_yerba_mate", ModItems.GROUNDED_YERBA_MATE.get(), 2);
-        itemGrinding(consumer, Items.WHEAT, "wheat_flour", ModItems.WHEAT_FLOUR.get(), 2);
-        itemGrinding(consumer, Items.PUMPKIN, "pumpkin_flour", ModItems.PUMPKIN_FLOUR.get(), 2);
-        itemGrinding(consumer, Items.SUGAR_CANE, "sugar", Items.SUGAR, 3);
-        itemGrinding(consumer, Items.BONE, "bone_meal", Items.BONE_MEAL, 3);
-        itemGrinding(consumer, ItemTags.WOOL, "string", Items.STRING, 4);
+            //Misc
+            primalItemGrinding(consumer, ModItems.YERBA_MATE.get(), "grounded_yerba_mate", ModItems.GROUNDED_YERBA_MATE.get(), 2);
+            mechanicalItemGrinding(consumer, ModItems.YERBA_MATE.get(), "grounded_yerba_mate", ModItems.GROUNDED_YERBA_MATE.get(), 4);
+
+            primalItemGrinding(consumer, Items.WHEAT, "wheat_flour", ModItems.WHEAT_FLOUR.get(), 2);
+            mechanicalItemGrinding(consumer, Items.WHEAT, "wheat_flour", ModItems.WHEAT_FLOUR.get(), 4);
+
+            primalItemGrinding(consumer, Items.PUMPKIN, "pumpkin_flour", ModItems.PUMPKIN_FLOUR.get(), 2);
+            mechanicalItemGrinding(consumer, Items.PUMPKIN, "pumpkin_flour", ModItems.PUMPKIN_FLOUR.get(), 4);
+
+            primalItemGrinding(consumer, Items.SUGAR_CANE, "sugar", Items.SUGAR, 2);
+            mechanicalItemGrinding(consumer, Items.SUGAR_CANE, "sugar", Items.SUGAR, 3);
+
+            primalItemGrinding(consumer, Items.BONE, "bone_meal", Items.BONE_MEAL, 2);
+            mechanicalItemGrinding(consumer, Items.BONE, "bone_meal", Items.BONE_MEAL, 3);
+
+            primalItemGrinding(consumer, ItemTags.WOOL, "string", Items.STRING, 2);
+            mechanicalItemGrinding(consumer, ItemTags.WOOL, "string", Items.STRING, 4);
 
             //Dyes
-            itemGrinding(consumer, Items.BONE_MEAL, "white_dye", Items.WHITE_DYE, 3);
-            itemGrinding(consumer, Items.LILY_OF_THE_VALLEY, "white_dye", Items.WHITE_DYE, 3);
+                //White
+                primalItemGrinding(consumer, Items.BONE_MEAL, "white_dye", Items.WHITE_DYE, 3);
+                mechanicalItemGrinding(consumer, Items.BONE_MEAL, "white_dye", Items.WHITE_DYE, 4);
 
-            itemGrinding(consumer, Items.AZURE_BLUET, "light_gray_dye", Items.LIGHT_GRAY_DYE, 3);
-            itemGrinding(consumer, Items.OXEYE_DAISY, "light_gray_dye", Items.LIGHT_GRAY_DYE, 3);
-            itemGrinding(consumer, Items.WHITE_TULIP, "light_gray_dye", Items.LIGHT_GRAY_DYE, 3);
+                primalItemGrinding(consumer, Items.LILY_OF_THE_VALLEY, "white_dye", Items.WHITE_DYE, 3);
+                mechanicalItemGrinding(consumer, Items.LILY_OF_THE_VALLEY, "white_dye", Items.WHITE_DYE, 4);
 
-            itemGrinding(consumer, Items.WITHER_ROSE, "black_dye", Items.BLACK_DYE, 3);
+                //Light gray
+                primalItemGrinding(consumer, Items.AZURE_BLUET, "light_gray_dye", Items.LIGHT_GRAY_DYE, 3);
+                mechanicalItemGrinding(consumer, Items.AZURE_BLUET, "light_gray_dye", Items.LIGHT_GRAY_DYE, 4);
 
-            itemGrinding(consumer, Items.COCOA_BEANS, "brown_dye", Items.BROWN_DYE, 3);
+                primalItemGrinding(consumer, Items.OXEYE_DAISY, "light_gray_dye", Items.LIGHT_GRAY_DYE, 3);
+                mechanicalItemGrinding(consumer, Items.OXEYE_DAISY, "light_gray_dye", Items.LIGHT_GRAY_DYE, 4);
 
-            itemGrinding(consumer, Items.POPPY, "red_dye", Items.RED_DYE, 3);
-            itemGrinding(consumer, Items.RED_TULIP, "red_dye", Items.RED_DYE, 3);
-            itemGrinding(consumer, Items.ROSE_BUSH, "red_dye", Items.RED_DYE, 6);
-            itemGrinding(consumer, Items.BEETROOT, "red_dye", Items.RED_DYE, 2);
+                primalItemGrinding(consumer, Items.WHITE_TULIP, "light_gray_dye", Items.LIGHT_GRAY_DYE, 3);
+                mechanicalItemGrinding(consumer, Items.WHITE_TULIP, "light_gray_dye", Items.LIGHT_GRAY_DYE, 4);
 
-            itemGrinding(consumer, ModItems.ORANGE.get(), "orange_dye", Items.ORANGE_DYE, 2);
-            itemGrinding(consumer, Items.ORANGE_TULIP, "orange_dye", Items.ORANGE_DYE, 3);
-            itemGrinding(consumer, Items.TORCHFLOWER, "orange_dye", Items.ORANGE_DYE, 3);
+                //Black
+                mechanicalItemGrinding(consumer, Items.WITHER_ROSE, "black_dye", Items.BLACK_DYE, 3);
 
-            itemGrinding(consumer, ModItems.LEMON.get(), "yellow_dye", Items.YELLOW_DYE, 2);
-            itemGrinding(consumer, Items.DANDELION, "yellow_dye", Items.YELLOW_DYE, 3);
-            itemGrinding(consumer, Items.SUNFLOWER, "yellow_dye", Items.YELLOW_DYE, 6);
+                //Brown
+                primalItemGrinding(consumer, Items.COCOA_BEANS, "brown_dye", Items.BROWN_DYE, 3);
+                mechanicalItemGrinding(consumer, Items.COCOA_BEANS, "brown_dye", Items.BROWN_DYE, 4);
 
-            itemGrinding(consumer, Items.PITCHER_PLANT, "cyan_dye", Items.CYAN_DYE, 6);
+                //Red
+                primalItemGrinding(consumer, Items.POPPY, "red_dye", Items.RED_DYE, 3);
+                mechanicalItemGrinding(consumer, Items.POPPY, "red_dye", Items.RED_DYE, 4);
 
-            itemGrinding(consumer, Items.BLUE_ORCHID, "light_blue_dye", Items.LIGHT_BLUE_DYE, 3);
+                primalItemGrinding(consumer, Items.RED_TULIP, "red_dye", Items.RED_DYE, 3);
+                mechanicalItemGrinding(consumer, Items.RED_TULIP, "red_dye", Items.RED_DYE, 4);
 
-            itemGrinding(consumer, Items.LAPIS_LAZULI, "blue_dye", Items.BLUE_DYE, 3);
-            itemGrinding(consumer, Items.CORNFLOWER, "blue_dye", Items.BLUE_DYE, 3);
+                mechanicalItemGrinding(consumer, Items.ROSE_BUSH, "red_dye", Items.RED_DYE, 6);
 
-            itemGrinding(consumer, ModItems.LIME.get(), "lime_dye", Items.LIME_DYE, 2);
+                mechanicalItemGrinding(consumer, Items.BEETROOT, "red_dye", Items.RED_DYE, 2);
 
-            itemGrinding(consumer, Items.ALLIUM, "magenta_dye", Items.MAGENTA_DYE, 3);
-            itemGrinding(consumer, Items.LILAC, "magenta_dye", Items.MAGENTA_DYE, 6);
+                //Orange
+                primalItemGrinding(consumer, ModItems.ORANGE.get(), "orange_dye", Items.ORANGE_DYE, 2);
+                mechanicalItemGrinding(consumer, ModItems.ORANGE.get(), "orange_dye", Items.ORANGE_DYE, 3);
 
-            itemGrinding(consumer, Items.PINK_TULIP, "pink_dye", Items.PINK_DYE, 3);
-            itemGrinding(consumer, Items.PEONY, "pink_dye", Items.PINK_DYE, 6);
-            itemGrinding(consumer, Items.PINK_PETALS, "pink_dye", Items.PINK_DYE, 3);
+
+                primalItemGrinding(consumer, Items.ORANGE_TULIP, "orange_dye", Items.ORANGE_DYE, 3);
+                mechanicalItemGrinding(consumer, Items.ORANGE_TULIP, "orange_dye", Items.ORANGE_DYE, 4);
+
+
+                primalItemGrinding(consumer, Items.TORCHFLOWER, "orange_dye", Items.ORANGE_DYE, 3);
+                mechanicalItemGrinding(consumer, Items.TORCHFLOWER, "orange_dye", Items.ORANGE_DYE, 4);
+
+                //Yellow
+                primalItemGrinding(consumer, ModItems.LEMON.get(), "yellow_dye", Items.YELLOW_DYE, 2);
+                mechanicalItemGrinding(consumer, ModItems.LEMON.get(), "yellow_dye", Items.YELLOW_DYE, 3);
+
+                primalItemGrinding(consumer, Items.DANDELION, "yellow_dye", Items.YELLOW_DYE, 3);
+                mechanicalItemGrinding(consumer, Items.DANDELION, "yellow_dye", Items.YELLOW_DYE, 4);
+
+                mechanicalItemGrinding(consumer, Items.SUNFLOWER, "yellow_dye", Items.YELLOW_DYE, 6);
+
+                //Cyan
+                primalItemGrinding(consumer, Items.PITCHER_PLANT, "cyan_dye", Items.CYAN_DYE, 6);
+                mechanicalItemGrinding(consumer, Items.PITCHER_PLANT, "cyan_dye", Items.CYAN_DYE, 6);
+
+                //Light blue
+                primalItemGrinding(consumer, Items.BLUE_ORCHID, "light_blue_dye", Items.LIGHT_BLUE_DYE, 3);
+                mechanicalItemGrinding(consumer, Items.BLUE_ORCHID, "light_blue_dye", Items.LIGHT_BLUE_DYE, 4);
+
+                //Blue
+                mechanicalItemGrinding(consumer, Items.LAPIS_LAZULI, "blue_dye", Items.BLUE_DYE, 3);
+
+                primalItemGrinding(consumer, Items.CORNFLOWER, "blue_dye", Items.BLUE_DYE, 3);
+                mechanicalItemGrinding(consumer, Items.CORNFLOWER, "blue_dye", Items.BLUE_DYE, 4);
+
+                //Lime
+                primalItemGrinding(consumer, ModItems.LIME.get(), "lime_dye", Items.LIME_DYE, 2);
+                mechanicalItemGrinding(consumer, ModItems.LIME.get(), "lime_dye", Items.LIME_DYE, 3);
+
+
+                //Magenta
+                primalItemGrinding(consumer, Items.ALLIUM, "magenta_dye", Items.MAGENTA_DYE, 3);
+                mechanicalItemGrinding(consumer, Items.LILAC, "magenta_dye", Items.MAGENTA_DYE, 6);
+
+                //Pink
+                primalItemGrinding(consumer, Items.PINK_TULIP, "pink_dye", Items.PINK_DYE, 3);
+                mechanicalItemGrinding(consumer, Items.PINK_TULIP, "pink_dye", Items.PINK_DYE, 4);
+
+                mechanicalItemGrinding(consumer, Items.PEONY, "pink_dye", Items.PINK_DYE, 6);
+
+                primalItemGrinding(consumer, Items.PINK_PETALS, "pink_dye", Items.PINK_DYE, 3);
+                mechanicalItemGrinding(consumer, Items.PINK_PETALS, "pink_dye", Items.PINK_DYE, 4);
+
+            //Dusts
 
         //Stone cutting recipes
             //Stone
@@ -540,12 +649,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .unlockedBy(getHasName(ModItems.BRONZIUM_INGOT.get()), has(ModItems.BRONZIUM_INGOT.get()))
                         .save(consumer);
 
-                //Steel
-                ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.STEEL_INGOT.get(), 9)
-                        .requires(ModBlocks.STEEL_BLOCK.get())
-                        .unlockedBy(getHasName(ModItems.STEEL_INGOT.get()), has(ModItems.STEEL_INGOT.get()))
-                        .save(consumer);
-
                 //Green gold
                 ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.GREEN_GOLD_INGOT.get(), 9)
                         .requires(ModBlocks.GREEN_GOLD_BLOCK.get())
@@ -554,6 +657,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.GREEN_GOLD_NUGGET.get(), 9)
                         .requires(ModItems.GREEN_GOLD_INGOT.get())
                         .unlockedBy(getHasName(ModItems.GREEN_GOLD_INGOT.get()), has(ModItems.GREEN_GOLD_INGOT.get()))
+                        .save(consumer);
+
+                //Steel
+                ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.STEEL_INGOT.get(), 9)
+                        .requires(ModBlocks.STEEL_BLOCK.get())
+                        .unlockedBy(getHasName(ModItems.STEEL_INGOT.get()), has(ModItems.STEEL_INGOT.get()))
+                        .save(consumer);
+
+                //Blue gold
+                ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.BLUE_GOLD_INGOT.get(), 9)
+                        .requires(ModBlocks.BLUE_GOLD_BLOCK.get())
+                        .unlockedBy(getHasName(ModItems.BLUE_GOLD_INGOT.get()), has(ModItems.BLUE_GOLD_INGOT.get()))
+                        .save(consumer);
+                ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.BLUE_GOLD_NUGGET.get(), 9)
+                        .requires(ModItems.BLUE_GOLD_INGOT.get())
+                        .unlockedBy(getHasName(ModItems.BLUE_GOLD_INGOT.get()), has(ModItems.BLUE_GOLD_INGOT.get()))
                         .save(consumer);
 
                 //Smithing templates
@@ -943,14 +1062,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     .unlockedBy(getHasName(ModItems.BRONZIUM_INGOT.get()), has(ModItems.BRONZIUM_INGOT.get()))
                     .save(consumer);
 
-            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.STEEL_BLOCK.get(), 1)
-                    .pattern("TTT")
-                    .pattern("TTT")
-                    .pattern("TTT")
-                    .define('T', ModItems.STEEL_INGOT.get())
-                    .unlockedBy(getHasName(ModItems.STEEL_INGOT.get()), has(ModItems.STEEL_INGOT.get()))
-                    .save(consumer);
-
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GREEN_GOLD_BLOCK.get(), 1)
                     .pattern("TTT")
                     .pattern("TTT")
@@ -959,7 +1070,23 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     .unlockedBy(getHasName(ModItems.GREEN_GOLD_INGOT.get()), has(ModItems.GREEN_GOLD_INGOT.get()))
                     .save(consumer);
 
-        //Polished stone
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.STEEL_BLOCK.get(), 1)
+                    .pattern("TTT")
+                    .pattern("TTT")
+                    .pattern("TTT")
+                    .define('T', ModItems.STEEL_INGOT.get())
+                    .unlockedBy(getHasName(ModItems.STEEL_INGOT.get()), has(ModItems.STEEL_INGOT.get()))
+                    .save(consumer);
+
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLUE_GOLD_BLOCK.get(), 1)
+                    .pattern("TTT")
+                    .pattern("TTT")
+                    .pattern("TTT")
+                    .define('T', ModItems.BLUE_GOLD_INGOT.get())
+                    .unlockedBy(getHasName(ModItems.BLUE_GOLD_INGOT.get()), has(ModItems.BLUE_GOLD_INGOT.get()))
+                    .save(consumer);
+
+            //Polished stone
             ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_STONE.get(), 4)
                     .pattern("AA")
                     .pattern("AA")
@@ -1166,13 +1293,27 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     .unlockedBy(getHasName(Blocks.STONE), has(Blocks.STONE))
                     .save(consumer);
 
-            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GRINDER.get())
-                    .pattern("#I#")
-                    .pattern("#I#")
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PRIMAL_GRINDER.get())
+                    .pattern("AAA")
+                    .pattern("ABA")
+                    .pattern("CCC")
+                    .define('A', Blocks.MUD_BRICKS)
+                    .define('B', ModItems.BRONZE_INGOT.get())
+                    .define('C', Blocks.COBBLESTONE)
+                    .unlockedBy(getHasName(ModItems.BRONZE_INGOT.get()), has(ModItems.BRONZE_INGOT.get()))
+                    .unlockedBy(getHasName(Blocks.MUD_BRICKS), has(Blocks.MUD_BRICKS))
+                    .save(consumer);
+
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MECHANICAL_GRINDER.get())
+                    .pattern("#A#")
+                    .pattern("SIS")
                     .pattern("###")
                     .define('#', ItemTags.STONE_CRAFTING_MATERIALS)
-                    .define('I', Items.IRON_INGOT)
-                    .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
+                    .define('A', Items.IRON_BARS)
+                    .define('S', ModItems.STEEL_INGOT.get())
+                    .define('I', Items.REDSTONE)
+                    .unlockedBy(getHasName(ModBlocks.PRIMAL_GRINDER.get()), has(ModBlocks.PRIMAL_GRINDER.get()))
+                    .unlockedBy(getHasName(Items.REDSTONE), has(Items.REDSTONE))
                     .save(consumer);
 
             //Gold recipes
@@ -1507,6 +1648,77 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     .unlockedBy(getHasName(ModItems.ROSE_GOLD_INGOT.get()), has(ModItems.ROSE_GOLD_INGOT.get()))
                     .save(consumer);
 
+        //Green gold recipes
+            //Green gold tools
+            ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.GREEN_GOLDEN_SWORD.get())
+                    .pattern("I")
+                    .pattern("I")
+                    .pattern("#")
+                    .define('I', ModItems.GREEN_GOLD_INGOT.get())
+                    .define('#', Items.STICK)
+                    .unlockedBy(getHasName(ModItems.GREEN_GOLD_INGOT.get()), has(ModItems.GREEN_GOLD_INGOT.get()))
+                    .save(consumer);
+            ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.GREEN_GOLDEN_PICKAXE.get())
+                    .pattern("III")
+                    .pattern(" # ")
+                    .pattern(" # ")
+                    .define('I', ModItems.GREEN_GOLD_INGOT.get())
+                    .define('#', Items.STICK)
+                    .unlockedBy(getHasName(ModItems.GREEN_GOLD_INGOT.get()), has(ModItems.GREEN_GOLD_INGOT.get()))
+                    .save(consumer);
+            ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.GREEN_GOLDEN_AXE.get())
+                    .pattern("II")
+                    .pattern("I#")
+                    .pattern(" #")
+                    .define('I', ModItems.GREEN_GOLD_INGOT.get())
+                    .define('#', Items.STICK)
+                    .unlockedBy(getHasName(ModItems.GREEN_GOLD_INGOT.get()), has(ModItems.GREEN_GOLD_INGOT.get()))
+                    .save(consumer);
+            ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.GREEN_GOLDEN_SHOVEL.get())
+                    .pattern("I")
+                    .pattern("#")
+                    .pattern("#")
+                    .define('I', ModItems.GREEN_GOLD_INGOT.get())
+                    .define('#', Items.STICK)
+                    .unlockedBy(getHasName(ModItems.GREEN_GOLD_INGOT.get()), has(ModItems.GREEN_GOLD_INGOT.get()))
+                    .save(consumer);
+            ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.GREEN_GOLDEN_HOE.get())
+                    .pattern("II")
+                    .pattern(" #")
+                    .pattern(" #")
+                    .define('I', ModItems.GREEN_GOLD_INGOT.get())
+                    .define('#', Items.STICK)
+                    .unlockedBy(getHasName(ModItems.GREEN_GOLD_INGOT.get()), has(ModItems.GREEN_GOLD_INGOT.get()))
+                    .save(consumer);
+
+            //Green gold armor
+            ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.GREEN_GOLDEN_HELMET.get())
+                    .pattern("###")
+                    .pattern("# #")
+                    .define('#', ModItems.GREEN_GOLD_INGOT.get())
+                    .unlockedBy(getHasName(ModItems.GREEN_GOLD_INGOT.get()), has(ModItems.GREEN_GOLD_INGOT.get()))
+                    .save(consumer);
+            ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.GREEN_GOLDEN_CHESTPLATE.get())
+                    .pattern("# #")
+                    .pattern("###")
+                    .pattern("###")
+                    .define('#', ModItems.GREEN_GOLD_INGOT.get())
+                    .unlockedBy(getHasName(ModItems.GREEN_GOLD_INGOT.get()), has(ModItems.GREEN_GOLD_INGOT.get()))
+                    .save(consumer);
+            ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.GREEN_GOLDEN_LEGGINGS.get())
+                    .pattern("###")
+                    .pattern("# #")
+                    .pattern("# #")
+                    .define('#', ModItems.GREEN_GOLD_INGOT.get())
+                    .unlockedBy(getHasName(ModItems.GREEN_GOLD_INGOT.get()), has(ModItems.GREEN_GOLD_INGOT.get()))
+                    .save(consumer);
+            ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.GREEN_GOLDEN_BOOTS.get())
+                    .pattern("# #")
+                    .pattern("# #")
+                    .define('#', ModItems.GREEN_GOLD_INGOT.get())
+                    .unlockedBy(getHasName(ModItems.GREEN_GOLD_INGOT.get()), has(ModItems.GREEN_GOLD_INGOT.get()))
+                    .save(consumer);
+
         //Steel recipes
             //Steel tools
             ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.STEEL_SWORD.get())
@@ -1585,75 +1797,75 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     .unlockedBy(getHasName(ModItems.STEEL_INGOT.get()), has(ModItems.STEEL_INGOT.get()))
                     .save(consumer);
 
-        //Green gold recipes
-            //Green gold tools
-            ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.GREEN_GOLDEN_SWORD.get())
+        //Blue gold recipes
+            //Blue gold tools
+            ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.BLUE_GOLDEN_SWORD.get())
                     .pattern("I")
                     .pattern("I")
                     .pattern("#")
-                    .define('I', ModItems.GREEN_GOLD_INGOT.get())
+                    .define('I', ModItems.BLUE_GOLD_INGOT.get())
                     .define('#', Items.STICK)
-                    .unlockedBy(getHasName(ModItems.GREEN_GOLD_INGOT.get()), has(ModItems.GREEN_GOLD_INGOT.get()))
+                    .unlockedBy(getHasName(ModItems.BLUE_GOLD_INGOT.get()), has(ModItems.BLUE_GOLD_INGOT.get()))
                     .save(consumer);
-            ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.GREEN_GOLDEN_PICKAXE.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.BLUE_GOLDEN_PICKAXE.get())
                     .pattern("III")
                     .pattern(" # ")
                     .pattern(" # ")
-                    .define('I', ModItems.GREEN_GOLD_INGOT.get())
+                    .define('I', ModItems.BLUE_GOLD_INGOT.get())
                     .define('#', Items.STICK)
-                    .unlockedBy(getHasName(ModItems.GREEN_GOLD_INGOT.get()), has(ModItems.GREEN_GOLD_INGOT.get()))
+                    .unlockedBy(getHasName(ModItems.BLUE_GOLD_INGOT.get()), has(ModItems.BLUE_GOLD_INGOT.get()))
                     .save(consumer);
-            ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.GREEN_GOLDEN_AXE.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.BLUE_GOLDEN_AXE.get())
                     .pattern("II")
                     .pattern("I#")
                     .pattern(" #")
-                    .define('I', ModItems.GREEN_GOLD_INGOT.get())
+                    .define('I', ModItems.BLUE_GOLD_INGOT.get())
                     .define('#', Items.STICK)
-                    .unlockedBy(getHasName(ModItems.GREEN_GOLD_INGOT.get()), has(ModItems.GREEN_GOLD_INGOT.get()))
+                    .unlockedBy(getHasName(ModItems.BLUE_GOLD_INGOT.get()), has(ModItems.BLUE_GOLD_INGOT.get()))
                     .save(consumer);
-            ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.GREEN_GOLDEN_SHOVEL.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.BLUE_GOLDEN_SHOVEL.get())
                     .pattern("I")
                     .pattern("#")
                     .pattern("#")
-                    .define('I', ModItems.GREEN_GOLD_INGOT.get())
+                    .define('I', ModItems.BLUE_GOLD_INGOT.get())
                     .define('#', Items.STICK)
-                    .unlockedBy(getHasName(ModItems.GREEN_GOLD_INGOT.get()), has(ModItems.GREEN_GOLD_INGOT.get()))
+                    .unlockedBy(getHasName(ModItems.BLUE_GOLD_INGOT.get()), has(ModItems.BLUE_GOLD_INGOT.get()))
                     .save(consumer);
-            ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.GREEN_GOLDEN_HOE.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.BLUE_GOLDEN_HOE.get())
                     .pattern("II")
                     .pattern(" #")
                     .pattern(" #")
-                    .define('I', ModItems.GREEN_GOLD_INGOT.get())
+                    .define('I', ModItems.BLUE_GOLD_INGOT.get())
                     .define('#', Items.STICK)
-                    .unlockedBy(getHasName(ModItems.GREEN_GOLD_INGOT.get()), has(ModItems.GREEN_GOLD_INGOT.get()))
+                    .unlockedBy(getHasName(ModItems.BLUE_GOLD_INGOT.get()), has(ModItems.BLUE_GOLD_INGOT.get()))
                     .save(consumer);
 
-            //Green gold armor
-            ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.GREEN_GOLDEN_HELMET.get())
+            //Blue gold armor
+            ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.BLUE_GOLDEN_HELMET.get())
                     .pattern("###")
                     .pattern("# #")
-                    .define('#', ModItems.GREEN_GOLD_INGOT.get())
-                    .unlockedBy(getHasName(ModItems.GREEN_GOLD_INGOT.get()), has(ModItems.GREEN_GOLD_INGOT.get()))
+                    .define('#', ModItems.BLUE_GOLD_INGOT.get())
+                    .unlockedBy(getHasName(ModItems.BLUE_GOLD_INGOT.get()), has(ModItems.BLUE_GOLD_INGOT.get()))
                     .save(consumer);
-            ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.GREEN_GOLDEN_CHESTPLATE.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.BLUE_GOLDEN_CHESTPLATE.get())
                     .pattern("# #")
                     .pattern("###")
                     .pattern("###")
-                    .define('#', ModItems.GREEN_GOLD_INGOT.get())
-                    .unlockedBy(getHasName(ModItems.GREEN_GOLD_INGOT.get()), has(ModItems.GREEN_GOLD_INGOT.get()))
+                    .define('#', ModItems.BLUE_GOLD_INGOT.get())
+                    .unlockedBy(getHasName(ModItems.BLUE_GOLD_INGOT.get()), has(ModItems.BLUE_GOLD_INGOT.get()))
                     .save(consumer);
-            ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.GREEN_GOLDEN_LEGGINGS.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.BLUE_GOLDEN_LEGGINGS.get())
                     .pattern("###")
                     .pattern("# #")
                     .pattern("# #")
-                    .define('#', ModItems.GREEN_GOLD_INGOT.get())
-                    .unlockedBy(getHasName(ModItems.GREEN_GOLD_INGOT.get()), has(ModItems.GREEN_GOLD_INGOT.get()))
+                    .define('#', ModItems.BLUE_GOLD_INGOT.get())
+                    .unlockedBy(getHasName(ModItems.BLUE_GOLD_INGOT.get()), has(ModItems.BLUE_GOLD_INGOT.get()))
                     .save(consumer);
-            ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.GREEN_GOLDEN_BOOTS.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.BLUE_GOLDEN_BOOTS.get())
                     .pattern("# #")
                     .pattern("# #")
-                    .define('#', ModItems.GREEN_GOLD_INGOT.get())
-                    .unlockedBy(getHasName(ModItems.GREEN_GOLD_INGOT.get()), has(ModItems.GREEN_GOLD_INGOT.get()))
+                    .define('#', ModItems.BLUE_GOLD_INGOT.get())
+                    .unlockedBy(getHasName(ModItems.BLUE_GOLD_INGOT.get()), has(ModItems.BLUE_GOLD_INGOT.get()))
                     .save(consumer);
 
         //Diamond recipes
@@ -1737,7 +1949,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AA")
                 .pattern("AA")
                 .define('A', ModBlocks.POLISHED_STONE.get())
-                .unlockedBy(getHasName(Items.STONE), has(Items.STONE))
+                .unlockedBy(getHasName(ModBlocks.POLISHED_STONE.get()), has(ModBlocks.POLISHED_STONE.get()))
                 .save(consumer);
             ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, Blocks.MUD, 2)
                     .pattern("#A")
@@ -1776,7 +1988,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     //Specific recipe builders
         //Vanilla
-        protected static void byCampfire(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTIme, String pGroup){
+        protected static void smeltingByCampfire(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTIme, String pGroup){
             oreCooking(pFinishedRecipeConsumer, RecipeSerializer.CAMPFIRE_COOKING_RECIPE, pIngredients, pCategory, pResult, pExperience, pCookingTIme, pGroup, "_from_campfire");
         }
         protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTIme, String pGroup) {
@@ -1795,12 +2007,27 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         }
 
         //Grind
-        protected static void itemGrinding(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike ingredient, String group, ItemLike result, int count){
-            oreGrindingSerialize(pFinishedRecipeConsumer, ingredient, result, group, count, ModRecipes.GRINDING_SERIALIZER.get(), "from_grinding");
-        }
-        protected static void itemGrinding(Consumer<FinishedRecipe> pFinishedRecipeConsumer, TagKey<Item> ingredient, String group, ItemLike result, int count){
-            oreGrindingTagSerialize(pFinishedRecipeConsumer, ingredient, result, group, count, ModRecipes.GRINDING_SERIALIZER.get(), "from_grinding");
-        }
+            //Primal
+            protected static void primalItemGrinding(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike ingredient, String group, ItemLike result, int count){
+                oreGrindingSerialize(pFinishedRecipeConsumer, ingredient, result, group, count, ModRecipes.PRIMAL_GRINDING_SERIALIZER.get(), "from_primal_grinding");
+            }
+            protected static void primalItemGrinding(Consumer<FinishedRecipe> pFinishedRecipeConsumer, TagKey<Item> ingredient, String group, ItemLike result, int count){
+                oreGrindingTagSerialize(pFinishedRecipeConsumer, ingredient, result, group, count, ModRecipes.PRIMAL_GRINDING_SERIALIZER.get(), "from_primal_grinding");
+            }
+            protected static void primalItemGrinding(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> ingredient, String group, ItemLike result, int count){
+                oreGrindingSerializeWithList(pFinishedRecipeConsumer, ingredient, result, group, count, ModRecipes.PRIMAL_GRINDING_SERIALIZER.get(), "from_primal_grinding");
+            }
+
+            //Mechanical
+            protected static void mechanicalItemGrinding(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike ingredient, String group, ItemLike result, int count){
+                oreGrindingSerialize(pFinishedRecipeConsumer, ingredient, result, group, count, ModRecipes.MECHANICAL_GRINDING_SERIALIZER.get(), "from_mechanical_grinding");
+            }
+            protected static void mechanicalItemGrinding(Consumer<FinishedRecipe> pFinishedRecipeConsumer, TagKey<Item> ingredient, String group, ItemLike result, int count){
+                oreGrindingTagSerialize(pFinishedRecipeConsumer, ingredient, result, group, count, ModRecipes.MECHANICAL_GRINDING_SERIALIZER.get(), "from_mechanical_grinding");
+            }
+            protected static void mechanicalItemGrinding(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> ingredient, String group, ItemLike result, int count){
+                oreGrindingSerializeWithList(pFinishedRecipeConsumer, ingredient, result, group, count, ModRecipes.MECHANICAL_GRINDING_SERIALIZER.get(), "from_mechanical_grinding");
+            }
 
         //Basic smelt
         protected static void basicSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike ingredient, ItemLike result, String group){
@@ -1849,29 +2076,39 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     has(itemlike)).save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(pResult) + "_" + pRecipeName + "_" + getItemName(itemlike));
         }
     }
+
     protected static void gemPolishingSerialize(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike input, ItemLike output, String group, RecipeSerializer<GemPolishingRecipe> recipeSerializer, String recipeName){
         ModBasicRecipeBuilder.gemPolishing(Ingredient.of(input), output, group, recipeSerializer)
                 .unlockedBy(getHasName(input), has(input))
                 .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(output) + "_" + recipeName + "_" + getItemName(input));
     }
-    protected static void oreGrindingSerialize(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike input, ItemLike output, String group, int quantity, RecipeSerializer<GrindingRecipe> recipeSerializer, String recipeName){
+
+    protected static void oreGrindingSerialize(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike input, ItemLike output, String group, int quantity, RecipeSerializer<? extends AbstractGrindRecipe> recipeSerializer, String recipeName){
         ModBasicRecipeBuilder.itemGrinding(Ingredient.of(input), output, group, quantity, recipeSerializer)
                 .unlockedBy(getHasName(input), has(input))
                 .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(output) +  "_" + recipeName + "_" + getItemName(input));
     }
-    protected static void oreGrindingTagSerialize(Consumer<FinishedRecipe> pFinishedRecipeConsumer, TagKey<Item> input, ItemLike output, String group, int quantity, RecipeSerializer<GrindingRecipe> recipeSerializer, String recipeName){
+    protected static void oreGrindingTagSerialize(Consumer<FinishedRecipe> pFinishedRecipeConsumer, TagKey<Item> input, ItemLike output, String group, int quantity, RecipeSerializer<? extends AbstractGrindRecipe> recipeSerializer, String recipeName){
         ModBasicRecipeBuilder.itemGrinding(Ingredient.of(input), output, group, quantity, recipeSerializer)
                 .unlockedBy(input.toString(), has(input))
                 .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(output) +  "_" + recipeName);
     }
 
-    protected static void basicSmeltSerialize(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike input, ItemLike output, String group, RecipeSerializer<BasicSmeltingRecipe> recipeSerializer, String recipeName){
+    protected static void oreGrindingSerializeWithList(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> inputs, ItemLike output, String group, int quantity, RecipeSerializer<? extends AbstractGrindRecipe> recipeSerializer, String recipeName){
+        for (ItemLike ingredient : inputs) {
+            ModBasicRecipeBuilder.itemGrinding(Ingredient.of(ingredient), output, group, quantity, recipeSerializer)
+                    .unlockedBy(ingredient.toString(), has(ingredient))
+                    .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(output) + "_" + recipeName);
+        }
+    }
+
+    protected static void basicSmeltSerialize(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike input, ItemLike output, String group, RecipeSerializer<BasicSmeltRecipe> recipeSerializer, String recipeName){
         ModBasicSmeltBuilder.basicSmelting(Ingredient.of(input), output, group, recipeSerializer)
                 .unlockedBy(getHasName(input), has(input))
                 .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(output) +  "_" + recipeName + "_" + getItemName(input));
     }
 
-    protected static void basicSmeltingSerializeWithList(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> inputs, ItemLike output, String group, RecipeSerializer<BasicSmeltingRecipe> recipeSerializer, String recipeName){
+    protected static void basicSmeltingSerializeWithList(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> inputs, ItemLike output, String group, RecipeSerializer<BasicSmeltRecipe> recipeSerializer, String recipeName){
         Iterator var9 = inputs.iterator();
 
         while(var9.hasNext()) {
@@ -1882,13 +2119,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         }
     }
 
-    protected static void soulBasicSmeltSerialize(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike input, ItemLike output, String group, RecipeSerializer<SoulBasicSmeltingRecipe> recipeSerializer, String recipeName){
+    protected static void soulBasicSmeltSerialize(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike input, ItemLike output, String group, RecipeSerializer<SoulBasicSmeltRecipe> recipeSerializer, String recipeName){
         ModBasicSmeltBuilder.soulBasicSmelting(Ingredient.of(input), output, group, recipeSerializer)
                 .unlockedBy(getHasName(input), has(input))
                 .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(output) +  "_" + recipeName + "_" + getItemName(input));
     }
 
-    protected static void soulBasicSmeltingSerializeWithList(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> inputs, ItemLike output, String group, RecipeSerializer<SoulBasicSmeltingRecipe> recipeSerializer, String recipeName){
+    protected static void soulBasicSmeltingSerializeWithList(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> inputs, ItemLike output, String group, RecipeSerializer<SoulBasicSmeltRecipe> recipeSerializer, String recipeName){
         Iterator var9 = inputs.iterator();
 
         while(var9.hasNext()) {
@@ -1899,15 +2136,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         }
     }
 
-    protected static void oreAlloySerialize(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike firstIngredient, ItemLike secondIngredient, ItemLike output, AlloyRecipeCategory recipeCategory, String group, RecipeSerializer<AlloyingFurnaceRecipe> recipeSerializer, String recipeName){
-        ModAlloyingRecipeBuilder.oreAlloying(Ingredient.of(firstIngredient), Ingredient.of(secondIngredient), recipeCategory, output, group, recipeSerializer)
+    protected static void oreAlloySerialize(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike firstIngredient, ItemLike secondIngredient, ItemLike output, AlloyRecipeCategory recipeCategory, String group, RecipeSerializer<AlloyRecipe> recipeSerializer, String recipeName){
+        ModAlloyRecipeBuilder.oreAlloying(Ingredient.of(firstIngredient), Ingredient.of(secondIngredient), recipeCategory, output, group, recipeSerializer)
                 .unlockedBy(getHasName(firstIngredient), has(firstIngredient))
                 .unlockedBy(getHasName(secondIngredient), has(secondIngredient))
                 .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(output) +  "_" + recipeName + "_" + getItemName(firstIngredient) + "_and_" + getItemName(secondIngredient));
     }
 
-    protected static void superOreAlloySerialize(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike firstIngredient, ItemLike secondIngredient, ItemLike output, AlloyRecipeCategory recipeCategory, String group, int count, RecipeSerializer<SuperAlloyingRecipe> recipeSerializer, String recipeName){
-        ModAlloyingRecipeBuilder.superOreAlloying(Ingredient.of(firstIngredient), Ingredient.of(secondIngredient), recipeCategory, output, group, count, recipeSerializer)
+    protected static void superOreAlloySerialize(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike firstIngredient, ItemLike secondIngredient, ItemLike output, AlloyRecipeCategory recipeCategory, String group, int count, RecipeSerializer<BlastAlloyRecipe> recipeSerializer, String recipeName){
+        ModAlloyRecipeBuilder.superOreAlloying(Ingredient.of(firstIngredient), Ingredient.of(secondIngredient), recipeCategory, output, group, count, recipeSerializer)
                 .unlockedBy(getHasName(firstIngredient), has(firstIngredient))
                 .unlockedBy(getHasName(secondIngredient), has(secondIngredient))
                 .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(output) +  "_" + recipeName + "_" + getItemName(firstIngredient) + "_and_" + getItemName(secondIngredient));

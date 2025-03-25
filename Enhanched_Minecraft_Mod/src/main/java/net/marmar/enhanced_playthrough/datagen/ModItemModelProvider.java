@@ -214,7 +214,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.RAW_DIAMOND);
         simpleItem(ModItems.COBALT);
 
-        simpleItem(ModItems.RUBI);
+        simpleItem(ModItems.RUBY);
         simpleItem(ModItems.SAPPHIRE);
         simpleItem(ModItems.GARNET);
 

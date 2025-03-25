@@ -1,4 +1,4 @@
-// 1.20.1	2025-03-20T17:23:35.3871739	Tags for minecraft:item mod id enhanced_playthrough
+// 1.20.1	2025-03-25T14:03:11.7670819	Tags for minecraft:item mod id enhanced_playthrough
 2ddd5b0739572968da601d14fbf131d78e8e673b data/enhanced_playthrough/tags/items/alloy_ingredient.json
 b3b284c126879d981b4f706eb8ea0e63bd17ae12 data/enhanced_playthrough/tags/items/apple_logs.json
 941b97409020f6c9e9d7939283d5b03621b4f1c3 data/enhanced_playthrough/tags/items/blast_alloy_ingredient.json
@@ -6,10 +6,14 @@ ec3d5563c09823e51f7e84d3720d912c3f7acad3 data/enhanced_playthrough/tags/items/bl
 c49b1d51af972bf04214ede127318603f44ba874 data/enhanced_playthrough/tags/items/brass.json
 58b8e77b725f018f7e62d9a5f4742922e34a9275 data/enhanced_playthrough/tags/items/bronze.json
 b1b9de057d6bcc31fd399fe05ab1417d2a8af3ed data/enhanced_playthrough/tags/items/bronzium.json
+c90288063e9e19b2575fca565b0c0d970368261a data/enhanced_playthrough/tags/items/gold.json
 64c0c3503650853ed82ab5803d05c3fa52c726d5 data/enhanced_playthrough/tags/items/green_gold.json
+2a80199c7982e4650f42bfd3dbbb53ff1ff85e90 data/enhanced_playthrough/tags/items/iron.json
 4e223721e8c3e07e295a2f81d83b27295680a31b data/enhanced_playthrough/tags/items/lemon_logs.json
+b7b59c3ab21735555daa85432f662ca04cb69b35 data/enhanced_playthrough/tags/items/mechanical_grind_ingredient.json
 0ef6420e93e8504101946579416bf7b5c165b25a data/enhanced_playthrough/tags/items/orange_logs.json
 fa4d153d545cfc7e4c935f168cd555fbbb78ccad data/enhanced_playthrough/tags/items/polisher_tool.json
+b78c0858714f838f505694d2550bbf1aaa26a364 data/enhanced_playthrough/tags/items/primal_grind_ingredient.json
 196bf59f67124d9cc27cdec61d815b9c7fafcb26 data/enhanced_playthrough/tags/items/raw_gem.json
 9ee964bf2bb11ddc2cc811308dbbdfbb13dcb36d data/enhanced_playthrough/tags/items/rose_gold.json
 0cab01e45fea24f5dbe1b08a46651d0c9740e978 data/enhanced_playthrough/tags/items/silver.json

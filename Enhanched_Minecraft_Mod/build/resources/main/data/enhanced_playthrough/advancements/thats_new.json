@@ -21,7 +21,7 @@
       "translate": "advancements.desc.survival.thats_new"
     },
     "frame": "task",
-    "hidden": true,
+    "hidden": false,
     "icon": {
       "item": "enhanced_playthrough:bronze_ingot"
     },

@@ -1,6 +1,6 @@
 package net.marmar.enhanced_playthrough.recipe.alloy;
 
-import net.marmar.enhanced_playthrough.recipe.category.AlloyRecipeCategory;
+import net.marmar.enhanced_playthrough.recipe.recipecategory.AlloyRecipeCategory;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.resources.ResourceLocation;

@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_stone": {
+    "has_polished_stone": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:stone"
+              "enhanced_playthrough:polished_stone"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_stone",
+      "has_polished_stone",
       "has_the_recipe"
     ]
   ],

@@ -2,7 +2,7 @@ package net.marmar.enhanced_playthrough.compat.jei;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.block.ModBlocks;
-import net.marmar.enhanced_playthrough.recipe.alloy.AlloyingFurnaceRecipe;
+import net.marmar.enhanced_playthrough.recipe.alloy.AlloyRecipe;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
@@ -15,13 +15,13 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 
-public class OreAlloyingCategory implements IRecipeCategory<AlloyingFurnaceRecipe> {
+public class OreAlloyingCategory implements IRecipeCategory<AlloyRecipe> {
     public static final ResourceLocation UID = new ResourceLocation(EnhancedPlaythrough.MOD_ID, "ore_alloying");
     public static final ResourceLocation TEXTURE = new ResourceLocation(EnhancedPlaythrough.MOD_ID,
             "textures/gui/alloy_furnace_gui.png");
 
-    public static final RecipeType<AlloyingFurnaceRecipe> ALLOYING_FURNACE_RECIPE_RECIPE_TYPE =
-            new RecipeType<>(UID, AlloyingFurnaceRecipe.class);
+    public static final RecipeType<AlloyRecipe> ALLOYING_FURNACE_RECIPE_RECIPE_TYPE =
+            new RecipeType<>(UID, AlloyRecipe.class);
 
     private final IDrawable background;
     private final IDrawable icon;
@@ -32,7 +32,7 @@ public class OreAlloyingCategory implements IRecipeCategory<AlloyingFurnaceRecip
     }
 
     @Override
-    public RecipeType<AlloyingFurnaceRecipe> getRecipeType() {
+    public RecipeType<AlloyRecipe> getRecipeType() {
         return ALLOYING_FURNACE_RECIPE_RECIPE_TYPE;
     }
 
@@ -52,7 +52,7 @@ public class OreAlloyingCategory implements IRecipeCategory<AlloyingFurnaceRecip
     }
 
     @Override
-    public void setRecipe(IRecipeLayoutBuilder builder, AlloyingFurnaceRecipe recipe, IFocusGroup focuses) {
+    public void setRecipe(IRecipeLayoutBuilder builder, AlloyRecipe recipe, IFocusGroup focuses) {
         builder.addSlot(RecipeIngredientRole.INPUT, 37, 17).addIngredients(recipe.getIngredients().get(0));
         builder.addSlot(RecipeIngredientRole.INPUT, 74,17).addIngredients(recipe.getIngredients().get(1));
 

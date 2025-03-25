@@ -1,0 +1,12 @@
+{
+  "type": "enhanced_playthrough:primal_grinding",
+  "category": "mechanical_grind",
+  "group": "white_dye",
+  "ingredient": {
+    "item": "minecraft:bone_meal"
+  },
+  "output": {
+    "count": 3,
+    "item": "minecraft:white_dye"
+  }
+}

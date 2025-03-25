@@ -21,7 +21,7 @@
       "translate": "advancements.desc.survival.blossom"
     },
     "frame": "task",
-    "hidden": true,
+    "hidden": false,
     "icon": {
       "item": "enhanced_playthrough:rose_gold_ingot"
     },

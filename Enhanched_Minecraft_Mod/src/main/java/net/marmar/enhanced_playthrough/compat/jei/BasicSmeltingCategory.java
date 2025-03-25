@@ -2,7 +2,7 @@ package net.marmar.enhanced_playthrough.compat.jei;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.block.ModBlocks;
-import net.marmar.enhanced_playthrough.recipe.basic.BasicSmeltingRecipe;
+import net.marmar.enhanced_playthrough.recipe.basicsmelt.BasicSmeltRecipe;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
@@ -15,13 +15,13 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 
-public class BasicSmeltingCategory implements IRecipeCategory<BasicSmeltingRecipe> {
+public class BasicSmeltingCategory implements IRecipeCategory<BasicSmeltRecipe> {
     public static final ResourceLocation UID = new ResourceLocation(EnhancedPlaythrough.MOD_ID, "basic_smelting");
     public static final ResourceLocation TEXTURE = new ResourceLocation(EnhancedPlaythrough.MOD_ID,
             "textures/gui/basic_furnace_gui.png");
 
-    public static final RecipeType<BasicSmeltingRecipe> BASIC_SMELTING_TYPE =
-            new RecipeType<>(UID, BasicSmeltingRecipe.class);
+    public static final RecipeType<BasicSmeltRecipe> BASIC_SMELTING_TYPE =
+            new RecipeType<>(UID, BasicSmeltRecipe.class);
 
     private final IDrawable background;
     private final IDrawable icon;
@@ -32,7 +32,7 @@ public class BasicSmeltingCategory implements IRecipeCategory<BasicSmeltingRecip
     }
 
     @Override
-    public RecipeType<BasicSmeltingRecipe> getRecipeType() {
+    public RecipeType<BasicSmeltRecipe> getRecipeType() {
         return BASIC_SMELTING_TYPE;
     }
 
@@ -52,7 +52,7 @@ public class BasicSmeltingCategory implements IRecipeCategory<BasicSmeltingRecip
     }
 
     @Override
-    public void setRecipe(IRecipeLayoutBuilder builder, BasicSmeltingRecipe recipe, IFocusGroup focusGroup) {
+    public void setRecipe(IRecipeLayoutBuilder builder, BasicSmeltRecipe recipe, IFocusGroup focusGroup) {
         builder.addSlot(RecipeIngredientRole.INPUT, 56, 17).addIngredients(recipe.getIngredient());
 
         builder.addSlot(RecipeIngredientRole.OUTPUT, 116,35).addItemStack(recipe.getResultItem(null));

@@ -1,8 +1,15 @@
 package net.marmar.enhanced_playthrough.block;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
-import net.marmar.enhanced_playthrough.block.custom.*;
-import net.marmar.enhanced_playthrough.block.custom.crops.*;
+import net.marmar.enhanced_playthrough.block.crops.*;
+import net.marmar.enhanced_playthrough.block.custom.alloyfurnace.AdobeAlloyFurnaceBlock;
+import net.marmar.enhanced_playthrough.block.custom.alloyfurnace.SoulAlloyFurnaceBlock;
+import net.marmar.enhanced_playthrough.block.custom.alloyfurnace.SuperAlloyFurnaceBlock;
+import net.marmar.enhanced_playthrough.block.custom.basicfurnace.AdobeFurnaceBlock;
+import net.marmar.enhanced_playthrough.block.custom.basicfurnace.SoulFurnaceBlock;
+import net.marmar.enhanced_playthrough.block.custom.gempolisher.GemPolisherBlock;
+import net.marmar.enhanced_playthrough.block.custom.grinder.MechanicalGrinderBlock;
+import net.marmar.enhanced_playthrough.block.custom.grinder.PrimalGrinderBlock;
 import net.marmar.enhanced_playthrough.block.wood.ModLeavesBlock;
 import net.marmar.enhanced_playthrough.block.wood.ModLogsBlock;
 import net.marmar.enhanced_playthrough.block.wood.ModPlanksBlock;
@@ -317,11 +324,15 @@ public class ModBlocks {
         public static final RegistryObject<Block> SOUL_ALLOY_FURNACE = registerBlock("soul_alloy_furnace",
                 () -> new SoulAlloyFurnaceBlock(BlockBehaviour.Properties.copy(Blocks.BLACKSTONE).noOcclusion()));
 
-        //Others
+        //Gem polisher
         public static final RegistryObject<Block> GEM_POLISHER = registerBlock("gem_polisher",
                 () -> new GemPolisherBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.COBBLESTONE).noOcclusion()));
-        public static final RegistryObject<Block> GRINDER = registerBlock("grinder",
-                () -> new GrinderBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.COBBLESTONE).noOcclusion()));
+
+        //Grinders
+        public static final RegistryObject<Block> PRIMAL_GRINDER = registerBlock("primal_grinder",
+                () -> new PrimalGrinderBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.COBBLESTONE).noOcclusion()));
+        public static final RegistryObject<Block> MECHANICAL_GRINDER = registerBlock("mechanical_grinder",
+                () -> new MechanicalGrinderBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.COBBLESTONE).noOcclusion()));
 
     //Crops
     public static final RegistryObject<Block> YERBA_MATE_CROP = BLOCKS.register("yerba_mate_crop",

@@ -2,7 +2,7 @@ package net.marmar.enhanced_playthrough.compat.jei;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.block.ModBlocks;
-import net.marmar.enhanced_playthrough.recipe.basic.SoulBasicSmeltingRecipe;
+import net.marmar.enhanced_playthrough.recipe.basicsmelt.SoulBasicSmeltRecipe;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
@@ -15,13 +15,13 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 
-public class SoulBasicSmeltingCategory implements IRecipeCategory<SoulBasicSmeltingRecipe> {
+public class SoulBasicSmeltingCategory implements IRecipeCategory<SoulBasicSmeltRecipe> {
     public static final ResourceLocation UID = new ResourceLocation(EnhancedPlaythrough.MOD_ID, "soul_basic_smelting");
     public static final ResourceLocation TEXTURE = new ResourceLocation(EnhancedPlaythrough.MOD_ID,
             "textures/gui/basic_furnace_gui.png");
 
-    public static final RecipeType<SoulBasicSmeltingRecipe> SOUL_BASIC_SMELTING_TYPE =
-            new RecipeType<>(UID, SoulBasicSmeltingRecipe.class);
+    public static final RecipeType<SoulBasicSmeltRecipe> SOUL_BASIC_SMELTING_TYPE =
+            new RecipeType<>(UID, SoulBasicSmeltRecipe.class);
 
     private final IDrawable background;
     private final IDrawable icon;
@@ -32,7 +32,7 @@ public class SoulBasicSmeltingCategory implements IRecipeCategory<SoulBasicSmelt
     }
 
     @Override
-    public RecipeType<SoulBasicSmeltingRecipe> getRecipeType() {
+    public RecipeType<SoulBasicSmeltRecipe> getRecipeType() {
         return SOUL_BASIC_SMELTING_TYPE;
     }
 
@@ -52,7 +52,7 @@ public class SoulBasicSmeltingCategory implements IRecipeCategory<SoulBasicSmelt
     }
 
     @Override
-    public void setRecipe(IRecipeLayoutBuilder builder, SoulBasicSmeltingRecipe recipe, IFocusGroup focusGroup) {
+    public void setRecipe(IRecipeLayoutBuilder builder, SoulBasicSmeltRecipe recipe, IFocusGroup focusGroup) {
         builder.addSlot(RecipeIngredientRole.INPUT, 56, 17).addIngredients(recipe.getIngredient());
 
         builder.addSlot(RecipeIngredientRole.OUTPUT, 116,35).addItemStack(recipe.getResultItem(null));

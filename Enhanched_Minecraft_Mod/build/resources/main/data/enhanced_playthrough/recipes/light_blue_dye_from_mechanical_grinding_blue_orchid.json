@@ -1,0 +1,12 @@
+{
+  "type": "enhanced_playthrough:mechanical_grinding",
+  "category": "mechanical_grind",
+  "group": "light_blue_dye",
+  "ingredient": {
+    "item": "minecraft:blue_orchid"
+  },
+  "output": {
+    "count": 4,
+    "item": "minecraft:light_blue_dye"
+  }
+}

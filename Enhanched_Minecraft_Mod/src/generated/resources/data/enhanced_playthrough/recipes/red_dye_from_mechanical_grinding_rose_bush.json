@@ -1,0 +1,12 @@
+{
+  "type": "enhanced_playthrough:mechanical_grinding",
+  "category": "mechanical_grind",
+  "group": "red_dye",
+  "ingredient": {
+    "item": "minecraft:rose_bush"
+  },
+  "output": {
+    "count": 6,
+    "item": "minecraft:red_dye"
+  }
+}

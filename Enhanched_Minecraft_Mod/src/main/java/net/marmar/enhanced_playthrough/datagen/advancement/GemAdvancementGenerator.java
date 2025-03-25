@@ -1,20 +1,17 @@
 package net.marmar.enhanced_playthrough.datagen.advancement;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
-import net.marmar.enhanced_playthrough.Util.ModTags;
 import net.marmar.enhanced_playthrough.block.ModBlocks;
 import net.marmar.enhanced_playthrough.item.ModItems;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.advancements.FrameType;
 import net.minecraft.advancements.RequirementsStrategy;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
-import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.advancements.critereon.PlayerTrigger;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.common.data.ForgeAdvancementProvider;
 
@@ -46,8 +43,8 @@ public class GemAdvancementGenerator implements ForgeAdvancementProvider.Advance
 
         Advancement get_ruby = Advancement.Builder.advancement()
                 .parent(get_sapphire)
-                .display(ModItems.RUBI.get(), Component.translatable("advancements.title.gems.polish_rubi"), Component.translatable("advancements.desc.gems.polish_rubi"), GEMS_BACKGROUND, FrameType.TASK, true, true, false)
-                .addCriterion("has_material", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.RUBI.get()))
+                .display(ModItems.RUBY.get(), Component.translatable("advancements.title.gems.polish_rubi"), Component.translatable("advancements.desc.gems.polish_rubi"), GEMS_BACKGROUND, FrameType.TASK, true, true, false)
+                .addCriterion("has_material", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.RUBY.get()))
                 .requirements(RequirementsStrategy.OR)
                 .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "polish_ruby"), existingFileHelper);
 
@@ -68,7 +65,7 @@ public class GemAdvancementGenerator implements ForgeAdvancementProvider.Advance
         Advancement get_all_gems = Advancement.Builder.advancement()
                 .parent(gems_root)
                 .display(ModItems.NETHERITE_POLISHER.get(), Component.translatable("advancements.title.gems.get_all_gems"), Component.translatable("advancements.desc.gems.get_all_gems"), GEMS_BACKGROUND, FrameType.CHALLENGE, true, true, false)
-                .addCriterion("has_materials", InventoryChangeTrigger.TriggerInstance.hasItems(Items.EMERALD, ModItems.SAPPHIRE.get(), ModItems.RUBI.get(), ModItems.GARNET.get() ,Items.DIAMOND))
+                .addCriterion("has_materials", InventoryChangeTrigger.TriggerInstance.hasItems(Items.EMERALD, ModItems.SAPPHIRE.get(), ModItems.RUBY.get(), ModItems.GARNET.get() ,Items.DIAMOND))
                 .requirements(RequirementsStrategy.AND)
                 .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "get_all_gems"), existingFileHelper);
     }

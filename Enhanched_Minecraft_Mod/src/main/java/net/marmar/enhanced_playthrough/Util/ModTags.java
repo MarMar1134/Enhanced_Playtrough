@@ -29,18 +29,29 @@ public class ModTags {
         }
     }
     public static class Items{
+        //Materials
         public static final TagKey<Item> BRASS = itemTag("brass");
         public static final TagKey<Item> BRONZE = itemTag("bronze");
         public static final TagKey<Item> BRONZIUM = itemTag("bronzium");
+        public static final TagKey<Item> IRON = itemTag("iron");
+        public static final TagKey<Item> GOLD = itemTag("gold");
         public static final TagKey<Item> STEEL = itemTag("steel");
         public static final TagKey<Item> SILVER = itemTag("silver");
         public static final TagKey<Item> ROSE_GOLD = itemTag("rose_gold");
         public static final TagKey<Item> GREEN_GOLD = itemTag("green_gold");
         public static final TagKey<Item> BLUE_GOLD = itemTag("blue_gold");
         public static final TagKey<Item> RAW_GEM = itemTag("raw_gem");
+
+        //Tools
         public static final TagKey<Item> POLISHER_TOOL = itemTag("polisher_tool");
+
+        //Ingredients
         public static final TagKey<Item> ALLOY_INGREDIENT = itemTag("alloy_ingredient");
         public static final TagKey<Item> BLAST_ALLOY_INGREDIENT = itemTag("blast_alloy_ingredient");
+        public static final TagKey<Item> PRIMAL_GRIND_INGREDIENT = itemTag("primal_grind_ingredient");
+        public static final TagKey<Item> MECHANICAL_GRIND_INGREDIENT = itemTag("mechanical_grind_ingredient");
+
+        //Logs
         public static final TagKey<Item> WALNUT_LOGS = itemTag("walnut_logs");
         public static final TagKey<Item> APPLE_LOGS = itemTag("apple_logs");
         public static final TagKey<Item> ORANGE_LOGS = itemTag("orange_logs");

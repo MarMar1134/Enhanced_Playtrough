@@ -100,7 +100,7 @@ public class ModItems {
         public static final RegistryObject<Item> BLUE_GOLD_NUGGET = ITEMS.register(
                 "blue_gold_nugget", () -> new Item(new Item.Properties()));
 
-        public static final RegistryObject<Item> RUBI = ITEMS.register(
+        public static final RegistryObject<Item> RUBY = ITEMS.register(
                 "rubi", () -> new Item(new Item.Properties()));
         public static final RegistryObject<Item> SAPPHIRE = ITEMS.register(
                 "sapphire", () -> new Item(new Item.Properties()));

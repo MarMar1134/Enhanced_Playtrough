@@ -1,0 +1,12 @@
+{
+  "type": "enhanced_playthrough:primal_grinding",
+  "category": "mechanical_grind",
+  "group": "wheat_flour",
+  "ingredient": {
+    "item": "minecraft:wheat"
+  },
+  "output": {
+    "count": 2,
+    "item": "enhanced_playthrough:wheat_flour"
+  }
+}

@@ -1,20 +1,25 @@
 package net.marmar.enhanced_playthrough;
 
 import net.marmar.enhanced_playthrough.block.ModBlocks;
-import net.marmar.enhanced_playthrough.block.custom.entity.ModBlockEntities;
+import net.marmar.enhanced_playthrough.block.ModBlockEntities;
 import net.marmar.enhanced_playthrough.enchantment.ModEnchantments;
 import net.marmar.enhanced_playthrough.item.ModItems;
+import net.marmar.enhanced_playthrough.menu.grinder.screen.MechanicalGrinderScreen;
+import net.marmar.enhanced_playthrough.menu.grinder.screen.PrimalGrinderScreen;
 import net.marmar.enhanced_playthrough.Util.ModTabs;
 import net.marmar.enhanced_playthrough.loot.ModLootModifiers;
-import net.marmar.enhanced_playthrough.menu.screen.*;
+import net.marmar.enhanced_playthrough.menu.alloyfurnace.screen.AdobeAlloyFurnaceScreen;
+import net.marmar.enhanced_playthrough.menu.alloyfurnace.screen.SoulAlloyScreen;
+import net.marmar.enhanced_playthrough.menu.alloyfurnace.screen.SuperAlloyFurnaceScreen;
+import net.marmar.enhanced_playthrough.menu.basicfurnace.screen.AdobeFurnaceScreen;
+import net.marmar.enhanced_playthrough.menu.basicfurnace.screen.SoulFurnaceScreen;
+import net.marmar.enhanced_playthrough.menu.gempolisher.screen.GemPolisherScreen;
 import net.marmar.enhanced_playthrough.recipe.ModRecipes;
 import net.marmar.enhanced_playthrough.menu.ModMenuTypes;
 import net.marmar.enhanced_playthrough.villager.ModVillagers;
 import net.minecraft.client.gui.screens.MenuScreens;
-import net.minecraft.world.item.alchemy.Potions;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -65,7 +70,8 @@ public class EnhancedPlaythrough
 
             MenuScreens.register(ModMenuTypes.GEM_POLISHER_MENU.get(), GemPolisherScreen::new);
 
-            MenuScreens.register(ModMenuTypes.GRINDER_MENU.get(), GrinderScreen::new);
+            MenuScreens.register(ModMenuTypes.PRIMAL_GRINDER_MENU.get(), PrimalGrinderScreen::new);
+            MenuScreens.register(ModMenuTypes.MECHANICAL_GRINDER_MENU.get(), MechanicalGrinderScreen::new);
         }
     }
 

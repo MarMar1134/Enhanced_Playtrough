@@ -29,7 +29,8 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
         addJeiCategory("adobe_alloying_furnace", "Alloying");
         addJeiCategory("super_alloying_furnace", "Blast alloying");
         addJeiCategory("gem_polisher", "Gem polishing");
-        addJeiCategory("grinder", "Grinding");
+        addJeiCategory("primal_grinder", "Basic grinding");
+        addJeiCategory("mechanical_grinder", "Mechanical grinding");
 
         //GUI elements
         addGuiElements("gem_polisher_screen", "Uses");
@@ -236,7 +237,8 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
             addBlock(ModBlocks.SOUL_ALLOY_FURNACE, "Soul bricks alloy furnace");
             addBlock(ModBlocks.SUPER_ALLOYING_FURNACE, "Blast alloy furnace");
             addBlock(ModBlocks.GEM_POLISHER, "Gem polisher");
-            addBlock(ModBlocks.GRINDER, "Grinder");
+            addBlock(ModBlocks.PRIMAL_GRINDER, "Grinder");
+            addBlock(ModBlocks.MECHANICAL_GRINDER, "Mechanical grinder");
 
         //Items
             //Raw ores
@@ -271,7 +273,7 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
             addItem(ModItems.BLUE_GOLD_INGOT, "Blue gold ingot");
             addItem(ModItems.BLUE_GOLD_NUGGET, "Blue gold nugget");
             addItem(ModItems.SAPPHIRE, "Sapphire");
-            addItem(ModItems.RUBI, "Ruby");
+            addItem(ModItems.RUBY, "Ruby");
             addItem(ModItems.GARNET, "Garnet");
             addItem(ModItems.MUD_BRICK, "Mud brick");
             addItem(ModItems.COBALT, "Cobalt");
