@@ -1,0 +1,11 @@
+{
+  "type": "enhanced_playthrough:mechanical_grinding",
+  "category": "mechanical_grind",
+  "group": "brass_dust",
+  "ingredient": {
+    "tag": "enhanced_playthrough:brass_manufacturable"
+  },
+  "output": {
+    "item": "enhanced_playthrough:brass_dust"
+  }
+}

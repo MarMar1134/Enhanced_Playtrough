@@ -1,8 +1,8 @@
 {
   "type": "minecraft:campfire_cooking",
   "category": "food",
-  "cookingtime": 100,
-  "experience": 2.0,
+  "cookingtime": 600,
+  "experience": 0.35,
   "group": "corn",
   "ingredient": {
     "item": "enhanced_playthrough:corn"

@@ -278,6 +278,21 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
             addItem(ModItems.MUD_BRICK, "Mud brick");
             addItem(ModItems.COBALT, "Cobalt");
 
+            //Dusts
+            addItem(ModItems.GOLD_DUST, "Gold dust");
+            addItem(ModItems.SILVER_DUST, "Silver dust");
+            addItem(ModItems.ZINC_DUST, "Zinc dust");
+            addItem(ModItems.TIN_DUST, "Tin dust");
+            addItem(ModItems.COPPER_DUST, "Copper dust");
+            addItem(ModItems.BRASS_DUST, "Brass dust");
+            addItem(ModItems.BRONZE_DUST, "Bronze dust");
+            addItem(ModItems.ROSE_GOLD_DUST, "Rose gold dust");
+            addItem(ModItems.IRON_DUST, "Iron dust");
+            addItem(ModItems.BRONZIUM_DUST, "Bronzium dust");
+            addItem(ModItems.GREEN_GOLD_DUST, "Green gold dust");
+            addItem(ModItems.STEEL_DUST, "Steel dust");
+            addItem(ModItems.BLUE_GOLD_DUST, "Blue gold dust");
+
             //Acids and potions
             addAcid("sulfuric_acid", "Sulfuric acid");
 

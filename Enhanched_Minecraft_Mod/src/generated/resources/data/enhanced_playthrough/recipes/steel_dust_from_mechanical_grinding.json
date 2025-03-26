@@ -1,0 +1,11 @@
+{
+  "type": "enhanced_playthrough:mechanical_grinding",
+  "category": "mechanical_grind",
+  "group": "steel_dust",
+  "ingredient": {
+    "tag": "enhanced_playthrough:steel_manufacturable"
+  },
+  "output": {
+    "item": "enhanced_playthrough:steel_dust"
+  }
+}

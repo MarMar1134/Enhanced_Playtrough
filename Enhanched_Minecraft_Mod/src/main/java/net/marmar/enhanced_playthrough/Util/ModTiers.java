@@ -2,6 +2,7 @@ package net.marmar.enhanced_playthrough.Util;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.item.ModItems;
+import net.marmar.enhanced_playthrough.tag.ModTags;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.Tiers;

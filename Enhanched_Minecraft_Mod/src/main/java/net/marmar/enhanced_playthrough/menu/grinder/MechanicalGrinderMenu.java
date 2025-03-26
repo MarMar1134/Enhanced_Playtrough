@@ -1,6 +1,6 @@
 package net.marmar.enhanced_playthrough.menu.grinder;
 
-import net.marmar.enhanced_playthrough.Util.ModTags;
+import net.marmar.enhanced_playthrough.tag.ModTags;
 import net.marmar.enhanced_playthrough.block.ModBlocks;
 import net.marmar.enhanced_playthrough.block.custom.grinder.entity.MechanicalGrinderBlockEntity;
 import net.marmar.enhanced_playthrough.menu.ModMenuTypes;

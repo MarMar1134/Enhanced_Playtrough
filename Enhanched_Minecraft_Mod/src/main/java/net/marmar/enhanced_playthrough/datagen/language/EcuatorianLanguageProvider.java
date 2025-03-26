@@ -278,6 +278,21 @@ public class EcuatorianLanguageProvider extends AbstractModLanguageProvider{
         addItem(ModItems.MUD_BRICK, "Ladrillo de adobe");
         addItem(ModItems.COBALT, "Cobalto");
 
+        //Dusts
+        addItem(ModItems.GOLD_DUST, "Pólvo de oro");
+        addItem(ModItems.SILVER_DUST, "Pólvo de plata");
+        addItem(ModItems.ZINC_DUST, "Pólvo de zinc");
+        addItem(ModItems.TIN_DUST, "Pólvo de estaño");
+        addItem(ModItems.COPPER_DUST, "Pólvo de cobre");
+        addItem(ModItems.BRASS_DUST, "Pólvo de latón");
+        addItem(ModItems.BRONZE_DUST, "Pólvo de bronce");
+        addItem(ModItems.ROSE_GOLD_DUST, "Pólvo de oro rosado");
+        addItem(ModItems.IRON_DUST, "Pólvo de hierro");
+        addItem(ModItems.BRONZIUM_DUST, "Pólvo de broncio");
+        addItem(ModItems.GREEN_GOLD_DUST, "Pólvo de oro verde");
+        addItem(ModItems.STEEL_DUST, "Pólvo de acero");
+        addItem(ModItems.BLUE_GOLD_DUST, "Pólvo de oro azul");
+
         //Acids and potions
         addAcid("sulfuric_acid", "Ácido sulfurico");
 

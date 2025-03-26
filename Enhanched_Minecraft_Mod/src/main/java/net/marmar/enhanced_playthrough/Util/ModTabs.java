@@ -139,39 +139,62 @@ public class ModTabs {
                         output.accept(ModBlocks.PRIMAL_GRINDER.get());
                         output.accept(ModBlocks.MECHANICAL_GRINDER.get());
 
+                        output.accept(Items.COAL);
+
+                        output.accept(Items.RAW_GOLD);
+                        output.accept(Items.GOLD_INGOT);
+                        output.accept(Items.GOLD_NUGGET);
+
                         output.accept(ModItems.RAW_SILVER.get());
                         output.accept(ModItems.SILVER_INGOT.get());
+                        output.accept(ModItems.SILVER_DUST.get());
                         output.accept(ModItems.SILVER_NUGGET.get());
 
                         output.accept(Items.RAW_COPPER);
+                        output.accept(Items.COPPER_INGOT);
+                        output.accept(ModItems.COPPER_DUST.get());
                         output.accept((ModItems.COPPER_NUGGET.get()));
-
-                        output.accept(ModItems.RAW_TIN.get());
-                        output.accept((ModItems.TIN_INGOT.get()));
-                        output.accept((ModItems.TIN_NUGGET.get()));
 
                         output.accept(ModItems.RAW_ZINC.get());
                         output.accept(ModItems.ZINC_INGOT.get());
+                        output.accept(ModItems.ZINC_DUST.get());
                         output.accept(ModItems.ZINC_NUGGET.get());
 
+                        output.accept(ModItems.RAW_TIN.get());
+                        output.accept((ModItems.TIN_INGOT.get()));
+                        output.accept(ModItems.TIN_DUST.get());
+                        output.accept((ModItems.TIN_NUGGET.get()));
+
                         output.accept(ModItems.BRASS_INGOT.get());
+                        output.accept(ModItems.BRASS_DUST.get());
                         output.accept(ModItems.BRASS_NUGGET.get());
 
                         output.accept(ModItems.BRONZE_INGOT.get());
+                        output.accept(ModItems.BRONZE_DUST.get());
                         output.accept(ModItems.BRONZE_NUGGET.get());
 
                         output.accept(ModItems.ROSE_GOLD_INGOT.get());
+                        output.accept(ModItems.ROSE_GOLD_DUST.get());
                         output.accept(ModItems.ROSE_GOLD_NUGGET.get());
 
+                        output.accept(Items.RAW_IRON);
+                        output.accept(Items.IRON_INGOT);
+                        output.accept(ModItems.IRON_DUST.get());
+                        output.accept(Items.IRON_NUGGET);
+
                         output.accept(ModItems.BRONZIUM_INGOT.get());
+                        output.accept(ModItems.BRONZIUM_DUST.get());
                         output.accept(ModItems.BRONZIUM_NUGGET.get());
 
                         output.accept(ModItems.GREEN_GOLD_INGOT.get());
+                        output.accept(ModItems.GREEN_GOLD_DUST.get());
                         output.accept(ModItems.GREEN_GOLD_NUGGET.get());
 
                         output.accept(ModItems.STEEL_INGOT.get());
+                        output.accept(ModItems.STEEL_DUST.get());
 
                         output.accept(ModItems.BLUE_GOLD_INGOT.get());
+                        output.accept(ModItems.BLUE_GOLD_DUST.get());
                         output.accept(ModItems.BLUE_GOLD_NUGGET.get());
 
                         output.accept(ModItems.BRONZIUM_SMITHING_UPGRADE_TEMPLATE.get());

@@ -1,0 +1,11 @@
+{
+  "type": "enhanced_playthrough:mechanical_grinding",
+  "category": "mechanical_grind",
+  "group": "rose_gold_dust",
+  "ingredient": {
+    "tag": "enhanced_playthrough:rose_gold_manufacturable"
+  },
+  "output": {
+    "item": "enhanced_playthrough:rose_gold_dust"
+  }
+}

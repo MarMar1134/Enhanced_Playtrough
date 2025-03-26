@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "food",
+  "cookingtime": 600,
+  "experience": 1.0,
+  "group": "zinc_nugget",
+  "ingredient": {
+    "item": "enhanced_playthrough:raw_zinc"
+  },
+  "result": "enhanced_playthrough:zinc_nugget"
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.5,
+  "group": "blue_gold_nugget",
+  "ingredient": {
+    "tag": "enhanced_playthrough:blue_gold_manufacturable"
+  },
+  "result": "enhanced_playthrough:blue_gold_nugget"
+}

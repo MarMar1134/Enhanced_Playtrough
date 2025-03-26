@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.5,
+  "group": "brass_nugget",
+  "ingredient": {
+    "tag": "enhanced_playthrough:brass_manufacturable"
+  },
+  "result": "enhanced_playthrough:brass_nugget"
+}

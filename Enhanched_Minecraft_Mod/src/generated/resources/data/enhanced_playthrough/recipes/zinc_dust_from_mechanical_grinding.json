@@ -1,0 +1,11 @@
+{
+  "type": "enhanced_playthrough:mechanical_grinding",
+  "category": "mechanical_grind",
+  "group": "zinc_dust",
+  "ingredient": {
+    "tag": "enhanced_playthrough:zinc_manufacturable"
+  },
+  "output": {
+    "item": "enhanced_playthrough:zinc_dust"
+  }
+}

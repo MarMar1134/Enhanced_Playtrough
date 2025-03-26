@@ -107,6 +107,34 @@ public class ModItems {
         public static final RegistryObject<Item> GARNET = ITEMS.register(
                 "garnet", () -> new Item(new Item.Properties()));
 
+        //Dust
+        public static final RegistryObject<Item> GOLD_DUST = ITEMS.register(
+                "gold_dust", ()-> new Item(new Item.Properties()));
+        public static final RegistryObject<Item> SILVER_DUST = ITEMS.register(
+                "silver_dust", ()-> new Item(new Item.Properties()));
+        public static final RegistryObject<Item> ZINC_DUST = ITEMS.register(
+                "zinc_dust", ()-> new Item(new Item.Properties()));
+        public static final RegistryObject<Item> TIN_DUST = ITEMS.register(
+                "tin_dust", ()-> new Item(new Item.Properties()));
+        public static final RegistryObject<Item> COPPER_DUST = ITEMS.register(
+                "copper_dust", ()-> new Item(new Item.Properties()));
+        public static final RegistryObject<Item> BRASS_DUST = ITEMS.register(
+                "brass_dust", ()-> new Item(new Item.Properties()));
+        public static final RegistryObject<Item> BRONZE_DUST = ITEMS.register(
+                "bronze_dust", ()-> new Item(new Item.Properties()));
+        public static final RegistryObject<Item> ROSE_GOLD_DUST = ITEMS.register(
+                "rose_gold_dust", ()-> new Item(new Item.Properties()));
+        public static final RegistryObject<Item> IRON_DUST = ITEMS.register(
+                "iron_dust", ()-> new Item(new Item.Properties()));
+        public static final RegistryObject<Item> BRONZIUM_DUST = ITEMS.register(
+                "bronzium_dust", ()-> new Item(new Item.Properties()));
+        public static final RegistryObject<Item> GREEN_GOLD_DUST = ITEMS.register(
+                "green_gold_dust", ()-> new Item(new Item.Properties()));
+        public static final RegistryObject<Item> STEEL_DUST = ITEMS.register(
+                "steel_dust", ()-> new Item(new Item.Properties()));
+        public static final RegistryObject<Item> BLUE_GOLD_DUST = ITEMS.register(
+                "blue_gold_dust", ()-> new Item(new Item.Properties()));
+
     //Templates
     public static final RegistryObject<Item> BRONZIUM_SMITHING_UPGRADE_TEMPLATE = ITEMS.register(
             "bronzium_upgrade_smithing_template", BronziumSmithingUpgradeTemplate::new);

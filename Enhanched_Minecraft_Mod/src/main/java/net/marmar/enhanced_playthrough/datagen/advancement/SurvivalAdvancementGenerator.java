@@ -20,11 +20,13 @@ public class SurvivalAdvancementGenerator implements ForgeAdvancementProvider.Ad
 
     @Override
     public void generate(HolderLookup.Provider provider, Consumer<Advancement> consumer, ExistingFileHelper existingFileHelper) {
+        //Root
         Advancement survival_root = Advancement.Builder.advancement()
                 .display(ModBlocks.ADOBE_ALLOYING_FURNACE.get(), Component.translatable("advancements.title.survival.unity_makes_strength"), Component.translatable("advancements.desc.survival.unity_makes_strength"), SURVIVAL_BACKGROUND, FrameType.TASK, false, false, false)
                 .addCriterion("has_block", InventoryChangeTrigger.TriggerInstance.hasItems(ModBlocks.ADOBE_ALLOYING_FURNACE.get()))
                 .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "survival_root"), existingFileHelper);
 
+        //Bronze path
         Advancement thats_new = Advancement.Builder.advancement()
                 .parent(survival_root)
                 .display(ModItems.BRONZE_INGOT.get(), Component.translatable("advancements.title.survival.thats_new"), Component.translatable("advancements.desc.survival.thats_new"), SURVIVAL_BACKGROUND, FrameType.TASK, true, true, false)
@@ -49,7 +51,7 @@ public class SurvivalAdvancementGenerator implements ForgeAdvancementProvider.Ad
                 .addCriterion("has_item", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.STEEL_INGOT.get()))
                 .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "steel_isnt_enough"), existingFileHelper);
 
-        //Gold
+        //Gold path
         Advancement blossom = Advancement.Builder.advancement()
                 .parent(survival_root)
                 .display(ModItems.ROSE_GOLD_INGOT.get(), Component.translatable("advancements.title.survival.blossom"), Component.translatable("advancements.desc.survival.blossom"), SURVIVAL_BACKGROUND, FrameType.TASK, true, true, false)

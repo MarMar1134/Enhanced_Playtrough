@@ -218,6 +218,21 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.SAPPHIRE);
         simpleItem(ModItems.GARNET);
 
+        //Dusts
+        simpleItem(ModItems.GOLD_DUST);
+        simpleItem(ModItems.SILVER_DUST);
+        simpleItem(ModItems.ZINC_DUST);
+        simpleItem(ModItems.TIN_DUST);
+        simpleItem(ModItems.COPPER_DUST);
+        simpleItem(ModItems.BRASS_DUST);
+        simpleItem(ModItems.BRONZE_DUST);
+        simpleItem(ModItems.ROSE_GOLD_DUST);
+        simpleItem(ModItems.IRON_DUST);
+        simpleItem(ModItems.BRONZIUM_DUST);
+        simpleItem(ModItems.GREEN_GOLD_DUST);
+        simpleItem(ModItems.STEEL_DUST);
+        simpleItem(ModItems.BLUE_GOLD_DUST);
+
         //templates
         simpleItem(ModItems.BRONZIUM_SMITHING_UPGRADE_TEMPLATE);
 

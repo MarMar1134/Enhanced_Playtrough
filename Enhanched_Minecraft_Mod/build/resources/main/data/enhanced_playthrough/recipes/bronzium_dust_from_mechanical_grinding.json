@@ -1,0 +1,11 @@
+{
+  "type": "enhanced_playthrough:mechanical_grinding",
+  "category": "mechanical_grind",
+  "group": "bronzium_dust",
+  "ingredient": {
+    "tag": "enhanced_playthrough:bronzium_manufacturable"
+  },
+  "output": {
+    "item": "enhanced_playthrough:bronzium_dust"
+  }
+}

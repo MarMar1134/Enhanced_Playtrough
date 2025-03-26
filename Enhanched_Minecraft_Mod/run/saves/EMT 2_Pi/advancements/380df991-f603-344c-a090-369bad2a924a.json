@@ -231,12 +231,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/misc/tin_nugget__from_campfire_raw_tin": {
-    "criteria": {
-      "has_raw_tin": "2025-03-24 23:55:18 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:recipes/misc/tin_ingot__from_smelting_raw_tin": {
     "criteria": {
       "has_raw_tin": "2025-03-24 23:55:18 -0300"
@@ -321,18 +315,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/building_blocks/limestone__from_smelting_cobbeled_limestone": {
-    "criteria": {
-      "has_cobbeled_limestone": "2025-03-24 23:55:20 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/building_blocks/limestone__from_blasting_cobbeled_limestone": {
-    "criteria": {
-      "has_cobbeled_limestone": "2025-03-24 23:55:20 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:recipes/building_blocks/cobbeled_limestone_stair": {
     "criteria": {
       "has_cobbeled_limestone": "2025-03-24 23:55:20 -0300"
@@ -360,12 +342,6 @@
   "minecraft:recipes/decorations/andesite_wall_from_andesite_stonecutting": {
     "criteria": {
       "has_andesite": "2025-03-24 23:55:33 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/copper_nugget__from_campfire_raw_copper": {
-    "criteria": {
-      "has_raw_copper": "2025-03-24 23:55:33 -0300"
     },
     "done": true
   },
@@ -1349,30 +1325,9 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/food/cooked_zapallo__from_campfire_zapallo": {
-    "criteria": {
-      "has_zapallo": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/decorations/gray_bed": {
     "criteria": {
       "has_gray_wool": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/brass_nugget__from_blasting_brass_hoe": {
-    "criteria": {
-      "has_brass_hoe": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/rose_gold_nugget__from_smelting_rose_golden_pickaxe": {
-    "criteria": {
-      "has_rose_golden_pickaxe": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
     },
     "done": true
@@ -1595,13 +1550,6 @@
   "minecraft:recipes/misc/copper_ingot_from_blasting_deepslate_copper_ore": {
     "criteria": {
       "has_deepslate_copper_ore": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/silver_nugget__from_smelting_silver_shovel": {
-    "criteria": {
-      "has_silver_shovel": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
     },
     "done": true
@@ -2013,13 +1961,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/misc/rose_gold_nugget__from_smelting_rose_golden_shovel": {
-    "criteria": {
-      "has_rose_golden_shovel": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/bookshelf": {
     "criteria": {
       "has_book": "2025-03-25 00:02:21 -0300",
@@ -2039,20 +1980,6 @@
       "minecraft:warm": "2025-03-25 00:02:21 -0300",
       "minecraft:temperate": "2025-03-25 00:02:21 -0300",
       "minecraft:cold": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/brass_nugget__from_blasting_brass_leggings": {
-    "criteria": {
-      "has_brass_leggings": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/brass_nugget__from_blasting_brass_chestplate": {
-    "criteria": {
-      "has_brass_chestplate": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
     },
     "done": true
   },
@@ -2125,13 +2052,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/misc/rose_gold_nugget__from_blasting_rose_golden_hoe": {
-    "criteria": {
-      "has_rose_golden_hoe": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/red_concrete_powder": {
     "criteria": {
       "has_sand": "2025-03-25 00:02:21 -0300",
@@ -2178,13 +2098,6 @@
   "minecraft:nether/brew_potion": {
     "criteria": {
       "potion": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/silver_nugget__from_smelting_silver_axe": {
-    "criteria": {
-      "has_silver_axe": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
     },
     "done": true
   },
@@ -2391,13 +2304,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/copper_ingot_from_basic_smelting_deepslate_copper_ore": {
-    "criteria": {
-      "has_deepslate_copper_ore": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
   "minecraft:nether/ride_strider": {
     "criteria": {
       "used_warped_fungus_on_a_stick": "2025-03-25 00:02:21 -0300"
@@ -2407,13 +2313,6 @@
   "enhanced_playthrough:recipes/building_blocks/limestone_brick": {
     "criteria": {
       "has_limestone": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/rose_gold_nugget__from_blasting_rose_golden_pickaxe": {
-    "criteria": {
-      "has_rose_golden_pickaxe": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
     },
     "done": true
@@ -2492,13 +2391,6 @@
   "minecraft:recipes/building_blocks/stripped_warped_hyphae": {
     "criteria": {
       "has_log": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/silver_nugget__from_smelting_silver_sword": {
-    "criteria": {
-      "has_silver_sword": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
     },
     "done": true
@@ -2621,13 +2513,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/misc/brass_nugget__from_blasting_brass_boots": {
-    "criteria": {
-      "has_brass_boots": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:recipes/building_blocks/polished_stone_slab": {
     "criteria": {
       "has_polished_stone": "2025-03-25 00:02:21 -0300",
@@ -2687,13 +2572,6 @@
   "minecraft:recipes/building_blocks/oxidized_cut_copper": {
     "criteria": {
       "has_oxidized_copper": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/food/cooked_zapallo__from_smelting_zapallo": {
-    "criteria": {
-      "has_zapallo": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
     },
     "done": true
@@ -2895,13 +2773,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/misc/silver_nugget__from_blasting_silver_axe": {
-    "criteria": {
-      "has_silver_axe": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:recipes/building_blocks/orange_door": {
     "criteria": {
       "has_orange_planks": "2025-03-25 00:02:21 -0300",
@@ -3056,13 +2927,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/food/cooked_eggplant__from_smelting_eggplant": {
-    "criteria": {
-      "has_eggplant": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/decorations/painting": {
     "criteria": {
       "has_wool": "2025-03-25 00:02:21 -0300",
@@ -3080,13 +2944,6 @@
   "minecraft:recipes/building_blocks/red_terracotta": {
     "criteria": {
       "has_terracotta": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/brass_nugget__from_blasting_brass_helmet": {
-    "criteria": {
-      "has_brass_helmet": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
     },
     "done": true
@@ -3155,13 +3012,6 @@
   "minecraft:recipes/building_blocks/waxed_exposed_cut_copper_slab_from_honeycomb": {
     "criteria": {
       "has_exposed_cut_copper_slab": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/rose_gold_nugget__from_smelting_rose_golden_hoe": {
-    "criteria": {
-      "has_rose_golden_hoe": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
     },
     "done": true
@@ -3383,20 +3233,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/misc/bronze_nugget__from_blasting_bronze_axe": {
-    "criteria": {
-      "has_bronze_axe": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/food/cooked_corn__from_smelting_corn": {
-    "criteria": {
-      "has_corn": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/decorations/composter": {
     "criteria": {
       "has_wood_slab": "2025-03-25 00:02:21 -0300",
@@ -3483,13 +3319,6 @@
   "enhanced_playthrough:recipes/building_blocks/polished_stone_stair_from_stone_cutting_stone": {
     "criteria": {
       "has_stone": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/brass_nugget__from_smelting_brass_leggings": {
-    "criteria": {
-      "has_brass_leggings": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
     },
     "done": true
@@ -3898,13 +3727,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/misc/bronze_nugget__from_blasting_bronze_sword": {
-    "criteria": {
-      "has_bronze_sword": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/dye_pink_bed": {
     "criteria": {
       "has_needed_dye": "2025-03-25 00:02:21 -0300",
@@ -4290,24 +4112,10 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/misc/silver_nugget__from_blasting_silver_shovel": {
-    "criteria": {
-      "has_silver_shovel": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:recipes/rubi_from_gem_polishing_raw_rubi": {
     "criteria": {
       "has_the_recipe": "2025-03-25 00:02:21 -0300",
       "has_raw_rubi": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/bronze_nugget__from_smelting_bronze_sword": {
-    "criteria": {
-      "has_bronze_sword": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
     },
     "done": true
   },
@@ -4433,13 +4241,6 @@
   "minecraft:recipes/decorations/light_blue_stained_glass_pane": {
     "criteria": {
       "has_glass": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/brass_nugget__from_blasting_brass_sword": {
-    "criteria": {
-      "has_brass_sword": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
     },
     "done": true
@@ -4625,13 +4426,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/misc/rose_gold_nugget__from_blasting_rose_golden_sword": {
-    "criteria": {
-      "has_rose_golden_sword": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/redstone/birch_fence_gate": {
     "criteria": {
       "has_the_recipe": "2025-03-25 00:02:21 -0300",
@@ -4662,13 +4456,6 @@
   "minecraft:recipes/building_blocks/prismarine_bricks": {
     "criteria": {
       "has_prismarine_shard": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/bronze_nugget__from_blasting_bronze_shovel": {
-    "criteria": {
-      "has_bronze_shovel": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
     },
     "done": true
@@ -5050,13 +4837,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/misc/bronze_nugget__from_smelting_bronze_shovel": {
-    "criteria": {
-      "has_bronze_shovel": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/redstone/honey_block": {
     "criteria": {
       "has_honey_bottle": "2025-03-25 00:02:21 -0300",
@@ -5242,13 +5022,6 @@
     "criteria": {
       "has_the_recipe": "2025-03-25 00:02:21 -0300",
       "has_planks": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/brass_nugget__from_smelting_brass_chestplate": {
-    "criteria": {
-      "has_brass_chestplate": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
     },
     "done": true
   },
@@ -5457,13 +5230,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/misc/brass_nugget__from_smelting_brass_hoe": {
-    "criteria": {
-      "has_brass_hoe": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/cut_copper_from_copper_block_stonecutting": {
     "criteria": {
       "has_copper_block": "2025-03-25 00:02:21 -0300",
@@ -5482,13 +5248,6 @@
     "criteria": {
       "has_the_recipe": "2025-03-25 00:02:21 -0300",
       "has_planks": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/brass_nugget__from_smelting_brass_sword": {
-    "criteria": {
-      "has_brass_sword": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
     },
     "done": true
   },
@@ -5804,23 +5563,9 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/food/cooked_eggplant__from_smoking_eggplant": {
-    "criteria": {
-      "has_eggplant": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/dye_black_carpet": {
     "criteria": {
       "has_needed_dye": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/bronze_nugget__from_smelting_bronze_hoe": {
-    "criteria": {
-      "has_bronze_hoe": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
     },
     "done": true
@@ -5954,13 +5699,6 @@
   "minecraft:recipes/building_blocks/mossy_cobblestone_slab": {
     "criteria": {
       "has_mossy_cobblestone": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/copper_ingot_from_basic_smelting_nether_copper_ore": {
-    "criteria": {
-      "has_nether_copper_ore": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
     },
     "done": true
@@ -6492,13 +6230,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/misc/brass_nugget__from_smelting_brass_polisher": {
-    "criteria": {
-      "has_brass_polisher": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/mossy_cobblestone_stairs": {
     "criteria": {
       "has_mossy_cobblestone": "2025-03-25 00:02:21 -0300",
@@ -6710,13 +6441,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/misc/rose_gold_nugget__from_blasting_rose_golden_axe": {
-    "criteria": {
-      "has_rose_golden_axe": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/dark_oak_planks": {
     "criteria": {
       "has_log": "2025-03-25 00:02:21 -0300",
@@ -6808,13 +6532,6 @@
   "minecraft:recipes/redstone/calibrated_sculk_sensor": {
     "criteria": {
       "has_amethyst_shard": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/copper_ingot_from_soul_basic_smelting_nether_copper_ore": {
-    "criteria": {
-      "has_nether_copper_ore": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
     },
     "done": true
@@ -6950,13 +6667,6 @@
   "minecraft:recipes/building_blocks/spruce_planks": {
     "criteria": {
       "has_logs": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/copper_ingot_from_soul_basic_smelting_deepslate_copper_ore": {
-    "criteria": {
-      "has_deepslate_copper_ore": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
     },
     "done": true
@@ -7279,13 +6989,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/misc/brass_nugget__from_blasting_brass_axe": {
-    "criteria": {
-      "has_brass_axe": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/dye_black_bed": {
     "criteria": {
       "has_needed_dye": "2025-03-25 00:02:21 -0300",
@@ -7575,13 +7278,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/misc/silver_nugget__from_blasting_silver_sword": {
-    "criteria": {
-      "has_silver_sword": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/dye_light_blue_wool": {
     "criteria": {
       "has_needed_dye": "2025-03-25 00:02:21 -0300",
@@ -7649,13 +7345,6 @@
     "criteria": {
       "has_magenta_wool": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/zinc_nugget__from_campfire_nether_zinc_ore": {
-    "criteria": {
-      "has_the_recipe": "2025-03-25 00:02:21 -0300",
-      "has_nether_zinc_ore": "2025-03-25 00:02:21 -0300"
     },
     "done": true
   },
@@ -7804,13 +7493,6 @@
   "enhanced_playthrough:recipes/combat/silver_helmet": {
     "criteria": {
       "has_silver_ingot": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/brass_nugget__from_blasting_brass_polisher": {
-    "criteria": {
-      "has_brass_polisher": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
     },
     "done": true
@@ -8018,13 +7700,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/food/cooked_eggplant__from_campfire_eggplant": {
-    "criteria": {
-      "has_eggplant": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/decorations/lime_stained_glass_pane": {
     "criteria": {
       "has_glass": "2025-03-25 00:02:21 -0300",
@@ -8226,13 +7901,6 @@
   "minecraft:recipes/misc/silence_armor_trim_smithing_template": {
     "criteria": {
       "has_silence_armor_trim_smithing_template": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/rose_gold_nugget__from_smelting_rose_golden_axe": {
-    "criteria": {
-      "has_rose_golden_axe": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
     },
     "done": true
@@ -8572,13 +8240,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/misc/brass_nugget__from_smelting_brass_boots": {
-    "criteria": {
-      "has_brass_boots": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
   "minecraft:husbandry/tactical_fishing": {
     "criteria": {
       "cod_bucket": "2025-03-25 00:02:21 -0300",
@@ -8610,13 +8271,6 @@
   "minecraft:recipes/decorations/pink_bed": {
     "criteria": {
       "has_pink_wool": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/brass_nugget__from_smelting_brass_helmet": {
-    "criteria": {
-      "has_brass_helmet": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
     },
     "done": true
@@ -8823,20 +8477,6 @@
     "criteria": {
       "has_polished_blackstone": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/silver_nugget__from_blasting_silver_hoe": {
-    "criteria": {
-      "has_silver_hoe": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/silver_nugget__from_smelting_silver_pickaxe": {
-    "criteria": {
-      "has_the_recipe": "2025-03-25 00:02:21 -0300",
-      "has_silver_pickaxe": "2025-03-25 00:02:21 -0300"
     },
     "done": true
   },
@@ -9087,13 +8727,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/misc/zinc_nugget__from_campfire_zinc_ore": {
-    "criteria": {
-      "has_zinc_ore": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/crimson_hyphae": {
     "criteria": {
       "has_log": "2025-03-25 00:02:21 -0300",
@@ -9283,13 +8916,6 @@
     "criteria": {
       "has_the_recipe": "2025-03-25 00:02:21 -0300",
       "has_purpur_block": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/rose_gold_nugget__from_smelting_rose_golden_sword": {
-    "criteria": {
-      "has_rose_golden_sword": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
     },
     "done": true
   },
@@ -9530,13 +9156,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/misc/bronze_nugget__from_blasting_bronze_hoe": {
-    "criteria": {
-      "has_bronze_hoe": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/redstone/iron_trapdoor": {
     "criteria": {
       "has_the_recipe": "2025-03-25 00:02:21 -0300",
@@ -9677,13 +9296,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/food/cooked_corn__from_smoking_corn": {
-    "criteria": {
-      "has_corn": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/decorations/brick_wall_from_bricks_stonecutting": {
     "criteria": {
       "has_bricks": "2025-03-25 00:02:21 -0300",
@@ -9730,13 +9342,6 @@
   "minecraft:recipes/decorations/nether_brick_wall_from_nether_bricks_stonecutting": {
     "criteria": {
       "has_nether_bricks": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/brass_nugget__from_smelting_brass_shovel": {
-    "criteria": {
-      "has_brass_shovel": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
     },
     "done": true
@@ -9925,13 +9530,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/misc/silver_nugget__from_blasting_silver_pickaxe": {
-    "criteria": {
-      "has_the_recipe": "2025-03-25 00:02:21 -0300",
-      "has_silver_pickaxe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/combat/wooden_sword": {
     "criteria": {
       "has_stick": "2025-03-25 00:02:21 -0300",
@@ -9977,13 +9575,6 @@
   "minecraft:recipes/decorations/light_gray_banner": {
     "criteria": {
       "has_light_gray_wool": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/bronze_nugget__from_smelting_bronze_pickaxe": {
-    "criteria": {
-      "has_bronze_pickaxe": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
     },
     "done": true
@@ -10218,13 +9809,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/misc/brass_nugget__from_blasting_brass_shovel": {
-    "criteria": {
-      "has_brass_shovel": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
   "minecraft:husbandry/plant_any_sniffer_seed": {
     "criteria": {
       "torchflower": "2025-03-25 00:02:21 -0300",
@@ -10421,13 +10005,6 @@
   "minecraft:recipes/building_blocks/waxed_exposed_cut_copper": {
     "criteria": {
       "has_waxed_exposed_copper": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/rose_gold_nugget__from_blasting_rose_golden_shovel": {
-    "criteria": {
-      "has_rose_golden_shovel": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
     },
     "done": true
@@ -10649,13 +10226,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/misc/brass_nugget__from_blasting_brass_pickaxe": {
-    "criteria": {
-      "has_brass_pickaxe": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/misc/gold_ingot_from_smelting_deepslate_gold_ore": {
     "criteria": {
       "has_deepslate_gold_ore": "2025-03-25 00:02:21 -0300",
@@ -10842,13 +10412,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/misc/bronze_nugget__from_smelting_bronze_axe": {
-    "criteria": {
-      "has_bronze_axe": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/polished_diorite_slab_from_diorite_stonecutting": {
     "criteria": {
       "has_diorite": "2025-03-25 00:02:21 -0300",
@@ -10880,13 +10443,6 @@
   "minecraft:recipes/building_blocks/prismarine_brick_slab": {
     "criteria": {
       "has_prismarine_bricks": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/silver_nugget__from_smelting_silver_hoe": {
-    "criteria": {
-      "has_silver_hoe": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
     },
     "done": true
@@ -11256,13 +10812,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/food/cooked_corn__from_campfire_corn": {
-    "criteria": {
-      "has_corn": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/misc/emerald_from_blasting_deepslate_emerald_ore": {
     "criteria": {
       "has_deepslate_emerald_ore": "2025-03-25 00:02:21 -0300",
@@ -11291,13 +10840,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/food/cooked_zapallo__from_smoking_zapallo": {
-    "criteria": {
-      "has_zapallo": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/misc/nether_brick": {
     "criteria": {
       "has_netherrack": "2025-03-25 00:02:21 -0300",
@@ -11316,13 +10858,6 @@
     "criteria": {
       "has_the_recipe": "2025-03-25 00:02:21 -0300",
       "has_waxed_weathered_copper": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/bronze_nugget__from_blasting_bronze_pickaxe": {
-    "criteria": {
-      "has_bronze_pickaxe": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
     },
     "done": true
   },
@@ -11371,13 +10906,6 @@
   "enhanced_playthrough:recipes/combat/silver_chestplate": {
     "criteria": {
       "has_silver_ingot": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/brass_nugget__from_smelting_brass_axe": {
-    "criteria": {
-      "has_brass_axe": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
     },
     "done": true
@@ -11766,13 +11294,6 @@
   "minecraft:recipes/food/cooked_beef_from_campfire_cooking": {
     "criteria": {
       "has_beef": "2025-03-25 00:02:21 -0300",
-      "has_the_recipe": "2025-03-25 00:02:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/brass_nugget__from_smelting_brass_pickaxe": {
-    "criteria": {
-      "has_brass_pickaxe": "2025-03-25 00:02:21 -0300",
       "has_the_recipe": "2025-03-25 00:02:21 -0300"
     },
     "done": true

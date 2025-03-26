@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 2.0,
+  "group": "cobalt",
+  "ingredient": {
+    "item": "enhanced_playthrough:cobalt_ore"
+  },
+  "result": "enhanced_playthrough:cobalt"
+}

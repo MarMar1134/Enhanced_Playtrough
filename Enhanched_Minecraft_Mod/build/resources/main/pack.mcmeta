@@ -59,6 +59,10 @@
       {
         "namespace": "minecraft",
         "path": "loot_tables/blocks/oak_leaves.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "loot_tables/entities/evoker.json"
       }
     ]
   }

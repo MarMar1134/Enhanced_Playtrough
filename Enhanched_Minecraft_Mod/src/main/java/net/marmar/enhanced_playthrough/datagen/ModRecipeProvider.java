@@ -1,7 +1,7 @@
 package net.marmar.enhanced_playthrough.datagen;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
-import net.marmar.enhanced_playthrough.Util.ModTags;
+import net.marmar.enhanced_playthrough.tag.ModTags;
 import net.marmar.enhanced_playthrough.block.ModBlocks;
 import net.marmar.enhanced_playthrough.item.ModItems;
 import net.marmar.enhanced_playthrough.recipe.GemPolishingRecipe;
@@ -36,72 +36,23 @@ import java.util.List;
 import java.util.function.Consumer;
 
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
-    //food
-    public static final List<ItemLike> ZAPALLO_COOKABLES = List.of(ModItems.ZAPALLO.get());
-    public static final List<ItemLike> EGGPLANT_COOKABLES = List.of(ModItems.EGGPLANT.get());
-    public static final List<ItemLike> CORN_COOKABLES = List.of(ModItems.CORN.get());
+    //silver
+    public static final List<ItemLike> SILVER_SMELTABLES;
 
-    //ores
-        //tin
-        public static final List<ItemLike> BASIC_TIN_SMELTABLES = List.of(ModItems.RAW_TIN.get(),
-                ModBlocks.TIN_ORE.get());
-        public static final List<ItemLike> TIN_SMELTABLES = List.of(ModItems.RAW_TIN.get(),
-                ModBlocks.TIN_ORE.get(), ModBlocks.DEEPSLATE_TIN_ORE.get());
-        public static final List<ItemLike> TIN_NUGGET_SMELTABLES = List.of(ModItems.RAW_TIN.get());
+    //tin
+    public static final List<ItemLike> BASIC_TIN_SMELTABLES;
+    public static final List<ItemLike> TIN_SMELTABLES;
 
-        //zinc
-        public static final List<ItemLike> BASIC_ZINC_SMELTABLES = List.of(ModItems.RAW_ZINC.get(), ModBlocks.ZINC_ORE.get(),
-                ModBlocks.NETHER_ZINC_ORE.get());
-        public static final List<ItemLike> ZINC_SMELTABLES = List.of(ModItems.RAW_ZINC.get(), ModBlocks.ZINC_ORE.get(),
-                ModBlocks.NETHER_ZINC_ORE.get(), ModBlocks.DEEPSLATE_ZINC_ORE.get());
-        public static final List<ItemLike> ZINC_NUGGET_SMELTABLES = List.of(ModBlocks.ZINC_ORE.get(), ModBlocks.NETHER_ZINC_ORE.get());
+    //zinc
+    public static final List<ItemLike> BASIC_ZINC_SMELTABLES;
+    public static final List<ItemLike> ZINC_SMELTABLES;
 
-        //copper
-        public static final List<ItemLike> COPPER_SMELTABLES = List.of(Items.RAW_COPPER, Blocks.COPPER_ORE, Blocks.DEEPSLATE_COPPER_ORE, ModBlocks.NETHER_COPPER_ORE.get());
-        public static final List<ItemLike> NETHER_COPPER_SMELTABLES = List.of(ModBlocks.NETHER_COPPER_ORE.get());
-        public static final List<ItemLike> COPPER_NUGGETS_AND_DUST_SMELTABLES = List.of(Items.RAW_COPPER);
+    //Cobalt
+    public static final List<ItemLike> COBALT_SMELTABLES;
 
-        //brass
-        public static final List<ItemLike> BRASS_NUGGETS_AND_DUST_SMELTABLES = List.of(ModItems.BRASS_AXE.get(),
-                ModItems.BRASS_HOE.get(), ModItems.BRASS_PICKAXE.get(), ModItems.BRASS_POLISHER.get(),
-                ModItems.BRASS_SHOVEL.get(), ModItems.BRASS_SWORD.get(),
-                ModItems.BRASS_HELMET.get(), ModItems.BRASS_CHESTPLATE.get(), ModItems.BRASS_LEGGINGS.get(), ModItems.BRASS_BOOTS.get());
-
-        //bronze
-        public static final List<ItemLike> BRONZE_NUGGETS_AND_DUST_SMELTABLES = List.of(ModItems.BRONZE_AXE.get(),
-                ModItems.BRONZE_HOE.get(), ModItems.BRONZE_PICKAXE.get(), ModItems.BRONZE_SHOVEL.get(), ModItems.BRONZE_SWORD.get(),
-                ModItems.BRONZE_HELMET.get(), ModItems.BRONZE_CHESTPLATE.get(), ModItems.BRONZE_LEGGINGS.get(), ModItems.BRONZE_BOOTS.get());
-
-        //silver
-        public static final List<ItemLike> SILVER_SMELTABLES = List.of(ModItems.RAW_SILVER.get(), ModBlocks.SILVER_ORE.get(),
-                ModBlocks.DEEPSLATE_SILVER_ORE.get());
-        public static final List<ItemLike> SILVER_NUGGETS_AND_DUST_SMELTABLES = List.of(ModItems.SILVER_AXE.get(),
-                ModItems.SILVER_HOE.get(), ModItems.SILVER_PICKAXE.get(), ModItems.SILVER_POLISHER.get(),
-                ModItems.SILVER_SHOVEL.get(), ModItems.SILVER_SWORD.get(),
-                ModItems.SILVER_HELMET.get(), ModItems.SILVER_CHESTPLATE.get(), ModItems.SILVER_LEGGINGS.get(), ModItems.SILVER_BOOTS.get());
-
-        //Cobalt
-        public static final List<ItemLike> COBALT_SMELTABLES = List.of(ModBlocks.COBALT_ORE.get(), ModBlocks.DEEPSLATE_COBALT_ORE.get());
-
-        //rose gold
-        public static final List<ItemLike> ROSE_GOLD_NUGGETS_AND_DUST_SMELTABLES = List.of(ModItems.ROSE_GOLDEN_AXE.get(),
-                ModItems.ROSE_GOLDEN_HOE.get(), ModItems.ROSE_GOLDEN_PICKAXE.get(),ModItems.ROSE_GOLDEN_POLISHER.get(),
-                ModItems.ROSE_GOLDEN_SHOVEL.get(), ModItems.ROSE_GOLDEN_SWORD.get(),
-                ModItems.ROSE_GOLDEN_HELMET.get(), ModItems.ROSE_GOLDEN_CHESTPLATE.get(), ModItems.ROSE_GOLDEN_LEGGINGS.get(), ModItems.ROSE_GOLDEN_BOOTS.get());
-
-        //Green gold
-        public static final List<ItemLike> GREEN_GOLD_NUGGETS_AND_DUST_SMELTABLES = List.of(ModItems.GREEN_GOLDEN_AXE.get(),
-                ModItems.GREEN_GOLDEN_HOE.get(), ModItems.GREEN_GOLDEN_PICKAXE.get(), ModItems.GREEN_GOLDEN_POLISHER.get(),
-                ModItems.GREEN_GOLDEN_SHOVEL.get(), ModItems.GREEN_GOLDEN_SWORD.get(),
-                ModItems.GREEN_GOLDEN_HELMET.get(), ModItems.GREEN_GOLDEN_CHESTPLATE.get(), ModItems.GREEN_GOLDEN_LEGGINGS.get(), ModItems.GREEN_GOLDEN_BOOTS.get());
-
-        //Blue gold
-        public static final List<ItemLike> BLUE_GOLD_NUGGETS_AND_DUST_SMELTABLES = List.of(ModItems.BLUE_GOLDEN_AXE.get(),
-                ModItems.BLUE_GOLDEN_HOE.get(), ModItems.BLUE_GOLDEN_PICKAXE.get(), ModItems.BLUE_GOLDEN_POLISHER.get(),
-                ModItems.BLUE_GOLDEN_SHOVEL.get(), ModItems.BLUE_GOLDEN_SWORD.get(),
-                ModItems.BLUE_GOLDEN_HELMET.get(), ModItems.BLUE_GOLDEN_CHESTPLATE.get(), ModItems.BLUE_GOLDEN_LEGGINGS.get(), ModItems.BLUE_GOLDEN_BOOTS.get());
-
-    public static final List<ItemLike> LIMESTONE_SMELTABLES = List.of(ModBlocks.COBBLED_LIMESTONE.get());
+    //copper
+    public static final List<ItemLike> BASIC_COPPER_SMELTABLES;
+    public static final List<ItemLike> COPPER_SMELTABLES;
 
     public ModRecipeProvider(PackOutput pOutput) {
         super(pOutput);
@@ -142,118 +93,118 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         //Smelting Recipes
             //food
-            basicSmelting(consumer, ZAPALLO_COOKABLES, ModItems.COOKED_ZAPALLO.get(), "zapallo");
-            basicSmelting(consumer, EGGPLANT_COOKABLES, ModItems.COOKED_EGGPLANT.get(), "eggplant");
-            basicSmelting(consumer, CORN_COOKABLES, ModItems.COOKED_CORN.get(), "corn");
+            smeltingByCampfire(consumer, ModItems.ZAPALLO.get(), RecipeCategory.FOOD, ModItems.COOKED_ZAPALLO.get(), 0.35f, "zapallo");
+            smeltingByCampfire(consumer, ModItems.EGGPLANT.get(), RecipeCategory.FOOD, ModItems.COOKED_EGGPLANT.get(), 0.35f, "eggplant");
+            smeltingByCampfire(consumer, ModItems.CORN.get(), RecipeCategory.FOOD, ModItems.COOKED_CORN.get(), 0.35f, "corn");
 
-            soulBasicSmelting(consumer, ZAPALLO_COOKABLES, ModItems.COOKED_ZAPALLO.get(), "zapallo");
-            soulBasicSmelting(consumer, EGGPLANT_COOKABLES, ModItems.COOKED_EGGPLANT.get(), "eggplant");
-            soulBasicSmelting(consumer, CORN_COOKABLES, ModItems.COOKED_CORN.get(), "corn");
+            basicSmelting(consumer, ModItems.ZAPALLO.get(), ModItems.COOKED_ZAPALLO.get(), "zapallo");
+            basicSmelting(consumer, ModItems.EGGPLANT.get(), ModItems.COOKED_EGGPLANT.get(), "eggplant");
+            basicSmelting(consumer, ModItems.CORN.get(), ModItems.COOKED_CORN.get(), "corn");
 
-            oreSmelting(consumer, ZAPALLO_COOKABLES, RecipeCategory.FOOD, ModItems.COOKED_ZAPALLO.get(),
-                    2f, 100, "zapallo");
-            oreSmelting(consumer, EGGPLANT_COOKABLES, RecipeCategory.FOOD, ModItems.COOKED_EGGPLANT.get(),
-                    2f, 100, "eggplant");
-            oreSmelting(consumer, CORN_COOKABLES, RecipeCategory.FOOD, ModItems.COOKED_CORN.get(),
-                    2f, 100, "corn");
+            soulBasicSmelting(consumer, ModItems.ZAPALLO.get(), ModItems.COOKED_ZAPALLO.get(), "zapallo");
+            soulBasicSmelting(consumer, ModItems.EGGPLANT.get(), ModItems.COOKED_EGGPLANT.get(), "eggplant");
+            soulBasicSmelting(consumer, ModItems.CORN.get(), ModItems.COOKED_CORN.get(), "corn");
 
-            smoking(consumer, ZAPALLO_COOKABLES, RecipeCategory.FOOD, ModItems.COOKED_ZAPALLO.get(),
-                    2f, 100, "zapallo");
-            smoking(consumer, EGGPLANT_COOKABLES, RecipeCategory.FOOD, ModItems.COOKED_EGGPLANT.get(),
-                    2f, 100, "eggplant");
-            smoking(consumer, CORN_COOKABLES, RecipeCategory.FOOD, ModItems.COOKED_CORN.get(),
-                    2f, 100, "corn");
+            oreSmelting(consumer, ModItems.ZAPALLO.get(), RecipeCategory.FOOD, ModItems.COOKED_ZAPALLO.get(), 0.35f, "zapallo");
+            oreSmelting(consumer, ModItems.EGGPLANT.get(), RecipeCategory.FOOD, ModItems.COOKED_EGGPLANT.get(), 0.35f, "eggplant");
+            oreSmelting(consumer, ModItems.CORN.get(), RecipeCategory.FOOD, ModItems.COOKED_CORN.get(), 0.35f, "corn");
 
-            smeltingByCampfire(consumer, ZAPALLO_COOKABLES, RecipeCategory.FOOD, ModItems.COOKED_ZAPALLO.get(),
-                    2f, 100, "zapallo");
-            smeltingByCampfire(consumer, EGGPLANT_COOKABLES, RecipeCategory.FOOD, ModItems.COOKED_EGGPLANT.get(),
-                    2f, 100, "eggplant");
-            smeltingByCampfire(consumer, CORN_COOKABLES, RecipeCategory.FOOD, ModItems.COOKED_CORN.get(),
-                    2f, 100, "corn");
+            smoking(consumer, ModItems.ZAPALLO.get(), RecipeCategory.FOOD, ModItems.COOKED_ZAPALLO.get(), 0.35f, "zapallo");
+            smoking(consumer, ModItems.EGGPLANT.get(), RecipeCategory.FOOD, ModItems.COOKED_EGGPLANT.get(), 0.35f, "eggplant");
+            smoking(consumer, ModItems.CORN.get(), RecipeCategory.FOOD, ModItems.COOKED_CORN.get(), 0.35f, "corn");
 
-            //copper
-            basicSmelting(consumer, COPPER_SMELTABLES, Items.COPPER_INGOT, "copper_ingot");
-            soulBasicSmelting(consumer, COPPER_SMELTABLES, Items.COPPER_INGOT, "copper_ingot");
-
-            oreSmelting(consumer, NETHER_COPPER_SMELTABLES, RecipeCategory.MISC, Items.COPPER_INGOT,
-                    2f, 100, "copper_ingot");
-            oreBlasting(consumer, NETHER_COPPER_SMELTABLES, RecipeCategory.MISC, Items.COPPER_INGOT,
-                    2f, 200, "copper_ingot");
-
-            smeltingByCampfire(consumer, COPPER_NUGGETS_AND_DUST_SMELTABLES, RecipeCategory.MISC, ModItems.COPPER_NUGGET.get(),
-                1.0f, 300, "copper_nugget");
-
-            //tin
-            basicSmelting(consumer, BASIC_TIN_SMELTABLES, ModItems.TIN_INGOT.get(), "tin_ingot");
-            soulBasicSmelting(consumer, BASIC_TIN_SMELTABLES, ModItems.TIN_INGOT.get(), "tin_ingot");
-            oreSmelting(consumer, TIN_SMELTABLES, RecipeCategory.MISC, ModItems.TIN_INGOT.get(),
-                2f, 100, "tin_ingot");
-            oreBlasting(consumer, TIN_SMELTABLES, RecipeCategory.MISC, ModItems.TIN_INGOT.get(),
-                    2f, 200, "tin_ingot");
-            smeltingByCampfire(consumer, TIN_NUGGET_SMELTABLES, RecipeCategory.MISC, ModItems.TIN_NUGGET.get(),
-                    1.0f, 300, "tin_nugget");
-
-            //Zinc
-            basicSmelting(consumer, BASIC_ZINC_SMELTABLES, ModItems.ZINC_INGOT.get(), "zinc_ingot");
-            soulBasicSmelting(consumer, BASIC_ZINC_SMELTABLES, ModItems.ZINC_INGOT.get(), "zinc_ingot");
-            oreSmelting(consumer, ZINC_SMELTABLES, RecipeCategory.MISC, ModItems.ZINC_INGOT.get(),
-                    1.5F, 100, "zinc_ingot");
-            oreBlasting(consumer, ZINC_SMELTABLES, RecipeCategory.MISC, ModItems.ZINC_INGOT.get(),
-                    1.5F, 200, "zinc_ingot");
-            smeltingByCampfire(consumer, ZINC_NUGGET_SMELTABLES, RecipeCategory.MISC, ModItems.ZINC_NUGGET.get(),
-                    1.0F, 300, "zinc_nugget");
-
-            //brass
-            oreSmelting(consumer, BRASS_NUGGETS_AND_DUST_SMELTABLES, RecipeCategory.MISC, ModItems.BRASS_NUGGET.get(),
-                    0.5f, 100, "brass_nugget");
-            oreBlasting(consumer, BRASS_NUGGETS_AND_DUST_SMELTABLES, RecipeCategory.MISC, ModItems.BRASS_NUGGET.get(),
-                    0.5f, 200, "brass_nugget");
-
-            //bronze
-            oreSmelting(consumer, BRONZE_NUGGETS_AND_DUST_SMELTABLES, RecipeCategory.MISC, ModItems.BRONZE_NUGGET.get(),
-                    0.5f, 100, "bronze_nugget");
-            oreBlasting(consumer, BRONZE_NUGGETS_AND_DUST_SMELTABLES, RecipeCategory.MISC, ModItems.BRONZE_NUGGET.get(),
-                    0.5f, 200, "bronze_nugget");
+            //Gold
+            oreBlasting(consumer, ModItems.GOLD_DUST.get(), RecipeCategory.MISC, Items.GOLD_INGOT, 1f, "gold_ingot");
 
             //silver
-            oreSmelting(consumer, SILVER_SMELTABLES, RecipeCategory.MISC, ModItems.SILVER_INGOT.get(),
-                2f, 100, "silver_ingot");
-            oreBlasting(consumer, SILVER_SMELTABLES, RecipeCategory.MISC, ModItems.SILVER_INGOT.get(),
-                    2f, 200, "silver_ingot");
-            oreSmelting(consumer, SILVER_NUGGETS_AND_DUST_SMELTABLES, RecipeCategory.MISC, ModItems.SILVER_NUGGET.get(),
-                    0.5f, 100, "silver_nugget");
-            oreBlasting(consumer, SILVER_NUGGETS_AND_DUST_SMELTABLES, RecipeCategory.MISC, ModItems.SILVER_NUGGET.get(),
-                    0.5f, 200, "silver_nugget");
+            oreSmelting(consumer, SILVER_SMELTABLES, RecipeCategory.MISC, ModItems.SILVER_INGOT.get(), 0.7f, "silver_ingot");
+            oreBlasting(consumer, SILVER_SMELTABLES, RecipeCategory.MISC, ModItems.SILVER_INGOT.get(), 0.7f,  "silver_ingot");
+
+            oreSmelting(consumer, ModTags.Items.SILVER_MANUFACTURABLE, RecipeCategory.MISC, ModItems.SILVER_NUGGET.get(), 0.1f, "silver_nugget");
+            oreBlasting(consumer, ModTags.Items.SILVER_MANUFACTURABLE, RecipeCategory.MISC, ModItems.SILVER_NUGGET.get(), 0.1f, "silver_nugget");
+
+            oreBlasting(consumer, ModItems.SILVER_DUST.get(), RecipeCategory.MISC, ModItems.SILVER_INGOT.get(), 1f, "silver_ingot");
+
+            //Zinc
+            smeltingByCampfire(consumer, ModItems.RAW_ZINC.get(), RecipeCategory.MISC, ModItems.ZINC_NUGGET.get(), 0.1f, "zinc_nugget");
+
+            basicSmelting(consumer, BASIC_ZINC_SMELTABLES, ModItems.ZINC_INGOT.get(), "zinc_ingot");
+            soulBasicSmelting(consumer, BASIC_ZINC_SMELTABLES, ModItems.ZINC_INGOT.get(), "zinc_ingot");
+
+            oreSmelting(consumer, ZINC_SMELTABLES, RecipeCategory.MISC, ModItems.ZINC_INGOT.get(), 0.7f, "zinc_ingot");
+            oreBlasting(consumer, ZINC_SMELTABLES, RecipeCategory.MISC, ModItems.ZINC_INGOT.get(), 0.7f, "zinc_ingot");
+
+            oreBlasting(consumer, ModItems.ZINC_DUST.get(), RecipeCategory.MISC, ModItems.ZINC_INGOT.get(), 1f, "zinc_ingot");
+
+            //tin
+            smeltingByCampfire(consumer, ModItems.RAW_TIN.get(), RecipeCategory.MISC, ModItems.TIN_NUGGET.get(), 0.1f, "tin_nugget");
+
+            basicSmelting(consumer, BASIC_TIN_SMELTABLES, ModItems.TIN_INGOT.get(), "tin_ingot");
+            soulBasicSmelting(consumer, BASIC_TIN_SMELTABLES, ModItems.TIN_INGOT.get(), "tin_ingot");
+
+            oreSmelting(consumer, TIN_SMELTABLES, RecipeCategory.MISC, ModItems.TIN_INGOT.get(), 0.7f, "tin_ingot");
+            oreBlasting(consumer, TIN_SMELTABLES, RecipeCategory.MISC, ModItems.TIN_INGOT.get(), 0.7f, "tin_ingot");
+
+            oreBlasting(consumer, ModItems.TIN_DUST.get(), RecipeCategory.MISC, ModItems.TIN_INGOT.get(), 1f, "tin_ingot");
 
             //Cobalt
-            oreSmelting(consumer, COPPER_SMELTABLES, RecipeCategory.MISC, ModItems.COBALT.get(),
-                    2f, 100, "cobalt");
-            oreBlasting(consumer, COPPER_SMELTABLES, RecipeCategory.MISC, ModItems.COBALT.get(),
-                    2f, 200, "cobalt");
+            oreSmelting(consumer, COBALT_SMELTABLES, RecipeCategory.MISC, ModItems.COBALT.get(), 1f, "cobalt");
+            oreBlasting(consumer, COBALT_SMELTABLES, RecipeCategory.MISC, ModItems.COBALT.get(), 1f, "cobalt");
+
+            //copper
+            smeltingByCampfire(consumer, Items.RAW_COPPER, RecipeCategory.MISC, ModItems.COPPER_NUGGET.get(), 0.1f, "copper_nugget");
+
+            basicSmelting(consumer, BASIC_COPPER_SMELTABLES, Items.COPPER_INGOT, "copper_ingot");
+            soulBasicSmelting(consumer, BASIC_COPPER_SMELTABLES, Items.COPPER_INGOT, "copper_ingot");
+
+            oreSmelting(consumer, COPPER_SMELTABLES, RecipeCategory.MISC, Items.COPPER_INGOT, 0.7f, "copper_ingot");
+            oreBlasting(consumer, COPPER_SMELTABLES, RecipeCategory.MISC, Items.COPPER_INGOT, 0.7f, "copper_ingot");
+
+            oreBlasting(consumer, ModItems.COPPER_DUST.get(), RecipeCategory.MISC, Items.COPPER_INGOT, 1f, "copper_ingot");
+
+            //brass
+            oreSmelting(consumer, ModTags.Items.BRASS_MANUFACTURABLE, RecipeCategory.MISC, ModItems.BRASS_NUGGET.get(), 0.1f, "brass_nugget");
+            oreBlasting(consumer, ModTags.Items.BRASS_MANUFACTURABLE, RecipeCategory.MISC, ModItems.BRASS_NUGGET.get(), 0.1f, "brass_nugget");
+
+            oreBlasting(consumer, ModItems.BRASS_DUST.get(), RecipeCategory.MISC, ModItems.BRASS_INGOT.get(), 1f, "brass_ingot");
+
+            //bronze
+            oreSmelting(consumer, ModTags.Items.BRONZE_MANUFACTURABLE, RecipeCategory.MISC, ModItems.BRONZE_NUGGET.get(), 0.1f, "bronze_nugget");
+            oreBlasting(consumer, ModTags.Items.BRONZE_MANUFACTURABLE, RecipeCategory.MISC, ModItems.BRONZE_NUGGET.get(), 0.1f, "bronze_nugget");
+
+            oreBlasting(consumer, ModItems.BRONZE_DUST.get(), RecipeCategory.MISC, ModItems.BRONZE_INGOT.get(), 1f, "bronze_ingot");
 
             //rose gold
-            oreSmelting(consumer, ROSE_GOLD_NUGGETS_AND_DUST_SMELTABLES, RecipeCategory.MISC, ModItems.ROSE_GOLD_NUGGET.get(),
-                    0.5f, 100, "rose_gold_nugget");
-            oreBlasting(consumer, ROSE_GOLD_NUGGETS_AND_DUST_SMELTABLES, RecipeCategory.MISC, ModItems.ROSE_GOLD_NUGGET.get(),
-                    0.5f, 200, "rose_gold_nugget");
+            oreSmelting(consumer, ModTags.Items.ROSE_GOLD_MANUFACTURABLE, RecipeCategory.MISC, ModItems.ROSE_GOLD_NUGGET.get(), 0.1f, "rose_gold_nugget");
+            oreBlasting(consumer, ModTags.Items.ROSE_GOLD_MANUFACTURABLE, RecipeCategory.MISC, ModItems.ROSE_GOLD_NUGGET.get(), 0.1f, "rose_gold_nugget");
+
+            oreBlasting(consumer, ModItems.ROSE_GOLD_DUST.get(), RecipeCategory.MISC, ModItems.ROSE_GOLD_INGOT.get(), 1f, "rose_gold_ingot");
+
+            //Iron
+            oreBlasting(consumer, ModItems.IRON_DUST.get(), RecipeCategory.MISC, Items.IRON_INGOT, 1f, "iron_ingot");
+
+            //Bronzium
+            oreBlasting(consumer, ModTags.Items.BRONZIUM_MANUFACTURABLE, RecipeCategory.MISC, ModItems.BRONZIUM_NUGGET.get(), 0.1f, "bronzium_nugget");
+
+            oreBlasting(consumer, ModItems.BRONZIUM_DUST.get(), RecipeCategory.MISC, ModItems.BRONZIUM_INGOT.get(), 1f, "bronzium_ingot");
 
             //Green gold
-            oreSmelting(consumer, GREEN_GOLD_NUGGETS_AND_DUST_SMELTABLES, RecipeCategory.MISC, ModItems.GREEN_GOLD_NUGGET.get(),
-                    0.5f, 100, "green_gold_nugget");
-            oreBlasting(consumer, GREEN_GOLD_NUGGETS_AND_DUST_SMELTABLES, RecipeCategory.MISC, ModItems.GREEN_GOLD_NUGGET.get(),
-                    0.5f, 200, "green_gold_nugget");
+            oreSmelting(consumer, ModTags.Items.GREEN_GOLD_MANUFACTURABLE, RecipeCategory.MISC, ModItems.GREEN_GOLD_NUGGET.get(), 0.1f, "green_gold_nugget");
+            oreBlasting(consumer, ModTags.Items.GREEN_GOLD_MANUFACTURABLE, RecipeCategory.MISC, ModItems.GREEN_GOLD_NUGGET.get(), 0.1f, "green_gold_nugget");
+
+            oreBlasting(consumer, ModItems.GREEN_GOLD_DUST.get(), RecipeCategory.MISC, ModItems.GREEN_GOLD_INGOT.get(), 1f, "green_gold_ingot");
+
+            //Steel
+            oreBlasting(consumer, ModItems.STEEL_DUST.get(), RecipeCategory.MISC, ModItems.STEEL_INGOT.get(), 1f, "steel_ingot");
 
             //Blue gold
-            oreSmelting(consumer, BLUE_GOLD_NUGGETS_AND_DUST_SMELTABLES, RecipeCategory.MISC, ModItems.BLUE_GOLD_NUGGET.get(),
-                    0.5f, 100, "blue_gold_nugget");
-            oreBlasting(consumer, BLUE_GOLD_NUGGETS_AND_DUST_SMELTABLES, RecipeCategory.MISC, ModItems.BLUE_GOLD_NUGGET.get(),
-                    0.5f, 200, "blue_gold_nugget");
+            oreSmelting(consumer, ModTags.Items.BLUE_GOLD_MANUFACTURABLE, RecipeCategory.MISC, ModItems.BLUE_GOLD_NUGGET.get(), 0.1f, "blue_gold_nugget");
+            oreBlasting(consumer, ModTags.Items.BLUE_GOLD_MANUFACTURABLE, RecipeCategory.MISC, ModItems.BLUE_GOLD_NUGGET.get(), 0.1f, "blue_gold_nugget");
+
+            oreBlasting(consumer, ModItems.BLUE_GOLD_DUST.get(), RecipeCategory.MISC, ModItems.BLUE_GOLD_INGOT.get(), 1f, "blue_gold_ingot");
 
             //limestone
-            oreSmelting(consumer, LIMESTONE_SMELTABLES, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIMESTONE.get(),
-                    0.3f, 100, "limestone");
-            oreBlasting(consumer, LIMESTONE_SMELTABLES, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIMESTONE.get(),
-                    0.3f, 200, "limestone");
+            oreSmelting(consumer, ModBlocks.COBBLED_LIMESTONE.get(), RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIMESTONE.get(), 0.1f, "limestone");
 
         //Ore alloy recipes
             //Brass
@@ -454,6 +405,36 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 mechanicalItemGrinding(consumer, Items.PINK_PETALS, "pink_dye", Items.PINK_DYE, 4);
 
             //Dusts
+            mechanicalItemGrinding(consumer, ModTags.Items.GOLD_MANUFACTURABLE, "gold_dust", ModItems.GOLD_DUST.get(), 1);
+
+            mechanicalItemGrinding(consumer, ModTags.Items.SILVER_MANUFACTURABLE, "silver_dust", ModItems.SILVER_DUST.get(), 1);
+
+            primalItemGrinding(consumer, ModTags.Items.ZINC_MANUFACTURABLE, "zinc_dust", ModItems.ZINC_DUST.get(), 1);
+            mechanicalItemGrinding(consumer, ModTags.Items.ZINC_MANUFACTURABLE, "zinc_dust", ModItems.ZINC_DUST.get(), 1);
+
+            mechanicalItemGrinding(consumer, ModTags.Items.TIN_MANUFACTURABLE, "tin_dust", ModItems.TIN_DUST.get(), 1);
+            primalItemGrinding(consumer, ModTags.Items.TIN_MANUFACTURABLE, "tin_dust", ModItems.TIN_DUST.get(), 1);
+
+            mechanicalItemGrinding(consumer, ModTags.Items.COPPER_MANUFACTURABLE, "copper_dust", ModItems.COPPER_DUST.get(), 1);
+            primalItemGrinding(consumer, ModTags.Items.COPPER_MANUFACTURABLE, "copper_dust", ModItems.COPPER_DUST.get(), 1);
+
+            mechanicalItemGrinding(consumer, ModTags.Items.BRASS_MANUFACTURABLE, "brass_dust", ModItems.BRASS_DUST.get(), 1);
+            primalItemGrinding(consumer, ModTags.Items.BRASS_MANUFACTURABLE, "brass_dust", ModItems.BRASS_DUST.get(), 1);
+
+            mechanicalItemGrinding(consumer, ModTags.Items.BRONZE_MANUFACTURABLE, "bronze_dust", ModItems.BRONZE_DUST.get(), 1);
+            primalItemGrinding(consumer, ModTags.Items.BRONZE_MANUFACTURABLE, "bronze_dust", ModItems.BRONZE_DUST.get(), 1);
+
+            mechanicalItemGrinding(consumer, ModTags.Items.ROSE_GOLD_MANUFACTURABLE, "rose_gold_dust", ModItems.ROSE_GOLD_DUST.get(), 1);
+
+            mechanicalItemGrinding(consumer, ModTags.Items.IRON_MANUFACTURABLE, "iron_dust", ModItems.IRON_DUST.get(), 1);
+
+            mechanicalItemGrinding(consumer, ModTags.Items.BRONZIUM_MANUFACTURABLE, "bronzium_dust", ModItems.BRONZIUM_DUST.get(), 1);
+
+            mechanicalItemGrinding(consumer, ModTags.Items.GREEN_GOLD_MANUFACTURABLE, "green_gold_dust", ModItems.GREEN_GOLD_DUST.get(), 1);
+
+            mechanicalItemGrinding(consumer, ModTags.Items.STEEL_MANUFACTURABLE, "steel_dust", ModItems.STEEL_DUST.get(), 1);
+
+            mechanicalItemGrinding(consumer, ModTags.Items.BLUE_GOLD_MANUFACTURABLE, "blue_gold_dust", ModItems.BLUE_GOLD_DUST.get(), 1);
 
         //Stone cutting recipes
             //Stone
@@ -1988,17 +1969,41 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     //Specific recipe builders
         //Vanilla
-        protected static void smeltingByCampfire(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTIme, String pGroup){
-            oreCooking(pFinishedRecipeConsumer, RecipeSerializer.CAMPFIRE_COOKING_RECIPE, pIngredients, pCategory, pResult, pExperience, pCookingTIme, pGroup, "_from_campfire");
+        protected static void smeltingByCampfire(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike pIngredient, RecipeCategory pCategory, ItemLike pResult, float pExperience, String pGroup){
+            oreCooking(pFinishedRecipeConsumer, RecipeSerializer.CAMPFIRE_COOKING_RECIPE, pIngredient, pCategory, pResult, pExperience, 600, pGroup, "_from_campfire");
         }
-        protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTIme, String pGroup) {
-            oreCooking(pFinishedRecipeConsumer, RecipeSerializer.SMELTING_RECIPE, pIngredients, pCategory, pResult, pExperience, pCookingTIme, pGroup, "_from_smelting");
+        protected static void smeltingByCampfire(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, String pGroup){
+            oreCookingWithList(pFinishedRecipeConsumer, RecipeSerializer.CAMPFIRE_COOKING_RECIPE, pIngredients, pCategory, pResult, pExperience, 600, pGroup, "_from_campfire");
         }
-        protected static void smoking(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTIme, String pGroup) {
-            oreCooking(pFinishedRecipeConsumer, RecipeSerializer.SMOKING_RECIPE, pIngredients, pCategory, pResult, pExperience, pCookingTIme, pGroup, "_from_smoking");
+        protected static void smeltingByCampfire(Consumer<FinishedRecipe> pFinishedRecipeConsumer, TagKey<Item> pIngredient, RecipeCategory pCategory, ItemLike pResult, float pExperience, String pGroup){
+            oreCookingWithTag(pFinishedRecipeConsumer, RecipeSerializer.CAMPFIRE_COOKING_RECIPE, pIngredient, pCategory, pResult, pExperience, 600, pGroup, "_from_campfire");
         }
-        protected static void oreBlasting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup) {
-            oreCooking(pFinishedRecipeConsumer, RecipeSerializer.BLASTING_RECIPE, pIngredients, pCategory, pResult, pExperience, pCookingTime, pGroup, "_from_blasting");
+
+        protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike pIngredient, RecipeCategory pCategory, ItemLike pResult, float pExperience, String pGroup){
+            oreCooking(pFinishedRecipeConsumer, RecipeSerializer.SMELTING_RECIPE, pIngredient, pCategory, pResult, pExperience, 200, pGroup, "_from_smelting");
+        }
+        protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, TagKey<Item> pIngredient, RecipeCategory pCategory, ItemLike pResult, float pExperience, String pGroup){
+            oreCookingWithTag(pFinishedRecipeConsumer, RecipeSerializer.SMELTING_RECIPE, pIngredient, pCategory, pResult, pExperience, 200, pGroup, "_from_smelting");
+        }
+        protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, String pGroup) {
+            oreCookingWithList(pFinishedRecipeConsumer, RecipeSerializer.SMELTING_RECIPE, pIngredients, pCategory, pResult, pExperience, 200, pGroup, "_from_smelting");
+        }
+
+        protected static void smoking(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, String pGroup) {
+            oreCookingWithList(pFinishedRecipeConsumer, RecipeSerializer.SMOKING_RECIPE, pIngredients, pCategory, pResult, pExperience, 100, pGroup, "_from_smoking");
+        }
+        protected static void smoking(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike pIngredient, RecipeCategory pCategory, ItemLike pResult, float pExperience, String pGroup){
+            oreCooking(pFinishedRecipeConsumer, RecipeSerializer.SMOKING_RECIPE, pIngredient, pCategory, pResult, pExperience, 100, pGroup, "_from_smoking");
+        }
+
+        protected static void oreBlasting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike pIngredient, RecipeCategory pCategory, ItemLike pResult, float pExperience, String pGroup){
+            oreCooking(pFinishedRecipeConsumer, RecipeSerializer.BLASTING_RECIPE, pIngredient, pCategory, pResult, pExperience, 100, pGroup, "_from_blasting");
+        }
+        protected static void oreBlasting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, TagKey<Item> pIngredient, RecipeCategory pCategory, ItemLike pResult, float pExperience, String pGroup){
+            oreCookingWithTag(pFinishedRecipeConsumer, RecipeSerializer.BLASTING_RECIPE, pIngredient, pCategory, pResult, pExperience, 100, pGroup, "_from_blasting");
+        }
+        protected static void oreBlasting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, String pGroup) {
+            oreCookingWithList(pFinishedRecipeConsumer, RecipeSerializer.BLASTING_RECIPE, pIngredients, pCategory, pResult, pExperience, 100, pGroup, "_from_blasting");
         }
 
         //Polish
@@ -2014,9 +2019,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
             protected static void primalItemGrinding(Consumer<FinishedRecipe> pFinishedRecipeConsumer, TagKey<Item> ingredient, String group, ItemLike result, int count){
                 oreGrindingTagSerialize(pFinishedRecipeConsumer, ingredient, result, group, count, ModRecipes.PRIMAL_GRINDING_SERIALIZER.get(), "from_primal_grinding");
             }
-            protected static void primalItemGrinding(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> ingredient, String group, ItemLike result, int count){
-                oreGrindingSerializeWithList(pFinishedRecipeConsumer, ingredient, result, group, count, ModRecipes.PRIMAL_GRINDING_SERIALIZER.get(), "from_primal_grinding");
-            }
 
             //Mechanical
             protected static void mechanicalItemGrinding(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike ingredient, String group, ItemLike result, int count){
@@ -2024,9 +2026,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
             }
             protected static void mechanicalItemGrinding(Consumer<FinishedRecipe> pFinishedRecipeConsumer, TagKey<Item> ingredient, String group, ItemLike result, int count){
                 oreGrindingTagSerialize(pFinishedRecipeConsumer, ingredient, result, group, count, ModRecipes.MECHANICAL_GRINDING_SERIALIZER.get(), "from_mechanical_grinding");
-            }
-            protected static void mechanicalItemGrinding(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> ingredient, String group, ItemLike result, int count){
-                oreGrindingSerializeWithList(pFinishedRecipeConsumer, ingredient, result, group, count, ModRecipes.MECHANICAL_GRINDING_SERIALIZER.get(), "from_mechanical_grinding");
             }
 
         //Basic smelt
@@ -2066,14 +2065,25 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(input), has(input))
                 .save(consumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(result) + "_" + recipeName + "_" + getItemName(input));
     }
-    protected static void oreCooking(Consumer<FinishedRecipe> pFinishedRecipeConsumer, RecipeSerializer<? extends AbstractCookingRecipe> pCookingSerializer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup, String pRecipeName) {
-        Iterator var9 = pIngredients.iterator();
 
-        while(var9.hasNext()) {
-            ItemLike itemlike = (ItemLike)var9.next();
+    protected static void oreCooking(Consumer<FinishedRecipe> pFinishedRecipeConsumer, RecipeSerializer<? extends AbstractCookingRecipe> pCookingSerializer, ItemLike pIngredient, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup, String pRecipeName){
+        SimpleCookingRecipeBuilder.generic(Ingredient.of(pIngredient), pCategory, pResult, pExperience, pCookingTime, pCookingSerializer)
+                .group(pGroup).unlockedBy(getHasName(pIngredient), has(pIngredient))
+                .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(pResult) + "_" + pRecipeName + "_" + getItemName(pIngredient));
+    }
+
+    protected static void oreCookingWithTag(Consumer<FinishedRecipe> pFinishedRecipeConsumer, RecipeSerializer<? extends AbstractCookingRecipe> pCookingSerializer, TagKey<Item> pIngredient, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup, String pRecipeName){
+        SimpleCookingRecipeBuilder.generic(Ingredient.of(pIngredient), pCategory, pResult, pExperience, pCookingTime, pCookingSerializer)
+                .group(pGroup).unlockedBy(pIngredient.toString(), has(pIngredient))
+                .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(pResult) + "_" + pRecipeName);
+    }
+
+    protected static void oreCookingWithList(Consumer<FinishedRecipe> pFinishedRecipeConsumer, RecipeSerializer<? extends AbstractCookingRecipe> pCookingSerializer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup, String pRecipeName) {
+        for (ItemLike itemlike : pIngredients) {
             SimpleCookingRecipeBuilder.generic(Ingredient.of(itemlike),
                     pCategory, pResult, pExperience, pCookingTime, pCookingSerializer).group(pGroup).unlockedBy(getHasName(itemlike),
-                    has(itemlike)).save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(pResult) + "_" + pRecipeName + "_" + getItemName(itemlike));
+                    has(itemlike))
+                    .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(pResult) + "_" + pRecipeName + "_" + getItemName(itemlike));
         }
     }
 
@@ -2098,7 +2108,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         for (ItemLike ingredient : inputs) {
             ModBasicRecipeBuilder.itemGrinding(Ingredient.of(ingredient), output, group, quantity, recipeSerializer)
                     .unlockedBy(ingredient.toString(), has(ingredient))
-                    .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(output) + "_" + recipeName);
+                    .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(output) + "_" + recipeName + "_" + getItemName(ingredient));
         }
     }
 
@@ -2109,12 +2119,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     }
 
     protected static void basicSmeltingSerializeWithList(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> inputs, ItemLike output, String group, RecipeSerializer<BasicSmeltRecipe> recipeSerializer, String recipeName){
-        Iterator var9 = inputs.iterator();
-
-        while(var9.hasNext()) {
-            ItemLike itemlike = (ItemLike)var9.next();
+        for (ItemLike itemlike : inputs) {
             ModBasicSmeltBuilder.basicSmelting(Ingredient.of(itemlike),
-                     output, group, recipeSerializer).unlockedBy(getHasName(itemlike),
+                    output, group, recipeSerializer).unlockedBy(getHasName(itemlike),
                     has(itemlike)).save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(output) + "_" + recipeName + "_" + getItemName(itemlike));
         }
     }
@@ -2154,5 +2161,25 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ModSmithingTransformRecipeBuilder.SmithingReipeBuilder(template, base, addition, result, serializer)
                 .unlockedBy(getHasName(base), has(base))
                 .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(result) + "_" + recipeName + "_" + getItemName(base) + "_with_" + getItemName(addition));
+    }
+
+    static {
+        //Silver
+        SILVER_SMELTABLES = List.of(ModItems.RAW_SILVER.get(), ModBlocks.SILVER_ORE.get(), ModBlocks.DEEPSLATE_SILVER_ORE.get());
+
+        //Zinc
+        BASIC_ZINC_SMELTABLES = List.of(ModItems.RAW_ZINC.get(), ModBlocks.ZINC_ORE.get(), ModBlocks.NETHER_ZINC_ORE.get());
+        ZINC_SMELTABLES = List.of(ModItems.RAW_ZINC.get(), ModBlocks.ZINC_ORE.get(), ModBlocks.NETHER_ZINC_ORE.get(), ModBlocks.DEEPSLATE_ZINC_ORE.get());
+
+        //Tin
+        BASIC_TIN_SMELTABLES = List.of(ModItems.RAW_TIN.get(), ModBlocks.TIN_ORE.get());
+        TIN_SMELTABLES = List.of(ModItems.RAW_TIN.get(), ModBlocks.TIN_ORE.get(), ModBlocks.DEEPSLATE_TIN_ORE.get());
+
+        //Cobalt
+        COBALT_SMELTABLES = List.of(ModBlocks.COBALT_ORE.get(), ModBlocks.DEEPSLATE_COBALT_ORE.get());
+
+        //Copper
+        BASIC_COPPER_SMELTABLES = List.of(Items.RAW_COPPER, Blocks.COPPER_ORE);
+        COPPER_SMELTABLES = List.of(Items.RAW_COPPER, Blocks.COPPER_ORE, Blocks.DEEPSLATE_COPPER_ORE, ModBlocks.NETHER_COPPER_ORE.get());
     }
 }

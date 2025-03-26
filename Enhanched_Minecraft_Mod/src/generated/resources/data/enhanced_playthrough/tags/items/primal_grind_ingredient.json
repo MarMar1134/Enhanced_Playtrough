@@ -1,6 +1,11 @@
 {
   "values": [
     "#minecraft:wool",
+    "#enhanced_playthrough:zinc_manufacturable",
+    "#enhanced_playthrough:tin_manufacturable",
+    "#enhanced_playthrough:copper_manufacturable",
+    "#enhanced_playthrough:brass_manufacturable",
+    "#enhanced_playthrough:bronze_manufacturable",
     "enhanced_playthrough:yerba_mate",
     "minecraft:wheat",
     "minecraft:pumpkin",
