@@ -11465,5 +11465,107 @@
     },
     "done": true
   },
+  "enhanced_playthrough:recipes/copper_dust_from_primal_grinding": {
+    "criteria": {
+      "TagKey[minecraft:item / enhanced_playthrough:copper_manufacturable]": "2025-03-26 10:09:21 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/copper_dust_from_mechanical_grinding": {
+    "criteria": {
+      "TagKey[minecraft:item / enhanced_playthrough:copper_manufacturable]": "2025-03-26 10:09:21 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/copper_nugget__from_campfire_raw_copper": {
+    "criteria": {
+      "has_raw_copper": "2025-03-26 10:09:21 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/copper_ingot__from_blasting_raw_copper": {
+    "criteria": {
+      "has_raw_copper": "2025-03-26 10:09:21 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/copper_ingot__from_smelting_raw_copper": {
+    "criteria": {
+      "has_raw_copper": "2025-03-26 10:09:21 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/primal_grinder": {
+    "criteria": {
+      "has_bronze_ingot": "2025-03-26 11:16:22 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/bronze_nugget__from_smelting": {
+    "criteria": {
+      "TagKey[minecraft:item / enhanced_playthrough:bronze_manufacturable]": "2025-03-26 11:16:48 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/bronze_dust_from_primal_grinding": {
+    "criteria": {
+      "TagKey[minecraft:item / enhanced_playthrough:bronze_manufacturable]": "2025-03-26 11:16:48 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/bronze_nugget__from_blasting": {
+    "criteria": {
+      "TagKey[minecraft:item / enhanced_playthrough:bronze_manufacturable]": "2025-03-26 11:16:48 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/bronze_dust_from_mechanical_grinding": {
+    "criteria": {
+      "TagKey[minecraft:item / enhanced_playthrough:bronze_manufacturable]": "2025-03-26 11:16:48 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/bronze_ingot__from_blasting_bronze_dust": {
+    "criteria": {
+      "has_bronze_dust": "2025-03-26 11:17:41 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/steel_dust_from_mechanical_grinding": {
+    "criteria": {
+      "TagKey[minecraft:item / enhanced_playthrough:steel_manufacturable]": "2025-03-26 12:05:44 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tin_dust_from_mechanical_grinding": {
+    "criteria": {
+      "TagKey[minecraft:item / enhanced_playthrough:tin_manufacturable]": "2025-03-27 10:31:20 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/tin_nugget__from_campfire_raw_tin": {
+    "criteria": {
+      "has_raw_tin": "2025-03-27 10:31:20 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tin_dust_from_primal_grinding": {
+    "criteria": {
+      "TagKey[minecraft:item / enhanced_playthrough:tin_manufacturable]": "2025-03-27 10:31:20 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/gold_dust_from_mechanical_grinding": {
+    "criteria": {
+      "TagKey[minecraft:item / enhanced_playthrough:gold_manufacturable]": "2025-03-27 14:05:22 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/gold_ingot__from_blasting_gold_dust": {
+    "criteria": {
+      "has_gold_dust": "2025-03-27 14:05:54 -0300"
+    },
+    "done": true
+  },
   "DataVersion": 3465
 }

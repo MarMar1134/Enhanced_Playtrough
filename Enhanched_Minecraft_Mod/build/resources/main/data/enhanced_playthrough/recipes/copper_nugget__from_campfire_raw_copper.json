@@ -2,7 +2,7 @@
   "type": "minecraft:campfire_cooking",
   "category": "food",
   "cookingtime": 600,
-  "experience": 1.0,
+  "experience": 0.1,
   "group": "copper_nugget",
   "ingredient": {
     "item": "minecraft:raw_copper"

@@ -38,7 +38,8 @@ public class PolisherItem extends TieredItem implements IForgeItem, Vanishable {
 
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
-        pTooltipComponents.add(Component.translatable("desc.enhanced_playthrough.polisher_item").withStyle(ChatFormatting.BLUE));
+        pTooltipComponents.add(Component.translatable("desc.enhanced_playthrough.polisher_item")
+                .withStyle(ChatFormatting.GRAY).withStyle(ChatFormatting.ITALIC));
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
     }

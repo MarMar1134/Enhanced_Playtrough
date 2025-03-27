@@ -19,7 +19,7 @@ public class ModTabs {
 
     public static final RegistryObject<CreativeModeTab> BLOCKS = TABS.register(
             "blocks", () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.POLISHED_LIMESTONE.get()))
-                    .title(Component.translatable("creativetab.blocks"))
+                    .title(Component.translatable("creativetab." + EnhancedPlaythrough.MOD_ID + ".blocks"))
                     .displayItems((itemDisplayParameters, output) ->{
                         output.accept(ModBlocks.POLISHED_STONE.get());
                         output.accept(ModBlocks.POLISHED_STONE_SLAB.get());
@@ -64,7 +64,7 @@ public class ModTabs {
                     }).build());
     public static final RegistryObject<CreativeModeTab> MINERALS = TABS.register(
             "minerals", () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.TIN_ORE.get()))
-                    .title(Component.translatable("creativetab.minerals"))
+                    .title(Component.translatable("creativetab." + EnhancedPlaythrough.MOD_ID + ".minerals"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModBlocks.SULFUR_ORE.get());
                         output.accept(ModBlocks.DEEPSLATE_SULFUR_ORE.get());
@@ -125,7 +125,7 @@ public class ModTabs {
                     }).build());
     public static final RegistryObject<CreativeModeTab> UTILITY = TABS.register(
             "utility", () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.BRONZE_INGOT.get()))
-                    .title(Component.translatable("creativetab.utility"))
+                    .title(Component.translatable("creativetab." + EnhancedPlaythrough.MOD_ID + ".utility"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModBlocks.ADOBE_FURNACE.get());
                         output.accept(ModBlocks.SOUL_FURNACE.get());
@@ -203,7 +203,7 @@ public class ModTabs {
                     }).build());
     public static final RegistryObject<CreativeModeTab> TOOLS = TABS.register(
             "tools", () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.STEEL_PICKAXE.get()))
-                    .title((Component.translatable("creativetab.tools")))
+                    .title((Component.translatable("creativetab." + EnhancedPlaythrough.MOD_ID + ".tools")))
                     .displayItems((itemDisplayParameters, output) -> {
                         //Silver
                         output.accept(ModItems.SILVER_PICKAXE.get());
@@ -265,7 +265,7 @@ public class ModTabs {
                     }).build());
     public static final RegistryObject<CreativeModeTab> WEAPONS = TABS.register(
             "weapons",() -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.STEEL_SWORD.get()))
-                    .title(Component.translatable("creativetab.weapons"))
+                    .title(Component.translatable("creativetab." + EnhancedPlaythrough.MOD_ID + ".weapons"))
                     .displayItems((itemDisplayParameters, output) -> {
                         //Silver
                         output.accept(ModItems.SILVER_SWORD.get());
@@ -326,7 +326,7 @@ public class ModTabs {
                     .build());
     public static final RegistryObject<CreativeModeTab> JEWELERY = TABS.register(
             "jewelery", () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.RUBY.get()))
-                    .title(Component.translatable("creativetab.jewelery"))
+                    .title(Component.translatable("creativetab." + EnhancedPlaythrough.MOD_ID + ".jewelery"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModBlocks.GEM_POLISHER.get());
 
@@ -371,7 +371,7 @@ public class ModTabs {
                     }).build());
     public static final RegistryObject<CreativeModeTab> FOODS = TABS.register(
             "fruits", () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.ZAPALLO.get()))
-                    .title(Component.translatable("creativetab.fruits"))
+                    .title(Component.translatable("creativetab." + EnhancedPlaythrough.MOD_ID + ".fruits"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.YERBA_MATE.get());
                         output.accept(ModItems.GROUNDED_YERBA_MATE.get());
@@ -416,7 +416,7 @@ public class ModTabs {
     public static final RegistryObject<CreativeModeTab> SAPLINGS = TABS.register(
             "saplings", () -> CreativeModeTab.builder()
                     .icon(() -> new ItemStack(ModBlocks.WALNUT_SAPLING.get()))
-                    .title(Component.translatable("creativetab.saplings"))
+                    .title(Component.translatable("creativetab." + EnhancedPlaythrough.MOD_ID + ".saplings"))
                     .displayItems((itemDisplayParameters, output) -> {
                         //Walnut
                         output.accept(ModBlocks.WALNUT_SAPLING.get());
@@ -444,7 +444,7 @@ public class ModTabs {
     public static final RegistryObject<CreativeModeTab> WOODTYPES = TABS.register(
             "woodtypes", () -> CreativeModeTab.builder()
                     .icon(() -> new ItemStack(ModBlocks.WALNUT_PLANKS.get()))
-                    .title(Component.translatable("creativetab.woodtypes"))
+                    .title(Component.translatable("creativetab." + EnhancedPlaythrough.MOD_ID + ".woodtypes"))
                     .displayItems((itemDisplayParameters, output) -> {
                         //Walnut
                         output.accept(ModBlocks.WALNUT_LOG.get());

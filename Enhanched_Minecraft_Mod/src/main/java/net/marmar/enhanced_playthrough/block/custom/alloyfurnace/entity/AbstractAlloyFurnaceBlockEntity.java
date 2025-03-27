@@ -11,6 +11,7 @@ import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -102,6 +103,21 @@ public abstract class AbstractAlloyFurnaceBlockEntity extends BlockEntity {
         this.maxProgress = setMaxProgress();
     }
 
+    //Handler getters (used on Jade compatibility)
+    public ItemStackHandler getFirstInputHandler() {
+        return firstInputHandler;
+    }
+    public ItemStackHandler getSecondInputHandler() {
+        return secondInputHandler;
+    }
+    public ItemStackHandler getFuelHandler() {
+        return fuelHandler;
+    }
+    public ItemStackHandler getOutputHandler() {
+        return outputHandler;
+    }
+
+    //Lazy handler getters (used on the menu)
     public LazyOptional<ItemStackHandler> getFirstInputLazyHandler(){
         return this.firstInputLazyHandler;
     }
@@ -115,6 +131,7 @@ public abstract class AbstractAlloyFurnaceBlockEntity extends BlockEntity {
         return this.outputLazyHandler;
     }
 
+    //Capability getters (used for item colocation management)
     @Override
     public @NotNull <T> LazyOptional<T> getCapability(@NotNull Capability<T> cap, @Nullable Direction side) {
         if (cap == ForgeCapabilities.ITEM_HANDLER){
@@ -130,6 +147,8 @@ public abstract class AbstractAlloyFurnaceBlockEntity extends BlockEntity {
         }
         return super.getCapability(cap, side);
     }
+
+
     @Override
     public void invalidateCaps() {
         super.invalidateCaps();
@@ -245,11 +264,11 @@ public abstract class AbstractAlloyFurnaceBlockEntity extends BlockEntity {
 
     //checks if the passed item has a "burntime" parameter on his metadata
     public boolean canBurn(ItemStack stack) {
-        return getBurnTime(stack) > 0;
+        return getFuelBurnTime(stack) > 0;
     }
 
     //returns the required burning time of the current recipe
-    public int getBurnTime(ItemStack stack) {
+    public int getFuelBurnTime(ItemStack stack) {
         return ForgeHooks.getBurnTime(stack, this.recipeType);
     }
 
@@ -260,7 +279,7 @@ public abstract class AbstractAlloyFurnaceBlockEntity extends BlockEntity {
 
     //takes an item from the Fuel Slot, then copies his "burntime" metadata and gives it to burntime
     private void burn(){
-        this.maxBurnTime = getBurnTime(this.fuelHandler.getStackInSlot(0));
+        this.maxBurnTime = getFuelBurnTime(this.fuelHandler.getStackInSlot(0));
         this.burnTime = this.maxBurnTime;
         this.fuelHandler.getStackInSlot(0).shrink(1);
     }
@@ -278,6 +297,14 @@ public abstract class AbstractAlloyFurnaceBlockEntity extends BlockEntity {
         inventory.setItem(1, secondInputHandler.getStackInSlot(0));
 
         return this.level.getRecipeManager().getRecipeFor(this.recipeType, inventory, level);
+    }
+
+    public int getProgress() {
+        return this.progress;
+    }
+
+    public int getMaxProgress() {
+        return this.maxProgress;
     }
 
     //checks if there is any recipe available to start working

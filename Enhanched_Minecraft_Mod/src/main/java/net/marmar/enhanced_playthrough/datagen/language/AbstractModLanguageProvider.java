@@ -10,11 +10,11 @@ public abstract class AbstractModLanguageProvider extends LanguageProvider {
     }
 
     protected void addAdvancementTitle(String advancementCategory, String advancementName, String translation){
-        this.add("advancements.title." + advancementCategory + "." + advancementName, translation);
+        this.add("advancement." + EnhancedPlaythrough.MOD_ID + ".title." + advancementCategory + "." + advancementName, translation);
     }
 
     protected void addAdvancementDesc(String advancementCategory, String advancementName, String translation){
-        this.add("advancements.desc." + advancementCategory + "." + advancementName, translation);
+        this.add("advancement." + EnhancedPlaythrough.MOD_ID + ".desc." + advancementCategory + "." + advancementName, translation);
     }
 
     protected void addDescription(String descriptionName, String translation){
@@ -25,8 +25,12 @@ public abstract class AbstractModLanguageProvider extends LanguageProvider {
         this.add("jei." + EnhancedPlaythrough.MOD_ID + "." + category, translation);
     }
 
+    protected void addJadeConfigTranslation(String block, String translation){
+        this.add("config.jade.plugin_" + EnhancedPlaythrough.MOD_ID + "." + block, translation);
+    }
+
     protected void addCreativeTab(String tabName, String translation){
-        this.add("creativetab." + tabName, translation);
+        this.add("creativetab." + EnhancedPlaythrough.MOD_ID + "." + tabName, translation);
     }
 
     protected void addSmithingTranslations(String smithingMaterial, String title, String appliesTo, String ingredients, String baseSlotDesc, String addSlotDesc){

@@ -72,6 +72,10 @@ public class GemPolisherMenu extends AbstractContainerMenu {
                 }));
     }
 
+    public boolean isPolishing(){
+        return this.data.get(1) > 0;
+    }
+
     public boolean hasUses(){
         return this.data.get(3) > 0;
     }
@@ -82,6 +86,14 @@ public class GemPolisherMenu extends AbstractContainerMenu {
         int barSize = 59;
 
         return maxUses != 0 && uses != 0 ? uses * barSize / maxUses : 0;
+    }
+
+    public int getScaledProgress(){
+        int progress = this.data.get(1);
+        int maxProgress = this.data.get(2);  // Max Progress
+        int polishArrowLength = 41; // This is the height in pixels of your arrow
+
+        return maxProgress != 0 && progress != 0 ? progress * polishArrowLength / maxProgress : 0;
     }
 
     private static final int HOTBAR_SLOT_COUNT = 9;

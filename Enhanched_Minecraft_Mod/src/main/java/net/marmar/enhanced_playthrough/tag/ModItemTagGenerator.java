@@ -9,6 +9,7 @@ import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
@@ -91,6 +92,28 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 ModItems.RAW_SAPPHIRE.get(),
                 ModItems.RAW_RUBI.get(),
                 ModItems.RAW_DIAMOND.get()
+        );
+
+        this.tag(ModTags.Items.BASIC_INGREDIENT).add(
+                Items.RAW_COPPER,
+                Blocks.COPPER_ORE.asItem(),
+                ModItems.RAW_ZINC.get(),
+                ModBlocks.ZINC_ORE.get().asItem(),
+                ModItems.RAW_TIN.get(),
+                ModBlocks.TIN_ORE.get().asItem(),
+                Items.BEEF,
+                Items.CHICKEN,
+                Items.PORKCHOP,
+                Items.MUTTON,
+                Items.RABBIT,
+                Items.KELP,
+                Items.SALMON,
+                Items.COD,
+                Items.POTATO,
+                Items.CLAY_BALL,
+                ModItems.ZAPALLO.get(),
+                ModItems.CORN.get(),
+                ModItems.EGGPLANT.get()
         );
 
         this.tag(ModTags.Items.ALLOY_INGREDIENT).add(

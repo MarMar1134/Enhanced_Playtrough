@@ -9,16 +9,16 @@
     "announce_to_chat": false,
     "background": "minecraft:textures/block/emerald_block.png",
     "description": {
-      "translate": "advancements.desc.gems.root"
+      "translate": "advancement.enhanced_playthrough.desc.gems.root"
     },
     "frame": "task",
-    "hidden": true,
+    "hidden": false,
     "icon": {
       "item": "enhanced_playthrough:gem_polisher"
     },
     "show_toast": false,
     "title": {
-      "translate": "advancements.title.gems.root"
+      "translate": "advancement.enhanced_playthrough.title.gems.root"
     }
   },
   "requirements": [

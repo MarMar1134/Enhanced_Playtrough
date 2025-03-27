@@ -2,7 +2,7 @@
   "type": "minecraft:campfire_cooking",
   "category": "food",
   "cookingtime": 600,
-  "experience": 2.0,
+  "experience": 0.35,
   "group": "zapallo",
   "ingredient": {
     "item": "enhanced_playthrough:zapallo"

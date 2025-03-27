@@ -1,6 +1,7 @@
-// 1.20.1	2025-03-26T08:24:07.1769273	Tags for minecraft:item mod id enhanced_playthrough
+// 1.20.1	2025-03-27T14:44:29.8348894	Tags for minecraft:item mod id enhanced_playthrough
 2ddd5b0739572968da601d14fbf131d78e8e673b data/enhanced_playthrough/tags/items/alloy_ingredient.json
 b3b284c126879d981b4f706eb8ea0e63bd17ae12 data/enhanced_playthrough/tags/items/apple_logs.json
+7b224db4176e22e364423c251f906262bd8f8200 data/enhanced_playthrough/tags/items/basic_ingredient.json
 941b97409020f6c9e9d7939283d5b03621b4f1c3 data/enhanced_playthrough/tags/items/blast_alloy_ingredient.json
 ec3d5563c09823e51f7e84d3720d912c3f7acad3 data/enhanced_playthrough/tags/items/blue_gold.json
 c1ea4002e2331bdfdbeff529dbb7224cfd10199c data/enhanced_playthrough/tags/items/blue_gold_manufacturable.json

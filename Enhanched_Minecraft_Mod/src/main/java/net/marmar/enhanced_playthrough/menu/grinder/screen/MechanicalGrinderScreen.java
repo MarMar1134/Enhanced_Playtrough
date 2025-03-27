@@ -22,7 +22,7 @@ public class MechanicalGrinderScreen extends AbstractContainerScreen<MechanicalG
         super.init();
         this.inventoryLabelY = 74;
 
-        this.titleLabelX = 70;
+        this.titleLabelX = 50;
         this.titleLabelY = 5;
     }
 

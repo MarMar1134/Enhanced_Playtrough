@@ -95,6 +95,18 @@ public abstract class AbstractBasicFurnaceBlockEntity extends BlockEntity {
         this.maxProgress = setMaxProgress();
     }
 
+    public ItemStackHandler getInputHandler() {
+        return this.inputHandler;
+    }
+
+    public ItemStackHandler getFuelHandler() {
+        return this.fuelHandler;
+    }
+
+    public ItemStackHandler getOutputHandler() {
+        return this.outputHandler;
+    }
+
     public LazyOptional<ItemStackHandler> getInputLazyHandler(){
         return this.inputLazyHandler;
     }
@@ -220,11 +232,11 @@ public abstract class AbstractBasicFurnaceBlockEntity extends BlockEntity {
 
     //checks if the passed item has a "burntime" parameter on his metadata
     public boolean canBurn(ItemStack stack) {
-        return getBurnTime(stack) > 0;
+        return getRecipeBurnTime(stack) > 0;
     }
 
     //returns the required burning time of the current recipe
-    public int getBurnTime(ItemStack stack) {
+    public int getRecipeBurnTime(ItemStack stack) {
         return ForgeHooks.getBurnTime(stack, this.recipeType);
     }
 
@@ -235,7 +247,7 @@ public abstract class AbstractBasicFurnaceBlockEntity extends BlockEntity {
 
     //takes an item from the Fuel Slot, then copies his "burntime" metadata and gives it to burntime
     private void burn(){
-        this.maxBurnTime = getBurnTime(this.fuelHandler.getStackInSlot(0));
+        this.maxBurnTime = getRecipeBurnTime(this.fuelHandler.getStackInSlot(0));
         this.burnTime = this.maxBurnTime;
         this.fuelHandler.getStackInSlot(0).shrink(1);
     }
@@ -257,8 +269,15 @@ public abstract class AbstractBasicFurnaceBlockEntity extends BlockEntity {
 
     //checks if the current smelt has finished
     private boolean hasProcessFinished (){
-
         return progress >= maxProgress;
+    }
+
+    public int getProgress() {
+        return progress;
+    }
+
+    public int getMaxProgress() {
+        return maxProgress;
     }
 
     //Checks if it has an available recipe

@@ -1,4 +1,4 @@
-// 1.20.1	2025-03-26T08:24:07.1839274	Recipes
+// 1.20.1	2025-03-27T14:13:10.7079869	Recipes
 78785989dd07dd37f629d3cd31f2b289d0bdda2e data/enhanced_playthrough/advancements/recipes/baked_potato_from_basic_smelting_potato.json
 1bfd984c0049b07d53939b7631d361ba65ac76ac data/enhanced_playthrough/advancements/recipes/baked_potato_from_soul_basic_smelting_potato.json
 28c7af22824ff197a228d9d775ac4e9324da073c data/enhanced_playthrough/advancements/recipes/black_dye_from_mechanical_grinding_wither_rose.json
@@ -931,7 +931,7 @@ bcaf8861fa25dc2545025f6f10b1966c4a9eb5a8 data/minecraft/advancements/recipes/red
 57dc7783efed2962022849bbc36fbc01b5ebff64 data/minecraft/recipes/furnace.json
 b8f12cb2bbd3677e19f129c8fd6f5738ebca2226 data/minecraft/recipes/gunpowder.json
 4dbd634342193997076de0783bfa4ff3fa8f07af data/minecraft/recipes/mud.json
-9e0c541024146935bffb0451548daffd36f186c1 data/minecraft/recipes/mud_bricks.json
+72c6ed750b073b162e2fb2bbe9a0235657b8c34a data/minecraft/recipes/mud_bricks.json
 f70037e76d69e71a1e8d09f0b3390d52edf6de5f data/minecraft/recipes/pumpkin_pie.json
 c862428e9eba79f608783dd1583593004d27214a data/minecraft/recipes/repeater.json
 877400b43a5683493d9f6777e2859d37f7a7d444 data/minecraft/recipes/stone_bricks.json

@@ -14,22 +14,6 @@
       "trigger": "minecraft:inventory_changed"
     }
   },
-  "display": {
-    "announce_to_chat": true,
-    "background": "enhanced_playthrough:textures/block/bronze_block.png",
-    "description": {
-      "translate": "advancements.desc.survival.steel_isnt_enough"
-    },
-    "frame": "task",
-    "hidden": false,
-    "icon": {
-      "item": "enhanced_playthrough:steel_ingot"
-    },
-    "show_toast": true,
-    "title": {
-      "translate": "advancements.title.survival.steel_isnt_enough"
-    }
-  },
   "requirements": [
     [
       "has_item"

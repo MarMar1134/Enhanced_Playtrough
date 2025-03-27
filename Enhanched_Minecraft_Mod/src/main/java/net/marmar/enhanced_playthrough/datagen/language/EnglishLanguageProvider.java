@@ -1,5 +1,6 @@
 package net.marmar.enhanced_playthrough.datagen.language;
 
+import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.block.ModBlocks;
 import net.marmar.enhanced_playthrough.enchantment.ModEnchantments;
 import net.marmar.enhanced_playthrough.item.ModItems;
@@ -31,6 +32,16 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
         addJeiCategory("gem_polisher", "Gem polishing");
         addJeiCategory("primal_grinder", "Basic grinding");
         addJeiCategory("mechanical_grinder", "Mechanical grinding");
+
+        //Jade
+        addJadeConfigTranslation("basic_furnace", "Basic furnace");
+
+        addJadeConfigTranslation("alloy_furnace", "Alloy furnace");
+
+        addJadeConfigTranslation("gem_polisher", "Gem polisher");
+        this.add("jade." + EnhancedPlaythrough.MOD_ID + ".gem_polisher_uses", "Uses left: %d");
+
+        addJadeConfigTranslation("grinder", "Grinder");
 
         //GUI elements
         addGuiElements("gem_polisher_screen", "Uses");

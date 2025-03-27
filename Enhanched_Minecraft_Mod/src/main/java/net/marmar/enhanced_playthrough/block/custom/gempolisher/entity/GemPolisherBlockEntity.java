@@ -97,6 +97,17 @@ public class GemPolisherBlockEntity extends BlockEntity implements MenuProvider 
 
     }
 
+    public ItemStackHandler getInputHandler() {
+        return inputHandler;
+    }
+
+    public ItemStackHandler getToolHandler() {
+        return toolHandler;
+    }
+    public ItemStackHandler getOutputHandler() {
+        return outputHandler;
+    }
+
     public LazyOptional<ItemStackHandler> getInputLazyHandler(){
         return this.inputLazyHandler;
     }
@@ -206,21 +217,33 @@ public class GemPolisherBlockEntity extends BlockEntity implements MenuProvider 
         progress = 0;
     }
 
-   private boolean isAccurateTool(ItemStack stack){
+    private boolean isAccurateTool(ItemStack stack){
         return stack.getItem() instanceof PolisherItem;
    }
 
-   private int getPolisherUses(ItemStack stack){
+    private int getPolisherUses(ItemStack stack){
        return stack.getMaxDamage() / 2;
    }
 
-   private void setUses(int quantity){
+    private void setUses(int quantity){
         this.uses = quantity;
    }
 
-   private boolean hasUses(){
+    private boolean hasUses(){
         return this.uses > 0;
    }
+
+    public int getUses() {
+        return uses;
+    }
+
+    public int getProgress() {
+        return progress;
+    }
+
+    public int getMaxProgress() {
+        return maxProgress;
+    }
 
     private boolean hasRecipe(){
         Optional<GemPolishingRecipe> recipe = getCurrentRecipe();

@@ -41,11 +41,18 @@ public class GemPolisherScreen extends AbstractContainerScreen<GemPolisherMenu> 
 
         guiGraphics.blit(Texture, x, y, 0, 0, imageWidth, imageHeight);
         renderUses(guiGraphics, x, y);
+        renderProgressArrow(guiGraphics, x, y);
     }
 
     private void renderUses(GuiGraphics graphics, int x, int y){
         if (menu.hasUses()){
             graphics.blit(Texture, x + 32 , y + 61, 176, 0, menu.usesCalculator(), 11);
+        }
+    }
+
+    private void renderProgressArrow(GuiGraphics graphics, int x, int y){
+        if (menu.isPolishing()){
+            graphics.blit(Texture, x + 78, y + 35, 176, 12, menu.getScaledProgress(), 15);
         }
     }
 

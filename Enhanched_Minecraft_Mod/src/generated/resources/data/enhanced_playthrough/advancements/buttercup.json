@@ -18,16 +18,16 @@
     "announce_to_chat": true,
     "background": "enhanced_playthrough:textures/block/bronze_block.png",
     "description": {
-      "translate": "advancements.desc.survival.buttercup"
+      "translate": "advancement.enhanced_playthrough.desc.survival.buttercup"
     },
     "frame": "task",
-    "hidden": false,
+    "hidden": true,
     "icon": {
       "item": "enhanced_playthrough:green_gold_ingot"
     },
     "show_toast": true,
     "title": {
-      "translate": "advancements.title.survival.buttercup"
+      "translate": "advancement.enhanced_playthrough.title.survival.buttercup"
     }
   },
   "requirements": [

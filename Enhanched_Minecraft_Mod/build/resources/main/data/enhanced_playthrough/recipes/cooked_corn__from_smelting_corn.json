@@ -2,7 +2,7 @@
   "type": "minecraft:smelting",
   "category": "food",
   "cookingtime": 200,
-  "experience": 2.0,
+  "experience": 0.35,
   "group": "corn",
   "ingredient": {
     "item": "enhanced_playthrough:corn"

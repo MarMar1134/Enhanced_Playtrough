@@ -17,7 +17,7 @@
     "announce_to_chat": false,
     "background": "enhanced_playthrough:textures/block/bronze_block.png",
     "description": {
-      "translate": "advancements.desc.survival.unity_makes_strength"
+      "translate": "advancement.enhanced_playthrough.desc.survival.unity_makes_strength"
     },
     "frame": "task",
     "hidden": false,
@@ -26,7 +26,7 @@
     },
     "show_toast": false,
     "title": {
-      "translate": "advancements.title.survival.unity_makes_strength"
+      "translate": "advancement.enhanced_playthrough.title.survival.unity_makes_strength"
     }
   },
   "requirements": [

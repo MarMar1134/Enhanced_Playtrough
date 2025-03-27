@@ -1,6 +1,7 @@
 package net.marmar.enhanced_playthrough.menu.basicfurnace;
 
 import net.marmar.enhanced_playthrough.block.custom.basicfurnace.entity.AbstractBasicFurnaceBlockEntity;
+import net.marmar.enhanced_playthrough.tag.ModTags;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -35,7 +36,12 @@ public abstract class AbstractBasicFurnaceMenu extends AbstractContainerMenu {
     private void createSlots(AbstractBasicFurnaceBlockEntity blockEntity){
         //Input
         blockEntity.getInputLazyHandler().ifPresent(itemStackHandler ->
-                addSlot(new SlotItemHandler(itemStackHandler, 0, 56, 17)));
+                addSlot(new SlotItemHandler(itemStackHandler, 0, 56, 17){
+                    @Override
+                    public boolean mayPlace(@NotNull ItemStack stack) {
+                        return stack.is(ModTags.Items.BASIC_INGREDIENT);
+                    }
+                }));
 
         //Fuel
         blockEntity.getFuelLazyHandler().ifPresent(itemStackHandler ->

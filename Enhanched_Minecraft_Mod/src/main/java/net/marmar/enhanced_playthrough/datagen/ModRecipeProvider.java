@@ -60,7 +60,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
-        //Basic smelting recipes
+        //Vanilla basic smelting recipes
         basicSmelting(consumer, Items.BEEF, Items.COOKED_BEEF, "beef");
         soulBasicSmelting(consumer, Items.BEEF, Items.COOKED_BEEF, "beef");
 
@@ -1940,7 +1940,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     .unlockedBy(getHasName(Blocks.DIRT), has(Blocks.DIRT))
                     .unlockedBy(getHasName(Items.CLAY_BALL), has(Items.CLAY_BALL))
                     .save(consumer);
-            ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, Blocks.MUD_BRICKS, 4)
+            ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, Blocks.MUD_BRICKS, 1)
                     .pattern("BB")
                     .pattern("BB")
                     .define('B', ModItems.MUD_BRICK.get())
@@ -1972,9 +1972,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         protected static void smeltingByCampfire(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike pIngredient, RecipeCategory pCategory, ItemLike pResult, float pExperience, String pGroup){
             oreCooking(pFinishedRecipeConsumer, RecipeSerializer.CAMPFIRE_COOKING_RECIPE, pIngredient, pCategory, pResult, pExperience, 600, pGroup, "_from_campfire");
         }
-        protected static void smeltingByCampfire(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, String pGroup){
-            oreCookingWithList(pFinishedRecipeConsumer, RecipeSerializer.CAMPFIRE_COOKING_RECIPE, pIngredients, pCategory, pResult, pExperience, 600, pGroup, "_from_campfire");
-        }
         protected static void smeltingByCampfire(Consumer<FinishedRecipe> pFinishedRecipeConsumer, TagKey<Item> pIngredient, RecipeCategory pCategory, ItemLike pResult, float pExperience, String pGroup){
             oreCookingWithTag(pFinishedRecipeConsumer, RecipeSerializer.CAMPFIRE_COOKING_RECIPE, pIngredient, pCategory, pResult, pExperience, 600, pGroup, "_from_campfire");
         }
@@ -1989,9 +1986,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
             oreCookingWithList(pFinishedRecipeConsumer, RecipeSerializer.SMELTING_RECIPE, pIngredients, pCategory, pResult, pExperience, 200, pGroup, "_from_smelting");
         }
 
-        protected static void smoking(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, String pGroup) {
-            oreCookingWithList(pFinishedRecipeConsumer, RecipeSerializer.SMOKING_RECIPE, pIngredients, pCategory, pResult, pExperience, 100, pGroup, "_from_smoking");
-        }
         protected static void smoking(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike pIngredient, RecipeCategory pCategory, ItemLike pResult, float pExperience, String pGroup){
             oreCooking(pFinishedRecipeConsumer, RecipeSerializer.SMOKING_RECIPE, pIngredient, pCategory, pResult, pExperience, 100, pGroup, "_from_smoking");
         }
@@ -2102,14 +2096,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ModBasicRecipeBuilder.itemGrinding(Ingredient.of(input), output, group, quantity, recipeSerializer)
                 .unlockedBy(input.toString(), has(input))
                 .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(output) +  "_" + recipeName);
-    }
-
-    protected static void oreGrindingSerializeWithList(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> inputs, ItemLike output, String group, int quantity, RecipeSerializer<? extends AbstractGrindRecipe> recipeSerializer, String recipeName){
-        for (ItemLike ingredient : inputs) {
-            ModBasicRecipeBuilder.itemGrinding(Ingredient.of(ingredient), output, group, quantity, recipeSerializer)
-                    .unlockedBy(ingredient.toString(), has(ingredient))
-                    .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(output) + "_" + recipeName + "_" + getItemName(ingredient));
-        }
     }
 
     protected static void basicSmeltSerialize(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike input, ItemLike output, String group, RecipeSerializer<BasicSmeltRecipe> recipeSerializer, String recipeName){

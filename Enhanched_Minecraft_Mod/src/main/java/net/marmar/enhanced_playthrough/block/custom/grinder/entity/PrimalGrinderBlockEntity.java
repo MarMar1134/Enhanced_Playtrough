@@ -97,7 +97,22 @@ public class PrimalGrinderBlockEntity extends BlockEntity implements MenuProvide
         };
     }
 
-    //Item handler getters
+    //Handler getters
+
+
+    public ItemStackHandler getInputHandler() {
+        return inputHandler;
+    }
+
+    public ItemStackHandler getFuelHandler() {
+        return fuelHandler;
+    }
+
+    public ItemStackHandler getOutputHandler() {
+        return outputHandler;
+    }
+
+    //Lazy handler getters
     public LazyOptional<ItemStackHandler> getInputLazyHandler(){
         return this.inputLazyHandler;
     }
@@ -205,10 +220,10 @@ public class PrimalGrinderBlockEntity extends BlockEntity implements MenuProvide
     }
 
     public boolean canBurn(ItemStack stack) {
-        return getBurnTime(stack) > 0;
+        return getFuelBurnTime(stack) > 0;
     }
 
-    public int getBurnTime(ItemStack stack) {
+    public int getFuelBurnTime(ItemStack stack) {
         return ForgeHooks.getBurnTime(stack, ModRecipes.PRIMAL_GRINDING_TYPE.get());
     }
 
@@ -217,13 +232,21 @@ public class PrimalGrinderBlockEntity extends BlockEntity implements MenuProvide
     }
 
     private void burn(){
-        this.maxBurnTime = getBurnTime(this.fuelHandler.getStackInSlot(0));
+        this.maxBurnTime = getFuelBurnTime(this.fuelHandler.getStackInSlot(0));
         this.burnTime = this.maxBurnTime;
         this.fuelHandler.getStackInSlot(0).shrink(1);
     }
 
     private void decreaseBurnTime(){
         burnTime -= 1;
+    }
+
+    public int getProgress() {
+        return progress;
+    }
+
+    public int getMaxProgress() {
+        return maxProgress;
     }
 
     protected boolean hasRecipe() {

@@ -18,16 +18,16 @@
     "announce_to_chat": true,
     "background": "minecraft:textures/block/emerald_block.png",
     "description": {
-      "translate": "advancements.desc.gems.polish_sapphire"
+      "translate": "advancement.enhanced_playthrough.desc.gems.polish_sapphire"
     },
     "frame": "task",
-    "hidden": false,
+    "hidden": true,
     "icon": {
       "item": "enhanced_playthrough:sapphire"
     },
     "show_toast": true,
     "title": {
-      "translate": "advancements.title.gems.polish_sapphire"
+      "translate": "advancement.enhanced_playthrough.title.gems.polish_sapphire"
     }
   },
   "requirements": [

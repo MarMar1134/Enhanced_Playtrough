@@ -86,7 +86,15 @@ public class MechanicalGrinderBlockEntity extends BlockEntity implements MenuPro
         };
     }
 
-    //Item handler getters
+    //Handler getters
+    public ItemStackHandler getInputHandler() {
+        return inputHandler;
+    }
+    public ItemStackHandler getOutputHandler() {
+        return outputHandler;
+    }
+
+    //Lazy handler getters
     public LazyOptional<ItemStackHandler> getInputLazyHandler(){
         return this.inputLazyHandler;
     }
@@ -233,8 +241,15 @@ public class MechanicalGrinderBlockEntity extends BlockEntity implements MenuPro
     }
 
     protected boolean hasProcessFinished(){
-
         return progress >= maxProgress;
+    }
+
+    public int getProgress() {
+        return progress;
+    }
+
+    public int getMaxProgress() {
+        return maxProgress;
     }
 
     protected void setIsTurnedOn(int isTurnedOn) {

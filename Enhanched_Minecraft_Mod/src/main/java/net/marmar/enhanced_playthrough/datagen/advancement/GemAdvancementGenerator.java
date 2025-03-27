@@ -17,56 +17,64 @@ import net.minecraftforge.common.data.ForgeAdvancementProvider;
 
 import java.util.function.Consumer;
 
-public class GemAdvancementGenerator implements ForgeAdvancementProvider.AdvancementGenerator {
-    private static final ResourceLocation GEMS_BACKGROUND = new ResourceLocation("textures/block/emerald_block.png");
-
+public class GemAdvancementGenerator implements ForgeAdvancementProvider.AdvancementGenerator, ICustomAdvancementDisplays {
     @Override
     public void generate(HolderLookup.Provider provider, Consumer<Advancement> consumer, ExistingFileHelper existingFileHelper) {
         Advancement gems_root = Advancement.Builder.advancement()
-                .display(ModBlocks.GEM_POLISHER.get().asItem(), Component.translatable("advancements.title.gems.root"), Component.translatable("advancements.desc.gems.root"), GEMS_BACKGROUND, FrameType.TASK, false, false, true)
+                .display(rootDisplayInfo(ModBlocks.GEM_POLISHER.get(), "root"))
                 .addCriterion("spawn", PlayerTrigger.TriggerInstance.tick())
                 .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "gem_root"), existingFileHelper);
 
         Advancement get_emerald = Advancement.Builder.advancement()
                 .parent(gems_root)
-                .display(Items.EMERALD, Component.translatable("advancements.title.gems.polish_emerald"), Component.translatable("advancements.desc.gems.polish_emerald"), GEMS_BACKGROUND, FrameType.TASK, true, true, false)
+                .display(taskDisplayInfo(Items.EMERALD, "polish_emerald"))
                 .addCriterion("has_material", InventoryChangeTrigger.TriggerInstance.hasItems(Items.EMERALD))
                 .requirements(RequirementsStrategy.OR)
                 .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "polish_emerald"), existingFileHelper);
 
         Advancement get_sapphire = Advancement.Builder.advancement()
                 .parent(get_emerald)
-                .display(ModItems.SAPPHIRE.get(), Component.translatable("advancements.title.gems.polish_sapphire"), Component.translatable("advancements.desc.gems.polish_sapphire"), GEMS_BACKGROUND, FrameType.TASK, true, true, false)
+                .display(taskDisplayInfo(ModItems.SAPPHIRE.get(), "polish_sapphire"))
                 .addCriterion("has_material", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.SAPPHIRE.get()))
                 .requirements(RequirementsStrategy.OR)
                 .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "polish_sapphire"), existingFileHelper);
 
         Advancement get_ruby = Advancement.Builder.advancement()
                 .parent(get_sapphire)
-                .display(ModItems.RUBY.get(), Component.translatable("advancements.title.gems.polish_rubi"), Component.translatable("advancements.desc.gems.polish_rubi"), GEMS_BACKGROUND, FrameType.TASK, true, true, false)
+                .display(taskDisplayInfo(ModItems.RUBY.get(), "polish_rubi"))
                 .addCriterion("has_material", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.RUBY.get()))
                 .requirements(RequirementsStrategy.OR)
                 .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "polish_ruby"), existingFileHelper);
 
         Advancement get_garnet = Advancement.Builder.advancement()
                 .parent(gems_root)
-                .display(ModItems.GARNET.get(), Component.translatable("advancements.title.gems.polish_garnet"), Component.translatable("advancements.desc.gems.polish_garnet"), GEMS_BACKGROUND, FrameType.TASK, true, true, false)
+                .display(taskDisplayInfo(ModItems.GARNET.get(), "polish_garnet"))
                 .addCriterion("has_material", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.GARNET.get()))
                 .requirements(RequirementsStrategy.OR)
                 .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "polish_garnet"), existingFileHelper);
 
         Advancement get_diamond = Advancement.Builder.advancement()
                 .parent(get_garnet)
-                .display(Items.DIAMOND, Component.translatable("advancements.title.gems.polish_diamond"), Component.translatable("advancements.desc.gems.polish_diamond"), GEMS_BACKGROUND, FrameType.TASK, true, true, false)
+                .display(taskDisplayInfo(Items.DIAMOND, "polish_diamond"))
                 .addCriterion("has_material", InventoryChangeTrigger.TriggerInstance.hasItems(Items.DIAMOND))
                 .requirements(RequirementsStrategy.OR)
                 .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "polish_diamond"), existingFileHelper);
 
         Advancement get_all_gems = Advancement.Builder.advancement()
                 .parent(gems_root)
-                .display(ModItems.NETHERITE_POLISHER.get(), Component.translatable("advancements.title.gems.get_all_gems"), Component.translatable("advancements.desc.gems.get_all_gems"), GEMS_BACKGROUND, FrameType.CHALLENGE, true, true, false)
+                .display(challengeDisplayInfo(ModItems.NETHERITE_POLISHER.get(), "get_all_gems"))
                 .addCriterion("has_materials", InventoryChangeTrigger.TriggerInstance.hasItems(Items.EMERALD, ModItems.SAPPHIRE.get(), ModItems.RUBY.get(), ModItems.GARNET.get() ,Items.DIAMOND))
                 .requirements(RequirementsStrategy.AND)
                 .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "get_all_gems"), existingFileHelper);
+    }
+
+    @Override
+    public ResourceLocation categoryBackGround() {
+        return new ResourceLocation("textures/block/emerald_block.png");
+    }
+
+    @Override
+    public String categoryName() {
+        return "gems";
     }
 }

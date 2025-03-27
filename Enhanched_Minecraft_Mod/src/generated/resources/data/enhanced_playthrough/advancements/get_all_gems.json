@@ -38,17 +38,17 @@
     "announce_to_chat": true,
     "background": "minecraft:textures/block/emerald_block.png",
     "description": {
-      "translate": "advancements.desc.gems.get_all_gems"
+      "translate": "advancement.enhanced_playthrough.desc.gems.get_all_gems"
     },
     "frame": "challenge",
-    "hidden": false,
+    "hidden": true,
     "icon": {
       "item": "enhanced_playthrough:netherite_polisher",
       "nbt": "{Damage:0}"
     },
     "show_toast": true,
     "title": {
-      "translate": "advancements.title.gems.get_all_gems"
+      "translate": "advancement.enhanced_playthrough.title.gems.get_all_gems"
     }
   },
   "requirements": [

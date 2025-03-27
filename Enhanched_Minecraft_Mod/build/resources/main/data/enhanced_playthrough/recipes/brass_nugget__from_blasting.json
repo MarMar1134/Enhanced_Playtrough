@@ -2,7 +2,7 @@
   "type": "minecraft:blasting",
   "category": "misc",
   "cookingtime": 100,
-  "experience": 0.5,
+  "experience": 0.1,
   "group": "brass_nugget",
   "ingredient": {
     "tag": "enhanced_playthrough:brass_manufacturable"

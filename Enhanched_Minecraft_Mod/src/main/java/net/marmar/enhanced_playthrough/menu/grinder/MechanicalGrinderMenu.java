@@ -68,12 +68,6 @@ public class MechanicalGrinderMenu extends AbstractContainerMenu {
         return maxProgress != 0 && progress != 0 ? progress * grindProgressSize / maxProgress : 0;
     }
 
-//    public int flashingLight(){
-//        int random = RandomGenerator.nextInt();
-//
-//        return random > 2 ? 17 : 0;
-//    }
-
     public boolean isOn(){
         return this.data.get(2) != 0;
     }
