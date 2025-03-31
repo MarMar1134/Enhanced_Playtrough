@@ -3,8 +3,10 @@ package net.marmar.enhanced_playthrough.item;
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.Util.ModTiers;
 import net.marmar.enhanced_playthrough.block.ModBlocks;
+import net.marmar.enhanced_playthrough.entity.boat.ModBoatEntity;
 import net.marmar.enhanced_playthrough.item.armor.ModArmorItem;
 import net.marmar.enhanced_playthrough.item.armor.ModArmorMaterial;
+import net.marmar.enhanced_playthrough.item.custom.ModBoatItem;
 import net.marmar.enhanced_playthrough.item.templates.BronziumSmithingUpgradeTemplate;
 import net.marmar.enhanced_playthrough.item.custom.MateItem;
 import net.marmar.enhanced_playthrough.item.custom.PolisherItem;
@@ -142,6 +144,64 @@ public class ModItems {
     //Other materials
     public static final RegistryObject<Item> MUD_BRICK = ITEMS.register(
             "mud_brick", () -> new Item(new Item.Properties()));
+
+    //Signs
+        //Walnut
+        public static final RegistryObject<Item> WALNUT_SIGN = ITEMS.register(
+                "walnut_sign", () -> new SignItem(new Item.Properties().stacksTo(16),
+                        ModBlocks.WALNUT_SIGN.get(), ModBlocks.WALNUT_WALL_SIGN.get()));
+        public static final RegistryObject<Item> WALNUT_HANGING_SIGN = ITEMS.register(
+                "walnut_hanging_sign", () -> new HangingSignItem(ModBlocks.WALNUT_HANGING_SIGN.get(), ModBlocks.WALNUT_WALL_HANGING_SIGN.get(),
+                        new Item.Properties().stacksTo(16)));
+
+        //Apple
+        public static final RegistryObject<Item> APPLE_SIGN = ITEMS.register(
+                "apple_sign", () -> new SignItem(new Item.Properties().stacksTo(16),
+                        ModBlocks.APPLE_SIGN.get(), ModBlocks.APPLE_WALL_SIGN.get()));
+        public static final RegistryObject<Item> APPLE_HANGING_SIGN = ITEMS.register(
+                "apple_hanging_sign", () -> new HangingSignItem(ModBlocks.APPLE_HANGING_SIGN.get(), ModBlocks.APPLE_WALL_HANGING_SIGN.get(),
+                        new Item.Properties().stacksTo(16)));
+
+        //Orange
+        public static final RegistryObject<Item> ORANGE_SIGN = ITEMS.register(
+                "orange_sign", () -> new SignItem(new Item.Properties().stacksTo(16),
+                        ModBlocks.ORANGE_SIGN.get(), ModBlocks.ORANGE_WALL_SIGN.get()));
+        public static final RegistryObject<Item> ORANGE_HANGING_SIGN = ITEMS.register(
+                "orange_hanging_sign", () -> new HangingSignItem(ModBlocks.ORANGE_HANGING_SIGN.get(), ModBlocks.ORANGE_WALL_HANGING_SIGN.get(),
+                        new Item.Properties().stacksTo(16)));
+
+        //Lemon
+        public static final RegistryObject<Item> LEMON_SIGN = ITEMS.register(
+                "lemon_sign", () -> new SignItem(new Item.Properties().stacksTo(16),
+                        ModBlocks.LEMON_SIGN.get(), ModBlocks.LEMON_WALL_SIGN.get()));
+        public static final RegistryObject<Item> LEMON_HANGING_SIGN = ITEMS.register(
+                "lemon_hanging_sign", () -> new HangingSignItem(ModBlocks.LEMON_HANGING_SIGN.get(), ModBlocks.LEMON_WALL_HANGING_SIGN.get(),
+                        new Item.Properties().stacksTo(16)));
+
+    //Boats
+        //Walnut
+        public static final RegistryObject<Item> WALNUT_BOAT = ITEMS.register("walnut_boat",
+                () -> new ModBoatItem(false, ModBoatEntity.Type.WALNUT, new Item.Properties()));
+        public static final RegistryObject<Item> WALNUT_CHEST_BOAT = ITEMS.register("walnut_chest_boat",
+                () -> new ModBoatItem(true, ModBoatEntity.Type.WALNUT, new Item.Properties()));
+
+        //Apple
+        public static final RegistryObject<Item> APPLE_BOAT = ITEMS.register("apple_boat",
+                () -> new ModBoatItem(false, ModBoatEntity.Type.APPLE, new Item.Properties()));
+        public static final RegistryObject<Item> APPLE_CHEST_BOAT = ITEMS.register("apple_chest_boat",
+                () -> new ModBoatItem(true, ModBoatEntity.Type.APPLE, new Item.Properties()));
+
+        //Orange
+        public static final RegistryObject<Item> ORANGE_BOAT = ITEMS.register("orange_boat",
+                () -> new ModBoatItem(false, ModBoatEntity.Type.ORANGE, new Item.Properties()));
+        public static final RegistryObject<Item> ORANGE_CHEST_BOAT = ITEMS.register("orange_chest_boat",
+                () -> new ModBoatItem(true, ModBoatEntity.Type.ORANGE, new Item.Properties()));
+
+        //Lemon
+        public static final RegistryObject<Item> LEMON_BOAT = ITEMS.register("lemon_boat",
+                () -> new ModBoatItem(false, ModBoatEntity.Type.LEMON, new Item.Properties()));
+        public static final RegistryObject<Item> LEMON_CHEST_BOAT = ITEMS.register("lemon_chest_boat",
+                () -> new ModBoatItem(true, ModBoatEntity.Type.LEMON, new Item.Properties()));
 
     //Weapons, tools and armors
         //Stone

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "enhanced_playthrough:lemon_planks"
+    },
+    "B": {
+      "item": "minecraft:wooden_shovel"
+    }
+  },
+  "pattern": [
+    "ABA",
+    "AAA"
+  ],
+  "result": {
+    "item": "enhanced_playthrough:lemon_boat"
+  },
+  "show_notification": true
+}

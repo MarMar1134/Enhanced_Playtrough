@@ -142,6 +142,12 @@ public class ModBlockStateProvider extends BlockStateProvider{
             fenceBlock((FenceBlock) ModBlocks.WALNUT_FENCE.get(), blockTexture(ModBlocks.WALNUT_PLANKS.get()));
             fenceGateBlock((FenceGateBlock) ModBlocks.WALNUT_FENCEGATE.get(), blockTexture(ModBlocks.WALNUT_PLANKS.get()));
 
+            signBlock((StandingSignBlock) ModBlocks.WALNUT_SIGN.get(), (WallSignBlock) ModBlocks.WALNUT_WALL_SIGN.get(),
+                    blockTexture(ModBlocks.WALNUT_PLANKS.get()));
+
+            hangingSignBlock(ModBlocks.WALNUT_HANGING_SIGN.get(), ModBlocks.WALNUT_WALL_HANGING_SIGN.get(),
+                    blockTexture(ModBlocks.WALNUT_PLANKS.get()));
+
             //Apple
             saplingBlock(ModBlocks.APPLE_SAPLING);
             saplingBlock(ModBlocks.GREEN_APPLE_SAPLING);
@@ -174,8 +180,15 @@ public class ModBlockStateProvider extends BlockStateProvider{
 
             slabBlock((SlabBlock) ModBlocks.APPLE_SLAB.get(), blockTexture(ModBlocks.APPLE_PLANKS.get()), blockTexture(ModBlocks.APPLE_PLANKS.get()));
             stairsBlock((StairBlock) ModBlocks.APPLE_STAIRS.get(), blockTexture(ModBlocks.APPLE_PLANKS.get()));
+
             fenceBlock((FenceBlock) ModBlocks.APPLE_FENCE.get(), blockTexture(ModBlocks.APPLE_PLANKS.get()));
             fenceGateBlock((FenceGateBlock) ModBlocks.APPLE_FENCEGATE.get(), blockTexture(ModBlocks.APPLE_PLANKS.get()));
+
+            signBlock((StandingSignBlock) ModBlocks.APPLE_SIGN.get(), (WallSignBlock) ModBlocks.APPLE_WALL_SIGN.get(),
+                    blockTexture(ModBlocks.APPLE_PLANKS.get()));
+
+            hangingSignBlock(ModBlocks.APPLE_HANGING_SIGN.get(), ModBlocks.APPLE_WALL_HANGING_SIGN.get(),
+                    blockTexture(ModBlocks.APPLE_PLANKS.get()));
 
             //Orange
             saplingBlock(ModBlocks.ORANGE_SAPLING);
@@ -207,8 +220,15 @@ public class ModBlockStateProvider extends BlockStateProvider{
 
             slabBlock((SlabBlock) ModBlocks.ORANGE_SLAB.get(), blockTexture(ModBlocks.ORANGE_PLANKS.get()), blockTexture(ModBlocks.ORANGE_PLANKS.get()));
             stairsBlock((StairBlock) ModBlocks.ORANGE_STAIRS.get(), blockTexture(ModBlocks.ORANGE_PLANKS.get()));
+
             fenceBlock((FenceBlock) ModBlocks.ORANGE_FENCE.get(), blockTexture(ModBlocks.ORANGE_PLANKS.get()));
             fenceGateBlock((FenceGateBlock) ModBlocks.ORANGE_FENCEGATE.get(), blockTexture(ModBlocks.ORANGE_PLANKS.get()));
+
+            signBlock((StandingSignBlock) ModBlocks.ORANGE_SIGN.get(), (WallSignBlock) ModBlocks.ORANGE_WALL_SIGN.get(),
+                    blockTexture(ModBlocks.ORANGE_PLANKS.get()));
+
+            hangingSignBlock(ModBlocks.ORANGE_HANGING_SIGN.get(), ModBlocks.ORANGE_WALL_HANGING_SIGN.get(),
+                    blockTexture(ModBlocks.ORANGE_PLANKS.get()));
 
             //Lemon
             saplingBlock(ModBlocks.LEMON_SAPLING);
@@ -240,8 +260,15 @@ public class ModBlockStateProvider extends BlockStateProvider{
 
             slabBlock((SlabBlock) ModBlocks.LEMON_SLAB.get(), blockTexture(ModBlocks.LEMON_PLANKS.get()), blockTexture(ModBlocks.LEMON_PLANKS.get()));
             stairsBlock((StairBlock) ModBlocks.LEMON_STAIRS.get(), blockTexture(ModBlocks.LEMON_PLANKS.get()));
+
             fenceBlock((FenceBlock) ModBlocks.LEMON_FENCE.get(), blockTexture(ModBlocks.LEMON_PLANKS.get()));
             fenceGateBlock((FenceGateBlock) ModBlocks.LEMON_FENCEGATE.get(), blockTexture(ModBlocks.LEMON_PLANKS.get()));
+
+            signBlock((StandingSignBlock) ModBlocks.LEMON_SIGN.get(), (WallSignBlock) ModBlocks.LEMON_WALL_SIGN.get(),
+                    blockTexture(ModBlocks.LEMON_PLANKS.get()));
+
+            hangingSignBlock(ModBlocks.LEMON_HANGING_SIGN.get(), ModBlocks.LEMON_WALL_HANGING_SIGN.get(),
+                    blockTexture(ModBlocks.LEMON_PLANKS.get()));
 
             //Lime
             saplingBlock(ModBlocks.LIME_SAPLING);
@@ -336,12 +363,20 @@ public class ModBlockStateProvider extends BlockStateProvider{
     }
 
     public void hangingSignBlock(Block signBlock, Block wallSignBlock, ResourceLocation texture) {
-        ModelFile sign = models().sign(String.valueOf(signBlock), texture);
+        ModelFile sign = models().sign(name(signBlock), texture);
         hangingSignBlock(signBlock, wallSignBlock, sign);
     }
 
     public void hangingSignBlock(Block signBlock, Block wallSignBlock, ModelFile sign) {
         simpleBlock(signBlock, sign);
         simpleBlock(wallSignBlock, sign);
+    }
+
+    private String name(Block block) {
+        return key(block).getPath();
+    }
+
+    private ResourceLocation key(Block block) {
+        return ForgeRegistries.BLOCKS.getKey(block);
     }
 }

@@ -23,7 +23,7 @@ displayName="Enhanced Playthrough" #mandatory
 # A URL to query for updates for this mod. See the JSON update specification https://docs.minecraftforge.net/en/latest/misc/updatechecker/
 #updateJSONURL="https://change.me.example.invalid/updates.json" #optional
 # A URL for the "homepage" for this mod, displayed in the mod UI
-displayURL="https://modrinth.com/mod/enhanced-playthrough" #optional
+displayURL="https://www.curseforge.com/minecraft/mc-mods/enhanced-playthrough" #optional
 # A file name (in the root of the mod JAR) containing a logo for display
 logoFile="EP2_logo.png" #optional
 # A text field displayed in the mod UI

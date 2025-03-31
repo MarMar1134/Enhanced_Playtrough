@@ -2,7 +2,10 @@ package net.marmar.enhanced_playthrough;
 
 import net.marmar.enhanced_playthrough.block.ModBlocks;
 import net.marmar.enhanced_playthrough.block.ModBlockEntities;
+import net.marmar.enhanced_playthrough.block.wood.ModWoodTypes;
 import net.marmar.enhanced_playthrough.enchantment.ModEnchantments;
+import net.marmar.enhanced_playthrough.entity.ModEntities;
+import net.marmar.enhanced_playthrough.entity.model.ModBoatRenderer;
 import net.marmar.enhanced_playthrough.item.ModItems;
 import net.marmar.enhanced_playthrough.menu.grinder.screen.MechanicalGrinderScreen;
 import net.marmar.enhanced_playthrough.menu.grinder.screen.PrimalGrinderScreen;
@@ -18,6 +21,8 @@ import net.marmar.enhanced_playthrough.recipe.ModRecipes;
 import net.marmar.enhanced_playthrough.menu.ModMenuTypes;
 import net.marmar.enhanced_playthrough.villager.ModVillagers;
 import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.client.renderer.Sheets;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -50,6 +55,8 @@ public class EnhancedPlaythrough
 
         ModVillagers.Register(ModEventBus);
 
+        ModEntities.Register(ModEventBus);
+
 
     //Register for creative tabs
         MinecraftForge.EVENT_BUS.register(this);
@@ -72,6 +79,16 @@ public class EnhancedPlaythrough
 
             MenuScreens.register(ModMenuTypes.PRIMAL_GRINDER_MENU.get(), PrimalGrinderScreen::new);
             MenuScreens.register(ModMenuTypes.MECHANICAL_GRINDER_MENU.get(), MechanicalGrinderScreen::new);
+
+            //Entities
+            EntityRenderers.register(ModEntities.MOD_BOAT.get(), context -> new ModBoatRenderer(context, false));
+            EntityRenderers.register(ModEntities.MOD_CHEST_BOAT.get(), context -> new ModBoatRenderer(context, true));
+
+            //Wood types
+            Sheets.addWoodType(ModWoodTypes.WALNUT);
+            Sheets.addWoodType(ModWoodTypes.APPLE);
+            Sheets.addWoodType(ModWoodTypes.ORANGE);
+            Sheets.addWoodType(ModWoodTypes.LEMON);
         }
     }
 

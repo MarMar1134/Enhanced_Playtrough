@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:chest"
+    },
+    {
+      "item": "enhanced_playthrough:orange_boat"
+    }
+  ],
+  "result": {
+    "item": "enhanced_playthrough:orange_chest_boat"
+  }
+}

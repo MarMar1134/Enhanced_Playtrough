@@ -16,6 +16,9 @@ import net.marmar.enhanced_playthrough.recipe.recipebuilder.ModBasicRecipeBuilde
 import net.marmar.enhanced_playthrough.recipe.recipebuilder.ModBasicSmeltBuilder;
 import net.marmar.enhanced_playthrough.recipe.recipebuilder.ModSmithingTransformRecipeBuilder;
 import net.marmar.enhanced_playthrough.recipe.recipecategory.AlloyRecipeCategory;
+import net.minecraft.advancements.CriterionTriggerInstance;
+import net.minecraft.advancements.critereon.EnterBlockTrigger;
+import net.minecraft.advancements.critereon.TradeTrigger;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.tags.ItemTags;
@@ -749,6 +752,41 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .unlockedBy(getHasName(ModBlocks.WALNUT_PLANKS.get()), has(ModBlocks.WALNUT_PLANKS.get()))
                         .save(consumer);
 
+                ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModItems.WALNUT_SIGN.get(), 3)
+                        .pattern("AAA")
+                        .pattern("AAA")
+                        .pattern(" Z ")
+                        .define('A', ModBlocks.WALNUT_PLANKS.get())
+                        .define('Z', Items.STICK)
+                        .unlockedBy(getHasName(ModBlocks.WALNUT_PLANKS.get()), has(ModBlocks.WALNUT_PLANKS.get()))
+                        .save(consumer);
+
+                ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModItems.WALNUT_HANGING_SIGN.get(), 6)
+                        .pattern("Z Z")
+                        .pattern("AAA")
+                        .pattern("AAA")
+                        .define('A', ModBlocks.STRIPPED_WALNUT_LOG.get())
+                        .define('Z', Items.CHAIN)
+                        .unlockedBy(getHasName(ModBlocks.STRIPPED_WALNUT_LOG.get()), has(ModBlocks.STRIPPED_WALNUT_LOG.get()))
+                        .unlockedBy(getHasName(Items.CHAIN), has(Items.CHAIN))
+                        .save(consumer);
+
+                ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.WALNUT_BOAT.get(), 1)
+                        .pattern("ABA")
+                        .pattern("AAA")
+                        .define('A', ModBlocks.WALNUT_PLANKS.get())
+                        .define('B', Items.WOODEN_SHOVEL)
+                        .unlockedBy("in_water", EnterBlockTrigger.TriggerInstance.entersBlock(Blocks.WATER))
+                        .unlockedBy(getHasName(ModItems.WALNUT_BOAT.get()), has(ModItems.WALNUT_BOAT.get()))
+                        .save(consumer);
+
+                ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.WALNUT_CHEST_BOAT.get(), 1)
+                        .requires(Blocks.CHEST)
+                        .requires(ModItems.WALNUT_BOAT.get())
+                        .unlockedBy(getHasName(ModItems.WALNUT_BOAT.get()), has(ModItems.WALNUT_BOAT.get()))
+                        .unlockedBy(getHasName(Blocks.CHEST), has(Blocks.CHEST))
+                        .save(consumer);
+
                 //Apple wood
                 ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.APPLE_WOOD.get(), 3)
                         .pattern("AA")
@@ -826,6 +864,41 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .define('A', ModBlocks.APPLE_PLANKS.get())
                         .define('B', Tags.Items.RODS_WOODEN)
                         .unlockedBy(getHasName(ModBlocks.APPLE_PLANKS.get()), has(ModBlocks.APPLE_PLANKS.get()))
+                        .save(consumer);
+
+                ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModItems.APPLE_SIGN.get(), 3)
+                        .pattern("AAA")
+                        .pattern("AAA")
+                        .pattern(" Z ")
+                        .define('A', ModBlocks.APPLE_PLANKS.get())
+                        .define('Z', Items.STICK)
+                        .unlockedBy(getHasName(ModBlocks.APPLE_PLANKS.get()), has(ModBlocks.APPLE_PLANKS.get()))
+                        .save(consumer);
+
+                ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModItems.APPLE_HANGING_SIGN.get(), 6)
+                        .pattern("Z Z")
+                        .pattern("AAA")
+                        .pattern("AAA")
+                        .define('A', ModBlocks.STRIPPED_APPLE_LOG.get())
+                        .define('Z', Items.CHAIN)
+                        .unlockedBy(getHasName(ModBlocks.STRIPPED_APPLE_LOG.get()), has(ModBlocks.STRIPPED_APPLE_LOG.get()))
+                        .unlockedBy(getHasName(Items.CHAIN), has(Items.CHAIN))
+                        .save(consumer);
+
+                ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.APPLE_BOAT.get(), 1)
+                        .pattern("ABA")
+                        .pattern("AAA")
+                        .define('A', ModBlocks.APPLE_PLANKS.get())
+                        .define('B', Items.WOODEN_SHOVEL)
+                        .unlockedBy("in_water", EnterBlockTrigger.TriggerInstance.entersBlock(Blocks.WATER))
+                        .unlockedBy(getHasName(ModItems.APPLE_BOAT.get()), has(ModItems.APPLE_BOAT.get()))
+                        .save(consumer);
+
+                ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.APPLE_CHEST_BOAT.get(), 1)
+                        .requires(Blocks.CHEST)
+                        .requires(ModItems.APPLE_BOAT.get())
+                        .unlockedBy(getHasName(ModItems.APPLE_BOAT.get()), has(ModItems.APPLE_BOAT.get()))
+                        .unlockedBy(getHasName(Blocks.CHEST), has(Blocks.CHEST))
                         .save(consumer);
 
                 //Orange wood
@@ -907,6 +980,41 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .unlockedBy(getHasName(ModBlocks.ORANGE_PLANKS.get()), has(ModBlocks.ORANGE_PLANKS.get()))
                         .save(consumer);
 
+                ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModItems.ORANGE_SIGN.get(), 3)
+                        .pattern("AAA")
+                        .pattern("AAA")
+                        .pattern(" Z ")
+                        .define('A', ModBlocks.ORANGE_PLANKS.get())
+                        .define('Z', Items.STICK)
+                        .unlockedBy(getHasName(ModBlocks.ORANGE_PLANKS.get()), has(ModBlocks.ORANGE_PLANKS.get()))
+                        .save(consumer);
+
+                ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModItems.ORANGE_HANGING_SIGN.get(), 6)
+                        .pattern("Z Z")
+                        .pattern("AAA")
+                        .pattern("AAA")
+                        .define('A', ModBlocks.STRIPPED_ORANGE_LOG.get())
+                        .define('Z', Items.CHAIN)
+                        .unlockedBy(getHasName(ModBlocks.STRIPPED_ORANGE_LOG.get()), has(ModBlocks.STRIPPED_ORANGE_LOG.get()))
+                        .unlockedBy(getHasName(Items.CHAIN), has(Items.CHAIN))
+                        .save(consumer);
+
+                ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ORANGE_BOAT.get(), 1)
+                        .pattern("ABA")
+                        .pattern("AAA")
+                        .define('A', ModBlocks.ORANGE_PLANKS.get())
+                        .define('B', Items.WOODEN_SHOVEL)
+                        .unlockedBy("in_water", EnterBlockTrigger.TriggerInstance.entersBlock(Blocks.WATER))
+                        .unlockedBy(getHasName(ModItems.ORANGE_BOAT.get()), has(ModItems.ORANGE_BOAT.get()))
+                        .save(consumer);
+
+                ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.ORANGE_CHEST_BOAT.get(), 1)
+                        .requires(Blocks.CHEST)
+                        .requires(ModItems.ORANGE_BOAT.get())
+                        .unlockedBy(getHasName(ModItems.ORANGE_BOAT.get()), has(ModItems.ORANGE_BOAT.get()))
+                        .unlockedBy(getHasName(Blocks.CHEST), has(Blocks.CHEST))
+                        .save(consumer);
+
                 //Lemon wood
                 ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LEMON_WOOD.get(), 3)
                         .pattern("AA")
@@ -984,6 +1092,41 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .define('A', ModBlocks.LEMON_PLANKS.get())
                         .define('B', Items.STICK)
                         .unlockedBy(getHasName(ModBlocks.LEMON_PLANKS.get()), has(ModBlocks.LEMON_PLANKS.get()))
+                        .save(consumer);
+
+                ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModItems.LEMON_SIGN.get(), 3)
+                        .pattern("AAA")
+                        .pattern("AAA")
+                        .pattern(" Z ")
+                        .define('A', ModBlocks.LEMON_PLANKS.get())
+                        .define('Z', Items.STICK)
+                        .unlockedBy(getHasName(ModBlocks.LEMON_PLANKS.get()), has(ModBlocks.LEMON_PLANKS.get()))
+                        .save(consumer);
+
+                ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModItems.LEMON_HANGING_SIGN.get(), 6)
+                        .pattern("Z Z")
+                        .pattern("AAA")
+                        .pattern("AAA")
+                        .define('A', ModBlocks.STRIPPED_LEMON_LOG.get())
+                        .define('Z', Items.CHAIN)
+                        .unlockedBy(getHasName(ModBlocks.STRIPPED_LEMON_LOG.get()), has(ModBlocks.STRIPPED_LEMON_LOG.get()))
+                        .unlockedBy(getHasName(Items.CHAIN), has(Items.CHAIN))
+                        .save(consumer);
+
+                ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.LEMON_BOAT.get(), 1)
+                        .pattern("ABA")
+                        .pattern("AAA")
+                        .define('A', ModBlocks.LEMON_PLANKS.get())
+                        .define('B', Items.WOODEN_SHOVEL)
+                        .unlockedBy("in_water", EnterBlockTrigger.TriggerInstance.entersBlock(Blocks.WATER))
+                        .unlockedBy(getHasName(ModItems.LEMON_BOAT.get()), has(ModItems.LEMON_BOAT.get()))
+                        .save(consumer);
+
+                ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.LEMON_CHEST_BOAT.get(), 1)
+                        .requires(Blocks.CHEST)
+                        .requires(ModItems.LEMON_BOAT.get())
+                        .unlockedBy(getHasName(ModItems.LEMON_BOAT.get()), has(ModItems.LEMON_BOAT.get()))
+                        .unlockedBy(getHasName(Blocks.CHEST), has(Blocks.CHEST))
                         .save(consumer);
 
             //Ore blocks
@@ -1219,10 +1362,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     .pattern("###")
                     .pattern("# #")
                     .pattern("III")
-                    .define('#', Blocks.MUD_BRICKS)
+                    .define('#', Blocks.PACKED_MUD)
                     .define('I', ItemTags.STONE_CRAFTING_MATERIALS)
                     .unlockedBy(getHasName(Blocks.COBBLESTONE), has(Blocks.COBBLESTONE))
-                    .unlockedBy(getHasName(Blocks.MUD_BRICKS), has(Blocks.MUD_BRICKS))
+                    .unlockedBy(getHasName(Blocks.PACKED_MUD), has(Blocks.PACKED_MUD))
                     .save(consumer);
 
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.SOUL_FURNACE.get())
@@ -1868,7 +2011,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         //New vanilla recipes
             //Food
-            ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, Items.BREAD)
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, Items.BREAD, 3)
                     .requires(ModItems.WHEAT_FLOUR.get(), 2)
                     .requires(Items.MILK_BUCKET)
                     .requires(ModItems.YEAST.get())
@@ -1924,6 +2067,72 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     .unlockedBy(getHasName(Items.BONE_MEAL), has(Items.BONE_MEAL))
                     .unlockedBy(getHasName(Items.BONE_BLOCK), has(Items.BONE_BLOCK))
                     .save(consumer);
+
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.OAK_BOAT, 1)
+                    .pattern("ABA")
+                    .pattern("AAA")
+                    .define('A', Blocks.OAK_PLANKS)
+                    .define('B', Items.WOODEN_SHOVEL)
+                    .unlockedBy("in_water", EnterBlockTrigger.TriggerInstance.entersBlock(Blocks.WATER))
+                    .unlockedBy(getHasName(Items.OAK_BOAT), has(Items.OAK_BOAT))
+                    .save(consumer);
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.BIRCH_BOAT, 1)
+                    .pattern("ABA")
+                    .pattern("AAA")
+                    .define('A', Blocks.BIRCH_PLANKS)
+                    .define('B', Items.WOODEN_SHOVEL)
+                    .unlockedBy("in_water", EnterBlockTrigger.TriggerInstance.entersBlock(Blocks.WATER))
+                    .unlockedBy(getHasName(Items.BIRCH_BOAT), has(Items.BIRCH_BOAT))
+                    .save(consumer);
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.SPRUCE_BOAT, 1)
+                    .pattern("ABA")
+                    .pattern("AAA")
+                    .define('A', Blocks.SPRUCE_PLANKS)
+                    .define('B', Items.WOODEN_SHOVEL)
+                    .unlockedBy("in_water", EnterBlockTrigger.TriggerInstance.entersBlock(Blocks.WATER))
+                    .unlockedBy(getHasName(Items.SPRUCE_BOAT), has(Items.SPRUCE_BOAT))
+                    .save(consumer);
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.ACACIA_BOAT, 1)
+                    .pattern("ABA")
+                    .pattern("AAA")
+                    .define('A', Blocks.ACACIA_PLANKS)
+                    .define('B', Items.WOODEN_SHOVEL)
+                    .unlockedBy("in_water", EnterBlockTrigger.TriggerInstance.entersBlock(Blocks.WATER))
+                    .unlockedBy(getHasName(Items.ACACIA_BOAT), has(Items.ACACIA_BOAT))
+                    .save(consumer);
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.MANGROVE_BOAT, 1)
+                    .pattern("ABA")
+                    .pattern("AAA")
+                    .define('A', Blocks.MANGROVE_PLANKS)
+                    .define('B', Items.WOODEN_SHOVEL)
+                    .unlockedBy("in_water", EnterBlockTrigger.TriggerInstance.entersBlock(Blocks.WATER))
+                    .unlockedBy(getHasName(Items.MANGROVE_BOAT), has(Items.MANGROVE_BOAT))
+                    .save(consumer);
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.CHERRY_BOAT, 1)
+                    .pattern("ABA")
+                    .pattern("AAA")
+                    .define('A', Blocks.CHERRY_PLANKS)
+                    .define('B', Items.WOODEN_SHOVEL)
+                    .unlockedBy("in_water", EnterBlockTrigger.TriggerInstance.entersBlock(Blocks.WATER))
+                    .unlockedBy(getHasName(Items.CHERRY_BOAT), has(Items.CHERRY_BOAT))
+                    .save(consumer);
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.JUNGLE_BOAT, 1)
+                    .pattern("ABA")
+                    .pattern("AAA")
+                    .define('A', Blocks.JUNGLE_PLANKS)
+                    .define('B', Items.WOODEN_SHOVEL)
+                    .unlockedBy("in_water", EnterBlockTrigger.TriggerInstance.entersBlock(Blocks.WATER))
+                    .unlockedBy(getHasName(Items.JUNGLE_BOAT), has(Items.JUNGLE_BOAT))
+                    .save(consumer);
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.DARK_OAK_BOAT, 1)
+                    .pattern("ABA")
+                    .pattern("AAA")
+                    .define('A', Blocks.DARK_OAK_PLANKS)
+                    .define('B', Items.WOODEN_SHOVEL)
+                    .unlockedBy("in_water", EnterBlockTrigger.TriggerInstance.entersBlock(Blocks.WATER))
+                    .unlockedBy(getHasName(Items.DARK_OAK_BOAT), has(Items.DARK_OAK_BOAT))
+                    .save(consumer);
+
 
             //Blocks
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, Blocks.STONE_BRICKS, 4)

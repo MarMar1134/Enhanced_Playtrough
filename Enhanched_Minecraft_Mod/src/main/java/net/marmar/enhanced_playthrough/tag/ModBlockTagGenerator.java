@@ -114,6 +114,27 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.LIME_LEAVES.get()
         );
 
+        this.tag(BlockTags.SIGNS).add(
+                ModBlocks.WALNUT_SIGN.get(),
+                ModBlocks.APPLE_SIGN.get(),
+                ModBlocks.ORANGE_SIGN.get(),
+                ModBlocks.LEMON_SIGN.get()
+        );
+
+        this.tag(BlockTags.WALL_SIGNS).add(
+                ModBlocks.WALNUT_WALL_SIGN.get(),
+                ModBlocks.APPLE_WALL_SIGN.get(),
+                ModBlocks.ORANGE_WALL_SIGN.get(),
+                ModBlocks.LEMON_WALL_SIGN.get()
+        );
+
+        this.tag(BlockTags.WALL_HANGING_SIGNS).add(
+                ModBlocks.WALNUT_WALL_HANGING_SIGN.get(),
+                ModBlocks.APPLE_WALL_HANGING_SIGN.get(),
+                ModBlocks.ORANGE_WALL_HANGING_SIGN.get(),
+                ModBlocks.LEMON_WALL_HANGING_SIGN.get()
+        );
+
         this.tag(BlockTags.SWORD_EFFICIENT).add(
                 ModBlocks.WALNUT_LEAVES.get(),
                 ModBlocks.APPLE_LEAVES.get(),

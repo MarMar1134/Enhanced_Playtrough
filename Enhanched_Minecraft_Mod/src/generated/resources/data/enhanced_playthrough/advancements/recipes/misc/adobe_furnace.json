@@ -13,12 +13,12 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_mud_bricks": {
+    "has_packed_mud": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:mud_bricks"
+              "minecraft:packed_mud"
             ]
           }
         ]
@@ -35,7 +35,7 @@
   "requirements": [
     [
       "has_cobblestone",
-      "has_mud_bricks",
+      "has_packed_mud",
       "has_the_recipe"
     ]
   ],

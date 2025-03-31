@@ -73,6 +73,12 @@ public class ModItemModelProvider extends ItemModelProvider {
                 fenceItem(ModBlocks.WALNUT_FENCE, ModBlocks.WALNUT_PLANKS);
                 blockWithItem(ModBlocks.WALNUT_FENCEGATE);
 
+                simpleItem(ModItems.WALNUT_SIGN);
+                simpleItem(ModItems.WALNUT_HANGING_SIGN);
+
+                simpleItem(ModItems.WALNUT_BOAT);
+                simpleItem(ModItems.WALNUT_CHEST_BOAT);
+
                 //Apple
                 saplingItem(ModBlocks.APPLE_SAPLING);
                 saplingItem(ModBlocks.GREEN_APPLE_SAPLING);
@@ -86,8 +92,15 @@ public class ModItemModelProvider extends ItemModelProvider {
 
                 blockWithItem(ModBlocks.APPLE_SLAB);
                 blockWithItem(ModBlocks.APPLE_STAIRS);
+
                 fenceItem(ModBlocks.APPLE_FENCE, ModBlocks.APPLE_PLANKS);
                 blockWithItem(ModBlocks.APPLE_FENCEGATE);
+
+                simpleItem(ModItems.APPLE_SIGN);
+                simpleItem(ModItems.APPLE_HANGING_SIGN);
+
+                simpleItem(ModItems.APPLE_BOAT);
+                simpleItem(ModItems.APPLE_CHEST_BOAT);
 
 
                 //Orange
@@ -102,8 +115,15 @@ public class ModItemModelProvider extends ItemModelProvider {
 
                 blockWithItem(ModBlocks.ORANGE_SLAB);
                 blockWithItem(ModBlocks.ORANGE_STAIRS);
+
                 fenceItem(ModBlocks.ORANGE_FENCE, ModBlocks.ORANGE_PLANKS);
                 blockWithItem(ModBlocks.ORANGE_FENCEGATE);
+
+                simpleItem(ModItems.ORANGE_SIGN);
+                simpleItem(ModItems.ORANGE_HANGING_SIGN);
+
+                simpleItem(ModItems.ORANGE_BOAT);
+                simpleItem(ModItems.ORANGE_CHEST_BOAT);
 
                 //Lemon
                 saplingItem(ModBlocks.LEMON_SAPLING);
@@ -117,8 +137,16 @@ public class ModItemModelProvider extends ItemModelProvider {
 
                 blockWithItem(ModBlocks.LEMON_SLAB);
                 blockWithItem(ModBlocks.LEMON_STAIRS);
+
                 fenceItem(ModBlocks.LEMON_FENCE, ModBlocks.LEMON_PLANKS);
                 blockWithItem(ModBlocks.LEMON_FENCEGATE);
+
+                simpleItem(ModItems.LEMON_SIGN);
+                simpleItem(ModItems.LEMON_HANGING_SIGN);
+
+                simpleItem(ModItems.LEMON_BOAT);
+                simpleItem(ModItems.LEMON_CHEST_BOAT);
+
 
                 //Lime
                 saplingItem(ModBlocks.LIME_SAPLING);

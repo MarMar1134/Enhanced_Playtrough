@@ -1,8 +1,13 @@
 package net.marmar.enhanced_playthrough.datagen.language;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
+import net.marmar.enhanced_playthrough.entity.boat.ModBoatEntity;
+import net.marmar.enhanced_playthrough.entity.boat.ModChestBoatEntity;
 import net.minecraft.data.PackOutput;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.item.Item;
 import net.minecraftforge.common.data.LanguageProvider;
+import net.minecraftforge.registries.RegistryObject;
 
 public abstract class AbstractModLanguageProvider extends LanguageProvider {
     public AbstractModLanguageProvider(PackOutput output, String locale) {
@@ -39,6 +44,21 @@ public abstract class AbstractModLanguageProvider extends LanguageProvider {
         this.add("smithing." + smithingMaterial + ".ingredients", ingredients);
         this.add("smithing." + smithingMaterial + ".base_slot_description", baseSlotDesc);
         this.add("smithing." + smithingMaterial + ".additions_slot_description", addSlotDesc);
+    }
+
+    protected void addSign(RegistryObject<Item> sign, String signTranslation){
+        this.add("block." + EnhancedPlaythrough.MOD_ID + "." + sign.get(), signTranslation);
+    }
+
+    protected void addHangingSign(RegistryObject<Item> hangingSign, String hangingSignTranslation){
+        this.add("block." + EnhancedPlaythrough.MOD_ID + "." + hangingSign.get(), hangingSignTranslation);
+    }
+
+    protected void addBoatEntity(RegistryObject<EntityType<ModBoatEntity>> entity, String name){
+        this.add(entity.get(), name);
+    }
+    protected void addChestBoatEntity(RegistryObject<EntityType<ModChestBoatEntity>> entity, String name){
+        this.add(entity.get(), name);
     }
 
     private void addPotion(String potionName, String potionType, String translation){

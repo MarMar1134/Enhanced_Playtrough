@@ -3,6 +3,7 @@ package net.marmar.enhanced_playthrough.datagen.language;
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.block.ModBlocks;
 import net.marmar.enhanced_playthrough.enchantment.ModEnchantments;
+import net.marmar.enhanced_playthrough.entity.ModEntities;
 import net.marmar.enhanced_playthrough.item.ModItems;
 import net.minecraft.data.PackOutput;
 
@@ -23,6 +24,7 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
         addCreativeTab("saplings", "Seeds and saplings");
         addCreativeTab("woodtypes", "Wood");
         addCreativeTab("blocks", "Blocks");
+        addCreativeTab("utility_blocks", "Functional blocks");
 
         //JEI
         addJeiCategory("adobe_furnace", "Basic smelting");
@@ -95,6 +97,10 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
             addAdvancementDesc("gems", "polish_diamond", "Get some diamonds and look to the sky");
             addAdvancementDesc("gems", "get_all_gems", "Collect all the gems and become the lord of chaos");
 
+        //Entities
+        addBoatEntity(ModEntities.MOD_BOAT, "Boat");
+        addChestBoatEntity(ModEntities.MOD_CHEST_BOAT, "Boat with chest");
+
         //Blocks
             //Wood
                 //Apple
@@ -113,6 +119,10 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
                 addBlock(ModBlocks.APPLE_TRAPDOOR, "Apple trapdoor");
                 addBlock(ModBlocks.APPLE_BUTTON, "Apple button");
                 addBlock(ModBlocks.APPLE_PRESSURE_PLATE, "Apple pressure plate");
+                addSign(ModItems.APPLE_SIGN, "Apple sign");
+                addHangingSign(ModItems.APPLE_HANGING_SIGN, "Hanging apple sign");
+                addItem(ModItems.APPLE_BOAT, "Apple boat");
+                addItem(ModItems.APPLE_CHEST_BOAT, "Apple boat with chest");
 
                 //Green apple
                 addBlock(ModBlocks.GREEN_APPLE_SAPLING, "Green apple sapling");
@@ -134,6 +144,10 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
                 addBlock(ModBlocks.WALNUT_TRAPDOOR, "Walnut trapdoor");
                 addBlock(ModBlocks.WALNUT_BUTTON, "Walnut button");
                 addBlock(ModBlocks.WALNUT_PRESSURE_PLATE, "Walnut pressure plate");
+                addSign(ModItems.WALNUT_SIGN, "Walnut sign");
+                addHangingSign(ModItems.WALNUT_HANGING_SIGN, "Hanging walnut sign");
+                addItem(ModItems.WALNUT_BOAT, "Walnut boat");
+                addItem(ModItems.WALNUT_CHEST_BOAT, "Walnut boat with chest");
 
                 //Orange
                 addBlock(ModBlocks.ORANGE_SAPLING, "Orange sapling");
@@ -151,6 +165,10 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
                 addBlock(ModBlocks.ORANGE_TRAPDOOR, "Orange trapdoor");
                 addBlock(ModBlocks.ORANGE_BUTTON, "Orange button");
                 addBlock(ModBlocks.ORANGE_PRESSURE_PLATE, "Orange pressure plate");
+                addSign(ModItems.ORANGE_SIGN, "Orange sign");
+                addHangingSign(ModItems.ORANGE_HANGING_SIGN, "Hanging orange sign");
+                addItem(ModItems.ORANGE_BOAT, "Orange boat");
+                addItem(ModItems.ORANGE_CHEST_BOAT, "Orange boat with chest");
 
                 //Lemon
                 addBlock(ModBlocks.LEMON_SAPLING, "Lemon sapling");
@@ -168,6 +186,10 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
                 addBlock(ModBlocks.LEMON_TRAPDOOR, "Lemon trapdoor");
                 addBlock(ModBlocks.LEMON_BUTTON, "Lemon button");
                 addBlock(ModBlocks.LEMON_PRESSURE_PLATE, "Lemon pressure plate");
+                addSign(ModItems.LEMON_SIGN, "Lemon sign");
+                addHangingSign(ModItems.LEMON_HANGING_SIGN, "Hanging lemon sign");
+                addItem(ModItems.LEMON_BOAT, "Lemon boat");
+                addItem(ModItems.LEMON_CHEST_BOAT, "Lemon boat with chest");
 
                 //Lime
                 addBlock(ModBlocks.LIME_SAPLING, "Lime sapling");

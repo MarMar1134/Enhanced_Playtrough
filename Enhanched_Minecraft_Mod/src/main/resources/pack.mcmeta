@@ -42,6 +42,34 @@
       },
       {
         "namespace": "minecraft",
+        "path": "recipes/oak_boat.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "recipes/dark_oak_boat.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "recipes/acacia_boat.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "recipes/birch_boat.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "recipes/spruce_boat.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "recipes/mangrove_boat.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "recipes/cherry_boat.json"
+      },
+      {
+        "namespace": "minecraft",
         "path": "loot_tables/blocks/emerald_ore.json"
       },
       {

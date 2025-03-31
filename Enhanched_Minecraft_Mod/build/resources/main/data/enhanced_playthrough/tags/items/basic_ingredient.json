@@ -1,0 +1,23 @@
+{
+  "values": [
+    "minecraft:raw_copper",
+    "minecraft:copper_ore",
+    "enhanced_playthrough:raw_zinc",
+    "enhanced_playthrough:zinc_ore",
+    "enhanced_playthrough:raw_tin",
+    "enhanced_playthrough:tin_ore",
+    "minecraft:beef",
+    "minecraft:chicken",
+    "minecraft:porkchop",
+    "minecraft:mutton",
+    "minecraft:rabbit",
+    "minecraft:kelp",
+    "minecraft:salmon",
+    "minecraft:cod",
+    "minecraft:potato",
+    "minecraft:clay_ball",
+    "enhanced_playthrough:zapallo",
+    "enhanced_playthrough:corn",
+    "enhanced_playthrough:eggplant"
+  ]
+}

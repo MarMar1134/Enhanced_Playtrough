@@ -8,6 +8,7 @@ import net.marmar.enhanced_playthrough.block.crops.ZapalloCropBlock;
 import net.marmar.enhanced_playthrough.enchantment.ModEnchantments;
 import net.marmar.enhanced_playthrough.item.ModItems;
 import net.minecraft.advancements.critereon.EnchantmentPredicate;
+import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.advancements.critereon.MinMaxBounds;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.data.loot.BlockLootSubProvider;
@@ -17,6 +18,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
@@ -41,6 +43,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         //Base
         protected static final LootItemCondition.Builder HAS_FINE_MINING;
         protected static final LootItemCondition.Builder HAS_SILK_TOUCH;
+        protected static final LootItemCondition.Builder IS_WOODEN_PICKAXE;
 
         //Crops
         protected static final LootItemCondition.Builder YERBA_MATE_BUILDER;
@@ -177,8 +180,19 @@ public class ModBlockLootTables extends BlockLootSubProvider {
             this.dropSelf(ModBlocks.WALNUT_STAIRS.get());
             this.add(ModBlocks.WALNUT_SLAB.get(),
                     block -> createSlabItemTable(ModBlocks.WALNUT_SLAB.get()));
+
             this.dropSelf(ModBlocks.WALNUT_FENCE.get());
             this.dropSelf(ModBlocks.WALNUT_FENCEGATE.get());
+
+            this.add(ModBlocks.WALNUT_SIGN.get(),
+                    block -> createSingleItemTable(ModBlocks.WALNUT_SIGN.get()));
+            this.add(ModBlocks.WALNUT_WALL_SIGN.get(),
+                    block -> createSingleItemTable(ModBlocks.WALNUT_SIGN.get()));
+
+            this.add(ModBlocks.WALNUT_HANGING_SIGN.get(),
+                    block -> createSingleItemTable(ModBlocks.WALNUT_HANGING_SIGN.get()));
+            this.add(ModBlocks.WALNUT_WALL_HANGING_SIGN.get(),
+                    block -> createSingleItemTable(ModBlocks.WALNUT_HANGING_SIGN.get()));
 
             //Apple
             this.dropSelf(ModBlocks.APPLE_SAPLING.get());
@@ -207,8 +221,19 @@ public class ModBlockLootTables extends BlockLootSubProvider {
             this.dropSelf(ModBlocks.APPLE_STAIRS.get());
             this.add(ModBlocks.APPLE_SLAB.get(),
                     block -> createSlabItemTable(ModBlocks.APPLE_SLAB.get()));
+
             this.dropSelf(ModBlocks.APPLE_FENCE.get());
             this.dropSelf(ModBlocks.APPLE_FENCEGATE.get());
+
+            this.add(ModBlocks.APPLE_SIGN.get(),
+                    block -> createSingleItemTable(ModBlocks.APPLE_SIGN.get()));
+            this.add(ModBlocks.APPLE_WALL_SIGN.get(),
+                    block -> createSingleItemTable(ModBlocks.APPLE_SIGN.get()));
+
+            this.add(ModBlocks.APPLE_HANGING_SIGN.get(),
+                    block -> createSingleItemTable(ModBlocks.APPLE_HANGING_SIGN.get()));
+            this.add(ModBlocks.APPLE_WALL_HANGING_SIGN.get(),
+                    block -> createSingleItemTable(ModBlocks.APPLE_HANGING_SIGN.get()));
 
             //Orange
             this.dropSelf(ModBlocks.ORANGE_SAPLING.get());
@@ -234,8 +259,19 @@ public class ModBlockLootTables extends BlockLootSubProvider {
             this.dropSelf(ModBlocks.ORANGE_STAIRS.get());
             this.add(ModBlocks.ORANGE_SLAB.get(),
                     block -> createSlabItemTable(ModBlocks.ORANGE_SLAB.get()));
+
             this.dropSelf(ModBlocks.ORANGE_FENCE.get());
             this.dropSelf(ModBlocks.ORANGE_FENCEGATE.get());
+
+            this.add(ModBlocks.ORANGE_SIGN.get(),
+                    block -> createSingleItemTable(ModBlocks.ORANGE_SIGN.get()));
+            this.add(ModBlocks.ORANGE_WALL_SIGN.get(),
+                    block -> createSingleItemTable(ModBlocks.ORANGE_SIGN.get()));
+
+            this.add(ModBlocks.ORANGE_HANGING_SIGN.get(),
+                    block -> createSingleItemTable(ModBlocks.ORANGE_HANGING_SIGN.get()));
+            this.add(ModBlocks.ORANGE_WALL_HANGING_SIGN.get(),
+                    block -> createSingleItemTable(ModBlocks.ORANGE_HANGING_SIGN.get()));
 
             //Lemon
             this.dropSelf(ModBlocks.LEMON_SAPLING.get());
@@ -261,8 +297,19 @@ public class ModBlockLootTables extends BlockLootSubProvider {
             this.dropSelf(ModBlocks.LEMON_STAIRS.get());
             this.add(ModBlocks.LEMON_SLAB.get(),
                     block -> createSlabItemTable(ModBlocks.LEMON_SLAB.get()));
+
             this.dropSelf(ModBlocks.LEMON_FENCE.get());
             this.dropSelf(ModBlocks.LEMON_FENCEGATE.get());
+
+            this.add(ModBlocks.LEMON_SIGN.get(),
+                    block -> createSingleItemTable(ModBlocks.LEMON_SIGN.get()));
+            this.add(ModBlocks.LEMON_WALL_SIGN.get(),
+                    block -> createSingleItemTable(ModBlocks.LEMON_SIGN.get()));
+
+            this.add(ModBlocks.LEMON_HANGING_SIGN.get(),
+                    block -> createSingleItemTable(ModBlocks.LEMON_HANGING_SIGN.get()));
+            this.add(ModBlocks.LEMON_WALL_HANGING_SIGN.get(),
+                    block -> createSingleItemTable(ModBlocks.LEMON_HANGING_SIGN.get()));
 
             //Lime
             this.dropSelf(ModBlocks.LIME_SAPLING.get());
@@ -408,6 +455,10 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                  .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1)))));
     }
 
+//    protected LootTable.Builder createPool(Block pBlock){
+//        return createSilkTouchDropsWithExtraItem(pBlock, IS_WOODEN_PICKAXE, Blocks.COBBLESTONE, 1, ModItems.BLUE_GOLD_INGOT.get(), 1);
+//    }
+
     @Override
     protected Iterable<Block> getKnownBlocks() {
         return ModBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get)::iterator;
@@ -420,6 +471,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         HAS_SILK_TOUCH = MatchTool.toolMatches(net.minecraft.advancements.critereon.ItemPredicate.Builder.item()
                 .hasEnchantment(new EnchantmentPredicate(Enchantments.SILK_TOUCH, MinMaxBounds.Ints.atLeast(1))));
+
+        IS_WOODEN_PICKAXE = MatchTool.toolMatches(ItemPredicate.Builder.item().of(Items.WOODEN_PICKAXE));
 
         //Crop builders
         YERBA_MATE_BUILDER = LootItemBlockStatePropertyCondition

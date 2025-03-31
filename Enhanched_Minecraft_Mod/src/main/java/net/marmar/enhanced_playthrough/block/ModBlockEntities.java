@@ -9,6 +9,8 @@ import net.marmar.enhanced_playthrough.block.custom.basicfurnace.entity.SoulFurn
 import net.marmar.enhanced_playthrough.block.custom.gempolisher.entity.GemPolisherBlockEntity;
 import net.marmar.enhanced_playthrough.block.custom.grinder.entity.MechanicalGrinderBlockEntity;
 import net.marmar.enhanced_playthrough.block.custom.grinder.entity.PrimalGrinderBlockEntity;
+import net.marmar.enhanced_playthrough.block.wood.sign.entity.ModHangingSignBlockEntity;
+import net.marmar.enhanced_playthrough.block.wood.sign.entity.ModSignBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -47,6 +49,26 @@ public class ModBlockEntities {
     public static final RegistryObject<BlockEntityType<MechanicalGrinderBlockEntity>> MECHANICAL_GRINDER_BLOCK_ENTITY =
             BLOCK_ENTITIES.register("mechanical_grinder_block", () -> BlockEntityType
                     .Builder.of(MechanicalGrinderBlockEntity::new,ModBlocks.MECHANICAL_GRINDER.get()).build(null));
+
+    //Signs
+    public static final RegistryObject<BlockEntityType<ModSignBlockEntity>> SIGN_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("mod_sign_block", () -> BlockEntityType
+                    .Builder.of(ModSignBlockEntity::new,
+                            ModBlocks.WALNUT_SIGN.get(), ModBlocks.WALNUT_WALL_SIGN.get(),
+                            ModBlocks.APPLE_SIGN.get(), ModBlocks.APPLE_WALL_SIGN.get(),
+                            ModBlocks.ORANGE_SIGN.get(), ModBlocks.ORANGE_WALL_SIGN.get(),
+                            ModBlocks.LEMON_SIGN.get(), ModBlocks.LEMON_WALL_SIGN.get())
+                    .build(null));
+
+    //Hanging signs
+    public static final RegistryObject<BlockEntityType<ModHangingSignBlockEntity>> HANGING_SIGN_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("mod_hanging_sign_block", () -> BlockEntityType
+                    .Builder.of(ModHangingSignBlockEntity::new,
+                            ModBlocks.WALNUT_HANGING_SIGN.get(), ModBlocks.WALNUT_WALL_HANGING_SIGN.get(),
+                            ModBlocks.APPLE_HANGING_SIGN.get(), ModBlocks.APPLE_WALL_HANGING_SIGN.get(),
+                            ModBlocks.ORANGE_HANGING_SIGN.get(), ModBlocks.ORANGE_WALL_HANGING_SIGN.get(),
+                            ModBlocks.LEMON_HANGING_SIGN.get(), ModBlocks.LEMON_WALL_HANGING_SIGN.get())
+                    .build(null));
 
     public static void register(IEventBus eventBus){
         BLOCK_ENTITIES.register(eventBus);

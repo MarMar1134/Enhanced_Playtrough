@@ -49,6 +49,20 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 ModBlocks.STRIPPED_LEMON_WOOD.get().asItem()
         );
 
+        this.tag(ItemTags.SIGNS).add(
+                ModItems.WALNUT_SIGN.get(),
+                ModItems.APPLE_SIGN.get(),
+                ModItems.ORANGE_SIGN.get(),
+                ModItems.LEMON_SIGN.get()
+        );
+
+        this.tag(ItemTags.HANGING_SIGNS).add(
+                ModItems.WALNUT_HANGING_SIGN.get(),
+                ModItems.APPLE_HANGING_SIGN.get(),
+                ModItems.ORANGE_HANGING_SIGN.get(),
+                ModItems.LEMON_HANGING_SIGN.get()
+        );
+
         this.tag(ItemTags.PLANKS).add(
                 ModBlocks.WALNUT_PLANKS.get().asItem(),
                 ModBlocks.APPLE_PLANKS.get().asItem(),

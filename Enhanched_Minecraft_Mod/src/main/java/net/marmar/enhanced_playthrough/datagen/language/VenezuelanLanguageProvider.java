@@ -3,6 +3,7 @@ package net.marmar.enhanced_playthrough.datagen.language;
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.block.ModBlocks;
 import net.marmar.enhanced_playthrough.enchantment.ModEnchantments;
+import net.marmar.enhanced_playthrough.entity.ModEntities;
 import net.marmar.enhanced_playthrough.item.ModItems;
 import net.minecraft.data.PackOutput;
 
@@ -23,6 +24,7 @@ public class VenezuelanLanguageProvider extends AbstractModLanguageProvider{
         addCreativeTab("saplings", "Semillas");
         addCreativeTab("woodtypes", "Madera");
         addCreativeTab("blocks", "Bloques varios");
+        addCreativeTab("utility_blocks", "Bloques funcionales");
 
         //JEI
         addJeiCategory("adobe_furnace", "Fundición básica");
@@ -95,6 +97,10 @@ public class VenezuelanLanguageProvider extends AbstractModLanguageProvider{
         addAdvancementDesc("gems", "polish_diamond", "Consiga algunos diamantes para poder ver mejor el cielo");
         addAdvancementDesc("gems", "get_all_gems", "Consiga todas las gemas y conviertase en el señor del caos");
 
+        //Entities
+        addBoatEntity(ModEntities.MOD_BOAT, "Barco");
+        addChestBoatEntity(ModEntities.MOD_CHEST_BOAT, "Barco con cofre");
+
         //Blocks
             //Wood
                 //Apple
@@ -113,6 +119,10 @@ public class VenezuelanLanguageProvider extends AbstractModLanguageProvider{
                 addBlock(ModBlocks.APPLE_TRAPDOOR, "Trampilla de manzano");
                 addBlock(ModBlocks.APPLE_BUTTON, "Botón de manzano");
                 addBlock(ModBlocks.APPLE_PRESSURE_PLATE, "Placa de presión de manzano");
+                addSign(ModItems.APPLE_SIGN, "Cartel de manzano");
+                addHangingSign(ModItems.APPLE_HANGING_SIGN,"Cartel de manzano colgante");
+                addItem(ModItems.APPLE_BOAT, "Barco de manzano");
+                addItem(ModItems.APPLE_CHEST_BOAT, "Barco de manzano con cofre");
 
                 //Green apple
                 addBlock(ModBlocks.GREEN_APPLE_SAPLING, "Brote de manzano verde");
@@ -134,6 +144,10 @@ public class VenezuelanLanguageProvider extends AbstractModLanguageProvider{
                 addBlock(ModBlocks.WALNUT_TRAPDOOR, "Trampilla de nogal");
                 addBlock(ModBlocks.WALNUT_BUTTON, "Botón de nogal");
                 addBlock(ModBlocks.WALNUT_PRESSURE_PLATE, "Placa de presión de nogal");
+                addSign(ModItems.WALNUT_SIGN, "Cartel de nogal");
+                addHangingSign(ModItems.WALNUT_HANGING_SIGN,"Cartel de nogal colgante");
+                addItem(ModItems.WALNUT_BOAT, "Barco de nogal");
+                addItem(ModItems.WALNUT_CHEST_BOAT, "Barco de nogal con cofre");
 
                 //Orange
                 addBlock(ModBlocks.ORANGE_SAPLING, "Brote de naranjo");
@@ -151,6 +165,10 @@ public class VenezuelanLanguageProvider extends AbstractModLanguageProvider{
                 addBlock(ModBlocks.ORANGE_TRAPDOOR, "Trampilla de naranjo");
                 addBlock(ModBlocks.ORANGE_BUTTON, "Botón de naranjo");
                 addBlock(ModBlocks.ORANGE_PRESSURE_PLATE, "Placa de presión de naranjo");
+                addSign(ModItems.ORANGE_SIGN, "Cartel de naranjo");
+                addHangingSign(ModItems.ORANGE_HANGING_SIGN,"Cartel de naranjo colgante");
+                addItem(ModItems.ORANGE_BOAT, "Barco de naranjo");
+                addItem(ModItems.ORANGE_CHEST_BOAT, "Barco de naranjo con cofre");
 
                 //Lemon
                 addBlock(ModBlocks.LEMON_SAPLING, "Brote de limonero");
@@ -168,6 +186,10 @@ public class VenezuelanLanguageProvider extends AbstractModLanguageProvider{
                 addBlock(ModBlocks.LEMON_TRAPDOOR, "Trampilla de limonero");
                 addBlock(ModBlocks.LEMON_BUTTON, "Botón de limonero");
                 addBlock(ModBlocks.LEMON_PRESSURE_PLATE, "Placa de presión de limonero");
+                addSign(ModItems.LEMON_SIGN, "Cartel de limonero");
+                addHangingSign(ModItems.LEMON_HANGING_SIGN,"Cartel de limonero colgante");
+                addItem(ModItems.LEMON_BOAT, "Barco de limonero");
+                addItem(ModItems.LEMON_CHEST_BOAT, "Barco de limonero con cofre");
 
                 //Lime
                 addBlock(ModBlocks.LIME_SAPLING, "Brote de limera");

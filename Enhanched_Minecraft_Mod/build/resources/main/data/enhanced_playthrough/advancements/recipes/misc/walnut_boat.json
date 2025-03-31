@@ -1,0 +1,42 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "enhanced_playthrough:walnut_boat"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_walnut_boat": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:walnut_boat"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "in_water": {
+      "conditions": {
+        "block": "minecraft:water"
+      },
+      "trigger": "minecraft:enter_block"
+    }
+  },
+  "requirements": [
+    [
+      "in_water",
+      "has_walnut_boat",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "enhanced_playthrough:walnut_boat"
+    ]
+  },
+  "sends_telemetry_event": false
+}

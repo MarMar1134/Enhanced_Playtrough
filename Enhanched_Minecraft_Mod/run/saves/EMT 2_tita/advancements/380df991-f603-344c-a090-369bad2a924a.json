@@ -1,0 +1,661 @@
+{
+  "minecraft:recipes/redstone/lever": {
+    "criteria": {
+      "has_cobblestone": "2025-03-31 15:28:28 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/ladder": {
+    "criteria": {
+      "has_stick": "2025-03-31 15:29:23 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/cherry_boat": {
+    "criteria": {
+      "in_water": "2025-03-31 15:27:13 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/bronze_ingot_from_alloying_raw_tin_and_raw_copper": {
+    "criteria": {
+      "has_raw_copper": "2025-03-31 15:29:39 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/yellow_dye_from_mechanical_grinding_sunflower": {
+    "criteria": {
+      "has_sunflower": "2025-03-31 15:32:12 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/copper_dust_from_primal_grinding": {
+    "criteria": {
+      "TagKey[minecraft:item / enhanced_playthrough:copper_manufacturable]": "2025-03-31 15:29:39 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/oak_sign": {
+    "criteria": {
+      "has_planks": "2025-03-31 15:29:22 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/oak_trapdoor": {
+    "criteria": {
+      "has_planks": "2025-03-31 15:29:22 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/building_blocks/orange_wood": {
+    "criteria": {
+      "has_orange_log": "2025-03-31 15:34:31 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tin_ingot_from_soul_basic_smelting_raw_tin": {
+    "criteria": {
+      "has_raw_tin": "2025-03-31 15:31:28 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/stone_sword": {
+    "criteria": {
+      "has_cobblestone": "2025-03-31 15:28:28 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/cobblestone_wall": {
+    "criteria": {
+      "has_cobblestone": "2025-03-31 15:28:28 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/bronze_ingot_from_alloying_raw_copper_and_raw_tin": {
+    "criteria": {
+      "has_raw_copper": "2025-03-31 15:29:39 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/stone_axe": {
+    "criteria": {
+      "has_cobblestone": "2025-03-31 15:28:28 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/orange_dye_from_primal_grinding_orange": {
+    "criteria": {
+      "has_orange": "2025-03-31 15:35:19 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tin_dust_from_mechanical_grinding": {
+    "criteria": {
+      "TagKey[minecraft:item / enhanced_playthrough:tin_manufacturable]": "2025-03-31 15:31:28 -0300"
+    },
+    "done": true
+  },
+  "minecraft:story/mine_stone": {
+    "criteria": {
+      "get_stone": "2025-03-31 15:28:28 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/furnace": {
+    "criteria": {
+      "has_cobblestone": "2025-03-31 15:28:28 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/adobe_alloying_furnace": {
+    "criteria": {
+      "has_raw_tin": "2025-03-31 15:31:28 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/wooden_axe": {
+    "criteria": {
+      "has_stick": "2025-03-31 15:29:23 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/jungle_boat": {
+    "criteria": {
+      "has_the_recipe": "2025-03-31 15:27:13 -0300",
+      "in_water": "2025-03-31 15:27:13 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/copper_dust_from_mechanical_grinding": {
+    "criteria": {
+      "TagKey[minecraft:item / enhanced_playthrough:copper_manufacturable]": "2025-03-31 15:29:39 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/orange_boat": {
+    "criteria": {
+      "in_water": "2025-03-31 15:27:13 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/apple_boat": {
+    "criteria": {
+      "in_water": "2025-03-31 15:27:13 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/mud": {
+    "criteria": {
+      "has_dirt": "2025-03-31 15:30:34 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/crafting_table": {
+    "criteria": {
+      "unlock_right_away": "2025-03-31 15:26:34 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/chest": {
+    "criteria": {
+      "has_lots_of_items": "2025-03-31 15:30:50 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/stick": {
+    "criteria": {
+      "has_planks": "2025-03-31 15:29:22 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/orange_dye_from_mechanical_grinding_orange": {
+    "criteria": {
+      "has_orange": "2025-03-31 15:35:19 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/copper_nugget__from_campfire_raw_copper": {
+    "criteria": {
+      "has_raw_copper": "2025-03-31 15:29:39 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/furnace": {
+    "criteria": {
+      "has_the_recipe": "2025-03-31 15:28:28 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/steel_ingot_from_super_alloying_iron_ingot_and_coal": {
+    "criteria": {
+      "has_coal": "2025-03-31 15:30:50 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/cobblestone_slab_from_cobblestone_stonecutting": {
+    "criteria": {
+      "has_cobblestone": "2025-03-31 15:28:28 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/oak_stairs": {
+    "criteria": {
+      "has_planks": "2025-03-31 15:29:22 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/cherry_boat": {
+    "criteria": {
+      "has_the_recipe": "2025-03-31 15:27:13 -0300",
+      "in_water": "2025-03-31 15:27:13 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/oak_fence": {
+    "criteria": {
+      "has_planks": "2025-03-31 15:29:22 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/bronze_ingot_from_super_alloying_raw_tin_and_raw_copper": {
+    "criteria": {
+      "has_raw_copper": "2025-03-31 15:29:39 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/bronze_ingot_from_super_alloying_raw_copper_and_raw_tin": {
+    "criteria": {
+      "has_raw_copper": "2025-03-31 15:29:39 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/stone": {
+    "criteria": {
+      "has_cobblestone": "2025-03-31 15:28:28 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/bamboo_raft": {
+    "criteria": {
+      "in_water": "2025-03-31 15:27:13 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/adobe_furnace": {
+    "criteria": {
+      "has_cobblestone": "2025-03-31 15:28:28 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/birch_boat": {
+    "criteria": {
+      "in_water": "2025-03-31 15:27:13 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/building_blocks/orange_planks": {
+    "criteria": {
+      "has_orange_log": "2025-03-31 15:34:31 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/steel_ingot_from_alloying_coal_and_raw_iron": {
+    "criteria": {
+      "has_coal": "2025-03-31 15:30:50 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/spruce_boat": {
+    "criteria": {
+      "has_the_recipe": "2025-03-31 15:27:13 -0300",
+      "in_water": "2025-03-31 15:27:13 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/steel_ingot_from_super_alloying_raw_iron_and_coal": {
+    "criteria": {
+      "has_coal": "2025-03-31 15:30:50 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/birch_boat": {
+    "criteria": {
+      "has_the_recipe": "2025-03-31 15:27:13 -0300",
+      "in_water": "2025-03-31 15:27:13 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/oak_boat": {
+    "criteria": {
+      "in_water": "2025-03-31 15:27:13 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/coal_block": {
+    "criteria": {
+      "has_coal": "2025-03-31 15:30:50 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/oak_button": {
+    "criteria": {
+      "has_planks": "2025-03-31 15:29:22 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/tin_ingot__from_blasting_raw_tin": {
+    "criteria": {
+      "has_raw_tin": "2025-03-31 15:31:28 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tin_ingot_from_basic_smelting_raw_tin": {
+    "criteria": {
+      "has_raw_tin": "2025-03-31 15:31:28 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/oak_boat": {
+    "criteria": {
+      "has_the_recipe": "2025-03-31 15:27:13 -0300",
+      "in_water": "2025-03-31 15:27:13 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/mangrove_boat": {
+    "criteria": {
+      "has_the_recipe": "2025-03-31 15:27:13 -0300",
+      "in_water": "2025-03-31 15:27:13 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/torch": {
+    "criteria": {
+      "has_stone_pickaxe": "2025-03-31 15:29:30 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/rose_gold_ingot_from_super_alloying_raw_gold_and_raw_copper": {
+    "criteria": {
+      "has_raw_copper": "2025-03-31 15:29:39 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/dark_oak_boat": {
+    "criteria": {
+      "in_water": "2025-03-31 15:27:13 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/copper_ingot_from_blasting_raw_copper": {
+    "criteria": {
+      "has_raw_copper": "2025-03-31 15:29:39 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/copper_ingot_from_basic_smelting_raw_copper": {
+    "criteria": {
+      "has_raw_copper": "2025-03-31 15:29:39 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/oak_slab": {
+    "criteria": {
+      "has_planks": "2025-03-31 15:29:22 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/raw_copper_block": {
+    "criteria": {
+      "has_raw_copper": "2025-03-31 15:29:39 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/tin_nugget__from_campfire_raw_tin": {
+    "criteria": {
+      "has_raw_tin": "2025-03-31 15:31:28 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/brass_ingot_from_alloying_raw_copper_and_raw_zinc": {
+    "criteria": {
+      "has_raw_copper": "2025-03-31 15:29:39 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/lemon_boat": {
+    "criteria": {
+      "in_water": "2025-03-31 15:27:13 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tin_dust_from_primal_grinding": {
+    "criteria": {
+      "TagKey[minecraft:item / enhanced_playthrough:tin_manufacturable]": "2025-03-31 15:31:28 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/rose_gold_ingot_from_super_alloying_raw_copper_and_raw_gold": {
+    "criteria": {
+      "has_raw_copper": "2025-03-31 15:29:39 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/stone_pickaxe": {
+    "criteria": {
+      "has_cobblestone": "2025-03-31 15:28:28 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/tin_ingot__from_smelting_raw_tin": {
+    "criteria": {
+      "has_raw_tin": "2025-03-31 15:31:28 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/campfire": {
+    "criteria": {
+      "has_stick": "2025-03-31 15:29:23 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/wooden_hoe": {
+    "criteria": {
+      "has_stick": "2025-03-31 15:29:23 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/brass_ingot_from_super_alloying_raw_zinc_and_raw_copper": {
+    "criteria": {
+      "has_raw_copper": "2025-03-31 15:29:39 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/brass_ingot_from_alloying_raw_zinc_and_raw_copper": {
+    "criteria": {
+      "has_raw_copper": "2025-03-31 15:29:39 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/oak_fence_gate": {
+    "criteria": {
+      "has_planks": "2025-03-31 15:29:22 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/charcoal": {
+    "criteria": {
+      "has_log": "2025-03-31 15:29:18 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/wooden_pickaxe": {
+    "criteria": {
+      "has_stick": "2025-03-31 15:29:23 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/spruce_boat": {
+    "criteria": {
+      "in_water": "2025-03-31 15:27:13 -0300"
+    },
+    "done": true
+  },
+  "minecraft:story/upgrade_tools": {
+    "criteria": {
+      "stone_pickaxe": "2025-03-31 15:29:30 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/brass_ingot_from_super_alloying_raw_copper_and_raw_zinc": {
+    "criteria": {
+      "has_raw_copper": "2025-03-31 15:29:39 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/oak_pressure_plate": {
+    "criteria": {
+      "has_planks": "2025-03-31 15:29:22 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/steel_ingot_from_super_alloying_coal_and_raw_iron": {
+    "criteria": {
+      "has_coal": "2025-03-31 15:30:50 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/oak_door": {
+    "criteria": {
+      "has_planks": "2025-03-31 15:29:22 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/copper_ingot__from_blasting_raw_copper": {
+    "criteria": {
+      "has_raw_copper": "2025-03-31 15:29:39 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/wooden_shovel": {
+    "criteria": {
+      "has_stick": "2025-03-31 15:29:23 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/cobblestone_slab": {
+    "criteria": {
+      "has_cobblestone": "2025-03-31 15:28:28 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/copper_ingot_from_soul_basic_smelting_raw_copper": {
+    "criteria": {
+      "has_raw_copper": "2025-03-31 15:29:39 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/yellow_dye_from_sunflower": {
+    "criteria": {
+      "has_sunflower": "2025-03-31 15:32:12 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/acacia_boat": {
+    "criteria": {
+      "in_water": "2025-03-31 15:27:13 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/steel_ingot_from_alloying_raw_iron_and_coal": {
+    "criteria": {
+      "has_coal": "2025-03-31 15:30:50 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/wooden_sword": {
+    "criteria": {
+      "has_stick": "2025-03-31 15:29:23 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/oak_planks": {
+    "criteria": {
+      "has_logs": "2025-03-31 15:29:18 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:gem_root": {
+    "criteria": {
+      "spawn": "2025-03-31 15:26:34 -0300"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:sunflower_plains": "2025-03-31 15:26:36 -0300",
+      "minecraft:river": "2025-03-31 15:27:12 -0300",
+      "minecraft:flower_forest": "2025-03-31 15:32:54 -0300"
+    },
+    "done": false
+  },
+  "minecraft:recipes/decorations/barrel": {
+    "criteria": {
+      "has_planks": "2025-03-31 15:29:22 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/cobblestone_wall_from_cobblestone_stonecutting": {
+    "criteria": {
+      "has_cobblestone": "2025-03-31 15:28:28 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/cobblestone_stairs_from_cobblestone_stonecutting": {
+    "criteria": {
+      "has_cobblestone": "2025-03-31 15:28:28 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/cobblestone_stairs": {
+    "criteria": {
+      "has_cobblestone": "2025-03-31 15:28:28 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/walnut_boat": {
+    "criteria": {
+      "in_water": "2025-03-31 15:27:13 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/copper_ingot__from_smelting_raw_copper": {
+    "criteria": {
+      "has_raw_copper": "2025-03-31 15:29:39 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/steel_ingot_from_super_alloying_coal_and_iron_ingot": {
+    "criteria": {
+      "has_coal": "2025-03-31 15:30:50 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/mangrove_boat": {
+    "criteria": {
+      "in_water": "2025-03-31 15:27:13 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/stone_hoe": {
+    "criteria": {
+      "has_cobblestone": "2025-03-31 15:28:28 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/acacia_boat": {
+    "criteria": {
+      "has_the_recipe": "2025-03-31 15:27:13 -0300",
+      "in_water": "2025-03-31 15:27:13 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/stone_shovel": {
+    "criteria": {
+      "has_cobblestone": "2025-03-31 15:28:28 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/oak_wood": {
+    "criteria": {
+      "has_log": "2025-03-31 15:29:18 -0300"
+    },
+    "done": true
+  },
+  "minecraft:story/root": {
+    "criteria": {
+      "crafting_table": "2025-03-31 15:27:23 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/copper_ingot_from_smelting_raw_copper": {
+    "criteria": {
+      "has_raw_copper": "2025-03-31 15:29:39 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/jungle_boat": {
+    "criteria": {
+      "in_water": "2025-03-31 15:27:13 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/dark_oak_boat": {
+    "criteria": {
+      "has_the_recipe": "2025-03-31 15:27:13 -0300",
+      "in_water": "2025-03-31 15:27:13 -0300"
+    },
+    "done": true
+  },
+  "DataVersion": 3465
+}

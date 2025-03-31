@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:chest"
+    },
+    {
+      "item": "enhanced_playthrough:apple_boat"
+    }
+  ],
+  "result": {
+    "item": "enhanced_playthrough:apple_chest_boat"
+  }
+}

@@ -11567,5 +11567,131 @@
     },
     "done": true
   },
+  "enhanced_playthrough:recipes/iron_dust_from_mechanical_grinding": {
+    "criteria": {
+      "TagKey[minecraft:item / enhanced_playthrough:iron_manufacturable]": "2025-03-27 15:03:49 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/yellow_dye_from_primal_grinding_dandelion": {
+    "criteria": {
+      "has_dandelion": "2025-03-27 15:25:49 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/yellow_dye_from_mechanical_grinding_dandelion": {
+    "criteria": {
+      "has_dandelion": "2025-03-27 15:25:49 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/blue_gold_nugget__from_blasting": {
+    "criteria": {
+      "TagKey[minecraft:item / enhanced_playthrough:blue_gold_manufacturable]": "2025-03-27 15:26:34 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/blue_gold_dust_from_mechanical_grinding": {
+    "criteria": {
+      "TagKey[minecraft:item / enhanced_playthrough:blue_gold_manufacturable]": "2025-03-27 15:26:34 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/blue_gold_nugget__from_smelting": {
+    "criteria": {
+      "TagKey[minecraft:item / enhanced_playthrough:blue_gold_manufacturable]": "2025-03-27 15:26:34 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/yellow_dye_from_mechanical_grinding_sunflower": {
+    "criteria": {
+      "has_sunflower": "2025-03-27 15:27:17 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/light_gray_dye_from_mechanical_grinding_azure_bluet": {
+    "criteria": {
+      "has_azure_bluet": "2025-03-27 15:27:20 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/red_dye_from_primal_grinding_poppy": {
+    "criteria": {
+      "has_poppy": "2025-03-27 15:27:20 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/light_gray_dye_from_primal_grinding_azure_bluet": {
+    "criteria": {
+      "has_azure_bluet": "2025-03-27 15:27:20 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/red_dye_from_mechanical_grinding_poppy": {
+    "criteria": {
+      "has_poppy": "2025-03-27 15:27:20 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/wheat_flour_from_primal_grinding_wheat": {
+    "criteria": {
+      "has_wheat": "2025-03-27 16:51:02 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/wheat_flour_from_mechanical_grinding_wheat": {
+    "criteria": {
+      "has_wheat": "2025-03-27 16:51:02 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/food/cooked_eggplant__from_smelting_eggplant": {
+    "criteria": {
+      "has_eggplant": "2025-03-27 16:58:49 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/food/cooked_eggplant__from_smoking_eggplant": {
+    "criteria": {
+      "has_eggplant": "2025-03-27 16:58:49 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/food/cooked_eggplant__from_campfire_eggplant": {
+    "criteria": {
+      "has_eggplant": "2025-03-27 16:58:49 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/food/cooked_zapallo__from_campfire_zapallo": {
+    "criteria": {
+      "has_zapallo": "2025-03-27 16:58:54 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/food/cooked_zapallo__from_smelting_zapallo": {
+    "criteria": {
+      "has_zapallo": "2025-03-27 16:58:54 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/food/cooked_zapallo__from_smoking_zapallo": {
+    "criteria": {
+      "has_zapallo": "2025-03-27 16:58:54 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/white_dye_from_mechanical_grinding_bone_meal": {
+    "criteria": {
+      "has_bone_meal": "2025-03-28 10:47:33 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/white_dye_from_primal_grinding_bone_meal": {
+    "criteria": {
+      "has_bone_meal": "2025-03-28 10:47:33 -0300"
+    },
+    "done": true
+  },
   "DataVersion": 3465
 }
