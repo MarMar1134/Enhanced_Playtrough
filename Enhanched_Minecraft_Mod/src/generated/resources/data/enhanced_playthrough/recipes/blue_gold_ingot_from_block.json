@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "blue_gold_ingot",
+  "ingredients": [
+    {
+      "item": "enhanced_playthrough:blue_gold_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "enhanced_playthrough:blue_gold_ingot"
+  }
+}

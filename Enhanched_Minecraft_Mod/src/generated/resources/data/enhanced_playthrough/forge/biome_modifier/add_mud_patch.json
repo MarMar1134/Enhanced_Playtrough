@@ -1,0 +1,9 @@
+{
+  "type": "forge:add_features",
+  "biomes": [
+    "minecraft:river",
+    "minecraft:swamp"
+  ],
+  "features": "enhanced_playthrough:mud_patch_placed",
+  "step": "lakes"
+}

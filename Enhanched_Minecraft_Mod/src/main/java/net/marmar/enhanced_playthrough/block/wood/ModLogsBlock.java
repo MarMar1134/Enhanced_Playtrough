@@ -40,7 +40,6 @@ public class ModLogsBlock extends RotatedPillarBlock {
 
     @Override
     public @Nullable BlockState getToolModifiedState(BlockState state, UseOnContext context, ToolAction toolAction, boolean simulate) {
-
         if (context.getItemInHand().getItem() instanceof AxeItem) {
             if (state.is(ModBlocks.WALNUT_LOG.get())) {
                 return ModBlocks.STRIPPED_WALNUT_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
@@ -67,7 +66,6 @@ public class ModLogsBlock extends RotatedPillarBlock {
                 return ModBlocks.STRIPPED_LEMON_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
             }
         }
-
         return super.getToolModifiedState(state, context, toolAction, simulate);
     }
 }

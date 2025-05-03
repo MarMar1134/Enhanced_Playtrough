@@ -1,13 +1,14 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "building",
+  "group": "cobbeled_limestone_slab",
   "key": {
-    "A": {
+    "#": {
       "item": "enhanced_playthrough:cobbeled_limestone"
     }
   },
   "pattern": [
-    "AAA"
+    "###"
   ],
   "result": {
     "count": 6,

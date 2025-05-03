@@ -1,16 +1,5 @@
 {
   "values": [
-    "enhanced_playthrough:limestone",
-    "enhanced_playthrough:limestone_slab",
-    "enhanced_playthrough:limestone_stair",
-    "enhanced_playthrough:cobbeled_limestone",
-    "enhanced_playthrough:cobbeled_limestone_slab",
-    "enhanced_playthrough:cobbeled_limestone_stair",
-    "enhanced_playthrough:cobbeled_limestone_wall",
-    "enhanced_playthrough:polished_limestone",
-    "enhanced_playthrough:polished_limestone_slab",
-    "enhanced_playthrough:polished_limestone_stair",
-    "enhanced_playthrough:polished_limestone_wall",
     "enhanced_playthrough:limestone_brick",
     "enhanced_playthrough:limestone_brick_slab",
     "enhanced_playthrough:limestone_brick_stair",
@@ -18,7 +7,7 @@
     "enhanced_playthrough:nether_copper_ore",
     "enhanced_playthrough:tin_block",
     "enhanced_playthrough:zinc_block",
-    "enhanced_playthrough:zinc_ore",
-    "enhanced_playthrough:nether_zinc_ore"
+    "enhanced_playthrough:tin_ore",
+    "enhanced_playthrough:zinc_ore"
   ]
 }

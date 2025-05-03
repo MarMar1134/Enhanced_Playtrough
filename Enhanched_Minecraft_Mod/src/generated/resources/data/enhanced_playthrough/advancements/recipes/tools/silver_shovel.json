@@ -13,6 +13,18 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
+    "has_silver_shovel": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:silver_shovel"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "has_the_recipe": {
       "conditions": {
         "recipe": "enhanced_playthrough:silver_shovel"
@@ -23,6 +35,7 @@
   "requirements": [
     [
       "has_silver_ingot",
+      "has_silver_shovel",
       "has_the_recipe"
     ]
   ],

@@ -1,13 +1,14 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "building",
+  "group": "polished_stone_slab",
   "key": {
-    "A": {
+    "#": {
       "item": "enhanced_playthrough:polished_stone"
     }
   },
   "pattern": [
-    "AAA"
+    "###"
   ],
   "result": {
     "count": 6,

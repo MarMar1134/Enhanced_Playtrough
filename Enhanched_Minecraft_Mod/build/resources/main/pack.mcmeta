@@ -1,7 +1,7 @@
 {
   "pack": {
     "description": {
-      "text": "enhanced_playthrough resources"
+      "text": "Enhanced Playthrough Mod v0.19.0-beta by Mar Mar."
     },
     "pack_format": 15
   },
@@ -26,8 +26,34 @@
       {
         "namespace": "minecraft",
         "path": "recipes/blast_furnace.json"
-      }],
+      },
+
+      {
+        "namespace": "minecraft",
+        "path": "loot_tables/blocks/oak_leaves.json"
+      }
+    ],
     "item": [
+      {
+        "namespace": "minecraft",
+        "path": "recipes/stone_axe.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "recipes/stone_pickaxe.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "recipes/stone_shovel.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "recipes/stone_sword.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "recipes/stone_hoe.json"
+      },
       {
         "namespace": "minecraft",
         "path": "recipes/cookie.json"
@@ -67,27 +93,9 @@
       {
         "namespace": "minecraft",
         "path": "recipes/cherry_boat.json"
-      },
-      {
-        "namespace": "minecraft",
-        "path": "loot_tables/blocks/emerald_ore.json"
-      },
-      {
-        "namespace": "minecraft",
-        "path": "loot_tables/blocks/deepslate_emerald_ore.json"
-      },
-      {
-        "namespace": "minecraft",
-        "path": "loot_tables/blocks/deepslate_diamond_ore.json"
-      },
-      {
-        "namespace": "minecraft",
-        "path": "loot_tables/blocks/diamond_ore.json"
-      },
-      {
-        "namespace": "minecraft",
-        "path": "loot_tables/blocks/oak_leaves.json"
-      },
+      }
+    ],
+    "entity": [
       {
         "namespace": "minecraft",
         "path": "loot_tables/entities/evoker.json"

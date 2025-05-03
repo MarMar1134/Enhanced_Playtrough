@@ -21,7 +21,7 @@
       "translate": "advancement.enhanced_playthrough.desc.gems.polish_emerald"
     },
     "frame": "task",
-    "hidden": true,
+    "hidden": false,
     "icon": {
       "item": "minecraft:emerald"
     },

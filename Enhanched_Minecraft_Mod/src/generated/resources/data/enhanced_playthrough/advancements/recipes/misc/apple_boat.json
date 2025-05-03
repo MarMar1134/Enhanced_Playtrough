@@ -13,6 +13,18 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
+    "has_apple_planks": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:apple_planks"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "has_the_recipe": {
       "conditions": {
         "recipe": "enhanced_playthrough:apple_boat"
@@ -30,6 +42,7 @@
     [
       "in_water",
       "has_apple_boat",
+      "has_apple_planks",
       "has_the_recipe"
     ]
   ],

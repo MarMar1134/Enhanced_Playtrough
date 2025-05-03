@@ -2,14 +2,14 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "T": {
+    "N": {
       "item": "enhanced_playthrough:brass_ingot"
     }
   },
   "pattern": [
-    "TTT",
-    "TTT",
-    "TTT"
+    "NNN",
+    "NNN",
+    "NNN"
   ],
   "result": {
     "item": "enhanced_playthrough:brass_block"

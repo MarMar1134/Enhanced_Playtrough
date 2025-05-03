@@ -6,7 +6,7 @@
         "items": [
           {
             "items": [
-              "enhanced_playthrough:rubi"
+              "enhanced_playthrough:ruby"
             ]
           }
         ]
@@ -18,16 +18,16 @@
     "announce_to_chat": true,
     "background": "minecraft:textures/block/emerald_block.png",
     "description": {
-      "translate": "advancement.enhanced_playthrough.desc.gems.polish_rubi"
+      "translate": "advancement.enhanced_playthrough.desc.gems.polish_ruby"
     },
     "frame": "task",
-    "hidden": true,
+    "hidden": false,
     "icon": {
-      "item": "enhanced_playthrough:rubi"
+      "item": "enhanced_playthrough:ruby"
     },
     "show_toast": true,
     "title": {
-      "translate": "advancement.enhanced_playthrough.title.gems.polish_rubi"
+      "translate": "advancement.enhanced_playthrough.title.gems.polish_ruby"
     }
   },
   "requirements": [

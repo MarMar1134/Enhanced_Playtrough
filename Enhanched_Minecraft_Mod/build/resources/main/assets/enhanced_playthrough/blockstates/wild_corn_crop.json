@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "enhanced_playthrough:block/wild_corn_crop_lower"
+    },
+    "half=upper": {
+      "model": "enhanced_playthrough:block/wild_corn_crop_upper"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "polished_diorite_wall",
+  "key": {
+    "#": {
+      "item": "minecraft:polished_diorite"
+    }
+  },
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "item": "enhanced_playthrough:polished_diorite_wall"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_netherrack_rubble": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:netherrack_rubble"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:netherrack"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_netherrack_rubble",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:netherrack"
+    ]
+  },
+  "sends_telemetry_event": false
+}

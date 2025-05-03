@@ -35,7 +35,6 @@ import org.jetbrains.annotations.Nullable;
 import static net.minecraft.world.level.block.state.properties.BlockStateProperties.FACING;
 
 public abstract class AbstractBasicFurnaceBlock extends BaseEntityBlock implements EntityBlock {
-    public static final VoxelShape SHAPE = Block.box(0,0,0, 16,16, 16);
     public static final BooleanProperty BURNING;
 
     protected AbstractBasicFurnaceBlock(Properties pProperties) {
@@ -48,10 +47,7 @@ public abstract class AbstractBasicFurnaceBlock extends BaseEntityBlock implemen
         super.createBlockStateDefinition(pBuilder);
         pBuilder.add(FACING, BURNING);
     }
-    @Override
-    public @NotNull VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
-        return SHAPE;
-    }
+
     public void animateTick(BlockState pState, Level pLevel, BlockPos pPos, RandomSource pRandom) {
         if (pState.getValue(BURNING)) {
             double X_position = (double)pPos.getX() + 0.5;

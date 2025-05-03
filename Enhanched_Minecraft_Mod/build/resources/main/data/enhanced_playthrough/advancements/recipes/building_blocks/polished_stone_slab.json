@@ -13,6 +13,18 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
+    "has_polished_stone_slab": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:polished_stone_slab"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "has_the_recipe": {
       "conditions": {
         "recipe": "enhanced_playthrough:polished_stone_slab"
@@ -23,6 +35,7 @@
   "requirements": [
     [
       "has_polished_stone",
+      "has_polished_stone_slab",
       "has_the_recipe"
     ]
   ],

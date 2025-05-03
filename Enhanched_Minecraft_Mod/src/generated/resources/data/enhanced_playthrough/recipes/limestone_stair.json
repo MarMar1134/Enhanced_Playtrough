@@ -1,15 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "building",
+  "group": "limestone_stair",
   "key": {
-    "A": {
+    "#": {
       "item": "enhanced_playthrough:limestone"
     }
   },
   "pattern": [
-    "A  ",
-    "AA ",
-    "AAA"
+    "#  ",
+    "## ",
+    "###"
   ],
   "result": {
     "count": 4,

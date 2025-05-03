@@ -1,0 +1,26 @@
+{
+  "type": "enhanced_playthrough:water_reeds_feature",
+  "config": {
+    "feature": {
+      "feature": {
+        "type": "minecraft:simple_block",
+        "config": {
+          "to_place": {
+            "type": "minecraft:simple_state_provider",
+            "state": {
+              "Name": "enhanced_playthrough:water_reeds",
+              "Properties": {
+                "half": "lower",
+                "waterlogged": "true"
+              }
+            }
+          }
+        }
+      },
+      "placement": []
+    },
+    "tries": 120,
+    "xz_spread": 3,
+    "y_spread": 0
+  }
+}

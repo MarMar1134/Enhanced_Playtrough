@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "enhanced_playthrough:block/tall_reeds_lower"
+    },
+    "half=upper": {
+      "model": "enhanced_playthrough:block/tall_reeds_upper"
+    }
+  }
+}

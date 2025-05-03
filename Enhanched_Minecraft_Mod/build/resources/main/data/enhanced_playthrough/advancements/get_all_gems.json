@@ -16,7 +16,7 @@
           },
           {
             "items": [
-              "enhanced_playthrough:rubi"
+              "enhanced_playthrough:ruby"
             ]
           },
           {
@@ -41,7 +41,7 @@
       "translate": "advancement.enhanced_playthrough.desc.gems.get_all_gems"
     },
     "frame": "challenge",
-    "hidden": true,
+    "hidden": false,
     "icon": {
       "item": "enhanced_playthrough:netherite_polisher",
       "nbt": "{Damage:0}"

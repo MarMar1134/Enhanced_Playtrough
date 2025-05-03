@@ -6,7 +6,7 @@
       "item": "enhanced_playthrough:walnut_planks"
     },
     "Z": {
-      "item": "minecraft:stick"
+      "tag": "forge:rods/wooden"
     }
   },
   "pattern": [

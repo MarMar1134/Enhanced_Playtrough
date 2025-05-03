@@ -13,6 +13,18 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
+    "has_oak_planks": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:oak_planks"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "has_the_recipe": {
       "conditions": {
         "recipe": "minecraft:oak_boat"
@@ -30,6 +42,7 @@
     [
       "in_water",
       "has_oak_boat",
+      "has_oak_planks",
       "has_the_recipe"
     ]
   ],

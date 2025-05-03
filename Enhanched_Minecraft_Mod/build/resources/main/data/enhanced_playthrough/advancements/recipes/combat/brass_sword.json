@@ -13,6 +13,18 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
+    "has_brass_sword": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:brass_sword"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "has_the_recipe": {
       "conditions": {
         "recipe": "enhanced_playthrough:brass_sword"
@@ -23,6 +35,7 @@
   "requirements": [
     [
       "has_brass_ingot",
+      "has_brass_sword",
       "has_the_recipe"
     ]
   ],

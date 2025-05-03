@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cross",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "cross": "enhanced_playthrough:block/wild_corn_crop_lower"
+  }
+}

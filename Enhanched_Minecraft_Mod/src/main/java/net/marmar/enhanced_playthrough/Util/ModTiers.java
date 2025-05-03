@@ -2,7 +2,7 @@ package net.marmar.enhanced_playthrough.Util;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.item.ModItems;
-import net.marmar.enhanced_playthrough.tag.ModTags;
+import net.marmar.enhanced_playthrough.data.tag.ModTags;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.Tiers;
@@ -44,7 +44,7 @@ public class ModTiers {
             List.of(Tiers.DIAMOND)
     );
     public static final Tier STEEL = TierSortingRegistry.registerTier(
-            new ForgeTier(2, 908, 7F, 3.5F, 16,
+            new ForgeTier(2, 908, 7F, 3F, 16,
                     ModTags.Blocks.NEEDS_STEEL_TOOL,() -> Ingredient.of(ModItems.STEEL_INGOT.get())),
             new ResourceLocation(EnhancedPlaythrough.MOD_ID, "steel_ingot"), List.of(Tiers.IRON),
                     List.of(Tiers.DIAMOND)
@@ -56,7 +56,7 @@ public class ModTiers {
             List.of(Tiers.DIAMOND)
     );
     public static final Tier BLUE_GOLD = TierSortingRegistry.registerTier(
-            new ForgeTier(3, 1200, 13f, 4f, 24,
+            new ForgeTier(3, 1200, 13f, 3f, 24,
                     ModTags.Blocks.NEEDS_BLUE_GOLD_TOOL, () -> Ingredient.of(ModItems.BLUE_GOLD_INGOT.get())),
             new ResourceLocation(EnhancedPlaythrough.MOD_ID, "blue_gold_ingot"), List.of(Tiers.DIAMOND),
             List.of(Tiers.NETHERITE)

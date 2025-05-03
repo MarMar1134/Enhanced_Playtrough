@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "limestone_wall",
+  "key": {
+    "#": {
+      "item": "enhanced_playthrough:limestone"
+    }
+  },
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "item": "enhanced_playthrough:limestone_wall"
+  },
+  "show_notification": true
+}

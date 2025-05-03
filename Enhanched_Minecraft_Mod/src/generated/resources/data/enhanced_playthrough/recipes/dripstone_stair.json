@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "dripstone_stair",
+  "key": {
+    "#": {
+      "item": "minecraft:dripstone_block"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "item": "enhanced_playthrough:dripstone_stair"
+  },
+  "show_notification": true
+}

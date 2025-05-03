@@ -1,0 +1,11 @@
+{
+  "type": "enhanced_playthrough:primal_grinding",
+  "category": "mechanical_grind",
+  "group": "vegetable_fiber",
+  "ingredient": {
+    "item": "enhanced_playthrough:small_reeds"
+  },
+  "output": {
+    "item": "enhanced_playthrough:vegetable_fibber"
+  }
+}

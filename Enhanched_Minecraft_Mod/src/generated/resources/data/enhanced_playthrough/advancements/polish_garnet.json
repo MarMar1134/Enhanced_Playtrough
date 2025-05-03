@@ -21,7 +21,7 @@
       "translate": "advancement.enhanced_playthrough.desc.gems.polish_garnet"
     },
     "frame": "task",
-    "hidden": true,
+    "hidden": false,
     "icon": {
       "item": "enhanced_playthrough:garnet"
     },

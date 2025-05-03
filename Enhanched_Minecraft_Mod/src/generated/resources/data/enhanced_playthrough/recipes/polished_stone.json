@@ -1,14 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "building",
+  "group": "polished_stone",
   "key": {
-    "A": {
+    "#": {
       "item": "minecraft:stone"
     }
   },
   "pattern": [
-    "AA",
-    "AA"
+    "##",
+    "##"
   ],
   "result": {
     "count": 4,

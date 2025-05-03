@@ -7,7 +7,7 @@ import net.marmar.enhanced_playthrough.entity.boat.ModBoatEntity;
 import net.marmar.enhanced_playthrough.item.armor.ModArmorItem;
 import net.marmar.enhanced_playthrough.item.armor.ModArmorMaterial;
 import net.marmar.enhanced_playthrough.item.custom.ModBoatItem;
-import net.marmar.enhanced_playthrough.item.templates.BronziumSmithingUpgradeTemplate;
+import net.marmar.enhanced_playthrough.item.custom.ModSmithingTemplateItem;
 import net.marmar.enhanced_playthrough.item.custom.MateItem;
 import net.marmar.enhanced_playthrough.item.custom.PolisherItem;
 import net.minecraft.ChatFormatting;
@@ -37,8 +37,8 @@ public class ModItems {
                 "raw_zinc",() -> new Item(new Item.Properties()));
         public static final RegistryObject<Item> RAW_SILVER = ITEMS.register(
                 "raw_silver", () -> new Item(new Item.Properties()));
-        public static final RegistryObject<Item> RAW_RUBI = ITEMS.register(
-                "raw_rubi", () -> new Item(new Item.Properties()));
+        public static final RegistryObject<Item> RAW_RUBY = ITEMS.register(
+                "raw_ruby", () -> new Item(new Item.Properties()));
         public static final RegistryObject<Item> RAW_SAPPHIRE = ITEMS.register(
                 "raw_sapphire", () -> new Item(new Item.Properties()));
         public static final RegistryObject<Item> RAW_GARNET = ITEMS.register(
@@ -103,7 +103,7 @@ public class ModItems {
                 "blue_gold_nugget", () -> new Item(new Item.Properties()));
 
         public static final RegistryObject<Item> RUBY = ITEMS.register(
-                "rubi", () -> new Item(new Item.Properties()));
+                "ruby", () -> new Item(new Item.Properties()));
         public static final RegistryObject<Item> SAPPHIRE = ITEMS.register(
                 "sapphire", () -> new Item(new Item.Properties()));
         public static final RegistryObject<Item> GARNET = ITEMS.register(
@@ -139,11 +139,29 @@ public class ModItems {
 
     //Templates
     public static final RegistryObject<Item> BRONZIUM_SMITHING_UPGRADE_TEMPLATE = ITEMS.register(
-            "bronzium_upgrade_smithing_template", BronziumSmithingUpgradeTemplate::new);
+            "bronzium_upgrade_smithing_template", () -> ModSmithingTemplateItem.CreateSmithingUpgradeTemplate("bronzium"));
+
+    //Cobble
+    public static final RegistryObject<Item> COBBLE = ITEMS.register(
+            "cobble", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> LIMESTONE_COBBLE = ITEMS.register(
+            "limestone_cobble", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> DEEPSLATE_COBBLE = ITEMS.register(
+            "deepslate_cobble", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> NETHERRACK_RUBBLE = ITEMS.register(
+            "netherrack_rubble", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BLACKSTONE_COBBLE = ITEMS.register(
+            "black_cobble", () -> new Item(new Item.Properties()));
 
     //Other materials
     public static final RegistryObject<Item> MUD_BRICK = ITEMS.register(
             "mud_brick", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> VEGETABLE_FIBBER = ITEMS.register(
+            "vegetable_fibber", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> REED_HEAD = ITEMS.register(
+            "reeds_head", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> WATER_REED_HEAD = ITEMS.register(
+            "water_reeds_head", () -> new Item(new Item.Properties()));
 
     //Signs
         //Walnut
@@ -286,11 +304,11 @@ public class ModItems {
 
         //Brass
         public static final RegistryObject<Item> BRASS_SWORD = ITEMS.register(
-                "brass_sword",() -> new SwordItem(ModTiers.BRASS, 1, -2.4F, new Item.Properties()));
+                "brass_sword",() -> new SwordItem(ModTiers.BRASS, 3, -2.4F, new Item.Properties()));
         public static final RegistryObject<Item> BRASS_PICKAXE = ITEMS.register(
                 "brass_pickaxe",() -> new PickaxeItem(ModTiers.BRASS, 1, -2.8F,  new Item.Properties()));
         public static final RegistryObject<Item> BRASS_AXE = ITEMS.register(
-                "brass_axe",() -> new AxeItem(ModTiers.BRASS, 4, -2F,  new Item.Properties()));
+                "brass_axe",() -> new AxeItem(ModTiers.BRASS, 6, -2F,  new Item.Properties()));
         public static final RegistryObject<Item> BRASS_SHOVEL = ITEMS.register(
                 "brass_shovel",() -> new ShovelItem(ModTiers.BRASS, 1, -2F,  new Item.Properties()));
         public static final RegistryObject<Item> BRASS_HOE = ITEMS.register(
@@ -615,6 +633,12 @@ public class ModItems {
         public static final RegistryObject<Item> CORN_SEEDS = ITEMS.register(
                 "corn_seeds", () -> new ItemNameBlockItem(ModBlocks.CORN_CROP.get(), new Item.Properties()));
 
+        //Wild food
+        public static final RegistryObject<Item> WILD_TOMATO = ITEMS.register(
+                "wild_tomato",() -> new Item(new Item.Properties().food(ModFoodPropieties.WILD_TOMATO)));
+        public static final RegistryObject<Item> WILD_CORN = ITEMS.register(
+                "wild_corn",() -> new Item(new Item.Properties().food(ModFoodPropieties.WILD_CORN)));
+
         //Fruit
         public static final RegistryObject<Item> ORANGE = ITEMS.register(
                 "orange",() -> new Item(new Item.Properties().food(ModFoodPropieties.ORANGE)));
@@ -628,8 +652,8 @@ public class ModItems {
                 "tomato",() -> new Item(new Item.Properties().food(ModFoodPropieties.TOMATO)));
         public static final RegistryObject<Item> WALNUT = ITEMS.register(
                 "walnut",() -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> PEELED_WALNUT = ITEMS.register(
-            "peeled_walnut",() -> new Item(new Item.Properties().food(ModFoodPropieties.PEELED_WALNUT)));
+        public static final RegistryObject<Item> PEELED_WALNUT = ITEMS.register(
+                "peeled_walnut",() -> new Item(new Item.Properties().food(ModFoodPropieties.PEELED_WALNUT)));
 
         //Vegetables
         public static final RegistryObject<Item> RICE_GRAINS = ITEMS.register(
@@ -660,7 +684,7 @@ public class ModItems {
                 "mate",() -> new MateItem(new Item.Properties().stacksTo(1).food(ModFoodPropieties.MATE)));
 
     //Final register
-    public static void Register(IEventBus eventBus){
+    public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
     }
 }

@@ -1,49 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_orange_log": {
+    "has_log_or_wood": {
       "conditions": {
         "items": [
           {
-            "items": [
-              "enhanced_playthrough:orange_log"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_orange_wood": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "enhanced_playthrough:orange_wood"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_stripped_orange_log": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "enhanced_playthrough:stripped_orange_log"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_stripped_orange_wood": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "enhanced_playthrough:stripped_orange_wood"
-            ]
+            "tag": "enhanced_playthrough:orange_logs"
           }
         ]
       },
@@ -58,10 +20,7 @@
   },
   "requirements": [
     [
-      "has_orange_log",
-      "has_orange_wood",
-      "has_stripped_orange_log",
-      "has_stripped_orange_wood",
+      "has_log_or_wood",
       "has_the_recipe"
     ]
   ],

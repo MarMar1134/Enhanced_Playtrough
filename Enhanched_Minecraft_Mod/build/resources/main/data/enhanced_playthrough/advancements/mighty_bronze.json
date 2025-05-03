@@ -1,5 +1,5 @@
 {
-  "parent": "enhanced_playthrough:thats_new",
+  "parent": "enhanced_playthrough:abrassive_heat",
   "criteria": {
     "has_item": {
       "conditions": {
@@ -21,7 +21,7 @@
       "translate": "advancement.enhanced_playthrough.desc.survival.mighty_bronze"
     },
     "frame": "task",
-    "hidden": true,
+    "hidden": false,
     "icon": {
       "item": "enhanced_playthrough:bronze_pickaxe",
       "nbt": "{Damage:0}"

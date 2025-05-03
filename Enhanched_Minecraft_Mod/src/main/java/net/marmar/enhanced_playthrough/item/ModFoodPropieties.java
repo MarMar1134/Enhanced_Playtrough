@@ -34,6 +34,15 @@ public class ModFoodPropieties {
             .nutrition(2).saturationMod(0.1f).build();
     public static final FoodProperties PEELED_WALNUT = new FoodProperties.Builder()
             .nutrition(4).saturationMod(0.4f).build();
+
+    //Wild food
+    public static final FoodProperties WILD_TOMATO = new FoodProperties.Builder()
+            .nutrition(4).saturationMod(0.3f).effect(() -> new MobEffectInstance(MobEffects.HUNGER, 200), 1f)
+            .build();
+    public static final FoodProperties WILD_CORN = new FoodProperties.Builder()
+            .nutrition(3).saturationMod(0.2f).effect(() -> new MobEffectInstance(MobEffects.HUNGER, 200), 1f)
+            .build();
+
     //Vegetables
     public static final FoodProperties RICE = new FoodProperties.Builder()
             .nutrition(1).saturationMod(0.1f).effect(()-> new MobEffectInstance(MobEffects.CONFUSION, 100), 0.2f)

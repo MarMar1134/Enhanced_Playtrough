@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#minecraft:is_overworld",
+  "features": "enhanced_playthrough:water_reeds_overworld_placed",
+  "step": "vegetal_decoration"
+}

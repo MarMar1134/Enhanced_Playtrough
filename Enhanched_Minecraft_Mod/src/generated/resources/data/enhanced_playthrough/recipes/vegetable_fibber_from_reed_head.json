@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "vegetable_fiber",
+  "ingredients": [
+    {
+      "item": "enhanced_playthrough:reeds_head"
+    },
+    {
+      "item": "enhanced_playthrough:reeds_head"
+    }
+  ],
+  "result": {
+    "item": "enhanced_playthrough:vegetable_fibber"
+  }
+}

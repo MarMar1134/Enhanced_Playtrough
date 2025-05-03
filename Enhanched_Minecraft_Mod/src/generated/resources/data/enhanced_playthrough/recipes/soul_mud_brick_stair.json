@@ -1,15 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "building",
+  "group": "soul_mud_brick_stair",
   "key": {
-    "A": {
+    "#": {
       "item": "enhanced_playthrough:soul_mud_brick"
     }
   },
   "pattern": [
-    "A  ",
-    "AA ",
-    "AAA"
+    "#  ",
+    "## ",
+    "###"
   ],
   "result": {
     "count": 4,

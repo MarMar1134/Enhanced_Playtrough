@@ -1,0 +1,42 @@
+package net.marmar.enhanced_playthrough.block.custom;
+
+import net.marmar.enhanced_playthrough.Util.ModDamageSources;
+import net.marmar.enhanced_playthrough.Util.ModDamageTypes;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Holder;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.DoublePlantBlock;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.material.Fluid;
+import net.minecraft.world.phys.Vec3;
+import net.marmar.enhanced_playthrough.Util.ModDamageSources;
+
+public class TallReedsBlock extends DoublePlantBlock {
+    public TallReedsBlock(Properties pProperties) {
+        super(pProperties);
+    }
+
+    @Override
+    public void entityInside(BlockState pState, Level pLevel, BlockPos pPos, Entity pEntity) {
+        if (pEntity instanceof LivingEntity){
+            pEntity.makeStuckInBlock(pState, new Vec3(0.8F, 0.75F, 0.8F));
+
+            if (!pLevel.isClientSide && (pEntity.xOld != pEntity.getX() || pEntity.zOld != pEntity.getZ())) {
+                double d0 = Math.abs(pEntity.getX() - pEntity.xOld);
+                double d1 = Math.abs(pEntity.getZ() - pEntity.zOld);
+                if (d0 >= (double)0.003F || d1 >= (double)0.003F) {
+
+                    pEntity.hurt(new ModDamageSources(pLevel.registryAccess()).tallReed(), 1.5F);
+                }
+            }
+        }
+    }
+
+    @Override
+    public boolean canBeReplaced(BlockState pState, Fluid pFluid) {
+        return false;
+    }
+}

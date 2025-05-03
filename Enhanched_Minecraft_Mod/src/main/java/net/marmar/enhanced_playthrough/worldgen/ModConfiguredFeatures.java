@@ -2,25 +2,32 @@ package net.marmar.enhanced_playthrough.worldgen;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.block.ModBlocks;
+import net.marmar.enhanced_playthrough.worldgen.feature.ModFeatures;
+import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.data.worldgen.features.FeatureUtils;
+import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.valueproviders.ConstantInt;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
-import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
-import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
-import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.*;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
+import net.minecraft.world.level.levelgen.feature.stateproviders.RuleBasedBlockStateProvider;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
+import net.minecraft.world.level.levelgen.placement.BlockPredicateFilter;
 import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
+import net.minecraft.world.level.material.Fluids;
 
 import java.util.List;
 
@@ -35,8 +42,24 @@ public class ModConfiguredFeatures {
 
     //Nature
     public static final ResourceKey<ConfiguredFeature<?, ?>> LIMESTONE_KEY = registerKey("limestone");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> GRAVEL_MUD_KEY = registerKey("gravel_mud");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> SAND_MUD_KEY = registerKey("sand_mud");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> MUD_PATCH_KEY = registerKey("mud_patch");
+
+    //Wild crops
+    public static final ResourceKey<ConfiguredFeature<?, ?>> WILD_WHEAT_KEY = registerKey("wild_wheat");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> WILD_TOMATO_KEY = registerKey("wild_tomato");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> WILD_CORN_KEY = registerKey("wild_corn");
+
+    //Plants
+    public static final ResourceKey<ConfiguredFeature<?, ?>> TALL_REEDS_KEY = registerKey("tall_reeds");
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> REEDS_KEY = registerKey("reeds");
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SMALL_REEDS_OVERWORLD_KEY = registerKey("small_reeds_overworld");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SMALL_REEDS_PLATEAU_KEY = registerKey("small_reeds_plateau");
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> WATER_REEDS_OVERWORLD_KEY = registerKey("water_reeds_overworld");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> WATER_REEDS_SWAMP_KEY = registerKey("water_reeds_swamp");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> WATER_REEDS_LUSH_CAVES_KEY = registerKey("water_reeds_lush_caves");
 
     //Ores
     public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_COPPER_ORE_KEY = registerKey("nether_copper_ore");
@@ -56,29 +79,30 @@ public class ModConfiguredFeatures {
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> COBALT_KEY = registerKey("cobalt_ore");
 
-    public static final ResourceKey<ConfiguredFeature<?, ?>> RUBI_ORE_KEY = registerKey("rubi_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> RUBY_ORE_KEY = registerKey("ruby_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SAPPHIRE_ORE_KEY = registerKey("sapphire_ore");
 
-    public static final ResourceKey<ConfiguredFeature<?, ?>> EXTRA_RUBI_ORE_KEY = registerKey("extra_rubi_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> EXTRA_RUBY_ORE_KEY = registerKey("extra_ruby_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> EXTRA_SAPPHIRE_ORE_KEY = registerKey("extra_sapphire_ore");
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_GARNET_ORE_KEY = registerKey("nether_garnet_ore");
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
-        RuleTest gravelReplaceable = new BlockMatchTest(Blocks.GRAVEL);
-        RuleTest sandReplaceable = new BlockMatchTest(Blocks.SAND);
         RuleTest stoneReplaceable = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
         RuleTest deepslateReplaceable = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
         RuleTest netherrackReplaceable = new BlockMatchTest(Blocks.NETHERRACK);
 
         RuleTest ironReplaceable = new TagMatchTest(BlockTags.IRON_ORES);
 
-        //Mud
-        List<OreConfiguration.TargetBlockState> gravelMud = List.of(OreConfiguration.target(gravelReplaceable, Blocks.MUD.defaultBlockState()));
-        List<OreConfiguration.TargetBlockState> sandMud = List.of(OreConfiguration.target(sandReplaceable, Blocks.MUD.defaultBlockState()));
+        BlockPredicate isCloseToWater = BlockPredicate.anyOf(
+                BlockPredicate.matchesFluids(new BlockPos(1, -1, 0), Fluids.WATER, Fluids.FLOWING_WATER),
+                BlockPredicate.matchesFluids(new BlockPos(-1, -1, 0), Fluids.WATER, Fluids.FLOWING_WATER),
+                BlockPredicate.matchesFluids(new BlockPos(0, -1, 1), Fluids.WATER, Fluids.FLOWING_WATER),
+                BlockPredicate.matchesFluids(new BlockPos(0, -1, -1), Fluids.WATER, Fluids.FLOWING_WATER));
 
-        register(context, GRAVEL_MUD_KEY, Feature.ORE, new OreConfiguration(gravelMud, 48));
-        register(context, SAND_MUD_KEY, Feature.ORE, new OreConfiguration(sandMud, 32));
+        register(context, MUD_PATCH_KEY, Feature.DISK, new DiskConfiguration(
+                RuleBasedBlockStateProvider.simple(Blocks.MUD), BlockPredicate.matchesBlocks(Blocks.DIRT, Blocks.SAND, Blocks.GRAVEL),
+                UniformInt.of(1, 4), 2));
 
         //Limestone
         List<OreConfiguration.TargetBlockState> limestone = List.of(OreConfiguration.target(stoneReplaceable,
@@ -144,13 +168,13 @@ public class ModConfiguredFeatures {
         register(context, SAPPHIRE_ORE_KEY, Feature.ORE, new OreConfiguration(saphireOres, 8));
         register(context, EXTRA_SAPPHIRE_ORE_KEY, Feature.ORE, new OreConfiguration(saphireOres, 6));
 
-        //Rubi ore
+        //Ruby ore
         List<OreConfiguration.TargetBlockState> rubiOres = List.of(OreConfiguration.target(stoneReplaceable,
-                        ModBlocks.RUBI_ORE.get().defaultBlockState()),
-                OreConfiguration.target(deepslateReplaceable, ModBlocks.DEEPSLATE_RUBI_ORE.get().defaultBlockState()));
+                        ModBlocks.RUBY_ORE.get().defaultBlockState()),
+                OreConfiguration.target(deepslateReplaceable, ModBlocks.DEEPSLATE_RUBY_ORE.get().defaultBlockState()));
 
-        register(context, RUBI_ORE_KEY, Feature.ORE, new OreConfiguration(rubiOres, 6));
-        register(context, EXTRA_RUBI_ORE_KEY, Feature.ORE, new OreConfiguration(rubiOres, 4));
+        register(context, RUBY_ORE_KEY, Feature.ORE, new OreConfiguration(rubiOres, 6));
+        register(context, EXTRA_RUBY_ORE_KEY, Feature.ORE, new OreConfiguration(rubiOres, 4));
 
         //Nether garnet ore
         List<OreConfiguration.TargetBlockState> garnetOres = List.of(OreConfiguration.target(netherrackReplaceable,
@@ -218,6 +242,46 @@ public class ModConfiguredFeatures {
                     new BlobFoliagePlacer(ConstantInt.of(2),ConstantInt.of(0),2),
 
                     new TwoLayersFeatureSize(1, 1, 2)).build());
+
+        //Wild crops
+        register(context, WILD_WHEAT_KEY, Feature.RANDOM_PATCH,
+                FeatureUtils.simplePatchConfiguration(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.WILD_WHEAT.get()))));
+        register(context, WILD_TOMATO_KEY, Feature.RANDOM_PATCH,
+                FeatureUtils.simplePatchConfiguration(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.WILD_TOMATO.get()))));
+        register(context, WILD_CORN_KEY, Feature.RANDOM_PATCH,
+                FeatureUtils.simplePatchConfiguration(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.WILD_CORN.get()))));
+
+        //Plants
+        register(context, TALL_REEDS_KEY, Feature.RANDOM_PATCH,
+                new RandomPatchConfiguration(50, 5, 0, PlacementUtils.inlinePlaced(
+                        Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.TALL_REEDS.get()))
+                        , BlockPredicateFilter.forPredicate(BlockPredicate.allOf(BlockPredicate.ONLY_IN_AIR_PREDICATE, isCloseToWater)))));
+
+        register(context, REEDS_KEY, Feature.RANDOM_PATCH,
+                new RandomPatchConfiguration(80, 10, 0, PlacementUtils.inlinePlaced(
+                        Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.REEDS.get()))
+                        , BlockPredicateFilter.forPredicate(BlockPredicate.allOf(BlockPredicate.ONLY_IN_AIR_PREDICATE, isCloseToWater)))));
+
+        register(context, SMALL_REEDS_OVERWORLD_KEY, Feature.RANDOM_PATCH,
+                new RandomPatchConfiguration(50, 15, 0, PlacementUtils.inlinePlaced(
+                        Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.SMALL_REEDS.get()))
+                        , BlockPredicateFilter.forPredicate(BlockPredicate.allOf(BlockPredicate.ONLY_IN_AIR_PREDICATE, isCloseToWater)))));
+        register(context, SMALL_REEDS_PLATEAU_KEY, Feature.RANDOM_PATCH,
+                new RandomPatchConfiguration(40, 10, 0, PlacementUtils.inlinePlaced(
+                        Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.SMALL_REEDS.get())))));
+
+        register(context, WATER_REEDS_OVERWORLD_KEY, ModFeatures.WATER_REEDS.get(),
+                new RandomPatchConfiguration(120, 3, 0, PlacementUtils.inlinePlaced(
+                        Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.WATER_REEDS.get())))));
+        register(context, WATER_REEDS_SWAMP_KEY, ModFeatures.WATER_REEDS.get(),
+                new RandomPatchConfiguration(60, 6, 0, PlacementUtils.inlinePlaced(
+                        Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.WATER_REEDS.get())))));
+        register(context, WATER_REEDS_LUSH_CAVES_KEY, ModFeatures.WATER_REEDS.get(),
+                new RandomPatchConfiguration(40, 3, 0, PlacementUtils.inlinePlaced(
+                        Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.WATER_REEDS.get())))));
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {

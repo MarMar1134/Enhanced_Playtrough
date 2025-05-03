@@ -15,7 +15,14 @@ diamond gear with simple emeralds, _you will need more valuable gems for that pa
 ### Legal information
 Enhanced playthrough is licenced under the MIT licence and is available for everyone that want to
 make addons or forks of the mod.
-There is only one author (myself, of course), but if it´ll be more authors, the would be accredited for his work.
+
+There is only one author (myself, of course), but if it´ll be more authors, they would be accredited for his work.
+
+Some sounds have the Creative Commons 4.0 Licence, here is the link:  https://creativecommons.org/licenses/by-nc/4.0/ 
+
+Here is the list of authors:
+
+- Bench Grinder by WillemMennega -- https://freesound.org/s/763219/ -- License: Attribution NonCommercial 4.0
 ### Extra information and acknowledgments
 Special thanks to all the open-source developers that provided me the resources and knowledge to develop
 this project, but specially to:

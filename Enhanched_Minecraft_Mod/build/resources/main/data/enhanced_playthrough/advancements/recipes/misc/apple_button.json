@@ -1,13 +1,19 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_the_recipe": {
+    "has_apple_button": {
       "conditions": {
-        "recipe": "enhanced_playthrough:apple_button"
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:apple_button"
+            ]
+          }
+        ]
       },
-      "trigger": "minecraft:recipe_unlocked"
+      "trigger": "minecraft:inventory_changed"
     },
-    "has_walnut_planks": {
+    "has_apple_planks": {
       "conditions": {
         "items": [
           {
@@ -18,11 +24,18 @@
         ]
       },
       "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "enhanced_playthrough:apple_button"
+      },
+      "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_walnut_planks",
+      "has_apple_planks",
+      "has_apple_button",
       "has_the_recipe"
     ]
   ],

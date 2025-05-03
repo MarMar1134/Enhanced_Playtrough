@@ -1,0 +1,8 @@
+{
+  "grind_sound": {
+    "subtitles": "sound.enhanced_playthrough.grind",
+    "sounds": [
+      "enhanced_playthrough:grind_sound"
+    ]
+  }
+}

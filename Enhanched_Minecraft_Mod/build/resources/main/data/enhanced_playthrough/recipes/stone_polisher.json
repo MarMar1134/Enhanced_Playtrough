@@ -3,14 +3,17 @@
   "category": "equipment",
   "key": {
     "#": {
-      "item": "minecraft:stick"
+      "tag": "forge:rods/wooden"
     },
     "I": {
-      "item": "minecraft:stone"
+      "tag": "forge:cobble"
+    },
+    "S": {
+      "tag": "forge:string"
     }
   },
   "pattern": [
-    " I",
+    "SI",
     "# "
   ],
   "result": {

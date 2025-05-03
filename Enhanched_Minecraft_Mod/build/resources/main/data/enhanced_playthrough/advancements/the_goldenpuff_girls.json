@@ -1,21 +1,13 @@
 {
   "parent": "enhanced_playthrough:survival_root",
   "criteria": {
-    "has_item": {
+    "has_items": {
       "conditions": {
         "items": [
           {
             "items": [
-              "enhanced_playthrough:rose_gold_ingot"
-            ]
-          },
-          {
-            "items": [
-              "enhanced_playthrough:green_gold_ingot"
-            ]
-          },
-          {
-            "items": [
+              "enhanced_playthrough:rose_gold_ingot",
+              "enhanced_playthrough:green_gold_ingot",
               "enhanced_playthrough:blue_gold_ingot"
             ]
           }
@@ -31,7 +23,7 @@
       "translate": "advancement.enhanced_playthrough.desc.survival.the_goldenpuff_girls"
     },
     "frame": "challenge",
-    "hidden": true,
+    "hidden": false,
     "icon": {
       "item": "enhanced_playthrough:blue_golden_sword",
       "nbt": "{Damage:0}"
@@ -43,7 +35,7 @@
   },
   "requirements": [
     [
-      "has_item"
+      "has_items"
     ]
   ],
   "sends_telemetry_event": true

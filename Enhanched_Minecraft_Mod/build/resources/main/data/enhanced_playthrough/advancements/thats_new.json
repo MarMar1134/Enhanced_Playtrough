@@ -1,5 +1,5 @@
 {
-  "parent": "enhanced_playthrough:survival_root",
+  "parent": "enhanced_playthrough:stone_age",
   "criteria": {
     "has_item": {
       "conditions": {
@@ -21,7 +21,7 @@
       "translate": "advancement.enhanced_playthrough.desc.survival.thats_new"
     },
     "frame": "task",
-    "hidden": true,
+    "hidden": false,
     "icon": {
       "item": "enhanced_playthrough:bronze_ingot"
     },

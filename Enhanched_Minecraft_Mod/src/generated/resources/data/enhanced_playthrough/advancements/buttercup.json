@@ -21,7 +21,7 @@
       "translate": "advancement.enhanced_playthrough.desc.survival.buttercup"
     },
     "frame": "task",
-    "hidden": true,
+    "hidden": false,
     "icon": {
       "item": "enhanced_playthrough:green_gold_ingot"
     },

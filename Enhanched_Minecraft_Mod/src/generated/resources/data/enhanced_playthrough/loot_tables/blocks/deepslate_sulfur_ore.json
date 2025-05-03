@@ -24,10 +24,25 @@
                   }
                 }
               ],
-              "name": "enhanced_playthrough:sulfur_ore"
+              "name": "enhanced_playthrough:deepslate_sulfur_ore"
             },
             {
               "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "enchantments": [
+                      {
+                        "enchantment": "enhanced_playthrough:fine_mining",
+                        "levels": {
+                          "min": 1
+                        }
+                      }
+                    ]
+                  }
+                }
+              ],
               "functions": [
                 {
                   "add": false,
@@ -40,16 +55,212 @@
                 },
                 {
                   "enchantment": "minecraft:fortune",
-                  "formula": "minecraft:ore_drops",
-                  "function": "minecraft:apply_bonus"
-                },
-                {
-                  "function": "minecraft:explosion_decay"
+                  "formula": "minecraft:uniform_bonus_count",
+                  "function": "minecraft:apply_bonus",
+                  "parameters": {
+                    "bonusMultiplier": 1
+                  }
                 }
               ],
               "name": "enhanced_playthrough:sulfur"
             }
           ]
+        }
+      ],
+      "rolls": 1.0
+    },
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:inverted",
+          "term": {
+            "condition": "minecraft:any_of",
+            "terms": [
+              {
+                "condition": "minecraft:match_tool",
+                "predicate": {
+                  "enchantments": [
+                    {
+                      "enchantment": "enhanced_playthrough:fine_mining",
+                      "levels": {
+                        "min": 1
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "condition": "minecraft:match_tool",
+                "predicate": {
+                  "enchantments": [
+                    {
+                      "enchantment": "minecraft:silk_touch",
+                      "levels": {
+                        "min": 1
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "condition": "minecraft:match_tool",
+                "predicate": {
+                  "enchantments": [
+                    {
+                      "enchantment": "enhanced_playthrough:rough_mining",
+                      "levels": {
+                        "min": 1
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 7.0,
+                "min": 3.0
+              },
+              "function": "minecraft:set_count"
+            },
+            {
+              "enchantment": "minecraft:fortune",
+              "formula": "minecraft:uniform_bonus_count",
+              "function": "minecraft:apply_bonus",
+              "parameters": {
+                "bonusMultiplier": 1
+              }
+            }
+          ],
+          "name": "enhanced_playthrough:sulfur"
+        }
+      ],
+      "rolls": 1.0
+    },
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:inverted",
+          "term": {
+            "condition": "minecraft:any_of",
+            "terms": [
+              {
+                "condition": "minecraft:match_tool",
+                "predicate": {
+                  "enchantments": [
+                    {
+                      "enchantment": "enhanced_playthrough:fine_mining",
+                      "levels": {
+                        "min": 1
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "condition": "minecraft:match_tool",
+                "predicate": {
+                  "enchantments": [
+                    {
+                      "enchantment": "minecraft:silk_touch",
+                      "levels": {
+                        "min": 1
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "condition": "minecraft:match_tool",
+                "predicate": {
+                  "enchantments": [
+                    {
+                      "enchantment": "enhanced_playthrough:rough_mining",
+                      "levels": {
+                        "min": 1
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 3.0,
+                "min": 1.0
+              },
+              "function": "minecraft:set_count"
+            },
+            {
+              "enchantment": "minecraft:fortune",
+              "formula": "minecraft:uniform_bonus_count",
+              "function": "minecraft:apply_bonus",
+              "parameters": {
+                "bonusMultiplier": 1
+              }
+            }
+          ],
+          "name": "enhanced_playthrough:deepslate_cobble"
+        }
+      ],
+      "rolls": 1.0
+    },
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:match_tool",
+          "predicate": {
+            "enchantments": [
+              {
+                "enchantment": "enhanced_playthrough:rough_mining",
+                "levels": {
+                  "min": 1
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": 4.0,
+              "function": "minecraft:set_count"
+            },
+            {
+              "enchantment": "minecraft:fortune",
+              "formula": "minecraft:uniform_bonus_count",
+              "function": "minecraft:apply_bonus",
+              "parameters": {
+                "bonusMultiplier": 1
+              }
+            }
+          ],
+          "name": "enhanced_playthrough:deepslate_cobble"
         }
       ],
       "rolls": 1.0

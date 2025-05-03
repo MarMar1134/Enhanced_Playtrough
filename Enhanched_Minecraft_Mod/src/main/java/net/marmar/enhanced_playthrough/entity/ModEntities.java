@@ -22,7 +22,7 @@ public class ModEntities {
             ENTITY_TYPES.register("mod_chest_boat", () -> EntityType.Builder.<ModChestBoatEntity>of(ModChestBoatEntity::new, MobCategory.MISC)
                     .sized(1.375f, 0.5625f).build("mod_chest_boat"));
 
-    public static void Register(IEventBus eventBus){
+    public static void register(IEventBus eventBus){
         ENTITY_TYPES.register(eventBus);
     }
 }

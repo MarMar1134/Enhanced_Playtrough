@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "minecraft:plains",
+  "features": "enhanced_playthrough:wild_wheat_placed",
+  "step": "lakes"
+}

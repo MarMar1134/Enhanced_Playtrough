@@ -1,13 +1,14 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "building",
+  "group": "soul_mud_brick_slab",
   "key": {
-    "A": {
+    "#": {
       "item": "enhanced_playthrough:soul_mud_brick"
     }
   },
   "pattern": [
-    "AAA"
+    "###"
   ],
   "result": {
     "count": 6,

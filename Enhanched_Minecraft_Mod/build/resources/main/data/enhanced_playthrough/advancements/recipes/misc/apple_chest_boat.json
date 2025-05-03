@@ -1,12 +1,24 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_apple_boat": {
+    "has_apple_chest_boat": {
       "conditions": {
         "items": [
           {
             "items": [
-              "enhanced_playthrough:apple_boat"
+              "enhanced_playthrough:apple_chest_boat"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_apple_planks": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:apple_planks"
             ]
           }
         ]
@@ -34,8 +46,9 @@
   },
   "requirements": [
     [
-      "has_apple_boat",
+      "has_apple_chest_boat",
       "has_chest",
+      "has_apple_planks",
       "has_the_recipe"
     ]
   ],

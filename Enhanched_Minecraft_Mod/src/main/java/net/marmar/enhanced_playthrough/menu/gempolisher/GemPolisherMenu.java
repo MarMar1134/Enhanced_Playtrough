@@ -1,6 +1,6 @@
 package net.marmar.enhanced_playthrough.menu.gempolisher;
 
-import net.marmar.enhanced_playthrough.tag.ModTags;
+import net.marmar.enhanced_playthrough.data.tag.ModTags;
 import net.marmar.enhanced_playthrough.block.ModBlocks;
 import net.marmar.enhanced_playthrough.block.custom.gempolisher.entity.GemPolisherBlockEntity;
 import net.marmar.enhanced_playthrough.item.custom.PolisherItem;

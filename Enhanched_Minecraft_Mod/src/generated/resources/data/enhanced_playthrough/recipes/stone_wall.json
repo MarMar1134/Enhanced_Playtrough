@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "stone_wall",
+  "key": {
+    "#": {
+      "item": "minecraft:stone"
+    }
+  },
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "item": "enhanced_playthrough:stone_wall"
+  },
+  "show_notification": true
+}

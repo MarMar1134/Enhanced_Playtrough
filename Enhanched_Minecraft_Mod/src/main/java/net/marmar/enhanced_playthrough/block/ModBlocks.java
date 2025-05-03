@@ -2,6 +2,8 @@ package net.marmar.enhanced_playthrough.block;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.block.crops.*;
+import net.marmar.enhanced_playthrough.block.custom.TallReedsBlock;
+import net.marmar.enhanced_playthrough.block.custom.WaterReedsBlock;
 import net.marmar.enhanced_playthrough.block.custom.alloyfurnace.AdobeAlloyFurnaceBlock;
 import net.marmar.enhanced_playthrough.block.custom.alloyfurnace.SoulAlloyFurnaceBlock;
 import net.marmar.enhanced_playthrough.block.custom.alloyfurnace.SuperAlloyFurnaceBlock;
@@ -21,6 +23,7 @@ import net.marmar.enhanced_playthrough.block.wood.sign.ModWallSignBlock;
 import net.marmar.enhanced_playthrough.item.ModItems;
 import net.marmar.enhanced_playthrough.worldgen.tree.grower.*;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
@@ -40,36 +43,36 @@ public class ModBlocks {
     //Blocks
         //Wood
             //Walnut
-            public static final RegistryObject<Block> WALNUT_SAPLING = registerBlock("walnut_sapling",
+            public static final RegistryObject<Block> WALNUT_SAPLING = registerBlockWithItem("walnut_sapling",
                     () -> new SaplingBlock(new WalnutTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
-            public static final RegistryObject<Block> WALNUT_LOG = registerBlock("walnut_log",
+            public static final RegistryObject<Block> WALNUT_LOG = registerBlockWithItem("walnut_log",
                     () -> new ModLogsBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
-            public static final RegistryObject<Block> STRIPPED_WALNUT_LOG = registerBlock("stripped_walnut_log",
+            public static final RegistryObject<Block> STRIPPED_WALNUT_LOG = registerBlockWithItem("stripped_walnut_log",
                     () -> new ModLogsBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
-            public static final RegistryObject<Block> WALNUT_WOOD = registerBlock("walnut_wood",
+            public static final RegistryObject<Block> WALNUT_WOOD = registerBlockWithItem("walnut_wood",
                     () -> new ModLogsBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
-            public static final RegistryObject<Block> STRIPPED_WALNUT_WOOD = registerBlock("stripped_walnut_wood",
+            public static final RegistryObject<Block> STRIPPED_WALNUT_WOOD = registerBlockWithItem("stripped_walnut_wood",
                     () -> new ModLogsBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
-            public static final RegistryObject<Block> WALNUT_LEAVES = registerBlock("walnut_leaves",
+            public static final RegistryObject<Block> WALNUT_LEAVES = registerBlockWithItem("walnut_leaves",
                     () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).requiresCorrectToolForDrops()));
-            public static final RegistryObject<Block> WALNUT_PLANKS = registerBlock("walnut_planks",
+            public static final RegistryObject<Block> WALNUT_PLANKS = registerBlockWithItem("walnut_planks",
                     () -> new ModPlanksBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
-            public static final RegistryObject<Block> WALNUT_DOOR = registerBlock("walnut_door",
+            public static final RegistryObject<Block> WALNUT_DOOR = registerBlockWithItem("walnut_door",
                     () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion(), BlockSetType.OAK));
-            public static final RegistryObject<Block> WALNUT_TRAPDOOR = registerBlock("walnut_trapdoor",
+            public static final RegistryObject<Block> WALNUT_TRAPDOOR = registerBlockWithItem("walnut_trapdoor",
                     () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion(), BlockSetType.OAK));
-            public static final RegistryObject<Block> WALNUT_BUTTON = registerBlock("walnut_button",
+            public static final RegistryObject<Block> WALNUT_BUTTON = registerBlockWithItem("walnut_button",
                     () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON), BlockSetType.OAK, 10, true));
-            public static final RegistryObject<Block> WALNUT_PRESSURE_PLATE = registerBlock("walnut_pressure_plate",
+            public static final RegistryObject<Block> WALNUT_PRESSURE_PLATE = registerBlockWithItem("walnut_pressure_plate",
                     () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.OAK_PRESSURE_PLATE), BlockSetType.OAK));
-            public static final RegistryObject<Block> WALNUT_SLAB = registerBlock("walnut_slab",
+            public static final RegistryObject<Block> WALNUT_SLAB = registerBlockWithItem("walnut_slab",
                     () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)));
-            public static final RegistryObject<Block> WALNUT_STAIRS = registerBlock("walnut_stair",
+            public static final RegistryObject<Block> WALNUT_STAIRS = registerBlockWithItem("walnut_stair",
                     () -> new StairBlock(() -> WALNUT_PLANKS.get().defaultBlockState(),BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)));
 
-            public static final RegistryObject<Block> WALNUT_FENCE = registerBlock("walnut_fence",
+            public static final RegistryObject<Block> WALNUT_FENCE = registerBlockWithItem("walnut_fence",
                     () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)));
-            public static final RegistryObject<Block> WALNUT_FENCEGATE = registerBlock("walnut_fencegate",
+            public static final RegistryObject<Block> WALNUT_FENCEGATE = registerBlockWithItem("walnut_fencegate",
                     () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
 
             public static final RegistryObject<Block> WALNUT_SIGN = BLOCKS.register("walnut_sign",
@@ -83,40 +86,40 @@ public class ModBlocks {
                     () -> new ModWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.WALNUT));
 
             //Apple
-            public static final RegistryObject<Block> APPLE_SAPLING = registerBlock("apple_sapling",
+            public static final RegistryObject<Block> APPLE_SAPLING = registerBlockWithItem("apple_sapling",
                     () -> new SaplingBlock(new AppleTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
-            public static final RegistryObject<Block> GREEN_APPLE_SAPLING = registerBlock("green_apple_sapling",
+            public static final RegistryObject<Block> GREEN_APPLE_SAPLING = registerBlockWithItem("green_apple_sapling",
                     () -> new SaplingBlock(new GreenAppleTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
-            public static final RegistryObject<Block> APPLE_LOG = registerBlock("apple_log",
+            public static final RegistryObject<Block> APPLE_LOG = registerBlockWithItem("apple_log",
                     () -> new ModLogsBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
-            public static final RegistryObject<Block> STRIPPED_APPLE_LOG = registerBlock("stripped_apple_log",
+            public static final RegistryObject<Block> STRIPPED_APPLE_LOG = registerBlockWithItem("stripped_apple_log",
                     () -> new ModLogsBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
-            public static final RegistryObject<Block> APPLE_WOOD = registerBlock("apple_wood",
+            public static final RegistryObject<Block> APPLE_WOOD = registerBlockWithItem("apple_wood",
                     () -> new ModLogsBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
-            public static final RegistryObject<Block> STRIPPED_APPLE_WOOD = registerBlock("stripped_apple_wood",
+            public static final RegistryObject<Block> STRIPPED_APPLE_WOOD = registerBlockWithItem("stripped_apple_wood",
                     () -> new ModLogsBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
-            public static final RegistryObject<Block> APPLE_LEAVES = registerBlock("apple_leaves",
+            public static final RegistryObject<Block> APPLE_LEAVES = registerBlockWithItem("apple_leaves",
                     () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).requiresCorrectToolForDrops()));
-            public static final RegistryObject<Block> GREEN_APPLE_LEAVES = registerBlock("green_apple_leaves",
+            public static final RegistryObject<Block> GREEN_APPLE_LEAVES = registerBlockWithItem("green_apple_leaves",
                     () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).requiresCorrectToolForDrops()));
-            public static final RegistryObject<Block> APPLE_PLANKS = registerBlock("apple_planks",
+            public static final RegistryObject<Block> APPLE_PLANKS = registerBlockWithItem("apple_planks",
                     () -> new ModPlanksBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
-            public static final RegistryObject<Block> APPLE_DOOR = registerBlock("apple_door",
+            public static final RegistryObject<Block> APPLE_DOOR = registerBlockWithItem("apple_door",
                     () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion(), BlockSetType.OAK));
-            public static final RegistryObject<Block> APPLE_TRAPDOOR = registerBlock("apple_trapdoor",
+            public static final RegistryObject<Block> APPLE_TRAPDOOR = registerBlockWithItem("apple_trapdoor",
                     () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion(), BlockSetType.OAK));
-            public static final RegistryObject<Block> APPLE_BUTTON = registerBlock("apple_button",
+            public static final RegistryObject<Block> APPLE_BUTTON = registerBlockWithItem("apple_button",
                     () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON), BlockSetType.OAK, 10, true));
-            public static final RegistryObject<Block> APPLE_PRESSURE_PLATE = registerBlock("apple_pressure_plate",
+            public static final RegistryObject<Block> APPLE_PRESSURE_PLATE = registerBlockWithItem("apple_pressure_plate",
                     () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.OAK_PRESSURE_PLATE), BlockSetType.OAK));
-            public static final RegistryObject<Block> APPLE_SLAB = registerBlock("apple_slab",
+            public static final RegistryObject<Block> APPLE_SLAB = registerBlockWithItem("apple_slab",
                     () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)));
-            public static final RegistryObject<Block> APPLE_STAIRS = registerBlock("apple_stair",
+            public static final RegistryObject<Block> APPLE_STAIRS = registerBlockWithItem("apple_stair",
                     () -> new StairBlock(() -> APPLE_PLANKS.get().defaultBlockState(),BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)));
 
-            public static final RegistryObject<Block> APPLE_FENCE = registerBlock("apple_fence",
+            public static final RegistryObject<Block> APPLE_FENCE = registerBlockWithItem("apple_fence",
                     () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)));
-            public static final RegistryObject<Block> APPLE_FENCEGATE = registerBlock("apple_fencegate",
+            public static final RegistryObject<Block> APPLE_FENCEGATE = registerBlockWithItem("apple_fencegate",
                     () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
 
             public static final RegistryObject<Block> APPLE_SIGN = BLOCKS.register("apple_sign",
@@ -130,36 +133,36 @@ public class ModBlocks {
                     () -> new ModWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.APPLE));
 
             //Orange
-            public static final RegistryObject<Block> ORANGE_SAPLING = registerBlock("orange_sapling",
+            public static final RegistryObject<Block> ORANGE_SAPLING = registerBlockWithItem("orange_sapling",
                     () -> new SaplingBlock(new OrangeTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
-            public static final RegistryObject<Block> ORANGE_LOG = registerBlock("orange_log",
+            public static final RegistryObject<Block> ORANGE_LOG = registerBlockWithItem("orange_log",
                     () -> new ModLogsBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
-            public static final RegistryObject<Block> STRIPPED_ORANGE_LOG = registerBlock("stripped_orange_log",
+            public static final RegistryObject<Block> STRIPPED_ORANGE_LOG = registerBlockWithItem("stripped_orange_log",
                     () -> new ModLogsBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
-            public static final RegistryObject<Block> ORANGE_WOOD = registerBlock("orange_wood",
+            public static final RegistryObject<Block> ORANGE_WOOD = registerBlockWithItem("orange_wood",
                     () -> new ModLogsBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
-            public static final RegistryObject<Block> STRIPPED_ORANGE_WOOD = registerBlock("stripped_orange_wood",
+            public static final RegistryObject<Block> STRIPPED_ORANGE_WOOD = registerBlockWithItem("stripped_orange_wood",
                     () -> new ModLogsBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
-            public static final RegistryObject<Block> ORANGE_LEAVES = registerBlock("orange_leaves",
+            public static final RegistryObject<Block> ORANGE_LEAVES = registerBlockWithItem("orange_leaves",
                     () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).requiresCorrectToolForDrops()));
-            public static final RegistryObject<Block> ORANGE_PLANKS = registerBlock("orange_planks",
+            public static final RegistryObject<Block> ORANGE_PLANKS = registerBlockWithItem("orange_planks",
                     () -> new ModPlanksBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
-            public static final RegistryObject<Block> ORANGE_DOOR = registerBlock("orange_door",
+            public static final RegistryObject<Block> ORANGE_DOOR = registerBlockWithItem("orange_door",
                     () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion(), BlockSetType.OAK));
-            public static final RegistryObject<Block> ORANGE_TRAPDOOR = registerBlock("orange_trapdoor",
+            public static final RegistryObject<Block> ORANGE_TRAPDOOR = registerBlockWithItem("orange_trapdoor",
                     () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion(), BlockSetType.OAK));
-            public static final RegistryObject<Block> ORANGE_BUTTON = registerBlock("orange_button",
+            public static final RegistryObject<Block> ORANGE_BUTTON = registerBlockWithItem("orange_button",
                     () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON), BlockSetType.OAK, 10, true));
-            public static final RegistryObject<Block> ORANGE_PRESSURE_PLATE = registerBlock("orange_pressure_plate",
+            public static final RegistryObject<Block> ORANGE_PRESSURE_PLATE = registerBlockWithItem("orange_pressure_plate",
                     () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.OAK_PRESSURE_PLATE), BlockSetType.OAK));
-            public static final RegistryObject<Block> ORANGE_SLAB = registerBlock("orange_slab",
+            public static final RegistryObject<Block> ORANGE_SLAB = registerBlockWithItem("orange_slab",
                     () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)));
-            public static final RegistryObject<Block> ORANGE_STAIRS = registerBlock("orange_stair",
+            public static final RegistryObject<Block> ORANGE_STAIRS = registerBlockWithItem("orange_stair",
                     () -> new StairBlock(() -> ORANGE_PLANKS.get().defaultBlockState(),BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)));
 
-            public static final RegistryObject<Block> ORANGE_FENCE = registerBlock("orange_fence",
+            public static final RegistryObject<Block> ORANGE_FENCE = registerBlockWithItem("orange_fence",
                     () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)));
-            public static final RegistryObject<Block> ORANGE_FENCEGATE = registerBlock("orange_fencegate",
+            public static final RegistryObject<Block> ORANGE_FENCEGATE = registerBlockWithItem("orange_fencegate",
                     () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
 
             public static final RegistryObject<Block> ORANGE_SIGN = BLOCKS.register("orange_sign",
@@ -173,36 +176,36 @@ public class ModBlocks {
                     () -> new ModWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.ORANGE));
 
             //Lemon
-            public static final RegistryObject<Block> LEMON_SAPLING = registerBlock("lemon_sapling",
+            public static final RegistryObject<Block> LEMON_SAPLING = registerBlockWithItem("lemon_sapling",
                     () -> new SaplingBlock(new LemonTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
-            public static final RegistryObject<Block> LEMON_LOG = registerBlock("lemon_log",
+            public static final RegistryObject<Block> LEMON_LOG = registerBlockWithItem("lemon_log",
                     () -> new ModLogsBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
-            public static final RegistryObject<Block> STRIPPED_LEMON_LOG = registerBlock("stripped_lemon_log",
+            public static final RegistryObject<Block> STRIPPED_LEMON_LOG = registerBlockWithItem("stripped_lemon_log",
                     () -> new ModLogsBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
-            public static final RegistryObject<Block> LEMON_WOOD = registerBlock("lemon_wood",
+            public static final RegistryObject<Block> LEMON_WOOD = registerBlockWithItem("lemon_wood",
                     () -> new ModLogsBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
-            public static final RegistryObject<Block> STRIPPED_LEMON_WOOD = registerBlock("stripped_lemon_wood",
+            public static final RegistryObject<Block> STRIPPED_LEMON_WOOD = registerBlockWithItem("stripped_lemon_wood",
                     () -> new ModLogsBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
-            public static final RegistryObject<Block> LEMON_LEAVES = registerBlock("lemon_leaves",
+            public static final RegistryObject<Block> LEMON_LEAVES = registerBlockWithItem("lemon_leaves",
                     () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).requiresCorrectToolForDrops()));
-            public static final RegistryObject<Block> LEMON_PLANKS = registerBlock("lemon_planks",
+            public static final RegistryObject<Block> LEMON_PLANKS = registerBlockWithItem("lemon_planks",
                     () -> new ModPlanksBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
-            public static final RegistryObject<Block> LEMON_DOOR = registerBlock("lemon_door",
+            public static final RegistryObject<Block> LEMON_DOOR = registerBlockWithItem("lemon_door",
                     () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion(), BlockSetType.OAK));
-            public static final RegistryObject<Block> LEMON_TRAPDOOR = registerBlock("lemon_trapdoor",
+            public static final RegistryObject<Block> LEMON_TRAPDOOR = registerBlockWithItem("lemon_trapdoor",
                     () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion(), BlockSetType.OAK));
-            public static final RegistryObject<Block> LEMON_BUTTON = registerBlock("lemon_button",
+            public static final RegistryObject<Block> LEMON_BUTTON = registerBlockWithItem("lemon_button",
                     () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON), BlockSetType.OAK, 10, true));
-            public static final RegistryObject<Block> LEMON_PRESSURE_PLATE = registerBlock("lemon_pressure_plate",
+            public static final RegistryObject<Block> LEMON_PRESSURE_PLATE = registerBlockWithItem("lemon_pressure_plate",
                     () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.OAK_PRESSURE_PLATE), BlockSetType.OAK));
-            public static final RegistryObject<Block> LEMON_SLAB = registerBlock("lemon_slab",
+            public static final RegistryObject<Block> LEMON_SLAB = registerBlockWithItem("lemon_slab",
                     () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)));
-            public static final RegistryObject<Block> LEMON_STAIRS = registerBlock("lemon_stair",
+            public static final RegistryObject<Block> LEMON_STAIRS = registerBlockWithItem("lemon_stair",
                     () -> new StairBlock(() -> LEMON_PLANKS.get().defaultBlockState(),BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)));
 
-            public static final RegistryObject<Block> LEMON_FENCE = registerBlock("lemon_fence",
+            public static final RegistryObject<Block> LEMON_FENCE = registerBlockWithItem("lemon_fence",
                     () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)));
-            public static final RegistryObject<Block> LEMON_FENCEGATE = registerBlock("lemon_fencegate",
+            public static final RegistryObject<Block> LEMON_FENCEGATE = registerBlockWithItem("lemon_fencegate",
                     () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
 
             public static final RegistryObject<Block> LEMON_SIGN = BLOCKS.register("lemon_sign",
@@ -216,172 +219,191 @@ public class ModBlocks {
                     () -> new ModWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.LEMON));
 
             //Lime
-            public static final RegistryObject<Block> LIME_SAPLING = registerBlock("lime_sapling",
+            public static final RegistryObject<Block> LIME_SAPLING = registerBlockWithItem("lime_sapling",
                     () -> new SaplingBlock(new LimeTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
-            public static final RegistryObject<Block> LIME_LEAVES = registerBlock("lime_leaves",
+            public static final RegistryObject<Block> LIME_LEAVES = registerBlockWithItem("lime_leaves",
                     () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).requiresCorrectToolForDrops()));
 
+        //Stone
+        public static final RegistryObject<Block> STONE_WALL = registerBlockWithItem("stone_wall",
+                () -> new WallBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.STONE_BRICK_WALL).requiresCorrectToolForDrops()));
+
+        //Polished diorite, andesite and granite walls
+        public static final RegistryObject<Block> POLISHED_DIORITE_WALL = registerBlockWithItem("polished_diorite_wall",
+                () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.DIORITE_WALL).requiresCorrectToolForDrops()));
+        public static final RegistryObject<Block> POLISHED_ANDESITE_WALL = registerBlockWithItem("polished_andesite_wall",
+                () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.ANDESITE_WALL).requiresCorrectToolForDrops()));
+        public static final RegistryObject<Block> POLISHED_GRANITE_WALL = registerBlockWithItem("polished_granite_wall",
+                () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.GRANITE_WALL).requiresCorrectToolForDrops()));
+
+        //Dripstone
+        public static final RegistryObject<Block> DRIPSTONE_SLAB = registerBlockWithItem("dripstone_slab",
+                () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB).requiresCorrectToolForDrops()));
+        public static final RegistryObject<Block> DRIPSTONE_STAIRS = registerBlockWithItem("dripstone_stair",
+                () -> new StairBlock(Blocks.DRIPSTONE_BLOCK::defaultBlockState,BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).requiresCorrectToolForDrops()));
+        public static final RegistryObject<Block> DRIPSTONE_WALL = registerBlockWithItem("dripstone_wall",
+                () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL).requiresCorrectToolForDrops()));
+
         //Polished stone
-        public static final RegistryObject<Block> POLISHED_STONE = registerBlock("polished_stone",
-                () -> new Block(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.STONE)
+        public static final RegistryObject<Block> POLISHED_STONE = registerBlockWithItem("polished_stone",
+                () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).requiresCorrectToolForDrops()));
+        public static final RegistryObject<Block> POLISHED_STONE_SLAB = registerBlockWithItem("polished_stone_slab",
+                () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB).requiresCorrectToolForDrops()));
+        public static final RegistryObject<Block> POLISHED_STONE_STAIRS = registerBlockWithItem("polished_stone_stair",
+                () -> new StairBlock(() -> ModBlocks.POLISHED_STONE.get().defaultBlockState(),BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS)
                         .requiresCorrectToolForDrops()));
-        public static final RegistryObject<Block> POLISHED_STONE_SLAB = registerBlock("polished_stone_slab",
-                () -> new SlabBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.STONE_SLAB)
-                        .requiresCorrectToolForDrops()));
-        public static final RegistryObject<Block> POLISHED_STONE_STAIRS = registerBlock("polished_stone_stair",
-                () -> new StairBlock(() -> ModBlocks.POLISHED_STONE.get().defaultBlockState(),BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.STONE_STAIRS)
-                        .requiresCorrectToolForDrops()));
-        public static final RegistryObject<Block> POLISHED_STONE_WALL = registerBlock("polished_stone_wall",
-                () -> new WallBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.STONE_BRICK_WALL)
-                        .requiresCorrectToolForDrops()));
+        public static final RegistryObject<Block> POLISHED_STONE_WALL = registerBlockWithItem("polished_stone_wall",
+                () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL).requiresCorrectToolForDrops()));
 
         //Limestone
             //cobbled
-            public static final RegistryObject<Block> COBBLED_LIMESTONE = registerBlock("cobbeled_limestone",
+            public static final RegistryObject<Block> COBBLED_LIMESTONE = registerBlockWithItem("cobbeled_limestone",
                     () -> new Block(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.COBBLESTONE).requiresCorrectToolForDrops()));
-            public static final RegistryObject<Block> COBBLED_LIMESTONE_SLAB = registerBlock("cobbeled_limestone_slab",
+            public static final RegistryObject<Block> COBBLED_LIMESTONE_SLAB = registerBlockWithItem("cobbeled_limestone_slab",
                     () -> new SlabBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.COBBLESTONE_SLAB).requiresCorrectToolForDrops()));
-            public static final RegistryObject<Block> COBBLED_LIMESTONE_STAIRS = registerBlock("cobbeled_limestone_stair",
+            public static final RegistryObject<Block> COBBLED_LIMESTONE_STAIRS = registerBlockWithItem("cobbeled_limestone_stair",
                     () -> new StairBlock(() -> COBBLED_LIMESTONE.get().defaultBlockState(), BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.COBBLESTONE_STAIRS).requiresCorrectToolForDrops()));
-            public static final RegistryObject<Block> COBBLED_LIMESTONE_WALL = registerBlock("cobbeled_limestone_wall",
+            public static final RegistryObject<Block> COBBLED_LIMESTONE_WALL = registerBlockWithItem("cobbeled_limestone_wall",
                     () -> new WallBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.COBBLESTONE_WALL).requiresCorrectToolForDrops()));
 
             //natural
-            public static final RegistryObject<Block> LIMESTONE = registerBlock("limestone",
+            public static final RegistryObject<Block> LIMESTONE = registerBlockWithItem("limestone",
                     () -> new Block(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.STONE).requiresCorrectToolForDrops()));
-            public static final RegistryObject<Block> LIMESTONE_SLAB = registerBlock("limestone_slab",
+            public static final RegistryObject<Block> LIMESTONE_SLAB = registerBlockWithItem("limestone_slab",
                     () -> new SlabBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.STONE_SLAB).requiresCorrectToolForDrops()));
-            public static final RegistryObject<Block> LIMESTONE_STAIRS = registerBlock("limestone_stair",
+            public static final RegistryObject<Block> LIMESTONE_STAIRS = registerBlockWithItem("limestone_stair",
                     () -> new StairBlock(() -> LIMESTONE.get().defaultBlockState(),BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.STONE_STAIRS).requiresCorrectToolForDrops()));
+            public static final RegistryObject<Block> LIMESTONE_WALL = registerBlockWithItem("limestone_wall",
+                    () -> new WallBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.STONE_BRICK_WALL).requiresCorrectToolForDrops()));
 
             //polished
-            public static final RegistryObject<Block> POLISHED_LIMESTONE = registerBlock("polished_limestone",
+            public static final RegistryObject<Block> POLISHED_LIMESTONE = registerBlockWithItem("polished_limestone",
                     () -> new Block(BlockBehaviour.Properties.copy(ModBlocks.POLISHED_STONE.get()).requiresCorrectToolForDrops()));
-            public static final RegistryObject<Block> POLISHED_LIMESTONE_SLAB = registerBlock("polished_limestone_slab",
+            public static final RegistryObject<Block> POLISHED_LIMESTONE_SLAB = registerBlockWithItem("polished_limestone_slab",
                     () -> new SlabBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.STONE_SLAB).requiresCorrectToolForDrops()));
-            public static final RegistryObject<Block> POLISHED_LIMESTONE_STAIRS = registerBlock("polished_limestone_stair",
+            public static final RegistryObject<Block> POLISHED_LIMESTONE_STAIRS = registerBlockWithItem("polished_limestone_stair",
                     () -> new StairBlock(() -> ModBlocks.POLISHED_LIMESTONE.get().defaultBlockState(),BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.STONE_STAIRS).requiresCorrectToolForDrops()));
-            public static final RegistryObject<Block> POLISHED_LIMESTONE_WALL = registerBlock("polished_limestone_wall",
+            public static final RegistryObject<Block> POLISHED_LIMESTONE_WALL = registerBlockWithItem("polished_limestone_wall",
                     () -> new WallBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.STONE_BRICK_WALL).requiresCorrectToolForDrops()));
 
             //bricks
-            public static final RegistryObject<Block> LIMESTONE_BRICKS = registerBlock("limestone_brick",
+            public static final RegistryObject<Block> LIMESTONE_BRICKS = registerBlockWithItem("limestone_brick",
                     () -> new Block(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.STONE_BRICKS).requiresCorrectToolForDrops()));
-            public static final RegistryObject<Block> LIMESTONE_BRICK_SLAB = registerBlock("limestone_brick_slab",
+            public static final RegistryObject<Block> LIMESTONE_BRICK_SLAB = registerBlockWithItem("limestone_brick_slab",
                     () -> new SlabBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.STONE_BRICK_SLAB).requiresCorrectToolForDrops()));
-            public static final RegistryObject<Block> LIMESTONE_BRICK_STAIRS = registerBlock("limestone_brick_stair",
+            public static final RegistryObject<Block> LIMESTONE_BRICK_STAIRS = registerBlockWithItem("limestone_brick_stair",
                     () -> new StairBlock(() -> LIMESTONE_BRICKS.get().defaultBlockState(),BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.STONE_BRICK_STAIRS).requiresCorrectToolForDrops()));
-            public static final RegistryObject<Block> LIMESTONE_BRICK_WALL = registerBlock("limestone_brick_wall",
+            public static final RegistryObject<Block> LIMESTONE_BRICK_WALL = registerBlockWithItem("limestone_brick_wall",
                     () -> new WallBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.STONE_BRICK_WALL).requiresCorrectToolForDrops()));
 
 
         //Soul
-        public static final RegistryObject<Block> SOUL_MUD = registerBlock("soul_mud",
+        public static final RegistryObject<Block> SOUL_MUD = registerBlockWithItem("soul_mud",
                 () -> new Block(BlockBehaviour.Properties.copy(Blocks.PACKED_MUD).requiresCorrectToolForDrops()));
-        public static final RegistryObject<Block> SOUL_MUD_BRICKS = registerBlock("soul_mud_brick",
+        public static final RegistryObject<Block> SOUL_MUD_BRICKS = registerBlockWithItem("soul_mud_brick",
                 () -> new Block(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.STONE_BRICKS).requiresCorrectToolForDrops()));
-        public static final RegistryObject<Block> SOUL_MUD_BRICK_SLAB = registerBlock("soul_mud_brick_slab",
+        public static final RegistryObject<Block> SOUL_MUD_BRICK_SLAB = registerBlockWithItem("soul_mud_brick_slab",
                 () -> new SlabBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.STONE_BRICK_SLAB).requiresCorrectToolForDrops()));
-        public static final RegistryObject<Block> SOUL_MUD_BRICK_STAIRS = registerBlock("soul_mud_brick_stair",
+        public static final RegistryObject<Block> SOUL_MUD_BRICK_STAIRS = registerBlockWithItem("soul_mud_brick_stair",
                 () -> new StairBlock(() -> SOUL_MUD_BRICKS.get().defaultBlockState(),BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.STONE_BRICK_STAIRS).requiresCorrectToolForDrops()));
-        public static final RegistryObject<Block> SOUL_MUD_BRICK_WALL = registerBlock("soul_mud_brick_wall",
+        public static final RegistryObject<Block> SOUL_MUD_BRICK_WALL = registerBlockWithItem("soul_mud_brick_wall",
                 () -> new WallBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.STONE_BRICK_WALL).requiresCorrectToolForDrops()));
 
         //Ores
-        public static final RegistryObject<Block> NETHER_COPPER_ORE = registerBlock("nether_copper_ore",
+        public static final RegistryObject<Block> NETHER_COPPER_ORE = registerBlockWithItem("nether_copper_ore",
                 () -> new Block(BlockBehaviour.Properties.copy(Blocks.COPPER_ORE).sound(SoundType.NETHER_ORE).requiresCorrectToolForDrops()));
 
-        public static final RegistryObject<Block> TIN_ORE = registerBlock("tin_ore",
+        public static final RegistryObject<Block> TIN_ORE = registerBlockWithItem("tin_ore",
                 () -> new Block(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.IRON_ORE).requiresCorrectToolForDrops()));
-         public static final RegistryObject<Block> DEEPSLATE_TIN_ORE = registerBlock("deepslate_tin_ore",
+         public static final RegistryObject<Block> DEEPSLATE_TIN_ORE = registerBlockWithItem("deepslate_tin_ore",
             () -> new Block(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.DEEPSLATE_IRON_ORE).requiresCorrectToolForDrops()));
 
-        public static final RegistryObject<Block> ZINC_ORE = registerBlock("zinc_ore",
+        public static final RegistryObject<Block> ZINC_ORE = registerBlockWithItem("zinc_ore",
                 () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_ORE).requiresCorrectToolForDrops()));
-        public static final RegistryObject<Block> DEEPSLATE_ZINC_ORE = registerBlock("deepslate_zinc_ore",
+        public static final RegistryObject<Block> DEEPSLATE_ZINC_ORE = registerBlockWithItem("deepslate_zinc_ore",
                 () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_ORE).requiresCorrectToolForDrops()));
-        public static final RegistryObject<Block> NETHER_ZINC_ORE = registerBlock("nether_zinc_ore",
+        public static final RegistryObject<Block> NETHER_ZINC_ORE = registerBlockWithItem("nether_zinc_ore",
                 () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_ORE).sound(SoundType.NETHER_ORE).requiresCorrectToolForDrops()));
 
-        public static final RegistryObject<Block> SULFUR_ORE = registerBlock("sulfur_ore",
+        public static final RegistryObject<Block> SULFUR_ORE = registerBlockWithItem("sulfur_ore",
                 () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.DIAMOND_ORE)
                         .requiresCorrectToolForDrops()));
-        public static final RegistryObject<Block> DEEPSLATE_SULFUR_ORE = registerBlock("deepslate_sulfur_ore",
+        public static final RegistryObject<Block> DEEPSLATE_SULFUR_ORE = registerBlockWithItem("deepslate_sulfur_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.DEEPSLATE_DIAMOND_ORE)
                     .requiresCorrectToolForDrops()));
-        public static final RegistryObject<Block> NETHER_SULFUR_ORE = registerBlock("nether_sulfur_ore",
+        public static final RegistryObject<Block> NETHER_SULFUR_ORE = registerBlockWithItem("nether_sulfur_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.DEEPSLATE_DIAMOND_ORE)
                     .sound(SoundType.NETHER_ORE).requiresCorrectToolForDrops()));
 
-        public static final RegistryObject<Block> SILVER_ORE = registerBlock("silver_ore",
+        public static final RegistryObject<Block> SILVER_ORE = registerBlockWithItem("silver_ore",
                 () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.GOLD_ORE).requiresCorrectToolForDrops()));
-        public static final RegistryObject<Block> DEEPSLATE_SILVER_ORE = registerBlock("deepslate_silver_ore",
+        public static final RegistryObject<Block> DEEPSLATE_SILVER_ORE = registerBlockWithItem("deepslate_silver_ore",
                 () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.DEEPSLATE_GOLD_ORE).requiresCorrectToolForDrops()));
 
-        public static final RegistryObject<Block> RUBI_ORE = registerBlock("rubi_ore",
+        public static final RegistryObject<Block> RUBY_ORE = registerBlockWithItem("rubi_ore",
                 () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.EMERALD_ORE).requiresCorrectToolForDrops()));
-        public static final RegistryObject<Block> SAPPHIRE_ORE = registerBlock("sapphire_ore",
+        public static final RegistryObject<Block> SAPPHIRE_ORE = registerBlockWithItem("sapphire_ore",
                 () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.EMERALD_ORE).requiresCorrectToolForDrops()));
 
-        public static final RegistryObject<Block> DEEPSLATE_RUBI_ORE = registerBlock("deepslate_rubi_ore",
-                () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.DEEPSLATE_EMERALD_ORE).requiresCorrectToolForDrops()));
-        public static final RegistryObject<Block> DEEPSLATE_SAPPHIRE_ORE = registerBlock("deepslate_sapphire_ore",
+        public static final RegistryObject<Block> DEEPSLATE_RUBY_ORE = registerBlockWithItem("deepslate_rubi_ore",
+                () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.DEEPSLATE_EMERALD_ORE).requiresCorrectToolForDrops(), ConstantInt.of(3)));
+        public static final RegistryObject<Block> DEEPSLATE_SAPPHIRE_ORE = registerBlockWithItem("deepslate_sapphire_ore",
                 () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.DEEPSLATE_EMERALD_ORE).requiresCorrectToolForDrops()));
 
-        public static final RegistryObject<Block> NETHER_GARNET_ORE = registerBlock("nether_garnet_ore",
+        public static final RegistryObject<Block> NETHER_GARNET_ORE = registerBlockWithItem("nether_garnet_ore",
                 () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.DEEPSLATE_EMERALD_ORE).sound(SoundType.NETHER_ORE).requiresCorrectToolForDrops()));
 
-        public static final RegistryObject<Block> COBALT_ORE = registerBlock("cobalt_ore",
+        public static final RegistryObject<Block> COBALT_ORE = registerBlockWithItem("cobalt_ore",
                 () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)));
-        public static final RegistryObject<Block> DEEPSLATE_COBALT_ORE = registerBlock("deepslate_cobalt_ore",
+        public static final RegistryObject<Block> DEEPSLATE_COBALT_ORE = registerBlockWithItem("deepslate_cobalt_ore",
                 () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_DIAMOND_ORE)));
 
         //Ores blocks
-        public static final RegistryObject<Block> SILVER_BLOCK = registerBlock("silver_block",
+        public static final RegistryObject<Block> SILVER_BLOCK = registerBlockWithItem("silver_block",
                 () -> new Block(BlockBehaviour.Properties.copy(Blocks.GOLD_BLOCK)));
-        public static final RegistryObject<Block> TIN_BLOCK = registerBlock("tin_block",
+        public static final RegistryObject<Block> TIN_BLOCK = registerBlockWithItem("tin_block",
                 () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
-        public static final RegistryObject<Block> ZINC_BLOCK = registerBlock("zinc_block",
+        public static final RegistryObject<Block> ZINC_BLOCK = registerBlockWithItem("zinc_block",
                 () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
-        public static final RegistryObject<Block> BRASS_BLOCK = registerBlock("brass_block",
+        public static final RegistryObject<Block> BRASS_BLOCK = registerBlockWithItem("brass_block",
                 () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
-        public static final RegistryObject<Block> BRONZE_BLOCK = registerBlock("bronze_block",
+        public static final RegistryObject<Block> BRONZE_BLOCK = registerBlockWithItem("bronze_block",
                 () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
-        public static final RegistryObject<Block> ROSE_GOLD_BLOCK = registerBlock("rose_gold_block",
+        public static final RegistryObject<Block> ROSE_GOLD_BLOCK = registerBlockWithItem("rose_gold_block",
                 () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
-        public static final RegistryObject<Block> BRONZIUM_BLOCK = registerBlock("bronzium_block",
+        public static final RegistryObject<Block> BRONZIUM_BLOCK = registerBlockWithItem("bronzium_block",
                 () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
-        public static final RegistryObject<Block> STEEL_BLOCK = registerBlock("steel_block",
+        public static final RegistryObject<Block> STEEL_BLOCK = registerBlockWithItem("steel_block",
                 () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
-        public static final RegistryObject<Block> GREEN_GOLD_BLOCK = registerBlock("green_gold_block",
+        public static final RegistryObject<Block> GREEN_GOLD_BLOCK = registerBlockWithItem("green_gold_block",
                 () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
-        public static final RegistryObject<Block> BLUE_GOLD_BLOCK = registerBlock("blue_gold_block",
+        public static final RegistryObject<Block> BLUE_GOLD_BLOCK = registerBlockWithItem("blue_gold_block",
                 () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
     //Entity blocks
         //Basic furnaces
-        public static final RegistryObject<Block> ADOBE_FURNACE = registerBlock("adobe_furnace",
+        public static final RegistryObject<Block> ADOBE_FURNACE = registerBlockWithItem("adobe_furnace",
                 () -> new AdobeFurnaceBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.COBBLESTONE).noOcclusion()));
-        public static final RegistryObject<Block> SOUL_FURNACE = registerBlock("soul_furnace",
+        public static final RegistryObject<Block> SOUL_FURNACE = registerBlockWithItem("soul_furnace",
                 () -> new SoulFurnaceBlock(BlockBehaviour.Properties.copy(ModBlocks.SOUL_MUD.get()).noOcclusion()));
 
         //Alloy furnaces
-        public static final RegistryObject<Block> ADOBE_ALLOYING_FURNACE = registerBlock("adobe_alloying_furnace",
-                () -> new AdobeAlloyFurnaceBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.COBBLESTONE).noOcclusion()));
-        public static final RegistryObject<Block> SUPER_ALLOYING_FURNACE = registerBlock("super_alloying_furnace",
-                () -> new SuperAlloyFurnaceBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.COBBLED_DEEPSLATE).noOcclusion()));
-        public static final RegistryObject<Block> SOUL_ALLOY_FURNACE = registerBlock("soul_alloy_furnace",
+        public static final RegistryObject<Block> ADOBE_ALLOYING_FURNACE = registerBlockWithItem("adobe_alloying_furnace",
+                () -> new AdobeAlloyFurnaceBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE).noOcclusion()));
+        public static final RegistryObject<Block> SUPER_ALLOYING_FURNACE = registerBlockWithItem("super_alloying_furnace",
+                () -> new SuperAlloyFurnaceBlock(BlockBehaviour.Properties.copy(Blocks.COBBLED_DEEPSLATE).noOcclusion()));
+        public static final RegistryObject<Block> SOUL_ALLOY_FURNACE = registerBlockWithItem("soul_alloy_furnace",
                 () -> new SoulAlloyFurnaceBlock(BlockBehaviour.Properties.copy(Blocks.BLACKSTONE).noOcclusion()));
 
         //Gem polisher
-        public static final RegistryObject<Block> GEM_POLISHER = registerBlock("gem_polisher",
-                () -> new GemPolisherBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.COBBLESTONE).noOcclusion()));
+        public static final RegistryObject<Block> GEM_POLISHER = registerBlockWithItem("gem_polisher",
+                () -> new GemPolisherBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE).noOcclusion()));
 
         //Grinders
-        public static final RegistryObject<Block> PRIMAL_GRINDER = registerBlock("primal_grinder",
-                () -> new PrimalGrinderBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.COBBLESTONE).noOcclusion()));
-        public static final RegistryObject<Block> MECHANICAL_GRINDER = registerBlock("mechanical_grinder",
-                () -> new MechanicalGrinderBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.COBBLESTONE).noOcclusion()));
+        public static final RegistryObject<Block> PRIMAL_GRINDER = registerBlockWithItem("primal_grinder",
+                () -> new PrimalGrinderBlock(BlockBehaviour.Properties.copy(Blocks.MUD_BRICKS).noOcclusion()));
+        public static final RegistryObject<Block> MECHANICAL_GRINDER = registerBlockWithItem("mechanical_grinder",
+                () -> new MechanicalGrinderBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE).noOcclusion()));
 
     //Crops
     public static final RegistryObject<Block> YERBA_MATE_CROP = BLOCKS.register("yerba_mate_crop",
@@ -395,16 +417,34 @@ public class ModBlocks {
     public static final RegistryObject<Block> CORN_CROP = BLOCKS.register("corn_crop",
             () -> new CornCropBlock(BlockBehaviour.Properties.copy(ModBlocks.YERBA_MATE_CROP.get()).noOcclusion().noCollission()));
 
+    //Wild crops
+        public static final RegistryObject<Block> WILD_WHEAT = registerBlockWithItem("wild_wheat_crop",
+            () -> new BushBlock(BlockBehaviour.Properties.copy(Blocks.GRASS).noOcclusion().noCollission().sound(SoundType.CROP)));
+        public static final RegistryObject<Block> WILD_TOMATO = registerBlockWithItem("wild_tomato_crop",
+            () -> new BushBlock(BlockBehaviour.Properties.copy(Blocks.GRASS).noOcclusion().noCollission().sound(SoundType.CROP)));
+        public static final RegistryObject<Block> WILD_CORN = registerBlockWithItem("wild_corn_crop",
+            () -> new DoublePlantBlock(BlockBehaviour.Properties.copy(Blocks.TALL_GRASS).noOcclusion().noCollission().sound(SoundType.CROP)));
+
+    //Other plants
+    public static final RegistryObject<Block> TALL_REEDS = registerBlockWithItem("tall_reeds",
+            () -> new TallReedsBlock(BlockBehaviour.Properties.copy(Blocks.TALL_GRASS).noOcclusion().noCollission()));
+    public static final RegistryObject<Block> REEDS = registerBlockWithItem("reeds",
+            () -> new DoublePlantBlock(BlockBehaviour.Properties.copy(Blocks.TALL_GRASS).noOcclusion().noCollission()));
+    public static final RegistryObject<Block> SMALL_REEDS = registerBlockWithItem("small_reeds",
+            () -> new BushBlock(BlockBehaviour.Properties.copy(Blocks.GRASS).noOcclusion().noCollission()));
+
+    public static final RegistryObject<Block> WATER_REEDS = registerBlockWithItem("water_reeds",
+            () -> new WaterReedsBlock(BlockBehaviour.Properties.copy(Blocks.SMALL_DRIPLEAF).noOcclusion().noCollission()));
+
     //Block register
-    private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){
+    private static <T extends Block> RegistryObject<T> registerBlockWithItem(String name, Supplier<T> block){
         RegistryObject<T> ToReturn = BLOCKS.register(name, block);
         RegisterBlockItem(name, ToReturn);
         return ToReturn;
     }
 
-    //BlockItem register
-    private static <T extends Block> RegistryObject<Item> RegisterBlockItem(String name, RegistryObject<T> block){
-        return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+    private static <T extends Block> void RegisterBlockItem(String name, RegistryObject<T> block){
+        ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 
     //Final register

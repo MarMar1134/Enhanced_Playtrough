@@ -30,11 +30,24 @@
         "recipe": "enhanced_playthrough:walnut_hanging_sign"
       },
       "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_walnut_hanging_sign": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:walnut_hanging_sign"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
     }
   },
   "requirements": [
     [
       "has_stripped_walnut_log",
+      "has_walnut_hanging_sign",
       "has_chain",
       "has_the_recipe"
     ]

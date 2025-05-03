@@ -12,9 +12,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
-import net.minecraft.world.level.levelgen.placement.HeightRangePlacement;
-import net.minecraft.world.level.levelgen.placement.PlacedFeature;
-import net.minecraft.world.level.levelgen.placement.PlacementModifier;
+import net.minecraft.world.level.levelgen.placement.*;
 
 import java.util.List;
 
@@ -28,8 +26,25 @@ public class ModPlacedFeatures {
 
     //Nature
     public static final ResourceKey<PlacedFeature> LIMESTONE_PLACED_KEY = registerKey("limestone_placed");
-    public static final ResourceKey<PlacedFeature> GRAVEL_MUD_PLACED_KEY = registerKey("gravel_mud_placed");
-    public static final ResourceKey<PlacedFeature> SAND_MUD_PLACED_KEY = registerKey("sand_mud_placed");
+    public static final ResourceKey<PlacedFeature> MUD_PATCH_PLACED_KEY = registerKey("mud_patch_placed");
+
+    //Wild crops
+    public static final ResourceKey<PlacedFeature> WILD_WHEAT_PLACED_KEY = registerKey("wild_wheat_placed");
+    public static final ResourceKey<PlacedFeature> WILD_TOMATO_PLACED_KEY = registerKey("wild_tomato_placed");
+    public static final ResourceKey<PlacedFeature> WILD_CORN_PLACED_KEY = registerKey("wild_corn_placed");
+
+    //Plants
+    public static final ResourceKey<PlacedFeature> TALL_REEDS_OVERWORLD_PLACED_KEY = registerKey("tall_reeds_overworld_placed");
+    public static final ResourceKey<PlacedFeature> TALL_REEDS_SWAMP_PLACED_KEY = registerKey("tall_reeds_swamp_placed");
+
+    public static final ResourceKey<PlacedFeature> REEDS_OVERWORLD_PLACED_KEY = registerKey("reeds_overworld_placed");
+
+    public static final ResourceKey<PlacedFeature> SMALL_REEDS_OVERWORLD_PLACED_KEY = registerKey("small_reeds_overworld_placed");
+    public static final ResourceKey<PlacedFeature> SMALL_REEDS_PLATEAU_PLACED_KEY = registerKey("small_reeds_plateau_placed");
+
+    public static final ResourceKey<PlacedFeature> WATER_REEDS_OVERWORLD_PLACED_KEY = registerKey("water_reeds_overworld_placed");
+    public static final ResourceKey<PlacedFeature> WATER_REEDS_SWAMP_PLACED_KEY = registerKey("water_reeds_swamp_placed");
+    public static final ResourceKey<PlacedFeature> WATER_REEDS_LUSH_CAVES_PLACED_KEY = registerKey("water_reeds_lush_caves_placed");
 
     //Ores
     public static final ResourceKey<PlacedFeature> NETHER_COPPER_ORE_PLACED_KEY = registerKey("nether_copper_ore_placed");
@@ -57,17 +72,13 @@ public class ModPlacedFeatures {
 
     public static final ResourceKey<PlacedFeature> NETHER_GARNET_ORE_PLACED_KEY = registerKey("nether_garnet_ore_placed");
 
-    public static void bootstrap(BootstapContext<PlacedFeature> context) {
+    public static void  bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
         //Mud
-        register(context, GRAVEL_MUD_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.GRAVEL_MUD_KEY),
+        register(context, MUD_PATCH_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.MUD_PATCH_KEY),
                 ModOrePlacement.commonOrePlacement(5,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(-6), VerticalAnchor.absolute(66))));
-
-        register(context, SAND_MUD_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SAND_MUD_KEY),
-                ModOrePlacement.commonOrePlacement(3,
-                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-6), VerticalAnchor.absolute(60))));
 
         //Limestone
         register(context, LIMESTONE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.LIMESTONE_KEY),
@@ -130,10 +141,10 @@ public class ModPlacedFeatures {
                         HeightRangePlacement.triangle(VerticalAnchor.absolute(-40), VerticalAnchor.absolute(120))));
 
         //Rubi
-        register(context, RUBI_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.RUBI_ORE_KEY),
+        register(context, RUBI_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.RUBY_ORE_KEY),
                 ModOrePlacement.commonOrePlacement(8,
                         HeightRangePlacement.triangle(VerticalAnchor.absolute(-40), VerticalAnchor.absolute(120))));
-        register(context, EXTRA_RUBI_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.EXTRA_RUBI_ORE_KEY),
+        register(context, EXTRA_RUBI_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.EXTRA_RUBY_ORE_KEY),
                 ModOrePlacement.commonOrePlacement(5,
                         HeightRangePlacement.triangle(VerticalAnchor.absolute(-40), VerticalAnchor.absolute(120))));
 
@@ -167,6 +178,35 @@ public class ModPlacedFeatures {
             register(context, LIME_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.LIME_KEY),
                     VegetationPlacements.treePlacement(PlacementUtils.countExtra(2, 0.1f, 1),
                             ModBlocks.LIME_SAPLING.get()));
+
+        //Wild crops
+        register(context, WILD_WHEAT_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.WILD_WHEAT_KEY),
+                List.of(new PlacementModifier[]{RarityFilter.onAverageOnceEvery(30), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()}));
+        register(context, WILD_TOMATO_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.WILD_TOMATO_KEY),
+                List.of(new PlacementModifier[]{RarityFilter.onAverageOnceEvery(40), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()}));
+        register(context, WILD_CORN_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.WILD_CORN_KEY),
+                List.of(new PlacementModifier[]{RarityFilter.onAverageOnceEvery(40), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()}));
+
+        //Plants
+        register(context, TALL_REEDS_OVERWORLD_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.TALL_REEDS_KEY),
+                List.of(new PlacementModifier[]{RarityFilter.onAverageOnceEvery(20), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()}));
+        register(context, TALL_REEDS_SWAMP_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.TALL_REEDS_KEY),
+                List.of(new PlacementModifier[]{RarityFilter.onAverageOnceEvery(3), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()}));
+
+        register(context, REEDS_OVERWORLD_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.REEDS_KEY),
+                List.of(new PlacementModifier[]{RarityFilter.onAverageOnceEvery(3), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()}));
+
+        register(context, SMALL_REEDS_OVERWORLD_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SMALL_REEDS_OVERWORLD_KEY),
+                List.of(new PlacementModifier[]{RarityFilter.onAverageOnceEvery(3), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()}));
+        register(context, SMALL_REEDS_PLATEAU_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SMALL_REEDS_PLATEAU_KEY),
+                List.of(new PlacementModifier[]{RarityFilter.onAverageOnceEvery(6), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()}));
+
+        register(context, WATER_REEDS_OVERWORLD_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.WATER_REEDS_OVERWORLD_KEY),
+                List.of(new PlacementModifier[]{RarityFilter.onAverageOnceEvery(10), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()}));
+        register(context, WATER_REEDS_SWAMP_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.WATER_REEDS_SWAMP_KEY),
+                List.of(new PlacementModifier[]{RarityFilter.onAverageOnceEvery(2), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()}));
+        register(context, WATER_REEDS_LUSH_CAVES_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.WATER_REEDS_LUSH_CAVES_KEY),
+                List.of(new PlacementModifier[]{RarityFilter.onAverageOnceEvery(4), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()}));
     }
 
 

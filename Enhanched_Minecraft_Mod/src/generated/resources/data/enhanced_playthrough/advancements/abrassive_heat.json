@@ -21,7 +21,7 @@
       "translate": "advancement.enhanced_playthrough.desc.survival.abrassive_heat"
     },
     "frame": "task",
-    "hidden": true,
+    "hidden": false,
     "icon": {
       "item": "enhanced_playthrough:brass_ingot"
     },

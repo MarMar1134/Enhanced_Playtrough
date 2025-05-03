@@ -1,0 +1,46 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cobble": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:cobble"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_stone_hoe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:stone_hoe"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:stone_hoe"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_cobble",
+      "has_stone_hoe",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:stone_hoe"
+    ]
+  },
+  "sends_telemetry_event": false
+}

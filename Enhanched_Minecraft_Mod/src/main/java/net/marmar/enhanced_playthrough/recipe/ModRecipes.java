@@ -63,7 +63,7 @@ public class ModRecipes {
         public static final RegistryObject<RecipeType<MechanicalGrindRecipe>> MECHANICAL_GRINDING_TYPE =
                 RECIPE_TYPE.register("mechanical_grinding", () -> MechanicalGrindRecipe.Type.INSTANCE);
 
-    public static void Register(IEventBus eventBus){
+    public static void register(IEventBus eventBus){
         RECIPE_SERIALIZER.register(eventBus);
         RECIPE_TYPE.register(eventBus);
     }

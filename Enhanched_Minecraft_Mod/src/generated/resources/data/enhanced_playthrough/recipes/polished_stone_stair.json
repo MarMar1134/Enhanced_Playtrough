@@ -1,15 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "building",
+  "group": "polished_stone_stair",
   "key": {
-    "A": {
+    "#": {
       "item": "enhanced_playthrough:polished_stone"
     }
   },
   "pattern": [
-    "A  ",
-    "AA ",
-    "AAA"
+    "#  ",
+    "## ",
+    "###"
   ],
   "result": {
     "count": 4,

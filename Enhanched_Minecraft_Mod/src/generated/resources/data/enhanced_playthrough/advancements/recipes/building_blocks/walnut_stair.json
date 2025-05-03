@@ -18,11 +18,24 @@
         ]
       },
       "trigger": "minecraft:inventory_changed"
+    },
+    "has_walnut_stair": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:walnut_stair"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
     }
   },
   "requirements": [
     [
       "has_walnut_planks",
+      "has_walnut_stair",
       "has_the_recipe"
     ]
   ],

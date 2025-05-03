@@ -1,7 +1,7 @@
 package net.marmar.enhanced_playthrough.menu.basicfurnace;
 
 import net.marmar.enhanced_playthrough.block.custom.basicfurnace.entity.AbstractBasicFurnaceBlockEntity;
-import net.marmar.enhanced_playthrough.tag.ModTags;
+import net.marmar.enhanced_playthrough.data.tag.ModTags;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;

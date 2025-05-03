@@ -3,7 +3,7 @@
   "category": "equipment",
   "key": {
     "#": {
-      "item": "minecraft:stick"
+      "tag": "forge:rods/wooden"
     },
     "I": {
       "item": "enhanced_playthrough:blue_gold_ingot"
