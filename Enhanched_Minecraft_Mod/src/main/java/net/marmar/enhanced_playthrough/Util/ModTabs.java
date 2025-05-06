@@ -26,6 +26,8 @@ public class ModTabs {
                         output.accept(ModBlocks.ADOBE_FURNACE.get());
                         output.accept(ModBlocks.SOUL_FURNACE.get());
 
+                        output.accept(ModBlocks.MASONRY_FURNACE.get());
+
                         output.accept(ModBlocks.ADOBE_ALLOYING_FURNACE.get());
                         output.accept(ModBlocks.SUPER_ALLOYING_FURNACE.get());
                         output.accept(ModBlocks.SOUL_ALLOY_FURNACE.get());
@@ -531,6 +533,10 @@ public class ModTabs {
                         output.accept(ModBlocks.DRIPSTONE_SLAB.get());
                         output.accept(ModBlocks.DRIPSTONE_STAIRS.get());
                         output.accept(ModBlocks.DRIPSTONE_WALL.get());
+
+                        output.accept(ModBlocks.CALCITE_SLAB.get());
+                        output.accept(ModBlocks.CALCITE_STAIRS.get());
+                        output.accept(ModBlocks.CALCITE_WALL.get());
 
                         output.accept(ModBlocks.POLISHED_STONE.get());
                         output.accept(ModBlocks.POLISHED_STONE_SLAB.get());

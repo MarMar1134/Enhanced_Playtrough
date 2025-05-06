@@ -2,15 +2,33 @@ package net.marmar.enhanced_playthrough.event;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.block.ModBlockEntities;
+import net.marmar.enhanced_playthrough.block.custom.wood.ModWoodTypes;
+import net.marmar.enhanced_playthrough.entity.ModEntities;
+import net.marmar.enhanced_playthrough.entity.model.ModBoatRenderer;
 import net.marmar.enhanced_playthrough.entity.model.ModModelLayers;
+import net.marmar.enhanced_playthrough.menu.ModMenuTypes;
+import net.marmar.enhanced_playthrough.menu.alloyfurnace.screen.AdobeAlloyFurnaceScreen;
+import net.marmar.enhanced_playthrough.menu.alloyfurnace.screen.SoulAlloyScreen;
+import net.marmar.enhanced_playthrough.menu.alloyfurnace.screen.SuperAlloyFurnaceScreen;
+import net.marmar.enhanced_playthrough.menu.modfurnace.screen.AdobeFurnaceScreen;
+import net.marmar.enhanced_playthrough.menu.modfurnace.screen.SoulFurnaceScreen;
+import net.marmar.enhanced_playthrough.menu.gempolisher.screen.GemPolisherScreen;
+import net.marmar.enhanced_playthrough.menu.grinder.screen.MechanicalGrinderScreen;
+import net.marmar.enhanced_playthrough.menu.grinder.screen.PrimalGrinderScreen;
+import net.marmar.enhanced_playthrough.menu.modfurnace.screen.MasonryFurnaceScreen;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.model.BoatModel;
 import net.minecraft.client.model.ChestBoatModel;
+import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.blockentity.HangingSignRenderer;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
+import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 
 @Mod.EventBusSubscriber(modid = EnhancedPlaythrough.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class ModClientEvents {
@@ -40,4 +58,38 @@ public class ModClientEvents {
         event.registerBlockEntityRenderer(ModBlockEntities.HANGING_SIGN_BLOCK_ENTITY.get(), HangingSignRenderer::new);
     }
 
+    @SubscribeEvent
+    public static void subscribeEntities(FMLClientSetupEvent event){
+        //Boats
+        EntityRenderers.register(ModEntities.MOD_BOAT.get(), context -> new ModBoatRenderer(context, false));
+        EntityRenderers.register(ModEntities.MOD_CHEST_BOAT.get(), context -> new ModBoatRenderer(context, true));
+
+        //Cobble
+        EntityRenderers.register(ModEntities.THROWABLE_COBBLE.get(), ThrownItemRenderer::new);
+    }
+
+    @SubscribeEvent
+    public static void subscribeMenus(FMLClientSetupEvent onClientSetup){
+        MenuScreens.register(ModMenuTypes.ADOBE_FURNACE_MENU.get(), AdobeFurnaceScreen::new);
+        MenuScreens.register(ModMenuTypes.SOUL_FURNACE_MENU.get(), SoulFurnaceScreen::new);
+
+        MenuScreens.register(ModMenuTypes.MASONRY_FURNACE_MENU.get(), MasonryFurnaceScreen::new);
+
+        MenuScreens.register(ModMenuTypes.ADOBE_ALLOYING_FURNACE_MENU.get(), AdobeAlloyFurnaceScreen::new);
+        MenuScreens.register(ModMenuTypes.SUPER_ALLOYING_FURNACE_MENU.get(), SuperAlloyFurnaceScreen::new);
+        MenuScreens.register(ModMenuTypes.SOUL_ALLOY_FURNACE_MENU.get(), SoulAlloyScreen::new);
+
+        MenuScreens.register(ModMenuTypes.GEM_POLISHER_MENU.get(), GemPolisherScreen::new);
+
+        MenuScreens.register(ModMenuTypes.PRIMAL_GRINDER_MENU.get(), PrimalGrinderScreen::new);
+        MenuScreens.register(ModMenuTypes.MECHANICAL_GRINDER_MENU.get(), MechanicalGrinderScreen::new);
+    }
+
+    @SubscribeEvent
+    public static void subscribeWoodTypes(FMLClientSetupEvent event){
+        Sheets.addWoodType(ModWoodTypes.WALNUT);
+        Sheets.addWoodType(ModWoodTypes.APPLE);
+        Sheets.addWoodType(ModWoodTypes.ORANGE);
+        Sheets.addWoodType(ModWoodTypes.LEMON);
+    }
 }

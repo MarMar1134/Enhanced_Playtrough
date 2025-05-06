@@ -4,11 +4,12 @@ import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.menu.alloyfurnace.AdobeAlloyFurnaceMenu;
 import net.marmar.enhanced_playthrough.menu.alloyfurnace.SoulAlloyFurnaceMenu;
 import net.marmar.enhanced_playthrough.menu.alloyfurnace.SuperAlloyFurnaceMenu;
-import net.marmar.enhanced_playthrough.menu.basicfurnace.AdobeFurnaceMenu;
-import net.marmar.enhanced_playthrough.menu.basicfurnace.SoulFurnaceMenu;
+import net.marmar.enhanced_playthrough.menu.modfurnace.AdobeFurnaceMenu;
+import net.marmar.enhanced_playthrough.menu.modfurnace.SoulFurnaceMenu;
 import net.marmar.enhanced_playthrough.menu.gempolisher.GemPolisherMenu;
 import net.marmar.enhanced_playthrough.menu.grinder.MechanicalGrinderMenu;
 import net.marmar.enhanced_playthrough.menu.grinder.PrimalGrinderMenu;
+import net.marmar.enhanced_playthrough.menu.modfurnace.MasonryFurnaceMenu;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraftforge.common.extensions.IForgeMenuType;
@@ -26,6 +27,9 @@ public class ModMenuTypes {
             registerMenuType("adobe_furnace_menu", AdobeFurnaceMenu::new);
     public static final RegistryObject<MenuType<SoulFurnaceMenu>> SOUL_FURNACE_MENU =
             registerMenuType("soul_furnace_menu", SoulFurnaceMenu::new);
+
+    public static final RegistryObject<MenuType<MasonryFurnaceMenu>> MASONRY_FURNACE_MENU =
+            registerMenuType("masonry_furnace_menu", MasonryFurnaceMenu::new);
 
     public static final RegistryObject<MenuType<AdobeAlloyFurnaceMenu>> ADOBE_ALLOYING_FURNACE_MENU =
             registerMenuType("adobe_alloying_furnace_menu", AdobeAlloyFurnaceMenu::new);

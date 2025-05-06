@@ -320,25 +320,13 @@
   },
   "minecraft:recipes/combat/stone_sword": {
     "criteria": {
-      "has_cobblestone": "2024-07-18 18:35:38 -0300"
+      "has_cobble": "2025-05-03 16:53:50 -0300"
     },
     "done": true
   },
   "minecraft:recipes/decorations/cobblestone_wall": {
     "criteria": {
       "has_cobblestone": "2024-07-18 18:35:38 -0300"
-    },
-    "done": true
-  },
-  "minecraft:recipes/tools/stone_pickaxe": {
-    "criteria": {
-      "has_cobble_item": "2025-04-23 17:43:30 -0300"
-    },
-    "done": true
-  },
-  "minecraft:recipes/tools/stone_axe": {
-    "criteria": {
-      "has_cobble_item": "2025-04-23 17:43:30 -0300"
     },
     "done": true
   },
@@ -387,18 +375,6 @@
   "minecraft:recipes/building_blocks/cobblestone_stairs": {
     "criteria": {
       "has_cobblestone": "2024-07-18 18:35:38 -0300"
-    },
-    "done": true
-  },
-  "minecraft:recipes/tools/stone_hoe": {
-    "criteria": {
-      "has_cobble_item": "2025-04-23 17:43:30 -0300"
-    },
-    "done": true
-  },
-  "minecraft:recipes/tools/stone_shovel": {
-    "criteria": {
-      "has_cobble_item": "2025-04-23 17:43:30 -0300"
     },
     "done": true
   },
@@ -2818,12 +2794,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/tools/stone_polisher": {
-    "criteria": {
-      "has_cobble_item": "2025-04-23 17:43:30 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:recipes/building_blocks/polished_stone_stair_from_stone_cutting_stone": {
     "criteria": {
       "has_stone": "2024-12-27 12:21:55 -0300"
@@ -2908,24 +2878,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/misc/tin_block": {
-    "criteria": {
-      "has_tin_ingot": "2024-12-27 12:27:06 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/tin_ingot": {
-    "criteria": {
-      "has_tin_ingot": "2024-12-27 12:27:06 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/tin_nugget": {
-    "criteria": {
-      "has_tin_ingot": "2024-12-27 12:27:06 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:recipes/bronze_ingot_from_super_alloying_copper_ingot_and_tin_ingot": {
     "criteria": {
       "has_tin_ingot": "2024-12-27 12:27:06 -0300"
@@ -2951,12 +2903,6 @@
     "done": true
   },
   "enhanced_playthrough:recipes/brass_ingot_from_super_alloying_zinc_ingot_and_copper_ingot": {
-    "criteria": {
-      "has_copper_ingot": "2024-12-27 12:27:16 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/copper_nugget": {
     "criteria": {
       "has_copper_ingot": "2024-12-27 12:27:16 -0300"
     },
@@ -3172,12 +3118,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/misc/bronze_ingot": {
-    "criteria": {
-      "has_bronze_ingot": "2024-12-27 12:39:53 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:recipes/combat/bronze_chestplate": {
     "criteria": {
       "has_bronze_ingot": "2024-12-27 12:39:53 -0300"
@@ -3274,12 +3214,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/bronzium_chestplate_from_smithing_brass_chestplate_with_bronze_ingot": {
-    "criteria": {
-      "has_brass_chestplate": "2025-02-25 12:30:10 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/misc/host_armor_trim_smithing_template_smithing_trim": {
     "criteria": {
       "has_smithing_trim_template": "2025-02-25 12:30:15 -0300"
@@ -3353,12 +3287,6 @@
     "done": true
   },
   "enhanced_playthrough:recipes/combat/silver_boots": {
-    "criteria": {
-      "has_silver_ingot": "2025-02-25 12:33:02 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/silver_ingot": {
     "criteria": {
       "has_silver_ingot": "2025-02-25 12:33:02 -0300"
     },
@@ -3544,27 +3472,9 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/misc/zinc_nugget": {
-    "criteria": {
-      "has_zinc_ingot": "2025-04-08 22:37:35 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/zinc_ingot": {
-    "criteria": {
-      "has_zinc_ingot": "2025-04-08 22:37:35 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:recipes/zinc_dust_from_mechanical_grinding": {
     "criteria": {
       "TagKey[minecraft:item / enhanced_playthrough:zinc_manufacturable]": "2025-04-08 22:37:35 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/zinc_block": {
-    "criteria": {
-      "has_zinc_ingot": "2025-04-08 22:37:35 -0300"
     },
     "done": true
   },
@@ -3820,12 +3730,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/bronzium_hoe_from_smithing_bronze_hoe_with_brass_ingot": {
-    "criteria": {
-      "has_bronze_hoe": "2025-04-23 12:57:38 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:recipes/bronze_dust_from_primal_grinding": {
     "criteria": {
       "TagKey[minecraft:item / enhanced_playthrough:bronze_manufacturable]": "2025-04-23 12:57:38 -0300"
@@ -3964,6 +3868,36 @@
     },
     "done": true
   },
+  "minecraft:recipes/tools/stone_pickaxe": {
+    "criteria": {
+      "has_cobble": "2025-05-03 16:53:50 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/stone_axe": {
+    "criteria": {
+      "has_cobble": "2025-05-03 16:53:50 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/stone_hoe": {
+    "criteria": {
+      "has_cobble": "2025-05-03 16:53:50 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/stone_shovel": {
+    "criteria": {
+      "has_cobble": "2025-05-03 16:53:50 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/stone_polisher": {
+    "criteria": {
+      "has_cobble": "2025-05-03 16:53:50 -0300"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/cobbled_deepslate": {
     "criteria": {
       "has_deepslate_cobble": "2025-04-23 17:43:30 -0300"
@@ -3976,9 +3910,9 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/misc/vegetable_fibber": {
+  "enhanced_playthrough:recipes/misc/super_alloying_furnace": {
     "criteria": {
-      "has_reeds_head": "2025-04-23 17:45:54 -0300"
+      "has_cobbled_deepslate": "2025-04-23 17:44:09 -0300"
     },
     "done": true
   },
@@ -3988,21 +3922,69 @@
     },
     "done": true
   },
-  "minecraft:recipes/tools/stone_sword": {
-    "criteria": {
-      "has_cobble_item": "2025-04-23 17:43:30 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/misc/iron_ingot_from_blasting_deepslate_iron_ore": {
     "criteria": {
       "has_deepslate_iron_ore": "2025-04-23 17:58:40 -0300"
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/misc/super_alloying_furnace": {
+  "enhanced_playthrough:recipes/combat/steel_sword": {
     "criteria": {
-      "has_cobbled_deepslate": "2025-04-23 17:44:09 -0300"
+      "has_steel_sword": "2025-05-03 16:58:29 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/bookshelf": {
+    "criteria": {
+      "has_book": "2025-05-03 16:58:24 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/vegetable_fibber_from_reed_head": {
+    "criteria": {
+      "has_reeds_head": "2025-05-03 16:53:50 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/emerald_from_gem_polishing_raw_emerald": {
+    "criteria": {
+      "has_raw_emerald": "2025-05-03 16:57:11 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/lectern": {
+    "criteria": {
+      "has_book": "2025-05-03 16:58:24 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/chiseled_bookshelf": {
+    "criteria": {
+      "has_book": "2025-05-03 16:58:24 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/bronzium_polisher_from_smithing_bronze_polisher_with_bronzium_ingot": {
+    "criteria": {
+      "has_bronze_polisher": "2025-05-03 16:56:49 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/writable_book": {
+    "criteria": {
+      "has_book": "2025-05-03 16:58:24 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:stone_age": {
+    "criteria": {
+      "has_any_of": "2025-05-03 16:53:50 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/iron_dust_from_mechanical_grinding": {
+    "criteria": {
+      "TagKey[minecraft:item / enhanced_playthrough:iron_manufacturable]": "2025-05-03 16:58:46 -0300"
     },
     "done": true
   },

@@ -1,6 +1,6 @@
 {
   "type": "enhanced_playthrough:primal_grinding",
-  "category": "mechanical_grind",
+  "category": "grind",
   "group": "pink_dye",
   "ingredient": {
     "item": "minecraft:pink_petals"

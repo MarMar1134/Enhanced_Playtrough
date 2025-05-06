@@ -13,9 +13,9 @@ public abstract class AbstractGrindRecipe implements Recipe<SimpleContainer> {
     private final ItemStack output;
     private final ResourceLocation id;
 
-    public AbstractGrindRecipe(Ingredient input, ItemStack output, ResourceLocation id){
-        this.input = input;
-        this.output = output;
+    public AbstractGrindRecipe(Ingredient pInput, ItemStack pOutput, ResourceLocation id){
+        this.input = pInput;
+        this.output = pOutput;
         this.id = id;
     }
 

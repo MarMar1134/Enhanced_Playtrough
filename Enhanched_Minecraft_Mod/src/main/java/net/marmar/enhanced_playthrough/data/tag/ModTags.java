@@ -48,6 +48,7 @@ public class ModTags {
 
         //Ingredients
         public static final TagKey<Item> BASIC_INGREDIENT = itemTag("basic_ingredient");
+        public static final TagKey<Item> MASONRY_INGREDIENT = itemTag("masonry_ingredient");
         public static final TagKey<Item> ALLOY_INGREDIENT = itemTag("alloy_ingredient");
         public static final TagKey<Item> BLAST_ALLOY_INGREDIENT = itemTag("blast_alloy_ingredient");
         public static final TagKey<Item> PRIMAL_GRIND_INGREDIENT = itemTag("primal_grind_ingredient");

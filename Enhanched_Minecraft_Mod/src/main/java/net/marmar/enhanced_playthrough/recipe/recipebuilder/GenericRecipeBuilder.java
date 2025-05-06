@@ -1,5 +1,6 @@
 package net.marmar.enhanced_playthrough.recipe.recipebuilder;
 
+import com.google.gson.JsonArray;
 import net.marmar.enhanced_playthrough.recipe.GemPolishingRecipe;
 import net.marmar.enhanced_playthrough.recipe.grind.AbstractGrindRecipe;
 import net.marmar.enhanced_playthrough.recipe.recipecategory.ModRecipeCategory;
@@ -13,12 +14,14 @@ import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import javax.annotation.Nullable;
+import java.util.Optional;
 import java.util.function.Consumer;
 
 public class GenericRecipeBuilder implements RecipeBuilder {
@@ -42,9 +45,10 @@ public class GenericRecipeBuilder implements RecipeBuilder {
     public static GenericRecipeBuilder gemPolishing(Ingredient pIngredient, ItemLike pResult, String group, RecipeSerializer<? extends GemPolishingRecipe> pCookingSerializer) {
         return new GenericRecipeBuilder(pResult, 1, pIngredient, ModRecipeCategory.GEM_POLISH, group, pCookingSerializer);
     }
-    public static GenericRecipeBuilder itemGrinding(Ingredient pIngredient, ItemLike pResult, String group, int quantity, RecipeSerializer<? extends AbstractGrindRecipe> pCookingSerializer) {
-        return new GenericRecipeBuilder(pResult, quantity, pIngredient, ModRecipeCategory.MECHANICAL_GRIND, group, pCookingSerializer);
+    public static GenericRecipeBuilder itemGrinding(Ingredient pIngredient, ItemLike pResult, String group, int quantity, ModRecipeCategory pRecipeCategory, RecipeSerializer<? extends AbstractGrindRecipe> pSerializer) {
+        return new GenericRecipeBuilder(pResult, quantity, pIngredient, pRecipeCategory, group, pSerializer);
     }
+
     @Override
     public GenericRecipeBuilder unlockedBy(String pCriterionName, CriterionTriggerInstance pCriterionTrigger) {
         this.advancement.addCriterion(pCriterionName, pCriterionTrigger);
@@ -112,15 +116,14 @@ public class GenericRecipeBuilder implements RecipeBuilder {
             pJson.add("ingredient", this.ingredient.toJson());
 
             //Output
-            JsonObject outputObject = new JsonObject();
-
-            outputObject.addProperty("item", ForgeRegistries.ITEMS.getKey(this.result).toString());
+            JsonObject output = new JsonObject();
+            output.addProperty("item", ForgeRegistries.ITEMS.getKey(this.result).toString());
 
             if (this.count != 1){
-                outputObject.addProperty("count", this.count);
+                output.addProperty("count", this.count);
             }
 
-            pJson.add("output", outputObject);
+            pJson.add("output", output);
         }
 
         public RecipeSerializer<?> getType() {

@@ -1,0 +1,12 @@
+{
+  "type": "enhanced_playthrough:primal_grinding",
+  "category": "grind",
+  "group": "netherrack_rubble",
+  "ingredient": {
+    "item": "minecraft:netherrack"
+  },
+  "output": {
+    "count": 2,
+    "item": "enhanced_playthrough:netherrack_rubble"
+  }
+}

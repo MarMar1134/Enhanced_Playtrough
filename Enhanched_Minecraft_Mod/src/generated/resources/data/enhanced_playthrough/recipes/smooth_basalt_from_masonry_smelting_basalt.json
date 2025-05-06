@@ -1,0 +1,12 @@
+{
+  "type": "enhanced_playthrough:masonry_smelting",
+  "category": "masonry_smelt",
+  "cooktime": 100,
+  "group": "smooth_basalt",
+  "ingredient": {
+    "item": "minecraft:basalt"
+  },
+  "output": {
+    "item": "minecraft:smooth_basalt"
+  }
+}

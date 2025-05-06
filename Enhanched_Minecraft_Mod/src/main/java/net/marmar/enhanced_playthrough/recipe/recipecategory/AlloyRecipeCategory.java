@@ -16,7 +16,7 @@ public enum AlloyRecipeCategory {
                 return name;
             }
         }
-        return null;
+        throw new IllegalStateException("unknown alloy category");
     }
 
     public String getSerializedName() {

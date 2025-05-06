@@ -1,6 +1,6 @@
 package net.marmar.enhanced_playthrough.compat.jade;
 
-import net.marmar.enhanced_playthrough.block.custom.grinder.entity.MechanicalGrinderBlockEntity;
+import net.marmar.enhanced_playthrough.block.grinder.entity.MechanicalGrinderBlockEntity;
 import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;

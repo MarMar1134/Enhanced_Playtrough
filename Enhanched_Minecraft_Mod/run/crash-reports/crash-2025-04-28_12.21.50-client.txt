@@ -6,7 +6,7 @@ Description: Unexpected error
 
 java.lang.IllegalArgumentException: Cannot get property BooleanProperty{name=waterlogged, clazz=class java.lang.Boolean, values=[true, false]} as it does not exist in net.minecraft.world.level.material.WaterFluid$Source@60a92267
 	at net.minecraft.world.level.block.state.StateHolder.getValue(StateHolder.java:98) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar:?] {re:classloading}
-	at net.marmar.enhanced_playthrough.block.custom.WaterReedsBlock.canSurvive(WaterReedsBlock.java:31) ~[main/:?] {re:classloading}
+	at net.marmar.enhanced_playthrough.block.custom.plant.WaterReedsBlock.canSurvive(WaterReedsBlock.java:31) ~[main/:?] {re:classloading}
 	at net.minecraft.world.level.block.state.BlockBehaviour$BlockStateBase.canSurvive(BlockBehaviour.java:814) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar:?] {re:classloading}
 	at net.minecraft.world.item.BlockItem.canPlace(BlockItem.java:155) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar:?] {re:classloading}
 	at net.minecraft.world.item.BlockItem.getPlacementState(BlockItem.java:120) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar:?] {re:classloading}
@@ -50,10 +50,10 @@ A detailed walkthrough of the error, its code path and all known details is as f
 Thread: Render thread
 Suspected Mod: 
 	Enhanced Playthrough (enhanced_playthrough), Version: 1.20.1-beta-0.19.0
-		at TRANSFORMER/enhanced_playthrough@1.20.1-beta-0.19.0/net.marmar.enhanced_playthrough.block.custom.WaterReedsBlock.canSurvive(WaterReedsBlock.java:31)
+		at TRANSFORMER/enhanced_playthrough@1.20.1-beta-0.19.0/net.marmar.enhanced_playthrough.block.custom.plant.WaterReedsBlock.canSurvive(WaterReedsBlock.java:31)
 Stacktrace:
 	at net.minecraft.world.level.block.state.StateHolder.getValue(StateHolder.java:98) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?] {re:classloading}
-	at net.marmar.enhanced_playthrough.block.custom.WaterReedsBlock.canSurvive(WaterReedsBlock.java:31) ~[%23196!/:?] {re:classloading}
+	at net.marmar.enhanced_playthrough.block.custom.plant.WaterReedsBlock.canSurvive(WaterReedsBlock.java:31) ~[%23196!/:?] {re:classloading}
 	at net.minecraft.world.level.block.state.BlockBehaviour$BlockStateBase.canSurvive(BlockBehaviour.java:814) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?] {re:classloading}
 	at net.minecraft.world.item.BlockItem.canPlace(BlockItem.java:155) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?] {re:classloading}
 	at net.minecraft.world.item.BlockItem.getPlacementState(BlockItem.java:120) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?] {re:classloading}

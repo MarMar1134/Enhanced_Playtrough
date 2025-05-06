@@ -1,6 +1,6 @@
 {
   "type": "enhanced_playthrough:primal_grinding",
-  "category": "mechanical_grind",
+  "category": "grind",
   "group": "orange_dye",
   "ingredient": {
     "item": "minecraft:torchflower"

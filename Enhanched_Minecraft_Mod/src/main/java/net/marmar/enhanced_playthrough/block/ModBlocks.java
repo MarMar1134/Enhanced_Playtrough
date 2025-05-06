@@ -1,25 +1,26 @@
 package net.marmar.enhanced_playthrough.block;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
-import net.marmar.enhanced_playthrough.block.crops.*;
-import net.marmar.enhanced_playthrough.block.custom.TallReedsBlock;
-import net.marmar.enhanced_playthrough.block.custom.WaterReedsBlock;
-import net.marmar.enhanced_playthrough.block.custom.alloyfurnace.AdobeAlloyFurnaceBlock;
-import net.marmar.enhanced_playthrough.block.custom.alloyfurnace.SoulAlloyFurnaceBlock;
-import net.marmar.enhanced_playthrough.block.custom.alloyfurnace.SuperAlloyFurnaceBlock;
-import net.marmar.enhanced_playthrough.block.custom.basicfurnace.AdobeFurnaceBlock;
-import net.marmar.enhanced_playthrough.block.custom.basicfurnace.SoulFurnaceBlock;
-import net.marmar.enhanced_playthrough.block.custom.gempolisher.GemPolisherBlock;
-import net.marmar.enhanced_playthrough.block.custom.grinder.MechanicalGrinderBlock;
-import net.marmar.enhanced_playthrough.block.custom.grinder.PrimalGrinderBlock;
-import net.marmar.enhanced_playthrough.block.wood.ModLeavesBlock;
-import net.marmar.enhanced_playthrough.block.wood.ModLogsBlock;
-import net.marmar.enhanced_playthrough.block.wood.ModPlanksBlock;
-import net.marmar.enhanced_playthrough.block.wood.ModWoodTypes;
-import net.marmar.enhanced_playthrough.block.wood.sign.ModHangingSignBlock;
-import net.marmar.enhanced_playthrough.block.wood.sign.ModStandingSignBlock;
-import net.marmar.enhanced_playthrough.block.wood.sign.ModWallHangingSignBlock;
-import net.marmar.enhanced_playthrough.block.wood.sign.ModWallSignBlock;
+import net.marmar.enhanced_playthrough.block.custom.plant.TallReedsBlock;
+import net.marmar.enhanced_playthrough.block.custom.plant.WaterReedsBlock;
+import net.marmar.enhanced_playthrough.block.alloyfurnace.AdobeAlloyFurnaceBlock;
+import net.marmar.enhanced_playthrough.block.alloyfurnace.SoulAlloyFurnaceBlock;
+import net.marmar.enhanced_playthrough.block.alloyfurnace.SuperAlloyFurnaceBlock;
+import net.marmar.enhanced_playthrough.block.custom.crop.*;
+import net.marmar.enhanced_playthrough.block.modfurnace.AdobeFurnaceBlock;
+import net.marmar.enhanced_playthrough.block.modfurnace.SoulFurnaceBlock;
+import net.marmar.enhanced_playthrough.block.gempolisher.GemPolisherBlock;
+import net.marmar.enhanced_playthrough.block.grinder.MechanicalGrinderBlock;
+import net.marmar.enhanced_playthrough.block.grinder.PrimalGrinderBlock;
+import net.marmar.enhanced_playthrough.block.modfurnace.MasonryFurnaceBlock;
+import net.marmar.enhanced_playthrough.block.custom.wood.ModLeavesBlock;
+import net.marmar.enhanced_playthrough.block.custom.wood.ModLogsBlock;
+import net.marmar.enhanced_playthrough.block.custom.wood.ModPlanksBlock;
+import net.marmar.enhanced_playthrough.block.custom.wood.ModWoodTypes;
+import net.marmar.enhanced_playthrough.block.custom.wood.sign.ModHangingSignBlock;
+import net.marmar.enhanced_playthrough.block.custom.wood.sign.ModStandingSignBlock;
+import net.marmar.enhanced_playthrough.block.custom.wood.sign.ModWallHangingSignBlock;
+import net.marmar.enhanced_playthrough.block.custom.wood.sign.ModWallSignBlock;
 import net.marmar.enhanced_playthrough.item.ModItems;
 import net.marmar.enhanced_playthrough.worldgen.tree.grower.*;
 import net.minecraft.sounds.SoundEvents;
@@ -244,6 +245,14 @@ public class ModBlocks {
         public static final RegistryObject<Block> DRIPSTONE_WALL = registerBlockWithItem("dripstone_wall",
                 () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL).requiresCorrectToolForDrops()));
 
+        //Calcite
+        public static final RegistryObject<Block> CALCITE_SLAB = registerBlockWithItem("calcite_slab",
+                () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB).requiresCorrectToolForDrops()));
+        public static final RegistryObject<Block> CALCITE_STAIRS = registerBlockWithItem("calcite_stair",
+                () -> new StairBlock(Blocks.CALCITE::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).requiresCorrectToolForDrops()));
+        public static final RegistryObject<Block> CALCITE_WALL = registerBlockWithItem("calcite_wall",
+                () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL).requiresCorrectToolForDrops()));
+
         //Polished stone
         public static final RegistryObject<Block> POLISHED_STONE = registerBlockWithItem("polished_stone",
                 () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).requiresCorrectToolForDrops()));
@@ -386,6 +395,10 @@ public class ModBlocks {
                 () -> new AdobeFurnaceBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.COBBLESTONE).noOcclusion()));
         public static final RegistryObject<Block> SOUL_FURNACE = registerBlockWithItem("soul_furnace",
                 () -> new SoulFurnaceBlock(BlockBehaviour.Properties.copy(ModBlocks.SOUL_MUD.get()).noOcclusion()));
+
+        //Masonry furnace
+        public static final RegistryObject<Block> MASONRY_FURNACE = registerBlockWithItem("masonry_furnace",
+                () -> new MasonryFurnaceBlock(BlockBehaviour.Properties.copy(Blocks.BRICKS).noOcclusion()));
 
         //Alloy furnaces
         public static final RegistryObject<Block> ADOBE_ALLOYING_FURNACE = registerBlockWithItem("adobe_alloying_furnace",

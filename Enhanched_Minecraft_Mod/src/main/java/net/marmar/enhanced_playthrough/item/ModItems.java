@@ -10,6 +10,7 @@ import net.marmar.enhanced_playthrough.item.custom.ModBoatItem;
 import net.marmar.enhanced_playthrough.item.custom.ModSmithingTemplateItem;
 import net.marmar.enhanced_playthrough.item.custom.MateItem;
 import net.marmar.enhanced_playthrough.item.custom.PolisherItem;
+import net.marmar.enhanced_playthrough.item.custom.cobble.CobbleItem;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.LivingEntity;
@@ -143,15 +144,15 @@ public class ModItems {
 
     //Cobble
     public static final RegistryObject<Item> COBBLE = ITEMS.register(
-            "cobble", () -> new Item(new Item.Properties()));
+            "cobble", () -> new CobbleItem(new Item.Properties()));
     public static final RegistryObject<Item> LIMESTONE_COBBLE = ITEMS.register(
-            "limestone_cobble", () -> new Item(new Item.Properties()));
+            "limestone_cobble", () -> new CobbleItem(new Item.Properties()));
     public static final RegistryObject<Item> DEEPSLATE_COBBLE = ITEMS.register(
-            "deepslate_cobble", () -> new Item(new Item.Properties()));
+            "deepslate_cobble", () -> new CobbleItem(new Item.Properties()));
     public static final RegistryObject<Item> NETHERRACK_RUBBLE = ITEMS.register(
-            "netherrack_rubble", () -> new Item(new Item.Properties()));
+            "netherrack_rubble", () -> new CobbleItem(new Item.Properties()));
     public static final RegistryObject<Item> BLACKSTONE_COBBLE = ITEMS.register(
-            "black_cobble", () -> new Item(new Item.Properties()));
+            "black_cobble", () -> new CobbleItem(new Item.Properties()));
 
     //Other materials
     public static final RegistryObject<Item> MUD_BRICK = ITEMS.register(
@@ -232,9 +233,7 @@ public class ModItems {
 
         //Silver
         public static final RegistryObject<Item> SILVER_SWORD = ITEMS.register(
-                "silver_sword",() -> new SwordItem(ModTiers.SILVER, 1, -2.4F, new Item.Properties()){
-
-                });
+                "silver_sword",() -> new SwordItem(ModTiers.SILVER, 1, -2.4F, new Item.Properties()));
         public static final RegistryObject<Item> SILVER_PICKAXE = ITEMS.register(
                 "silver_pickaxe",() -> new PickaxeItem(ModTiers.SILVER, -2, -2.8F, new Item.Properties()));
         public static final RegistryObject<Item> SILVER_AXE = ITEMS.register(

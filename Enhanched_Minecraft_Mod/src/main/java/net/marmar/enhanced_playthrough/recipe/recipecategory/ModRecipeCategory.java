@@ -9,7 +9,8 @@ public enum ModRecipeCategory implements StringRepresentable{
     MECHANICAL_GRIND("mechanical_grind"),
     GRIND("grind"),
     BASIC_SMELT("basic_smelt"),
-    SOUL_BASIC_SMELT("soul_basic_smelt")
+    SOUL_BASIC_SMELT("soul_basic_smelt"),
+    MASONRY_SMELT("masonry_smelt")
     ;
 
     public static final StringRepresentable.EnumCodec<ModRecipeCategory> CODEC = StringRepresentable.fromEnum(ModRecipeCategory::values);

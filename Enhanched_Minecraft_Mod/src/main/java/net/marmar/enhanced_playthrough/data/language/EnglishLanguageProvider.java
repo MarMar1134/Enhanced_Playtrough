@@ -3,7 +3,6 @@ package net.marmar.enhanced_playthrough.data.language;
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.block.ModBlocks;
 import net.marmar.enhanced_playthrough.Util.enchantment.ModEnchantments;
-import net.marmar.enhanced_playthrough.entity.ModEntities;
 import net.marmar.enhanced_playthrough.item.ModItems;
 import net.minecraft.data.PackOutput;
 
@@ -29,6 +28,7 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
         //JEI
         addJeiCategory("adobe_furnace", "Basic smelting");
         addJeiCategory("soul_furnace", "Soul basic smelting");
+        addJeiCategory("masonry_furnace", "Masonry furnace");
         addJeiCategory("adobe_alloying_furnace", "Alloying");
         addJeiCategory("super_alloying_furnace", "Blast alloying");
         addJeiCategory("gem_polisher", "Gem polishing");
@@ -39,6 +39,8 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
         addJadeConfigTranslation("basic_furnace", "Basic furnace");
 
         addJadeConfigTranslation("alloy_furnace", "Alloy furnace");
+
+        addJadeConfigTranslation("masonry_furnace", "Masonry furnace");
 
         addJadeConfigTranslation("gem_polisher", "Gem polisher");
         this.add("jade." + EnhancedPlaythrough.MOD_ID + ".gem_polisher_uses", "Uses left: %d");
@@ -61,7 +63,8 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
 
         //Death messages
         addDeathMessages("tallReed", "was poked to death by a giant reed",
-                "was poked to death by a giant reed whilst trying to escape ");
+                "was poked to death by a giant reed whilst trying to escape");
+        addDeathMessages("cobble", "died from a piece of cobble to the head thrown by");
 
         //Advancements
             //Survival
@@ -105,8 +108,9 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
                     "Collect all the gems and become the lord of chaos");
 
         //Entities
-        addBoatEntity(ModEntities.MOD_BOAT, "Boat");
-        addChestBoatEntity(ModEntities.MOD_CHEST_BOAT, "Boat with chest");
+        addBoatEntity("Boat");
+        addChestBoatEntity("Boat with chest");
+        addThrowableCobbleEntity("Cobble");
 
         //Blocks
             //Wild crops
@@ -298,6 +302,7 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
             //Block entities
             addBlock(ModBlocks.ADOBE_FURNACE, "Mud furnace");
             addBlock(ModBlocks.SOUL_FURNACE, "Soul mud furnace");
+            addBlock(ModBlocks.MASONRY_FURNACE, "Masonry furnace");
             addBlock(ModBlocks.ADOBE_ALLOYING_FURNACE, "Bricks alloy furnace");
             addBlock(ModBlocks.SOUL_ALLOY_FURNACE, "Soul bricks alloy furnace");
             addBlock(ModBlocks.SUPER_ALLOYING_FURNACE, "Blast alloy furnace");

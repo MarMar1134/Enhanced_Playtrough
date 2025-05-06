@@ -1,6 +1,7 @@
 package net.marmar.enhanced_playthrough.recipe.alloy;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
+import net.marmar.enhanced_playthrough.block.ModBlocks;
 import net.marmar.enhanced_playthrough.recipe.ModRecipes;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
@@ -51,7 +52,10 @@ public class AlloyRecipe extends AbstractAlloyRecipe implements Recipe<SimpleCon
         return Type.INSTANCE;
     }
 
-
+    @Override
+    public ItemStack getToastSymbol() {
+        return new ItemStack(ModBlocks.ADOBE_ALLOYING_FURNACE.get());
+    }
 
     public static class Type implements RecipeType<AlloyRecipe>{
         public static final Type INSTANCE = new Type();
@@ -113,6 +117,7 @@ public class AlloyRecipe extends AbstractAlloyRecipe implements Recipe<SimpleCon
             for (Ingredient ingredient : alloyRecipes.getIngredients()) {
                 ingredient.toNetwork(friendlyByteBuf);
             }
+
             friendlyByteBuf.writeItemStack(alloyRecipes.getResultItem(null), false);
         }
     }

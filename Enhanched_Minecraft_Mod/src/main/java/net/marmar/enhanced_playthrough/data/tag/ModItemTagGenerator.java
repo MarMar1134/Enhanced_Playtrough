@@ -141,6 +141,40 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 ModItems.EGGPLANT.get()
         );
 
+        this.tag(ModTags.Items.MASONRY_INGREDIENT).add(
+                Items.CLAY_BALL,
+                Items.BRICK,
+                Blocks.CLAY.asItem(),
+                Blocks.WHITE_TERRACOTTA.asItem(),
+                Blocks.BLACK_TERRACOTTA.asItem(),
+                Blocks.YELLOW_TERRACOTTA.asItem(),
+                Blocks.RED_TERRACOTTA.asItem(),
+                Blocks.BLUE_TERRACOTTA.asItem(),
+                Blocks.GREEN_TERRACOTTA.asItem(),
+                Blocks.BROWN_TERRACOTTA.asItem(),
+                Blocks.PURPLE_TERRACOTTA.asItem(),
+                Blocks.PINK_TERRACOTTA.asItem(),
+                Blocks.MAGENTA_TERRACOTTA.asItem(),
+                Blocks.CYAN_TERRACOTTA.asItem(),
+                Blocks.LIGHT_BLUE_TERRACOTTA.asItem(),
+                Blocks.GRAY_TERRACOTTA.asItem(),
+                Blocks.LIGHT_GRAY_TERRACOTTA.asItem(),
+                Blocks.ORANGE_TERRACOTTA.asItem(),
+                Blocks.LIME_TERRACOTTA.asItem(),
+                Blocks.NETHERRACK.asItem(),
+                Blocks.COBBLESTONE.asItem(),
+                Blocks.STONE.asItem(),
+                Blocks.STONE_BRICKS.asItem(),
+                Blocks.COBBLED_DEEPSLATE.asItem(),
+                Blocks.DEEPSLATE.asItem(),
+                Blocks.DEEPSLATE_BRICKS.asItem(),
+                Blocks.DEEPSLATE_TILES.asItem(),
+                Blocks.SAND.asItem(),
+                Blocks.RED_SAND.asItem(),
+                Blocks.SANDSTONE.asItem(),
+                Blocks.RED_SANDSTONE.asItem()
+        );
+
         this.tag(ModTags.Items.ALLOY_INGREDIENT).add(
                 Items.RAW_COPPER,
                 Items.RAW_IRON,
@@ -168,6 +202,12 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         ModTags.Items.BRASS_MANUFACTURABLE,
                         ModTags.Items.BRONZE_MANUFACTURABLE
         ).add(
+                ModBlocks.COBBLED_LIMESTONE.get().asItem(),
+                Blocks.COBBLESTONE.asItem(),
+                Blocks.COBBLED_DEEPSLATE.asItem(),
+                ModBlocks.SMALL_REEDS.get().asItem(),
+                ModBlocks.REEDS.get().asItem(),
+                ModBlocks.TALL_REEDS.get().asItem(),
                 ModItems.YERBA_MATE.get(),
                 Items.WHEAT,
                 Items.PUMPKIN,

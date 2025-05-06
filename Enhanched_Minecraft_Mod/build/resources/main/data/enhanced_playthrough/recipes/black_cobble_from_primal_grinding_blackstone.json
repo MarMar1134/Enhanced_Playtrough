@@ -1,0 +1,12 @@
+{
+  "type": "enhanced_playthrough:primal_grinding",
+  "category": "grind",
+  "group": "blackstone_cobble",
+  "ingredient": {
+    "item": "minecraft:blackstone"
+  },
+  "output": {
+    "count": 2,
+    "item": "enhanced_playthrough:black_cobble"
+  }
+}

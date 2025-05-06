@@ -1,16 +1,17 @@
 package net.marmar.enhanced_playthrough.block;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
-import net.marmar.enhanced_playthrough.block.custom.alloyfurnace.entity.AdobeAlloyFurnaceBlockEntity;
-import net.marmar.enhanced_playthrough.block.custom.alloyfurnace.entity.SoulAlloyFurnaceBlockEntity;
-import net.marmar.enhanced_playthrough.block.custom.alloyfurnace.entity.SuperAlloyFurnaceBlockEntity;
-import net.marmar.enhanced_playthrough.block.custom.basicfurnace.entity.AdobeFurnaceBlockEntity;
-import net.marmar.enhanced_playthrough.block.custom.basicfurnace.entity.SoulFurnaceBlockEntity;
-import net.marmar.enhanced_playthrough.block.custom.gempolisher.entity.GemPolisherBlockEntity;
-import net.marmar.enhanced_playthrough.block.custom.grinder.entity.MechanicalGrinderBlockEntity;
-import net.marmar.enhanced_playthrough.block.custom.grinder.entity.PrimalGrinderBlockEntity;
-import net.marmar.enhanced_playthrough.block.wood.sign.entity.ModHangingSignBlockEntity;
-import net.marmar.enhanced_playthrough.block.wood.sign.entity.ModSignBlockEntity;
+import net.marmar.enhanced_playthrough.block.alloyfurnace.entity.AdobeAlloyFurnaceBlockEntity;
+import net.marmar.enhanced_playthrough.block.alloyfurnace.entity.SoulAlloyFurnaceBlockEntity;
+import net.marmar.enhanced_playthrough.block.alloyfurnace.entity.SuperAlloyFurnaceBlockEntity;
+import net.marmar.enhanced_playthrough.block.modfurnace.entity.AdobeFurnaceBlockEntity;
+import net.marmar.enhanced_playthrough.block.modfurnace.entity.SoulFurnaceBlockEntity;
+import net.marmar.enhanced_playthrough.block.gempolisher.GemPolisherBlockEntity;
+import net.marmar.enhanced_playthrough.block.grinder.entity.MechanicalGrinderBlockEntity;
+import net.marmar.enhanced_playthrough.block.grinder.entity.PrimalGrinderBlockEntity;
+import net.marmar.enhanced_playthrough.block.modfurnace.entity.MasonryFurnaceBlockEntity;
+import net.marmar.enhanced_playthrough.block.custom.wood.sign.entity.ModHangingSignBlockEntity;
+import net.marmar.enhanced_playthrough.block.custom.wood.sign.entity.ModSignBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -28,6 +29,9 @@ public class ModBlockEntities {
             BLOCK_ENTITIES.register("soul_furnace", () -> BlockEntityType
                     .Builder.of(SoulFurnaceBlockEntity::new,ModBlocks.SOUL_FURNACE.get()).build(null));
 
+    public static final RegistryObject<BlockEntityType<MasonryFurnaceBlockEntity>> MASONRY_FURNACE_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("masonry_furnace", () -> BlockEntityType
+                    .Builder.of(MasonryFurnaceBlockEntity::new,ModBlocks.MASONRY_FURNACE.get()).build(null));
 
     public static final RegistryObject<BlockEntityType<AdobeAlloyFurnaceBlockEntity>> ADOBE_ALLOYING_FURNACE_BLOCK_ENTITY =
             BLOCK_ENTITIES.register("adobe_alloying_furnace", () -> BlockEntityType

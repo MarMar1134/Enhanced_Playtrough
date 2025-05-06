@@ -55,6 +55,7 @@
     "gem_polisher": true,
     "basic_furnace": true,
     "grinder": true,
+    "masonry_furnace": true,
     "alloy_furnace": true
   },
   "jade": {

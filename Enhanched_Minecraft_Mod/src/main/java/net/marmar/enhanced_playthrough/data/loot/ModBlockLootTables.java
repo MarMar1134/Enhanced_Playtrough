@@ -31,6 +31,12 @@ public class ModBlockLootTables extends BlockLootSubProvider implements ILootTab
         this.dropSelf(ModBlocks.DRIPSTONE_STAIRS.get());
         this.dropSelf(ModBlocks.DRIPSTONE_WALL.get());
 
+        //Calcite
+        this.add(ModBlocks.CALCITE_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.CALCITE_SLAB.get()));
+        this.dropSelf(ModBlocks.CALCITE_STAIRS.get());
+        this.dropSelf(ModBlocks.CALCITE_WALL.get());
+
         //Polished stone
         this.dropSelf(ModBlocks.POLISHED_STONE.get());
         this.add(ModBlocks.POLISHED_STONE_SLAB.get(),
@@ -334,6 +340,8 @@ public class ModBlockLootTables extends BlockLootSubProvider implements ILootTab
          //Entity blocks
         this.dropSelf(ModBlocks.ADOBE_FURNACE.get());
         this.dropSelf(ModBlocks.SOUL_FURNACE.get());
+
+        this.dropSelf(ModBlocks.MASONRY_FURNACE.get());
 
         this.dropSelf(ModBlocks.ADOBE_ALLOYING_FURNACE.get());
         this.dropSelf(ModBlocks.SUPER_ALLOYING_FURNACE.get());

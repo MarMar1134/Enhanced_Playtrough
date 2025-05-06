@@ -15,15 +15,21 @@ public class ModDamageSources{
     private final Registry<DamageType> damageTypes;
 
     private final DamageSource tall_reed;
+    private final DamageSource cobble;
 
     public ModDamageSources(RegistryAccess registryAccess){
         this.damageTypes = registryAccess.registryOrThrow(Registries.DAMAGE_TYPE);
 
         this.tall_reed = this.source(ModDamageTypes.TALL_REED);
+        this.cobble = this.source(ModDamageTypes.COBBLE);
     }
 
     public DamageSource tallReed(){
         return this.tall_reed;
+    }
+
+    public DamageSource cobble(){
+        return this.cobble;
     }
 
     private DamageSource source(ResourceKey<DamageType> pDamageTypeKey) {

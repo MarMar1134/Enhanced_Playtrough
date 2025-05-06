@@ -10,9 +10,11 @@ import net.minecraft.world.damagesource.DamageType;
 
 public interface ModDamageTypes {
     ResourceKey<DamageType> TALL_REED = registryKey("tall_reed");
+    ResourceKey<DamageType> COBBLE = registryKey("cobble");
 
     static void bootstrap(BootstapContext<DamageType> pContext){
         pContext.register(TALL_REED, new DamageType("tallReed", 0.2f, DamageEffects.POKING));
+        pContext.register(COBBLE, new DamageType("cobble", 0.3f));
     }
 
     private static ResourceKey<DamageType> registryKey(String name){

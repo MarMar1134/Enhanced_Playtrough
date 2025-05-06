@@ -2,10 +2,8 @@ package net.marmar.enhanced_playthrough.data.language;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.data.advancement.AdvancementCategory;
-import net.marmar.enhanced_playthrough.entity.boat.ModBoatEntity;
-import net.marmar.enhanced_playthrough.entity.boat.ModChestBoatEntity;
+import net.marmar.enhanced_playthrough.entity.ModEntities;
 import net.minecraft.data.PackOutput;
-import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.common.data.LanguageProvider;
 import net.minecraftforge.registries.RegistryObject;
@@ -17,7 +15,11 @@ public abstract class AbstractModLanguageProvider extends LanguageProvider {
 
     protected void addDeathMessages(String damageType, String message, String killByPlayer){
         this.add("death.attack." + damageType, "%1$s " + message);
-        this.add("death.attack." + damageType + ".player", "%1$s " + message + " %1$s");
+        this.add("death.attack." + damageType + ".player", "%1$s " + killByPlayer + " %1$s");
+    }
+
+    protected void addDeathMessages(String damageType, String killByPlayer){
+        this.add("death.attack." + damageType + ".player", "%1$s " + killByPlayer + " %1$s");
     }
 
     private void addAdvancementTitle(AdvancementCategory advancementCategory, String advancementName, String translation){
@@ -80,11 +82,15 @@ public abstract class AbstractModLanguageProvider extends LanguageProvider {
         this.add("block." + EnhancedPlaythrough.MOD_ID + "." + hangingSign.get(), hangingSignTranslation);
     }
 
-    protected void addBoatEntity(RegistryObject<EntityType<ModBoatEntity>> entity, String name){
-        this.add(entity.get(), name);
+    protected void addBoatEntity(String name){
+        this.add(ModEntities.MOD_BOAT.get(), name);
     }
-    protected void addChestBoatEntity(RegistryObject<EntityType<ModChestBoatEntity>> entity, String name){
-        this.add(entity.get(), name);
+    protected void addChestBoatEntity(String name){
+        this.add(ModEntities.MOD_CHEST_BOAT.get(), name);
+    }
+
+    protected void addThrowableCobbleEntity(String name){
+        this.add(ModEntities.THROWABLE_COBBLE.get(), name);
     }
 
     private void addPotion(String potionName, String potionType, String translation){

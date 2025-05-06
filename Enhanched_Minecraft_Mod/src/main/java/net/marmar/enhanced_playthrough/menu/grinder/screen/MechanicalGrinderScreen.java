@@ -13,6 +13,7 @@ import net.minecraft.world.entity.player.Inventory;
 public class MechanicalGrinderScreen extends AbstractContainerScreen<MechanicalGrinderMenu> {
     private static final ResourceLocation Texture =
             new ResourceLocation(EnhancedPlaythrough.MOD_ID, "textures/gui/mechanical_grinder_gui.png");
+
     public MechanicalGrinderScreen(MechanicalGrinderMenu pMenu, Inventory pPlayerInventory, Component pTitle) {
         super(pMenu, pPlayerInventory, pTitle);
     }

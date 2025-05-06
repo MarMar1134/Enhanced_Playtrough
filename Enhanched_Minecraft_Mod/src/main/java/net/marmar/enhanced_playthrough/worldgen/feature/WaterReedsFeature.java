@@ -2,7 +2,7 @@ package net.marmar.enhanced_playthrough.worldgen.feature;
 
 import com.mojang.serialization.Codec;
 import net.marmar.enhanced_playthrough.block.ModBlocks;
-import net.marmar.enhanced_playthrough.block.custom.WaterReedsBlock;
+import net.marmar.enhanced_playthrough.block.custom.plant.WaterReedsBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.WorldGenLevel;

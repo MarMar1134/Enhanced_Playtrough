@@ -22,6 +22,11 @@ public class ModEntities {
             ENTITY_TYPES.register("mod_chest_boat", () -> EntityType.Builder.<ModChestBoatEntity>of(ModChestBoatEntity::new, MobCategory.MISC)
                     .sized(1.375f, 0.5625f).build("mod_chest_boat"));
 
+    //Throwable objects
+    public static final RegistryObject<EntityType<CobbleProjectileEntity>> THROWABLE_COBBLE =
+            ENTITY_TYPES.register("throwable_cobble", () -> EntityType.Builder.<CobbleProjectileEntity>of(CobbleProjectileEntity::new, MobCategory.MISC)
+                    .sized(0.5f, 0.5f).build("throwable_cobble"));
+
     public static void register(IEventBus eventBus){
         ENTITY_TYPES.register(eventBus);
     }

@@ -3,6 +3,7 @@ package net.marmar.enhanced_playthrough.recipe.grind;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
+import net.marmar.enhanced_playthrough.block.ModBlocks;
 import net.marmar.enhanced_playthrough.recipe.recipecategory.ModRecipeCategory;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
@@ -36,6 +37,11 @@ public class PrimalGrindRecipe extends AbstractGrindRecipe{
         return Type.INSTANCE;
     }
 
+    @Override
+    public ItemStack getToastSymbol() {
+        return new ItemStack(ModBlocks.PRIMAL_GRINDER.get());
+    }
+
     public static class Type implements RecipeType<PrimalGrindRecipe>{
         public static final Type INSTANCE = new Type();
         private static String ID = "primal_grinding";
@@ -50,7 +56,6 @@ public class PrimalGrindRecipe extends AbstractGrindRecipe{
             ModRecipeCategory recipeCategory = ModRecipeCategory.CODEC.byName(GsonHelper.getAsString(jsonObject, "category"));
 
             String group = GsonHelper.getAsString(jsonObject, "group");
-
 
             JsonElement ingredientElement = GsonHelper.isArrayNode(jsonObject, "ingredient") ? GsonHelper.getAsJsonArray(jsonObject, "ingredient") : GsonHelper.getAsJsonObject(jsonObject, "ingredient");
             Ingredient ingredient = Ingredient.fromJson(ingredientElement, false);

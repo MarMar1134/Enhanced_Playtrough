@@ -1,4 +1,4 @@
-// 1.20.1	2025-04-27T23:11:53.5654275	Tags for minecraft:item mod id enhanced_playthrough
+// 1.20.1	2025-05-05T23:58:32.3936027	Tags for minecraft:item mod id enhanced_playthrough
 2ddd5b0739572968da601d14fbf131d78e8e673b data/enhanced_playthrough/tags/items/alloy_ingredient.json
 b3b284c126879d981b4f706eb8ea0e63bd17ae12 data/enhanced_playthrough/tags/items/apple_logs.json
 7b224db4176e22e364423c251f906262bd8f8200 data/enhanced_playthrough/tags/items/basic_ingredient.json
@@ -19,10 +19,11 @@ be2d7023e117d70f07ff271196c1b65d96e6e4f9 data/enhanced_playthrough/tags/items/gr
 2a80199c7982e4650f42bfd3dbbb53ff1ff85e90 data/enhanced_playthrough/tags/items/iron.json
 de74fb4d6b2079d86833bf9f4a9a625164e886ca data/enhanced_playthrough/tags/items/iron_manufacturable.json
 4e223721e8c3e07e295a2f81d83b27295680a31b data/enhanced_playthrough/tags/items/lemon_logs.json
+5e721bdc414693a14c4480e190f068f275b27533 data/enhanced_playthrough/tags/items/masonry_ingredient.json
 f27f56bc26fd6ffb76c6d9c3aea607121f2f9c5c data/enhanced_playthrough/tags/items/mechanical_grind_ingredient.json
 0ef6420e93e8504101946579416bf7b5c165b25a data/enhanced_playthrough/tags/items/orange_logs.json
 fa4d153d545cfc7e4c935f168cd555fbbb78ccad data/enhanced_playthrough/tags/items/polisher_tool.json
-da861c5c11203570c03385a9738897868d101b70 data/enhanced_playthrough/tags/items/primal_grind_ingredient.json
+534101e19e38370004d289609f21e427e532ad6a data/enhanced_playthrough/tags/items/primal_grind_ingredient.json
 c48734bcfcda2db12268011ee56ef74e370665d9 data/enhanced_playthrough/tags/items/raw_gem.json
 9ee964bf2bb11ddc2cc811308dbbdfbb13dcb36d data/enhanced_playthrough/tags/items/rose_gold.json
 e7828e88bcaad1e571ab0c9984444c9dc4c1b835 data/enhanced_playthrough/tags/items/rose_gold_manufacturable.json

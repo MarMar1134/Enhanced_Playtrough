@@ -2,7 +2,7 @@ package net.marmar.enhanced_playthrough.menu.grinder;
 
 import net.marmar.enhanced_playthrough.data.tag.ModTags;
 import net.marmar.enhanced_playthrough.block.ModBlocks;
-import net.marmar.enhanced_playthrough.block.custom.grinder.entity.MechanicalGrinderBlockEntity;
+import net.marmar.enhanced_playthrough.block.grinder.entity.MechanicalGrinderBlockEntity;
 import net.marmar.enhanced_playthrough.menu.ModMenuTypes;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;

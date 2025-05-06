@@ -9,6 +9,7 @@ import net.marmar.enhanced_playthrough.recipe.ModRecipes;
 import net.marmar.enhanced_playthrough.recipe.grind.AbstractGrindRecipe;
 import net.marmar.enhanced_playthrough.recipe.recipebuilder.GenericRecipeBuilder;
 import net.marmar.enhanced_playthrough.recipe.recipebuilder.ModSmithingTransformRecipeBuilder;
+import net.marmar.enhanced_playthrough.recipe.recipecategory.ModRecipeCategory;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeCategory;
@@ -22,6 +23,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.SmithingTransformRecipe;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Blocks;
 
 import java.util.function.Consumer;
 
@@ -143,6 +145,22 @@ public class GeneralRecipeSubProvider extends RecipeProvider {
         primalItemGrinding(consumer, ItemTags.WOOL, "string", Items.STRING, 2);
         mechanicalItemGrinding(consumer, ItemTags.WOOL, "string", Items.STRING, 4);
 
+        //Cobble
+        primalItemGrinding(consumer, Blocks.COBBLESTONE, "cobble", ModItems.COBBLE.get(), 2);
+        mechanicalItemGrinding(consumer, Blocks.COBBLESTONE, "cobble", ModItems.COBBLE.get(), 4);
+
+        primalItemGrinding(consumer, ModBlocks.COBBLED_LIMESTONE.get(), "limestone_cobble", ModItems.LIMESTONE_COBBLE.get(), 2);
+        mechanicalItemGrinding(consumer, ModBlocks.COBBLED_LIMESTONE.get(), "limestone_cobble", ModItems.LIMESTONE_COBBLE.get(), 4);
+
+        mechanicalItemGrinding(consumer, Blocks.COBBLED_DEEPSLATE, "deepslate_cobble", ModItems.DEEPSLATE_COBBLE.get(), 2);
+
+        primalItemGrinding(consumer, Blocks.BLACKSTONE, "blackstone_cobble", ModItems.BLACKSTONE_COBBLE.get(), 2);
+        mechanicalItemGrinding(consumer, Blocks.BLACKSTONE, "blackstone_cobble", ModItems.BLACKSTONE_COBBLE.get(), 4);
+
+        primalItemGrinding(consumer, Blocks.NETHERRACK, "netherrack_rubble", ModItems.NETHERRACK_RUBBLE.get(), 2);
+        mechanicalItemGrinding(consumer, Blocks.NETHERRACK, "netherrack_rubble", ModItems.NETHERRACK_RUBBLE.get(), 4);
+
+        //Reeds
         primalItemGrinding(consumer, ModBlocks.TALL_REEDS.get(), "vegetable_fiber", ModItems.VEGETABLE_FIBBER.get(), 3);
         mechanicalItemGrinding(consumer, ModBlocks.TALL_REEDS.get(), "vegetable_fiber", ModItems.VEGETABLE_FIBBER.get(), 6);
 
@@ -153,93 +171,93 @@ public class GeneralRecipeSubProvider extends RecipeProvider {
         mechanicalItemGrinding(consumer, ModBlocks.SMALL_REEDS.get(), "vegetable_fiber", ModItems.VEGETABLE_FIBBER.get(), 2);
 
         //Dyes
-        //White
-        primalItemGrinding(consumer, Items.BONE_MEAL, "white_dye", Items.WHITE_DYE, 3);
-        mechanicalItemGrinding(consumer, Items.BONE_MEAL, "white_dye", Items.WHITE_DYE, 4);
+            //White
+            primalItemGrinding(consumer, Items.BONE_MEAL, "white_dye", Items.WHITE_DYE, 3);
+            mechanicalItemGrinding(consumer, Items.BONE_MEAL, "white_dye", Items.WHITE_DYE, 4);
 
-        primalItemGrinding(consumer, Items.LILY_OF_THE_VALLEY, "white_dye", Items.WHITE_DYE, 3);
-        mechanicalItemGrinding(consumer, Items.LILY_OF_THE_VALLEY, "white_dye", Items.WHITE_DYE, 4);
+            primalItemGrinding(consumer, Items.LILY_OF_THE_VALLEY, "white_dye", Items.WHITE_DYE, 3);
+            mechanicalItemGrinding(consumer, Items.LILY_OF_THE_VALLEY, "white_dye", Items.WHITE_DYE, 4);
 
-        //Light gray
-        primalItemGrinding(consumer, Items.AZURE_BLUET, "light_gray_dye", Items.LIGHT_GRAY_DYE, 3);
-        mechanicalItemGrinding(consumer, Items.AZURE_BLUET, "light_gray_dye", Items.LIGHT_GRAY_DYE, 4);
+            //Light gray
+            primalItemGrinding(consumer, Items.AZURE_BLUET, "light_gray_dye", Items.LIGHT_GRAY_DYE, 3);
+            mechanicalItemGrinding(consumer, Items.AZURE_BLUET, "light_gray_dye", Items.LIGHT_GRAY_DYE, 4);
 
-        primalItemGrinding(consumer, Items.OXEYE_DAISY, "light_gray_dye", Items.LIGHT_GRAY_DYE, 3);
-        mechanicalItemGrinding(consumer, Items.OXEYE_DAISY, "light_gray_dye", Items.LIGHT_GRAY_DYE, 4);
+            primalItemGrinding(consumer, Items.OXEYE_DAISY, "light_gray_dye", Items.LIGHT_GRAY_DYE, 3);
+            mechanicalItemGrinding(consumer, Items.OXEYE_DAISY, "light_gray_dye", Items.LIGHT_GRAY_DYE, 4);
 
-        primalItemGrinding(consumer, Items.WHITE_TULIP, "light_gray_dye", Items.LIGHT_GRAY_DYE, 3);
-        mechanicalItemGrinding(consumer, Items.WHITE_TULIP, "light_gray_dye", Items.LIGHT_GRAY_DYE, 4);
+            primalItemGrinding(consumer, Items.WHITE_TULIP, "light_gray_dye", Items.LIGHT_GRAY_DYE, 3);
+            mechanicalItemGrinding(consumer, Items.WHITE_TULIP, "light_gray_dye", Items.LIGHT_GRAY_DYE, 4);
 
-        //Black
-        mechanicalItemGrinding(consumer, Items.WITHER_ROSE, "black_dye", Items.BLACK_DYE, 3);
+            //Black
+            mechanicalItemGrinding(consumer, Items.WITHER_ROSE, "black_dye", Items.BLACK_DYE, 3);
 
-        //Brown
-        primalItemGrinding(consumer, Items.COCOA_BEANS, "brown_dye", Items.BROWN_DYE, 3);
-        mechanicalItemGrinding(consumer, Items.COCOA_BEANS, "brown_dye", Items.BROWN_DYE, 4);
+            //Brown
+            primalItemGrinding(consumer, Items.COCOA_BEANS, "brown_dye", Items.BROWN_DYE, 3);
+            mechanicalItemGrinding(consumer, Items.COCOA_BEANS, "brown_dye", Items.BROWN_DYE, 4);
 
-        //Red
-        primalItemGrinding(consumer, Items.POPPY, "red_dye", Items.RED_DYE, 3);
-        mechanicalItemGrinding(consumer, Items.POPPY, "red_dye", Items.RED_DYE, 4);
+            //Red
+            primalItemGrinding(consumer, Items.POPPY, "red_dye", Items.RED_DYE, 3);
+            mechanicalItemGrinding(consumer, Items.POPPY, "red_dye", Items.RED_DYE, 4);
 
-        primalItemGrinding(consumer, Items.RED_TULIP, "red_dye", Items.RED_DYE, 3);
-        mechanicalItemGrinding(consumer, Items.RED_TULIP, "red_dye", Items.RED_DYE, 4);
+            primalItemGrinding(consumer, Items.RED_TULIP, "red_dye", Items.RED_DYE, 3);
+            mechanicalItemGrinding(consumer, Items.RED_TULIP, "red_dye", Items.RED_DYE, 4);
 
-        mechanicalItemGrinding(consumer, Items.ROSE_BUSH, "red_dye", Items.RED_DYE, 6);
+            mechanicalItemGrinding(consumer, Items.ROSE_BUSH, "red_dye", Items.RED_DYE, 6);
 
-        mechanicalItemGrinding(consumer, Items.BEETROOT, "red_dye", Items.RED_DYE, 2);
+            mechanicalItemGrinding(consumer, Items.BEETROOT, "red_dye", Items.RED_DYE, 2);
 
-        //Orange
-        primalItemGrinding(consumer, ModItems.ORANGE.get(), "orange_dye", Items.ORANGE_DYE, 2);
-        mechanicalItemGrinding(consumer, ModItems.ORANGE.get(), "orange_dye", Items.ORANGE_DYE, 3);
-
-
-        primalItemGrinding(consumer, Items.ORANGE_TULIP, "orange_dye", Items.ORANGE_DYE, 3);
-        mechanicalItemGrinding(consumer, Items.ORANGE_TULIP, "orange_dye", Items.ORANGE_DYE, 4);
+            //Orange
+            primalItemGrinding(consumer, ModItems.ORANGE.get(), "orange_dye", Items.ORANGE_DYE, 2);
+            mechanicalItemGrinding(consumer, ModItems.ORANGE.get(), "orange_dye", Items.ORANGE_DYE, 3);
 
 
-        primalItemGrinding(consumer, Items.TORCHFLOWER, "orange_dye", Items.ORANGE_DYE, 3);
-        mechanicalItemGrinding(consumer, Items.TORCHFLOWER, "orange_dye", Items.ORANGE_DYE, 4);
-
-        //Yellow
-        primalItemGrinding(consumer, ModItems.LEMON.get(), "yellow_dye", Items.YELLOW_DYE, 2);
-        mechanicalItemGrinding(consumer, ModItems.LEMON.get(), "yellow_dye", Items.YELLOW_DYE, 3);
-
-        primalItemGrinding(consumer, Items.DANDELION, "yellow_dye", Items.YELLOW_DYE, 3);
-        mechanicalItemGrinding(consumer, Items.DANDELION, "yellow_dye", Items.YELLOW_DYE, 4);
-
-        mechanicalItemGrinding(consumer, Items.SUNFLOWER, "yellow_dye", Items.YELLOW_DYE, 6);
-
-        //Cyan
-        primalItemGrinding(consumer, Items.PITCHER_PLANT, "cyan_dye", Items.CYAN_DYE, 6);
-        mechanicalItemGrinding(consumer, Items.PITCHER_PLANT, "cyan_dye", Items.CYAN_DYE, 6);
-
-        //Light blue
-        primalItemGrinding(consumer, Items.BLUE_ORCHID, "light_blue_dye", Items.LIGHT_BLUE_DYE, 3);
-        mechanicalItemGrinding(consumer, Items.BLUE_ORCHID, "light_blue_dye", Items.LIGHT_BLUE_DYE, 4);
-
-        //Blue
-        mechanicalItemGrinding(consumer, Items.LAPIS_LAZULI, "blue_dye", Items.BLUE_DYE, 3);
-
-        primalItemGrinding(consumer, Items.CORNFLOWER, "blue_dye", Items.BLUE_DYE, 3);
-        mechanicalItemGrinding(consumer, Items.CORNFLOWER, "blue_dye", Items.BLUE_DYE, 4);
-
-        //Lime
-        primalItemGrinding(consumer, ModItems.LIME.get(), "lime_dye", Items.LIME_DYE, 2);
-        mechanicalItemGrinding(consumer, ModItems.LIME.get(), "lime_dye", Items.LIME_DYE, 3);
+            primalItemGrinding(consumer, Items.ORANGE_TULIP, "orange_dye", Items.ORANGE_DYE, 3);
+            mechanicalItemGrinding(consumer, Items.ORANGE_TULIP, "orange_dye", Items.ORANGE_DYE, 4);
 
 
-        //Magenta
-        primalItemGrinding(consumer, Items.ALLIUM, "magenta_dye", Items.MAGENTA_DYE, 3);
-        mechanicalItemGrinding(consumer, Items.LILAC, "magenta_dye", Items.MAGENTA_DYE, 6);
+            primalItemGrinding(consumer, Items.TORCHFLOWER, "orange_dye", Items.ORANGE_DYE, 3);
+            mechanicalItemGrinding(consumer, Items.TORCHFLOWER, "orange_dye", Items.ORANGE_DYE, 4);
 
-        //Pink
-        primalItemGrinding(consumer, Items.PINK_TULIP, "pink_dye", Items.PINK_DYE, 3);
-        mechanicalItemGrinding(consumer, Items.PINK_TULIP, "pink_dye", Items.PINK_DYE, 4);
+            //Yellow
+            primalItemGrinding(consumer, ModItems.LEMON.get(), "yellow_dye", Items.YELLOW_DYE, 2);
+            mechanicalItemGrinding(consumer, ModItems.LEMON.get(), "yellow_dye", Items.YELLOW_DYE, 3);
 
-        mechanicalItemGrinding(consumer, Items.PEONY, "pink_dye", Items.PINK_DYE, 6);
+            primalItemGrinding(consumer, Items.DANDELION, "yellow_dye", Items.YELLOW_DYE, 3);
+            mechanicalItemGrinding(consumer, Items.DANDELION, "yellow_dye", Items.YELLOW_DYE, 4);
 
-        primalItemGrinding(consumer, Items.PINK_PETALS, "pink_dye", Items.PINK_DYE, 3);
-        mechanicalItemGrinding(consumer, Items.PINK_PETALS, "pink_dye", Items.PINK_DYE, 4);
+            mechanicalItemGrinding(consumer, Items.SUNFLOWER, "yellow_dye", Items.YELLOW_DYE, 6);
+
+            //Cyan
+            primalItemGrinding(consumer, Items.PITCHER_PLANT, "cyan_dye", Items.CYAN_DYE, 6);
+            mechanicalItemGrinding(consumer, Items.PITCHER_PLANT, "cyan_dye", Items.CYAN_DYE, 6);
+
+            //Light blue
+            primalItemGrinding(consumer, Items.BLUE_ORCHID, "light_blue_dye", Items.LIGHT_BLUE_DYE, 3);
+            mechanicalItemGrinding(consumer, Items.BLUE_ORCHID, "light_blue_dye", Items.LIGHT_BLUE_DYE, 4);
+
+            //Blue
+            mechanicalItemGrinding(consumer, Items.LAPIS_LAZULI, "blue_dye", Items.BLUE_DYE, 3);
+
+            primalItemGrinding(consumer, Items.CORNFLOWER, "blue_dye", Items.BLUE_DYE, 3);
+            mechanicalItemGrinding(consumer, Items.CORNFLOWER, "blue_dye", Items.BLUE_DYE, 4);
+
+            //Lime
+            primalItemGrinding(consumer, ModItems.LIME.get(), "lime_dye", Items.LIME_DYE, 2);
+            mechanicalItemGrinding(consumer, ModItems.LIME.get(), "lime_dye", Items.LIME_DYE, 3);
+
+
+            //Magenta
+            primalItemGrinding(consumer, Items.ALLIUM, "magenta_dye", Items.MAGENTA_DYE, 3);
+            mechanicalItemGrinding(consumer, Items.LILAC, "magenta_dye", Items.MAGENTA_DYE, 6);
+
+            //Pink
+            primalItemGrinding(consumer, Items.PINK_TULIP, "pink_dye", Items.PINK_DYE, 3);
+            mechanicalItemGrinding(consumer, Items.PINK_TULIP, "pink_dye", Items.PINK_DYE, 4);
+
+            mechanicalItemGrinding(consumer, Items.PEONY, "pink_dye", Items.PINK_DYE, 6);
+
+            primalItemGrinding(consumer, Items.PINK_PETALS, "pink_dye", Items.PINK_DYE, 3);
+            mechanicalItemGrinding(consumer, Items.PINK_PETALS, "pink_dye", Items.PINK_DYE, 4);
 
         //Dusts
         mechanicalItemGrinding(consumer, ModTags.Items.GOLD_MANUFACTURABLE, "gold_dust", ModItems.GOLD_DUST.get(), 1);
@@ -293,18 +311,18 @@ public class GeneralRecipeSubProvider extends RecipeProvider {
         //Grind
             //Primal
             protected static void primalItemGrinding(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike ingredient, String group, ItemLike result, int count){
-                oreGrindingSerialize(pFinishedRecipeConsumer, ingredient, result, group, count, ModRecipes.PRIMAL_GRINDING_SERIALIZER.get(), "from_primal_grinding");
+                oreGrindingSerialize(pFinishedRecipeConsumer, ingredient, result, group, count, ModRecipeCategory.GRIND, ModRecipes.PRIMAL_GRINDING_SERIALIZER.get(), "from_primal_grinding");
             }
             protected static void primalItemGrinding(Consumer<FinishedRecipe> pFinishedRecipeConsumer, TagKey<Item> ingredient, String group, ItemLike result, int count){
-                oreGrindingTagSerialize(pFinishedRecipeConsumer, ingredient, result, group, count, ModRecipes.PRIMAL_GRINDING_SERIALIZER.get(), "from_primal_grinding");
+                oreGrindingTagSerialize(pFinishedRecipeConsumer, ingredient, result, group, count, ModRecipeCategory.GRIND, ModRecipes.PRIMAL_GRINDING_SERIALIZER.get(), "from_primal_grinding");
             }
 
             //Mechanical
             protected static void mechanicalItemGrinding(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike ingredient, String group, ItemLike result, int count){
-                oreGrindingSerialize(pFinishedRecipeConsumer, ingredient, result, group, count, ModRecipes.MECHANICAL_GRINDING_SERIALIZER.get(), "from_mechanical_grinding");
+                oreGrindingSerialize(pFinishedRecipeConsumer, ingredient, result, group, count, ModRecipeCategory.MECHANICAL_GRIND, ModRecipes.MECHANICAL_GRINDING_SERIALIZER.get(), "from_mechanical_grinding");
             }
             protected static void mechanicalItemGrinding(Consumer<FinishedRecipe> pFinishedRecipeConsumer, TagKey<Item> ingredient, String group, ItemLike result, int count){
-                oreGrindingTagSerialize(pFinishedRecipeConsumer, ingredient, result, group, count, ModRecipes.MECHANICAL_GRINDING_SERIALIZER.get(), "from_mechanical_grinding");
+                oreGrindingTagSerialize(pFinishedRecipeConsumer, ingredient, result, group, count, ModRecipeCategory.MECHANICAL_GRIND, ModRecipes.MECHANICAL_GRINDING_SERIALIZER.get(), "from_mechanical_grinding");
             }
 
     //Polish
@@ -331,13 +349,14 @@ public class GeneralRecipeSubProvider extends RecipeProvider {
                 .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(output) + "_" + recipeName + "_" + getItemName(input));
     }
 
-    protected static void oreGrindingSerialize(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike input, ItemLike output, String group, int quantity, RecipeSerializer<? extends AbstractGrindRecipe> recipeSerializer, String recipeName){
-        GenericRecipeBuilder.itemGrinding(Ingredient.of(input), output, group, quantity, recipeSerializer)
+    protected static void oreGrindingSerialize(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike input, ItemLike output, String group, int quantity, ModRecipeCategory pRecipeCategory, RecipeSerializer<? extends AbstractGrindRecipe> recipeSerializer, String recipeName){
+        GenericRecipeBuilder.itemGrinding(Ingredient.of(input), output, group, quantity, pRecipeCategory, recipeSerializer)
                 .unlockedBy(getHasName(input), has(input))
                 .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(output) +  "_" + recipeName + "_" + getItemName(input));
     }
-    protected static void oreGrindingTagSerialize(Consumer<FinishedRecipe> pFinishedRecipeConsumer, TagKey<Item> input, ItemLike output, String group, int quantity, RecipeSerializer<? extends AbstractGrindRecipe> recipeSerializer, String recipeName){
-        GenericRecipeBuilder.itemGrinding(Ingredient.of(input), output, group, quantity, recipeSerializer)
+
+    protected static void oreGrindingTagSerialize(Consumer<FinishedRecipe> pFinishedRecipeConsumer, TagKey<Item> input, ItemLike output, String group, int quantity, ModRecipeCategory pRecipeCategory, RecipeSerializer<? extends AbstractGrindRecipe> recipeSerializer, String recipeName){
+        GenericRecipeBuilder.itemGrinding(Ingredient.of(input), output, group, quantity, pRecipeCategory, recipeSerializer)
                 .unlockedBy(input.toString(), has(input))
                 .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(output) +  "_" + recipeName);
     }

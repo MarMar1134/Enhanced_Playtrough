@@ -3,7 +3,6 @@ package net.marmar.enhanced_playthrough.data.language;
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.block.ModBlocks;
 import net.marmar.enhanced_playthrough.Util.enchantment.ModEnchantments;
-import net.marmar.enhanced_playthrough.entity.ModEntities;
 import net.marmar.enhanced_playthrough.item.ModItems;
 import net.minecraft.data.PackOutput;
 
@@ -29,6 +28,7 @@ public class MexicanLanguageProvider extends AbstractModLanguageProvider{
         //JEI
         addJeiCategory("adobe_furnace", "Fundición básica");
         addJeiCategory("soul_furnace", "Fundición básica de almas");
+        addJeiCategory("masonry_furnace", "Horno de mamposteria");
         addJeiCategory("adobe_alloying_furnace", "Aleación");
         addJeiCategory("super_alloying_furnace", "Alta aleación");
         addJeiCategory("gem_polisher", "Pulido de gemas");
@@ -37,6 +37,8 @@ public class MexicanLanguageProvider extends AbstractModLanguageProvider{
 
         //Jade
         addJadeConfigTranslation("basic_furnace", "Hornos primitívos");
+
+        addJadeConfigTranslation("masonry_furnace", "Horno de mamposteria");
 
         addJadeConfigTranslation("alloy_furnace", "Hornos de aleación");
 
@@ -61,7 +63,8 @@ public class MexicanLanguageProvider extends AbstractModLanguageProvider{
 
         //Death messages
         addDeathMessages("tallReed", "ha muerto pinchado por un carrizo",
-                "ha muerto pinchado por un carrizo mientras escapaba de ");
+                "ha muerto pinchado por un carrizo mientras escapaba de");
+        addDeathMessages("cobble", "ha muerto de un piedrazo en la cabeza mientras luchaba con");
 
         //Advancements
             //Survival
@@ -105,8 +108,9 @@ public class MexicanLanguageProvider extends AbstractModLanguageProvider{
                     "Consigue todas las gemas y conviertete en el señor del caos");
 
         //Entities
-        addBoatEntity(ModEntities.MOD_BOAT, "Barco");
-        addChestBoatEntity(ModEntities.MOD_CHEST_BOAT, "Barco con cofre");
+        addBoatEntity("Barco");
+        addChestBoatEntity("Barco con cofre");
+        addThrowableCobbleEntity("Adoquín");
 
         //Blocks
             //Wild crops
@@ -298,6 +302,7 @@ public class MexicanLanguageProvider extends AbstractModLanguageProvider{
         //Block entities
         addBlock(ModBlocks.ADOBE_FURNACE, "Horno de barro");
         addBlock(ModBlocks.SOUL_FURNACE, "Horno de barro de almas");
+        addBlock(ModBlocks.MASONRY_FURNACE, "Horno de mamposteria");
         addBlock(ModBlocks.ADOBE_ALLOYING_FURNACE, "Horno de aleación de larillos");
         addBlock(ModBlocks.SOUL_ALLOY_FURNACE, "Horno de aleación de ladrillos de almas");
         addBlock(ModBlocks.SUPER_ALLOYING_FURNACE, "Alto horno de aleación");

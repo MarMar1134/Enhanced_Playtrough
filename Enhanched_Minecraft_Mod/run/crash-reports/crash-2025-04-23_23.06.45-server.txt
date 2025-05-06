@@ -5,8 +5,8 @@ Time: 2025-04-23 23:06:45
 Description: Ticking entity
 
 java.lang.ClassCastException: class com.google.common.collect.HashBiMap$1$MapEntry cannot be cast to class net.minecraft.world.item.enchantment.Enchantment (com.google.common.collect.HashBiMap$1$MapEntry is in module com.google.common@31.1-jre of loader 'MC-BOOTSTRAP' @703580bf; net.minecraft.world.item.enchantment.Enchantment is in module minecraft@1.20.1 of loader 'TRANSFORMER' @221a2068)
-	at net.marmar.enhanced_playthrough.event.ModEvents.offer(ModEvents.java:541) ~[%23196!/:?] {re:classloading}
-	at net.marmar.enhanced_playthrough.event.ModEvents.lambda$trades$68(ModEvents.java:431) ~[%23196!/:?] {re:classloading}
+	at net.marmar.enhanced_playthrough.event.ModTradeEvents.offer(ModEvents.java:541) ~[%23196!/:?] {re:classloading}
+	at net.marmar.enhanced_playthrough.event.ModTradeEvents.lambda$trades$68(ModEvents.java:431) ~[%23196!/:?] {re:classloading}
 	at net.minecraft.world.entity.npc.AbstractVillager.addOffersFromItemListings(AbstractVillager.java:221) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?] {re:classloading}
 	at net.minecraft.world.entity.npc.Villager.updateTrades(Villager.java:789) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?] {re:classloading,xf:fml:forge:forge_method_redirector}
 	at net.minecraft.world.entity.npc.AbstractVillager.getOffers(AbstractVillager.java:99) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?] {re:classloading}
@@ -59,10 +59,10 @@ A detailed walkthrough of the error, its code path and all known details is as f
 Thread: Server thread
 Suspected Mod: 
 	Enhanced Playthrough (enhanced_playthrough), Version: 1.20.1-beta-0.19.0
-		at TRANSFORMER/enhanced_playthrough@1.20.1-beta-0.19.0/net.marmar.enhanced_playthrough.event.ModEvents.offer(ModEvents.java:541)
+		at TRANSFORMER/enhanced_playthrough@1.20.1-beta-0.19.0/net.marmar.enhanced_playthrough.event.ModTradeEvents.offer(ModEvents.java:541)
 Stacktrace:
-	at net.marmar.enhanced_playthrough.event.ModEvents.offer(ModEvents.java:541) ~[%23196!/:?] {re:classloading}
-	at net.marmar.enhanced_playthrough.event.ModEvents.lambda$trades$68(ModEvents.java:431) ~[%23196!/:?] {re:classloading}
+	at net.marmar.enhanced_playthrough.event.ModTradeEvents.offer(ModEvents.java:541) ~[%23196!/:?] {re:classloading}
+	at net.marmar.enhanced_playthrough.event.ModTradeEvents.lambda$trades$68(ModEvents.java:431) ~[%23196!/:?] {re:classloading}
 	at net.minecraft.world.entity.npc.AbstractVillager.addOffersFromItemListings(AbstractVillager.java:221) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?] {re:classloading}
 	at net.minecraft.world.entity.npc.Villager.updateTrades(Villager.java:789) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?] {re:classloading,xf:fml:forge:forge_method_redirector}
 	at net.minecraft.world.entity.npc.AbstractVillager.getOffers(AbstractVillager.java:99) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?] {re:classloading}

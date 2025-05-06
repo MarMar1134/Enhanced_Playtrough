@@ -163,6 +163,10 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
             blockWithoutPolishedVersionRecipes(Blocks.DRIPSTONE_BLOCK, ModBlocks.DRIPSTONE_WALL.get(), ModBlocks.DRIPSTONE_STAIRS.get(),
                     ModBlocks.DRIPSTONE_SLAB.get(), consumer);
 
+            //Calcite
+            blockWithoutPolishedVersionRecipes(Blocks.CALCITE, ModBlocks.CALCITE_WALL.get(), ModBlocks.CALCITE_STAIRS.get(),
+                    ModBlocks.CALCITE_SLAB.get(), consumer);
+
             //Polished stone
             blockWithPolishedVersionRecipes(Blocks.STONE, ModBlocks.POLISHED_STONE.get(), ModBlocks.POLISHED_STONE_WALL.get(), ModBlocks.POLISHED_STONE_STAIRS.get(),
                     ModBlocks.POLISHED_STONE_SLAB.get(), consumer);
@@ -222,6 +226,18 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .unlockedBy(getHasName(ModBlocks.SOUL_MUD.get()), has(ModBlocks.SOUL_MUD.get()))
                 .save(consumer);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MASONRY_FURNACE.get())
+                .pattern("III")
+                .pattern("BFB")
+                .pattern("CCC")
+                .define('I', ModItems.BRONZE_INGOT.get())
+                .define('B', Blocks.BRICKS)
+                .define('F', Blocks.FURNACE)
+                .define('C', Blocks.COBBLESTONE)
+                .unlockedBy(getHasName(Blocks.FURNACE), has(Blocks.FURNACE))
+                .unlockedBy(getHasName(ModBlocks.MASONRY_FURNACE.get()), has(ModBlocks.MASONRY_FURNACE.get()))
+                .save(consumer);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ADOBE_ALLOYING_FURNACE.get())
                 .pattern("###")
                 .pattern("#A#")
@@ -230,6 +246,7 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .define('A', ModBlocks.ADOBE_FURNACE.get())
                 .define('I', Blocks.COBBLESTONE)
                 .unlockedBy(getHasName(ModBlocks.ADOBE_FURNACE.get()), has(ModBlocks.ADOBE_FURNACE.get()))
+                .unlockedBy(getHasName(ModBlocks.ADOBE_ALLOYING_FURNACE.get()), has(ModBlocks.ADOBE_ALLOYING_FURNACE.get()))
                 .unlockedBy(getHasName(ModItems.RAW_TIN.get()), has(ModItems.RAW_TIN.get()))
                 .save(consumer);
 

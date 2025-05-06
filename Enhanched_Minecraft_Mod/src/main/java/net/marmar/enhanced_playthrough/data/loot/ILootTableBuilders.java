@@ -1,10 +1,10 @@
 package net.marmar.enhanced_playthrough.data.loot;
 
 import net.marmar.enhanced_playthrough.block.ModBlocks;
-import net.marmar.enhanced_playthrough.block.crops.CornCropBlock;
-import net.marmar.enhanced_playthrough.block.crops.TomatoCropBlock;
-import net.marmar.enhanced_playthrough.block.crops.YerbaMateCropBlock;
-import net.marmar.enhanced_playthrough.block.crops.ZapalloCropBlock;
+import net.marmar.enhanced_playthrough.block.custom.crop.CornCropBlock;
+import net.marmar.enhanced_playthrough.block.custom.crop.TomatoCropBlock;
+import net.marmar.enhanced_playthrough.block.custom.crop.YerbaMateCropBlock;
+import net.marmar.enhanced_playthrough.block.custom.crop.ZapalloCropBlock;
 import net.marmar.enhanced_playthrough.Util.enchantment.ModEnchantments;
 import net.marmar.enhanced_playthrough.item.ModItems;
 import net.minecraft.advancements.critereon.EnchantmentPredicate;
@@ -64,9 +64,9 @@ public interface ILootTableBuilders {
     LootItemCondition.Builder SPECIAL_HAS_SILK_TOUCH  = MatchTool.toolMatches(ItemPredicate.Builder.item()
             .hasEnchantment(new EnchantmentPredicate(Enchantments.SILK_TOUCH, MinMaxBounds.Ints.atLeast(1))))
             .and(MatchTool.toolMatches(ItemPredicate.Builder.item()
-                    .of(Items.WOODEN_PICKAXE)).invert())
-            .and(MatchTool.toolMatches(ItemPredicate.Builder.item()
-                    .of(ModItems.STEEL_PICKAXE.get())).invert());
+                    .of(Items.WOODEN_PICKAXE)).invert()
+                    .or(MatchTool.toolMatches(ItemPredicate.Builder.item()
+                    .of(ModItems.STEEL_PICKAXE.get())).invert()));
 
     LootItemCondition.Builder CUSTOM_HAS_SHEARS = MatchTool.toolMatches(ItemPredicate.Builder.item().of(Items.SHEARS));
 

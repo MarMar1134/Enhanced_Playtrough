@@ -76,7 +76,7 @@ java.lang.RuntimeException: null
 	Caused by: java.lang.IllegalArgumentException: Cannot set property EnumProperty{name=half, clazz=class net.minecraft.world.level.block.state.properties.DoubleBlockHalf, values=[upper, lower]} as it does not exist in Block{minecraft:air}
 		at net.minecraft.world.level.block.state.StateHolder.setValue(StateHolder.java:122) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?] {re:classloading}
 		at net.minecraft.world.level.block.DoublePlantBlock.<init>(DoublePlantBlock.java:28) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?] {re:classloading}
-		at net.marmar.enhanced_playthrough.block.custom.WaterReedsBlock.<init>(WaterReedsBlock.java:22) ~[%23196!/:?] {re:classloading}
+		at net.marmar.enhanced_playthrough.block.custom.plant.WaterReedsBlock.<init>(WaterReedsBlock.java:22) ~[%23196!/:?] {re:classloading}
 		at net.marmar.enhanced_playthrough.block.ModBlocks.lambda$static$161(ModBlocks.java:418) ~[%23196!/:?] {re:classloading}
 		at net.minecraftforge.registries.DeferredRegister.lambda$addEntries$1(DeferredRegister.java:386) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23190%23197!/:?] {re:classloading}
 		at net.minecraftforge.registries.RegisterEvent.register(RegisterEvent.java:59) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23190%23197!/:?] {re:classloading,pl:eventbus:A}

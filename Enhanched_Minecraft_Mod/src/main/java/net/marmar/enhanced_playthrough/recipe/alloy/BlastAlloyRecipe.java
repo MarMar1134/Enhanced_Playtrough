@@ -1,6 +1,7 @@
 package net.marmar.enhanced_playthrough.recipe.alloy;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
+import net.marmar.enhanced_playthrough.block.ModBlocks;
 import net.marmar.enhanced_playthrough.recipe.ModRecipes;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
@@ -40,6 +41,11 @@ public class BlastAlloyRecipe extends AbstractAlloyRecipe implements Recipe<Simp
 
     public AlloyRecipeCategory getCategory() {
         return category;
+    }
+
+    @Override
+    public ItemStack getToastSymbol() {
+        return new ItemStack(ModBlocks.SUPER_ALLOYING_FURNACE.get());
     }
 
     public static class Type implements RecipeType<BlastAlloyRecipe>{

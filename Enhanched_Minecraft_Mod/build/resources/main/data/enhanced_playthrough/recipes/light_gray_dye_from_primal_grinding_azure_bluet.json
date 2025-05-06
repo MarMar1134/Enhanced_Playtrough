@@ -1,6 +1,6 @@
 {
   "type": "enhanced_playthrough:primal_grinding",
-  "category": "mechanical_grind",
+  "category": "grind",
   "group": "light_gray_dye",
   "ingredient": {
     "item": "minecraft:azure_bluet"

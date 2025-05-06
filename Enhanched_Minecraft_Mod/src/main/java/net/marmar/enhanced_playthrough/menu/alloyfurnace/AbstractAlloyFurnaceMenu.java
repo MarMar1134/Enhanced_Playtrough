@@ -1,8 +1,8 @@
 package net.marmar.enhanced_playthrough.menu.alloyfurnace;
 
 import net.marmar.enhanced_playthrough.data.tag.ModTags;
-import net.marmar.enhanced_playthrough.block.custom.alloyfurnace.entity.AbstractAlloyFurnaceBlockEntity;
-import net.marmar.enhanced_playthrough.block.custom.alloyfurnace.entity.SuperAlloyFurnaceBlockEntity;
+import net.marmar.enhanced_playthrough.block.alloyfurnace.entity.AbstractAlloyFurnaceBlockEntity;
+import net.marmar.enhanced_playthrough.block.alloyfurnace.entity.SuperAlloyFurnaceBlockEntity;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
