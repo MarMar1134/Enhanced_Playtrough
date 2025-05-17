@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "F": {
+      "item": "enhanced_playthrough:firebrick"
+    }
+  },
+  "pattern": [
+    "FF",
+    "FF"
+  ],
+  "result": {
+    "item": "enhanced_playthrough:firebricks"
+  },
+  "show_notification": true
+}

@@ -64,7 +64,8 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
         //Death messages
         addDeathMessages("tallReed", "was poked to death by a giant reed",
                 "was poked to death by a giant reed whilst trying to escape");
-        addDeathMessages("cobble", "died from a piece of cobble to the head thrown by");
+        addDeathMessages("cobble", "died from a piece of cobble to the head",
+                "died from a piece of cobble to the head thrown by");
 
         //Advancements
             //Survival
@@ -230,6 +231,48 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
             addBlock(ModBlocks.DRIPSTONE_STAIRS, "Dripstone stairs");
             addBlock(ModBlocks.DRIPSTONE_WALL, "Dripstone wall");
 
+        //Calcite
+        addBlock(ModBlocks.CALCITE_SLAB, "Calcite slab");
+        addBlock(ModBlocks.CALCITE_STAIRS, "Calcite stairs");
+        addBlock(ModBlocks.CALCITE_WALL, "Calcite wall");
+
+        //Concrete
+            //Slabs
+            addBlock(ModBlocks.WHITE_CONCRETE_SLAB, "White concrete slab");
+            addBlock(ModBlocks.BLACK_CONCRETE_SLAB, "Black concrete slab");
+            addBlock(ModBlocks.BROWN_CONCRETE_SLAB, "Brown concrete slab");
+            addBlock(ModBlocks.LIGHT_GRAY_CONCRETE_SLAB, "Light gray concrete slab");
+            addBlock(ModBlocks.GRAY_CONCRETE_SLAB, "Gray concrete slab");
+            addBlock(ModBlocks.RED_CONCRETE_SLAB, "Red concrete slab");
+            addBlock(ModBlocks.ORANGE_CONCRETE_SLAB, "Orange concrete slab");
+            addBlock(ModBlocks.YELLOW_CONCRETE_SLAB, "Yellow concrete slab");
+            addBlock(ModBlocks.LIME_CONCRETE_SLAB, "Lime concrete slab");
+            addBlock(ModBlocks.GREEN_CONCRETE_SLAB, "Green concrete slab");
+            addBlock(ModBlocks.CYAN_CONCRETE_SLAB, "Cyan concrete slab");
+            addBlock(ModBlocks.LIGHT_BLUE_CONCRETE_SLAB, "Light blue concrete slab");
+            addBlock(ModBlocks.BLUE_CONCRETE_SLAB, "Blue concrete slab");
+            addBlock(ModBlocks.PURPLE_CONCRETE_SLAB, "Purple concrete slab");
+            addBlock(ModBlocks.MAGENTA_CONCRETE_SLAB, "Magenta concrete slab");
+            addBlock(ModBlocks.PINK_CONCRETE_SLAB, "Pink concrete slab");
+
+            //Stairs
+            addBlock(ModBlocks.WHITE_CONCRETE_STAIRS, "White concrete stairs");
+            addBlock(ModBlocks.BLACK_CONCRETE_STAIRS, "Black concrete stairs");
+            addBlock(ModBlocks.BROWN_CONCRETE_STAIRS, "Brown concrete stairs");
+            addBlock(ModBlocks.LIGHT_GRAY_CONCRETE_STAIRS, "Light gray concrete stairs");
+            addBlock(ModBlocks.GRAY_CONCRETE_STAIRS, "Gray concrete stairs");
+            addBlock(ModBlocks.RED_CONCRETE_STAIRS, "Red concrete stairs");
+            addBlock(ModBlocks.ORANGE_CONCRETE_STAIRS, "Orange concrete stairs");
+            addBlock(ModBlocks.YELLOW_CONCRETE_STAIRS, "Yellow concrete stairs");
+            addBlock(ModBlocks.LIME_CONCRETE_STAIRS, "Lime concrete stairs");
+            addBlock(ModBlocks.GREEN_CONCRETE_STAIRS, "Green concrete stairs");
+            addBlock(ModBlocks.CYAN_CONCRETE_STAIRS, "Cyan concrete stairs");
+            addBlock(ModBlocks.LIGHT_BLUE_CONCRETE_STAIRS, "Light blue concrete stairs");
+            addBlock(ModBlocks.BLUE_CONCRETE_STAIRS, "Blue concrete stairs");
+            addBlock(ModBlocks.PURPLE_CONCRETE_STAIRS, "Purple concrete stairs");
+            addBlock(ModBlocks.MAGENTA_CONCRETE_STAIRS, "Magenta concrete stairs");
+            addBlock(ModBlocks.PINK_CONCRETE_STAIRS, "Pink concrete stairs");
+
             //Polished stone
             addBlock(ModBlocks.POLISHED_STONE, "Polished stone");
             addBlock(ModBlocks.POLISHED_STONE_SLAB, "Polished stone slab");
@@ -266,6 +309,12 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
             addBlock(ModBlocks.SOUL_MUD_BRICK_SLAB, "Soul mud brick slab");
             addBlock(ModBlocks.SOUL_MUD_BRICK_STAIRS, "Soul mud brick stairs");
             addBlock(ModBlocks.SOUL_MUD_BRICK_WALL, "Soul mud brick wall");
+
+        //Firebricks
+        addBlock(ModBlocks.FIREBRICKS, "Firebricks");
+        addBlock(ModBlocks.FIREBRICK_SLAB, "Firebrick slab");
+        addBlock(ModBlocks.FIREBRICK_STAIRS, "Firebrick stairs");
+        addBlock(ModBlocks.FIREBRICK_WALL, "Firebrick wall");
 
             //Ores
             addBlock(ModBlocks.TIN_ORE, "Tin ore");
@@ -345,17 +394,20 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
             addItem(ModItems.SAPPHIRE, "Sapphire");
             addItem(ModItems.RUBY, "Ruby");
             addItem(ModItems.GARNET, "Garnet");
+
+            //Others
             addItem(ModItems.MUD_BRICK, "Mud brick");
+            addItem(ModItems.FIREBRICK, "Firebrick");
             addItem(ModItems.COBALT, "Cobalt");
             addItem(ModItems.REED_HEAD, "Pampas grass head");
-            addItem(ModItems.WATER_REED_HEAD, "Reeds head");
+            addItem(ModItems.WATER_REED_HEAD, "Reed head");
             addItem(ModItems.VEGETABLE_FIBBER, "Vegetable fiber");
 
             //Cobble
             addItem(ModItems.COBBLE, "Cobble");
             addItem(ModItems.LIMESTONE_COBBLE, "Limestone cobble");
             addItem(ModItems.DEEPSLATE_COBBLE, "Deepslate cobble");
-        addItem(ModItems.NETHERRACK_RUBBLE, "Netherrack rubble");
+            addItem(ModItems.NETHERRACK_RUBBLE, "Netherrack rubble");
             addItem(ModItems.BLACKSTONE_COBBLE, "Blackstone cobble");
 
             //Dusts

@@ -1,14 +1,14 @@
 package net.marmar.enhanced_playthrough.compat.jei;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
-import net.marmar.enhanced_playthrough.menu.alloyfurnace.screen.AdobeAlloyFurnaceScreen;
-import net.marmar.enhanced_playthrough.menu.alloyfurnace.screen.SuperAlloyFurnaceScreen;
-import net.marmar.enhanced_playthrough.menu.modfurnace.screen.AdobeFurnaceScreen;
-import net.marmar.enhanced_playthrough.menu.modfurnace.screen.SoulFurnaceScreen;
-import net.marmar.enhanced_playthrough.menu.gempolisher.screen.GemPolisherScreen;
-import net.marmar.enhanced_playthrough.menu.grinder.screen.MechanicalGrinderScreen;
-import net.marmar.enhanced_playthrough.menu.grinder.screen.PrimalGrinderScreen;
-import net.marmar.enhanced_playthrough.menu.modfurnace.screen.MasonryFurnaceScreen;
+import net.marmar.enhanced_playthrough.menu.screen.alloyfurnace.AdobeAlloyFurnaceScreen;
+import net.marmar.enhanced_playthrough.menu.screen.alloyfurnace.SuperAlloyFurnaceScreen;
+import net.marmar.enhanced_playthrough.menu.screen.modfurnace.AdobeFurnaceScreen;
+import net.marmar.enhanced_playthrough.menu.screen.modfurnace.SoulFurnaceScreen;
+import net.marmar.enhanced_playthrough.menu.screen.gempolisher.GemPolisherScreen;
+import net.marmar.enhanced_playthrough.menu.screen.grinder.MechanicalGrinderScreen;
+import net.marmar.enhanced_playthrough.menu.screen.grinder.PrimalGrinderScreen;
+import net.marmar.enhanced_playthrough.menu.screen.modfurnace.MasonryFurnaceScreen;
 import net.marmar.enhanced_playthrough.recipe.GemPolishingRecipe;
 import net.marmar.enhanced_playthrough.recipe.modsmelting.MasonrySmeltingRecipe;
 import net.marmar.enhanced_playthrough.recipe.grind.MechanicalGrindRecipe;

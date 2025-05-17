@@ -69,6 +69,7 @@ public class ModTabs {
                         output.accept(ModItems.WATER_REED_HEAD.get());
                         output.accept(ModItems.VEGETABLE_FIBBER.get());
                         output.accept(ModItems.MUD_BRICK.get());
+                        output.accept(ModItems.FIREBRICK.get());
                         output.accept(ModItems.BRONZIUM_SMITHING_UPGRADE_TEMPLATE.get());
 
                         //Raw
@@ -523,6 +524,7 @@ public class ModTabs {
             "blocks", () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.POLISHED_LIMESTONE.get()))
                     .title(Component.translatable("creativetab." + EnhancedPlaythrough.MOD_ID + ".blocks"))
                     .withTabsBefore(ModTabs.MINERALS.getId())
+                    .withSearchBar()
                     .displayItems((itemDisplayParameters, output) ->{
                         output.accept(ModBlocks.STONE_WALL.get());
 
@@ -569,6 +571,11 @@ public class ModTabs {
                         output.accept(ModBlocks.SOUL_MUD_BRICK_STAIRS.get());
                         output.accept(ModBlocks.SOUL_MUD_BRICK_WALL.get());
 
+                        output.accept(ModBlocks.FIREBRICKS.get());
+                        output.accept(ModBlocks.FIREBRICK_SLAB.get());
+                        output.accept(ModBlocks.FIREBRICK_STAIRS.get());
+                        output.accept(ModBlocks.FIREBRICK_WALL.get());
+
                         output.accept(ModBlocks.SILVER_BLOCK.get());
                         output.accept(ModBlocks.TIN_BLOCK.get());
                         output.accept(ModBlocks.ZINC_BLOCK.get());
@@ -579,6 +586,39 @@ public class ModTabs {
                         output.accept(ModBlocks.STEEL_BLOCK.get());
                         output.accept(ModBlocks.GREEN_GOLD_BLOCK.get());
                         output.accept(ModBlocks.BLUE_GOLD_BLOCK.get());
+
+                        output.accept(ModBlocks.WHITE_CONCRETE_SLAB.get());
+                        output.accept(ModBlocks.WHITE_CONCRETE_STAIRS.get());
+                        output.accept(ModBlocks.LIGHT_GRAY_CONCRETE_SLAB.get());
+                        output.accept(ModBlocks.LIGHT_GRAY_CONCRETE_STAIRS.get());
+                        output.accept(ModBlocks.GRAY_CONCRETE_SLAB.get());
+                        output.accept(ModBlocks.GRAY_CONCRETE_STAIRS.get());
+                        output.accept(ModBlocks.BLACK_CONCRETE_SLAB.get());
+                        output.accept(ModBlocks.BLACK_CONCRETE_STAIRS.get());
+                        output.accept(ModBlocks.BROWN_CONCRETE_SLAB.get());
+                        output.accept(ModBlocks.BROWN_CONCRETE_STAIRS.get());
+                        output.accept(ModBlocks.RED_CONCRETE_SLAB.get());
+                        output.accept(ModBlocks.RED_CONCRETE_STAIRS.get());
+                        output.accept(ModBlocks.ORANGE_CONCRETE_SLAB.get());
+                        output.accept(ModBlocks.ORANGE_CONCRETE_STAIRS.get());
+                        output.accept(ModBlocks.YELLOW_CONCRETE_SLAB.get());
+                        output.accept(ModBlocks.YELLOW_CONCRETE_STAIRS.get());
+                        output.accept(ModBlocks.LIME_CONCRETE_SLAB.get());
+                        output.accept(ModBlocks.LIME_CONCRETE_STAIRS.get());
+                        output.accept(ModBlocks.GREEN_CONCRETE_SLAB.get());
+                        output.accept(ModBlocks.GREEN_CONCRETE_STAIRS.get());
+                        output.accept(ModBlocks.CYAN_CONCRETE_SLAB.get());
+                        output.accept(ModBlocks.CYAN_CONCRETE_STAIRS.get());
+                        output.accept(ModBlocks.LIGHT_BLUE_CONCRETE_SLAB.get());
+                        output.accept(ModBlocks.LIGHT_BLUE_CONCRETE_STAIRS.get());
+                        output.accept(ModBlocks.BLUE_CONCRETE_SLAB.get());
+                        output.accept(ModBlocks.BLUE_CONCRETE_STAIRS.get());
+                        output.accept(ModBlocks.PURPLE_CONCRETE_SLAB.get());
+                        output.accept(ModBlocks.PURPLE_CONCRETE_STAIRS.get());
+                        output.accept(ModBlocks.MAGENTA_CONCRETE_SLAB.get());
+                        output.accept(ModBlocks.MAGENTA_CONCRETE_STAIRS.get());
+                        output.accept(ModBlocks.PINK_CONCRETE_SLAB.get());
+                        output.accept(ModBlocks.PINK_CONCRETE_STAIRS.get());
                     }).build());
 
     public static void register(IEventBus eventBus){

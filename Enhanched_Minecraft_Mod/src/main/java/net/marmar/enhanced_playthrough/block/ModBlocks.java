@@ -55,7 +55,7 @@ public class ModBlocks {
             public static final RegistryObject<Block> STRIPPED_WALNUT_WOOD = registerBlockWithItem("stripped_walnut_wood",
                     () -> new ModLogsBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
             public static final RegistryObject<Block> WALNUT_LEAVES = registerBlockWithItem("walnut_leaves",
-                    () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).requiresCorrectToolForDrops()));
+                    () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
             public static final RegistryObject<Block> WALNUT_PLANKS = registerBlockWithItem("walnut_planks",
                     () -> new ModPlanksBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
             public static final RegistryObject<Block> WALNUT_DOOR = registerBlockWithItem("walnut_door",
@@ -100,9 +100,9 @@ public class ModBlocks {
             public static final RegistryObject<Block> STRIPPED_APPLE_WOOD = registerBlockWithItem("stripped_apple_wood",
                     () -> new ModLogsBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
             public static final RegistryObject<Block> APPLE_LEAVES = registerBlockWithItem("apple_leaves",
-                    () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).requiresCorrectToolForDrops()));
+                    () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
             public static final RegistryObject<Block> GREEN_APPLE_LEAVES = registerBlockWithItem("green_apple_leaves",
-                    () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).requiresCorrectToolForDrops()));
+                    () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
             public static final RegistryObject<Block> APPLE_PLANKS = registerBlockWithItem("apple_planks",
                     () -> new ModPlanksBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
             public static final RegistryObject<Block> APPLE_DOOR = registerBlockWithItem("apple_door",
@@ -145,7 +145,7 @@ public class ModBlocks {
             public static final RegistryObject<Block> STRIPPED_ORANGE_WOOD = registerBlockWithItem("stripped_orange_wood",
                     () -> new ModLogsBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
             public static final RegistryObject<Block> ORANGE_LEAVES = registerBlockWithItem("orange_leaves",
-                    () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).requiresCorrectToolForDrops()));
+                    () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
             public static final RegistryObject<Block> ORANGE_PLANKS = registerBlockWithItem("orange_planks",
                     () -> new ModPlanksBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
             public static final RegistryObject<Block> ORANGE_DOOR = registerBlockWithItem("orange_door",
@@ -188,7 +188,7 @@ public class ModBlocks {
             public static final RegistryObject<Block> STRIPPED_LEMON_WOOD = registerBlockWithItem("stripped_lemon_wood",
                     () -> new ModLogsBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
             public static final RegistryObject<Block> LEMON_LEAVES = registerBlockWithItem("lemon_leaves",
-                    () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).requiresCorrectToolForDrops()));
+                    () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
             public static final RegistryObject<Block> LEMON_PLANKS = registerBlockWithItem("lemon_planks",
                     () -> new ModPlanksBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
             public static final RegistryObject<Block> LEMON_DOOR = registerBlockWithItem("lemon_door",
@@ -253,6 +253,75 @@ public class ModBlocks {
         public static final RegistryObject<Block> CALCITE_WALL = registerBlockWithItem("calcite_wall",
                 () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL).requiresCorrectToolForDrops()));
 
+        //Concrete
+            //Slabs
+            public static final RegistryObject<Block> WHITE_CONCRETE_SLAB = registerBlockWithItem("white_concrete_slab",
+                    () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.WHITE_CONCRETE).requiresCorrectToolForDrops()));
+            public static final RegistryObject<Block> LIGHT_GRAY_CONCRETE_SLAB = registerBlockWithItem("light_gray_concrete_slab",
+                    () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.LIGHT_GRAY_CONCRETE).requiresCorrectToolForDrops()));
+            public static final RegistryObject<Block> GRAY_CONCRETE_SLAB = registerBlockWithItem("gray_concrete_slab",
+                    () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.GRAY_CONCRETE).requiresCorrectToolForDrops()));
+            public static final RegistryObject<Block> BLACK_CONCRETE_SLAB = registerBlockWithItem("black_concrete_slab",
+                    () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.BLACK_CONCRETE).requiresCorrectToolForDrops()));
+            public static final RegistryObject<Block> BROWN_CONCRETE_SLAB = registerBlockWithItem("brown_concrete_slab",
+                    () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.BROWN_CONCRETE).requiresCorrectToolForDrops()));
+            public static final RegistryObject<Block> RED_CONCRETE_SLAB = registerBlockWithItem("red_concrete_slab",
+                    () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.RED_CONCRETE).requiresCorrectToolForDrops()));
+            public static final RegistryObject<Block> ORANGE_CONCRETE_SLAB = registerBlockWithItem("orange_concrete_slab",
+                    () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.ORANGE_CONCRETE).requiresCorrectToolForDrops()));
+            public static final RegistryObject<Block> YELLOW_CONCRETE_SLAB = registerBlockWithItem("yellow_concrete_slab",
+                    () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.YELLOW_CONCRETE).requiresCorrectToolForDrops()));
+            public static final RegistryObject<Block> LIME_CONCRETE_SLAB = registerBlockWithItem("lime_concrete_slab",
+                    () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.LIME_CONCRETE).requiresCorrectToolForDrops()));
+            public static final RegistryObject<Block> GREEN_CONCRETE_SLAB = registerBlockWithItem("green_concrete_slab",
+                    () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.GREEN_CONCRETE).requiresCorrectToolForDrops()));
+            public static final RegistryObject<Block> CYAN_CONCRETE_SLAB = registerBlockWithItem("cyan_concrete_slab",
+                    () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.CYAN_CONCRETE).requiresCorrectToolForDrops()));
+            public static final RegistryObject<Block> LIGHT_BLUE_CONCRETE_SLAB = registerBlockWithItem("light_blue_concrete_slab",
+                    () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.LIGHT_BLUE_CONCRETE).requiresCorrectToolForDrops()));
+            public static final RegistryObject<Block> BLUE_CONCRETE_SLAB = registerBlockWithItem("blue_concrete_slab",
+                    () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.BLUE_CONCRETE).requiresCorrectToolForDrops()));
+            public static final RegistryObject<Block> PURPLE_CONCRETE_SLAB = registerBlockWithItem("purple_concrete_slab",
+                    () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.PURPLE_CONCRETE).requiresCorrectToolForDrops()));
+            public static final RegistryObject<Block> MAGENTA_CONCRETE_SLAB = registerBlockWithItem("magenta_concrete_slab",
+                    () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.MAGENTA_CONCRETE).requiresCorrectToolForDrops()));
+            public static final RegistryObject<Block> PINK_CONCRETE_SLAB = registerBlockWithItem("pink_concrete_slab",
+                    () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.PINK_CONCRETE).requiresCorrectToolForDrops()));
+
+            //Stairs
+            public static final RegistryObject<Block> WHITE_CONCRETE_STAIRS = registerBlockWithItem("white_concrete_stairs",
+                    () -> new StairBlock(Blocks.WHITE_CONCRETE::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.WHITE_CONCRETE).requiresCorrectToolForDrops()));
+            public static final RegistryObject<Block> LIGHT_GRAY_CONCRETE_STAIRS = registerBlockWithItem("light_gray_concrete_stairs",
+                    () -> new StairBlock(Blocks.WHITE_CONCRETE::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.LIGHT_GRAY_CONCRETE).requiresCorrectToolForDrops()));
+            public static final RegistryObject<Block> GRAY_CONCRETE_STAIRS = registerBlockWithItem("gray_concrete_stairs",
+                    () -> new StairBlock(Blocks.WHITE_CONCRETE::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.GRAY_CONCRETE).requiresCorrectToolForDrops()));
+            public static final RegistryObject<Block> BLACK_CONCRETE_STAIRS = registerBlockWithItem("black_concrete_stairs",
+                    () -> new StairBlock(Blocks.WHITE_CONCRETE::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.BLACK_CONCRETE).requiresCorrectToolForDrops()));
+            public static final RegistryObject<Block> BROWN_CONCRETE_STAIRS = registerBlockWithItem("brown_concrete_stairs",
+                    () -> new StairBlock(Blocks.WHITE_CONCRETE::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.BROWN_CONCRETE).requiresCorrectToolForDrops()));
+            public static final RegistryObject<Block> RED_CONCRETE_STAIRS = registerBlockWithItem("red_concrete_stairs",
+                    () -> new StairBlock(Blocks.WHITE_CONCRETE::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.RED_CONCRETE).requiresCorrectToolForDrops()));
+            public static final RegistryObject<Block> ORANGE_CONCRETE_STAIRS = registerBlockWithItem("orange_concrete_stairs",
+                    () -> new StairBlock(Blocks.WHITE_CONCRETE::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.ORANGE_CONCRETE).requiresCorrectToolForDrops()));
+            public static final RegistryObject<Block> YELLOW_CONCRETE_STAIRS = registerBlockWithItem("yellow_concrete_stairs",
+                    () -> new StairBlock(Blocks.WHITE_CONCRETE::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.YELLOW_CONCRETE).requiresCorrectToolForDrops()));
+            public static final RegistryObject<Block> LIME_CONCRETE_STAIRS = registerBlockWithItem("lime_concrete_stairs",
+                    () -> new StairBlock(Blocks.WHITE_CONCRETE::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.LIME_CONCRETE).requiresCorrectToolForDrops()));
+            public static final RegistryObject<Block> GREEN_CONCRETE_STAIRS = registerBlockWithItem("green_concrete_stairs",
+                    () -> new StairBlock(Blocks.WHITE_CONCRETE::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.GREEN_CONCRETE).requiresCorrectToolForDrops()));
+            public static final RegistryObject<Block> CYAN_CONCRETE_STAIRS = registerBlockWithItem("cyan_concrete_stairs",
+                    () -> new StairBlock(Blocks.WHITE_CONCRETE::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.CYAN_CONCRETE).requiresCorrectToolForDrops()));
+            public static final RegistryObject<Block> LIGHT_BLUE_CONCRETE_STAIRS = registerBlockWithItem("light_blue_concrete_stairs",
+                    () -> new StairBlock(Blocks.WHITE_CONCRETE::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.LIGHT_BLUE_CONCRETE).requiresCorrectToolForDrops()));
+            public static final RegistryObject<Block> BLUE_CONCRETE_STAIRS = registerBlockWithItem("blue_concrete_stairs",
+                    () -> new StairBlock(Blocks.WHITE_CONCRETE::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.BLUE_CONCRETE).requiresCorrectToolForDrops()));
+            public static final RegistryObject<Block> PURPLE_CONCRETE_STAIRS = registerBlockWithItem("purple_concrete_stairs",
+                    () -> new StairBlock(Blocks.WHITE_CONCRETE::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.PURPLE_CONCRETE).requiresCorrectToolForDrops()));
+            public static final RegistryObject<Block> MAGENTA_CONCRETE_STAIRS = registerBlockWithItem("magenta_concrete_stairs",
+                    () -> new StairBlock(Blocks.WHITE_CONCRETE::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.MAGENTA_CONCRETE).requiresCorrectToolForDrops()));
+            public static final RegistryObject<Block> PINK_CONCRETE_STAIRS = registerBlockWithItem("pink_concrete_stairs",
+                    () -> new StairBlock(Blocks.WHITE_CONCRETE::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.PINK_CONCRETE).requiresCorrectToolForDrops()));
+
         //Polished stone
         public static final RegistryObject<Block> POLISHED_STONE = registerBlockWithItem("polished_stone",
                 () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).requiresCorrectToolForDrops()));
@@ -305,7 +374,6 @@ public class ModBlocks {
             public static final RegistryObject<Block> LIMESTONE_BRICK_WALL = registerBlockWithItem("limestone_brick_wall",
                     () -> new WallBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.STONE_BRICK_WALL).requiresCorrectToolForDrops()));
 
-
         //Soul
         public static final RegistryObject<Block> SOUL_MUD = registerBlockWithItem("soul_mud",
                 () -> new Block(BlockBehaviour.Properties.copy(Blocks.PACKED_MUD).requiresCorrectToolForDrops()));
@@ -317,6 +385,16 @@ public class ModBlocks {
                 () -> new StairBlock(() -> SOUL_MUD_BRICKS.get().defaultBlockState(),BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.STONE_BRICK_STAIRS).requiresCorrectToolForDrops()));
         public static final RegistryObject<Block> SOUL_MUD_BRICK_WALL = registerBlockWithItem("soul_mud_brick_wall",
                 () -> new WallBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.STONE_BRICK_WALL).requiresCorrectToolForDrops()));
+
+        //Firebricks
+        public static final RegistryObject<Block> FIREBRICKS = registerBlockWithItem("firebricks",
+                () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS).requiresCorrectToolForDrops().strength(3.5F, 6)));
+        public static final RegistryObject<Block> FIREBRICK_SLAB = registerBlockWithItem("firebrick_slab",
+                () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.BRICK_SLAB).requiresCorrectToolForDrops().strength(3.5F, 6)));
+        public static final RegistryObject<Block> FIREBRICK_STAIRS = registerBlockWithItem("firebrick_stair",
+                () -> new StairBlock(() -> FIREBRICKS.get().defaultBlockState(),BlockBehaviour.Properties.copy(Blocks.BRICK_STAIRS).requiresCorrectToolForDrops().strength(3.5F, 6)));
+        public static final RegistryObject<Block> FIREBRICK_WALL = registerBlockWithItem("firebrick_wall",
+                () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.BRICK_WALL).requiresCorrectToolForDrops().strength(3.5F, 6)));
 
         //Ores
         public static final RegistryObject<Block> NETHER_COPPER_ORE = registerBlockWithItem("nether_copper_ore",
@@ -371,23 +449,23 @@ public class ModBlocks {
         public static final RegistryObject<Block> SILVER_BLOCK = registerBlockWithItem("silver_block",
                 () -> new Block(BlockBehaviour.Properties.copy(Blocks.GOLD_BLOCK)));
         public static final RegistryObject<Block> TIN_BLOCK = registerBlockWithItem("tin_block",
-                () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+                () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(2, 3)));
         public static final RegistryObject<Block> ZINC_BLOCK = registerBlockWithItem("zinc_block",
-                () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+                () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(2, 3)));
         public static final RegistryObject<Block> BRASS_BLOCK = registerBlockWithItem("brass_block",
-                () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+                () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(2, 3)));
         public static final RegistryObject<Block> BRONZE_BLOCK = registerBlockWithItem("bronze_block",
-                () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+                () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(3, 3)));
         public static final RegistryObject<Block> ROSE_GOLD_BLOCK = registerBlockWithItem("rose_gold_block",
-                () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+                () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(3, 3)));
         public static final RegistryObject<Block> BRONZIUM_BLOCK = registerBlockWithItem("bronzium_block",
-                () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+                () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(3.5F, 5)));
         public static final RegistryObject<Block> STEEL_BLOCK = registerBlockWithItem("steel_block",
-                () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+                () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(6, 6)));
         public static final RegistryObject<Block> GREEN_GOLD_BLOCK = registerBlockWithItem("green_gold_block",
                 () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
         public static final RegistryObject<Block> BLUE_GOLD_BLOCK = registerBlockWithItem("blue_gold_block",
-                () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+                () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(6, 8)));
 
     //Entity blocks
         //Basic furnaces
@@ -398,7 +476,7 @@ public class ModBlocks {
 
         //Masonry furnace
         public static final RegistryObject<Block> MASONRY_FURNACE = registerBlockWithItem("masonry_furnace",
-                () -> new MasonryFurnaceBlock(BlockBehaviour.Properties.copy(Blocks.BRICKS).noOcclusion()));
+                () -> new MasonryFurnaceBlock(BlockBehaviour.Properties.copy(ModBlocks.FIREBRICKS.get()).noOcclusion()));
 
         //Alloy furnaces
         public static final RegistryObject<Block> ADOBE_ALLOYING_FURNACE = registerBlockWithItem("adobe_alloying_furnace",

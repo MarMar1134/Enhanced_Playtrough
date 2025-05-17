@@ -3,6 +3,7 @@ package net.marmar.enhanced_playthrough.block.alloyfurnace.entity;
 import net.marmar.enhanced_playthrough.block.alloyfurnace.AbstractAlloyFurnaceBlock;
 import net.marmar.enhanced_playthrough.block.modfurnace.entity.AbstractModFurnaceBlockEntity;
 import net.marmar.enhanced_playthrough.recipe.alloy.AbstractAlloyRecipe;
+import net.marmar.enhanced_playthrough.recipe.alloy.AlloyRecipe;
 import net.marmar.enhanced_playthrough.recipe.alloy.BlastAlloyRecipe;
 import net.marmar.enhanced_playthrough.recipe.modsmelting.AbstractSmeltingRecipe;
 import net.minecraft.core.BlockPos;
@@ -67,14 +68,12 @@ public abstract class AbstractAlloyFurnaceBlockEntity extends BlockEntity {
 
     protected final ContainerData Data;
     private final RecipeType<? extends AbstractAlloyRecipe> recipeType;
-    private final RecipeManager.CachedCheck<SimpleContainer, ? extends AbstractAlloyRecipe> quickCheck;
-    private int progress = 0, maxProgress = 0;
+    private int progress = 0, maxProgress;
     private int burnTime = 0, maxBurnTime = 0;
 
     public AbstractAlloyFurnaceBlockEntity(@NotNull BlockEntityType<? extends  AbstractAlloyFurnaceBlockEntity> blockEntityType, BlockPos pPos, BlockState pBlockState, RecipeType<? extends AbstractAlloyRecipe> recipeType) {
         super(blockEntityType, pPos, pBlockState);
         this.recipeType = recipeType;
-        this.quickCheck = RecipeManager.createCheck(recipeType);
         this.Data = new ContainerData() {
             @Override
             public int get(int i) {
@@ -102,6 +101,8 @@ public abstract class AbstractAlloyFurnaceBlockEntity extends BlockEntity {
                 return 5;
             }
         };
+
+        this.maxProgress = getMaxProgressFromRecipe();
     }
 
     //Handler getters (used on Jade compatibility)
@@ -159,15 +160,12 @@ public abstract class AbstractAlloyFurnaceBlockEntity extends BlockEntity {
         outputLazyHandler.invalidate();
     }
 
-    private int getMaxProgressFromRecipe(Level pLevel, AbstractAlloyFurnaceBlockEntity pBlock){
-        SimpleContainer inv = new SimpleContainer(2);
-
-        inv.setItem(0, firstInputHandler.getStackInSlot(0));
-        inv.setItem(1, secondInputHandler.getStackInSlot(0));
-
-        Optional<? extends AbstractAlloyRecipe> recipe = pBlock.quickCheck.getRecipeFor(inv, pLevel);
-
-        return recipe.map(AbstractAlloyRecipe::getAlloyTime).orElse(200);
+    private int getMaxProgressFromRecipe(){
+        if (this.recipeType instanceof AlloyRecipe){
+            return 200;
+        } else {
+            return 100;
+        }
     }
 
 
@@ -224,7 +222,7 @@ public abstract class AbstractAlloyFurnaceBlockEntity extends BlockEntity {
             //if is burning, checks if it has a recipe available. if true, starts to increase the crafting progress.
             if (entity.hasRecipe()){
                 //Sets the max alloy progress in reference of the recipeType
-                entity.maxProgress = entity.getMaxProgressFromRecipe(pLevel, entity);
+//                entity.maxProgress = entity.recipeType instanceof AlloyRecipe ? 200 : 100;
 
                 entity.increaseAlloyProgress();
 

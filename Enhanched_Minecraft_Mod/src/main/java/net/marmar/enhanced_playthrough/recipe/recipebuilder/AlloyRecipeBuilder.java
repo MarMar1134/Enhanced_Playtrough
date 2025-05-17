@@ -1,5 +1,6 @@
 package net.marmar.enhanced_playthrough.recipe.recipebuilder;
 
+import net.marmar.enhanced_playthrough.recipe.ModRecipes;
 import net.marmar.enhanced_playthrough.recipe.alloy.AlloyRecipe;
 import net.marmar.enhanced_playthrough.recipe.alloy.BlastAlloyRecipe;
 import com.google.gson.JsonArray;
@@ -43,12 +44,12 @@ public class AlloyRecipeBuilder implements RecipeBuilder {
         this.serializer = pSerializer;
     }
 
-    public static AlloyRecipeBuilder oreAlloying(Ingredient firstIngredient, Ingredient secondIngredient, AlloyRecipeCategory recipeCategory, ItemLike pResult, String group, RecipeSerializer<? extends AlloyRecipe> pCookingSerializer) {
-        return new AlloyRecipeBuilder(recipeCategory, group, 200, pResult, 1, firstIngredient, secondIngredient, pCookingSerializer);
+    public static AlloyRecipeBuilder oreAlloying(Ingredient firstIngredient, Ingredient secondIngredient, AlloyRecipeCategory recipeCategory, ItemLike pResult, String group) {
+        return new AlloyRecipeBuilder(recipeCategory, group, 200, pResult, 1, firstIngredient, secondIngredient, ModRecipes.ALLOYING_SERIALIZER.get());
     }
 
-    public static AlloyRecipeBuilder superOreAlloying(Ingredient firstIngredient, Ingredient secondIngredient, AlloyRecipeCategory recipeCategory, ItemLike pResult, String group, int count, RecipeSerializer<? extends BlastAlloyRecipe> pCookingSerializer) {
-        return new AlloyRecipeBuilder(recipeCategory, group, 100, pResult, count, firstIngredient, secondIngredient, pCookingSerializer);
+    public static AlloyRecipeBuilder superOreAlloying(Ingredient firstIngredient, Ingredient secondIngredient, AlloyRecipeCategory recipeCategory, ItemLike pResult, String group, int count) {
+        return new AlloyRecipeBuilder(recipeCategory, group, 100, pResult, count, firstIngredient, secondIngredient, ModRecipes.SUPER_ALLOYING_SERIALIZER.get());
     }
 
 

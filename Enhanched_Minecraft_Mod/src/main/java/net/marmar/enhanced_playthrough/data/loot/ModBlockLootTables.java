@@ -37,6 +37,43 @@ public class ModBlockLootTables extends BlockLootSubProvider implements ILootTab
         this.dropSelf(ModBlocks.CALCITE_STAIRS.get());
         this.dropSelf(ModBlocks.CALCITE_WALL.get());
 
+        //Concrete
+            //Slabs
+            this.add(ModBlocks.WHITE_CONCRETE_SLAB.get(), this::createSlabItemTable);
+            this.add(ModBlocks.LIGHT_GRAY_CONCRETE_SLAB.get(), this::createSlabItemTable);
+            this.add(ModBlocks.GRAY_CONCRETE_SLAB.get(), this::createSlabItemTable);
+            this.add(ModBlocks.BLACK_CONCRETE_SLAB.get(), this::createSlabItemTable);
+            this.add(ModBlocks.BROWN_CONCRETE_SLAB.get(), this::createSlabItemTable);
+            this.add(ModBlocks.RED_CONCRETE_SLAB.get(), this::createSlabItemTable);
+            this.add(ModBlocks.ORANGE_CONCRETE_SLAB.get(), this::createSlabItemTable);
+            this.add(ModBlocks.YELLOW_CONCRETE_SLAB.get(), this::createSlabItemTable);
+            this.add(ModBlocks.LIME_CONCRETE_SLAB.get(), this::createSlabItemTable);
+            this.add(ModBlocks.GREEN_CONCRETE_SLAB.get(), this::createSlabItemTable);
+            this.add(ModBlocks.CYAN_CONCRETE_SLAB.get(), this::createSlabItemTable);
+            this.add(ModBlocks.LIGHT_BLUE_CONCRETE_SLAB.get(), this::createSlabItemTable);
+            this.add(ModBlocks.BLUE_CONCRETE_SLAB.get(), this::createSlabItemTable);
+            this.add(ModBlocks.PURPLE_CONCRETE_SLAB.get(), this::createSlabItemTable);
+            this.add(ModBlocks.MAGENTA_CONCRETE_SLAB.get(), this::createSlabItemTable);
+            this.add(ModBlocks.PINK_CONCRETE_SLAB.get(), this::createSlabItemTable);
+
+            //Stairs
+            this.dropSelf(ModBlocks.WHITE_CONCRETE_STAIRS.get());
+            this.dropSelf(ModBlocks.LIGHT_GRAY_CONCRETE_STAIRS.get());
+            this.dropSelf(ModBlocks.GRAY_CONCRETE_STAIRS.get());
+            this.dropSelf(ModBlocks.BLACK_CONCRETE_STAIRS.get());
+            this.dropSelf(ModBlocks.BROWN_CONCRETE_STAIRS.get());
+            this.dropSelf(ModBlocks.RED_CONCRETE_STAIRS.get());
+            this.dropSelf(ModBlocks.ORANGE_CONCRETE_STAIRS.get());
+            this.dropSelf(ModBlocks.YELLOW_CONCRETE_STAIRS.get());
+            this.dropSelf(ModBlocks.LIME_CONCRETE_STAIRS.get());
+            this.dropSelf(ModBlocks.GREEN_CONCRETE_STAIRS.get());
+            this.dropSelf(ModBlocks.CYAN_CONCRETE_STAIRS.get());
+            this.dropSelf(ModBlocks.LIGHT_BLUE_CONCRETE_STAIRS.get());
+            this.dropSelf(ModBlocks.BLUE_CONCRETE_STAIRS.get());
+            this.dropSelf(ModBlocks.PURPLE_CONCRETE_STAIRS.get());
+            this.dropSelf(ModBlocks.MAGENTA_CONCRETE_STAIRS.get());
+            this.dropSelf(ModBlocks.PINK_CONCRETE_STAIRS.get());
+
         //Polished stone
         this.dropSelf(ModBlocks.POLISHED_STONE.get());
         this.add(ModBlocks.POLISHED_STONE_SLAB.get(),
@@ -81,6 +118,13 @@ public class ModBlockLootTables extends BlockLootSubProvider implements ILootTab
                 createSlabItemTable(ModBlocks.SOUL_MUD_BRICK_SLAB.get()));
         this.dropSelf(ModBlocks.SOUL_MUD_BRICK_STAIRS.get());
         this.dropSelf(ModBlocks.SOUL_MUD_BRICK_WALL.get());
+
+        //Firebricks
+        this.dropSelf(ModBlocks.FIREBRICKS.get());
+        this.add(ModBlocks.FIREBRICK_SLAB.get(), block ->
+                createSlabItemTable(ModBlocks.FIREBRICK_SLAB.get()));
+        this.dropSelf(ModBlocks.FIREBRICK_STAIRS.get());
+        this.dropSelf(ModBlocks.FIREBRICK_WALL.get());
 
         //ores
         this.add(ModBlocks.NETHER_COPPER_ORE.get(), block ->

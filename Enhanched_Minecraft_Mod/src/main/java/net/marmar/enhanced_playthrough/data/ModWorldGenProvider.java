@@ -5,6 +5,9 @@ import net.marmar.enhanced_playthrough.Util.ModDamageTypes;
 import net.marmar.enhanced_playthrough.worldgen.ModBiomeModifiers;
 import net.marmar.enhanced_playthrough.worldgen.ModConfiguredFeatures;
 import net.marmar.enhanced_playthrough.worldgen.ModPlacedFeatures;
+import net.marmar.enhanced_playthrough.worldgen.structure.ModStructureSets;
+import net.marmar.enhanced_playthrough.worldgen.structure.ModStructureTemplatePools;
+import net.marmar.enhanced_playthrough.worldgen.structure.ModStructures;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.registries.Registries;
@@ -17,6 +20,9 @@ import java.util.concurrent.CompletableFuture;
 
 public class ModWorldGenProvider extends DatapackBuiltinEntriesProvider {
     public static final RegistrySetBuilder BUILDER = new RegistrySetBuilder()
+            .add(Registries.TEMPLATE_POOL, ModStructureTemplatePools::bootstrap)
+            .add(Registries.STRUCTURE, ModStructures::bootstrap)
+            .add(Registries.STRUCTURE_SET, ModStructureSets::bootstrap)
             .add(Registries.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap)
             .add(Registries.PLACED_FEATURE, ModPlacedFeatures::bootstrap)
             .add(ForgeRegistries.Keys.BIOME_MODIFIERS, ModBiomeModifiers::bootstrap)

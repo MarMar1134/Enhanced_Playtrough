@@ -42,6 +42,48 @@ public class ModItemModelProvider extends ItemModelProvider {
             blockWithItem(ModBlocks.DRIPSTONE_STAIRS);
             wallItem(ModBlocks.DRIPSTONE_WALL, Blocks.DRIPSTONE_BLOCK);
 
+            //Calcite
+            blockWithItem(ModBlocks.CALCITE_SLAB);
+            blockWithItem(ModBlocks.CALCITE_STAIRS);
+            wallItem(ModBlocks.CALCITE_WALL, Blocks.CALCITE);
+
+            //Concrete
+                //Slabs
+                blockWithItem(ModBlocks.WHITE_CONCRETE_SLAB);
+                blockWithItem(ModBlocks.LIGHT_GRAY_CONCRETE_SLAB);
+                blockWithItem(ModBlocks.GRAY_CONCRETE_SLAB);
+                blockWithItem(ModBlocks.BLACK_CONCRETE_SLAB);
+                blockWithItem(ModBlocks.BROWN_CONCRETE_SLAB);
+                blockWithItem(ModBlocks.RED_CONCRETE_SLAB);
+                blockWithItem(ModBlocks.ORANGE_CONCRETE_SLAB);
+                blockWithItem(ModBlocks.YELLOW_CONCRETE_SLAB);
+                blockWithItem(ModBlocks.LIME_CONCRETE_SLAB);
+                blockWithItem(ModBlocks.GREEN_CONCRETE_SLAB);
+                blockWithItem(ModBlocks.CYAN_CONCRETE_SLAB);
+                blockWithItem(ModBlocks.LIGHT_BLUE_CONCRETE_SLAB);
+                blockWithItem(ModBlocks.BLUE_CONCRETE_SLAB);
+                blockWithItem(ModBlocks.PURPLE_CONCRETE_SLAB);
+                blockWithItem(ModBlocks.MAGENTA_CONCRETE_SLAB);
+                blockWithItem(ModBlocks.PINK_CONCRETE_SLAB);
+
+                //Stairs
+                blockWithItem(ModBlocks.WHITE_CONCRETE_STAIRS);
+                blockWithItem(ModBlocks.LIGHT_GRAY_CONCRETE_STAIRS);
+                blockWithItem(ModBlocks.GRAY_CONCRETE_STAIRS);
+                blockWithItem(ModBlocks.BLACK_CONCRETE_STAIRS);
+                blockWithItem(ModBlocks.BROWN_CONCRETE_STAIRS);
+                blockWithItem(ModBlocks.RED_CONCRETE_STAIRS);
+                blockWithItem(ModBlocks.ORANGE_CONCRETE_STAIRS);
+                blockWithItem(ModBlocks.YELLOW_CONCRETE_STAIRS);
+                blockWithItem(ModBlocks.LIME_CONCRETE_STAIRS);
+                blockWithItem(ModBlocks.GREEN_CONCRETE_STAIRS);
+                blockWithItem(ModBlocks.CYAN_CONCRETE_STAIRS);
+                blockWithItem(ModBlocks.LIGHT_BLUE_CONCRETE_STAIRS);
+                blockWithItem(ModBlocks.BLUE_CONCRETE_STAIRS);
+                blockWithItem(ModBlocks.PURPLE_CONCRETE_STAIRS);
+                blockWithItem(ModBlocks.MAGENTA_CONCRETE_STAIRS);
+                blockWithItem(ModBlocks.PINK_CONCRETE_STAIRS);
+
             //Polished stone
             blockWithItem(ModBlocks.POLISHED_STONE_SLAB);
             blockWithItem(ModBlocks.POLISHED_STONE_STAIRS);
@@ -71,6 +113,12 @@ public class ModItemModelProvider extends ItemModelProvider {
             blockWithItem(ModBlocks.SOUL_MUD_BRICK_SLAB);
             blockWithItem(ModBlocks.SOUL_MUD_BRICK_STAIRS);
             wallItem(ModBlocks.SOUL_MUD_BRICK_WALL, ModBlocks.SOUL_MUD_BRICKS);
+
+            //Firebrick
+            blockWithItem(ModBlocks.FIREBRICKS);
+            blockWithItem(ModBlocks.FIREBRICK_SLAB);
+            blockWithItem(ModBlocks.FIREBRICK_STAIRS);
+            wallItem(ModBlocks.FIREBRICK_WALL, ModBlocks.FIREBRICKS);
 
             //Wood
                 //walnut
@@ -301,6 +349,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         //Other materials
         simpleItem(ModItems.MUD_BRICK);
+        simpleItem(ModItems.FIREBRICK);
         simpleItem(ModItems.VEGETABLE_FIBBER);
         simpleItem(ModItems.REED_HEAD);
         simpleItem(ModItems.WATER_REED_HEAD);

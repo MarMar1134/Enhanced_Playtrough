@@ -1,6 +1,7 @@
 package net.marmar.enhanced_playthrough.block.modfurnace;
 
 import net.marmar.enhanced_playthrough.block.modfurnace.entity.AbstractModFurnaceBlockEntity;
+import net.marmar.enhanced_playthrough.menu.modfurnace.AbstractModFurnaceMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
@@ -11,6 +12,7 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.MenuProvider;
+import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
@@ -107,11 +109,6 @@ public abstract class AbstractModFurnaceBlock extends BaseEntityBlock implements
 
     public <T extends BlockEntity> BlockEntityTicker<T> CreateBasicFurnaceTicker(Level pLevel, BlockEntityType<T> pServerType, BlockEntityType<? extends AbstractModFurnaceBlockEntity> blockEntityType){
         return pLevel.isClientSide ? null : createTickerHelper(pServerType, blockEntityType, AbstractModFurnaceBlockEntity::tick);
-    }
-
-    @Override
-    public boolean hasAnalogOutputSignal(BlockState pState) {
-        return true;
     }
 
     @Nullable

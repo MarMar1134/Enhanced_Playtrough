@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "firebrick_wall",
+  "key": {
+    "#": {
+      "item": "enhanced_playthrough:firebricks"
+    }
+  },
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "item": "enhanced_playthrough:firebrick_wall"
+  },
+  "show_notification": true
+}

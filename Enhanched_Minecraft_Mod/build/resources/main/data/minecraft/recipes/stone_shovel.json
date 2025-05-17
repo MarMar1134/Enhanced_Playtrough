@@ -13,9 +13,9 @@
     }
   },
   "pattern": [
-    "I ",
-    "#S",
-    "# "
+    " I ",
+    " #S",
+    " # "
   ],
   "result": {
     "item": "minecraft:stone_shovel"

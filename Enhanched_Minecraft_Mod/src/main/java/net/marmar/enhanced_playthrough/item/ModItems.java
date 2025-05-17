@@ -157,6 +157,8 @@ public class ModItems {
     //Other materials
     public static final RegistryObject<Item> MUD_BRICK = ITEMS.register(
             "mud_brick", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> FIREBRICK = ITEMS.register(
+            "firebrick", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> VEGETABLE_FIBBER = ITEMS.register(
             "vegetable_fibber", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> REED_HEAD = ITEMS.register(

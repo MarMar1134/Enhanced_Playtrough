@@ -1,0 +1,5 @@
+// 1.20.1	2025-05-15T16:36:54.1978269	Tags for minecraft:worldgen/biome mod id enhanced_playthrough
+293983aa9a5aa32dd31798ea5c064e439f1f1f32 data/enhanced_playthrough/tags/worldgen/biome/cold_biomes.json
+becbb3e6d736ab8feb41683bc5afacce936c4825 data/enhanced_playthrough/tags/worldgen/biome/has_structure/jeweler_house.json
+10d9324a744bfe48826603f6cf875621e03a2744 data/enhanced_playthrough/tags/worldgen/biome/template_biomes.json
+c9bd010cbc1d99a2a1d57554f84e9cfdd755aa77 data/enhanced_playthrough/tags/worldgen/biome/warm_biomes.json

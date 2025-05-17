@@ -1,15 +1,33 @@
 {
   "values": [
-    "enhanced_playthrough:walnut_stair",
-    "enhanced_playthrough:apple_stair",
-    "enhanced_playthrough:orange_stair",
-    "enhanced_playthrough:lemon_stair",
     "enhanced_playthrough:dripstone_stair",
+    "enhanced_playthrough:calcite_stair",
+    "enhanced_playthrough:white_concrete_stairs",
+    "enhanced_playthrough:light_gray_concrete_stairs",
+    "enhanced_playthrough:gray_concrete_stairs",
+    "enhanced_playthrough:black_concrete_stairs",
+    "enhanced_playthrough:brown_concrete_stairs",
+    "enhanced_playthrough:red_concrete_stairs",
+    "enhanced_playthrough:orange_concrete_stairs",
+    "enhanced_playthrough:yellow_concrete_stairs",
+    "enhanced_playthrough:lime_concrete_stairs",
+    "enhanced_playthrough:green_concrete_stairs",
+    "enhanced_playthrough:cyan_concrete_stairs",
+    "enhanced_playthrough:light_blue_concrete_stairs",
+    "enhanced_playthrough:blue_concrete_stairs",
+    "enhanced_playthrough:purple_concrete_stairs",
+    "enhanced_playthrough:magenta_concrete_stairs",
+    "enhanced_playthrough:pink_concrete_stairs",
     "enhanced_playthrough:polished_stone_stair",
     "enhanced_playthrough:cobbeled_limestone_stair",
     "enhanced_playthrough:limestone_stair",
     "enhanced_playthrough:polished_limestone_stair",
     "enhanced_playthrough:limestone_brick_stair",
-    "enhanced_playthrough:soul_mud_brick_stair"
+    "enhanced_playthrough:soul_mud_brick_stair",
+    "enhanced_playthrough:firebrick_stair",
+    "enhanced_playthrough:walnut_stair",
+    "enhanced_playthrough:apple_stair",
+    "enhanced_playthrough:orange_stair",
+    "enhanced_playthrough:lemon_stair"
   ]
 }

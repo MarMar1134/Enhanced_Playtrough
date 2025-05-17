@@ -13,6 +13,7 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.Block;
@@ -52,6 +53,15 @@ public class MechanicalGrinderBlock extends BaseEntityBlock implements EntityBlo
     @Override
     public RenderShape getRenderShape(BlockState pState) {
         return RenderShape.MODEL;
+    }
+
+    @Override
+    public int getLightEmission(BlockState state, BlockGetter level, BlockPos pos) {
+        if (state.getValue(ON)){
+            return 10;
+        }
+
+        return super.getLightEmission(state, level, pos);
     }
 
     @Override

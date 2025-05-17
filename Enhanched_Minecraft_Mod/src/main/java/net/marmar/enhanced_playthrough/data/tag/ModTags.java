@@ -1,16 +1,18 @@
 package net.marmar.enhanced_playthrough.data.tag;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
 
 public class ModTags {
 
-    public static class Blocks{
+    public static class Blocks {
         public static final TagKey<Block> NEEDS_SILVER_TOOL = blockTag("needs_silver_tool");
         public static final TagKey<Block> NEEDS_BRASS_TOOL = blockTag("needs_brass_tool");
         public static final TagKey<Block> NEEDS_BRONZE_TOOL= blockTag("needs_bronze_tool");
@@ -28,7 +30,7 @@ public class ModTags {
             return BlockTags.create(new ResourceLocation(EnhancedPlaythrough.MOD_ID, name));
         }
     }
-    public static class Items{
+    public static class Items {
         //Materials
         public static final TagKey<Item> GOLD = itemTag("gold");
         public static final TagKey<Item> SILVER = itemTag("silver");
@@ -81,6 +83,24 @@ public class ModTags {
 
         private static TagKey<Item> forgeTag(String name){
             return ItemTags.create(new ResourceLocation("forge", name));
+        }
+    }
+
+    public static class Biomes {
+        //Biomes by temperature
+        public static final TagKey<Biome> COLD_BIOMES = biomeTag("cold_biomes");
+        public static final TagKey<Biome> TEMPLATE_BIOMES = biomeTag("template_biomes");
+        public static final TagKey<Biome> WARM_BIOMES = biomeTag("warm_biomes");
+
+        //Biomes with structures
+        public static final TagKey<Biome> JEWELER_HOUSE = structureTag("jeweler_house");
+
+        private static TagKey<Biome> biomeTag(String name){
+            return TagKey.create(Registries.BIOME, new ResourceLocation(EnhancedPlaythrough.MOD_ID, name));
+        }
+
+        private static TagKey<Biome> structureTag(String name){
+            return TagKey.create(Registries.BIOME, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "has_structure/" + name));
         }
     }
 }

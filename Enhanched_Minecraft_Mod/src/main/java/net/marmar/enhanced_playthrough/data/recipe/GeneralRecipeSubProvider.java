@@ -76,6 +76,45 @@ public class GeneralRecipeSubProvider extends RecipeProvider {
         stoneCutting(consumer, Items.DRIPSTONE_BLOCK, ModBlocks.DRIPSTONE_STAIRS.get(), 1);
         stoneCutting(consumer, Items.DRIPSTONE_BLOCK, ModBlocks.DRIPSTONE_WALL.get(), 1);
 
+        //Calcite
+        stoneCutting(consumer, Items.CALCITE, ModBlocks.CALCITE_SLAB.get(), 2);
+        stoneCutting(consumer, Items.CALCITE, ModBlocks.CALCITE_STAIRS.get(), 1);
+        stoneCutting(consumer, Items.CALCITE, ModBlocks.CALCITE_WALL.get(), 1);
+
+        //Concrete
+        stoneCutting(consumer, Items.WHITE_CONCRETE, ModBlocks.WHITE_CONCRETE_SLAB.get(), 2);
+        stoneCutting(consumer, Items.WHITE_CONCRETE, ModBlocks.WHITE_CONCRETE_STAIRS.get(), 1);
+        stoneCutting(consumer, Items.LIGHT_GRAY_CONCRETE, ModBlocks.LIGHT_GRAY_CONCRETE_SLAB.get(), 2);
+        stoneCutting(consumer, Items.LIGHT_GRAY_CONCRETE, ModBlocks.LIGHT_GRAY_CONCRETE_STAIRS.get(), 1);
+        stoneCutting(consumer, Items.GRAY_CONCRETE, ModBlocks.GRAY_CONCRETE_SLAB.get(), 2);
+        stoneCutting(consumer, Items.GRAY_CONCRETE, ModBlocks.GRAY_CONCRETE_STAIRS.get(), 1);
+        stoneCutting(consumer, Items.BLACK_CONCRETE, ModBlocks.BLACK_CONCRETE_SLAB.get(), 2);
+        stoneCutting(consumer, Items.BLACK_CONCRETE, ModBlocks.BLACK_CONCRETE_STAIRS.get(), 1);
+        stoneCutting(consumer, Items.BROWN_CONCRETE, ModBlocks.BROWN_CONCRETE_SLAB.get(), 2);
+        stoneCutting(consumer, Items.BROWN_CONCRETE, ModBlocks.BROWN_CONCRETE_STAIRS.get(), 1);
+        stoneCutting(consumer, Items.RED_CONCRETE, ModBlocks.RED_CONCRETE_SLAB.get(), 2);
+        stoneCutting(consumer, Items.RED_CONCRETE, ModBlocks.RED_CONCRETE_STAIRS.get(), 1);
+        stoneCutting(consumer, Items.ORANGE_CONCRETE, ModBlocks.ORANGE_CONCRETE_SLAB.get(), 2);
+        stoneCutting(consumer, Items.ORANGE_CONCRETE, ModBlocks.ORANGE_CONCRETE_STAIRS.get(), 1);
+        stoneCutting(consumer, Items.YELLOW_CONCRETE, ModBlocks.YELLOW_CONCRETE_SLAB.get(), 2);
+        stoneCutting(consumer, Items.YELLOW_CONCRETE, ModBlocks.YELLOW_CONCRETE_STAIRS.get(), 1);
+        stoneCutting(consumer, Items.LIME_CONCRETE, ModBlocks.LIME_CONCRETE_SLAB.get(), 2);
+        stoneCutting(consumer, Items.LIME_CONCRETE, ModBlocks.LIME_CONCRETE_STAIRS.get(), 1);
+        stoneCutting(consumer, Items.GREEN_CONCRETE, ModBlocks.GREEN_CONCRETE_SLAB.get(), 2);
+        stoneCutting(consumer, Items.GREEN_CONCRETE, ModBlocks.GREEN_CONCRETE_STAIRS.get(), 1);
+        stoneCutting(consumer, Items.CYAN_CONCRETE, ModBlocks.CYAN_CONCRETE_SLAB.get(), 2);
+        stoneCutting(consumer, Items.CYAN_CONCRETE, ModBlocks.CYAN_CONCRETE_STAIRS.get(), 1);
+        stoneCutting(consumer, Items.LIGHT_BLUE_CONCRETE, ModBlocks.LIGHT_BLUE_CONCRETE_SLAB.get(), 2);
+        stoneCutting(consumer, Items.LIGHT_BLUE_CONCRETE, ModBlocks.LIGHT_BLUE_CONCRETE_STAIRS.get(), 1);
+        stoneCutting(consumer, Items.BLUE_CONCRETE, ModBlocks.BLUE_CONCRETE_SLAB.get(), 2);
+        stoneCutting(consumer, Items.BLUE_CONCRETE, ModBlocks.BLUE_CONCRETE_STAIRS.get(), 1);
+        stoneCutting(consumer, Items.PURPLE_CONCRETE, ModBlocks.PURPLE_CONCRETE_SLAB.get(), 2);
+        stoneCutting(consumer, Items.PURPLE_CONCRETE, ModBlocks.PURPLE_CONCRETE_STAIRS.get(), 1);
+        stoneCutting(consumer, Items.MAGENTA_CONCRETE, ModBlocks.MAGENTA_CONCRETE_SLAB.get(), 2);
+        stoneCutting(consumer, Items.MAGENTA_CONCRETE, ModBlocks.MAGENTA_CONCRETE_STAIRS.get(), 1);
+        stoneCutting(consumer, Items.PINK_CONCRETE, ModBlocks.PINK_CONCRETE_SLAB.get(), 2);
+        stoneCutting(consumer, Items.PINK_CONCRETE, ModBlocks.PINK_CONCRETE_STAIRS.get(), 1);
+
         //Polished stone
         stoneCutting(consumer, ModBlocks.POLISHED_STONE.get(), ModBlocks.POLISHED_STONE_SLAB.get(), 2);
         stoneCutting(consumer, ModBlocks.POLISHED_STONE.get(), ModBlocks.POLISHED_STONE_STAIRS.get(), 1);

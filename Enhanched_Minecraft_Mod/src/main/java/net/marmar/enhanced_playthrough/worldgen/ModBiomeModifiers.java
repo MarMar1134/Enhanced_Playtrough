@@ -1,6 +1,7 @@
 package net.marmar.enhanced_playthrough.worldgen;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
+import net.marmar.enhanced_playthrough.data.tag.ModTags;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
@@ -36,8 +37,10 @@ public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_TALL_REEDS_SWAMP = registerKey("add_tall_reeds_swamp");
 
     public static final ResourceKey<BiomeModifier> ADD_REEDS_OVERWORLD = registerKey("add_reeds_overworld");
+    public static final ResourceKey<BiomeModifier> ADD_REEDS_SWAMP = registerKey("add_reeds_swamp");
 
     public static final ResourceKey<BiomeModifier> ADD_SMALL_REEDS_OVERWORLD = registerKey("add_small_reeds_overworld");
+    public static final ResourceKey<BiomeModifier> ADD_SMALL_REEDS_SWAMP = registerKey("add_small_reeds_swamp");
     public static final ResourceKey<BiomeModifier> ADD_SMALL_REEDS_PLATEAU = registerKey("add_small_reeds_plateau");
 
     public static final ResourceKey<BiomeModifier> ADD_WATER_REEDS_OVERWORLD = registerKey("add_water_reeds_overworld");
@@ -154,7 +157,7 @@ public class ModBiomeModifiers {
                 GenerationStep.Decoration.UNDERGROUND_ORES));
 
         context.register(ADD_EXTRA_SAPPHIRE_ORE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(Tags.Biomes.IS_LUSH),
+                HolderSet.direct(biomes.getOrThrow(Biomes.LUSH_CAVES)),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.EXTRA_SAPPHIRE_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
 
@@ -165,7 +168,7 @@ public class ModBiomeModifiers {
                 GenerationStep.Decoration.UNDERGROUND_ORES));
 
         context.register(ADD_EXTRA_RUBI_ORE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(Tags.Biomes.IS_LUSH),
+                HolderSet.direct(biomes.getOrThrow(Biomes.LUSH_CAVES)),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.EXTRA_RUBI_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
 
@@ -222,7 +225,7 @@ public class ModBiomeModifiers {
 
         //Plants
         context.register(ADD_TALL_REEDS_OVERWORLD, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
+                biomes.getOrThrow(ModTags.Biomes.TEMPLATE_BIOMES),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.TALL_REEDS_OVERWORLD_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
         context.register(ADD_TALL_REEDS_SWAMP, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
@@ -231,13 +234,21 @@ public class ModBiomeModifiers {
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
         context.register(ADD_REEDS_OVERWORLD, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
+                biomes.getOrThrow(ModTags.Biomes.TEMPLATE_BIOMES),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.REEDS_OVERWORLD_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+        context.register(ADD_REEDS_SWAMP, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                HolderSet.direct(biomes.getOrThrow(Biomes.SWAMP)),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.REEDS_SWAMP_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
         context.register(ADD_SMALL_REEDS_OVERWORLD, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
+                biomes.getOrThrow(ModTags.Biomes.TEMPLATE_BIOMES),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.SMALL_REEDS_OVERWORLD_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+        context.register(ADD_SMALL_REEDS_SWAMP, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                HolderSet.direct(biomes.getOrThrow(Biomes.SWAMP)),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.SMALL_REEDS_SWAMP_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
         context.register(ADD_SMALL_REEDS_PLATEAU, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 HolderSet.direct(biomes.getOrThrow(Biomes.WINDSWEPT_HILLS), biomes.getOrThrow(Biomes.WINDSWEPT_FOREST)),

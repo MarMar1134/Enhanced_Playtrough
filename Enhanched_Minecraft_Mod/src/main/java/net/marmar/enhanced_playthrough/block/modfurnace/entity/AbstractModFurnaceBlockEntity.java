@@ -1,7 +1,10 @@
 package net.marmar.enhanced_playthrough.block.modfurnace.entity;
 
 import net.marmar.enhanced_playthrough.block.modfurnace.AbstractModFurnaceBlock;
+import net.marmar.enhanced_playthrough.recipe.alloy.AlloyRecipe;
 import net.marmar.enhanced_playthrough.recipe.modsmelting.AbstractSmeltingRecipe;
+import net.marmar.enhanced_playthrough.recipe.modsmelting.BasicSmeltingRecipe;
+import net.marmar.enhanced_playthrough.recipe.modsmelting.SoulBasicSmeltingRecipe;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -56,14 +59,12 @@ public abstract class AbstractModFurnaceBlockEntity extends BlockEntity {
 
     protected final ContainerData data;
     private final RecipeType<? extends AbstractSmeltingRecipe> recipeType;
-    private final RecipeManager.CachedCheck<SimpleContainer, ? extends AbstractSmeltingRecipe> quickCheck;
     private int progress = 0, maxProgress = 0;
     private int burnTime = 0, maxBurnTime = 0;
 
     public AbstractModFurnaceBlockEntity(@NotNull BlockEntityType<? extends AbstractModFurnaceBlockEntity> pType, BlockPos pPos, BlockState pBlockState, RecipeType<? extends AbstractSmeltingRecipe> recipe) {
         super(pType, pPos, pBlockState);
         this.recipeType = recipe;
-        this.quickCheck = RecipeManager.createCheck(recipe);
         this.data = new ContainerData() {
             @Override
             public int get(int i) {
@@ -92,6 +93,8 @@ public abstract class AbstractModFurnaceBlockEntity extends BlockEntity {
                 return 4;
             }
         };
+
+        this.maxProgress = getMaxProgressFromRecipe();
     }
 
     public ItemStackHandler getInputHandler() {
@@ -140,14 +143,14 @@ public abstract class AbstractModFurnaceBlockEntity extends BlockEntity {
         outputLazyHandler.invalidate();
     }
 
-    private int getMaxProgressFromRecipe(Level pLevel, AbstractModFurnaceBlockEntity pBlock){
-        SimpleContainer inv = new SimpleContainer(1);
-
-        inv.setItem(0, inputHandler.getStackInSlot(0));
-
-        Optional<? extends AbstractSmeltingRecipe> recipe = pBlock.quickCheck.getRecipeFor(inv, pLevel);
-
-        return recipe.map(AbstractSmeltingRecipe::getCoockingTime).orElse(300);
+    private int getMaxProgressFromRecipe(){
+        if (this.recipeType instanceof BasicSmeltingRecipe){
+            return 300;
+        } else if (this.recipeType instanceof SoulBasicSmeltingRecipe){
+            return 200;
+        } else {
+            return 100;
+        }
     }
 
     public void Drops(){
@@ -194,8 +197,6 @@ public abstract class AbstractModFurnaceBlockEntity extends BlockEntity {
     public static void tick(Level pLevel, BlockPos pPos, BlockState pState, AbstractModFurnaceBlockEntity entity){
         if (entity.isBurning()){
             if (entity.hasRecipe()){
-                entity.maxProgress = entity.getMaxProgressFromRecipe(pLevel, entity);
-
                 entity.increaseSmeltProgress();
 
                 entity.sendUpdate();

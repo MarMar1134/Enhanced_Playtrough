@@ -122,7 +122,7 @@ public class ModConfiguredFeatures {
                 OreConfiguration.target(deepslateReplaceable, ModBlocks.DEEPSLATE_TIN_ORE.get().defaultBlockState()));
 
         register(context, TIN_ORE_KEY, Feature.ORE, new OreConfiguration(tinOres, 7));
-        register(context, EXTRA_TIN_ORE_KEY, Feature.ORE, new OreConfiguration(tinOres, 7));
+        register(context, EXTRA_TIN_ORE_KEY, Feature.ORE, new OreConfiguration(tinOres, 5));
 
         //Zinc ore
         List<OreConfiguration.TargetBlockState> zincOres = List.of(OreConfiguration.target(stoneReplaceable,

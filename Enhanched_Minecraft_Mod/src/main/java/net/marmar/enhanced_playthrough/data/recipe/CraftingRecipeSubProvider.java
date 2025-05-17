@@ -5,6 +5,7 @@ import net.marmar.enhanced_playthrough.block.ModBlocks;
 import net.marmar.enhanced_playthrough.data.tag.ModTags;
 import net.marmar.enhanced_playthrough.item.ModItems;
 import net.minecraft.advancements.critereon.EnterBlockTrigger;
+import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
@@ -167,6 +168,24 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
             blockWithoutPolishedVersionRecipes(Blocks.CALCITE, ModBlocks.CALCITE_WALL.get(), ModBlocks.CALCITE_STAIRS.get(),
                     ModBlocks.CALCITE_SLAB.get(), consumer);
 
+            //Concrete
+            blockWithoutWallNorPolished(Blocks.WHITE_CONCRETE, ModBlocks.WHITE_CONCRETE_STAIRS.get(), ModBlocks.WHITE_CONCRETE_SLAB.get(), consumer);
+            blockWithoutWallNorPolished(Blocks.LIGHT_GRAY_CONCRETE, ModBlocks.LIGHT_GRAY_CONCRETE_STAIRS.get(), ModBlocks.LIGHT_GRAY_CONCRETE_SLAB.get(), consumer);
+            blockWithoutWallNorPolished(Blocks.GRAY_CONCRETE, ModBlocks.GRAY_CONCRETE_STAIRS.get(), ModBlocks.GRAY_CONCRETE_SLAB.get(), consumer);
+            blockWithoutWallNorPolished(Blocks.BLACK_CONCRETE, ModBlocks.BLACK_CONCRETE_STAIRS.get(), ModBlocks.BLACK_CONCRETE_SLAB.get(), consumer);
+            blockWithoutWallNorPolished(Blocks.BROWN_CONCRETE, ModBlocks.BROWN_CONCRETE_STAIRS.get(), ModBlocks.BROWN_CONCRETE_SLAB.get(), consumer);
+            blockWithoutWallNorPolished(Blocks.RED_CONCRETE, ModBlocks.RED_CONCRETE_STAIRS.get(), ModBlocks.RED_CONCRETE_SLAB.get(), consumer);
+            blockWithoutWallNorPolished(Blocks.ORANGE_CONCRETE, ModBlocks.ORANGE_CONCRETE_STAIRS.get(), ModBlocks.ORANGE_CONCRETE_SLAB.get(), consumer);
+            blockWithoutWallNorPolished(Blocks.YELLOW_CONCRETE, ModBlocks.YELLOW_CONCRETE_STAIRS.get(), ModBlocks.YELLOW_CONCRETE_SLAB.get(), consumer);
+            blockWithoutWallNorPolished(Blocks.LIME_CONCRETE, ModBlocks.LIME_CONCRETE_STAIRS.get(), ModBlocks.LIME_CONCRETE_SLAB.get(), consumer);
+            blockWithoutWallNorPolished(Blocks.GREEN_CONCRETE, ModBlocks.GREEN_CONCRETE_STAIRS.get(), ModBlocks.GREEN_CONCRETE_SLAB.get(), consumer);
+            blockWithoutWallNorPolished(Blocks.CYAN_CONCRETE, ModBlocks.CYAN_CONCRETE_STAIRS.get(), ModBlocks.CYAN_CONCRETE_SLAB.get(), consumer);
+            blockWithoutWallNorPolished(Blocks.LIGHT_BLUE_CONCRETE, ModBlocks.LIGHT_BLUE_CONCRETE_STAIRS.get(), ModBlocks.LIGHT_BLUE_CONCRETE_SLAB.get(), consumer);
+            blockWithoutWallNorPolished(Blocks.BLUE_CONCRETE, ModBlocks.BLUE_CONCRETE_STAIRS.get(), ModBlocks.BLUE_CONCRETE_SLAB.get(), consumer);
+            blockWithoutWallNorPolished(Blocks.PURPLE_CONCRETE, ModBlocks.PURPLE_CONCRETE_STAIRS.get(), ModBlocks.PURPLE_CONCRETE_SLAB.get(), consumer);
+            blockWithoutWallNorPolished(Blocks.MAGENTA_CONCRETE, ModBlocks.MAGENTA_CONCRETE_STAIRS.get(), ModBlocks.MAGENTA_CONCRETE_SLAB.get(), consumer);
+            blockWithoutWallNorPolished(Blocks.PINK_CONCRETE, ModBlocks.PINK_CONCRETE_STAIRS.get(), ModBlocks.PINK_CONCRETE_SLAB.get(), consumer);
+
             //Polished stone
             blockWithPolishedVersionRecipes(Blocks.STONE, ModBlocks.POLISHED_STONE.get(), ModBlocks.POLISHED_STONE_WALL.get(), ModBlocks.POLISHED_STONE_STAIRS.get(),
                     ModBlocks.POLISHED_STONE_SLAB.get(), consumer);
@@ -207,6 +226,18 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
             blockWithPolishedVersionRecipes(ModBlocks.SOUL_MUD.get(), ModBlocks.SOUL_MUD_BRICKS.get(), ModBlocks.SOUL_MUD_BRICK_WALL.get(),
                     ModBlocks.SOUL_MUD_BRICK_STAIRS.get(), ModBlocks.SOUL_MUD_BRICK_SLAB.get(), consumer);
 
+            //Firebricks
+            ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FIREBRICKS.get())
+                    .pattern("FF")
+                    .pattern("FF")
+                    .define('F', ModItems.FIREBRICK.get())
+                    .unlockedBy(getHasName(ModItems.FIREBRICK.get()), has(ModItems.FIREBRICK.get()))
+                    .unlockedBy(getHasName(ModBlocks.FIREBRICKS.get()), has(ModBlocks.FIREBRICKS.get()))
+                    .save(consumer);
+
+            blockWithoutPolishedVersionRecipes(ModBlocks.FIREBRICKS.get(), ModBlocks.FIREBRICK_WALL.get(), ModBlocks.FIREBRICK_STAIRS.get(),
+                    ModBlocks.FIREBRICK_SLAB.get(), consumer);
+
         //Entities
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ADOBE_FURNACE.get())
                 .pattern("###")
@@ -231,7 +262,7 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .pattern("BFB")
                 .pattern("CCC")
                 .define('I', ModItems.BRONZE_INGOT.get())
-                .define('B', Blocks.BRICKS)
+                .define('B', ModBlocks.FIREBRICKS.get())
                 .define('F', Blocks.FURNACE)
                 .define('C', Blocks.COBBLESTONE)
                 .unlockedBy(getHasName(Blocks.FURNACE), has(Blocks.FURNACE))
@@ -322,8 +353,7 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                     .save(consumer);
 
             //Stone
-            addStoneGear(
-                    ModItems.STONE_POLISHER.get(), consumer);
+            addStoneGear(ModItems.STONE_POLISHER.get(), consumer);
 
             //Brass
             materialRecipes(ModItems.BRASS_INGOT.get(), ModItems.BRASS_NUGGET.get(), ModBlocks.BRASS_BLOCK.get(), consumer);
@@ -437,6 +467,15 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                     .save(consumer);
 
             //Items
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.SADDLE)
+                    .pattern(" C ")
+                    .pattern("CIC")
+                    .define('C', Items.LEATHER)
+                    .define('I', Items.IRON_INGOT)
+                    .unlockedBy(getHasName(Items.LEATHER), has(Items.LEATHER))
+                    .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
+                    .unlockedBy(getHasName(Items.SADDLE), has(Items.SADDLE))
+                    .save(consumer);
             ShapelessRecipeBuilder.shapeless(RecipeCategory.BREWING, Items.GUNPOWDER)
                     .requires(ModItems.SULFUR.get())
                     .requires(Items.CHARCOAL)
@@ -716,8 +755,9 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                     .unlockedBy(getHasName(baseBlock), has(baseBlock))
                     .unlockedBy(getHasName(polishedBlock), has(polishedBlock))
                     .save(consumer);
-        } else {
+        } else if (wallBlock != null){
             wallBlockRecipe(baseBlock, wallBlock, consumer);
+        } else {
             stairBlockRecipe(baseBlock, stairBlock, consumer);
             slabBlockRecipe(baseBlock, slabBlock, consumer);
         }
@@ -729,6 +769,10 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
 
     protected static void blockWithoutPolishedVersionRecipes(Block baseBlock, Block wallBlock, Block stairBlock, Block slabBlock, Consumer<FinishedRecipe> consumer){
         baseAddRock(baseBlock, null, wallBlock, stairBlock, slabBlock, consumer);
+    }
+
+    protected static void blockWithoutWallNorPolished(Block baseBlock, Block stairBlock, Block slabBlock, Consumer<FinishedRecipe> consumer){
+        baseAddRock(baseBlock, null, null, stairBlock, slabBlock, consumer);
     }
 
     private static void wallBlockRecipe(Block baseBlock, Block wallBlock, Consumer<FinishedRecipe> consumer){
@@ -863,9 +907,9 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
     protected static void addStoneGear(ItemLike pPolisher, Consumer<FinishedRecipe> pConsumer){
         //Tools
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, Items.STONE_SWORD)
-                .pattern("I ")
-                .pattern("IS")
-                .pattern("# ")
+                .pattern(" I ")
+                .pattern(" IS")
+                .pattern(" # ")
                 .define('I', ModTags.Items.COBBLE)
                 .define('S', Tags.Items.STRING)
                 .define('#', Tags.Items.RODS_WOODEN)
@@ -893,9 +937,9 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .unlockedBy(getHasName(Items.STONE_AXE), has(Items.STONE_AXE))
                 .save(pConsumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, Items.STONE_SHOVEL)
-                .pattern("I ")
-                .pattern("#S")
-                .pattern("# ")
+                .pattern(" I ")
+                .pattern(" #S")
+                .pattern(" # ")
                 .define('I', ModTags.Items.COBBLE)
                 .define('S', Tags.Items.STRING)
                 .define('#', Tags.Items.RODS_WOODEN)

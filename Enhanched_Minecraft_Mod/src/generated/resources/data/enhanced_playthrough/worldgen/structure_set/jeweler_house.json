@@ -1,0 +1,14 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 16113412,
+    "separation": 10,
+    "spacing": 40
+  },
+  "structures": [
+    {
+      "structure": "enhanced_playthrough:jeweler_house",
+      "weight": 1
+    }
+  ]
+}

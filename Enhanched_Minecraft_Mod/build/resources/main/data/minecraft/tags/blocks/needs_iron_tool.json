@@ -2,6 +2,11 @@
   "values": [
     "enhanced_playthrough:silver_ore",
     "enhanced_playthrough:sapphire_ore",
-    "enhanced_playthrough:rubi_ore"
+    "enhanced_playthrough:rubi_ore",
+    "enhanced_playthrough:firebricks",
+    "enhanced_playthrough:firebrick_slab",
+    "enhanced_playthrough:firebrick_stair",
+    "enhanced_playthrough:firebrick_wall",
+    "enhanced_playthrough:masonry_furnace"
   ]
 }

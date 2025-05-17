@@ -18,10 +18,6 @@ public abstract class AbstractModLanguageProvider extends LanguageProvider {
         this.add("death.attack." + damageType + ".player", "%1$s " + killByPlayer + " %1$s");
     }
 
-    protected void addDeathMessages(String damageType, String killByPlayer){
-        this.add("death.attack." + damageType + ".player", "%1$s " + killByPlayer + " %1$s");
-    }
-
     private void addAdvancementTitle(AdvancementCategory advancementCategory, String advancementName, String translation){
         this.add("advancement." + EnhancedPlaythrough.MOD_ID + ".title." + advancementCategory.getCategory() + "." + advancementName, translation);
     }

@@ -46,6 +46,19 @@ public class VanillaBlockLootTables extends BlockLootSubProvider implements ILoo
         //Blackstone
         this.add(Blocks.BLACKSTONE, block -> createRockDrops(Blocks.BLACKSTONE, Blocks.BLACKSTONE, ModItems.BLACKSTONE_COBBLE.get()));
 
+        //Other blocks
+            //Bricks
+            this.add(Blocks.BRICKS, block -> createRoughMiningDrops(block, Items.BRICK, 4));
+            this.add(Blocks.BRICK_SLAB, block -> createRoughMiningDrops(block, Items.BRICK, 2));
+            this.add(Blocks.BRICK_STAIRS, block -> createRoughMiningDrops(block, Items.BRICK, 3));
+            this.add(Blocks.BRICK_WALL, block -> createRoughMiningDrops(block, Items.BRICK, 2));
+
+            //Nether bricks
+            this.add(Blocks.NETHER_BRICKS, block -> createRoughMiningDrops(block, Items.NETHER_BRICK, 4));
+            this.add(Blocks.NETHER_BRICK_SLAB, block -> createRoughMiningDrops(block, Items.NETHER_BRICK, 2));
+            this.add(Blocks.NETHER_BRICK_STAIRS, block -> createRoughMiningDrops(block, Items.NETHER_BRICK, 3));
+            this.add(Blocks.NETHER_BRICK_WALL, block -> createRoughMiningDrops(block, Items.NETHER_BRICK, 2));
+
         //Ores
             //Coal
             this.add(Blocks.COAL_ORE, block -> createOreDrops(Blocks.COAL_ORE, 1, 3, Items.COAL));
@@ -90,9 +103,16 @@ public class VanillaBlockLootTables extends BlockLootSubProvider implements ILoo
         block == Blocks.OAK_LEAVES ||
         block == Blocks.GRASS || block == Blocks.TALL_GRASS ||
         block == Blocks.FERN || block == Blocks.LARGE_FERN ||
+
         block == Blocks.STONE || block == Blocks.COBBLESTONE ||
         block == Blocks.DEEPSLATE || block == Blocks.COBBLED_DEEPSLATE ||
         block == Blocks.NETHERRACK || block == Blocks.BLACKSTONE ||
+
+        block == Blocks.BRICKS || block == Blocks.NETHER_BRICKS ||
+        block == Blocks.BRICK_SLAB || block == Blocks.NETHER_BRICK_SLAB ||
+        block == Blocks.BRICK_STAIRS || block == Blocks.NETHER_BRICK_STAIRS ||
+        block == Blocks.BRICK_WALL || block == Blocks.NETHER_BRICK_WALL ||
+
         block == Blocks.COAL_ORE || block == Blocks.DEEPSLATE_COAL_ORE ||
         block == Blocks.COPPER_ORE || block == Blocks.DEEPSLATE_COPPER_ORE ||
         block == Blocks.IRON_ORE || block == Blocks.DEEPSLATE_IRON_ORE ||

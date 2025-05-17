@@ -5,11 +5,13 @@
     "enhanced_playthrough:polished_andesite_wall",
     "enhanced_playthrough:polished_granite_wall",
     "enhanced_playthrough:dripstone_wall",
+    "enhanced_playthrough:calcite_wall",
     "enhanced_playthrough:polished_stone_wall",
     "enhanced_playthrough:limestone_wall",
     "enhanced_playthrough:cobbeled_limestone_wall",
     "enhanced_playthrough:polished_limestone_wall",
     "enhanced_playthrough:limestone_brick_wall",
-    "enhanced_playthrough:soul_mud_brick_wall"
+    "enhanced_playthrough:soul_mud_brick_wall",
+    "enhanced_playthrough:firebrick_wall"
   ]
 }

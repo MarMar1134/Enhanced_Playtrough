@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_firebrick": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:firebrick"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_firebricks": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:firebricks"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "enhanced_playthrough:firebricks"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_firebrick",
+      "has_firebricks",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "enhanced_playthrough:firebricks"
+    ]
+  },
+  "sends_telemetry_event": false
+}

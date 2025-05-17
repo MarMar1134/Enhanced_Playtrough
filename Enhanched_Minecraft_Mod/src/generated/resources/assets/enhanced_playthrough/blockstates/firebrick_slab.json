@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "enhanced_playthrough:block/firebrick_slab"
+    },
+    "type=double": {
+      "model": "enhanced_playthrough:block/firebricks"
+    },
+    "type=top": {
+      "model": "enhanced_playthrough:block/firebrick_slab_top"
+    }
+  }
+}

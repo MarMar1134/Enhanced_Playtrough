@@ -13,6 +13,7 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.Block;
@@ -67,6 +68,14 @@ public abstract class AbstractAlloyFurnaceBlock extends BaseEntityBlock implemen
             pLevel.addParticle(ParticleTypes.FLAME, X_position + random_X, Y_position + random_Y, Z_position + random_Z, 0.0, 0.0, 0.0);
         }
 
+    }
+
+    @Override
+    public int getLightEmission(BlockState state, BlockGetter level, BlockPos pos) {
+        if (state.getValue(BURNING)){
+            return 13;
+        }
+        return super.getLightEmission(state, level, pos);
     }
 
     @Override

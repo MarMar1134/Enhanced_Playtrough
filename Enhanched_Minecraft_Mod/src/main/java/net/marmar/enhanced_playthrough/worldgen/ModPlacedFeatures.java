@@ -38,8 +38,10 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> TALL_REEDS_SWAMP_PLACED_KEY = registerKey("tall_reeds_swamp_placed");
 
     public static final ResourceKey<PlacedFeature> REEDS_OVERWORLD_PLACED_KEY = registerKey("reeds_overworld_placed");
+    public static final ResourceKey<PlacedFeature> REEDS_SWAMP_PLACED_KEY = registerKey("reeds_swamp_placed");
 
     public static final ResourceKey<PlacedFeature> SMALL_REEDS_OVERWORLD_PLACED_KEY = registerKey("small_reeds_overworld_placed");
+    public static final ResourceKey<PlacedFeature> SMALL_REEDS_SWAMP_PLACED_KEY = registerKey("small_reeds_swamp_placed");
     public static final ResourceKey<PlacedFeature> SMALL_REEDS_PLATEAU_PLACED_KEY = registerKey("small_reeds_plateau_placed");
 
     public static final ResourceKey<PlacedFeature> WATER_REEDS_OVERWORLD_PLACED_KEY = registerKey("water_reeds_overworld_placed");
@@ -97,7 +99,7 @@ public class ModPlacedFeatures {
 
         register(context, EXTRA_TIN_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.EXTRA_TIN_ORE_KEY),
                 ModOrePlacement.commonOrePlacement(15,
-                        HeightRangePlacement.uniform(VerticalAnchor.absolute(90), VerticalAnchor.absolute(200))));
+                        HeightRangePlacement.triangle(VerticalAnchor.absolute(90), VerticalAnchor.absolute(130))));
 
         //Zinc
         register(context, ZINC_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ZINC_ORE_KEY),
@@ -195,9 +197,13 @@ public class ModPlacedFeatures {
 
         register(context, REEDS_OVERWORLD_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.REEDS_KEY),
                 List.of(new PlacementModifier[]{RarityFilter.onAverageOnceEvery(3), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()}));
+        register(context, REEDS_SWAMP_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.REEDS_KEY),
+                List.of(new PlacementModifier[]{RarityFilter.onAverageOnceEvery(6), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()}));
 
         register(context, SMALL_REEDS_OVERWORLD_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SMALL_REEDS_OVERWORLD_KEY),
                 List.of(new PlacementModifier[]{RarityFilter.onAverageOnceEvery(3), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()}));
+        register(context, SMALL_REEDS_SWAMP_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SMALL_REEDS_OVERWORLD_KEY),
+                List.of(new PlacementModifier[]{RarityFilter.onAverageOnceEvery(8), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()}));
         register(context, SMALL_REEDS_PLATEAU_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SMALL_REEDS_PLATEAU_KEY),
                 List.of(new PlacementModifier[]{RarityFilter.onAverageOnceEvery(6), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()}));
 

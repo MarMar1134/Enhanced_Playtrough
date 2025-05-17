@@ -7,6 +7,7 @@ import net.marmar.enhanced_playthrough.data.language.*;
 import net.marmar.enhanced_playthrough.data.loot.ModGlobalLootModifiersProvider;
 import net.marmar.enhanced_playthrough.data.loot.ModLootTableProvider;
 import net.marmar.enhanced_playthrough.data.recipe.ModRecipeProvider;
+import net.marmar.enhanced_playthrough.data.tag.ModBiomeTagGenerator;
 import net.marmar.enhanced_playthrough.data.tag.ModBlockTagGenerator;
 import net.marmar.enhanced_playthrough.data.tag.ModItemTagGenerator;
 import net.marmar.enhanced_playthrough.data.tag.ModPoiTypesTagProvider;
@@ -49,11 +50,12 @@ public class DataGenerators {
         generator.addProvider(event.includeServer(), new ForgeAdvancementProvider(packOutput, LookupProvider, existingFileHelper,
                 List.of(gem_advancements, survival_advancements)));
 
-        ModBlockTagGenerator blockTagGenerator = generator.addProvider(event.includeServer(),
-        new ModBlockTagGenerator(packOutput, LookupProvider, existingFileHelper));
+        ModBlockTagGenerator blockTagGenerator = generator.addProvider(event.includeServer(), new ModBlockTagGenerator(packOutput, LookupProvider, existingFileHelper));
 
         generator.addProvider(event.includeServer(), new ModItemTagGenerator(packOutput, LookupProvider, blockTagGenerator.contentsGetter(),
                 existingFileHelper));
+
+        generator.addProvider(event.includeServer(), new ModBiomeTagGenerator(packOutput, LookupProvider, existingFileHelper));
 
         //Languages
         generator.addProvider(event.includeClient(), new EnglishLanguageProvider(packOutput));

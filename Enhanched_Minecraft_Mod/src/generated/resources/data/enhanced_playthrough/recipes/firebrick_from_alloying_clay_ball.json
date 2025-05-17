@@ -1,0 +1,17 @@
+{
+  "type": "enhanced_playthrough:ore_alloying",
+  "alloytime": 200,
+  "category": "simple_alloy",
+  "group": "firebrick",
+  "ingredients": [
+    {
+      "item": "minecraft:clay_ball"
+    },
+    {
+      "item": "minecraft:clay_ball"
+    }
+  ],
+  "output": {
+    "item": "enhanced_playthrough:firebrick"
+  }
+}

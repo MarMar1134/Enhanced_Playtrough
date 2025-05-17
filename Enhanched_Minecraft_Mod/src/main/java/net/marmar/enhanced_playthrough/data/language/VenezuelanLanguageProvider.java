@@ -64,7 +64,8 @@ public class VenezuelanLanguageProvider extends AbstractModLanguageProvider{
         //Death messages
         addDeathMessages("tallReed", "ha muerto pinchado por un carrizo",
                 "ha muerto pinchado por un carrizo mientras escapaba de");
-        addDeathMessages("cobble", "ha muerto de un piedrazo en la cabeza mientras luchaba con");
+        addDeathMessages("cobble", "ha muerto de un piedrazo en la cabeza",
+                "ha muerto de un piedrazo en la cabeza mientras luchaba con");
 
         //Advancements
             //Survival
@@ -230,6 +231,48 @@ public class VenezuelanLanguageProvider extends AbstractModLanguageProvider{
         addBlock(ModBlocks.DRIPSTONE_STAIRS, "Escaleras de bloque de espeleotema");
         addBlock(ModBlocks.DRIPSTONE_WALL, "Pared de bloque de espeleotema");
 
+        //Calcite
+        addBlock(ModBlocks.CALCITE_SLAB, "Baldosa de calcita");
+        addBlock(ModBlocks.CALCITE_STAIRS, "Escaleras de calcita");
+        addBlock(ModBlocks.CALCITE_WALL, "Pared de calcita");
+
+        //Concrete
+            //Slabs
+            addBlock(ModBlocks.WHITE_CONCRETE_SLAB, "Baldosa de concreto blanco");
+            addBlock(ModBlocks.BLACK_CONCRETE_SLAB, "Baldosa de concreto negro");
+            addBlock(ModBlocks.BROWN_CONCRETE_SLAB, "Baldosa de concreto marrón");
+            addBlock(ModBlocks.LIGHT_GRAY_CONCRETE_SLAB, "Baldosa de concreto gris claro");
+            addBlock(ModBlocks.GRAY_CONCRETE_SLAB, "Baldosa de concreto gris");
+            addBlock(ModBlocks.RED_CONCRETE_SLAB, "Baldosa de concreto rojo");
+            addBlock(ModBlocks.ORANGE_CONCRETE_SLAB, "Baldosa de concreto naranja");
+            addBlock(ModBlocks.YELLOW_CONCRETE_SLAB, "Baldosa de concreto amarillo");
+            addBlock(ModBlocks.LIME_CONCRETE_SLAB, "Baldosa de concreto lima");
+            addBlock(ModBlocks.GREEN_CONCRETE_SLAB, "Baldosa de concreto verde");
+            addBlock(ModBlocks.CYAN_CONCRETE_SLAB, "Baldosa de concreto cyan");
+            addBlock(ModBlocks.LIGHT_BLUE_CONCRETE_SLAB, "Baldosa de concreto celeste");
+            addBlock(ModBlocks.BLUE_CONCRETE_SLAB, "Baldosa de concreto azul");
+            addBlock(ModBlocks.PURPLE_CONCRETE_SLAB, "Baldosa de concreto púrpura");
+            addBlock(ModBlocks.MAGENTA_CONCRETE_SLAB, "Baldosa de concreto magenta");
+            addBlock(ModBlocks.PINK_CONCRETE_SLAB, "Baldosa de concreto rosa");
+
+            //Stairs
+            addBlock(ModBlocks.WHITE_CONCRETE_STAIRS, "Escaleras de concreto blanco");
+            addBlock(ModBlocks.BLACK_CONCRETE_STAIRS, "Escaleras de concreto negro");
+            addBlock(ModBlocks.BROWN_CONCRETE_STAIRS, "Escaleras de concreto marrón");
+            addBlock(ModBlocks.LIGHT_GRAY_CONCRETE_STAIRS, "Escaleras de concreto gris claro");
+            addBlock(ModBlocks.GRAY_CONCRETE_STAIRS, "Escaleras de concreto gris");
+            addBlock(ModBlocks.RED_CONCRETE_STAIRS, "Escaleras de concreto rojo");
+            addBlock(ModBlocks.ORANGE_CONCRETE_STAIRS, "Escaleras de concreto naranja");
+            addBlock(ModBlocks.YELLOW_CONCRETE_STAIRS, "Escaleras de concreto amarillo");
+            addBlock(ModBlocks.LIME_CONCRETE_STAIRS, "Escaleras de concreto lima");
+            addBlock(ModBlocks.GREEN_CONCRETE_STAIRS, "Escaleras de concreto verde");
+            addBlock(ModBlocks.CYAN_CONCRETE_STAIRS, "Escaleras de concreto cyan");
+            addBlock(ModBlocks.LIGHT_BLUE_CONCRETE_STAIRS, "Escaleras de concreto celeste");
+            addBlock(ModBlocks.BLUE_CONCRETE_STAIRS, "Escaleras de concreto azul");
+            addBlock(ModBlocks.PURPLE_CONCRETE_STAIRS, "Escaleras de concreto púrpura");
+            addBlock(ModBlocks.MAGENTA_CONCRETE_STAIRS, "Escaleras de concreto magenta");
+            addBlock(ModBlocks.PINK_CONCRETE_STAIRS, "Escaleras de concreto rosa");
+
         //Polished stone
         addBlock(ModBlocks.POLISHED_STONE, "Piedra pulida");
         addBlock(ModBlocks.POLISHED_STONE_SLAB, "Baldosa de piedra pulida");
@@ -266,6 +309,12 @@ public class VenezuelanLanguageProvider extends AbstractModLanguageProvider{
         addBlock(ModBlocks.SOUL_MUD_BRICK_SLAB, "Baldosa de ladrillos de barro de almas");
         addBlock(ModBlocks.SOUL_MUD_BRICK_STAIRS, "Escaleras de ladrillos de barro de almas");
         addBlock(ModBlocks.SOUL_MUD_BRICK_WALL, "Pared de ladrillos de barro de almas");
+
+        //Firebricks
+        addBlock(ModBlocks.FIREBRICKS, "Ladrillos refractarios");
+        addBlock(ModBlocks.FIREBRICK_SLAB, "Baldosa de ladrillos refractarios");
+        addBlock(ModBlocks.FIREBRICK_STAIRS, "Escaleras de ladrillos refractarios");
+        addBlock(ModBlocks.FIREBRICK_WALL, "Pared de ladrillos refractarios");
 
         //Ores
         addBlock(ModBlocks.TIN_ORE, "Mena de estaño");
@@ -304,7 +353,7 @@ public class VenezuelanLanguageProvider extends AbstractModLanguageProvider{
         addBlock(ModBlocks.SOUL_FURNACE, "Horno de barro de almas");
         addBlock(ModBlocks.MASONRY_FURNACE, "Horno de mamposteria");
         addBlock(ModBlocks.ADOBE_ALLOYING_FURNACE, "Horno de aleación de larillos");
-        addBlock(ModBlocks.SOUL_ALLOY_FURNACE, "Horno de aleación de ladrillos de almas");
+        addBlock(ModBlocks.SOUL_ALLOY_FURNACE, "Horno de aleación de almas");
         addBlock(ModBlocks.SUPER_ALLOYING_FURNACE, "Alto horno de aleación");
         addBlock(ModBlocks.GEM_POLISHER, "Mesa de pulido");
         addBlock(ModBlocks.PRIMAL_GRINDER, "Moledora");
@@ -345,7 +394,10 @@ public class VenezuelanLanguageProvider extends AbstractModLanguageProvider{
         addItem(ModItems.SAPPHIRE, "Zafiro");
         addItem(ModItems.RUBY, "Rubí");
         addItem(ModItems.GARNET, "Granate");
+
+        //Others
         addItem(ModItems.MUD_BRICK, "Ladrillo de adobe");
+        addItem(ModItems.FIREBRICK, "Ladrillo refractario");
         addItem(ModItems.COBALT, "Cobalto");
         addItem(ModItems.REED_HEAD, "Cabeza de caña");
         addItem(ModItems.WATER_REED_HEAD, "Cabeza de junco");
@@ -551,7 +603,7 @@ public class VenezuelanLanguageProvider extends AbstractModLanguageProvider{
         addEnchantmentDesc("living_touch", "Aplica curación al objetivo");
 
         //Entities
-        //Villagers
-        addVillagerProfession("jeweler", "Joyero");
+            //Villagers
+            addVillagerProfession("jeweler", "Joyero");
     }
 }

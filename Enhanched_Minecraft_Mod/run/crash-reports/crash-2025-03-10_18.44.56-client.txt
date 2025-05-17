@@ -126,7 +126,7 @@ Stacktrace:
 
 -- Affected screen --
 Details:
-	Screen name: net.marmar.enhanced_playthrough.menu.grinder.screen.MechanicalGrinderScreen
+	Screen name: net.marmar.enhanced_playthrough.menu.screen.grinder.MechanicalGrinderScreen
 Stacktrace:
 	at net.minecraft.client.gui.screens.Screen.wrapScreenError(Screen.java:437) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
 	at net.minecraft.client.MouseHandler.onPress(MouseHandler.java:89) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar:?] {re:classloading,pl:runtimedistcleaner:A}

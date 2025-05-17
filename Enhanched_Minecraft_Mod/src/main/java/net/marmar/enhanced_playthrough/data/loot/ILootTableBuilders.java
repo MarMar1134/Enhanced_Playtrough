@@ -25,13 +25,14 @@ import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 
 public interface ILootTableBuilders {
-    float[] FRUIT_CHANCES = new float[]{0.005F, 0.0055555557F, 0.00625F, 0.008333334F, 0.025F};
-    float[] SAPLING_CHANCES = new float[]{0.05F, 0.0625F, 0.083333336F, 0.1F};
-    float[] STICK_CHANCES = new float[]{0.02F, 0.022222223F, 0.025F, 0.033333335F, 0.1F};
+    float[] BASE_FRUIT_CHANCES = new float[]{0.005F, 0.0055555557F, 0.00625F, 0.008333334F, 0.025F};
+    float[] BASE_SAPLING_CHANCES = new float[]{0.05F, 0.0625F, 0.083333336F, 0.1F};
+    float[] BASE_STICK_CHANCES = new float[]{0.02F, 0.022222223F, 0.025F, 0.033333335F, 0.1F};
 
-    LootItemCondition.Builder IS_WOODEN_PICKAXE = MatchTool.toolMatches(ItemPredicate.Builder.item().of(Items.WOODEN_PICKAXE))
+    LootItemCondition.Builder IS_WOODEN_OR_STONE_PICKAXE = MatchTool.toolMatches(ItemPredicate.Builder.item().of(Items.WOODEN_PICKAXE))
+            .or(MatchTool.toolMatches(ItemPredicate.Builder.item().of(Items.STONE_PICKAXE))
             .and(MatchTool.toolMatches(ItemPredicate.Builder.item()
-                    .hasEnchantment(new EnchantmentPredicate(Enchantments.SILK_TOUCH, MinMaxBounds.Ints.atLeast(1)))).invert());
+                    .hasEnchantment(new EnchantmentPredicate(Enchantments.SILK_TOUCH, MinMaxBounds.Ints.atLeast(1)))).invert()));
 
     LootItemCondition.Builder IS_STEEL_PICKAXE = MatchTool.toolMatches(ItemPredicate.Builder.item().of(ModItems.STEEL_PICKAXE.get()))
             .and(MatchTool.toolMatches(ItemPredicate.Builder.item()
@@ -52,6 +53,9 @@ public interface ILootTableBuilders {
             .hasEnchantment(new EnchantmentPredicate(ModEnchantments.ROUGH_MINING.get(), MinMaxBounds.Ints.atLeast(1))));
 
     LootItemCondition.Builder HAS_NOT_ROUGH_MINING = MatchTool.toolMatches(ItemPredicate.Builder.item()
+            .hasEnchantment(new EnchantmentPredicate(ModEnchantments.ROUGH_MINING.get(), MinMaxBounds.Ints.atLeast(1)))).invert();
+
+    LootItemCondition.Builder HAS_NOT_ROUGH_MINING_OR_PICKAXES = MatchTool.toolMatches(ItemPredicate.Builder.item()
                 .hasEnchantment(new EnchantmentPredicate(Enchantments.SILK_TOUCH, MinMaxBounds.Ints.atLeast(1)))).invert()
             .and(MatchTool.toolMatches(ItemPredicate.Builder.item().of(Items.WOODEN_PICKAXE)).invert())
             .and(MatchTool.toolMatches(ItemPredicate.Builder.item().of(ModItems.STEEL_PICKAXE.get())).invert())
@@ -65,8 +69,9 @@ public interface ILootTableBuilders {
             .hasEnchantment(new EnchantmentPredicate(Enchantments.SILK_TOUCH, MinMaxBounds.Ints.atLeast(1))))
             .and(MatchTool.toolMatches(ItemPredicate.Builder.item()
                     .of(Items.WOODEN_PICKAXE)).invert()
+                    .or(MatchTool.toolMatches(ItemPredicate.Builder.item().of(Items.STONE_PICKAXE)).invert()
                     .or(MatchTool.toolMatches(ItemPredicate.Builder.item()
-                    .of(ModItems.STEEL_PICKAXE.get())).invert()));
+                    .of(ModItems.STEEL_PICKAXE.get())).invert())));
 
     LootItemCondition.Builder CUSTOM_HAS_SHEARS = MatchTool.toolMatches(ItemPredicate.Builder.item().of(Items.SHEARS));
 
@@ -215,7 +220,7 @@ public interface ILootTableBuilders {
         return LootTable.lootTable()
                 .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1))
                     .add(LootItem.lootTableItem(silkTouchRock).when(SPECIAL_HAS_SILK_TOUCH)
-                        .otherwise(LootItem.lootTableItem(cobbleRock).when(HAS_NOT_ROUGH_MINING))))
+                        .otherwise(LootItem.lootTableItem(cobbleRock).when(HAS_NOT_ROUGH_MINING_OR_PICKAXES))))
 
                 .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1))
                     .add(LootItem.lootTableItem(cobbleType)
@@ -231,11 +236,21 @@ public interface ILootTableBuilders {
     }
 
     default LootTable.Builder createRockDrops(Block baseRock, Block cobbleRock, ItemLike cobbleType){
-        return createBaseRockDrops(baseRock, cobbleRock, cobbleType, IS_WOODEN_PICKAXE);
+        return createBaseRockDrops(baseRock, cobbleRock, cobbleType, IS_WOODEN_OR_STONE_PICKAXE);
     }
 
     default LootTable.Builder createHardRockDrops(Block baseRock, Block cobbleRock, ItemLike cobbleType){
         return createBaseRockDrops(baseRock, cobbleRock, cobbleType, IS_STEEL_PICKAXE);
+    }
+
+    default LootTable.Builder createRoughMiningDrops(Block pBlock, ItemLike pRoughDrop, int pRoughQuantity){
+        return LootTable.lootTable().withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1))
+                .add(LootItem.lootTableItem(pBlock)).when(HAS_NOT_ROUGH_MINING))
+                .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1))
+                        .add(LootItem.lootTableItem(pRoughDrop)
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(pRoughQuantity)))
+                                .apply(ApplyBonusCount.addUniformBonusCount(Enchantments.BLOCK_FORTUNE)))
+                        .when(HAS_ROUGH_MINING));
     }
 
     /**
@@ -270,7 +285,7 @@ public interface ILootTableBuilders {
                 .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1f))
                         .add(LootItem.lootTableItem(Items.STICK)
                                 .apply(SetItemCountFunction.setCount(UniformGenerator.between(1f, 2f)))
-                                .when(BonusLevelTableCondition.bonusLevelFlatChance(Enchantments.BLOCK_FORTUNE, STICK_CHANCES)))
+                                .when(BonusLevelTableCondition.bonusLevelFlatChance(Enchantments.BLOCK_FORTUNE, BASE_STICK_CHANCES)))
                         .when(CUSTOM_HAS_NO_SHEARS_OR_SILK_TOUCH))
                 .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1f))
                         .add(LootItem.lootTableItem(pSapling)
@@ -280,19 +295,19 @@ public interface ILootTableBuilders {
     }
 
     default LootTable.Builder createLeavesWithFruitDrops(Block pBlock, Block pSapling, ItemLike pFruit, int pMaxFruitQuantity, float... pFruitChances){
-        return createLeavesWithFruitDrops(pBlock, pSapling, SAPLING_CHANCES, pFruit, pMaxFruitQuantity, pFruitChances);
+        return createLeavesWithFruitDrops(pBlock, pSapling, BASE_SAPLING_CHANCES, pFruit, pMaxFruitQuantity, pFruitChances);
     }
 
     default LootTable.Builder createLeavesWithFruitDrops(Block pBlock, Block pSapling, ItemLike pFruit, int pFruits){
-        return createLeavesWithFruitDrops(pBlock, pSapling, SAPLING_CHANCES, pFruit, pFruits, FRUIT_CHANCES);
+        return createLeavesWithFruitDrops(pBlock, pSapling, BASE_SAPLING_CHANCES, pFruit, pFruits, BASE_FRUIT_CHANCES);
     }
 
     default LootTable.Builder createLeavesWithFruitDrops(Block pBlock, Block pSapling, ItemLike pFruit, float... pFruitChances){
-        return createLeavesWithFruitDrops(pBlock, pSapling, SAPLING_CHANCES, pFruit, 1, pFruitChances);
+        return createLeavesWithFruitDrops(pBlock, pSapling, BASE_SAPLING_CHANCES, pFruit, 1, pFruitChances);
     }
 
     default LootTable.Builder createLeavesWithFruitDrops(Block pBlock, Block pSapling, ItemLike pFruit){
-        return createLeavesWithFruitDrops(pBlock, pSapling, SAPLING_CHANCES, pFruit, 1, FRUIT_CHANCES);
+        return createLeavesWithFruitDrops(pBlock, pSapling, BASE_SAPLING_CHANCES, pFruit, 1, BASE_FRUIT_CHANCES);
     }
 
     default LootTable.Builder createLeavesWithFruitDrops(Block pBlock, Block pSapling, float[] pSaplingChances, ItemLike pFruit, float... pFruitChances){
@@ -305,7 +320,7 @@ public interface ILootTableBuilders {
                 .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1f))
                         .add(LootItem.lootTableItem(Items.STICK)
                                 .apply(SetItemCountFunction.setCount(UniformGenerator.between(1f, 2f)))
-                                .when(BonusLevelTableCondition.bonusLevelFlatChance(Enchantments.BLOCK_FORTUNE, STICK_CHANCES)))
+                                .when(BonusLevelTableCondition.bonusLevelFlatChance(Enchantments.BLOCK_FORTUNE, BASE_STICK_CHANCES)))
                         .when(CUSTOM_HAS_NO_SHEARS_OR_SILK_TOUCH))
                 .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1f))
                         .add(LootItem.lootTableItem(pSapling)
@@ -315,6 +330,6 @@ public interface ILootTableBuilders {
     }
 
     default LootTable.Builder createLeavesWithoutFruitDrops(Block pBlock, Block pSapling){
-        return createLeavesWithoutFruitDrops(pBlock, pSapling, SAPLING_CHANCES);
+        return createLeavesWithoutFruitDrops(pBlock, pSapling, BASE_SAPLING_CHANCES);
     }
 }

@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_green_concrete": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:green_concrete"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_green_concrete_stairs": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:green_concrete_stairs"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "enhanced_playthrough:green_concrete_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_green_concrete",
+      "has_green_concrete_stairs",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "enhanced_playthrough:green_concrete_stairs"
+    ]
+  },
+  "sends_telemetry_event": false
+}
