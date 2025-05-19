@@ -1,10 +1,13 @@
 package net.marmar.enhanced_playthrough.Util.enchantment;
 
+import net.marmar.enhanced_playthrough.item.custom.weapon.WeaponItem;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentCategory;
 import net.minecraft.world.item.enchantment.Enchantments;
@@ -15,23 +18,29 @@ public class LivingTouchEnchantment extends Enchantment {
     }
     @Override
     public boolean isTreasureOnly() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isTradeable() {
-        return true;
+        return false;
     }
-
 
     @Override
     public boolean isAllowedOnBooks() {
         return true;
     }
+
+    @Override
+    public boolean canEnchant(ItemStack pStack) {
+        return pStack.getItem() instanceof SwordItem;
+    }
+
     @Override
     public int getMaxLevel() {
         return 2;
     }
+
     @Override
     public void doPostAttack(LivingEntity pAttacker, Entity pTarget, int pLevel) {
         if(pTarget instanceof LivingEntity){

@@ -2,19 +2,14 @@ package net.marmar.enhanced_playthrough.data.recipe;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.item.ModItems;
-import net.marmar.enhanced_playthrough.recipe.ModRecipes;
-import net.marmar.enhanced_playthrough.recipe.alloy.AlloyRecipe;
-import net.marmar.enhanced_playthrough.recipe.alloy.BlastAlloyRecipe;
 import net.marmar.enhanced_playthrough.recipe.recipebuilder.AlloyRecipeBuilder;
 import net.marmar.enhanced_playthrough.recipe.recipecategory.AlloyRecipeCategory;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
-import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
 
 import java.util.function.Consumer;
@@ -86,6 +81,10 @@ public class AlloyRecipeSubProvider extends RecipeProvider {
         return InventoryChangeTrigger.TriggerInstance.hasItems(Items.RAW_GOLD, pOther);
     }
 
+    private static InventoryChangeTrigger.TriggerInstance HAS_MATERIALS(ItemLike pFirst, ItemLike pSecond){
+        return InventoryChangeTrigger.TriggerInstance.hasItems(pFirst, pSecond);
+    }
+
     protected static void singleIngredientAlloying(Consumer<FinishedRecipe> pConsumer, ItemLike ingredient, ItemLike result, int count, AlloyRecipeCategory pCategory, String pGroup){
         oreAlloySerialize(pConsumer, ingredient, ingredient, result, pCategory, pGroup, "from_alloying");
         superOreAlloySerialize(pConsumer, ingredient, ingredient, result, pCategory, pGroup, count, "from_super_alloying");
@@ -113,8 +112,7 @@ public class AlloyRecipeSubProvider extends RecipeProvider {
 
         if (!isSameIngredient){
             AlloyRecipeBuilder.oreAlloying(Ingredient.of(firstIngredient), Ingredient.of(secondIngredient), recipeCategory, output, group)
-                    .unlockedBy(getHasName(firstIngredient), has(firstIngredient))
-                    .unlockedBy(getHasName(secondIngredient), has(secondIngredient))
+                    .unlockedBy("has_required_materials", HAS_MATERIALS(firstIngredient, secondIngredient))
                     .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(output) +  "_" + recipeName + "_" + getItemName(firstIngredient) + "_and_" + getItemName(secondIngredient));
         } else {
             AlloyRecipeBuilder.oreAlloying(Ingredient.of(firstIngredient), Ingredient.of(secondIngredient), recipeCategory, output, group)
@@ -128,8 +126,7 @@ public class AlloyRecipeSubProvider extends RecipeProvider {
 
         if (!isSameIngredient){
             AlloyRecipeBuilder.superOreAlloying(Ingredient.of(firstIngredient), Ingredient.of(secondIngredient), recipeCategory, output, group, count)
-                    .unlockedBy(getHasName(firstIngredient), has(firstIngredient))
-                    .unlockedBy(getHasName(secondIngredient), has(secondIngredient))
+                    .unlockedBy("has_required_materials", HAS_MATERIALS(firstIngredient, secondIngredient))
                     .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(output) +  "_" + recipeName + "_" + getItemName(firstIngredient) + "_and_" + getItemName(secondIngredient));
         } else {
             AlloyRecipeBuilder.superOreAlloying(Ingredient.of(firstIngredient), Ingredient.of(secondIngredient), recipeCategory, output, group, count)

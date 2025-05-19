@@ -355,16 +355,21 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.WATER_REED_HEAD);
 
         //Armors and tools
+            //Wood
+            handheldItem(ModItems.WOODEN_DAGGER);
+
             //Gold
-            HandheldItem(ModItems.GOLDEN_POLISHER);
+            handheldItem(ModItems.GOLDEN_POLISHER);
+            handheldItem(ModItems.GOLDEN_DAGGER);
 
             //Silver
-            HandheldItem(ModItems.SILVER_SWORD);
-            HandheldItem(ModItems.SILVER_PICKAXE);
-            HandheldItem(ModItems.SILVER_AXE);
-            HandheldItem(ModItems.SILVER_SHOVEL);
-            HandheldItem(ModItems.SILVER_HOE);
-            HandheldItem(ModItems.SILVER_POLISHER);
+            handheldItem(ModItems.SILVER_SWORD);
+            handheldItem(ModItems.SILVER_DAGGER);
+            handheldItem(ModItems.SILVER_PICKAXE);
+            handheldItem(ModItems.SILVER_AXE);
+            handheldItem(ModItems.SILVER_SHOVEL);
+            handheldItem(ModItems.SILVER_HOE);
+            handheldItem(ModItems.SILVER_POLISHER);
 
             trimmedArmorItem(ModItems.SILVER_HELMET);
             trimmedArmorItem(ModItems.SILVER_CHESTPLATE);
@@ -372,15 +377,17 @@ public class ModItemModelProvider extends ItemModelProvider {
             trimmedArmorItem(ModItems.SILVER_BOOTS);
 
             //Stone
-            HandheldItem(ModItems.STONE_POLISHER);
+            handheldItem(ModItems.STONE_POLISHER);
+            handheldItem(ModItems.STONE_DAGGER);
 
             //Bronze
-            HandheldItem(ModItems.BRONZE_SWORD);
-            HandheldItem(ModItems.BRONZE_PICKAXE);
-            HandheldItem(ModItems.BRONZE_AXE);
-            HandheldItem(ModItems.BRONZE_SHOVEL);
-            HandheldItem(ModItems.BRONZE_HOE);
-            HandheldItem(ModItems.BRONZE_POLISHER);
+            handheldItem(ModItems.BRONZE_SWORD);
+            handheldItem(ModItems.BRONZE_DAGGER);
+            handheldItem(ModItems.BRONZE_PICKAXE);
+            handheldItem(ModItems.BRONZE_AXE);
+            handheldItem(ModItems.BRONZE_SHOVEL);
+            handheldItem(ModItems.BRONZE_HOE);
+            handheldItem(ModItems.BRONZE_POLISHER);
 
             trimmedArmorItem(ModItems.BRONZE_HELMET);
             trimmedArmorItem(ModItems.BRONZE_CHESTPLATE);
@@ -388,12 +395,13 @@ public class ModItemModelProvider extends ItemModelProvider {
             trimmedArmorItem(ModItems.BRONZE_BOOTS);
 
             //Brass
-            HandheldItem(ModItems.BRASS_SWORD);
-            HandheldItem(ModItems.BRASS_PICKAXE);
-            HandheldItem(ModItems.BRASS_AXE);
-            HandheldItem(ModItems.BRASS_SHOVEL);
-            HandheldItem(ModItems.BRASS_HOE);
-            HandheldItem(ModItems.BRASS_POLISHER);
+            handheldItem(ModItems.BRASS_SWORD);
+            handheldItem(ModItems.BRASS_DAGGER);
+            handheldItem(ModItems.BRASS_PICKAXE);
+            handheldItem(ModItems.BRASS_AXE);
+            handheldItem(ModItems.BRASS_SHOVEL);
+            handheldItem(ModItems.BRASS_HOE);
+            handheldItem(ModItems.BRASS_POLISHER);
 
             trimmedArmorItem(ModItems.BRASS_HELMET);
             trimmedArmorItem(ModItems.BRASS_CHESTPLATE);
@@ -401,12 +409,13 @@ public class ModItemModelProvider extends ItemModelProvider {
             trimmedArmorItem(ModItems.BRASS_BOOTS);
 
             //Rose Gold
-            HandheldItem(ModItems.ROSE_GOLDEN_SWORD);
-            HandheldItem(ModItems.ROSE_GOLDEN_PICKAXE);
-            HandheldItem(ModItems.ROSE_GOLDEN_AXE);
-            HandheldItem(ModItems.ROSE_GOLDEN_SHOVEL);
-            HandheldItem(ModItems.ROSE_GOLDEN_HOE);
-            HandheldItem(ModItems.ROSE_GOLDEN_POLISHER);
+            handheldItem(ModItems.ROSE_GOLDEN_SWORD);
+            handheldItem(ModItems.ROSE_GOLDEN_DAGGER);
+            handheldItem(ModItems.ROSE_GOLDEN_PICKAXE);
+            handheldItem(ModItems.ROSE_GOLDEN_AXE);
+            handheldItem(ModItems.ROSE_GOLDEN_SHOVEL);
+            handheldItem(ModItems.ROSE_GOLDEN_HOE);
+            handheldItem(ModItems.ROSE_GOLDEN_POLISHER);
 
             trimmedArmorItem(ModItems.ROSE_GOLDEN_HELMET);
             trimmedArmorItem(ModItems.ROSE_GOLDEN_CHESTPLATE);
@@ -414,12 +423,13 @@ public class ModItemModelProvider extends ItemModelProvider {
             trimmedArmorItem(ModItems.ROSE_GOLDEN_BOOTS);
 
             //Bronzium
-            HandheldItem(ModItems.BRONZIUM_SWORD);
-            HandheldItem(ModItems.BRONZIUM_PICKAXE);
-            HandheldItem(ModItems.BRONZIUM_AXE);
-            HandheldItem(ModItems.BRONZIUM_SHOVEL);
-            HandheldItem(ModItems.BRONZIUM_HOE);
-            HandheldItem(ModItems.BRONZIUM_POLISHER);
+            handheldItem(ModItems.BRONZIUM_SWORD);
+            handheldItem(ModItems.BRONZIUM_DAGGER);
+            handheldItem(ModItems.BRONZIUM_PICKAXE);
+            handheldItem(ModItems.BRONZIUM_AXE);
+            handheldItem(ModItems.BRONZIUM_SHOVEL);
+            handheldItem(ModItems.BRONZIUM_HOE);
+            handheldItem(ModItems.BRONZIUM_POLISHER);
 
             trimmedArmorItem(ModItems.BRONZIUM_HELMET);
             trimmedArmorItem(ModItems.BRONZIUM_CHESTPLATE);
@@ -427,15 +437,17 @@ public class ModItemModelProvider extends ItemModelProvider {
             trimmedArmorItem(ModItems.BRONZIUM_BOOTS);
 
             //Iron
-            HandheldItem(ModItems.IRON_POLISHER);
+            handheldItem(ModItems.IRON_POLISHER);
+            handheldItem(ModItems.IRON_DAGGER);
 
             //Steel
-            HandheldItem(ModItems.STEEL_SWORD);
-            HandheldItem(ModItems.STEEL_PICKAXE);
-            HandheldItem(ModItems.STEEL_AXE);
-            HandheldItem(ModItems.STEEL_SHOVEL);
-            HandheldItem(ModItems.STEEL_HOE);
-            HandheldItem(ModItems.STEEL_POLISHER);
+            handheldItem(ModItems.STEEL_SWORD);
+            handheldItem(ModItems.STEEL_DAGGER);
+            handheldItem(ModItems.STEEL_PICKAXE);
+            handheldItem(ModItems.STEEL_AXE);
+            handheldItem(ModItems.STEEL_SHOVEL);
+            handheldItem(ModItems.STEEL_HOE);
+            handheldItem(ModItems.STEEL_POLISHER);
 
             trimmedArmorItem(ModItems.STEEL_HELMET);
             trimmedArmorItem(ModItems.STEEL_CHESTPLATE);
@@ -443,12 +455,13 @@ public class ModItemModelProvider extends ItemModelProvider {
             trimmedArmorItem(ModItems.STEEL_BOOTS);
 
             //Green Gold
-            HandheldItem(ModItems.GREEN_GOLDEN_SWORD);
-            HandheldItem(ModItems.GREEN_GOLDEN_PICKAXE);
-            HandheldItem(ModItems.GREEN_GOLDEN_AXE);
-            HandheldItem(ModItems.GREEN_GOLDEN_SHOVEL);
-            HandheldItem(ModItems.GREEN_GOLDEN_HOE);
-            HandheldItem(ModItems.GREEN_GOLDEN_POLISHER);
+            handheldItem(ModItems.GREEN_GOLDEN_SWORD);
+            handheldItem(ModItems.GREEN_GOLDEN_DAGGER);
+            handheldItem(ModItems.GREEN_GOLDEN_PICKAXE);
+            handheldItem(ModItems.GREEN_GOLDEN_AXE);
+            handheldItem(ModItems.GREEN_GOLDEN_SHOVEL);
+            handheldItem(ModItems.GREEN_GOLDEN_HOE);
+            handheldItem(ModItems.GREEN_GOLDEN_POLISHER);
 
             trimmedArmorItem(ModItems.GREEN_GOLDEN_HELMET);
             trimmedArmorItem(ModItems.GREEN_GOLDEN_CHESTPLATE);
@@ -456,12 +469,13 @@ public class ModItemModelProvider extends ItemModelProvider {
             trimmedArmorItem(ModItems.GREEN_GOLDEN_BOOTS);
 
             //Blue gold
-            HandheldItem(ModItems.BLUE_GOLDEN_SWORD);
-            HandheldItem(ModItems.BLUE_GOLDEN_PICKAXE);
-            HandheldItem(ModItems.BLUE_GOLDEN_AXE);
-            HandheldItem(ModItems.BLUE_GOLDEN_SHOVEL);
-            HandheldItem(ModItems.BLUE_GOLDEN_HOE);
-            HandheldItem(ModItems.BLUE_GOLDEN_POLISHER);
+            handheldItem(ModItems.BLUE_GOLDEN_SWORD);
+            handheldItem(ModItems.BLUE_GOLDEN_DAGGER);
+            handheldItem(ModItems.BLUE_GOLDEN_PICKAXE);
+            handheldItem(ModItems.BLUE_GOLDEN_AXE);
+            handheldItem(ModItems.BLUE_GOLDEN_SHOVEL);
+            handheldItem(ModItems.BLUE_GOLDEN_HOE);
+            handheldItem(ModItems.BLUE_GOLDEN_POLISHER);
 
             trimmedArmorItem(ModItems.BLUE_GOLDEN_HELMET);
             trimmedArmorItem(ModItems.BLUE_GOLDEN_CHESTPLATE);
@@ -469,10 +483,12 @@ public class ModItemModelProvider extends ItemModelProvider {
             trimmedArmorItem(ModItems.BLUE_GOLDEN_BOOTS);
 
             //Diamond
-            HandheldItem(ModItems.DIAMOND_POLISHER);
+            handheldItem(ModItems.DIAMOND_POLISHER);
+            handheldItem(ModItems.DIAMOND_DAGGER);
 
             //Netherite
-            HandheldItem(ModItems.NETHERITE_POLISHER);
+            handheldItem(ModItems.NETHERITE_POLISHER);
+            handheldItem(ModItems.NETHERITE_DAGGER);
 
 
         }
@@ -544,7 +560,7 @@ public class ModItemModelProvider extends ItemModelProvider {
                         "item/" + item.getId().getPath()));
     }
 
-    private ItemModelBuilder HandheldItem(RegistryObject<Item> item){
+    private ItemModelBuilder handheldItem(RegistryObject<Item> item){
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/handheld")).texture("layer0",
                 new ResourceLocation(EnhancedPlaythrough.MOD_ID, "item/" + item.getId().getPath()));

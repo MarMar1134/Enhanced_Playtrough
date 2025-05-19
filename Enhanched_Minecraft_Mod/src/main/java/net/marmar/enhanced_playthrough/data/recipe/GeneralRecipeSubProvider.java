@@ -48,6 +48,7 @@ public class GeneralRecipeSubProvider extends RecipeProvider {
         bronziumSmithingTemplate(consumer, ModItems.BRASS_HOE.get(), ModItems.BRONZE_HOE.get(), ModItems.BRONZIUM_HOE.get());
         bronziumSmithingTemplate(consumer, ModItems.BRASS_POLISHER.get(), ModItems.BRONZE_POLISHER.get(), ModItems.BRONZIUM_POLISHER.get());
         bronziumSmithingTemplate(consumer, ModItems.BRASS_SWORD.get(), ModItems.BRONZE_SWORD.get(), ModItems.BRONZIUM_SWORD.get());
+        bronziumSmithingTemplate(consumer, ModItems.BRASS_DAGGER.get(), ModItems.BRONZE_DAGGER.get(), ModItems.BRONZIUM_DAGGER.get());
         bronziumSmithingTemplate(consumer, ModItems.BRASS_HELMET.get(), ModItems.BRONZE_HELMET.get(), ModItems.BRONZIUM_HELMET.get());
         bronziumSmithingTemplate(consumer, ModItems.BRASS_CHESTPLATE.get(), ModItems.BRONZE_CHESTPLATE.get(), ModItems.BRONZIUM_CHESTPLATE.get());
         bronziumSmithingTemplate(consumer, ModItems.BRASS_LEGGINGS.get(), ModItems.BRONZE_LEGGINGS.get(), ModItems.BRONZIUM_LEGGINGS.get());
@@ -56,6 +57,8 @@ public class GeneralRecipeSubProvider extends RecipeProvider {
         //Netherite
         smithingUpgrade(consumer, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, ModItems.DIAMOND_POLISHER.get(),
                 Items.NETHERITE_INGOT, ModItems.NETHERITE_POLISHER.get());
+        smithingUpgrade(consumer, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, ModItems.DIAMOND_DAGGER.get(),
+                Items.NETHERITE_INGOT, ModItems.NETHERITE_DAGGER.get());
     }
 
     private static void stonecuttingRecipes(Consumer<FinishedRecipe> consumer){

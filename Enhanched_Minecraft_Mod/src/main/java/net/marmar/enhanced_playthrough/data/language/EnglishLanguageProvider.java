@@ -430,6 +430,7 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
 
             //Silver equipment
             addItem(ModItems.SILVER_SWORD, "Silver sword");
+            addItem(ModItems.SILVER_DAGGER, "Silver dagger");
             addItem(ModItems.SILVER_PICKAXE, "Silver pickaxe");
             addItem(ModItems.SILVER_AXE, "Silver axe");
             addItem(ModItems.SILVER_SHOVEL, "Silver shovel");
@@ -442,12 +443,18 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
 
             //Gold equipment
             addItem(ModItems.GOLDEN_POLISHER, "Golden polisher");
+            addItem(ModItems.GOLDEN_DAGGER, "Golden dagger");
+
+            //Wood equipment
+            addItem(ModItems.WOODEN_DAGGER, "Wooden dagger");
 
             //Stone equipment
             addItem(ModItems.STONE_POLISHER, "Stone polisher");
+            addItem(ModItems.STONE_DAGGER, "Stone dagger");
 
             //Brass equipment
             addItem(ModItems.BRASS_SWORD, "Brass sword");
+            addItem(ModItems.BRASS_DAGGER, "Brass dagger");
             addItem(ModItems.BRASS_PICKAXE, "Brass pickaxe");
             addItem(ModItems.BRASS_AXE, "Brass axe");
             addItem(ModItems.BRASS_SHOVEL, "Brass shovel");
@@ -460,6 +467,7 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
 
             //Bronze equipment
             addItem(ModItems.BRONZE_SWORD, "Bronze sword");
+            addItem(ModItems.BRONZE_DAGGER, "Bronze dagger");
             addItem(ModItems.BRONZE_PICKAXE, "Bronze pickaxe");
             addItem(ModItems.BRONZE_AXE, "Bronze axe");
             addItem(ModItems.BRONZE_SHOVEL, "Bronze shovel");
@@ -472,6 +480,7 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
 
             //Rose golden equipment
             addItem(ModItems.ROSE_GOLDEN_SWORD, "Rose golden sword");
+            addItem(ModItems.ROSE_GOLDEN_DAGGER, "Rose golden dagger");
             addItem(ModItems.ROSE_GOLDEN_PICKAXE, "Rose golden pickaxe");
             addItem(ModItems.ROSE_GOLDEN_AXE, "Rose golden axe");
             addItem(ModItems.ROSE_GOLDEN_SHOVEL, "Rose golden shovel");
@@ -484,6 +493,7 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
 
             //Bronzium equipment
             addItem(ModItems.BRONZIUM_SWORD, "Bronzium sword");
+            addItem(ModItems.BRONZIUM_DAGGER, "Bronzium dagger");
             addItem(ModItems.BRONZIUM_PICKAXE, "Bronzium pickaxe");
             addItem(ModItems.BRONZIUM_AXE, "Bronzium axe");
             addItem(ModItems.BRONZIUM_SHOVEL, "Bronzium shovel");
@@ -496,9 +506,11 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
 
             //Iron equipment
             addItem(ModItems.IRON_POLISHER, "Iron polisher");
+            addItem(ModItems.IRON_DAGGER, "Iron dagger");
 
             //Green golden equipment
             addItem(ModItems.GREEN_GOLDEN_SWORD, "Green golden sword");
+            addItem(ModItems.GREEN_GOLDEN_DAGGER, "Green golden dagger");
             addItem(ModItems.GREEN_GOLDEN_PICKAXE, "Green golden pickaxe");
             addItem(ModItems.GREEN_GOLDEN_AXE, "Green golden axe");
             addItem(ModItems.GREEN_GOLDEN_SHOVEL, "Green golden shovel");
@@ -511,6 +523,7 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
 
             //Steel equipment
             addItem(ModItems.STEEL_SWORD, "Steel sword");
+            addItem(ModItems.STEEL_DAGGER, "Steel dagger");
             addItem(ModItems.STEEL_PICKAXE, "Steel pickaxe");
             addItem(ModItems.STEEL_AXE, "Steel axe");
             addItem(ModItems.STEEL_SHOVEL, "Steel shovel");
@@ -523,6 +536,7 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
 
             //Blue gold equipment
             addItem(ModItems.BLUE_GOLDEN_SWORD, "Blue Golden sword");
+            addItem(ModItems.BLUE_GOLDEN_DAGGER, "Blue Golden dagger");
             addItem(ModItems.BLUE_GOLDEN_PICKAXE, "Blue Golden pickaxe");
             addItem(ModItems.BLUE_GOLDEN_AXE, "Blue Golden axe");
             addItem(ModItems.BLUE_GOLDEN_SHOVEL, "Blue Golden shovel");
@@ -535,9 +549,11 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
 
             //Diamond equipment
             addItem(ModItems.DIAMOND_POLISHER, "Diamond polisher");
+            addItem(ModItems.DIAMOND_DAGGER, "Diamond dagger");
 
             //Netherite equipment
             addItem(ModItems.NETHERITE_POLISHER, "Netherite polisher");
+            addItem(ModItems.NETHERITE_DAGGER, "Netherite dagger");
 
             //Plants
             addItem(ModItems.YERBA_MATE, "Yerba mate");

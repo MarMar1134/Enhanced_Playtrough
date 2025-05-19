@@ -430,6 +430,7 @@ public class MexicanLanguageProvider extends AbstractModLanguageProvider{
 
         //Silver equipment
         addItem(ModItems.SILVER_SWORD, "Espada de plata");
+        addItem(ModItems.SILVER_DAGGER, "Daga de plata");
         addItem(ModItems.SILVER_PICKAXE, "Pico de plata");
         addItem(ModItems.SILVER_AXE, "Hacha de plata");
         addItem(ModItems.SILVER_SHOVEL, "Pala de plata");
@@ -441,13 +442,19 @@ public class MexicanLanguageProvider extends AbstractModLanguageProvider{
         addItem(ModItems.SILVER_BOOTS, "Botas de plata");
 
         //Gold equipment
-        addItem(ModItems.GOLDEN_POLISHER, "Pulidora de plata");
+        addItem(ModItems.GOLDEN_POLISHER, "Pulidora de oro");
+        addItem(ModItems.GOLDEN_DAGGER, "Daga de oro");
+
+        //Wood equipment
+        addItem(ModItems.WOODEN_DAGGER, "Daga de madera");
 
         //Stone equipment
         addItem(ModItems.STONE_POLISHER, "Pulidora de piedra");
+        addItem(ModItems.STONE_DAGGER, "Daga de piedra");
 
         //Brass equipment
         addItem(ModItems.BRASS_SWORD, "Espada de latón");
+        addItem(ModItems.BRASS_DAGGER, "Daga de latón");
         addItem(ModItems.BRASS_PICKAXE, "Pico de latón");
         addItem(ModItems.BRASS_AXE, "Hacha de latón");
         addItem(ModItems.BRASS_SHOVEL, "Pala de latón");
@@ -460,6 +467,7 @@ public class MexicanLanguageProvider extends AbstractModLanguageProvider{
 
         //Bronze equipment
         addItem(ModItems.BRONZE_SWORD, "Espada de bronce");
+        addItem(ModItems.BRONZE_DAGGER, "Daga de bronce");
         addItem(ModItems.BRONZE_PICKAXE, "Pico de bronce");
         addItem(ModItems.BRONZE_AXE, "Hacha de bronce");
         addItem(ModItems.BRONZE_SHOVEL, "Pala de bronce");
@@ -472,6 +480,7 @@ public class MexicanLanguageProvider extends AbstractModLanguageProvider{
 
         //Rose golden equipment
         addItem(ModItems.ROSE_GOLDEN_SWORD, "Espada de oro rosado");
+        addItem(ModItems.ROSE_GOLDEN_DAGGER, "Daga de oro rosado");
         addItem(ModItems.ROSE_GOLDEN_PICKAXE, "Pico de oro rosado");
         addItem(ModItems.ROSE_GOLDEN_AXE, "Hacha de oro rosado");
         addItem(ModItems.ROSE_GOLDEN_SHOVEL, "Pala de oro rosado");
@@ -484,6 +493,7 @@ public class MexicanLanguageProvider extends AbstractModLanguageProvider{
 
         //Bronzium equipment
         addItem(ModItems.BRONZIUM_SWORD, "Espada de broncio");
+        addItem(ModItems.BRONZIUM_DAGGER, "Daga de broncio");
         addItem(ModItems.BRONZIUM_PICKAXE, "Pico de broncio");
         addItem(ModItems.BRONZIUM_AXE, "Hacha de broncio");
         addItem(ModItems.BRONZIUM_SHOVEL, "Pala de broncio");
@@ -496,9 +506,11 @@ public class MexicanLanguageProvider extends AbstractModLanguageProvider{
 
         //Iron equipment
         addItem(ModItems.IRON_POLISHER, "Pulidora de hierro");
+        addItem(ModItems.IRON_DAGGER, "Daga de hierro");
 
         //Green golden equipment
         addItem(ModItems.GREEN_GOLDEN_SWORD, "Espada de oro verde");
+        addItem(ModItems.GREEN_GOLDEN_DAGGER, "Daga de oro verde");
         addItem(ModItems.GREEN_GOLDEN_PICKAXE, "Pico de oro verde");
         addItem(ModItems.GREEN_GOLDEN_AXE, "Hacha de oro verde");
         addItem(ModItems.GREEN_GOLDEN_SHOVEL, "Pala de oro verde");
@@ -511,6 +523,7 @@ public class MexicanLanguageProvider extends AbstractModLanguageProvider{
 
         //Steel equipment
         addItem(ModItems.STEEL_SWORD, "Espada de acero");
+        addItem(ModItems.STEEL_DAGGER, "Daga de acero");
         addItem(ModItems.STEEL_PICKAXE, "Pico de acero");
         addItem(ModItems.STEEL_AXE, "Hacha de acero");
         addItem(ModItems.STEEL_SHOVEL, "Pala de acero");
@@ -523,6 +536,7 @@ public class MexicanLanguageProvider extends AbstractModLanguageProvider{
 
         //Blue gold equipment
         addItem(ModItems.BLUE_GOLDEN_SWORD, "Espada de oro azul");
+        addItem(ModItems.BLUE_GOLDEN_DAGGER, "Daga de oro azul");
         addItem(ModItems.BLUE_GOLDEN_PICKAXE, "Pico de oro azul");
         addItem(ModItems.BLUE_GOLDEN_AXE, "Hacha de oro azul");
         addItem(ModItems.BLUE_GOLDEN_SHOVEL, "Pala de oro azul");
@@ -535,9 +549,11 @@ public class MexicanLanguageProvider extends AbstractModLanguageProvider{
 
         //Diamond equipment
         addItem(ModItems.DIAMOND_POLISHER, "Pulidora de diamante");
+        addItem(ModItems.DIAMOND_DAGGER, "Daga de diamante");
 
         //Netherite equipment
         addItem(ModItems.NETHERITE_POLISHER, "Pulidora de netherita");
+        addItem(ModItems.NETHERITE_DAGGER, "Daga de netherita");
 
         //Plants
         addItem(ModItems.YERBA_MATE, "Yerba mate");

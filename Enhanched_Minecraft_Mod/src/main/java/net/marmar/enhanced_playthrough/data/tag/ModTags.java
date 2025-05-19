@@ -46,7 +46,8 @@ public class ModTags {
         public static final TagKey<Item> COBBLE = forgeTag("cobble");
 
         //Tools
-        public static final TagKey<Item> POLISHER_TOOL = itemTag("polisher_tool");
+        public static final TagKey<Item> POLISHER = forgeTag("polisher");
+        public static final TagKey<Item> DAGGER = forgeTag("dagger");
 
         //Ingredients
         public static final TagKey<Item> BASIC_INGREDIENT = itemTag("basic_ingredient");

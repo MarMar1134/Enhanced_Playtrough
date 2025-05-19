@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "tag": "forge:rods/wooden"
+    },
+    "I": {
+      "tag": "forge:cobble"
+    },
+    "S": {
+      "tag": "forge:string"
+    }
+  },
+  "pattern": [
+    "I ",
+    "#S"
+  ],
+  "result": {
+    "item": "enhanced_playthrough:stone_dagger"
+  },
+  "show_notification": true
+}

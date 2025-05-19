@@ -5,13 +5,16 @@ import net.marmar.enhanced_playthrough.block.ModBlockEntities;
 import net.marmar.enhanced_playthrough.Util.enchantment.ModEnchantments;
 import net.marmar.enhanced_playthrough.entity.ModEntities;
 import net.marmar.enhanced_playthrough.item.ModItems;
-import net.marmar.enhanced_playthrough.Util.ModTabs;
+import net.marmar.enhanced_playthrough.Util.tab.ModTabs;
 import net.marmar.enhanced_playthrough.data.loot.ModLootModifiers;
 import net.marmar.enhanced_playthrough.recipe.ModRecipes;
 import net.marmar.enhanced_playthrough.menu.ModMenuTypes;
 import net.marmar.enhanced_playthrough.Util.ModSounds;
 import net.marmar.enhanced_playthrough.entity.ModVillagers;
 import net.marmar.enhanced_playthrough.worldgen.feature.ModFeatures;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -47,11 +50,7 @@ public class EnhancedPlaythrough
 
         ModFeatures.register(modEventBus);
 
-    //Register for creative tabs
+    //Register
         MinecraftForge.EVENT_BUS.register(this);
-        modEventBus.addListener(this::AddCreative);
-    }
-
-    private void AddCreative(BuildCreativeModeTabContentsEvent event){
     }
 }

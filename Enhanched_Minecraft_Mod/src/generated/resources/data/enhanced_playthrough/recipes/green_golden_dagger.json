@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "tag": "forge:rods/wooden"
+    },
+    "I": {
+      "item": "enhanced_playthrough:green_gold_ingot"
+    }
+  },
+  "pattern": [
+    "I",
+    "#"
+  ],
+  "result": {
+    "item": "enhanced_playthrough:green_golden_dagger"
+  },
+  "show_notification": true
+}
