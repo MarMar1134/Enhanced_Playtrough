@@ -1,7 +1,6 @@
 package net.marmar.enhanced_playthrough.block.modfurnace.entity;
 
 import net.marmar.enhanced_playthrough.block.modfurnace.AbstractModFurnaceBlock;
-import net.marmar.enhanced_playthrough.recipe.alloy.AlloyRecipe;
 import net.marmar.enhanced_playthrough.recipe.modsmelting.AbstractSmeltingRecipe;
 import net.marmar.enhanced_playthrough.recipe.modsmelting.BasicSmeltingRecipe;
 import net.marmar.enhanced_playthrough.recipe.modsmelting.SoulBasicSmeltingRecipe;
@@ -13,7 +12,6 @@ import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.crafting.RecipeManager;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;

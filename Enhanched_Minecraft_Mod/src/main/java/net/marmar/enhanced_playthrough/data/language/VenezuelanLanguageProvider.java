@@ -57,6 +57,7 @@ public class VenezuelanLanguageProvider extends AbstractModLanguageProvider{
         addDescription("bronzium_armor", "Con toda la equipación: otorga Resistencia al fuego al jugador");
         addDescription("green_gold_armor", "Con toda la equipación: otorga Apuro II al jugador");
         addDescription("blue_gold_armor", "Con toda la equipación: otorga Apuro II al jugador");
+        addDescription("dagger_bleed", "Probabilidad de sangrado: ");
 
         //Sounds
         addSoundDescription("grind", "Molienda activada");
@@ -66,6 +67,10 @@ public class VenezuelanLanguageProvider extends AbstractModLanguageProvider{
                 "ha muerto pinchado por un carrizo mientras escapaba de");
         addDeathMessages("cobble", "ha muerto de un piedrazo en la cabeza",
                 "ha muerto de un piedrazo en la cabeza mientras luchaba con");
+        addDeathMessages("bleed", "ha muerto desangrado", "ha muerto desangrado mientras huia de");
+
+        //Mob effects
+        addMobEffect("bleeding", "Sangrado");
 
         //Advancements
             //Survival
@@ -610,13 +615,15 @@ public class VenezuelanLanguageProvider extends AbstractModLanguageProvider{
 
         //Enchantments
         addEnchantment(ModEnchantments.FINE_MINING, "Minado fino");
-        addEnchantmentDesc("fine_mining", "Al ser aplicado en un pico, permite obtener solo el mineral al picar una mena");
+        addEnchantmentDesc("fine_mining", "Al ser aplicado, permite obtener el mineral puro al picar una mena");
         addEnchantment(ModEnchantments.ROUGH_MINING, "Maldición de minado bruzco");
-        addEnchantmentDesc("rough_mining", "Al ser aplicado a un pico, impide que los minerales sean recolectados al picar una mena");
+        addEnchantmentDesc("rough_mining", "Al ser aplicado, destruye el bloque minado a sus componentes primarios");
         addEnchantment(ModEnchantments.POISON_TOUCH, "Corte venenoso");
-        addEnchantmentDesc("poison_touch", "Aplica veneno al objetivo");
+        addEnchantmentDesc("poison_touch", "Aplica Veneno al objetivo");
         addEnchantment(ModEnchantments.LIVING_TOUCH, "Corte regenerativo");
-        addEnchantmentDesc("living_touch", "Aplica curación al objetivo");
+        addEnchantmentDesc("living_touch", "Aplica Curación al objetivo");
+        addEnchantment(ModEnchantments.SHARP_BLADE, "Hoja sangrienta");
+        addEnchantmentDesc("sharp_blade", "Al ser aplicado, provoca Sangrado al objetivo");
 
         //Entities
             //Villagers

@@ -1,6 +1,7 @@
-// 1.20.1	2025-05-16T11:42:04.8614206	Registries
-db0dfcfbb4e595fcef3a2e51eadc011d2150b546 data/enhanced_playthrough/damage_type/cobble.json
-118e6f79fe0638bc35c54a0cd1bfacec41afdccd data/enhanced_playthrough/damage_type/tall_reed.json
+// 1.20.1	2025-05-20T13:14:47.8799603	Registries
+8b28ced078dc0118761e41c6c9f4b774acac6efe data/enhanced_playthrough/damage_type/bleed.json
+24b4da82c0e71ccaef67137d0439066296b1954c data/enhanced_playthrough/damage_type/cobble.json
+893ef0dc6c8580a572e986ddbcf05e3399651832 data/enhanced_playthrough/damage_type/tall_reed.json
 21bf879c84738febb4a1f01d7d7455ea258f82cf data/enhanced_playthrough/forge/biome_modifier/add_apple.json
 0c6cc596128535c4802ec50ca8f4f1b2629fdfa4 data/enhanced_playthrough/forge/biome_modifier/add_badlands_silver_ore.json
 de7898abe1e506cd6ef203f6a80cdf18f72fb991 data/enhanced_playthrough/forge/biome_modifier/add_cobalt_ore.json

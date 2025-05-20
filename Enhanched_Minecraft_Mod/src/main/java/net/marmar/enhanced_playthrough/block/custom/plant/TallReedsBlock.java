@@ -1,6 +1,6 @@
 package net.marmar.enhanced_playthrough.block.custom.plant;
 
-import net.marmar.enhanced_playthrough.Util.ModDamageSources;
+import net.marmar.enhanced_playthrough.Util.damage.ModDamageSources;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;

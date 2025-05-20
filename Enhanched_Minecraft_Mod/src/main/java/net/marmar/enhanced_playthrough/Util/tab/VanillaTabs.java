@@ -14,17 +14,17 @@ public class VanillaTabs {
     @SubscribeEvent
     public static void addItemsToVanilla(BuildCreativeModeTabContentsEvent event){
         if (event.getTabKey().equals(CreativeModeTabs.COMBAT)){
-            event.getEntries().putAfter(Items.WOODEN_SWORD.getDefaultInstance(), ModItems.WOODEN_DAGGER.get().getDefaultInstance(),
+            event.getEntries().putAfter(Items.NETHERITE_AXE.getDefaultInstance(), ModItems.WOODEN_DAGGER.get().getDefaultInstance(),
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putAfter(Items.STONE_SWORD.getDefaultInstance(), ModItems.STONE_DAGGER.get().getDefaultInstance(),
+            event.getEntries().putAfter(ModItems.WOODEN_DAGGER.get().getDefaultInstance(), ModItems.STONE_DAGGER.get().getDefaultInstance(),
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putAfter(Items.IRON_SWORD.getDefaultInstance(), ModItems.IRON_DAGGER.get().getDefaultInstance(),
+            event.getEntries().putAfter(ModItems.STONE_DAGGER.get().getDefaultInstance(), ModItems.IRON_DAGGER.get().getDefaultInstance(),
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putAfter(Items.GOLDEN_SWORD.getDefaultInstance(), ModItems.GOLDEN_DAGGER.get().getDefaultInstance(),
+            event.getEntries().putAfter(ModItems.IRON_DAGGER.get().getDefaultInstance(), ModItems.GOLDEN_DAGGER.get().getDefaultInstance(),
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putAfter(Items.DIAMOND_SWORD.getDefaultInstance(), ModItems.DIAMOND_DAGGER.get().getDefaultInstance(),
+            event.getEntries().putAfter(ModItems.GOLDEN_DAGGER.get().getDefaultInstance(), ModItems.DIAMOND_DAGGER.get().getDefaultInstance(),
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putAfter(Items.NETHERITE_SWORD.getDefaultInstance(), ModItems.NETHERITE_DAGGER.get().getDefaultInstance(),
+            event.getEntries().putAfter(ModItems.DIAMOND_DAGGER.get().getDefaultInstance(), ModItems.NETHERITE_DAGGER.get().getDefaultInstance(),
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
         }
         if (event.getTabKey().equals(CreativeModeTabs.TOOLS_AND_UTILITIES)){

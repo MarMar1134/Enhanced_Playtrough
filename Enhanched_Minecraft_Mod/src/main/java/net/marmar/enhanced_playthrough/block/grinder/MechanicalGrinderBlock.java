@@ -93,7 +93,7 @@ public class MechanicalGrinderBlock extends BaseEntityBlock implements EntityBlo
     public void animateTick(BlockState pState, Level pLevel, BlockPos pPos, RandomSource pRandom) {
         if (pState.getValue(ON)){
             double X_position = (double)pPos.getX() + 0.5;
-            double Y_position = (double)pPos.getY();
+            double Y_position = pPos.getY();
             double Z_position = (double)pPos.getZ() + 0.5;
 
             if (pRandom.nextDouble() < 0.1) {

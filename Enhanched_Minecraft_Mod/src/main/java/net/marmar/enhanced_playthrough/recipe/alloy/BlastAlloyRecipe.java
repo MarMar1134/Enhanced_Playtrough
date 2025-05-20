@@ -87,9 +87,8 @@ public class BlastAlloyRecipe extends AbstractAlloyRecipe implements Recipe<Simp
 
             NonNullList<Ingredient> inputs = NonNullList.withSize(friendlyByteBuf.readInt(), Ingredient.EMPTY);
 
-            for (int i = 0; i < inputs.size(); i++){
-                inputs.set(i, Ingredient.fromNetwork(friendlyByteBuf));
-            }
+            inputs.replaceAll(ignored -> Ingredient.fromNetwork(friendlyByteBuf));
+
             ItemStack output = friendlyByteBuf.readItem();
             return new BlastAlloyRecipe(inputs, output, alloyTime, resourceLocation, recipeCategory, group);
         }

@@ -6,6 +6,7 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
@@ -19,6 +20,7 @@ import java.util.Map;
 
 public class ModArmorItem extends ArmorItem {
     private final ModArmorMaterial armorMaterial;
+    private final boolean isPiglinNeutral;
     private static final Map<ArmorMaterial, MobEffectInstance> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, MobEffectInstance>())
                     .put(ModArmorMaterial.SILVER, new MobEffectInstance(MobEffects.DIG_SPEED, 200, 0,
@@ -31,13 +33,12 @@ public class ModArmorItem extends ArmorItem {
                             true,false, false))
                     .put(ModArmorMaterial.BLUE_GOLD, new MobEffectInstance(MobEffects.DIG_SPEED, 200, 1,
                             true,false, false))
-                    .build();
+            .build();
 
-
-
-    public ModArmorItem(ModArmorMaterial pMaterial, Type pType, Properties pProperties) {
+    public ModArmorItem(ModArmorMaterial pMaterial, Type pType, boolean pIsPiglinNeutral, Properties pProperties) {
         super(pMaterial, pType, pProperties);
         this.armorMaterial = pMaterial;
+        this.isPiglinNeutral = pIsPiglinNeutral;
     }
 
     @Override
@@ -54,6 +55,11 @@ public class ModArmorItem extends ArmorItem {
         pTooltipComponents.add(Component.translatable("desc." + EnhancedPlaythrough.MOD_ID + "." + this.armorMaterial.getTierName()).withStyle(ChatFormatting.GRAY).withStyle(ChatFormatting.ITALIC));
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
+    }
+
+    @Override
+    public boolean makesPiglinsNeutral(ItemStack stack, LivingEntity wearer) {
+        return this.isPiglinNeutral;
     }
 
     private void evaluateArmorEffects(Player player) {

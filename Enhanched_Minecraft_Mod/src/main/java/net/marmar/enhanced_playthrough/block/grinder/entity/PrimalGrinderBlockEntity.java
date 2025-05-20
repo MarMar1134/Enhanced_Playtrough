@@ -4,7 +4,6 @@ import net.marmar.enhanced_playthrough.block.ModBlockEntities;
 import net.marmar.enhanced_playthrough.block.grinder.PrimalGrinderBlock;
 import net.marmar.enhanced_playthrough.menu.grinder.PrimalGrinderMenu;
 import net.marmar.enhanced_playthrough.recipe.ModRecipes;
-import net.marmar.enhanced_playthrough.recipe.grind.MechanicalGrindRecipe;
 import net.marmar.enhanced_playthrough.recipe.grind.PrimalGrindRecipe;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -31,7 +30,6 @@ import net.minecraftforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.List;
 import java.util.Optional;
 
 public class PrimalGrinderBlockEntity extends BlockEntity implements MenuProvider {

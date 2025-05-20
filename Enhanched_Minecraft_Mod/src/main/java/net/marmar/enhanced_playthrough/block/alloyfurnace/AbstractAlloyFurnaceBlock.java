@@ -52,7 +52,7 @@ public abstract class AbstractAlloyFurnaceBlock extends BaseEntityBlock implemen
     public void animateTick(BlockState pState, Level pLevel, BlockPos pPos, RandomSource pRandom) {
         if (pState.getValue(BURNING)) {
             double X_position = (double)pPos.getX() + 0.5;
-            double Y_position = (double)pPos.getY();
+            double Y_position = pPos.getY();
             double Z_position = (double)pPos.getZ() + 0.5;
             if (pRandom.nextDouble() < 0.1) {
                 pLevel.playLocalSound(X_position, Y_position, Z_position, SoundEvents.FURNACE_FIRE_CRACKLE, SoundSource.BLOCKS, 1.0F, 1.0F, false);

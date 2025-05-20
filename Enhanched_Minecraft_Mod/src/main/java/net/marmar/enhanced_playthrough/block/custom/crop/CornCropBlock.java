@@ -64,7 +64,7 @@ public class CornCropBlock extends CropBlock {
     public void growCrops(Level pLevel, BlockPos pPos, BlockState pState) {
         int nextAge = this.getAge(pState) + this.getBonemealAgeIncrease(pLevel);
         int maxAge = this.getMaxAge();
-        if(nextAge > nextAge) {
+        if(nextAge > maxAge) {
             nextAge = maxAge;
         }
 

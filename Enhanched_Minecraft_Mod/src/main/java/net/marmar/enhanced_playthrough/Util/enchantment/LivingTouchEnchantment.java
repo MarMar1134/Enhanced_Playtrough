@@ -1,6 +1,5 @@
 package net.marmar.enhanced_playthrough.Util.enchantment;
 
-import net.marmar.enhanced_playthrough.item.custom.weapon.WeaponItem;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
@@ -38,22 +37,29 @@ public class LivingTouchEnchantment extends Enchantment {
 
     @Override
     public int getMaxLevel() {
-        return 2;
+        return 3;
     }
 
     @Override
     public void doPostAttack(LivingEntity pAttacker, Entity pTarget, int pLevel) {
         if(pTarget instanceof LivingEntity){
-            if(pLevel == 1){
-                ((LivingEntity) pTarget).addEffect(new MobEffectInstance(MobEffects.HEAL, 300, 0, false, true));
-            } else if(pLevel == 2){
-                ((LivingEntity) pTarget).addEffect(new MobEffectInstance(MobEffects.HEAL, 300, 1, false, true));
+            switch (pLevel){
+                case 1:
+                    ((LivingEntity) pTarget).addEffect(new MobEffectInstance(MobEffects.REGENERATION, 100, 0, false, true, true));
+                    break;
+                case 2:
+                    ((LivingEntity) pTarget).addEffect(new MobEffectInstance(MobEffects.REGENERATION, 100, 1, false, true, true));
+                    break;
+                case 3:
+                    ((LivingEntity) pTarget).addEffect(new MobEffectInstance(MobEffects.REGENERATION, 100, 2, false, true, true));
+                    break;
             }
         }
         super.doPostAttack(pAttacker, pTarget, pLevel);
     }
     @Override
     protected boolean checkCompatibility(Enchantment pOther) {
-        return super.checkCompatibility(pOther) && pOther != Enchantments.FIRE_ASPECT && pOther != ModEnchantments.POISON_TOUCH.get();
+        return super.checkCompatibility(pOther) && pOther != Enchantments.FIRE_ASPECT && pOther != ModEnchantments.POISON_TOUCH.get()
+                && pOther != ModEnchantments.SHARP_BLADE.get();
     }
 }

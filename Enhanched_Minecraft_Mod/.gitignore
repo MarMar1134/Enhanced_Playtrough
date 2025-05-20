@@ -2,3 +2,5 @@
 /run-data
 /build
 /.idea
+/gradle
+/.gradle

@@ -1,5 +1,7 @@
 package net.marmar.enhanced_playthrough;
 
+import net.marmar.enhanced_playthrough.Util.effect.ModEffects;
+import net.marmar.enhanced_playthrough.Util.particle.ModParticles;
 import net.marmar.enhanced_playthrough.block.ModBlocks;
 import net.marmar.enhanced_playthrough.block.ModBlockEntities;
 import net.marmar.enhanced_playthrough.Util.enchantment.ModEnchantments;
@@ -12,11 +14,7 @@ import net.marmar.enhanced_playthrough.menu.ModMenuTypes;
 import net.marmar.enhanced_playthrough.Util.ModSounds;
 import net.marmar.enhanced_playthrough.entity.ModVillagers;
 import net.marmar.enhanced_playthrough.worldgen.feature.ModFeatures;
-import net.minecraft.resources.ResourceKey;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -49,6 +47,9 @@ public class EnhancedPlaythrough
         ModEntities.register(modEventBus);
 
         ModFeatures.register(modEventBus);
+
+        ModEffects.register(modEventBus);
+        ModParticles.register(modEventBus);
 
     //Register
         MinecraftForge.EVENT_BUS.register(this);

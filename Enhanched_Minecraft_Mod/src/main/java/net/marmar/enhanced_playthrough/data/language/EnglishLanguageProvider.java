@@ -57,6 +57,7 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
         addDescription("bronzium_armor", "When full equipped: gives Fire Resistance to the player");
         addDescription("green_gold_armor", "When full equipped: gives Haste II to the player");
         addDescription("blue_gold_armor", "When full equipped: gives Haste II to the player");
+        addDescription("dagger_bleed", "Bleed probability: ");
 
         //Sounds
         addSoundDescription("grind", "Active grinder");
@@ -66,6 +67,10 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
                 "was poked to death by a giant reed whilst trying to escape");
         addDeathMessages("cobble", "died from a piece of cobble to the head",
                 "died from a piece of cobble to the head thrown by");
+        addDeathMessages("bleed", "bleed to death", "bleed to dead whilst escaping from");
+
+        //Mob effects
+        addMobEffect("bleeding", "Bleeding");
 
         //Advancements
             //Survival
@@ -609,13 +614,15 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
 
             //Enchantments
             addEnchantment(ModEnchantments.FINE_MINING, "Fine mining");
-            addEnchantmentDesc("fine_mining", "When is applied on a pickaxe, only the ore will be dropped from the block extraction");
+            addEnchantmentDesc("fine_mining", "When is applied, only the ore will be dropped from the block extraction");
             addEnchantment(ModEnchantments.ROUGH_MINING, "Curse of rough mining");
-            addEnchantmentDesc("rough_mining", "When is applied on a pickaxe, only the cobble will be dropped from the block extraction");
+            addEnchantmentDesc("rough_mining", "When is applied, the block is crushed onto his primal components");
             addEnchantment(ModEnchantments.POISON_TOUCH, "Poison touch");
-            addEnchantmentDesc("poison_touch", "Gives poison to the target");
+            addEnchantmentDesc("poison_touch", "Gives Poison to the target");
             addEnchantment(ModEnchantments.LIVING_TOUCH, "Living touch");
             addEnchantmentDesc("living_touch", "Gives Healing to the target");
+            addEnchantment(ModEnchantments.SHARP_BLADE, "Bloody blade");
+            addEnchantmentDesc("sharp_blade", "Gives Bleeding to the target");
 
         //Entities
             //Villagers

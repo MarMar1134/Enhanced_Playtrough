@@ -1,4 +1,4 @@
-package net.marmar.enhanced_playthrough.Util;
+package net.marmar.enhanced_playthrough.item.custom.weapon;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.item.ModItems;

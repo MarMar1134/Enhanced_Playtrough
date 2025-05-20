@@ -1852,7 +1852,11 @@
     "criteria": {
       "chicken": "2025-05-05 16:36:29 -0300",
       "cooked_beef": "2025-05-18 20:16:30 -0300",
-      "mutton": "2025-05-05 16:36:56 -0300"
+      "beef": "2025-05-19 14:38:54 -0300",
+      "porkchop": "2025-05-20 17:34:33 -0300",
+      "mutton": "2025-05-05 16:36:56 -0300",
+      "rotten_flesh": "2025-05-20 13:04:04 -0300",
+      "enchanted_golden_apple": "2025-05-19 15:33:13 -0300"
     },
     "done": false
   },
@@ -2903,6 +2907,10 @@
   "minecraft:adventure/kill_all_mobs": {
     "criteria": {
       "minecraft:pillager": "2025-05-17 01:39:30 -0300",
+      "minecraft:skeleton": "2025-05-19 16:00:59 -0300",
+      "minecraft:spider": "2025-05-19 16:31:49 -0300",
+      "minecraft:creeper": "2025-05-20 18:24:18 -0300",
+      "minecraft:wither": "2025-05-20 18:14:23 -0300",
       "minecraft:zombie": "2025-05-17 01:40:47 -0300"
     },
     "done": false
@@ -3120,6 +3128,300 @@
   "enhanced_playthrough:recipes/netherite_dagger_from_smithing_diamond_dagger_with_netherite_ingot": {
     "criteria": {
       "has_diamond_dagger": "2025-05-19 00:06:40 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/mojang_banner_pattern": {
+    "criteria": {
+      "has_enchanted_golden_apple": "2025-05-19 15:33:08 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/bone_meal_from_primal_grinding_bone": {
+    "criteria": {
+      "has_bone": "2025-05-19 15:59:16 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/bone_meal_from_mechanical_grinding_bone": {
+    "criteria": {
+      "has_bone": "2025-05-19 15:59:16 -0300"
+    },
+    "done": true
+  },
+  "minecraft:husbandry/tame_an_animal": {
+    "criteria": {
+      "tamed_animal": "2025-05-19 15:59:17 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/iron_leggings": {
+    "criteria": {
+      "has_iron_ingot": "2025-05-19 16:03:12 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/iron_chestplate": {
+    "criteria": {
+      "has_iron_ingot": "2025-05-19 16:03:12 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/iron_nugget": {
+    "criteria": {
+      "has_iron_ingot": "2025-05-19 16:03:12 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/bucket": {
+    "criteria": {
+      "has_iron_ingot": "2025-05-19 16:03:12 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/iron_helmet": {
+    "criteria": {
+      "has_iron_ingot": "2025-05-19 16:03:12 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/minecart": {
+    "criteria": {
+      "has_iron_ingot": "2025-05-19 16:03:12 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/iron_hoe": {
+    "criteria": {
+      "has_iron_ingot": "2025-05-19 16:03:12 -0300"
+    },
+    "done": true
+  },
+  "minecraft:story/smelt_iron": {
+    "criteria": {
+      "iron": "2025-05-19 16:03:12 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/shears": {
+    "criteria": {
+      "has_iron_ingot": "2025-05-19 16:03:12 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/chain": {
+    "criteria": {
+      "has_iron_ingot": "2025-05-19 16:03:12 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/iron_block": {
+    "criteria": {
+      "has_iron_ingot": "2025-05-19 16:03:12 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/smithing_table": {
+    "criteria": {
+      "has_iron_ingot": "2025-05-19 16:03:12 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/iron_sword": {
+    "criteria": {
+      "has_iron_ingot": "2025-05-19 16:03:12 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/iron_pickaxe": {
+    "criteria": {
+      "has_iron_ingot": "2025-05-19 16:03:12 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/shield": {
+    "criteria": {
+      "has_iron_ingot": "2025-05-19 16:03:12 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/hopper": {
+    "criteria": {
+      "has_iron_ingot": "2025-05-19 16:03:12 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/iron_bars": {
+    "criteria": {
+      "has_iron_ingot": "2025-05-19 16:03:12 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/iron_dagger": {
+    "criteria": {
+      "has_iron_ingot": "2025-05-19 16:03:12 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/iron_boots": {
+    "criteria": {
+      "has_iron_ingot": "2025-05-19 16:03:12 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/lantern": {
+    "criteria": {
+      "has_iron_ingot": "2025-05-19 16:03:12 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/iron_shovel": {
+    "criteria": {
+      "has_iron_ingot": "2025-05-19 16:03:12 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/iron_polisher": {
+    "criteria": {
+      "has_iron_ingot": "2025-05-19 16:03:12 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/iron_trapdoor": {
+    "criteria": {
+      "has_iron_ingot": "2025-05-19 16:03:12 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/iron_axe": {
+    "criteria": {
+      "has_iron_ingot": "2025-05-19 16:03:12 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/iron_door": {
+    "criteria": {
+      "has_iron_ingot": "2025-05-19 16:03:12 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/heavy_weighted_pressure_plate": {
+    "criteria": {
+      "has_iron_ingot": "2025-05-19 16:03:12 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/brewing/fermented_spider_eye": {
+    "criteria": {
+      "has_spider_eye": "2025-05-19 16:31:51 -0300"
+    },
+    "done": true
+  },
+  "minecraft:nether/netherite_armor": {
+    "criteria": {
+      "netherite_armor": "2025-05-19 16:34:45 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/baked_potato_from_campfire_cooking": {
+    "criteria": {
+      "has_potato": "2025-05-20 18:05:11 -0300"
+    },
+    "done": true
+  },
+  "minecraft:end/dragon_egg": {
+    "criteria": {
+      "dragon_egg": "2025-05-20 18:09:51 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/baked_potato": {
+    "criteria": {
+      "has_potato": "2025-05-20 18:05:11 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/soul_torch": {
+    "criteria": {
+      "has_soul_sand": "2025-05-20 18:12:50 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/beacon": {
+    "criteria": {
+      "has_nether_star": "2025-05-20 18:14:24 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/deepslate_from_masonry_smelting_cobbled_deepslate": {
+    "criteria": {
+      "has_cobbled_deepslate": "2025-05-20 18:13:53 -0300"
+    },
+    "done": true
+  },
+  "minecraft:nether/get_wither_skull": {
+    "criteria": {
+      "wither_skull": "2025-05-20 18:12:46 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/baked_potato_from_smoking": {
+    "criteria": {
+      "has_potato": "2025-05-20 18:05:11 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/baked_potato_from_basic_smelting_potato": {
+    "criteria": {
+      "has_potato": "2025-05-20 18:05:11 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/deepslate_cobble_from_mechanical_grinding_cobbled_deepslate": {
+    "criteria": {
+      "has_cobbled_deepslate": "2025-05-20 18:13:53 -0300"
+    },
+    "done": true
+  },
+  "minecraft:end/respawn_dragon": {
+    "criteria": {
+      "summoned_dragon": "2025-05-20 18:10:16 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/soul_campfire": {
+    "criteria": {
+      "has_soul_sand": "2025-05-20 18:12:50 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/firework_rocket_simple": {
+    "criteria": {
+      "has_gunpowder": "2025-05-20 18:05:12 -0300"
+    },
+    "done": true
+  },
+  "minecraft:nether/summon_wither": {
+    "criteria": {
+      "summoned": "2025-05-20 18:13:41 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/tnt": {
+    "criteria": {
+      "has_gunpowder": "2025-05-20 18:05:12 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/skull_banner_pattern": {
+    "criteria": {
+      "has_wither_skeleton_skull": "2025-05-20 18:12:46 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/baked_potato_from_soul_basic_smelting_potato": {
+    "criteria": {
+      "has_potato": "2025-05-20 18:05:11 -0300"
     },
     "done": true
   },

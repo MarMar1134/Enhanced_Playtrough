@@ -1,11 +1,10 @@
-package net.marmar.enhanced_playthrough.Util;
+package net.marmar.enhanced_playthrough.Util.damage;
 
 import net.minecraft.core.Registry;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.damagesource.DamageSources;
 import net.minecraft.world.damagesource.DamageType;
 import net.minecraft.world.entity.Entity;
 
@@ -16,12 +15,14 @@ public class ModDamageSources{
 
     private final DamageSource tall_reed;
     private final DamageSource cobble;
+    private final DamageSource bleed;
 
     public ModDamageSources(RegistryAccess registryAccess){
         this.damageTypes = registryAccess.registryOrThrow(Registries.DAMAGE_TYPE);
 
         this.tall_reed = this.source(ModDamageTypes.TALL_REED);
         this.cobble = this.source(ModDamageTypes.COBBLE);
+        this.bleed = this.source(ModDamageTypes.BLEED);
     }
 
     public DamageSource tallReed(){
@@ -30,6 +31,10 @@ public class ModDamageSources{
 
     public DamageSource cobble(){
         return this.cobble;
+    }
+
+    public DamageSource bleed(){
+        return this.bleed;
     }
 
     private DamageSource source(ResourceKey<DamageType> pDamageTypeKey) {

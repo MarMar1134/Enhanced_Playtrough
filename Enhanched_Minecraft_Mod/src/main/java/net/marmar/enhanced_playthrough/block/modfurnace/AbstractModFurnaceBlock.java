@@ -1,7 +1,6 @@
 package net.marmar.enhanced_playthrough.block.modfurnace;
 
 import net.marmar.enhanced_playthrough.block.modfurnace.entity.AbstractModFurnaceBlockEntity;
-import net.marmar.enhanced_playthrough.menu.modfurnace.AbstractModFurnaceMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
@@ -12,7 +11,6 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.MenuProvider;
-import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
@@ -50,7 +48,7 @@ public abstract class AbstractModFurnaceBlock extends BaseEntityBlock implements
     public void animateTick(BlockState pState, Level pLevel, BlockPos pPos, RandomSource pRandom) {
         if (pState.getValue(BURNING)) {
             double X_position = (double)pPos.getX() + 0.5;
-            double Y_position = (double)pPos.getY();
+            double Y_position = pPos.getY();
             double Z_position = (double)pPos.getZ() + 0.5;
             if (pRandom.nextDouble() < 0.1) {
                 pLevel.playLocalSound(X_position, Y_position, Z_position, SoundEvents.FURNACE_FIRE_CRACKLE, SoundSource.BLOCKS, 1.0F, 1.0F, false);

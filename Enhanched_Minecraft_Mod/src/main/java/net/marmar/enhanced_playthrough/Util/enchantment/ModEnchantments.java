@@ -21,6 +21,8 @@ public class ModEnchantments {
             ENCHANTMENTS.register("poison_touch", ()-> new PoisonTouchEnchantment(Enchantment.Rarity.UNCOMMON, EnchantmentCategory.WEAPON, EquipmentSlot.MAINHAND));
     public static RegistryObject<Enchantment> LIVING_TOUCH =
             ENCHANTMENTS.register("living_touch", ()-> new LivingTouchEnchantment(Enchantment.Rarity.UNCOMMON, EnchantmentCategory.WEAPON, EquipmentSlot.MAINHAND));
+    public static RegistryObject<Enchantment> SHARP_BLADE =
+            ENCHANTMENTS.register("sharp_blade", ()-> new BloodyBladeEnchantment(Enchantment.Rarity.RARE, EnchantmentCategory.WEAPON, EquipmentSlot.MAINHAND));
 
     public static void register(IEventBus eventBus){
         ENCHANTMENTS.register(eventBus);

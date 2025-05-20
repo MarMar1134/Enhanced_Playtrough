@@ -1,8 +1,6 @@
 package net.marmar.enhanced_playthrough.recipe.recipebuilder;
 
 import net.marmar.enhanced_playthrough.recipe.ModRecipes;
-import net.marmar.enhanced_playthrough.recipe.alloy.AlloyRecipe;
-import net.marmar.enhanced_playthrough.recipe.alloy.BlastAlloyRecipe;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import net.marmar.enhanced_playthrough.recipe.recipecategory.AlloyRecipeCategory;

@@ -5,18 +5,14 @@ import com.google.common.collect.Multimap;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.*;
-import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.common.extensions.IForgeItem;
-import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
@@ -31,7 +27,6 @@ public class PolisherItem extends TieredItem implements Vanishable {
         super(pTier,pProperties);
 
         this.tier = pTier;
-
         this.speedAttribute = (pTier.getSpeed() / 2) - 1f;
         this.attackAttribute = (pTier.getAttackDamageBonus() / 2) -1f;
 
@@ -63,11 +58,6 @@ public class PolisherItem extends TieredItem implements Vanishable {
     }
 
     @Override
-    public @NotNull Item asItem() {
-        return super.asItem();
-    }
-
-    @Override
     public boolean isEnchantable(ItemStack pStack) {
         return false;
     }
@@ -85,8 +75,9 @@ public class PolisherItem extends TieredItem implements Vanishable {
         return speedAttribute;
     }
 
-    public Multimap<Attribute, AttributeModifier> getAttributeModifiers(EquipmentSlot pEquipmentSlot) {
-        return pEquipmentSlot == EquipmentSlot.MAINHAND ? this.attributeModifiers : super.getDefaultAttributeModifiers(pEquipmentSlot);
+    @Override
+    public Multimap<Attribute, AttributeModifier> getDefaultAttributeModifiers(EquipmentSlot pSlot) {
+        return pSlot == EquipmentSlot.MAINHAND ? this.attributeModifiers : super.getDefaultAttributeModifiers(pSlot);
     }
 
     @Override

@@ -29,7 +29,6 @@ import net.minecraftforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.List;
 import java.util.Optional;
 
 public class MechanicalGrinderBlockEntity extends BlockEntity implements MenuProvider {
