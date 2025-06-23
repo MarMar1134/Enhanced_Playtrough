@@ -1,5 +1,7 @@
 package net.marmar.enhanced_playthrough.event;
 
+import net.marmar.enhanced_playthrough.Util.enchantment.ModEnchantments;
+import net.marmar.enhanced_playthrough.item.ModItems;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.EnchantedBookItem;
@@ -8,6 +10,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.EnchantmentInstance;
+import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.item.trading.MerchantOffer;
 import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -59,18 +62,23 @@ public interface ITradeOffers {
     /**
      * The following method enchants a book with a random enchantment selected from the IsTradeable method of the Enchantment class
      * @param pRandom the random source for the calculations
-     * @param pCoin the item used to buy the enchanted book
      * @param pVillagerXp the amount of xp that will receive the villager
      * @return the offer
      */
-    static MerchantOffer EnchantedBookOffer(RandomSource pRandom, ItemLike pCoin, int pVillagerXp){
+    static MerchantOffer EnchantedBookOffer(RandomSource pRandom, int pVillagerXp){
+        //A map of all the tradeable enchantments
         List<Enchantment> enchantments =  ForgeRegistries.ENCHANTMENTS.getValues().stream().filter(Enchantment::isTradeable).toList();
+
+        //One of these enchantments is randomly selected
         Enchantment selectedEnchantment = enchantments.get(pRandom.nextInt(enchantments.size()));
 
+        //The level is randomly set
         int enchantmentLevel = Mth.nextInt(pRandom, selectedEnchantment.getMinLevel(), selectedEnchantment.getMaxLevel());
 
+        //The price is set based on the enchantment level
         int enchantmentPrice = 2 + pRandom.nextInt(5 + enchantmentLevel * 10) + 3 * enchantmentLevel;
 
+        //The price is set to a max of 64 of whatever the coin is
         if (selectedEnchantment.isTreasureOnly()){
             enchantmentPrice *= 2;
         }
@@ -78,9 +86,24 @@ public interface ITradeOffers {
             enchantmentPrice = 64;
         }
 
+        //Enchantments with only one level and with high rarity always costs rubies
+        boolean isSpecialEnchantment = selectedEnchantment == Enchantments.INFINITY_ARROWS || selectedEnchantment == Enchantments.MENDING
+                || selectedEnchantment == ModEnchantments.FINE_MINING.get() || selectedEnchantment == ModEnchantments.ROUGH_MINING.get();
+
+        //The coin is selected based on the enchantment rarity and the enchantment level
+        ItemLike coin;
+        if (selectedEnchantment.getRarity() == Enchantment.Rarity.VERY_RARE || enchantmentLevel > 3 || isSpecialEnchantment){
+            coin = ModItems.RUBY.get();
+        } else if (selectedEnchantment.getRarity() == Enchantment.Rarity.RARE || enchantmentLevel == 3){
+            coin = ModItems.SAPPHIRE.get();
+        } else {
+            coin = Items.EMERALD;
+        }
+
+        //An enchanted book is set
         ItemStack enchantedBookItem = EnchantedBookItem.createForEnchantment(new EnchantmentInstance(selectedEnchantment, enchantmentLevel));
 
-        return new MerchantOffer(new ItemStack(pCoin, enchantmentPrice), new ItemStack(Items.BOOK, 1), enchantedBookItem,
+        return new MerchantOffer(new ItemStack(coin, enchantmentPrice), new ItemStack(Items.BOOK, 1), enchantedBookItem,
                 12, pVillagerXp, 0.2f);
     }
 

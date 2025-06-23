@@ -582,7 +582,74 @@ public class ModTradeEvents implements ITradeOffers {
                     pRandom,ModItems.RUBY.get(), ModEnchantments.FINE_MINING.get(), 15));
         }
 
+        if (event.getType() == VillagerProfession.LIBRARIAN){
+            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades =event.getTrades();
 
+            trades.get(1).removeAll(trades.get(1));
+            trades.get(2).removeAll(trades.get(2));
+            trades.get(3).removeAll(trades.get(3));
+            trades.get(4).removeAll(trades.get(4));
+            trades.get(5).removeAll(trades.get(5));
+
+            //Level 1
+            trades.get(1).add((pTrader, pRandom)-> new MerchantOffer(
+               new ItemStack(Items.PAPER, 24),
+               new ItemStack(Items.EMERALD, 1),
+                 16, 2, 0.05f));
+            trades.get(1).add((pTrader, pRandom)-> new MerchantOffer(
+                    new ItemStack(Items.EMERALD, 7),
+                    new ItemStack(Items.BOOKSHELF, 1),
+                    12, 1, 0.05f));
+            trades.get(1).add((pTrader, pRandom)->
+                    ITradeOffers.EnchantedBookOffer(pRandom, 1));
+
+            //Level 2
+            trades.get(2).add((pTrader, pRandom)-> new MerchantOffer(
+                    new ItemStack(Items.BOOK, 4),
+                    new ItemStack(Items.EMERALD, 1),
+                    12, 10, 0.05f));
+            trades.get(2).add((pTrader, pRandom)-> new MerchantOffer(
+                    new ItemStack(Items.EMERALD, 1),
+                    new ItemStack(Items.LANTERN, 1),
+                    12, 5, 0.05f));
+            trades.get(2).add((pTrader, pRandom)->
+                    ITradeOffers.EnchantedBookOffer(pRandom, 1));
+
+            //Level 3
+            trades.get(3).add((pTrader, pRandom)-> new MerchantOffer(
+                    new ItemStack(Items.BOOK, 5),
+                    new ItemStack(Items.EMERALD, 1),
+                    12, 20, 0.05f));
+            trades.get(3).add((pTrader, pRandom)-> new MerchantOffer(
+                    new ItemStack(Items.EMERALD, 1),
+                    new ItemStack(Items.GLASS, 4),
+                    12, 10, 0.05f));
+            trades.get(3).add((pTrader, pRandom)->
+                    ITradeOffers.EnchantedBookOffer(pRandom, 1));
+
+            //Level 4
+            trades.get(4).add((pTrader, pRandom)-> new MerchantOffer(
+                    new ItemStack(Items.WRITABLE_BOOK, 1),
+                    new ItemStack(Items.WRITABLE_BOOK, 1),
+                    new ItemStack(Items.EMERALD, 1),
+                    12, 30, 0.05f));
+            trades.get(4).add((pTrader, pRandom)-> new MerchantOffer(
+                    new ItemStack(Items.EMERALD, 4),
+                    new ItemStack(Items.COMPASS, 1),
+                    12, 15, 0.05f));
+            trades.get(4).add((pTrader, pRandom)-> new MerchantOffer(
+                    new ItemStack(Items.EMERALD, 5),
+                    new ItemStack(Items.CLOCK, 1),
+                    12, 15, 0.05f));
+            trades.get(4).add((pTrader, pRandom)->
+                    ITradeOffers.EnchantedBookOffer(pRandom, 1));
+
+            //Level 5
+            trades.get(5).add((pTrader, pRandom)-> new MerchantOffer(
+                    new ItemStack(Items.EMERALD, 20),
+                    new ItemStack(Items.NAME_TAG, 1),
+                    12, 30, 0.05f));
+        }
     }
 
     @SubscribeEvent

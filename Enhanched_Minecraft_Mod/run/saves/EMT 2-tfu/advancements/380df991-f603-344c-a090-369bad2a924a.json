@@ -3500,5 +3500,71 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/bookshelf": {
+    "criteria": {
+      "has_book": "2025-06-23 11:53:20 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/lectern": {
+    "criteria": {
+      "has_book": "2025-06-23 11:53:20 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/chiseled_bookshelf": {
+    "criteria": {
+      "has_book": "2025-06-23 11:53:20 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/writable_book": {
+    "criteria": {
+      "has_book": "2025-06-23 11:53:20 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/map": {
+    "criteria": {
+      "has_compass": "2025-06-23 11:53:51 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/black_carpet": {
+    "criteria": {
+      "has_black_wool": "2025-06-23 12:10:51 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/yellow_dye_from_dandelion": {
+    "criteria": {
+      "has_dandelion": "2025-06-23 12:24:21 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/black_banner": {
+    "criteria": {
+      "has_black_wool": "2025-06-23 12:10:51 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/yellow_dye_from_primal_grinding_dandelion": {
+    "criteria": {
+      "has_dandelion": "2025-06-23 12:24:21 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/yellow_dye_from_mechanical_grinding_dandelion": {
+    "criteria": {
+      "has_dandelion": "2025-06-23 12:24:21 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/black_bed": {
+    "criteria": {
+      "has_black_wool": "2025-06-23 12:10:51 -0300"
+    },
+    "done": true
+  },
   "DataVersion": 3465
 }
