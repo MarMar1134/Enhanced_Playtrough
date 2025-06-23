@@ -76,7 +76,7 @@ public class MechanicalGrinderBlockEntity extends BlockEntity implements MenuPro
                     case 0,1 -> MechanicalGrinderBlockEntity.this.progress = i1;
                     case 2 -> MechanicalGrinderBlockEntity.this.isTurnedOn = i1;
                     case 3 -> MechanicalGrinderBlockEntity.this.maxProgress = i1;
-                };
+                }
             }
 
             @Override

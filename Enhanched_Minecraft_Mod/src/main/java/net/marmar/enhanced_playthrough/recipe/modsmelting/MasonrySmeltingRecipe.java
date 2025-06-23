@@ -50,7 +50,7 @@ public class MasonrySmeltingRecipe extends AbstractSmeltingRecipe implements Rec
 
     public static class Type implements RecipeType<MasonrySmeltingRecipe>{
         public static final Type INSTANCE = new Type();
-        private static String ID = "masonry_smelting";
+        private static final String ID = "masonry_smelting";
     }
 
     public static class Serializer implements RecipeSerializer<MasonrySmeltingRecipe>{

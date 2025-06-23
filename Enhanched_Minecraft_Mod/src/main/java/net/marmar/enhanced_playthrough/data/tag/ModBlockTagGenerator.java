@@ -588,6 +588,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         );
 
         this.tag(BlockTags.NEEDS_IRON_TOOL).add(
+                Blocks.END_STONE,
                 ModBlocks.SILVER_ORE.get(),
                 ModBlocks.SAPPHIRE_ORE.get(),
                 ModBlocks.RUBY_ORE.get(),

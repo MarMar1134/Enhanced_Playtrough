@@ -44,7 +44,7 @@ public class PrimalGrindRecipe extends AbstractGrindRecipe{
 
     public static class Type implements RecipeType<PrimalGrindRecipe>{
         public static final Type INSTANCE = new Type();
-        private static String ID = "primal_grinding";
+        private static final String ID = "primal_grinding";
     }
 
     public static class Serializer implements RecipeSerializer<PrimalGrindRecipe>{

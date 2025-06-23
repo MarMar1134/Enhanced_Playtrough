@@ -39,5 +39,9 @@ public class VanillaTabs {
             event.getEntries().putAfter(Items.NETHERITE_HOE.getDefaultInstance(), ModItems.NETHERITE_POLISHER.get().getDefaultInstance(),
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
         }
+        if (event.getTabKey().equals(CreativeModeTabs.SPAWN_EGGS)){
+            event.getEntries().putAfter(Items.PILLAGER_SPAWN_EGG.getDefaultInstance(), ModItems.BANDIT_SPAWN_EGG.get().getDefaultInstance(),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+        }
     }
 }

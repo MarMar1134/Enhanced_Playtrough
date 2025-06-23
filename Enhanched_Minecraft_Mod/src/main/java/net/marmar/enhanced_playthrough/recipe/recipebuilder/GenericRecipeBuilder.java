@@ -85,7 +85,7 @@ public class GenericRecipeBuilder implements RecipeBuilder {
         private final Ingredient ingredient;
         private final Item result;
         private final ModRecipeCategory category;
-        private String group;
+        private final String group;
         private final int count;
         private final Advancement.Builder advancement;
         private final ResourceLocation resourceLocation;

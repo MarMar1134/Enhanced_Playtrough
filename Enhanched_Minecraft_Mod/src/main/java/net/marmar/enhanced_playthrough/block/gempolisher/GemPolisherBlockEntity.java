@@ -86,7 +86,7 @@ public class GemPolisherBlockEntity extends BlockEntity implements MenuProvider 
                     case 2 -> GemPolisherBlockEntity.this.maxProgress = i1;
                     case 3 -> GemPolisherBlockEntity.this.uses = i1;
                     case 4 -> GemPolisherBlockEntity.this.maxUses = i1;
-                };
+                }
             }
 
             @Override

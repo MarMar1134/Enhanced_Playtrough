@@ -83,7 +83,7 @@ public abstract class AbstractModFurnaceBlockEntity extends BlockEntity {
                     case 2 -> AbstractModFurnaceBlockEntity.this.burnTime = i1;
                     case 3 -> AbstractModFurnaceBlockEntity.this.maxBurnTime = i1;
 
-                };
+                }
             }
 
             @Override

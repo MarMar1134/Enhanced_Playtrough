@@ -89,6 +89,10 @@ public abstract class AbstractModLanguageProvider extends LanguageProvider {
         this.add(ModEntities.MOD_CHEST_BOAT.get(), name);
     }
 
+    protected void addBandit(String name){
+        this.add(ModEntities.BANDIT.get(), name);
+    }
+
     protected void addThrowableCobbleEntity(String name){
         this.add(ModEntities.THROWABLE_COBBLE.get(), name);
     }
@@ -113,9 +117,5 @@ public abstract class AbstractModLanguageProvider extends LanguageProvider {
 
     protected void addVillagerProfession(String profession, String translation){
         this.add("entity.minecraft.villager." + EnhancedPlaythrough.MOD_ID + "." + profession, translation);
-    }
-
-    protected void addVillagerProfession(String profession){
-        this.add("entity.minecraft.villager." + EnhancedPlaythrough.MOD_ID + "." + profession, profession);
     }
 }

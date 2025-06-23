@@ -87,7 +87,7 @@ public class PrimalGrinderBlockEntity extends BlockEntity implements MenuProvide
                     case 2 -> PrimalGrinderBlockEntity.this.burnTime = i1;
                     case 3 -> PrimalGrinderBlockEntity.this.maxBurnTime = i1;
                     case 4 -> PrimalGrinderBlockEntity.this.maxProgress = i1;
-                };
+                }
             }
 
             @Override

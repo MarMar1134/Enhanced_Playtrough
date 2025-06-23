@@ -4,6 +4,8 @@ import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.block.ModBlockEntities;
 import net.marmar.enhanced_playthrough.block.custom.wood.ModWoodTypes;
 import net.marmar.enhanced_playthrough.entity.ModEntities;
+import net.marmar.enhanced_playthrough.entity.model.BanditModel;
+import net.marmar.enhanced_playthrough.entity.model.BanditRenderer;
 import net.marmar.enhanced_playthrough.entity.model.ModBoatRenderer;
 import net.marmar.enhanced_playthrough.entity.model.ModModelLayers;
 import net.marmar.enhanced_playthrough.menu.ModMenuTypes;
@@ -31,9 +33,25 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 
 @Mod.EventBusSubscriber(modid = EnhancedPlaythrough.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-public class ModClientEvents {
+public class ModClientEventBusEvents {
+    @SubscribeEvent
+    public static void subscribeEntityRenderers(FMLClientSetupEvent event){
+        //Mobs
+        EntityRenderers.register(ModEntities.BANDIT.get(), BanditRenderer::new);
+
+        //Boats
+        EntityRenderers.register(ModEntities.MOD_BOAT.get(), context -> new ModBoatRenderer(context, false));
+        EntityRenderers.register(ModEntities.MOD_CHEST_BOAT.get(), context -> new ModBoatRenderer(context, true));
+
+        //Cobble
+        EntityRenderers.register(ModEntities.THROWABLE_COBBLE.get(), ThrownItemRenderer::new);
+    }
+
     @SubscribeEvent
     public static void subscribeLayerRenderers(EntityRenderersEvent.RegisterLayerDefinitions event){
+        //Mobs
+        event.registerLayerDefinition(ModModelLayers.BANDIT_LAYER, BanditModel::createBodyLayer);
+
         //Boats
             //Walnut
             event.registerLayerDefinition(ModModelLayers.WALNUT_BOAT_LAYER, BoatModel::createBodyModel);
@@ -56,16 +74,6 @@ public class ModClientEvents {
     public static void subscribeBlockEntityRenderers(EntityRenderersEvent.RegisterRenderers event){
         event.registerBlockEntityRenderer(ModBlockEntities.SIGN_BLOCK_ENTITY.get(), SignRenderer::new);
         event.registerBlockEntityRenderer(ModBlockEntities.HANGING_SIGN_BLOCK_ENTITY.get(), HangingSignRenderer::new);
-    }
-
-    @SubscribeEvent
-    public static void subscribeEntities(FMLClientSetupEvent event){
-        //Boats
-        EntityRenderers.register(ModEntities.MOD_BOAT.get(), context -> new ModBoatRenderer(context, false));
-        EntityRenderers.register(ModEntities.MOD_CHEST_BOAT.get(), context -> new ModBoatRenderer(context, true));
-
-        //Cobble
-        EntityRenderers.register(ModEntities.THROWABLE_COBBLE.get(), ThrownItemRenderer::new);
     }
 
     @SubscribeEvent

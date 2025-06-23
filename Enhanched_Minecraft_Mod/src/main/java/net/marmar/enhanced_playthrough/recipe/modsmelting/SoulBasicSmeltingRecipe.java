@@ -53,7 +53,7 @@ public class SoulBasicSmeltingRecipe extends AbstractSmeltingRecipe implements R
 
     public static class Type implements RecipeType<SoulBasicSmeltingRecipe>{
         public static final Type INSTANCE = new Type();
-        private static String ID = "soul_basic_smelting";
+        private static final String ID = "soul_basic_smelting";
     }
     public static class Serializer implements RecipeSerializer<SoulBasicSmeltingRecipe>{
         public static final Serializer INSTANCE = new Serializer();

@@ -27,47 +27,39 @@
                       }
                     },
                     {
-                      "condition": "minecraft:any_of",
-                      "terms": [
-                        {
-                          "condition": "minecraft:inverted",
-                          "term": {
+                      "condition": "minecraft:inverted",
+                      "term": {
+                        "condition": "minecraft:match_tool",
+                        "predicate": {
+                          "items": [
+                            "enhanced_playthrough:steel_pickaxe"
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "condition": "minecraft:inverted",
+                      "term": {
+                        "condition": "minecraft:any_of",
+                        "terms": [
+                          {
                             "condition": "minecraft:match_tool",
                             "predicate": {
                               "items": [
                                 "minecraft:wooden_pickaxe"
                               ]
                             }
-                          }
-                        },
-                        {
-                          "condition": "minecraft:any_of",
-                          "terms": [
-                            {
-                              "condition": "minecraft:inverted",
-                              "term": {
-                                "condition": "minecraft:match_tool",
-                                "predicate": {
-                                  "items": [
-                                    "minecraft:stone_pickaxe"
-                                  ]
-                                }
-                              }
-                            },
-                            {
-                              "condition": "minecraft:inverted",
-                              "term": {
-                                "condition": "minecraft:match_tool",
-                                "predicate": {
-                                  "items": [
-                                    "enhanced_playthrough:steel_pickaxe"
-                                  ]
-                                }
-                              }
+                          },
+                          {
+                            "condition": "minecraft:match_tool",
+                            "predicate": {
+                              "items": [
+                                "minecraft:stone_pickaxe"
+                              ]
                             }
-                          ]
-                        }
-                      ]
+                          }
+                        ]
+                      }
                     }
                   ]
                 }
@@ -87,44 +79,6 @@
                         "predicate": {
                           "enchantments": [
                             {
-                              "enchantment": "minecraft:silk_touch",
-                              "levels": {
-                                "min": 1
-                              }
-                            }
-                          ]
-                        }
-                      }
-                    },
-                    {
-                      "condition": "minecraft:inverted",
-                      "term": {
-                        "condition": "minecraft:match_tool",
-                        "predicate": {
-                          "items": [
-                            "minecraft:wooden_pickaxe"
-                          ]
-                        }
-                      }
-                    },
-                    {
-                      "condition": "minecraft:inverted",
-                      "term": {
-                        "condition": "minecraft:match_tool",
-                        "predicate": {
-                          "items": [
-                            "enhanced_playthrough:steel_pickaxe"
-                          ]
-                        }
-                      }
-                    },
-                    {
-                      "condition": "minecraft:inverted",
-                      "term": {
-                        "condition": "minecraft:match_tool",
-                        "predicate": {
-                          "enchantments": [
-                            {
                               "enchantment": "enhanced_playthrough:rough_mining",
                               "levels": {
                                 "min": 1
@@ -132,6 +86,30 @@
                             }
                           ]
                         }
+                      }
+                    },
+                    {
+                      "condition": "minecraft:inverted",
+                      "term": {
+                        "condition": "minecraft:any_of",
+                        "terms": [
+                          {
+                            "condition": "minecraft:match_tool",
+                            "predicate": {
+                              "items": [
+                                "minecraft:wooden_pickaxe"
+                              ]
+                            }
+                          },
+                          {
+                            "condition": "minecraft:match_tool",
+                            "predicate": {
+                              "items": [
+                                "minecraft:stone_pickaxe"
+                              ]
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
@@ -199,33 +177,12 @@
               }
             },
             {
-              "condition": "minecraft:all_of",
-              "terms": [
-                {
-                  "condition": "minecraft:match_tool",
-                  "predicate": {
-                    "items": [
-                      "minecraft:stone_pickaxe"
-                    ]
-                  }
-                },
-                {
-                  "condition": "minecraft:inverted",
-                  "term": {
-                    "condition": "minecraft:match_tool",
-                    "predicate": {
-                      "enchantments": [
-                        {
-                          "enchantment": "minecraft:silk_touch",
-                          "levels": {
-                            "min": 1
-                          }
-                        }
-                      ]
-                    }
-                  }
-                }
-              ]
+              "condition": "minecraft:match_tool",
+              "predicate": {
+                "items": [
+                  "minecraft:stone_pickaxe"
+                ]
+              }
             }
           ]
         }

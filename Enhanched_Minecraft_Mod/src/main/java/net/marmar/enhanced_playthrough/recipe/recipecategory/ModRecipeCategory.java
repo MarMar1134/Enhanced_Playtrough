@@ -16,7 +16,7 @@ public enum ModRecipeCategory implements StringRepresentable{
     public static final StringRepresentable.EnumCodec<ModRecipeCategory> CODEC = StringRepresentable.fromEnum(ModRecipeCategory::values);
     private final String recipeName;
 
-    private ModRecipeCategory(String pRecipeName){
+    ModRecipeCategory(String pRecipeName){
         this.recipeName = pRecipeName;
     }
 

@@ -14,6 +14,11 @@ public class ModEntities {
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES =
             DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, EnhancedPlaythrough.MOD_ID);
 
+    //Mobs
+    public static final RegistryObject<EntityType<Bandit>> BANDIT =
+            ENTITY_TYPES.register("bandit", ()-> EntityType.Builder.of(Bandit::new, MobCategory.MONSTER)
+                    .sized(0.6F, 1.95F).build("bandit"));
+
     //Boats
     public static final RegistryObject<EntityType<ModBoatEntity>> MOD_BOAT =
             ENTITY_TYPES.register("mod_boat", () -> EntityType.Builder.<ModBoatEntity>of(ModBoatEntity::new, MobCategory.MISC)

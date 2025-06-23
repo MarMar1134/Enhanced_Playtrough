@@ -89,7 +89,7 @@ public abstract class AbstractAlloyFurnaceBlockEntity extends BlockEntity {
                     case 2 -> AbstractAlloyFurnaceBlockEntity.this.burnTime = i1;
                     case 3 -> AbstractAlloyFurnaceBlockEntity.this.maxBurnTime = i1;
                     case 4 -> AbstractAlloyFurnaceBlockEntity.this.maxProgress = i1;
-                };
+                }
             }
 
             @Override

@@ -11,7 +11,6 @@ import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
 
 public class ModTags {
-
     public static class Blocks {
         public static final TagKey<Block> NEEDS_SILVER_TOOL = blockTag("needs_silver_tool");
         public static final TagKey<Block> NEEDS_BRASS_TOOL = blockTag("needs_brass_tool");

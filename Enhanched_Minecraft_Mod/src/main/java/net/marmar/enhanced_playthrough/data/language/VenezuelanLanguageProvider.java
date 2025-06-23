@@ -628,5 +628,9 @@ public class VenezuelanLanguageProvider extends AbstractModLanguageProvider{
         //Entities
             //Villagers
             addVillagerProfession("jeweler", "Joyero");
+
+            //Mobs
+            addBandit("Ladrón");
+            addItem(ModItems.BANDIT_SPAWN_EGG, "Generar ladrón");
     }
 }

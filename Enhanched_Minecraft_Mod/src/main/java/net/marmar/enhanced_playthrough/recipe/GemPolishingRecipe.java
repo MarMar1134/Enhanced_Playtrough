@@ -73,7 +73,7 @@ public class GemPolishingRecipe implements Recipe<SimpleContainer> {
 
     public static class Type implements RecipeType<GemPolishingRecipe>{
         public static final Type INSTANCE = new Type();
-        private static String ID = "gem_polishing";
+        private static final String ID = "gem_polishing";
     }
 
     public static class Serializer implements RecipeSerializer<GemPolishingRecipe>{

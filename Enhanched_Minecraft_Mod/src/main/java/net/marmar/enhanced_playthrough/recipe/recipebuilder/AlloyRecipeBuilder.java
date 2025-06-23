@@ -88,7 +88,7 @@ public class AlloyRecipeBuilder implements RecipeBuilder {
         private final int count;
         private final int alloyTime;
         private final AlloyRecipeCategory category;
-        private String group;
+        private final String group;
         private final Advancement.Builder advancement;
         private final ResourceLocation resourceLocation;
         private final RecipeSerializer<?> serializer;

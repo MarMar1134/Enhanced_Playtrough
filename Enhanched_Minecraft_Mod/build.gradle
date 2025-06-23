@@ -6,8 +6,8 @@ plugins {
     id 'org.parchmentmc.librarian.forgegradle' version '1.+'
 }
 
-version = '1.20.1-beta-0.21.0'
-group = 'net.marmar.enhanced_playthrough'
+version = mod_version
+group = mod_group_id
 
 base {
     archivesName = mod_id
@@ -124,12 +124,13 @@ repositories {
     // flatDir {
     //     dir 'libs'
     // }
-           maven {
-               url "https://www.cursemaven.com"
-               content {
-                   includeGroup "curse.maven"
-               }
-           }
+    maven {
+        url "https://www.cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
+
     maven {
                // location of the maven that hosts JEI files since January 2023
              name = "Jared's maven"

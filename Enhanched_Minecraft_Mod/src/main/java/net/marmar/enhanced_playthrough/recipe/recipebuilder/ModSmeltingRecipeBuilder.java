@@ -85,7 +85,7 @@ public class ModSmeltingRecipeBuilder implements RecipeBuilder {
         private final Item result;
         private final int alloyTime;
         private final ModRecipeCategory category;
-        private String group;
+        private final String group;
         private final Advancement.Builder advancement;
         private final ResourceLocation resourceLocation;
         private final RecipeSerializer<?> serializer;

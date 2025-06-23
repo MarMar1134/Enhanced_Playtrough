@@ -59,7 +59,7 @@ public class AlloyRecipe extends AbstractAlloyRecipe implements Recipe<SimpleCon
 
     public static class Type implements RecipeType<AlloyRecipe>{
         public static final Type INSTANCE = new Type();
-        private static String ID = "ore_alloying";
+        private static final String ID = "ore_alloying";
     }
     public static class Serializer implements RecipeSerializer<AlloyRecipe>{
         public static final Serializer INSTANCE = new Serializer();

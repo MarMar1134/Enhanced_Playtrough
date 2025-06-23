@@ -1,4 +1,4 @@
-// 1.20.1	2025-05-18T23:30:08.425831	Item Models: enhanced_playthrough
+// 1.20.1	2025-05-21T13:11:01.2843888	Item Models: enhanced_playthrough
 baf1150f8dd2eb312864040ee4a71733e1d7c8ae assets/enhanced_playthrough/models/item/apple_boat.json
 884498801ab8c16590109d685d1ad8b077853c65 assets/enhanced_playthrough/models/item/apple_button.json
 4b12cf4f49b45484592f4d6f8b4f0dad03e99343 assets/enhanced_playthrough/models/item/apple_chest_boat.json
@@ -12,6 +12,7 @@ d92c5d1b53036bd9654fee31e88a9379d8a64e47 assets/enhanced_playthrough/models/item
 ffb5537008def633af13e2035f52b3ec10ade680 assets/enhanced_playthrough/models/item/apple_slab.json
 bc9d5469e3a94246b107fdb4a6e004348c471ec6 assets/enhanced_playthrough/models/item/apple_stair.json
 5bfab7ed2c3cd87c91a86b357f791b1a100e6e11 assets/enhanced_playthrough/models/item/apple_trapdoor.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/enhanced_playthrough/models/item/bandit_spawn_egg.json
 0f9002696b9ad78ae495ca8860b8d60cd5d89d5a assets/enhanced_playthrough/models/item/black_cobble.json
 3e26c2cfcc55bac213bcfbb295b1c1969a5dc875 assets/enhanced_playthrough/models/item/black_concrete_slab.json
 fe0d3723d8cbaae114f6b03d79b3980b0ab5bf95 assets/enhanced_playthrough/models/item/black_concrete_stairs.json

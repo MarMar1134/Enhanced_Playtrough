@@ -90,12 +90,6 @@ public class PrimalGrinderMenu extends AbstractContainerMenu{
         return maxBurnTime != 0 && burnTime != 0 ? fireSize - maxBurnTime / burnTime : 0;
     }
 
-//    public int flashingLight(){
-//        int random = RandomGenerator.nextInt();
-//
-//        return random > 2 ? 17 : 0;
-//    }
-
     private boolean isFuel(ItemStack stack){
         return blockEntity.canBurn(stack);
     }

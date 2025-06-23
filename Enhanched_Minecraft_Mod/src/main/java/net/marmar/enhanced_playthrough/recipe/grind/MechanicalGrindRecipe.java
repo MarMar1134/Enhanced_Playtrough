@@ -41,7 +41,7 @@ public class MechanicalGrindRecipe extends AbstractGrindRecipe {
 
     public static class Type implements RecipeType<MechanicalGrindRecipe>{
         public static final MechanicalGrindRecipe.Type INSTANCE = new MechanicalGrindRecipe.Type();
-        private static String ID = "mechanical_grinding";
+        private static final String ID = "mechanical_grinding";
     }
 
     public static class Serializer implements RecipeSerializer<MechanicalGrindRecipe>{

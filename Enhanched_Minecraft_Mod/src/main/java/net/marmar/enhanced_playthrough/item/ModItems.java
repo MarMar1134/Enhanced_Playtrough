@@ -1,6 +1,7 @@
 package net.marmar.enhanced_playthrough.item;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
+import net.marmar.enhanced_playthrough.entity.ModEntities;
 import net.marmar.enhanced_playthrough.item.custom.weapon.ModTiers;
 import net.marmar.enhanced_playthrough.block.ModBlocks;
 import net.marmar.enhanced_playthrough.entity.boat.ModBoatEntity;
@@ -8,6 +9,7 @@ import net.marmar.enhanced_playthrough.item.custom.armor.ModArmorItem;
 import net.marmar.enhanced_playthrough.item.custom.armor.ModArmorMaterial;
 import net.marmar.enhanced_playthrough.item.custom.*;
 import net.marmar.enhanced_playthrough.item.custom.weapon.DaggerItem;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraft.world.item.*;
@@ -155,6 +157,11 @@ public class ModItems {
             "reeds_head", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> WATER_REED_HEAD = ITEMS.register(
             "water_reeds_head", () -> new Item(new Item.Properties()));
+
+    //Spawn eggs
+    public static final RegistryObject<Item> BANDIT_SPAWN_EGG = ITEMS.register(
+            "bandit_spawn_egg", ()-> new ForgeSpawnEggItem(ModEntities.BANDIT, 1973532,
+                    9343891, new Item.Properties()));
 
     //Signs
         //Walnut

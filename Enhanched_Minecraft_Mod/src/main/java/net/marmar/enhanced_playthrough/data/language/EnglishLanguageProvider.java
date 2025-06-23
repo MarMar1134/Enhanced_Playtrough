@@ -626,6 +626,10 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
 
         //Entities
             //Villagers
-            addVillagerProfession("jeweler");
+            addVillagerProfession("jeweler", "Jeweler");
+
+            //Mobs
+            addBandit("Bandit");
+            addItem(ModItems.BANDIT_SPAWN_EGG, "Spawn bandit");
     }
 }

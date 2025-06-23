@@ -367,7 +367,7 @@ public class SmeltingRecipeSubProvider extends RecipeProvider {
         ModSmeltingRecipeBuilder.masonrySmelting(Ingredient.of(input), output, group, pSerializer)
                 .group(group)
                 .unlockedBy(input.toString(), has(input))
-                .save(pConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(output) + pRecipeName + "_" + input.toString());
+                .save(pConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(output) + pRecipeName + "_" + input);
     }
 
     @Override

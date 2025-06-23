@@ -1851,6 +1851,7 @@
   "minecraft:husbandry/balanced_diet": {
     "criteria": {
       "chicken": "2025-05-05 16:36:29 -0300",
+      "sweet_berries": "2025-05-21 01:42:42 -0300",
       "cooked_beef": "2025-05-18 20:16:30 -0300",
       "beef": "2025-05-19 14:38:54 -0300",
       "porkchop": "2025-05-20 17:34:33 -0300",
@@ -2908,10 +2909,12 @@
     "criteria": {
       "minecraft:pillager": "2025-05-17 01:39:30 -0300",
       "minecraft:skeleton": "2025-05-19 16:00:59 -0300",
+      "minecraft:vindicator": "2025-05-21 01:41:09 -0300",
       "minecraft:spider": "2025-05-19 16:31:49 -0300",
       "minecraft:creeper": "2025-05-20 18:24:18 -0300",
       "minecraft:wither": "2025-05-20 18:14:23 -0300",
-      "minecraft:zombie": "2025-05-17 01:40:47 -0300"
+      "minecraft:zombie": "2025-05-17 01:40:47 -0300",
+      "minecraft:zombie_villager": "2025-05-26 12:08:59 -0300"
     },
     "done": false
   },
@@ -3329,39 +3332,9 @@
     },
     "done": true
   },
-  "minecraft:end/dragon_egg": {
-    "criteria": {
-      "dragon_egg": "2025-05-20 18:09:51 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/food/baked_potato": {
     "criteria": {
       "has_potato": "2025-05-20 18:05:11 -0300"
-    },
-    "done": true
-  },
-  "minecraft:recipes/decorations/soul_torch": {
-    "criteria": {
-      "has_soul_sand": "2025-05-20 18:12:50 -0300"
-    },
-    "done": true
-  },
-  "minecraft:recipes/misc/beacon": {
-    "criteria": {
-      "has_nether_star": "2025-05-20 18:14:24 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/deepslate_from_masonry_smelting_cobbled_deepslate": {
-    "criteria": {
-      "has_cobbled_deepslate": "2025-05-20 18:13:53 -0300"
-    },
-    "done": true
-  },
-  "minecraft:nether/get_wither_skull": {
-    "criteria": {
-      "wither_skull": "2025-05-20 18:12:46 -0300"
     },
     "done": true
   },
@@ -3377,21 +3350,9 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/deepslate_cobble_from_mechanical_grinding_cobbled_deepslate": {
+  "enhanced_playthrough:recipes/baked_potato_from_soul_basic_smelting_potato": {
     "criteria": {
-      "has_cobbled_deepslate": "2025-05-20 18:13:53 -0300"
-    },
-    "done": true
-  },
-  "minecraft:end/respawn_dragon": {
-    "criteria": {
-      "summoned_dragon": "2025-05-20 18:10:16 -0300"
-    },
-    "done": true
-  },
-  "minecraft:recipes/decorations/soul_campfire": {
-    "criteria": {
-      "has_soul_sand": "2025-05-20 18:12:50 -0300"
+      "has_potato": "2025-05-20 18:05:11 -0300"
     },
     "done": true
   },
@@ -3401,15 +3362,27 @@
     },
     "done": true
   },
-  "minecraft:nether/summon_wither": {
-    "criteria": {
-      "summoned": "2025-05-20 18:13:41 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/redstone/tnt": {
     "criteria": {
       "has_gunpowder": "2025-05-20 18:05:12 -0300"
+    },
+    "done": true
+  },
+  "minecraft:end/dragon_egg": {
+    "criteria": {
+      "dragon_egg": "2025-05-20 18:09:51 -0300"
+    },
+    "done": true
+  },
+  "minecraft:end/respawn_dragon": {
+    "criteria": {
+      "summoned_dragon": "2025-05-20 18:10:16 -0300"
+    },
+    "done": true
+  },
+  "minecraft:nether/get_wither_skull": {
+    "criteria": {
+      "wither_skull": "2025-05-20 18:12:46 -0300"
     },
     "done": true
   },
@@ -3419,9 +3392,111 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/baked_potato_from_soul_basic_smelting_potato": {
+  "minecraft:recipes/decorations/soul_torch": {
     "criteria": {
-      "has_potato": "2025-05-20 18:05:11 -0300"
+      "has_soul_sand": "2025-05-20 18:12:50 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/soul_campfire": {
+    "criteria": {
+      "has_soul_sand": "2025-05-20 18:12:50 -0300"
+    },
+    "done": true
+  },
+  "minecraft:nether/summon_wither": {
+    "criteria": {
+      "summoned": "2025-05-20 18:13:41 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/deepslate_from_masonry_smelting_cobbled_deepslate": {
+    "criteria": {
+      "has_cobbled_deepslate": "2025-05-20 18:13:53 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/deepslate_cobble_from_mechanical_grinding_cobbled_deepslate": {
+    "criteria": {
+      "has_cobbled_deepslate": "2025-05-20 18:13:53 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/beacon": {
+    "criteria": {
+      "has_nether_star": "2025-05-20 18:14:24 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/red_dye_from_primal_grinding_poppy": {
+    "criteria": {
+      "has_poppy": "2025-05-21 13:01:49 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/red_dye_from_poppy": {
+    "criteria": {
+      "has_poppy": "2025-05-21 13:01:49 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/red_dye_from_mechanical_grinding_poppy": {
+    "criteria": {
+      "has_poppy": "2025-05-21 13:01:49 -0300"
+    },
+    "done": true
+  },
+  "minecraft:adventure/ol_betsy": {
+    "criteria": {
+      "shot_crossbow": "2025-05-21 13:34:16 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/coarse_dirt": {
+    "criteria": {
+      "has_gravel": "2025-05-21 15:15:03 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/building_blocks/stone_wall": {
+    "criteria": {
+      "has_stone": "2025-06-22 21:31:58 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/building_blocks/stone_wall_from_stone_cutting_stone": {
+    "criteria": {
+      "has_stone": "2025-06-22 21:31:58 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/smooth_stone_from_masonry_smelting_stone": {
+    "criteria": {
+      "has_stone": "2025-06-22 21:31:58 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/green_golden_pickaxe": {
+    "criteria": {
+      "has_green_golden_pickaxe": "2025-06-22 23:27:17 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/green_gold_dust_from_mechanical_grinding": {
+    "criteria": {
+      "TagKey[minecraft:item / enhanced_playthrough:green_gold_manufacturable]": "2025-06-22 23:27:17 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/green_gold_nugget__from_blasting": {
+    "criteria": {
+      "TagKey[minecraft:item / enhanced_playthrough:green_gold_manufacturable]": "2025-06-22 23:27:17 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/green_gold_nugget__from_smelting": {
+    "criteria": {
+      "TagKey[minecraft:item / enhanced_playthrough:green_gold_manufacturable]": "2025-06-22 23:27:17 -0300"
     },
     "done": true
   },

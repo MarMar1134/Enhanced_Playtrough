@@ -354,6 +354,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.REED_HEAD);
         simpleItem(ModItems.WATER_REED_HEAD);
 
+        //Spawn eggs
+        spawnEggItem(ModItems.BANDIT_SPAWN_EGG);
+
         //Armors and tools
             //Wood
             handheldItem(ModItems.WOODEN_DAGGER);
@@ -539,7 +542,7 @@ public class ModItemModelProvider extends ItemModelProvider {
             });
         }
     }
-    private static LinkedHashMap<ResourceKey<TrimMaterial>, Float> trimMaterials = new LinkedHashMap<>();
+    private static final LinkedHashMap<ResourceKey<TrimMaterial>, Float> trimMaterials = new LinkedHashMap<>();
     static {
         trimMaterials.put(TrimMaterials.AMETHYST, 1.0f);
         trimMaterials.put(TrimMaterials.COPPER, 0.5f);
@@ -565,6 +568,11 @@ public class ModItemModelProvider extends ItemModelProvider {
                 new ResourceLocation("item/handheld")).texture("layer0",
                 new ResourceLocation(EnhancedPlaythrough.MOD_ID, "item/" + item.getId().getPath()));
     }
+
+    private ItemModelBuilder spawnEggItem(RegistryObject<Item> pItem){
+        return withExistingParent(pItem.getId().getPath(), mcLoc("item/template_spawn_egg"));
+    }
+
     public void blockWithItem(RegistryObject<Block> block) {
         this.withExistingParent(EnhancedPlaythrough.MOD_ID + ":" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath(),
                 modLoc("block/" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath()));

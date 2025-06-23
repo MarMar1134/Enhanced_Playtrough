@@ -29,4 +29,9 @@ public class ModModelLayers {
                 new ResourceLocation(EnhancedPlaythrough.MOD_ID, "boat/lemon"), "main");
         public static final ModelLayerLocation LEMON_CHEST_BOAT_LAYER = new ModelLayerLocation(
                 new ResourceLocation(EnhancedPlaythrough.MOD_ID, "chest_boat/lemon"), "main");
+
+    //Entities
+        //Bandit
+        public static final ModelLayerLocation BANDIT_LAYER = new ModelLayerLocation(
+                new ResourceLocation(EnhancedPlaythrough.MOD_ID, "bandit_layer"), "main");
 }

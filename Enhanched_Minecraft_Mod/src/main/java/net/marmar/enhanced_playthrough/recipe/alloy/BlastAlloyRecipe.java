@@ -50,7 +50,7 @@ public class BlastAlloyRecipe extends AbstractAlloyRecipe implements Recipe<Simp
 
     public static class Type implements RecipeType<BlastAlloyRecipe>{
         public static final BlastAlloyRecipe.Type INSTANCE = new BlastAlloyRecipe.Type();
-        private static String ID = "super_ore_alloying";
+        private static final String ID = "super_ore_alloying";
     }
     public static class Serializer implements RecipeSerializer<BlastAlloyRecipe>{
         public static final BlastAlloyRecipe.Serializer INSTANCE = new BlastAlloyRecipe.Serializer();

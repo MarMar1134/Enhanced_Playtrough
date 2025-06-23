@@ -625,7 +625,11 @@ public class ChileanLanguageProvider extends AbstractModLanguageProvider{
         addEnchantmentDesc("sharp_blade", "Al ser aplicado, provoca Sangrado al objetivo");
 
         //Entities
-        //Villagers
-        addVillagerProfession("jeweler", "Joyero");
+            //Villagers
+            addVillagerProfession("jeweler", "Joyero");
+
+            //Mobs
+            addBandit("Ladrón");
+            addItem(ModItems.BANDIT_SPAWN_EGG, "Generar ladrón");
     }
 }

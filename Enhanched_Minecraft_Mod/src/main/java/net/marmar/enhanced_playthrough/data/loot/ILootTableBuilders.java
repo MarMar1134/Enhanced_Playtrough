@@ -30,13 +30,9 @@ public interface ILootTableBuilders {
     float[] BASE_STICK_CHANCES = new float[]{0.02F, 0.022222223F, 0.025F, 0.033333335F, 0.1F};
 
     LootItemCondition.Builder IS_WOODEN_OR_STONE_PICKAXE = MatchTool.toolMatches(ItemPredicate.Builder.item().of(Items.WOODEN_PICKAXE))
-            .or(MatchTool.toolMatches(ItemPredicate.Builder.item().of(Items.STONE_PICKAXE))
-            .and(MatchTool.toolMatches(ItemPredicate.Builder.item()
-                    .hasEnchantment(new EnchantmentPredicate(Enchantments.SILK_TOUCH, MinMaxBounds.Ints.atLeast(1)))).invert()));
+            .or(MatchTool.toolMatches(ItemPredicate.Builder.item().of(Items.STONE_PICKAXE)));
 
-    LootItemCondition.Builder IS_STEEL_PICKAXE = MatchTool.toolMatches(ItemPredicate.Builder.item().of(ModItems.STEEL_PICKAXE.get()))
-            .and(MatchTool.toolMatches(ItemPredicate.Builder.item()
-                    .hasEnchantment(new EnchantmentPredicate(Enchantments.SILK_TOUCH, MinMaxBounds.Ints.atLeast(1)))).invert());
+    LootItemCondition.Builder IS_STEEL_PICKAXE = MatchTool.toolMatches(ItemPredicate.Builder.item().of(ModItems.STEEL_PICKAXE.get()));
 
     LootItemCondition.Builder HAS_FINE_MINING = MatchTool.toolMatches(ItemPredicate.Builder.item()
             .hasEnchantment(new EnchantmentPredicate(ModEnchantments.FINE_MINING.get(), MinMaxBounds.Ints.atLeast(1))));
@@ -52,26 +48,20 @@ public interface ILootTableBuilders {
     LootItemCondition.Builder HAS_ROUGH_MINING = MatchTool.toolMatches(ItemPredicate.Builder.item()
             .hasEnchantment(new EnchantmentPredicate(ModEnchantments.ROUGH_MINING.get(), MinMaxBounds.Ints.atLeast(1))));
 
-    LootItemCondition.Builder HAS_NOT_ROUGH_MINING = MatchTool.toolMatches(ItemPredicate.Builder.item()
-            .hasEnchantment(new EnchantmentPredicate(ModEnchantments.ROUGH_MINING.get(), MinMaxBounds.Ints.atLeast(1)))).invert();
+    LootItemCondition.Builder HAS_SILK_TOUCH_AND_NOT_SPECIAL_PICKAXES = MatchTool.toolMatches(ItemPredicate.Builder.item()
+                    .hasEnchantment(new EnchantmentPredicate(Enchantments.SILK_TOUCH, MinMaxBounds.Ints.atLeast(1))))
+            .and(IS_STEEL_PICKAXE.invert()).and(IS_WOODEN_OR_STONE_PICKAXE.invert());
 
-    LootItemCondition.Builder HAS_NOT_ROUGH_MINING_OR_PICKAXES = MatchTool.toolMatches(ItemPredicate.Builder.item()
-                .hasEnchantment(new EnchantmentPredicate(Enchantments.SILK_TOUCH, MinMaxBounds.Ints.atLeast(1)))).invert()
-            .and(MatchTool.toolMatches(ItemPredicate.Builder.item().of(Items.WOODEN_PICKAXE)).invert())
-            .and(MatchTool.toolMatches(ItemPredicate.Builder.item().of(ModItems.STEEL_PICKAXE.get())).invert())
-            .and(MatchTool.toolMatches(ItemPredicate.Builder.item()
-                    .hasEnchantment(new EnchantmentPredicate(ModEnchantments.ROUGH_MINING.get(), MinMaxBounds.Ints.atLeast(1)))).invert());
+    LootItemCondition.Builder HAS_NOT_ROUGH_MINING_OR_WOOD_PICKAXE = MatchTool.toolMatches(ItemPredicate.Builder.item()
+                    .hasEnchantment(new EnchantmentPredicate(ModEnchantments.ROUGH_MINING.get(), MinMaxBounds.Ints.atLeast(1)))).invert()
+            .and(IS_WOODEN_OR_STONE_PICKAXE.invert());
+
+    LootItemCondition.Builder HAS_NOT_ROUGH_MINING_OR_STEEL_PICKAXE = MatchTool.toolMatches(ItemPredicate.Builder.item()
+                    .hasEnchantment(new EnchantmentPredicate(ModEnchantments.ROUGH_MINING.get(), MinMaxBounds.Ints.atLeast(1)))).invert()
+            .and(IS_STEEL_PICKAXE.invert());
 
     LootItemCondition.Builder CUSTOM_HAS_SILK_TOUCH = MatchTool.toolMatches(ItemPredicate.Builder.item()
             .hasEnchantment(new EnchantmentPredicate(Enchantments.SILK_TOUCH, MinMaxBounds.Ints.atLeast(1))));
-
-    LootItemCondition.Builder SPECIAL_HAS_SILK_TOUCH  = MatchTool.toolMatches(ItemPredicate.Builder.item()
-            .hasEnchantment(new EnchantmentPredicate(Enchantments.SILK_TOUCH, MinMaxBounds.Ints.atLeast(1))))
-            .and(MatchTool.toolMatches(ItemPredicate.Builder.item()
-                    .of(Items.WOODEN_PICKAXE)).invert()
-                    .or(MatchTool.toolMatches(ItemPredicate.Builder.item().of(Items.STONE_PICKAXE)).invert()
-                    .or(MatchTool.toolMatches(ItemPredicate.Builder.item()
-                    .of(ModItems.STEEL_PICKAXE.get())).invert())));
 
     LootItemCondition.Builder CUSTOM_HAS_SHEARS = MatchTool.toolMatches(ItemPredicate.Builder.item().of(Items.SHEARS));
 
@@ -216,18 +206,22 @@ public interface ILootTableBuilders {
      * @param pCondition the condition required to get the {@code cobble type}
      * @return the loot table
      */
-    default LootTable.Builder createBaseRockDrops(Block silkTouchRock, Block cobbleRock, ItemLike cobbleType, LootItemCondition.Builder pCondition){
+    default LootTable.Builder createBaseRockDrops(Block silkTouchRock, Block cobbleRock, ItemLike cobbleType, LootItemCondition.Builder pickaxeType, LootItemCondition.Builder pCondition){
         return LootTable.lootTable()
+                //If it has silk touch, drops the block itself. Otherwise, checks if the pickaxe type is correct and
+                //is not enchanted with rough mining. If the pickaxe is not enchanted, drops the cobble variant
                 .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1))
-                    .add(LootItem.lootTableItem(silkTouchRock).when(SPECIAL_HAS_SILK_TOUCH)
-                        .otherwise(LootItem.lootTableItem(cobbleRock).when(HAS_NOT_ROUGH_MINING_OR_PICKAXES))))
+                    .add(LootItem.lootTableItem(silkTouchRock).when(HAS_SILK_TOUCH_AND_NOT_SPECIAL_PICKAXES)
+                            .otherwise(LootItem.lootTableItem(cobbleRock).when(pickaxeType))))
 
+                //If it has Rough mining (no matter the pickaxe), drops 4 cobble of its type
                 .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1))
                     .add(LootItem.lootTableItem(cobbleType)
                         .apply(SetItemCountFunction.setCount(ConstantValue.exactly(4)))
                         .apply(ApplyBonusCount.addUniformBonusCount(Enchantments.BLOCK_FORTUNE)))
                         .when(HAS_ROUGH_MINING))
 
+                //If is one of the selected conditions, drops 1 to 3 cobble of its type
                 .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1))
                         .add(LootItem.lootTableItem(cobbleType)
                                 .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 3)))
@@ -236,16 +230,19 @@ public interface ILootTableBuilders {
     }
 
     default LootTable.Builder createRockDrops(Block baseRock, Block cobbleRock, ItemLike cobbleType){
-        return createBaseRockDrops(baseRock, cobbleRock, cobbleType, IS_WOODEN_OR_STONE_PICKAXE);
+        return createBaseRockDrops(baseRock, cobbleRock, cobbleType, HAS_NOT_ROUGH_MINING_OR_WOOD_PICKAXE, IS_WOODEN_OR_STONE_PICKAXE);
     }
 
     default LootTable.Builder createHardRockDrops(Block baseRock, Block cobbleRock, ItemLike cobbleType){
-        return createBaseRockDrops(baseRock, cobbleRock, cobbleType, IS_STEEL_PICKAXE);
+        return createBaseRockDrops(baseRock, cobbleRock, cobbleType, HAS_NOT_ROUGH_MINING_OR_STEEL_PICKAXE, IS_STEEL_PICKAXE);
     }
 
     default LootTable.Builder createRoughMiningDrops(Block pBlock, ItemLike pRoughDrop, int pRoughQuantity){
         return LootTable.lootTable().withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1))
-                .add(LootItem.lootTableItem(pBlock)).when(HAS_NOT_ROUGH_MINING))
+                //When doesn't have Rough mining, the base block is dropped
+                .add(LootItem.lootTableItem(pBlock)).when(HAS_ROUGH_MINING.invert()))
+
+                //When has Rough mining, the alternative loot is dropped
                 .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1))
                         .add(LootItem.lootTableItem(pRoughDrop)
                                 .apply(SetItemCountFunction.setCount(ConstantValue.exactly(pRoughQuantity)))

@@ -27,13 +27,13 @@ import java.util.concurrent.CompletableFuture;
 public class DataGenerators {
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event){
-        GemAdvancementGenerator gem_advancements = new GemAdvancementGenerator();
-        SurvivalAdvancementGenerator survival_advancements = new SurvivalAdvancementGenerator();
-
         DataGenerator generator = event.getGenerator();
         PackOutput packOutput = generator.getPackOutput();
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
         CompletableFuture<HolderLookup.Provider> LookupProvider = event.getLookupProvider();
+
+        GemAdvancementGenerator gem_advancements = new GemAdvancementGenerator();
+        SurvivalAdvancementGenerator survival_advancements = new SurvivalAdvancementGenerator();
 
         generator.addProvider(event.includeServer(), new ModRecipeProvider(packOutput));
         generator.addProvider(event.includeServer(), ModLootTableProvider.create(packOutput));

@@ -53,7 +53,7 @@ public class BasicSmeltingRecipe extends AbstractSmeltingRecipe implements Recip
 
     public static class Type implements RecipeType<BasicSmeltingRecipe>{
         public static final Type INSTANCE = new Type();
-        private static String ID = "basic_smelting";
+        private static final String ID = "basic_smelting";
     }
     public static class Serializer implements RecipeSerializer<BasicSmeltingRecipe>{
         public static final Serializer INSTANCE = new Serializer();
