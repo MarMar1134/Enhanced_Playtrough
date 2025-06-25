@@ -1,0 +1,14 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 33121233,
+    "separation": 20,
+    "spacing": 25
+  },
+  "structures": [
+    {
+      "structure": "enhanced_playthrough:bandit_camp",
+      "weight": 1
+    }
+  ]
+}

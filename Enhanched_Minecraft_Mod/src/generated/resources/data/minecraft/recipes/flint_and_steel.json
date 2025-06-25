@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "F": {
+      "item": "minecraft:flint"
+    },
+    "S": {
+      "item": "enhanced_playthrough:steel_ingot"
+    }
+  },
+  "pattern": [
+    "S ",
+    " F"
+  ],
+  "result": {
+    "item": "minecraft:flint_and_steel"
+  },
+  "show_notification": true
+}

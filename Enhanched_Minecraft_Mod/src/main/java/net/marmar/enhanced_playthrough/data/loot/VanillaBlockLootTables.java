@@ -11,7 +11,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import java.util.*;
 import java.util.function.Predicate;
 
-public class VanillaBlockLootTables extends BlockLootSubProvider implements ILootTableBuilders {
+public class VanillaBlockLootTables extends BlockLootSubProvider implements BlockLootTableBuilders {
 
     public VanillaBlockLootTables() {
         super(Set.of(), FeatureFlags.REGISTRY.allFlags());

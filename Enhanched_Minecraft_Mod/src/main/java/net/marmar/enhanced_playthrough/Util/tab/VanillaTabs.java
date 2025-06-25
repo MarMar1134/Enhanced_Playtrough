@@ -38,6 +38,10 @@ public class VanillaTabs {
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(Items.NETHERITE_HOE.getDefaultInstance(), ModItems.NETHERITE_POLISHER.get().getDefaultInstance(),
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putBefore(Items.FLINT_AND_STEEL.getDefaultInstance(), ModItems.FLINT_AND_BRONZE.get().getDefaultInstance(),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putBefore(ModItems.FLINT_AND_BRONZE.get().getDefaultInstance(), ModItems.FLINT_AND_COBBLE.get().getDefaultInstance(),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
         }
         if (event.getTabKey().equals(CreativeModeTabs.SPAWN_EGGS)){
             event.getEntries().putAfter(Items.PILLAGER_SPAWN_EGG.getDefaultInstance(), ModItems.BANDIT_SPAWN_EGG.get().getDefaultInstance(),

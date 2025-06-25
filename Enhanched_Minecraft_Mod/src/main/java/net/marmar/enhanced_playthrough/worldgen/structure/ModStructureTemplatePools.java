@@ -19,7 +19,12 @@ import java.util.Optional;
 import java.util.function.Function;
 
 public class ModStructureTemplatePools {
+    //Jeweler house
     public static final ResourceKey<StructureTemplatePool> JEWELER_HOUSE_START_POOL = registryKey("jeweler_house/start_pool");
+
+    //Bandit camp
+    public static final ResourceKey<StructureTemplatePool> BANDIT_CAMP_START_POOL = registryKey("bandit_camp/start_pool");
+    public static final ResourceKey<StructureTemplatePool> BANDIT_ENTITY = registryKey("bandit_camp/bandit");
 
     public static void bootstrap(BootstapContext<StructureTemplatePool> pContext){
         //Holder getters
@@ -33,7 +38,12 @@ public class ModStructureTemplatePools {
 
         //Register
         pContext.register(JEWELER_HOUSE_START_POOL, new StructureTemplatePool(emptyFallback, ImmutableList.of(Pair.of(singlePoolElement(
-                "jeweler_house", mossy10Percent), 1)), StructureTemplatePool.Projection.RIGID));
+                "jeweler_house/jeweler_house", mossy10Percent), 1)), StructureTemplatePool.Projection.RIGID));
+
+        pContext.register(BANDIT_CAMP_START_POOL, new StructureTemplatePool(emptyFallback, ImmutableList.of(Pair.of(singlePoolElement(
+                "bandit_camp/bandit_camp", mossy10Percent), 1)), StructureTemplatePool.Projection.RIGID));
+        pContext.register(BANDIT_ENTITY, new StructureTemplatePool(emptyFallback, ImmutableList.of(Pair.of(singlePoolElement(
+                "bandit_camp/entities/bandit", mossy10Percent), 1)), StructureTemplatePool.Projection.RIGID));
     }
 
     public static Function<StructureTemplatePool.Projection, ModSinglePoolElement> singlePoolElement(String pName, Holder<StructureProcessorList> pProcessor){

@@ -2,15 +2,21 @@ package net.marmar.enhanced_playthrough.worldgen.structure;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.data.tag.ModTags;
+import net.marmar.enhanced_playthrough.entity.ModEntities;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.data.worldgen.PillagerOutpostPools;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BiomeTags;
 import net.minecraft.tags.TagKey;
+import net.minecraft.util.random.WeightedRandomList;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.level.biome.Biome;
+import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
@@ -24,7 +30,11 @@ import net.minecraft.world.level.levelgen.structure.structures.JigsawStructure;
 import java.util.Map;
 
 public class ModStructures {
+    //Jeweler house
     public static final ResourceKey<Structure> JEWELER_HOUSE = registryKey("jeweler_house");
+
+    //Bandit camp
+    public static final ResourceKey<Structure> BANDIT_CAMP = registryKey("bandit_camp");
 
     public static void bootstrap(BootstapContext<Structure> pContext){
         HolderGetter<Biome> biomesGetter = pContext.lookup(Registries.BIOME);
@@ -32,11 +42,21 @@ public class ModStructures {
 
         pContext.register(JEWELER_HOUSE, houseStructure(biomesGetter, structureGetter,
                 ModTags.Biomes.JEWELER_HOUSE, ModStructureTemplatePools.JEWELER_HOUSE_START_POOL));
+        pContext.register(BANDIT_CAMP, campStructure(biomesGetter, structureGetter,
+                BiomeTags.IS_FOREST, ModStructureTemplatePools.BANDIT_CAMP_START_POOL, ModEntities.BANDIT.get()));
     }
 
     private static JigsawStructure houseStructure(HolderGetter<Biome> biomesGetter, HolderGetter<StructureTemplatePool> structureGetter, TagKey<Biome> pBiomes, ResourceKey<StructureTemplatePool> pHouse){
         return new JigsawStructure(structure(biomesGetter.getOrThrow(pBiomes), TerrainAdjustment.NONE), structureGetter.getOrThrow(pHouse),
                 2, ConstantHeight.of(VerticalAnchor.absolute(0)), false, Heightmap.Types.WORLD_SURFACE_WG);
+    }
+
+    private static JigsawStructure campStructure(HolderGetter<Biome> biomesGetter, HolderGetter<StructureTemplatePool> structureGetter, TagKey<Biome> pBiomes, ResourceKey<StructureTemplatePool> pCamp, EntityType<?> pMob){
+       return new JigsawStructure(structure(biomesGetter.getOrThrow(pBiomes),
+                Map.of(MobCategory.MONSTER, new StructureSpawnOverride(StructureSpawnOverride.BoundingBoxType.STRUCTURE,
+                        WeightedRandomList.create(new MobSpawnSettings.SpawnerData(pMob, 1, 1, 3)))),
+                GenerationStep.Decoration.SURFACE_STRUCTURES, TerrainAdjustment.BEARD_THIN), structureGetter.getOrThrow(pCamp),
+                5, ConstantHeight.of(VerticalAnchor.absolute(0)), false, Heightmap.Types.WORLD_SURFACE_WG);
     }
 
     private static Structure.StructureSettings structure(HolderSet<Biome> pBiomes, Map<MobCategory, StructureSpawnOverride> pSpawnOverrides, GenerationStep.Decoration pStep, TerrainAdjustment pTerrainAdaptation) {

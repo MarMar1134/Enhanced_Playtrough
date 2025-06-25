@@ -433,6 +433,10 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
             //Acids and potions
             addAcid("sulfuric_acid", "Sulfuric acid");
 
+        //Other tools
+        addItem(ModItems.FLINT_AND_COBBLE, "Flint & cobble");
+        addItem(ModItems.FLINT_AND_BRONZE, "Flint & bronze");
+
             //Silver equipment
             addItem(ModItems.SILVER_SWORD, "Silver sword");
             addItem(ModItems.SILVER_DAGGER, "Silver dagger");

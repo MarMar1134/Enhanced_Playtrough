@@ -1,4 +1,4 @@
-// 1.20.1	2025-05-21T13:11:01.2843888	Item Models: enhanced_playthrough
+// 1.20.1	2025-06-24T20:20:51.1979384	Item Models: enhanced_playthrough
 baf1150f8dd2eb312864040ee4a71733e1d7c8ae assets/enhanced_playthrough/models/item/apple_boat.json
 884498801ab8c16590109d685d1ad8b077853c65 assets/enhanced_playthrough/models/item/apple_button.json
 4b12cf4f49b45484592f4d6f8b4f0dad03e99343 assets/enhanced_playthrough/models/item/apple_chest_boat.json
@@ -268,6 +268,8 @@ c676b44ddbed6193c3691df58744a2ba6e686d47 assets/enhanced_playthrough/models/item
 bf590530af4758fed151ec6035455d090a01cc2d assets/enhanced_playthrough/models/item/firebrick_slab.json
 4704a6b5fee1387d7da38ed86d82f7bb6adbb9bc assets/enhanced_playthrough/models/item/firebrick_stair.json
 920a27926e3d13c93a4755832f3e6d42b47c3513 assets/enhanced_playthrough/models/item/firebrick_wall.json
+d44984c6e7f9f4ddc89d69c62bb09c2c16b08ca8 assets/enhanced_playthrough/models/item/flint_and_bronze.json
+c795022c1f765133ff387875967777a6221671c5 assets/enhanced_playthrough/models/item/flint_and_cobble.json
 0ad6e19b20dd8646a6a31354821846e32918ad0f assets/enhanced_playthrough/models/item/garnet.json
 24d6040d7b5de7adbd1bf63f5ae7d25e3b9e0a0d assets/enhanced_playthrough/models/item/golden_dagger.json
 786b71622510a985a4c00a90122889eb2fc31bee assets/enhanced_playthrough/models/item/gold_dust.json

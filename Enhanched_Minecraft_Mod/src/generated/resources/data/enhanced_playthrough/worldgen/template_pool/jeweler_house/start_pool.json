@@ -3,7 +3,7 @@
     {
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "enhanced_playthrough:jeweler_house",
+        "location": "enhanced_playthrough:jeweler_house/jeweler_house",
         "processors": "minecraft:mossify_10_percent",
         "projection": "rigid"
       },

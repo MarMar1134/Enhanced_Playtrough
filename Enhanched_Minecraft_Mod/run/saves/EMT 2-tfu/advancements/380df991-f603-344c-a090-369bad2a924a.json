@@ -14,10 +14,12 @@
   "minecraft:adventure/adventuring_time": {
     "criteria": {
       "minecraft:sunflower_plains": "2025-04-23 19:52:22 -0300",
+      "minecraft:birch_forest": "2025-06-24 20:27:05 -0300",
       "minecraft:beach": "2025-05-05 16:25:29 -0300",
       "minecraft:river": "2025-04-23 19:52:54 -0300",
       "minecraft:swamp": "2025-05-05 16:20:04 -0300",
       "minecraft:flower_forest": "2025-05-05 16:31:42 -0300",
+      "minecraft:old_growth_birch_forest": "2025-06-24 20:27:11 -0300",
       "minecraft:plains": "2025-05-05 16:25:11 -0300"
     },
     "done": false
@@ -2913,6 +2915,7 @@
       "minecraft:spider": "2025-05-19 16:31:49 -0300",
       "minecraft:creeper": "2025-05-20 18:24:18 -0300",
       "minecraft:wither": "2025-05-20 18:14:23 -0300",
+      "minecraft:enderman": "2025-06-24 15:29:37 -0300",
       "minecraft:zombie": "2025-05-17 01:40:47 -0300",
       "minecraft:zombie_villager": "2025-05-26 12:08:59 -0300"
     },
@@ -3536,15 +3539,21 @@
     },
     "done": true
   },
-  "minecraft:recipes/misc/yellow_dye_from_dandelion": {
-    "criteria": {
-      "has_dandelion": "2025-06-23 12:24:21 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/decorations/black_banner": {
     "criteria": {
       "has_black_wool": "2025-06-23 12:10:51 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/black_bed": {
+    "criteria": {
+      "has_black_wool": "2025-06-23 12:10:51 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/yellow_dye_from_dandelion": {
+    "criteria": {
+      "has_dandelion": "2025-06-23 12:24:21 -0300"
     },
     "done": true
   },
@@ -3560,9 +3569,45 @@
     },
     "done": true
   },
-  "minecraft:recipes/decorations/black_bed": {
+  "enhanced_playthrough:recipes/light_gray_dye_from_mechanical_grinding_azure_bluet": {
     "criteria": {
-      "has_black_wool": "2025-06-23 12:10:51 -0300"
+      "has_azure_bluet": "2025-06-24 16:27:15 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/light_gray_dye_from_primal_grinding_azure_bluet": {
+    "criteria": {
+      "has_azure_bluet": "2025-06-24 16:27:15 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/light_gray_dye_from_azure_bluet": {
+    "criteria": {
+      "has_azure_bluet": "2025-06-24 16:27:15 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/iron_ingot_from_nuggets": {
+    "criteria": {
+      "has_iron_nugget": "2025-06-24 18:41:10 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/bronze_dagger": {
+    "criteria": {
+      "has_bronze_ingot": "2025-06-24 18:41:13 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/flint_and_bronze": {
+    "criteria": {
+      "has_bronze_ingot": "2025-06-24 20:23:20 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/flint_and_cobble": {
+    "criteria": {
+      "has_cobble": "2025-06-24 20:23:20 -0300"
     },
     "done": true
   },

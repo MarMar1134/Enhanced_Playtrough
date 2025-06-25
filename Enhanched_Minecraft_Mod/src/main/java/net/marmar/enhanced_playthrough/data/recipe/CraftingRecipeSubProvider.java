@@ -108,7 +108,6 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .unlockedBy(getHasName(Items.COPPER_INGOT), has(Items.COPPER_INGOT))
                 .save(consumer, recipeName(ModItems.COPPER_NUGGET.get(), "from_ingots"));
 
-
         //Smithing templates
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.BRONZIUM_SMITHING_UPGRADE_TEMPLATE.get(), 2)
                 .pattern("DAD")
@@ -334,6 +333,24 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .save(consumer);
 
         //Equipment recipes
+            //Other tools
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.FLINT_AND_COBBLE.get())
+                    .pattern("C ")
+                    .pattern(" F")
+                    .define('C', ModTags.Items.COBBLE)
+                    .define('F', Items.FLINT)
+                    .unlockedBy("has_cobble", has(ModTags.Items.COBBLE))
+                    .unlockedBy(getHasName(Items.FLINT), has(Items.FLINT))
+                    .save(consumer);
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.FLINT_AND_BRONZE.get())
+                    .pattern("B ")
+                    .pattern(" F")
+                    .define('B', ModItems.BRONZE_INGOT.get())
+                    .define('F', Items.FLINT)
+                    .unlockedBy(getHasName(ModItems.BRONZE_INGOT.get()), has(ModItems.BRONZE_INGOT.get()))
+                    .unlockedBy(getHasName(Items.FLINT), has(Items.FLINT))
+                    .save(consumer);
+
             //Silver
             materialRecipes(ModItems.SILVER_INGOT.get(), ModItems.SILVER_NUGGET.get(), ModBlocks.SILVER_BLOCK.get(), consumer);
 
@@ -490,6 +507,14 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                     .save(consumer);
 
             //Items
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.FLINT_AND_STEEL)
+                    .pattern("S ")
+                    .pattern(" F")
+                    .define('S', ModItems.STEEL_INGOT.get())
+                    .define('F', Items.FLINT)
+                    .unlockedBy(getHasName(ModItems.STEEL_INGOT.get()), has(ModItems.STEEL_INGOT.get()))
+                    .unlockedBy(getHasName(Items.FLINT), has(Items.FLINT))
+                    .save(consumer);
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.SADDLE)
                     .pattern(" C ")
                     .pattern("CIC")

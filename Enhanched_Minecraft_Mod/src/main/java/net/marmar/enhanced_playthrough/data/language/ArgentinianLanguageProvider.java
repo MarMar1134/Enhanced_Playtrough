@@ -432,6 +432,10 @@ public class ArgentinianLanguageProvider extends AbstractModLanguageProvider{
         //Acids and potions
         addAcid("sulfuric_acid", "Ácido sulfurico");
 
+        //Other tools
+        addItem(ModItems.FLINT_AND_COBBLE, "Encendedor de adoquines");
+        addItem(ModItems.FLINT_AND_BRONZE, "Encendedor de bronce");
+
         //Silver equipment
         addItem(ModItems.SILVER_SWORD, "Espada de plata");
         addItem(ModItems.SILVER_DAGGER, "Daga de plata");

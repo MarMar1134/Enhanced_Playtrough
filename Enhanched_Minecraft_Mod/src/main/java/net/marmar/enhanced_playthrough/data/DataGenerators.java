@@ -32,29 +32,34 @@ public class DataGenerators {
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
         CompletableFuture<HolderLookup.Provider> LookupProvider = event.getLookupProvider();
 
+        //Advancements
         GemAdvancementGenerator gem_advancements = new GemAdvancementGenerator();
         SurvivalAdvancementGenerator survival_advancements = new SurvivalAdvancementGenerator();
-
-        generator.addProvider(event.includeServer(), new ModRecipeProvider(packOutput));
-        generator.addProvider(event.includeServer(), ModLootTableProvider.create(packOutput));
-
-        generator.addProvider(event.includeClient(), new ModBlockStateProvider(packOutput, existingFileHelper));
-        generator.addProvider(event.includeClient(), new ModItemModelProvider(packOutput, existingFileHelper));
-
-        generator.addProvider(event.includeServer(), new ModWorldGenProvider(packOutput, LookupProvider));
-
-        generator.addProvider(event.includeServer(), new ModGlobalLootModifiersProvider(packOutput));
-
-        generator.addProvider(event.includeServer(), new ModPoiTypesTagProvider(packOutput, LookupProvider, existingFileHelper));
-
         generator.addProvider(event.includeServer(), new ForgeAdvancementProvider(packOutput, LookupProvider, existingFileHelper,
                 List.of(gem_advancements, survival_advancements)));
 
-        ModBlockTagGenerator blockTagGenerator = generator.addProvider(event.includeServer(), new ModBlockTagGenerator(packOutput, LookupProvider, existingFileHelper));
+        //Recipes
+        generator.addProvider(event.includeServer(), new ModRecipeProvider(packOutput));
 
+        //Loot tables
+        generator.addProvider(event.includeServer(), ModLootTableProvider.create(packOutput));
+        generator.addProvider(event.includeServer(), new ModGlobalLootModifiersProvider(packOutput));
+
+        //Models
+        generator.addProvider(event.includeClient(), new ModBlockStateProvider(packOutput, existingFileHelper));
+        generator.addProvider(event.includeClient(), new ModItemModelProvider(packOutput, existingFileHelper));
+
+        //Worldgen
+        generator.addProvider(event.includeServer(), new ModWorldGenProvider(packOutput, LookupProvider));
+
+        //POI types
+        generator.addProvider(event.includeServer(), new ModPoiTypesTagProvider(packOutput, LookupProvider, existingFileHelper));
+
+        //Tags
+        ModBlockTagGenerator blockTagGenerator = generator.addProvider(event.includeServer(),
+                new ModBlockTagGenerator(packOutput, LookupProvider, existingFileHelper));
         generator.addProvider(event.includeServer(), new ModItemTagGenerator(packOutput, LookupProvider, blockTagGenerator.contentsGetter(),
                 existingFileHelper));
-
         generator.addProvider(event.includeServer(), new ModBiomeTagGenerator(packOutput, LookupProvider, existingFileHelper));
 
         //Languages

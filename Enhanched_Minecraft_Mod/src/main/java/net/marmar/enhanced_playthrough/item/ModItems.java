@@ -222,6 +222,12 @@ public class ModItems {
                 () -> new ModBoatItem(true, ModBoatEntity.Type.LEMON, new Item.Properties()));
 
     //Weapons, tools and armors
+        //Tools
+        public static final RegistryObject<Item> FLINT_AND_COBBLE = ITEMS.register(
+                "flint_and_cobble", ()-> new FlintAndSteelItem(new Item.Properties().defaultDurability(16)));
+        public static final RegistryObject<Item> FLINT_AND_BRONZE = ITEMS.register(
+                "flint_and_bronze", ()-> new FlintAndSteelItem(new Item.Properties().defaultDurability(32)));
+
         //Wood
         public static final RegistryObject<Item> WOODEN_DAGGER = ITEMS.register(
                 "wooden_dagger", () ->  new DaggerItem(Tiers.WOOD, 1, 0.1f, new Item.Properties()));

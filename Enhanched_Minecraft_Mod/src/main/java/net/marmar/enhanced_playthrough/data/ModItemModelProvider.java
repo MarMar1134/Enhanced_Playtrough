@@ -358,6 +358,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         spawnEggItem(ModItems.BANDIT_SPAWN_EGG);
 
         //Armors and tools
+            //Other tools
+            handheldItem(ModItems.FLINT_AND_COBBLE);
+            handheldItem(ModItems.FLINT_AND_BRONZE);
+
             //Wood
             handheldItem(ModItems.WOODEN_DAGGER);
 

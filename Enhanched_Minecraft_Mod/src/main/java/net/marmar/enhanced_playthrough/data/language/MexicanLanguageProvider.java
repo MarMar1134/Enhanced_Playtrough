@@ -433,6 +433,10 @@ public class MexicanLanguageProvider extends AbstractModLanguageProvider{
         //Acids and potions
         addAcid("sulfuric_acid", "Ácido sulfurico");
 
+        //Other tools
+        addItem(ModItems.FLINT_AND_COBBLE, "Pedernal y adoquín");
+        addItem(ModItems.FLINT_AND_BRONZE, "Pedernal y bronce");
+
         //Silver equipment
         addItem(ModItems.SILVER_SWORD, "Espada de plata");
         addItem(ModItems.SILVER_DAGGER, "Daga de plata");

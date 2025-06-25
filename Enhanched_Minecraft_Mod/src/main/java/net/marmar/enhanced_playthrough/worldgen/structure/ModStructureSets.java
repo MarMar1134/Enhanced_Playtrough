@@ -13,7 +13,11 @@ import net.minecraft.world.level.levelgen.structure.placement.RandomSpreadStruct
 import net.minecraft.world.level.levelgen.structure.placement.RandomSpreadType;
 
 public class ModStructureSets {
+    //Jeweler house
     public static final ResourceKey<StructureSet> JEWELER_HOUSE = registryKey("jeweler_house");
+
+    //Bandit camp
+    public static final ResourceKey<StructureSet> BANDIT_CAMP = registryKey("bandit_camp");
 
     public static void bootstrap(BootstapContext<StructureSet> pContext){
         HolderGetter<Structure> structureGetter = pContext.lookup(Registries.STRUCTURE);
@@ -21,6 +25,8 @@ public class ModStructureSets {
 
         pContext.register(JEWELER_HOUSE, new StructureSet(structureGetter.getOrThrow(ModStructures.JEWELER_HOUSE),
                 new RandomSpreadStructurePlacement(40, 10, RandomSpreadType.LINEAR, 16113412)));
+        pContext.register(BANDIT_CAMP, new StructureSet(structureGetter.getOrThrow(ModStructures.BANDIT_CAMP),
+                new RandomSpreadStructurePlacement(25, 20, RandomSpreadType.LINEAR, 33121233)));
     }
 
     private static ResourceKey<StructureSet> registryKey(String name){
