@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "enhanced_playthrough:aluminum_ingot"
+    }
+  },
+  "pattern": [
+    "A",
+    "A"
+  ],
+  "result": {
+    "count": 4,
+    "item": "enhanced_playthrough:aluminum_rod"
+  },
+  "show_notification": true
+}

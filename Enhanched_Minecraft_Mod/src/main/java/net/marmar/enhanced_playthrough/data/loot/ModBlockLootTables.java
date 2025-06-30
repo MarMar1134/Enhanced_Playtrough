@@ -17,63 +17,6 @@ public class ModBlockLootTables extends BlockLootSubProvider implements BlockLoo
 
     @Override
     protected void generate() {
-        //Stone
-        this.dropSelf(ModBlocks.STONE_WALL.get());
-
-        //D, A, G
-        this.dropSelf(ModBlocks.POLISHED_DIORITE_WALL.get());
-        this.dropSelf(ModBlocks.POLISHED_ANDESITE_WALL.get());
-        this.dropSelf(ModBlocks.POLISHED_GRANITE_WALL.get());
-
-        //Dripstone
-        this.add(ModBlocks.DRIPSTONE_SLAB.get(),
-                block -> createSlabItemTable(ModBlocks.DRIPSTONE_SLAB.get()));
-        this.dropSelf(ModBlocks.DRIPSTONE_STAIRS.get());
-        this.dropSelf(ModBlocks.DRIPSTONE_WALL.get());
-
-        //Calcite
-        this.add(ModBlocks.CALCITE_SLAB.get(),
-                block -> createSlabItemTable(ModBlocks.CALCITE_SLAB.get()));
-        this.dropSelf(ModBlocks.CALCITE_STAIRS.get());
-        this.dropSelf(ModBlocks.CALCITE_WALL.get());
-
-        //Concrete
-            //Slabs
-            this.add(ModBlocks.WHITE_CONCRETE_SLAB.get(), this::createSlabItemTable);
-            this.add(ModBlocks.LIGHT_GRAY_CONCRETE_SLAB.get(), this::createSlabItemTable);
-            this.add(ModBlocks.GRAY_CONCRETE_SLAB.get(), this::createSlabItemTable);
-            this.add(ModBlocks.BLACK_CONCRETE_SLAB.get(), this::createSlabItemTable);
-            this.add(ModBlocks.BROWN_CONCRETE_SLAB.get(), this::createSlabItemTable);
-            this.add(ModBlocks.RED_CONCRETE_SLAB.get(), this::createSlabItemTable);
-            this.add(ModBlocks.ORANGE_CONCRETE_SLAB.get(), this::createSlabItemTable);
-            this.add(ModBlocks.YELLOW_CONCRETE_SLAB.get(), this::createSlabItemTable);
-            this.add(ModBlocks.LIME_CONCRETE_SLAB.get(), this::createSlabItemTable);
-            this.add(ModBlocks.GREEN_CONCRETE_SLAB.get(), this::createSlabItemTable);
-            this.add(ModBlocks.CYAN_CONCRETE_SLAB.get(), this::createSlabItemTable);
-            this.add(ModBlocks.LIGHT_BLUE_CONCRETE_SLAB.get(), this::createSlabItemTable);
-            this.add(ModBlocks.BLUE_CONCRETE_SLAB.get(), this::createSlabItemTable);
-            this.add(ModBlocks.PURPLE_CONCRETE_SLAB.get(), this::createSlabItemTable);
-            this.add(ModBlocks.MAGENTA_CONCRETE_SLAB.get(), this::createSlabItemTable);
-            this.add(ModBlocks.PINK_CONCRETE_SLAB.get(), this::createSlabItemTable);
-
-            //Stairs
-            this.dropSelf(ModBlocks.WHITE_CONCRETE_STAIRS.get());
-            this.dropSelf(ModBlocks.LIGHT_GRAY_CONCRETE_STAIRS.get());
-            this.dropSelf(ModBlocks.GRAY_CONCRETE_STAIRS.get());
-            this.dropSelf(ModBlocks.BLACK_CONCRETE_STAIRS.get());
-            this.dropSelf(ModBlocks.BROWN_CONCRETE_STAIRS.get());
-            this.dropSelf(ModBlocks.RED_CONCRETE_STAIRS.get());
-            this.dropSelf(ModBlocks.ORANGE_CONCRETE_STAIRS.get());
-            this.dropSelf(ModBlocks.YELLOW_CONCRETE_STAIRS.get());
-            this.dropSelf(ModBlocks.LIME_CONCRETE_STAIRS.get());
-            this.dropSelf(ModBlocks.GREEN_CONCRETE_STAIRS.get());
-            this.dropSelf(ModBlocks.CYAN_CONCRETE_STAIRS.get());
-            this.dropSelf(ModBlocks.LIGHT_BLUE_CONCRETE_STAIRS.get());
-            this.dropSelf(ModBlocks.BLUE_CONCRETE_STAIRS.get());
-            this.dropSelf(ModBlocks.PURPLE_CONCRETE_STAIRS.get());
-            this.dropSelf(ModBlocks.MAGENTA_CONCRETE_STAIRS.get());
-            this.dropSelf(ModBlocks.PINK_CONCRETE_STAIRS.get());
-
         //Polished stone
         this.dropSelf(ModBlocks.POLISHED_STONE.get());
         this.add(ModBlocks.POLISHED_STONE_SLAB.get(),
@@ -171,6 +114,22 @@ public class ModBlockLootTables extends BlockLootSubProvider implements BlockLoo
                 block -> createOreDrops(ModBlocks.COBALT_ORE.get(), ModItems.COBALT.get()));
         this.add(ModBlocks.DEEPSLATE_COBALT_ORE.get(),
                 block -> createDeepslateOreDrops(ModBlocks.DEEPSLATE_COBALT_ORE.get(), ModItems.COBALT.get()));
+
+            //Bauxite
+            this.add(ModBlocks.BAUXITE.get(),
+                    block -> createBauxiteOreDrops(ModBlocks.BAUXITE.get(), ModItems.TERRACOTTA_SHARD.get()));
+            this.add(ModBlocks.WHITE_BAUXITE.get(),
+                    block -> createBauxiteOreDrops(ModBlocks.WHITE_BAUXITE.get(), ModItems.WHITE_TERRACOTTA_SHARD.get()));
+            this.add(ModBlocks.LIGHT_GRAY_BAUXITE.get(),
+                    block -> createBauxiteOreDrops(ModBlocks.LIGHT_GRAY_BAUXITE.get(), ModItems.LIGHT_GRAY_TERRACOTTA_SHARD.get()));
+            this.add(ModBlocks.BROWN_BAUXITE.get(),
+                    block -> createBauxiteOreDrops(ModBlocks.BROWN_BAUXITE.get(), ModItems.BROWN_TERRACOTTA_SHARD.get()));
+            this.add(ModBlocks.RED_BAUXITE.get(),
+                    block -> createBauxiteOreDrops(ModBlocks.RED_BAUXITE.get(), ModItems.RED_TERRACOTTA_SHARD.get()));
+            this.add(ModBlocks.ORANGE_BAUXITE.get(),
+                    block -> createBauxiteOreDrops(ModBlocks.ORANGE_BAUXITE.get(), ModItems.ORANGE_TERRACOTTA_SHARD.get()));
+            this.add(ModBlocks.YELLOW_BAUXITE.get(),
+                    block -> createBauxiteOreDrops(ModBlocks.YELLOW_BAUXITE.get(), ModItems.YELLOW_TERRACOTTA_SHARD.get()));
 
         //ore blocks
         this.dropSelf(ModBlocks.SILVER_BLOCK.get());

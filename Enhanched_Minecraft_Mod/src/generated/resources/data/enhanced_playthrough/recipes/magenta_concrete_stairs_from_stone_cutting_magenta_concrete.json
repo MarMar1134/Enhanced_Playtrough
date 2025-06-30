@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "minecraft:magenta_concrete"
-  },
-  "result": "enhanced_playthrough:magenta_concrete_stairs"
-}

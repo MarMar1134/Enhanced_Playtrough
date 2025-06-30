@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "tag": "enhanced_playthrough:rods/aluminum"
+    },
+    "I": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "pattern": [
+    "II",
+    " #",
+    " #"
+  ],
+  "result": {
+    "item": "enhanced_playthrough:aluminum_golden_hoe"
+  },
+  "show_notification": true
+}

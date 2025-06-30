@@ -2,6 +2,7 @@ package net.marmar.enhanced_playthrough.item;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.entity.ModEntities;
+import net.marmar.enhanced_playthrough.item.custom.tool.*;
 import net.marmar.enhanced_playthrough.item.custom.weapon.ModTiers;
 import net.marmar.enhanced_playthrough.block.ModBlocks;
 import net.marmar.enhanced_playthrough.entity.boat.ModBoatEntity;
@@ -30,6 +31,8 @@ public class ModItems {
                 "raw_zinc",() -> new Item(new Item.Properties()));
         public static final RegistryObject<Item> RAW_SILVER = ITEMS.register(
                 "raw_silver", () -> new Item(new Item.Properties()));
+        public static final RegistryObject<Item> RAW_ALUMINUM = ITEMS.register(
+                "raw_aluminum",() -> new Item(new Item.Properties()));
         public static final RegistryObject<Item> RAW_RUBY = ITEMS.register(
                 "raw_ruby", () -> new Item(new Item.Properties()));
         public static final RegistryObject<Item> RAW_SAPPHIRE = ITEMS.register(
@@ -80,6 +83,11 @@ public class ModItems {
         public static final RegistryObject<Item> SILVER_NUGGET = ITEMS.register(
                 "silver_nugget", () -> new Item(new Item.Properties()));
 
+        public static final RegistryObject<Item> ALUMINUM_INGOT = ITEMS.register(
+                "aluminum_ingot", () -> new Item(new Item.Properties()));
+        public static final RegistryObject<Item> ALUMINUM_NUGGET = ITEMS.register(
+                "aluminum_nugget", () -> new Item(new Item.Properties()));
+
         public static final RegistryObject<Item> ROSE_GOLD_INGOT = ITEMS.register(
                 "rose_gold_ingot", () -> new Item(new Item.Properties()));
         public static final RegistryObject<Item> ROSE_GOLD_NUGGET = ITEMS.register(
@@ -107,6 +115,8 @@ public class ModItems {
                 "gold_dust", ()-> new Item(new Item.Properties()));
         public static final RegistryObject<Item> SILVER_DUST = ITEMS.register(
                 "silver_dust", ()-> new Item(new Item.Properties()));
+        public static final RegistryObject<Item> ALUMINUM_DUST = ITEMS.register(
+                "aluminum_dust", ()-> new Item(new Item.Properties()));
         public static final RegistryObject<Item> ZINC_DUST = ITEMS.register(
                 "zinc_dust", ()-> new Item(new Item.Properties()));
         public static final RegistryObject<Item> TIN_DUST = ITEMS.register(
@@ -132,25 +142,65 @@ public class ModItems {
 
     //Templates
     public static final RegistryObject<Item> BRONZIUM_SMITHING_UPGRADE_TEMPLATE = ITEMS.register(
-            "bronzium_upgrade_smithing_template", () -> ModSmithingTemplateItem.CreateSmithingUpgradeTemplate("bronzium"));
+            "bronzium_upgrade_smithing_template", ModSmithingTemplateItem::createBronziumSmithingTemplate);
+    public static final RegistryObject<Item> ALUMINUM_SMITHING_UPGRADE_TEMPLATE = ITEMS.register(
+            "aluminum_upgrade_smithing_template", ModSmithingTemplateItem::createAluminumSmithingUpgrade);
 
     //Cobble
     public static final RegistryObject<Item> COBBLE = ITEMS.register(
-            "cobble", () -> new CobbleItem(new Item.Properties()));
+            "cobble", () -> new CobbleItem(new Item.Properties(), 2));
     public static final RegistryObject<Item> LIMESTONE_COBBLE = ITEMS.register(
-            "limestone_cobble", () -> new CobbleItem(new Item.Properties()));
+            "limestone_cobble", () -> new CobbleItem(new Item.Properties(), 2));
     public static final RegistryObject<Item> DEEPSLATE_COBBLE = ITEMS.register(
-            "deepslate_cobble", () -> new CobbleItem(new Item.Properties()));
+            "deepslate_cobble", () -> new CobbleItem(new Item.Properties(), 4));
     public static final RegistryObject<Item> NETHERRACK_RUBBLE = ITEMS.register(
-            "netherrack_rubble", () -> new CobbleItem(new Item.Properties()));
+            "netherrack_rubble", () -> new CobbleItem(new Item.Properties(), 1));
     public static final RegistryObject<Item> BLACKSTONE_COBBLE = ITEMS.register(
-            "black_cobble", () -> new CobbleItem(new Item.Properties()));
+            "black_cobble", () -> new CobbleItem(new Item.Properties(), 2));
+
+    //Terracotta Shards
+    public static final RegistryObject<Item> TERRACOTTA_SHARD = ITEMS.register(
+            "terracotta_shard", () -> new CobbleItem(new Item.Properties(), 3));
+    public static final RegistryObject<Item> WHITE_TERRACOTTA_SHARD = ITEMS.register(
+            "white_terracotta_shard", () -> new CobbleItem(new Item.Properties(), 3));
+    public static final RegistryObject<Item> ORANGE_TERRACOTTA_SHARD = ITEMS.register(
+            "orange_terracotta_shard", () -> new CobbleItem(new Item.Properties(), 3));
+    public static final RegistryObject<Item> MAGENTA_TERRACOTTA_SHARD = ITEMS.register(
+            "magenta_terracotta_shard", () -> new CobbleItem(new Item.Properties(), 3));
+    public static final RegistryObject<Item> LIGHT_BLUE_TERRACOTTA_SHARD = ITEMS.register(
+            "light_blue_terracotta_shard", () -> new CobbleItem(new Item.Properties(), 3));
+    public static final RegistryObject<Item> YELLOW_TERRACOTTA_SHARD = ITEMS.register(
+            "yellow_terracotta_shard", () -> new CobbleItem(new Item.Properties(), 3));
+    public static final RegistryObject<Item> LIME_TERRACOTTA_SHARD = ITEMS.register(
+            "lime_terracotta_shard", () -> new CobbleItem(new Item.Properties(), 3));
+    public static final RegistryObject<Item> PINK_TERRACOTTA_SHARD = ITEMS.register(
+            "pink_terracotta_shard", () -> new CobbleItem(new Item.Properties(), 3));
+    public static final RegistryObject<Item> GRAY_TERRACOTTA_SHARD = ITEMS.register(
+            "gray_terracotta_shard", () -> new CobbleItem(new Item.Properties(), 3));
+    public static final RegistryObject<Item> LIGHT_GRAY_TERRACOTTA_SHARD = ITEMS.register(
+            "light_gray_terracotta_shard", () -> new CobbleItem(new Item.Properties(), 3));
+    public static final RegistryObject<Item> CYAN_TERRACOTTA_SHARD = ITEMS.register(
+            "cyan_terracotta_shard", () -> new CobbleItem(new Item.Properties(), 3));
+    public static final RegistryObject<Item> PURPLE_TERRACOTTA_SHARD = ITEMS.register(
+            "purple_terracotta_shard", () -> new CobbleItem(new Item.Properties(), 3));
+    public static final RegistryObject<Item> BLUE_TERRACOTTA_SHARD = ITEMS.register(
+            "blue_terracotta_shard", () -> new CobbleItem(new Item.Properties(), 3));
+    public static final RegistryObject<Item> BROWN_TERRACOTTA_SHARD = ITEMS.register(
+            "brown_terracotta_shard", () -> new CobbleItem(new Item.Properties(), 3));
+    public static final RegistryObject<Item> GREEN_TERRACOTTA_SHARD = ITEMS.register(
+            "green_terracotta_shard", () -> new CobbleItem(new Item.Properties(), 3));
+    public static final RegistryObject<Item> RED_TERRACOTTA_SHARD = ITEMS.register(
+            "red_terracotta_shard", () -> new CobbleItem(new Item.Properties(), 3));
+    public static final RegistryObject<Item> BLACK_TERRACOTTA_SHARD = ITEMS.register(
+            "black_terracotta_shard", () -> new CobbleItem(new Item.Properties(), 3));
 
     //Other materials
     public static final RegistryObject<Item> MUD_BRICK = ITEMS.register(
             "mud_brick", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> FIREBRICK = ITEMS.register(
             "firebrick", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ALUMINUM_ROD = ITEMS.register(
+            "aluminum_rod", ()-> new Item(new Item.Properties()));
     public static final RegistryObject<Item> VEGETABLE_FIBBER = ITEMS.register(
             "vegetable_fibber", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> REED_HEAD = ITEMS.register(
@@ -231,18 +281,61 @@ public class ModItems {
         //Wood
         public static final RegistryObject<Item> WOODEN_DAGGER = ITEMS.register(
                 "wooden_dagger", () ->  new DaggerItem(Tiers.WOOD, 1, 0.1f, new Item.Properties()));
+            //Aluminum wood
+            public static final RegistryObject<Item> ALUMINUM_WOODEN_SWORD = ITEMS.register(
+                    "aluminum_wooden_sword", () -> new AluminumTools.Sword(Tiers.WOOD, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_WOODEN_DAGGER = ITEMS.register(
+                    "aluminum_wooden_dagger", () -> new AluminumTools.Dagger(Tiers.WOOD, 1, 0.1f, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_WOODEN_PICKAXE = ITEMS.register(
+                    "aluminum_wooden_pickaxe", () -> new AluminumTools.Pickaxe(Tiers.WOOD, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_WOODEN_AXE = ITEMS.register(
+                    "aluminum_wooden_axe", () -> new AluminumTools.Axe(Tiers.WOOD, 6, -3.2f, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_WOODEN_SHOVEL = ITEMS.register(
+                    "aluminum_wooden_shovel", () -> new AluminumTools.Shovel(Tiers.WOOD, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_WOODEN_HOE = ITEMS.register(
+                    "aluminum_wooden_hoe", () -> new AluminumTools.Hoe(Tiers.WOOD, 0, -3.0f, new Item.Properties()));
 
         //Stone
         public static final RegistryObject<Item> STONE_POLISHER = ITEMS.register(
                 "stone_polisher",() -> new PolisherItem(Tiers.STONE, new Item.Properties()));
         public static final RegistryObject<Item> STONE_DAGGER = ITEMS.register(
                 "stone_dagger", () ->  new DaggerItem(Tiers.STONE, 1, 0.1f, new Item.Properties()));
+            // Aluminum stone
+            public static final RegistryObject<Item> ALUMINUM_STONE_SWORD = ITEMS.register(
+                    "aluminum_stone_sword", () -> new AluminumTools.Sword(Tiers.STONE, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_STONE_DAGGER = ITEMS.register(
+                    "aluminum_stone_dagger", () -> new AluminumTools.Dagger(Tiers.STONE, 1, 0.1f, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_STONE_PICKAXE = ITEMS.register(
+                    "aluminum_stone_pickaxe", () -> new AluminumTools.Pickaxe(Tiers.STONE, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_STONE_AXE = ITEMS.register(
+                    "aluminum_stone_axe", () -> new AluminumTools.Axe(Tiers.STONE, 7, -3.2f, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_STONE_SHOVEL = ITEMS.register(
+                    "aluminum_stone_shovel", () -> new AluminumTools.Shovel(Tiers.STONE, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_STONE_HOE = ITEMS.register(
+                    "aluminum_stone_hoe", () -> new AluminumTools.Hoe(Tiers.STONE, 0, -3.0f, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_STONE_POLISHER = ITEMS.register(
+                    "aluminum_stone_polisher", () -> new AluminumTools.Polisher(Tiers.STONE, new Item.Properties()));
 
         //Gold
         public static final RegistryObject<Item> GOLDEN_POLISHER = ITEMS.register(
                 "gold_polisher",() -> new PolisherItem(Tiers.GOLD, new Item.Properties()));
         public static final RegistryObject<Item> GOLDEN_DAGGER = ITEMS.register(
                 "golden_dagger", () ->  new DaggerItem(Tiers.GOLD, 1, 0.25f, new Item.Properties()));
+            // Aluminum gold
+            public static final RegistryObject<Item> ALUMINUM_GOLDEN_SWORD = ITEMS.register(
+                    "aluminum_golden_sword", () -> new AluminumTools.Sword(Tiers.GOLD, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_GOLDEN_DAGGER = ITEMS.register(
+                    "aluminum_golden_dagger", () -> new AluminumTools.Dagger(Tiers.GOLD, 1, 0.25f, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_GOLDEN_PICKAXE = ITEMS.register(
+                    "aluminum_golden_pickaxe", () -> new AluminumTools.Pickaxe(Tiers.GOLD, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_GOLDEN_AXE = ITEMS.register(
+                    "aluminum_golden_axe", () -> new AluminumTools.Axe(Tiers.GOLD, 6, -2.4f, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_GOLDEN_SHOVEL = ITEMS.register(
+                    "aluminum_golden_shovel", () -> new AluminumTools.Shovel(Tiers.GOLD, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_GOLDEN_HOE = ITEMS.register(
+                    "aluminum_golden_hoe", () -> new AluminumTools.Hoe(Tiers.GOLD, 2, -2.4f, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_GOLDEN_POLISHER = ITEMS.register(
+                    "aluminum_golden_polisher", () -> new AluminumTools.Polisher(Tiers.GOLD, new Item.Properties()));
 
         //Silver
         public static final RegistryObject<Item> SILVER_SWORD = ITEMS.register(
@@ -252,13 +345,28 @@ public class ModItems {
         public static final RegistryObject<Item> SILVER_PICKAXE = ITEMS.register(
                 "silver_pickaxe",() -> new PickaxeItem(ModTiers.SILVER, -2, -2.8f, new Item.Properties()));
         public static final RegistryObject<Item> SILVER_AXE = ITEMS.register(
-                "silver_axe",() -> new SwordItem(ModTiers.SILVER, 6, -2.4f, new Item.Properties()));
+                "silver_axe",() -> new AxeItem(ModTiers.SILVER, 6, -2.4f, new Item.Properties()));
         public static final RegistryObject<Item> SILVER_SHOVEL = ITEMS.register(
                 "silver_shovel",() -> new ShovelItem(ModTiers.SILVER, 2, -2.4f, new Item.Properties()));
         public static final RegistryObject<Item> SILVER_HOE = ITEMS.register(
                 "silver_hoe",() -> new HoeItem(ModTiers.SILVER, 2, -2.4f, new Item.Properties()));
         public static final RegistryObject<Item> SILVER_POLISHER = ITEMS.register(
                 "silver_polisher",() -> new PolisherItem(ModTiers.SILVER, new Item.Properties()));
+            //Aluminum silver
+            public static final RegistryObject<Item> ALUMINUM_SILVER_SWORD = ITEMS.register(
+                    "aluminum_silver_sword",() -> new AluminumTools.Sword(ModTiers.SILVER, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_SILVER_DAGGER = ITEMS.register(
+                    "aluminum_silver_dagger", () -> new AluminumTools.Dagger(ModTiers.SILVER, 1, 0.25f, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_SILVER_PICKAXE = ITEMS.register(
+                    "aluminum_silver_pickaxe",() -> new AluminumTools.Pickaxe(ModTiers.SILVER, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_SILVER_AXE = ITEMS.register(
+                    "aluminum_silver_axe",() -> new AluminumTools.Axe(ModTiers.SILVER, 6, -2.4f, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_SILVER_SHOVEL = ITEMS.register(
+                    "aluminum_silver_shovel",() -> new AluminumTools.Shovel(ModTiers.SILVER, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_SILVER_HOE = ITEMS.register(
+                    "aluminum_silver_hoe",() -> new AluminumTools.Hoe(ModTiers.SILVER, 2, -2.4f, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_SILVER_POLISHER = ITEMS.register(
+                    "aluminum_silver_polisher",() -> new AluminumTools.Polisher(ModTiers.SILVER, new Item.Properties()));
 
         public static final RegistryObject<Item> SILVER_HELMET = ITEMS.register(
                 "silver_helmet", () -> new ModArmorItem(ModArmorMaterial.SILVER, ArmorItem.Type.HELMET, false, new Item.Properties()));
@@ -284,6 +392,21 @@ public class ModItems {
                 "bronze_hoe",() -> new HoeItem(ModTiers.BRONZE, 1, -2F,  new Item.Properties()));
         public static final RegistryObject<Item> BRONZE_POLISHER = ITEMS.register(
                 "bronze_polisher",() -> new PolisherItem(ModTiers.BRONZE, new Item.Properties()));
+            // Aluminum bronze
+            public static final RegistryObject<Item> ALUMINUM_BRONZE_SWORD = ITEMS.register(
+                    "aluminum_bronze_sword", () -> new AluminumTools.Sword(ModTiers.BRONZE, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_BRONZE_DAGGER = ITEMS.register(
+                    "aluminum_bronze_dagger", () -> new AluminumTools.Dagger(ModTiers.BRONZE, 1, 0.25f, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_BRONZE_PICKAXE = ITEMS.register(
+                    "aluminum_bronze_pickaxe", () -> new AluminumTools.Pickaxe(ModTiers.BRONZE, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_BRONZE_AXE = ITEMS.register(
+                    "aluminum_bronze_axe", () -> new AluminumTools.Axe(ModTiers.BRONZE, 6, -2.0f, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_BRONZE_SHOVEL = ITEMS.register(
+                    "aluminum_bronze_shovel", () -> new AluminumTools.Shovel(ModTiers.BRONZE, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_BRONZE_HOE = ITEMS.register(
+                    "aluminum_bronze_hoe", () -> new AluminumTools.Hoe(ModTiers.BRONZE, 1, -2.0f, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_BRONZE_POLISHER = ITEMS.register(
+                    "aluminum_bronze_polisher", () -> new AluminumTools.Polisher(ModTiers.BRONZE, new Item.Properties()));
 
          public static final RegistryObject<Item> BRONZE_HELMET = ITEMS.register(
                 "bronze_helmet", () -> new ArmorItem(ModArmorMaterial.BRONZE, ArmorItem.Type.HELMET, new Item.Properties()));
@@ -309,6 +432,21 @@ public class ModItems {
                 "brass_hoe",() -> new HoeItem(ModTiers.BRASS, 1, -2F,  new Item.Properties()));
         public static final RegistryObject<Item> BRASS_POLISHER = ITEMS.register(
                 "brass_polisher",() -> new PolisherItem(ModTiers.BRASS, new Item.Properties()));
+            // Aluminum brass
+            public static final RegistryObject<Item> ALUMINUM_BRASS_SWORD = ITEMS.register(
+                    "aluminum_brass_sword", () -> new AluminumTools.Sword(ModTiers.BRASS, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_BRASS_DAGGER = ITEMS.register(
+                    "aluminum_brass_dagger", () -> new AluminumTools.Dagger(ModTiers.BRASS, 2, 0.25f, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_BRASS_PICKAXE = ITEMS.register(
+                    "aluminum_brass_pickaxe", () -> new AluminumTools.Pickaxe(ModTiers.BRASS, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_BRASS_AXE = ITEMS.register(
+                    "aluminum_brass_axe", () -> new AluminumTools.Axe(ModTiers.BRASS, 6, -2.0f, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_BRASS_SHOVEL = ITEMS.register(
+                    "aluminum_brass_shovel", () -> new AluminumTools.Shovel(ModTiers.BRASS, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_BRASS_HOE = ITEMS.register(
+                    "aluminum_brass_hoe", () -> new AluminumTools.Hoe(ModTiers.BRASS, 1, -2.0f, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_BRASS_POLISHER = ITEMS.register(
+                    "aluminum_brass_polisher", () -> new AluminumTools.Polisher(ModTiers.BRASS, new Item.Properties()));
 
         public static final RegistryObject<Item> BRASS_HELMET = ITEMS.register(
                 "brass_helmet", () -> new ArmorItem(ModArmorMaterial.BRASS, ArmorItem.Type.HELMET, new Item.Properties()));
@@ -334,6 +472,21 @@ public class ModItems {
                 "rose_golden_hoe",() -> new HoeItem(ModTiers.ROSE_GOLD, 2, -2.4F, new Item.Properties()));
         public static final RegistryObject<Item> ROSE_GOLDEN_POLISHER = ITEMS.register(
                 "rose_golden_polisher", () -> new PolisherItem(ModTiers.ROSE_GOLD, new Item.Properties()));
+            // Aluminum rose gold
+            public static final RegistryObject<Item> ALUMINUM_ROSE_GOLDEN_SWORD = ITEMS.register(
+                    "aluminum_rose_golden_sword", () -> new AluminumTools.Sword(ModTiers.ROSE_GOLD, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_ROSE_GOLDEN_DAGGER = ITEMS.register(
+                    "aluminum_rose_golden_dagger", () -> new AluminumTools.Dagger(ModTiers.ROSE_GOLD, 1, 0.25f, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_ROSE_GOLDEN_PICKAXE = ITEMS.register(
+                    "aluminum_rose_golden_pickaxe", () -> new AluminumTools.Pickaxe(ModTiers.ROSE_GOLD, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_ROSE_GOLDEN_AXE = ITEMS.register(
+                    "aluminum_rose_golden_axe", () -> new AluminumTools.Axe(ModTiers.ROSE_GOLD, 6, -2.4f, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_ROSE_GOLDEN_SHOVEL = ITEMS.register(
+                    "aluminum_rose_golden_shovel", () -> new AluminumTools.Shovel(ModTiers.ROSE_GOLD, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_ROSE_GOLDEN_HOE = ITEMS.register(
+                    "aluminum_rose_golden_hoe", () -> new AluminumTools.Hoe(ModTiers.ROSE_GOLD, 2, -2.4f, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_ROSE_GOLDEN_POLISHER = ITEMS.register(
+                    "aluminum_rose_golden_polisher", () -> new AluminumTools.Polisher(ModTiers.ROSE_GOLD, new Item.Properties()));
 
         public static final RegistryObject<Item> ROSE_GOLDEN_HELMET = ITEMS.register(
                 "rose_golden_helmet", () -> new ModArmorItem(ModArmorMaterial.ROSE_GOLD, ArmorItem.Type.HELMET, true, new Item.Properties()));
@@ -359,6 +512,21 @@ public class ModItems {
                 "bronzium_hoe",() -> new HoeItem(ModTiers.BRONZIUM, 1, -2F,  new Item.Properties()));
         public static final RegistryObject<Item> BRONZIUM_POLISHER = ITEMS.register(
                 "bronzium_polisher",() -> new PolisherItem(ModTiers.BRONZIUM, new Item.Properties()));
+            // Aluminum bronzium
+            public static final RegistryObject<Item> ALUMINUM_BRONZIUM_SWORD = ITEMS.register(
+                    "aluminum_bronzium_sword", () -> new AluminumTools.Sword(ModTiers.BRONZIUM, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_BRONZIUM_DAGGER = ITEMS.register(
+                    "aluminum_bronzium_dagger", () -> new AluminumTools.Dagger(ModTiers.BRONZIUM, 1, 0.25f, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_BRONZIUM_PICKAXE = ITEMS.register(
+                    "aluminum_bronzium_pickaxe", () -> new AluminumTools.Pickaxe(ModTiers.BRONZIUM, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_BRONZIUM_AXE = ITEMS.register(
+                    "aluminum_bronzium_axe", () -> new AluminumTools.Axe(ModTiers.BRONZIUM, 7, -2.0f, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_BRONZIUM_SHOVEL = ITEMS.register(
+                    "aluminum_bronzium_shovel", () -> new AluminumTools.Shovel(ModTiers.BRONZIUM, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_BRONZIUM_HOE = ITEMS.register(
+                    "aluminum_bronzium_hoe", () -> new AluminumTools.Hoe(ModTiers.BRONZIUM, 1, -2.0f, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_BRONZIUM_POLISHER = ITEMS.register(
+                    "aluminum_bronzium_polisher", () -> new AluminumTools.Polisher(ModTiers.BRONZIUM, new Item.Properties()));
 
         public static final RegistryObject<Item> BRONZIUM_HELMET = ITEMS.register(
                 "bronzium_helmet", () -> new ModArmorItem(ModArmorMaterial.BRONZIUM, ArmorItem.Type.HELMET, false, new Item.Properties()));
@@ -374,6 +542,21 @@ public class ModItems {
                 "iron_polisher",() -> new PolisherItem(Tiers.IRON, new Item.Properties()));
         public static final RegistryObject<Item> IRON_DAGGER = ITEMS.register(
                 "iron_dagger", () ->  new DaggerItem(Tiers.IRON, 2, 0.25f, new Item.Properties()));
+            // Aluminum iron
+            public static final RegistryObject<Item> ALUMINUM_IRON_SWORD = ITEMS.register(
+                    "aluminum_iron_sword", () -> new AluminumTools.Sword(Tiers.IRON, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_IRON_DAGGER = ITEMS.register(
+                    "aluminum_iron_dagger", () -> new AluminumTools.Dagger(Tiers.IRON, 1, 0.2f, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_IRON_PICKAXE = ITEMS.register(
+                    "aluminum_iron_pickaxe", () -> new AluminumTools.Pickaxe(Tiers.IRON, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_IRON_AXE = ITEMS.register(
+                    "aluminum_iron_axe", () -> new AluminumTools.Axe(Tiers.IRON, 6, -2.6f, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_IRON_SHOVEL = ITEMS.register(
+                    "aluminum_iron_shovel", () -> new AluminumTools.Shovel(Tiers.IRON, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_IRON_HOE = ITEMS.register(
+                    "aluminum_iron_hoe", () -> new AluminumTools.Hoe(Tiers.IRON, 0, -3.0f, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_IRON_POLISHER = ITEMS.register(
+                    "aluminum_iron_polisher", () -> new AluminumTools.Polisher(Tiers.IRON, new Item.Properties()));
 
         //Steel
         public static final RegistryObject<Item> STEEL_SWORD = ITEMS.register(
@@ -390,6 +573,21 @@ public class ModItems {
                 "steel_hoe",() -> new HoeItem(ModTiers.STEEL, 1, -2F,  new Item.Properties()));
         public static final RegistryObject<Item> STEEL_POLISHER = ITEMS.register(
             "steel_polisher",() -> new PolisherItem(ModTiers.STEEL, new Item.Properties()));
+            // Aluminum steel
+            public static final RegistryObject<Item> ALUMINUM_STEEL_SWORD = ITEMS.register(
+                    "aluminum_steel_sword", () -> new AluminumTools.Sword(ModTiers.STEEL, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_STEEL_DAGGER = ITEMS.register(
+                    "aluminum_steel_dagger", () -> new AluminumTools.Dagger(ModTiers.STEEL, 2, 0.3f, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_STEEL_PICKAXE = ITEMS.register(
+                    "aluminum_steel_pickaxe", () -> new AluminumTools.Pickaxe(ModTiers.STEEL, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_STEEL_AXE = ITEMS.register(
+                    "aluminum_steel_axe", () -> new AluminumTools.Axe(ModTiers.STEEL, 7, -2.0f, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_STEEL_SHOVEL = ITEMS.register(
+                    "aluminum_steel_shovel", () -> new AluminumTools.Shovel(ModTiers.STEEL, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_STEEL_HOE = ITEMS.register(
+                    "aluminum_steel_hoe", () -> new AluminumTools.Hoe(ModTiers.STEEL, 1, -2.0f, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_STEEL_POLISHER = ITEMS.register(
+                    "aluminum_steel_polisher", () -> new AluminumTools.Polisher(ModTiers.STEEL, new Item.Properties()));
 
         public static final RegistryObject<Item> STEEL_HELMET = ITEMS.register(
             "steel_helmet", () -> new ArmorItem(ModArmorMaterial.STEEL, ArmorItem.Type.HELMET, new Item.Properties()));
@@ -415,6 +613,21 @@ public class ModItems {
                 "green_golden_hoe",() -> new HoeItem(ModTiers.GREEN_GOLD, 2, -2.4F, new Item.Properties()));
         public static final RegistryObject<Item> GREEN_GOLDEN_POLISHER = ITEMS.register(
                 "green_golden_polisher", () -> new PolisherItem(ModTiers.GREEN_GOLD, new Item.Properties()));
+            // Aluminum green gold
+            public static final RegistryObject<Item> ALUMINUM_GREEN_GOLDEN_SWORD = ITEMS.register(
+                    "aluminum_green_golden_sword", () -> new AluminumTools.Sword(ModTiers.GREEN_GOLD, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_GREEN_GOLDEN_DAGGER = ITEMS.register(
+                    "aluminum_green_golden_dagger", () -> new AluminumTools.Dagger(ModTiers.GREEN_GOLD, 1, 0.25f, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_GREEN_GOLDEN_PICKAXE = ITEMS.register(
+                    "aluminum_green_golden_pickaxe", () -> new AluminumTools.Pickaxe(ModTiers.GREEN_GOLD, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_GREEN_GOLDEN_AXE = ITEMS.register(
+                    "aluminum_green_golden_axe", () -> new AluminumTools.Axe(ModTiers.GREEN_GOLD, 6, -2.4f, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_GREEN_GOLDEN_SHOVEL = ITEMS.register(
+                    "aluminum_green_golden_shovel", () -> new AluminumTools.Shovel(ModTiers.GREEN_GOLD, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_GREEN_GOLDEN_HOE = ITEMS.register(
+                    "aluminum_green_golden_hoe", () -> new AluminumTools.Hoe(ModTiers.GREEN_GOLD, 2, -2.4f, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_GREEN_GOLDEN_POLISHER = ITEMS.register(
+                    "aluminum_green_golden_polisher", () -> new AluminumTools.Polisher(ModTiers.GREEN_GOLD, new Item.Properties()));
 
         public static final RegistryObject<Item> GREEN_GOLDEN_HELMET = ITEMS.register(
                 "green_golden_helmet", () -> new ModArmorItem(ModArmorMaterial.GREEN_GOLD, ArmorItem.Type.HELMET, true, new Item.Properties()));
@@ -440,6 +653,21 @@ public class ModItems {
                 "blue_golden_hoe",() -> new HoeItem(ModTiers.BLUE_GOLD, -2, -2.4F, new Item.Properties()));
         public static final RegistryObject<Item> BLUE_GOLDEN_POLISHER = ITEMS.register(
                 "blue_golden_polisher", () -> new PolisherItem(ModTiers.BLUE_GOLD, new Item.Properties()));
+            // Aluminum blue gold
+            public static final RegistryObject<Item> ALUMINUM_BLUE_GOLDEN_SWORD = ITEMS.register(
+                    "aluminum_blue_golden_sword", () -> new AluminumTools.Sword(ModTiers.BLUE_GOLD, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_BLUE_GOLDEN_DAGGER = ITEMS.register(
+                    "aluminum_blue_golden_dagger", () -> new AluminumTools.Dagger(ModTiers.BLUE_GOLD, 1, 0.25f, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_BLUE_GOLDEN_PICKAXE = ITEMS.register(
+                    "aluminum_blue_golden_pickaxe", () -> new AluminumTools.Pickaxe(ModTiers.BLUE_GOLD, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_BLUE_GOLDEN_AXE = ITEMS.register(
+                    "aluminum_blue_golden_axe", () -> new AluminumTools.Axe(ModTiers.BLUE_GOLD, 6, -2.4f, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_BLUE_GOLDEN_SHOVEL = ITEMS.register(
+                    "aluminum_blue_golden_shovel", () -> new AluminumTools.Shovel(ModTiers.BLUE_GOLD, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_BLUE_GOLDEN_HOE = ITEMS.register(
+                    "aluminum_blue_golden_hoe", () -> new AluminumTools.Hoe(ModTiers.BLUE_GOLD, 2, -2.4f, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_BLUE_GOLDEN_POLISHER = ITEMS.register(
+                    "aluminum_blue_golden_polisher", () -> new AluminumTools.Polisher(ModTiers.BLUE_GOLD, new Item.Properties()));
 
         public static final RegistryObject<Item> BLUE_GOLDEN_HELMET = ITEMS.register(
                 "blue_golden_helmet", () -> new ModArmorItem(ModArmorMaterial.BLUE_GOLD, ArmorItem.Type.HELMET, true, new Item.Properties()));
@@ -455,6 +683,21 @@ public class ModItems {
                 "diamond_polisher",() -> new PolisherItem(Tiers.DIAMOND, new Item.Properties()));
         public static final RegistryObject<Item> DIAMOND_DAGGER = ITEMS.register(
                 "diamond_dagger", () ->  new DaggerItem(Tiers.DIAMOND, 2, 0.3f, new Item.Properties()));
+            // Aluminum diamond
+            public static final RegistryObject<Item> ALUMINUM_DIAMOND_SWORD = ITEMS.register(
+                    "aluminum_diamond_sword", () -> new AluminumTools.Sword(Tiers.DIAMOND, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_DIAMOND_DAGGER = ITEMS.register(
+                    "aluminum_diamond_dagger", () -> new AluminumTools.Dagger(Tiers.DIAMOND, 2, 0.3f, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_DIAMOND_PICKAXE = ITEMS.register(
+                    "aluminum_diamond_pickaxe", () -> new AluminumTools.Pickaxe(Tiers.DIAMOND, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_DIAMOND_AXE = ITEMS.register(
+                    "aluminum_diamond_axe", () -> new AluminumTools.Axe(Tiers.DIAMOND, 5, -2.8f, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_DIAMOND_SHOVEL = ITEMS.register(
+                    "aluminum_diamond_shovel", () -> new AluminumTools.Shovel(Tiers.DIAMOND, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_DIAMOND_HOE = ITEMS.register(
+                    "aluminum_diamond_hoe", () -> new AluminumTools.Hoe(Tiers.DIAMOND, 0, -3.0f, new Item.Properties()));
+            public static final RegistryObject<Item> ALUMINUM_DIAMOND_POLISHER = ITEMS.register(
+                    "aluminum_diamond_polisher", () -> new AluminumTools.Polisher(Tiers.DIAMOND, new Item.Properties()));
 
         //Netherite
         public static final RegistryObject<Item> NETHERITE_POLISHER = ITEMS.register(

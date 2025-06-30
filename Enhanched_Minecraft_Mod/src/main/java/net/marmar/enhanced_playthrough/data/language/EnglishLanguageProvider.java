@@ -16,6 +16,7 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
         //Creative tabs
         addCreativeTab("weapons", "Combat");
         addCreativeTab("tools", "Tools");
+        addCreativeTab("aluminum_tools", "Aluminum tools");
         addCreativeTab("minerals", "Ores and minerals");
         addCreativeTab("jewelery", "Jewelery");
         addCreativeTab("utility", "Utility");
@@ -51,6 +52,7 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
         addGuiElements("gem_polisher_screen", "Uses");
 
         //Descriptions
+        addDescription("aluminum_tool", "Aluminum handle: 20% more durability");
         addDescription("polisher_item","Used on the Gem polisher as fuel");
         addDescription("silver_armor", "When full equipped: gives Haste to the player");
         addDescription("rose_gold_armor", "When full equipped: gives Haste to the player");
@@ -223,61 +225,6 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
                 addBlock(ModBlocks.LIME_SAPLING, "Lime sapling");
                 addBlock(ModBlocks.LIME_LEAVES, "Lime leaves");
 
-            //Stone
-            addBlock(ModBlocks.STONE_WALL, "Stone wall");
-
-            //D,A,G
-            addBlock(ModBlocks.POLISHED_DIORITE_WALL, "Polished diorite wall");
-            addBlock(ModBlocks.POLISHED_ANDESITE_WALL, "Polished andesite wall");
-            addBlock(ModBlocks.POLISHED_GRANITE_WALL, "Polished granite wall");
-
-            //Dripstone
-            addBlock(ModBlocks.DRIPSTONE_SLAB, "Dripstone slab");
-            addBlock(ModBlocks.DRIPSTONE_STAIRS, "Dripstone stairs");
-            addBlock(ModBlocks.DRIPSTONE_WALL, "Dripstone wall");
-
-        //Calcite
-        addBlock(ModBlocks.CALCITE_SLAB, "Calcite slab");
-        addBlock(ModBlocks.CALCITE_STAIRS, "Calcite stairs");
-        addBlock(ModBlocks.CALCITE_WALL, "Calcite wall");
-
-        //Concrete
-            //Slabs
-            addBlock(ModBlocks.WHITE_CONCRETE_SLAB, "White concrete slab");
-            addBlock(ModBlocks.BLACK_CONCRETE_SLAB, "Black concrete slab");
-            addBlock(ModBlocks.BROWN_CONCRETE_SLAB, "Brown concrete slab");
-            addBlock(ModBlocks.LIGHT_GRAY_CONCRETE_SLAB, "Light gray concrete slab");
-            addBlock(ModBlocks.GRAY_CONCRETE_SLAB, "Gray concrete slab");
-            addBlock(ModBlocks.RED_CONCRETE_SLAB, "Red concrete slab");
-            addBlock(ModBlocks.ORANGE_CONCRETE_SLAB, "Orange concrete slab");
-            addBlock(ModBlocks.YELLOW_CONCRETE_SLAB, "Yellow concrete slab");
-            addBlock(ModBlocks.LIME_CONCRETE_SLAB, "Lime concrete slab");
-            addBlock(ModBlocks.GREEN_CONCRETE_SLAB, "Green concrete slab");
-            addBlock(ModBlocks.CYAN_CONCRETE_SLAB, "Cyan concrete slab");
-            addBlock(ModBlocks.LIGHT_BLUE_CONCRETE_SLAB, "Light blue concrete slab");
-            addBlock(ModBlocks.BLUE_CONCRETE_SLAB, "Blue concrete slab");
-            addBlock(ModBlocks.PURPLE_CONCRETE_SLAB, "Purple concrete slab");
-            addBlock(ModBlocks.MAGENTA_CONCRETE_SLAB, "Magenta concrete slab");
-            addBlock(ModBlocks.PINK_CONCRETE_SLAB, "Pink concrete slab");
-
-            //Stairs
-            addBlock(ModBlocks.WHITE_CONCRETE_STAIRS, "White concrete stairs");
-            addBlock(ModBlocks.BLACK_CONCRETE_STAIRS, "Black concrete stairs");
-            addBlock(ModBlocks.BROWN_CONCRETE_STAIRS, "Brown concrete stairs");
-            addBlock(ModBlocks.LIGHT_GRAY_CONCRETE_STAIRS, "Light gray concrete stairs");
-            addBlock(ModBlocks.GRAY_CONCRETE_STAIRS, "Gray concrete stairs");
-            addBlock(ModBlocks.RED_CONCRETE_STAIRS, "Red concrete stairs");
-            addBlock(ModBlocks.ORANGE_CONCRETE_STAIRS, "Orange concrete stairs");
-            addBlock(ModBlocks.YELLOW_CONCRETE_STAIRS, "Yellow concrete stairs");
-            addBlock(ModBlocks.LIME_CONCRETE_STAIRS, "Lime concrete stairs");
-            addBlock(ModBlocks.GREEN_CONCRETE_STAIRS, "Green concrete stairs");
-            addBlock(ModBlocks.CYAN_CONCRETE_STAIRS, "Cyan concrete stairs");
-            addBlock(ModBlocks.LIGHT_BLUE_CONCRETE_STAIRS, "Light blue concrete stairs");
-            addBlock(ModBlocks.BLUE_CONCRETE_STAIRS, "Blue concrete stairs");
-            addBlock(ModBlocks.PURPLE_CONCRETE_STAIRS, "Purple concrete stairs");
-            addBlock(ModBlocks.MAGENTA_CONCRETE_STAIRS, "Magenta concrete stairs");
-            addBlock(ModBlocks.PINK_CONCRETE_STAIRS, "Pink concrete stairs");
-
             //Polished stone
             addBlock(ModBlocks.POLISHED_STONE, "Polished stone");
             addBlock(ModBlocks.POLISHED_STONE_SLAB, "Polished stone slab");
@@ -340,6 +287,13 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
             addBlock(ModBlocks.NETHER_GARNET_ORE, "Nether garnet ore");
             addBlock(ModBlocks.COBALT_ORE, "Cobalt ore");
             addBlock(ModBlocks.DEEPSLATE_COBALT_ORE, "Deepslate cobalt ore");
+            addBlock(ModBlocks.BAUXITE, "Bauxite");
+            addBlock(ModBlocks.WHITE_BAUXITE, "White bauxite");
+            addBlock(ModBlocks.LIGHT_GRAY_BAUXITE, "Light gray bauxite");
+            addBlock(ModBlocks.BROWN_BAUXITE, "Brown bauxite");
+            addBlock(ModBlocks.RED_BAUXITE, "Red bauxite");
+            addBlock(ModBlocks.ORANGE_BAUXITE, "Orange bauxite");
+            addBlock(ModBlocks.YELLOW_BAUXITE, "Yellow bauxite");
 
             //Ore blocks
             addBlock(ModBlocks.TIN_BLOCK, "Block of tin");
@@ -369,6 +323,7 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
             addItem(ModItems.RAW_TIN, "Raw tin");
             addItem(ModItems.RAW_ZINC, "Raw zinc");
             addItem(ModItems.RAW_SILVER, "Raw silver");
+        addItem(ModItems.RAW_ALUMINUM, "Raw aluminum");
             addItem(ModItems.RAW_EMERALD, "Unpolished emerald");
             addItem(ModItems.RAW_SAPPHIRE, "Unpolished sapphire");
             addItem(ModItems.RAW_RUBY, "Unpolished ruby");
@@ -383,6 +338,8 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
             addItem(ModItems.SULFUR, "Sulfur");
             addItem(ModItems.SILVER_INGOT, "Silver ingot");
             addItem(ModItems.SILVER_NUGGET, "Silver nugget");
+            addItem(ModItems.ALUMINUM_INGOT, "Aluminum ingot");
+            addItem(ModItems.ALUMINUM_NUGGET, "Aluminum nugget");
             addItem(ModItems.BRASS_INGOT, "Brass ingot");
             addItem(ModItems.BRASS_NUGGET, "Brass nugget");
             addItem(ModItems.BRONZE_INGOT, "Bronze ingot");
@@ -403,6 +360,7 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
             //Others
             addItem(ModItems.MUD_BRICK, "Mud brick");
             addItem(ModItems.FIREBRICK, "Firebrick");
+            addItem(ModItems.ALUMINUM_ROD, "Aluminum rod");
             addItem(ModItems.COBALT, "Cobalt");
             addItem(ModItems.REED_HEAD, "Pampas grass head");
             addItem(ModItems.WATER_REED_HEAD, "Reed head");
@@ -415,9 +373,29 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
             addItem(ModItems.NETHERRACK_RUBBLE, "Netherrack rubble");
             addItem(ModItems.BLACKSTONE_COBBLE, "Blackstone cobble");
 
+            //Terracotta shards
+            addItem(ModItems.TERRACOTTA_SHARD, "Terracotta shard");
+            addItem(ModItems.WHITE_TERRACOTTA_SHARD, "White terracotta shard");
+            addItem(ModItems.ORANGE_TERRACOTTA_SHARD, "Orange terracotta shard");
+            addItem(ModItems.MAGENTA_TERRACOTTA_SHARD, "Magenta terracotta shard");
+            addItem(ModItems.LIGHT_BLUE_TERRACOTTA_SHARD, "Light blue terracotta shard");
+            addItem(ModItems.YELLOW_TERRACOTTA_SHARD, "Yellow terracotta shard");
+            addItem(ModItems.LIME_TERRACOTTA_SHARD, "Lime terracotta shard");
+            addItem(ModItems.PINK_TERRACOTTA_SHARD, "Pink terracotta shard");
+            addItem(ModItems.GRAY_TERRACOTTA_SHARD, "Gray terracotta shard");
+            addItem(ModItems.LIGHT_GRAY_TERRACOTTA_SHARD, "Light gray terracotta shard");
+            addItem(ModItems.CYAN_TERRACOTTA_SHARD, "Cyan terracotta shard");
+            addItem(ModItems.PURPLE_TERRACOTTA_SHARD, "Purple terracotta shard");
+            addItem(ModItems.BLUE_TERRACOTTA_SHARD, "Blue terracotta shard");
+            addItem(ModItems.BROWN_TERRACOTTA_SHARD, "Brown terracotta shard");
+            addItem(ModItems.GREEN_TERRACOTTA_SHARD, "Green terracotta shard");
+            addItem(ModItems.RED_TERRACOTTA_SHARD, "Red terracotta shard");
+            addItem(ModItems.BLACK_TERRACOTTA_SHARD, "Black terracotta shard");
+
             //Dusts
             addItem(ModItems.GOLD_DUST, "Gold dust");
             addItem(ModItems.SILVER_DUST, "Silver dust");
+            addItem(ModItems.ALUMINUM_DUST, "Aluminum dust");
             addItem(ModItems.ZINC_DUST, "Zinc dust");
             addItem(ModItems.TIN_DUST, "Tin dust");
             addItem(ModItems.COPPER_DUST, "Copper dust");
@@ -450,16 +428,47 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
             addItem(ModItems.SILVER_LEGGINGS, "Silver leggings");
             addItem(ModItems.SILVER_BOOTS, "Silver boots");
 
+            addItem(ModItems.ALUMINUM_SILVER_SWORD, "Silver Sword");
+            addItem(ModItems.ALUMINUM_SILVER_DAGGER, "Silver Dagger");
+            addItem(ModItems.ALUMINUM_SILVER_PICKAXE, "Silver Pickaxe");
+            addItem(ModItems.ALUMINUM_SILVER_AXE, "Silver Axe");
+            addItem(ModItems.ALUMINUM_SILVER_SHOVEL, "Silver Shovel");
+            addItem(ModItems.ALUMINUM_SILVER_HOE, "Silver Hoe");
+            addItem(ModItems.ALUMINUM_SILVER_POLISHER, "Silver Polisher");
+
             //Gold equipment
             addItem(ModItems.GOLDEN_POLISHER, "Golden polisher");
             addItem(ModItems.GOLDEN_DAGGER, "Golden dagger");
 
+            addItem(ModItems.ALUMINUM_GOLDEN_SWORD, "Golden Sword");
+            addItem(ModItems.ALUMINUM_GOLDEN_DAGGER, "Golden Dagger");
+            addItem(ModItems.ALUMINUM_GOLDEN_PICKAXE, "Golden Pickaxe");
+            addItem(ModItems.ALUMINUM_GOLDEN_AXE, "Golden Axe");
+            addItem(ModItems.ALUMINUM_GOLDEN_SHOVEL, "Golden Shovel");
+            addItem(ModItems.ALUMINUM_GOLDEN_HOE, "Golden Hoe");
+            addItem(ModItems.ALUMINUM_GOLDEN_POLISHER, "Golden Polisher");
+
             //Wood equipment
             addItem(ModItems.WOODEN_DAGGER, "Wooden dagger");
+
+            addItem(ModItems.ALUMINUM_WOODEN_SWORD, "Wooden Sword");
+            addItem(ModItems.ALUMINUM_WOODEN_DAGGER, "Wooden Dagger");
+            addItem(ModItems.ALUMINUM_WOODEN_PICKAXE, "Wooden Pickaxe");
+            addItem(ModItems.ALUMINUM_WOODEN_AXE, "Wooden Axe");
+            addItem(ModItems.ALUMINUM_WOODEN_SHOVEL, "Wooden Shovel");
+            addItem(ModItems.ALUMINUM_WOODEN_HOE, "Wooden Hoe");
 
             //Stone equipment
             addItem(ModItems.STONE_POLISHER, "Stone polisher");
             addItem(ModItems.STONE_DAGGER, "Stone dagger");
+
+            addItem(ModItems.ALUMINUM_STONE_SWORD, "Stone Sword");
+            addItem(ModItems.ALUMINUM_STONE_DAGGER, "Stone Dagger");
+            addItem(ModItems.ALUMINUM_STONE_PICKAXE, "Stone Pickaxe");
+            addItem(ModItems.ALUMINUM_STONE_AXE, "Stone Axe");
+            addItem(ModItems.ALUMINUM_STONE_SHOVEL, "Stone Shovel");
+            addItem(ModItems.ALUMINUM_STONE_HOE, "Stone Hoe");
+            addItem(ModItems.ALUMINUM_STONE_POLISHER, "Stone Polisher");
 
             //Brass equipment
             addItem(ModItems.BRASS_SWORD, "Brass sword");
@@ -474,6 +483,14 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
             addItem(ModItems.BRASS_LEGGINGS, "Brass leggings");
             addItem(ModItems.BRASS_BOOTS, "Brass boots");
 
+            addItem(ModItems.ALUMINUM_BRASS_SWORD, "Brass Sword");
+            addItem(ModItems.ALUMINUM_BRASS_DAGGER, "Brass Dagger");
+            addItem(ModItems.ALUMINUM_BRASS_PICKAXE, "Brass Pickaxe");
+            addItem(ModItems.ALUMINUM_BRASS_AXE, "Brass Axe");
+            addItem(ModItems.ALUMINUM_BRASS_SHOVEL, "Brass Shovel");
+            addItem(ModItems.ALUMINUM_BRASS_HOE, "Brass Hoe");
+            addItem(ModItems.ALUMINUM_BRASS_POLISHER, "Brass Polisher");
+
             //Bronze equipment
             addItem(ModItems.BRONZE_SWORD, "Bronze sword");
             addItem(ModItems.BRONZE_DAGGER, "Bronze dagger");
@@ -486,6 +503,14 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
             addItem(ModItems.BRONZE_CHESTPLATE, "Bronze chestplate");
             addItem(ModItems.BRONZE_LEGGINGS, "Bronze leggings");
             addItem(ModItems.BRONZE_BOOTS, "Bronze boots");
+
+            addItem(ModItems.ALUMINUM_BRONZE_SWORD, "Bronze Sword");
+            addItem(ModItems.ALUMINUM_BRONZE_DAGGER, "Bronze Dagger");
+            addItem(ModItems.ALUMINUM_BRONZE_PICKAXE, "Bronze Pickaxe");
+            addItem(ModItems.ALUMINUM_BRONZE_AXE, "Bronze Axe");
+            addItem(ModItems.ALUMINUM_BRONZE_SHOVEL, "Bronze Shovel");
+            addItem(ModItems.ALUMINUM_BRONZE_HOE, "Bronze Hoe");
+            addItem(ModItems.ALUMINUM_BRONZE_POLISHER, "Bronze Polisher");
 
             //Rose golden equipment
             addItem(ModItems.ROSE_GOLDEN_SWORD, "Rose golden sword");
@@ -500,6 +525,14 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
             addItem(ModItems.ROSE_GOLDEN_LEGGINGS, "Rose golden leggings");
             addItem(ModItems.ROSE_GOLDEN_BOOTS, "Rose golden boots");
 
+            addItem(ModItems.ALUMINUM_ROSE_GOLDEN_SWORD, "Rose Golden Sword");
+            addItem(ModItems.ALUMINUM_ROSE_GOLDEN_DAGGER, "Rose Golden Dagger");
+            addItem(ModItems.ALUMINUM_ROSE_GOLDEN_PICKAXE, "Rose Golden Pickaxe");
+            addItem(ModItems.ALUMINUM_ROSE_GOLDEN_AXE, "Rose Golden Axe");
+            addItem(ModItems.ALUMINUM_ROSE_GOLDEN_SHOVEL, "Rose Golden Shovel");
+            addItem(ModItems.ALUMINUM_ROSE_GOLDEN_HOE, "Rose Golden Hoe");
+            addItem(ModItems.ALUMINUM_ROSE_GOLDEN_POLISHER, "Rose Golden Polisher");
+
             //Bronzium equipment
             addItem(ModItems.BRONZIUM_SWORD, "Bronzium sword");
             addItem(ModItems.BRONZIUM_DAGGER, "Bronzium dagger");
@@ -513,9 +546,25 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
             addItem(ModItems.BRONZIUM_LEGGINGS, "Bronzium leggings");
             addItem(ModItems.BRONZIUM_BOOTS, "Bronzium boots");
 
+            addItem(ModItems.ALUMINUM_BRONZIUM_SWORD, "Bronzium Sword");
+            addItem(ModItems.ALUMINUM_BRONZIUM_DAGGER, "Bronzium Dagger");
+            addItem(ModItems.ALUMINUM_BRONZIUM_PICKAXE, "Bronzium Pickaxe");
+            addItem(ModItems.ALUMINUM_BRONZIUM_AXE, "Bronzium Axe");
+            addItem(ModItems.ALUMINUM_BRONZIUM_SHOVEL, "Bronzium Shovel");
+            addItem(ModItems.ALUMINUM_BRONZIUM_HOE, "Bronzium Hoe");
+            addItem(ModItems.ALUMINUM_BRONZIUM_POLISHER, "Bronzium Polisher");
+
             //Iron equipment
             addItem(ModItems.IRON_POLISHER, "Iron polisher");
             addItem(ModItems.IRON_DAGGER, "Iron dagger");
+
+            addItem(ModItems.ALUMINUM_IRON_SWORD, "Iron Sword");
+            addItem(ModItems.ALUMINUM_IRON_DAGGER, "Iron Dagger");
+            addItem(ModItems.ALUMINUM_IRON_PICKAXE, "Iron Pickaxe");
+            addItem(ModItems.ALUMINUM_IRON_AXE, "Iron Axe");
+            addItem(ModItems.ALUMINUM_IRON_SHOVEL, "Iron Shovel");
+            addItem(ModItems.ALUMINUM_IRON_HOE, "Iron Hoe");
+            addItem(ModItems.ALUMINUM_IRON_POLISHER, "Iron Polisher");
 
             //Green golden equipment
             addItem(ModItems.GREEN_GOLDEN_SWORD, "Green golden sword");
@@ -530,6 +579,14 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
             addItem(ModItems.GREEN_GOLDEN_LEGGINGS, "Green golden leggings");
             addItem(ModItems.GREEN_GOLDEN_BOOTS, "Green golden boots");
 
+            addItem(ModItems.ALUMINUM_GREEN_GOLDEN_SWORD, "Green Golden Sword");
+            addItem(ModItems.ALUMINUM_GREEN_GOLDEN_DAGGER, "Green Golden Dagger");
+            addItem(ModItems.ALUMINUM_GREEN_GOLDEN_PICKAXE, "Green Golden Pickaxe");
+            addItem(ModItems.ALUMINUM_GREEN_GOLDEN_AXE, "Green Golden Axe");
+            addItem(ModItems.ALUMINUM_GREEN_GOLDEN_SHOVEL, "Green Golden Shovel");
+            addItem(ModItems.ALUMINUM_GREEN_GOLDEN_HOE, "Green Golden Hoe");
+            addItem(ModItems.ALUMINUM_GREEN_GOLDEN_POLISHER, "Green Golden Polisher");
+
             //Steel equipment
             addItem(ModItems.STEEL_SWORD, "Steel sword");
             addItem(ModItems.STEEL_DAGGER, "Steel dagger");
@@ -542,6 +599,14 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
             addItem(ModItems.STEEL_CHESTPLATE, "Steel chestplate");
             addItem(ModItems.STEEL_LEGGINGS, "Steel leggings");
             addItem(ModItems.STEEL_BOOTS, "Steel boots");
+
+            addItem(ModItems.ALUMINUM_STEEL_SWORD, "Steel Sword");
+            addItem(ModItems.ALUMINUM_STEEL_DAGGER, "Steel Dagger");
+            addItem(ModItems.ALUMINUM_STEEL_PICKAXE, "Steel Pickaxe");
+            addItem(ModItems.ALUMINUM_STEEL_AXE, "Steel Axe");
+            addItem(ModItems.ALUMINUM_STEEL_SHOVEL, "Steel Shovel");
+            addItem(ModItems.ALUMINUM_STEEL_HOE, "Steel Hoe");
+            addItem(ModItems.ALUMINUM_STEEL_POLISHER, "Steel Polisher");
 
             //Blue gold equipment
             addItem(ModItems.BLUE_GOLDEN_SWORD, "Blue Golden sword");
@@ -556,9 +621,25 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
             addItem(ModItems.BLUE_GOLDEN_LEGGINGS, "Blue Golden leggings");
             addItem(ModItems.BLUE_GOLDEN_BOOTS, "Blue Golden boots");
 
+            addItem(ModItems.ALUMINUM_BLUE_GOLDEN_SWORD, "Blue Golden Sword");
+            addItem(ModItems.ALUMINUM_BLUE_GOLDEN_DAGGER, "Blue Golden Dagger");
+            addItem(ModItems.ALUMINUM_BLUE_GOLDEN_PICKAXE, "Blue Golden Pickaxe");
+            addItem(ModItems.ALUMINUM_BLUE_GOLDEN_AXE, "Blue Golden Axe");
+            addItem(ModItems.ALUMINUM_BLUE_GOLDEN_SHOVEL, "Blue Golden Shovel");
+            addItem(ModItems.ALUMINUM_BLUE_GOLDEN_HOE, "Blue Golden Hoe");
+            addItem(ModItems.ALUMINUM_BLUE_GOLDEN_POLISHER, "Blue Golden Polisher");
+
             //Diamond equipment
             addItem(ModItems.DIAMOND_POLISHER, "Diamond polisher");
             addItem(ModItems.DIAMOND_DAGGER, "Diamond dagger");
+
+            addItem(ModItems.ALUMINUM_DIAMOND_SWORD, "Diamond Sword");
+            addItem(ModItems.ALUMINUM_DIAMOND_DAGGER, "Diamond Dagger");
+            addItem(ModItems.ALUMINUM_DIAMOND_PICKAXE, "Diamond Pickaxe");
+            addItem(ModItems.ALUMINUM_DIAMOND_AXE, "Diamond Axe");
+            addItem(ModItems.ALUMINUM_DIAMOND_SHOVEL, "Diamond Shovel");
+            addItem(ModItems.ALUMINUM_DIAMOND_HOE, "Diamond Hoe");
+            addItem(ModItems.ALUMINUM_DIAMOND_POLISHER, "Diamond Polisher");
 
             //Netherite equipment
             addItem(ModItems.NETHERITE_POLISHER, "Netherite polisher");
@@ -611,10 +692,12 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
                 addItem(ModItems.RICE_BOWL, "Rice bowl");
 
             //Smithing templates
-            addSmithingTitles("Applies to:", "Ingredients:");
+            addSmithingTitles("Smithing template", "Applies to:", "Ingredients:");
 
-            addSmithingTranslations( ModItems.BRONZIUM_SMITHING_UPGRADE_TEMPLATE, "Smithing template","bronzium", "Bronzium upgrade", "Bronze equipment, Brass equipment", "Bronzium ingot",
-                    "Add a bronze or brass armor, weapon or tool", "Add a bronzium ingot");
+            addSmithingTranslations("bronzium", "Bronzium upgrade", "Bronze equipment, Brass equipment", "Bronzium ingot",
+                    "Add a bronze or brass armor, weapon or tool", "Add an bronzium ingot");
+            addSmithingTranslations("aluminum", "Aluminum upgrade", "Tools with wooden handle", "Aluminum ingot",
+                    "Add any tool with a wooden handle", "Add an aluminum ingot");
 
             //Enchantments
             addEnchantment(ModEnchantments.FINE_MINING, "Fine mining");

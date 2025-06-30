@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_iron_axe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:iron_axe"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "enhanced_playthrough:aluminum_iron_axe_from_smithing_iron_axe_with_aluminum_ingot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_iron_axe",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "enhanced_playthrough:aluminum_iron_axe_from_smithing_iron_axe_with_aluminum_ingot"
+    ]
+  },
+  "sends_telemetry_event": false
+}

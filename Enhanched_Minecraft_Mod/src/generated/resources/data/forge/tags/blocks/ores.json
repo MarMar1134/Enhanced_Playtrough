@@ -16,6 +16,13 @@
     "enhanced_playthrough:deepslate_sapphire_ore",
     "enhanced_playthrough:deepslate_sulfur_ore",
     "enhanced_playthrough:nether_sulfur_ore",
-    "enhanced_playthrough:deepslate_cobalt_ore"
+    "enhanced_playthrough:deepslate_cobalt_ore",
+    "enhanced_playthrough:bauxite",
+    "enhanced_playthrough:white_bauxite",
+    "enhanced_playthrough:light_gray_bauxite",
+    "enhanced_playthrough:brown_bauxite",
+    "enhanced_playthrough:red_bauxite",
+    "enhanced_playthrough:orange_bauxite",
+    "enhanced_playthrough:yellow_bauxite"
   ]
 }

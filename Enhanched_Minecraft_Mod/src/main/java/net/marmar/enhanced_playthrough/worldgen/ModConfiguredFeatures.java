@@ -87,19 +87,32 @@ public class ModConfiguredFeatures {
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_GARNET_ORE_KEY = registerKey("nether_garnet_ore");
 
+    //Bauxite
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BAUXITE_ORES_KEY = registerKey("bauxite_ores");
+
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
+        //Rule tests
         RuleTest stoneReplaceable = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
         RuleTest deepslateReplaceable = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
         RuleTest netherrackReplaceable = new BlockMatchTest(Blocks.NETHERRACK);
 
-        RuleTest ironReplaceable = new TagMatchTest(BlockTags.IRON_ORES);
+            //Terracotta
+            RuleTest terracottaReplaceable = new BlockMatchTest(Blocks.TERRACOTTA);
+            RuleTest whiteTerracottaReplaceable = new BlockMatchTest(Blocks.WHITE_TERRACOTTA);
+            RuleTest lightGrayTerracottaReplaceable = new BlockMatchTest(Blocks.LIGHT_GRAY_TERRACOTTA);
+            RuleTest brownTerracottaReplaceable = new BlockMatchTest(Blocks.BROWN_TERRACOTTA);
+            RuleTest redTerracottaReplaceable = new BlockMatchTest(Blocks.RED_TERRACOTTA);
+            RuleTest orangeTerracottaReplaceable = new BlockMatchTest(Blocks.ORANGE_TERRACOTTA);
+            RuleTest yellowTerracottaReplaceable = new BlockMatchTest(Blocks.YELLOW_TERRACOTTA);
 
+        //Predicates
         BlockPredicate isCloseToWater = BlockPredicate.anyOf(
                 BlockPredicate.matchesFluids(new BlockPos(1, -1, 0), Fluids.WATER, Fluids.FLOWING_WATER),
                 BlockPredicate.matchesFluids(new BlockPos(-1, -1, 0), Fluids.WATER, Fluids.FLOWING_WATER),
                 BlockPredicate.matchesFluids(new BlockPos(0, -1, 1), Fluids.WATER, Fluids.FLOWING_WATER),
                 BlockPredicate.matchesFluids(new BlockPos(0, -1, -1), Fluids.WATER, Fluids.FLOWING_WATER));
 
+        //Nature
         register(context, MUD_PATCH_KEY, Feature.DISK, new DiskConfiguration(
                 RuleBasedBlockStateProvider.simple(Blocks.MUD), BlockPredicate.matchesBlocks(Blocks.DIRT, Blocks.SAND, Blocks.GRAVEL),
                 UniformInt.of(1, 4), 2));
@@ -143,9 +156,22 @@ public class ModConfiguredFeatures {
         register(context, EXTRA_SILVER_ORE_KEY, Feature.ORE, new OreConfiguration(silverOres, 3));
         register(context, BADLANDS_SILVER_ORE_KEY, Feature.ORE, new OreConfiguration(silverOres, 4));
 
+        //Bauxite ores
+        List<OreConfiguration.TargetBlockState> bauxiteOres = List.of(
+                OreConfiguration.target(terracottaReplaceable, ModBlocks.BAUXITE.get().defaultBlockState()),
+                OreConfiguration.target(whiteTerracottaReplaceable, ModBlocks.WHITE_BAUXITE.get().defaultBlockState()),
+                OreConfiguration.target(lightGrayTerracottaReplaceable, ModBlocks.LIGHT_GRAY_BAUXITE.get().defaultBlockState()),
+                OreConfiguration.target(brownTerracottaReplaceable, ModBlocks.BROWN_BAUXITE.get().defaultBlockState()),
+                OreConfiguration.target(redTerracottaReplaceable, ModBlocks.RED_BAUXITE.get().defaultBlockState()),
+                OreConfiguration.target(orangeTerracottaReplaceable, ModBlocks.ORANGE_BAUXITE.get().defaultBlockState()),
+                OreConfiguration.target(yellowTerracottaReplaceable, ModBlocks.YELLOW_BAUXITE.get().defaultBlockState()));
+
+        register(context, BAUXITE_ORES_KEY, Feature.ORE, new OreConfiguration(bauxiteOres, 8));
+
         //Sulphur ore
         List<OreConfiguration.TargetBlockState> sulphurOres = List.of(OreConfiguration.target(stoneReplaceable,
-                ModBlocks.SULFUR_ORE.get().defaultBlockState()), OreConfiguration.target(deepslateReplaceable, ModBlocks.DEEPSLATE_SULFUR_ORE.get().defaultBlockState()));
+                ModBlocks.SULFUR_ORE.get().defaultBlockState()),
+                OreConfiguration.target(deepslateReplaceable, ModBlocks.DEEPSLATE_SULFUR_ORE.get().defaultBlockState()));
 
         register(context, SULFUR_ORE_KEY, Feature.ORE, new OreConfiguration(sulphurOres, 6));
 

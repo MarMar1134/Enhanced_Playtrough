@@ -31,7 +31,7 @@ public class ModChestLootTables implements LootTableSubProvider {
         //Less weight == less probability of the item to appear
         return LootTable.lootTable()
                 .withPool(LootPool.lootPool().setRolls(UniformGenerator.between(2, 4))
-                    .add(LootItem.lootTableItem(Items.MUSIC_DISC_CAT).setWeight(1))
+                    .add(LootItem.lootTableItem(ModItems.ALUMINUM_SMITHING_UPGRADE_TEMPLATE.get()).setWeight(1))
                     .add(LootItem.lootTableItem(Items.IRON_INGOT).setWeight(2)
                             .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 3))))
                     .add(LootItem.lootTableItem(Items.LEATHER_CHESTPLATE).setWeight(2))

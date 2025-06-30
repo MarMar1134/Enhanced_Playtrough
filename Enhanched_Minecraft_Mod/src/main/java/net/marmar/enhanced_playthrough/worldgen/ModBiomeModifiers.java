@@ -72,6 +72,8 @@ public class ModBiomeModifiers {
 
     public static final ResourceKey<BiomeModifier> ADD_NETHER_GARNET_ORE = registerKey("add_nether_garnet_ore");
 
+    public static final ResourceKey<BiomeModifier> ADD_BAUXITE_ORES = registerKey("add_bauxite_ores");
+
     public static void bootstrap(BootstapContext<BiomeModifier> context) {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
         var biomes = context.lookup(Registries.BIOME);
@@ -130,6 +132,12 @@ public class ModBiomeModifiers {
         context.register(ADD_BADLANDS_SILVER_ORE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 HolderSet.direct(biomes.getOrThrow(Biomes.BADLANDS)),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.BADLANDS_SILVER_ORE_PLACED_KEY)),
+                GenerationStep.Decoration.UNDERGROUND_ORES));
+
+        //Bauxite
+        context.register(ADD_BAUXITE_ORES, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_BADLANDS),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.BAUXITE_ORES_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
 
         //Sulphur

@@ -54,6 +54,111 @@ public class GeneralRecipeSubProvider extends RecipeProvider {
         bronziumSmithingTemplate(consumer, ModItems.BRASS_LEGGINGS.get(), ModItems.BRONZE_LEGGINGS.get(), ModItems.BRONZIUM_LEGGINGS.get());
         bronziumSmithingTemplate(consumer, ModItems.BRASS_BOOTS.get(), ModItems.BRONZE_BOOTS.get(), ModItems.BRONZIUM_BOOTS.get());
 
+        //Aluminum variants
+            //Wood
+            aluminumSmithingTemplate(consumer, Items.WOODEN_AXE, ModItems.ALUMINUM_WOODEN_AXE.get());
+            aluminumSmithingTemplate(consumer, Items.WOODEN_PICKAXE, ModItems.ALUMINUM_WOODEN_PICKAXE.get());
+            aluminumSmithingTemplate(consumer, Items.WOODEN_SHOVEL, ModItems.ALUMINUM_WOODEN_SHOVEL.get());
+            aluminumSmithingTemplate(consumer, Items.WOODEN_HOE, ModItems.ALUMINUM_WOODEN_HOE.get());
+            aluminumSmithingTemplate(consumer, ModItems.WOODEN_DAGGER.get(), ModItems.ALUMINUM_WOODEN_DAGGER.get());
+
+            //Stone
+            aluminumSmithingTemplate(consumer, Items.STONE_AXE, ModItems.ALUMINUM_STONE_AXE.get());
+            aluminumSmithingTemplate(consumer, Items.STONE_PICKAXE, ModItems.ALUMINUM_STONE_PICKAXE.get());
+            aluminumSmithingTemplate(consumer, Items.STONE_SHOVEL, ModItems.ALUMINUM_STONE_SHOVEL.get());
+            aluminumSmithingTemplate(consumer, Items.STONE_HOE, ModItems.ALUMINUM_STONE_HOE.get());
+            aluminumSmithingTemplate(consumer, ModItems.STONE_POLISHER.get(), ModItems.ALUMINUM_STONE_POLISHER.get());
+            aluminumSmithingTemplate(consumer, ModItems.STONE_DAGGER.get(), ModItems.ALUMINUM_STONE_DAGGER.get());
+
+            //Gold
+            aluminumSmithingTemplate(consumer, Items.GOLDEN_AXE, ModItems.ALUMINUM_GOLDEN_AXE.get());
+            aluminumSmithingTemplate(consumer, Items.GOLDEN_PICKAXE, ModItems.ALUMINUM_GOLDEN_PICKAXE.get());
+            aluminumSmithingTemplate(consumer, Items.GOLDEN_SHOVEL, ModItems.ALUMINUM_GOLDEN_SHOVEL.get());
+            aluminumSmithingTemplate(consumer, Items.GOLDEN_HOE, ModItems.ALUMINUM_GOLDEN_HOE.get());
+            aluminumSmithingTemplate(consumer, ModItems.GOLDEN_POLISHER.get(), ModItems.ALUMINUM_GOLDEN_POLISHER.get());
+            aluminumSmithingTemplate(consumer, ModItems.GOLDEN_DAGGER.get(), ModItems.ALUMINUM_GOLDEN_DAGGER.get());
+
+            //Silver
+            aluminumSmithingTemplate(consumer, ModItems.SILVER_AXE.get(), ModItems.ALUMINUM_SILVER_AXE.get());
+            aluminumSmithingTemplate(consumer, ModItems.SILVER_PICKAXE.get(), ModItems.ALUMINUM_SILVER_PICKAXE.get());
+            aluminumSmithingTemplate(consumer, ModItems.SILVER_SHOVEL.get(), ModItems.ALUMINUM_SILVER_SHOVEL.get());
+            aluminumSmithingTemplate(consumer, ModItems.SILVER_HOE.get(), ModItems.ALUMINUM_SILVER_HOE.get());
+            aluminumSmithingTemplate(consumer, ModItems.GOLDEN_POLISHER.get(), ModItems.ALUMINUM_SILVER_POLISHER.get());
+            aluminumSmithingTemplate(consumer, ModItems.SILVER_DAGGER.get(), ModItems.ALUMINUM_SILVER_DAGGER.get());
+
+            //Iron
+            aluminumSmithingTemplate(consumer, Items.IRON_AXE, ModItems.ALUMINUM_IRON_AXE.get());
+            aluminumSmithingTemplate(consumer, Items.IRON_PICKAXE, ModItems.ALUMINUM_IRON_PICKAXE.get());
+            aluminumSmithingTemplate(consumer, Items.IRON_SHOVEL, ModItems.ALUMINUM_IRON_SHOVEL.get());
+            aluminumSmithingTemplate(consumer, Items.IRON_HOE, ModItems.ALUMINUM_IRON_HOE.get());
+            aluminumSmithingTemplate(consumer, ModItems.IRON_POLISHER.get(), ModItems.ALUMINUM_IRON_POLISHER.get());
+            aluminumSmithingTemplate(consumer, ModItems.IRON_DAGGER.get(), ModItems.ALUMINUM_IRON_DAGGER.get());
+
+            //Bronze
+            aluminumSmithingTemplate(consumer, ModItems.BRONZE_AXE.get(), ModItems.ALUMINUM_BRONZE_AXE.get());
+            aluminumSmithingTemplate(consumer, ModItems.BRONZE_PICKAXE.get(), ModItems.ALUMINUM_BRONZE_PICKAXE.get());
+            aluminumSmithingTemplate(consumer, ModItems.BRONZE_SHOVEL.get(), ModItems.ALUMINUM_BRONZE_SHOVEL.get());
+            aluminumSmithingTemplate(consumer, ModItems.BRONZE_HOE.get(), ModItems.ALUMINUM_BRONZE_HOE.get());
+            aluminumSmithingTemplate(consumer, ModItems.BRONZE_POLISHER.get(), ModItems.ALUMINUM_BRONZE_POLISHER.get());
+            aluminumSmithingTemplate(consumer, ModItems.BRONZE_DAGGER.get(), ModItems.ALUMINUM_BRONZE_DAGGER.get());
+
+            //Brass
+            aluminumSmithingTemplate(consumer, ModItems.BRASS_AXE.get(), ModItems.ALUMINUM_BRASS_AXE.get());
+            aluminumSmithingTemplate(consumer, ModItems.BRASS_PICKAXE.get(), ModItems.ALUMINUM_BRASS_PICKAXE.get());
+            aluminumSmithingTemplate(consumer, ModItems.BRASS_SHOVEL.get(), ModItems.ALUMINUM_BRASS_SHOVEL.get());
+            aluminumSmithingTemplate(consumer, ModItems.BRASS_HOE.get(), ModItems.ALUMINUM_BRASS_HOE.get());
+            aluminumSmithingTemplate(consumer, ModItems.BRASS_POLISHER.get(), ModItems.ALUMINUM_BRASS_POLISHER.get());
+            aluminumSmithingTemplate(consumer, ModItems.BRASS_DAGGER.get(), ModItems.ALUMINUM_BRASS_DAGGER.get());
+
+            //Rose Gold
+            aluminumSmithingTemplate(consumer, ModItems.ROSE_GOLDEN_AXE.get(), ModItems.ALUMINUM_ROSE_GOLDEN_AXE.get());
+            aluminumSmithingTemplate(consumer, ModItems.ROSE_GOLDEN_PICKAXE.get(), ModItems.ALUMINUM_ROSE_GOLDEN_PICKAXE.get());
+            aluminumSmithingTemplate(consumer, ModItems.ROSE_GOLDEN_SHOVEL.get(), ModItems.ALUMINUM_ROSE_GOLDEN_SHOVEL.get());
+            aluminumSmithingTemplate(consumer, ModItems.ROSE_GOLDEN_HOE.get(), ModItems.ALUMINUM_ROSE_GOLDEN_HOE.get());
+            aluminumSmithingTemplate(consumer, ModItems.ROSE_GOLDEN_POLISHER.get(), ModItems.ALUMINUM_ROSE_GOLDEN_POLISHER.get());
+            aluminumSmithingTemplate(consumer, ModItems.ROSE_GOLDEN_DAGGER.get(), ModItems.ALUMINUM_ROSE_GOLDEN_DAGGER.get());
+
+            //Bronzium
+            aluminumSmithingTemplate(consumer, ModItems.BRONZIUM_AXE.get(), ModItems.ALUMINUM_BRONZIUM_AXE.get());
+            aluminumSmithingTemplate(consumer, ModItems.BRONZIUM_PICKAXE.get(), ModItems.ALUMINUM_BRONZIUM_PICKAXE.get());
+            aluminumSmithingTemplate(consumer, ModItems.BRONZIUM_SHOVEL.get(), ModItems.ALUMINUM_BRONZIUM_SHOVEL.get());
+            aluminumSmithingTemplate(consumer, ModItems.BRONZIUM_HOE.get(), ModItems.ALUMINUM_BRONZIUM_HOE.get());
+            aluminumSmithingTemplate(consumer, ModItems.BRONZIUM_POLISHER.get(), ModItems.ALUMINUM_BRONZIUM_POLISHER.get());
+            aluminumSmithingTemplate(consumer, ModItems.BRONZIUM_DAGGER.get(), ModItems.ALUMINUM_BRONZIUM_DAGGER.get());
+
+            //Steel
+            aluminumSmithingTemplate(consumer, ModItems.STEEL_AXE.get(), ModItems.ALUMINUM_STEEL_AXE.get());
+            aluminumSmithingTemplate(consumer, ModItems.STEEL_PICKAXE.get(), ModItems.ALUMINUM_STEEL_PICKAXE.get());
+            aluminumSmithingTemplate(consumer, ModItems.STEEL_SHOVEL.get(), ModItems.ALUMINUM_STEEL_SHOVEL.get());
+            aluminumSmithingTemplate(consumer, ModItems.STEEL_HOE.get(), ModItems.ALUMINUM_STEEL_HOE.get());
+            aluminumSmithingTemplate(consumer, ModItems.STEEL_POLISHER.get(), ModItems.ALUMINUM_STEEL_POLISHER.get());
+            aluminumSmithingTemplate(consumer, ModItems.STEEL_DAGGER.get(), ModItems.ALUMINUM_STEEL_DAGGER.get());
+
+            //Green Gold
+            aluminumSmithingTemplate(consumer, ModItems.GREEN_GOLDEN_AXE.get(), ModItems.ALUMINUM_GREEN_GOLDEN_AXE.get());
+            aluminumSmithingTemplate(consumer, ModItems.GREEN_GOLDEN_PICKAXE.get(), ModItems.ALUMINUM_GREEN_GOLDEN_PICKAXE.get());
+            aluminumSmithingTemplate(consumer, ModItems.GREEN_GOLDEN_SHOVEL.get(), ModItems.ALUMINUM_GREEN_GOLDEN_SHOVEL.get());
+            aluminumSmithingTemplate(consumer, ModItems.GREEN_GOLDEN_HOE.get(), ModItems.ALUMINUM_GREEN_GOLDEN_HOE.get());
+            aluminumSmithingTemplate(consumer, ModItems.GREEN_GOLDEN_POLISHER.get(), ModItems.ALUMINUM_GREEN_GOLDEN_POLISHER.get());
+            aluminumSmithingTemplate(consumer, ModItems.GREEN_GOLDEN_DAGGER.get(), ModItems.ALUMINUM_GREEN_GOLDEN_DAGGER.get());
+
+            //Blue Gold
+            aluminumSmithingTemplate(consumer, ModItems.BLUE_GOLDEN_AXE.get(), ModItems.ALUMINUM_BLUE_GOLDEN_AXE.get());
+            aluminumSmithingTemplate(consumer, ModItems.BLUE_GOLDEN_PICKAXE.get(), ModItems.ALUMINUM_BLUE_GOLDEN_PICKAXE.get());
+            aluminumSmithingTemplate(consumer, ModItems.BLUE_GOLDEN_SHOVEL.get(), ModItems.ALUMINUM_BLUE_GOLDEN_SHOVEL.get());
+            aluminumSmithingTemplate(consumer, ModItems.BLUE_GOLDEN_HOE.get(), ModItems.ALUMINUM_BLUE_GOLDEN_HOE.get());
+            aluminumSmithingTemplate(consumer, ModItems.BLUE_GOLDEN_POLISHER.get(), ModItems.ALUMINUM_BLUE_GOLDEN_POLISHER.get());
+            aluminumSmithingTemplate(consumer, ModItems.BLUE_GOLDEN_DAGGER.get(), ModItems.ALUMINUM_BLUE_GOLDEN_DAGGER.get());
+
+            //Diamond
+            aluminumSmithingTemplate(consumer, Items.DIAMOND_AXE, ModItems.ALUMINUM_DIAMOND_AXE.get());
+            aluminumSmithingTemplate(consumer, Items.DIAMOND_PICKAXE, ModItems.ALUMINUM_DIAMOND_PICKAXE.get());
+            aluminumSmithingTemplate(consumer, Items.DIAMOND_SHOVEL, ModItems.ALUMINUM_DIAMOND_SHOVEL.get());
+            aluminumSmithingTemplate(consumer, Items.DIAMOND_HOE, ModItems.ALUMINUM_DIAMOND_HOE.get());
+            aluminumSmithingTemplate(consumer, ModItems.DIAMOND_POLISHER.get(), ModItems.ALUMINUM_DIAMOND_POLISHER.get());
+            aluminumSmithingTemplate(consumer, ModItems.DIAMOND_DAGGER.get(), ModItems.ALUMINUM_DIAMOND_DAGGER.get());
+
+
         //Netherite
         smithingUpgrade(consumer, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, ModItems.DIAMOND_POLISHER.get(),
                 Items.NETHERITE_INGOT, ModItems.NETHERITE_POLISHER.get());
@@ -62,61 +167,11 @@ public class GeneralRecipeSubProvider extends RecipeProvider {
     }
 
     private static void stonecuttingRecipes(Consumer<FinishedRecipe> consumer){
-        //Stone
-        stoneCutting(consumer, Items.STONE, ModBlocks.STONE_WALL.get(), 1);
+        //Polished stone
         stoneCutting(consumer, Items.STONE, ModBlocks.POLISHED_STONE.get(), 1);
         stoneCutting(consumer, Items.STONE, ModBlocks.POLISHED_STONE_SLAB.get(), 2);
         stoneCutting(consumer, Items.STONE, ModBlocks.POLISHED_STONE_STAIRS.get(), 1);
         stoneCutting(consumer, Items.STONE, ModBlocks.POLISHED_STONE_WALL.get(), 1);
-
-        //Polished diorite, andesite and granite walls
-        stoneCutting(consumer, Items.POLISHED_DIORITE, ModBlocks.POLISHED_DIORITE_WALL.get(), 1);
-        stoneCutting(consumer, Items.POLISHED_ANDESITE, ModBlocks.POLISHED_ANDESITE_WALL.get(), 1);
-        stoneCutting(consumer, Items.POLISHED_GRANITE, ModBlocks.POLISHED_GRANITE_WALL.get(), 1);
-
-        //Dripstone
-        stoneCutting(consumer, Items.DRIPSTONE_BLOCK, ModBlocks.DRIPSTONE_SLAB.get(), 2);
-        stoneCutting(consumer, Items.DRIPSTONE_BLOCK, ModBlocks.DRIPSTONE_STAIRS.get(), 1);
-        stoneCutting(consumer, Items.DRIPSTONE_BLOCK, ModBlocks.DRIPSTONE_WALL.get(), 1);
-
-        //Calcite
-        stoneCutting(consumer, Items.CALCITE, ModBlocks.CALCITE_SLAB.get(), 2);
-        stoneCutting(consumer, Items.CALCITE, ModBlocks.CALCITE_STAIRS.get(), 1);
-        stoneCutting(consumer, Items.CALCITE, ModBlocks.CALCITE_WALL.get(), 1);
-
-        //Concrete
-        stoneCutting(consumer, Items.WHITE_CONCRETE, ModBlocks.WHITE_CONCRETE_SLAB.get(), 2);
-        stoneCutting(consumer, Items.WHITE_CONCRETE, ModBlocks.WHITE_CONCRETE_STAIRS.get(), 1);
-        stoneCutting(consumer, Items.LIGHT_GRAY_CONCRETE, ModBlocks.LIGHT_GRAY_CONCRETE_SLAB.get(), 2);
-        stoneCutting(consumer, Items.LIGHT_GRAY_CONCRETE, ModBlocks.LIGHT_GRAY_CONCRETE_STAIRS.get(), 1);
-        stoneCutting(consumer, Items.GRAY_CONCRETE, ModBlocks.GRAY_CONCRETE_SLAB.get(), 2);
-        stoneCutting(consumer, Items.GRAY_CONCRETE, ModBlocks.GRAY_CONCRETE_STAIRS.get(), 1);
-        stoneCutting(consumer, Items.BLACK_CONCRETE, ModBlocks.BLACK_CONCRETE_SLAB.get(), 2);
-        stoneCutting(consumer, Items.BLACK_CONCRETE, ModBlocks.BLACK_CONCRETE_STAIRS.get(), 1);
-        stoneCutting(consumer, Items.BROWN_CONCRETE, ModBlocks.BROWN_CONCRETE_SLAB.get(), 2);
-        stoneCutting(consumer, Items.BROWN_CONCRETE, ModBlocks.BROWN_CONCRETE_STAIRS.get(), 1);
-        stoneCutting(consumer, Items.RED_CONCRETE, ModBlocks.RED_CONCRETE_SLAB.get(), 2);
-        stoneCutting(consumer, Items.RED_CONCRETE, ModBlocks.RED_CONCRETE_STAIRS.get(), 1);
-        stoneCutting(consumer, Items.ORANGE_CONCRETE, ModBlocks.ORANGE_CONCRETE_SLAB.get(), 2);
-        stoneCutting(consumer, Items.ORANGE_CONCRETE, ModBlocks.ORANGE_CONCRETE_STAIRS.get(), 1);
-        stoneCutting(consumer, Items.YELLOW_CONCRETE, ModBlocks.YELLOW_CONCRETE_SLAB.get(), 2);
-        stoneCutting(consumer, Items.YELLOW_CONCRETE, ModBlocks.YELLOW_CONCRETE_STAIRS.get(), 1);
-        stoneCutting(consumer, Items.LIME_CONCRETE, ModBlocks.LIME_CONCRETE_SLAB.get(), 2);
-        stoneCutting(consumer, Items.LIME_CONCRETE, ModBlocks.LIME_CONCRETE_STAIRS.get(), 1);
-        stoneCutting(consumer, Items.GREEN_CONCRETE, ModBlocks.GREEN_CONCRETE_SLAB.get(), 2);
-        stoneCutting(consumer, Items.GREEN_CONCRETE, ModBlocks.GREEN_CONCRETE_STAIRS.get(), 1);
-        stoneCutting(consumer, Items.CYAN_CONCRETE, ModBlocks.CYAN_CONCRETE_SLAB.get(), 2);
-        stoneCutting(consumer, Items.CYAN_CONCRETE, ModBlocks.CYAN_CONCRETE_STAIRS.get(), 1);
-        stoneCutting(consumer, Items.LIGHT_BLUE_CONCRETE, ModBlocks.LIGHT_BLUE_CONCRETE_SLAB.get(), 2);
-        stoneCutting(consumer, Items.LIGHT_BLUE_CONCRETE, ModBlocks.LIGHT_BLUE_CONCRETE_STAIRS.get(), 1);
-        stoneCutting(consumer, Items.BLUE_CONCRETE, ModBlocks.BLUE_CONCRETE_SLAB.get(), 2);
-        stoneCutting(consumer, Items.BLUE_CONCRETE, ModBlocks.BLUE_CONCRETE_STAIRS.get(), 1);
-        stoneCutting(consumer, Items.PURPLE_CONCRETE, ModBlocks.PURPLE_CONCRETE_SLAB.get(), 2);
-        stoneCutting(consumer, Items.PURPLE_CONCRETE, ModBlocks.PURPLE_CONCRETE_STAIRS.get(), 1);
-        stoneCutting(consumer, Items.MAGENTA_CONCRETE, ModBlocks.MAGENTA_CONCRETE_SLAB.get(), 2);
-        stoneCutting(consumer, Items.MAGENTA_CONCRETE, ModBlocks.MAGENTA_CONCRETE_STAIRS.get(), 1);
-        stoneCutting(consumer, Items.PINK_CONCRETE, ModBlocks.PINK_CONCRETE_SLAB.get(), 2);
-        stoneCutting(consumer, Items.PINK_CONCRETE, ModBlocks.PINK_CONCRETE_STAIRS.get(), 1);
 
         //Polished stone
         stoneCutting(consumer, ModBlocks.POLISHED_STONE.get(), ModBlocks.POLISHED_STONE_SLAB.get(), 2);
@@ -306,6 +361,9 @@ public class GeneralRecipeSubProvider extends RecipeProvider {
 
         mechanicalItemGrinding(consumer, ModTags.Items.SILVER_MANUFACTURABLE, "silver_dust", ModItems.SILVER_DUST.get(), 1);
 
+        mechanicalItemGrinding(consumer, ModItems.RAW_ALUMINUM.get(), "aluminum_dust", ModItems.ALUMINUM_DUST.get(), 1);
+        mechanicalItemGrinding(consumer, ModItems.ALUMINUM_INGOT.get(), "aluminum_dust", ModItems.ALUMINUM_DUST.get(), 1);
+
         primalItemGrinding(consumer, ModTags.Items.ZINC_MANUFACTURABLE, "zinc_dust", ModItems.ZINC_DUST.get(), 1);
         mechanicalItemGrinding(consumer, ModTags.Items.ZINC_MANUFACTURABLE, "zinc_dust", ModItems.ZINC_DUST.get(), 1);
 
@@ -348,6 +406,10 @@ public class GeneralRecipeSubProvider extends RecipeProvider {
                 ModItems.BRONZIUM_INGOT.get(), bronziumItem);
         smithingUpgrade(consumer, ModItems.BRONZIUM_SMITHING_UPGRADE_TEMPLATE.get(), bronzeItem,
                 ModItems.BRONZIUM_INGOT.get(), bronziumItem);
+    }
+
+    protected static void aluminumSmithingTemplate(Consumer<FinishedRecipe> consumer, ItemLike baseItem, ItemLike aluminizedItem){
+        smithingUpgrade(consumer, ModItems.ALUMINUM_SMITHING_UPGRADE_TEMPLATE.get(), baseItem, ModItems.ALUMINUM_INGOT.get(), aluminizedItem);
     }
 
         //Grind

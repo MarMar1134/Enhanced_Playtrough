@@ -31,24 +31,6 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         );
 
         this.tag(BlockTags.SLABS).add(
-                ModBlocks.DRIPSTONE_SLAB.get(),
-                ModBlocks.CALCITE_SLAB.get(),
-                ModBlocks.WHITE_CONCRETE_SLAB.get(),
-                ModBlocks.LIGHT_GRAY_CONCRETE_SLAB.get(),
-                ModBlocks.GRAY_CONCRETE_SLAB.get(),
-                ModBlocks.BLACK_CONCRETE_SLAB.get(),
-                ModBlocks.BROWN_CONCRETE_SLAB.get(),
-                ModBlocks.RED_CONCRETE_SLAB.get(),
-                ModBlocks.ORANGE_CONCRETE_SLAB.get(),
-                ModBlocks.YELLOW_CONCRETE_SLAB.get(),
-                ModBlocks.LIME_CONCRETE_SLAB.get(),
-                ModBlocks.GREEN_CONCRETE_SLAB.get(),
-                ModBlocks.CYAN_CONCRETE_SLAB.get(),
-                ModBlocks.LIGHT_BLUE_CONCRETE_SLAB.get(),
-                ModBlocks.BLUE_CONCRETE_SLAB.get(),
-                ModBlocks.PURPLE_CONCRETE_SLAB.get(),
-                ModBlocks.MAGENTA_CONCRETE_SLAB.get(),
-                ModBlocks.PINK_CONCRETE_SLAB.get(),
                 ModBlocks.POLISHED_STONE_SLAB.get(),
                 ModBlocks.COBBLED_LIMESTONE_SLAB.get(),
                 ModBlocks.LIMESTONE_SLAB.get(),
@@ -64,24 +46,6 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         );
 
         this.tag(BlockTags.STAIRS).add(
-                ModBlocks.DRIPSTONE_STAIRS.get(),
-                ModBlocks.CALCITE_STAIRS.get(),
-                ModBlocks.WHITE_CONCRETE_STAIRS.get(),
-                ModBlocks.LIGHT_GRAY_CONCRETE_STAIRS.get(),
-                ModBlocks.GRAY_CONCRETE_STAIRS.get(),
-                ModBlocks.BLACK_CONCRETE_STAIRS.get(),
-                ModBlocks.BROWN_CONCRETE_STAIRS.get(),
-                ModBlocks.RED_CONCRETE_STAIRS.get(),
-                ModBlocks.ORANGE_CONCRETE_STAIRS.get(),
-                ModBlocks.YELLOW_CONCRETE_STAIRS.get(),
-                ModBlocks.LIME_CONCRETE_STAIRS.get(),
-                ModBlocks.GREEN_CONCRETE_STAIRS.get(),
-                ModBlocks.CYAN_CONCRETE_STAIRS.get(),
-                ModBlocks.LIGHT_BLUE_CONCRETE_STAIRS.get(),
-                ModBlocks.BLUE_CONCRETE_STAIRS.get(),
-                ModBlocks.PURPLE_CONCRETE_STAIRS.get(),
-                ModBlocks.MAGENTA_CONCRETE_STAIRS.get(),
-                ModBlocks.PINK_CONCRETE_STAIRS.get(),
                 ModBlocks.POLISHED_STONE_STAIRS.get(),
                 ModBlocks.COBBLED_LIMESTONE_STAIRS.get(),
                 ModBlocks.LIMESTONE_STAIRS.get(),
@@ -96,12 +60,6 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         );
 
         this.tag(BlockTags.WALLS).add(
-                ModBlocks.STONE_WALL.get(),
-                ModBlocks.POLISHED_DIORITE_WALL.get(),
-                ModBlocks.POLISHED_ANDESITE_WALL.get(),
-                ModBlocks.POLISHED_GRANITE_WALL.get(),
-                ModBlocks.DRIPSTONE_WALL.get(),
-                ModBlocks.CALCITE_WALL.get(),
                 ModBlocks.POLISHED_STONE_WALL.get(),
                 ModBlocks.LIMESTONE_WALL.get(),
                 ModBlocks.COBBLED_LIMESTONE_WALL.get(),
@@ -317,61 +275,6 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         );
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(
-                //Stone
-                ModBlocks.STONE_WALL.get(),
-
-                //Polished diorite, andesite and granite
-                ModBlocks.POLISHED_DIORITE_WALL.get(),
-                ModBlocks.POLISHED_ANDESITE_WALL.get(),
-                ModBlocks.POLISHED_GRANITE_WALL.get(),
-
-                //Dripstone
-                ModBlocks.DRIPSTONE_SLAB.get(),
-                ModBlocks.DRIPSTONE_STAIRS.get(),
-                ModBlocks.DRIPSTONE_WALL.get(),
-
-                //Calcite
-                ModBlocks.CALCITE_SLAB.get(),
-                ModBlocks.CALCITE_STAIRS.get(),
-                ModBlocks.CALCITE_WALL.get(),
-
-                //Concrete
-                    //Slabs
-                    ModBlocks.WHITE_CONCRETE_SLAB.get(),
-                    ModBlocks.LIGHT_GRAY_CONCRETE_SLAB.get(),
-                    ModBlocks.GRAY_CONCRETE_SLAB.get(),
-                    ModBlocks.BLACK_CONCRETE_SLAB.get(),
-                    ModBlocks.BROWN_CONCRETE_SLAB.get(),
-                    ModBlocks.RED_CONCRETE_SLAB.get(),
-                    ModBlocks.ORANGE_CONCRETE_SLAB.get(),
-                    ModBlocks.YELLOW_CONCRETE_SLAB.get(),
-                    ModBlocks.LIME_CONCRETE_SLAB.get(),
-                    ModBlocks.GREEN_CONCRETE_SLAB.get(),
-                    ModBlocks.CYAN_CONCRETE_SLAB.get(),
-                    ModBlocks.LIGHT_BLUE_CONCRETE_SLAB.get(),
-                    ModBlocks.BLUE_CONCRETE_SLAB.get(),
-                    ModBlocks.PURPLE_CONCRETE_SLAB.get(),
-                    ModBlocks.MAGENTA_CONCRETE_SLAB.get(),
-                    ModBlocks.PINK_CONCRETE_SLAB.get(),
-
-                    //Stairs
-                    ModBlocks.WHITE_CONCRETE_STAIRS.get(),
-                    ModBlocks.LIGHT_GRAY_CONCRETE_STAIRS.get(),
-                    ModBlocks.GRAY_CONCRETE_STAIRS.get(),
-                    ModBlocks.BLACK_CONCRETE_STAIRS.get(),
-                    ModBlocks.BROWN_CONCRETE_STAIRS.get(),
-                    ModBlocks.RED_CONCRETE_STAIRS.get(),
-                    ModBlocks.ORANGE_CONCRETE_STAIRS.get(),
-                    ModBlocks.YELLOW_CONCRETE_STAIRS.get(),
-                    ModBlocks.LIME_CONCRETE_STAIRS.get(),
-                    ModBlocks.GREEN_CONCRETE_STAIRS.get(),
-                    ModBlocks.CYAN_CONCRETE_STAIRS.get(),
-                    ModBlocks.LIGHT_BLUE_CONCRETE_STAIRS.get(),
-                    ModBlocks.BLUE_CONCRETE_STAIRS.get(),
-                    ModBlocks.PURPLE_CONCRETE_STAIRS.get(),
-                    ModBlocks.MAGENTA_CONCRETE_STAIRS.get(),
-                    ModBlocks.PINK_CONCRETE_STAIRS.get(),
-
                 //Polished stone
                 ModBlocks.POLISHED_STONE.get(),
                 ModBlocks.POLISHED_STONE_SLAB.get(),
@@ -442,6 +345,13 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.NETHER_SULFUR_ORE.get(),
                 ModBlocks.COBALT_ORE.get(),
                 ModBlocks.DEEPSLATE_COBALT_ORE.get(),
+                ModBlocks.BAUXITE.get(),
+                ModBlocks.WHITE_BAUXITE.get(),
+                ModBlocks.LIGHT_GRAY_BAUXITE.get(),
+                ModBlocks.BROWN_BAUXITE.get(),
+                ModBlocks.RED_BAUXITE.get(),
+                ModBlocks.ORANGE_BAUXITE.get(),
+                ModBlocks.YELLOW_BAUXITE.get(),
 
                 //ore blocks
                 ModBlocks.SILVER_BLOCK.get(),
@@ -457,14 +367,6 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         );
 
         this.tag(Tags.Blocks.NEEDS_WOOD_TOOL).add(
-                //Stone
-                ModBlocks.STONE_WALL.get(),
-
-                //Polished diorite, andesite and granite
-                ModBlocks.POLISHED_DIORITE_WALL.get(),
-                ModBlocks.POLISHED_ANDESITE_WALL.get(),
-                ModBlocks.POLISHED_GRANITE_WALL.get(),
-
                 //Polished stone
                 ModBlocks.POLISHED_STONE.get(),
                 ModBlocks.POLISHED_STONE_SLAB.get(),
@@ -494,58 +396,21 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.PRIMAL_GRINDER.get()
         );
 
+        this.tag(ModTags.Blocks.BAUXITE_ORE).add(
+                ModBlocks.BAUXITE.get(),
+                ModBlocks.WHITE_BAUXITE.get(),
+                ModBlocks.LIGHT_GRAY_BAUXITE.get(),
+                ModBlocks.BROWN_BAUXITE.get(),
+                ModBlocks.RED_BAUXITE.get(),
+                ModBlocks.ORANGE_BAUXITE.get(),
+                ModBlocks.YELLOW_BAUXITE.get()
+        );
+
         this.tag(ModTags.Blocks.NEEDS_SILVER_TOOL).add(
                 ModBlocks.SILVER_BLOCK.get()
         );
 
         this.tag(BlockTags.NEEDS_STONE_TOOL).add(
-                //Dripstone
-                ModBlocks.DRIPSTONE_SLAB.get(),
-                ModBlocks.DRIPSTONE_STAIRS.get(),
-                ModBlocks.DRIPSTONE_WALL.get(),
-
-                //Calcite
-                ModBlocks.CALCITE_SLAB.get(),
-                ModBlocks.CALCITE_STAIRS.get(),
-                ModBlocks.CALCITE_WALL.get(),
-
-                //Concrete
-                    //Slabs
-                    ModBlocks.WHITE_CONCRETE_SLAB.get(),
-                    ModBlocks.LIGHT_GRAY_CONCRETE_SLAB.get(),
-                    ModBlocks.GRAY_CONCRETE_SLAB.get(),
-                    ModBlocks.BLACK_CONCRETE_SLAB.get(),
-                    ModBlocks.BROWN_CONCRETE_SLAB.get(),
-                    ModBlocks.RED_CONCRETE_SLAB.get(),
-                    ModBlocks.ORANGE_CONCRETE_SLAB.get(),
-                    ModBlocks.YELLOW_CONCRETE_SLAB.get(),
-                    ModBlocks.LIME_CONCRETE_SLAB.get(),
-                    ModBlocks.GREEN_CONCRETE_SLAB.get(),
-                    ModBlocks.CYAN_CONCRETE_SLAB.get(),
-                    ModBlocks.LIGHT_BLUE_CONCRETE_SLAB.get(),
-                    ModBlocks.BLUE_CONCRETE_SLAB.get(),
-                    ModBlocks.PURPLE_CONCRETE_SLAB.get(),
-                    ModBlocks.MAGENTA_CONCRETE_SLAB.get(),
-                    ModBlocks.PINK_CONCRETE_SLAB.get(),
-
-                    //Stairs
-                    ModBlocks.WHITE_CONCRETE_STAIRS.get(),
-                    ModBlocks.LIGHT_GRAY_CONCRETE_STAIRS.get(),
-                    ModBlocks.GRAY_CONCRETE_STAIRS.get(),
-                    ModBlocks.BLACK_CONCRETE_STAIRS.get(),
-                    ModBlocks.BROWN_CONCRETE_STAIRS.get(),
-                    ModBlocks.RED_CONCRETE_STAIRS.get(),
-                    ModBlocks.ORANGE_CONCRETE_STAIRS.get(),
-                    ModBlocks.YELLOW_CONCRETE_STAIRS.get(),
-                    ModBlocks.LIME_CONCRETE_STAIRS.get(),
-                    ModBlocks.GREEN_CONCRETE_STAIRS.get(),
-                    ModBlocks.CYAN_CONCRETE_STAIRS.get(),
-                    ModBlocks.LIGHT_BLUE_CONCRETE_STAIRS.get(),
-                    ModBlocks.BLUE_CONCRETE_STAIRS.get(),
-                    ModBlocks.PURPLE_CONCRETE_STAIRS.get(),
-                    ModBlocks.MAGENTA_CONCRETE_STAIRS.get(),
-                    ModBlocks.PINK_CONCRETE_STAIRS.get(),
-
                 //Limestone bricks
                 ModBlocks.LIMESTONE_BRICKS.get(),
                 ModBlocks.LIMESTONE_BRICK_SLAB.get(),
@@ -556,11 +421,21 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.MECHANICAL_GRINDER.get(),
                 ModBlocks.GEM_POLISHER.get(),
 
-                ModBlocks.NETHER_COPPER_ORE.get(),
-                ModBlocks.TIN_BLOCK.get(),
-                ModBlocks.ZINC_BLOCK.get(),
+                //Ores
+                ModBlocks.BAUXITE.get(),
+                ModBlocks.WHITE_BAUXITE.get(),
+                ModBlocks.LIGHT_GRAY_BAUXITE.get(),
+                ModBlocks.BROWN_BAUXITE.get(),
+                ModBlocks.RED_BAUXITE.get(),
+                ModBlocks.ORANGE_BAUXITE.get(),
+                ModBlocks.YELLOW_BAUXITE.get(),
                 ModBlocks.TIN_ORE.get(),
-                ModBlocks.ZINC_ORE.get()
+                ModBlocks.ZINC_ORE.get(),
+                ModBlocks.NETHER_COPPER_ORE.get(),
+
+                //Others
+                ModBlocks.TIN_BLOCK.get(),
+                ModBlocks.ZINC_BLOCK.get()
         );
 
         this.tag(ModTags.Blocks.NEEDS_BRASS_TOOL).add(
@@ -669,7 +544,14 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.DEEPSLATE_SAPPHIRE_ORE.get(),
                 ModBlocks.DEEPSLATE_SULFUR_ORE.get(),
                 ModBlocks.NETHER_SULFUR_ORE.get(),
-                ModBlocks.DEEPSLATE_COBALT_ORE.get()
+                ModBlocks.DEEPSLATE_COBALT_ORE.get(),
+                ModBlocks.BAUXITE.get(),
+                ModBlocks.WHITE_BAUXITE.get(),
+                ModBlocks.LIGHT_GRAY_BAUXITE.get(),
+                ModBlocks.BROWN_BAUXITE.get(),
+                ModBlocks.RED_BAUXITE.get(),
+                ModBlocks.ORANGE_BAUXITE.get(),
+                ModBlocks.YELLOW_BAUXITE.get()
         );
 
         this.tag(BlockTags.BEACON_BASE_BLOCKS).add(

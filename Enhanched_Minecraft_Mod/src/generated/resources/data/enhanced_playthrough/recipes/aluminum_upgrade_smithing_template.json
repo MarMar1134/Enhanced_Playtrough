@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "enhanced_playthrough:aluminum_upgrade_smithing_template"
+    },
+    "S": {
+      "tag": "enhanced_playthrough:terracotta_shard"
+    },
+    "V": {
+      "item": "enhanced_playthrough:aluminum_ingot"
+    }
+  },
+  "pattern": [
+    "SAS",
+    "SVS",
+    "SSS"
+  ],
+  "result": {
+    "count": 2,
+    "item": "enhanced_playthrough:aluminum_upgrade_smithing_template"
+  },
+  "show_notification": true
+}

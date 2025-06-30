@@ -64,28 +64,43 @@ public class ModTabs {
                         output.accept(ModItems.NETHERRACK_RUBBLE.get());
                         output.accept(ModItems.BLACKSTONE_COBBLE.get());
 
+                        //Terracotta shards
+                        output.accept(ModItems.WHITE_TERRACOTTA_SHARD.get());
+                        output.accept(ModItems.ORANGE_TERRACOTTA_SHARD.get());
+                        output.accept(ModItems.MAGENTA_TERRACOTTA_SHARD.get());
+                        output.accept(ModItems.LIGHT_BLUE_TERRACOTTA_SHARD.get());
+                        output.accept(ModItems.YELLOW_TERRACOTTA_SHARD.get());
+                        output.accept(ModItems.LIME_TERRACOTTA_SHARD.get());
+                        output.accept(ModItems.PINK_TERRACOTTA_SHARD.get());
+                        output.accept(ModItems.GRAY_TERRACOTTA_SHARD.get());
+                        output.accept(ModItems.LIGHT_GRAY_TERRACOTTA_SHARD.get());
+                        output.accept(ModItems.CYAN_TERRACOTTA_SHARD.get());
+                        output.accept(ModItems.PURPLE_TERRACOTTA_SHARD.get());
+                        output.accept(ModItems.BLUE_TERRACOTTA_SHARD.get());
+                        output.accept(ModItems.BROWN_TERRACOTTA_SHARD.get());
+                        output.accept(ModItems.GREEN_TERRACOTTA_SHARD.get());
+                        output.accept(ModItems.RED_TERRACOTTA_SHARD.get());
+                        output.accept(ModItems.BLACK_TERRACOTTA_SHARD.get());
+                        output.accept(ModItems.TERRACOTTA_SHARD.get());
+
                         //Misc
                         output.accept(ModItems.REED_HEAD.get());
                         output.accept(ModItems.WATER_REED_HEAD.get());
                         output.accept(ModItems.VEGETABLE_FIBBER.get());
                         output.accept(ModItems.MUD_BRICK.get());
                         output.accept(ModItems.FIREBRICK.get());
+                        output.accept(ModItems.ALUMINUM_ROD.get());
                         output.accept(ModItems.BRONZIUM_SMITHING_UPGRADE_TEMPLATE.get());
+                        output.accept(ModItems.ALUMINUM_SMITHING_UPGRADE_TEMPLATE.get());
 
                         //Raw
-                        output.accept(Items.COAL);
-
-                        output.accept(Items.RAW_GOLD);
-
                         output.accept(ModItems.RAW_SILVER.get());
 
-                        output.accept(Items.RAW_COPPER);
+                        output.accept(ModItems.RAW_ALUMINUM.get());
 
                         output.accept(ModItems.RAW_ZINC.get());
 
                         output.accept(ModItems.RAW_TIN.get());
-
-                        output.accept(Items.RAW_IRON);
 
                         output.accept(ModItems.SULFUR.get());
 
@@ -96,6 +111,10 @@ public class ModTabs {
                         output.accept(ModItems.SILVER_INGOT.get());
                         output.accept(ModItems.SILVER_DUST.get());
                         output.accept(ModItems.SILVER_NUGGET.get());
+
+                        output.accept(ModItems.ALUMINUM_INGOT.get());
+                        output.accept(ModItems.ALUMINUM_DUST.get());
+                        output.accept(ModItems.ALUMINUM_NUGGET.get());
 
                         output.accept(Items.COPPER_INGOT);
                         output.accept(ModItems.COPPER_DUST.get());
@@ -144,7 +163,7 @@ public class ModTabs {
     public static final RegistryObject<CreativeModeTab> TOOLS = TABS.register(
             "tools", () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.STEEL_PICKAXE.get()))
                     .title((Component.translatable("creativetab." + EnhancedPlaythrough.MOD_ID + ".tools")))
-                    .withTabsAfter(ModTabs.WEAPONS.getId())
+                    .withTabsAfter(ModTabs.ALUMINUM_TOOLS.getId())
                     .withTabsBefore(ModTabs.UTILITY.getId())
                     .displayItems((itemDisplayParameters, output) -> {
                         //Silver
@@ -219,11 +238,134 @@ public class ModTabs {
                         output.accept(ModItems.LEMON_CHEST_BOAT.get());
                     }).build());
 
+    public static final RegistryObject<CreativeModeTab> ALUMINUM_TOOLS = TABS.register(
+            "aluminum_tools", () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.ALUMINUM_STEEL_PICKAXE.get()))
+                    .title((Component.translatable("creativetab." + EnhancedPlaythrough.MOD_ID + ".aluminum_tools")))
+                    .withTabsAfter(ModTabs.WEAPONS.getId())
+                    .withTabsBefore(ModTabs.TOOLS.getId())
+                    .displayItems((itemDisplayParameters, output) -> {
+                        //Aluminum Wooden
+                        output.accept(ModItems.ALUMINUM_WOODEN_PICKAXE.get());
+                        output.accept(ModItems.ALUMINUM_WOODEN_AXE.get());
+                        output.accept(ModItems.ALUMINUM_WOODEN_SHOVEL.get());
+                        output.accept(ModItems.ALUMINUM_WOODEN_HOE.get());
+                        output.accept(ModItems.ALUMINUM_WOODEN_SWORD.get());
+                        output.accept(ModItems.ALUMINUM_WOODEN_DAGGER.get());
+
+                        //Aluminum Stone
+                        output.accept(ModItems.ALUMINUM_STONE_PICKAXE.get());
+                        output.accept(ModItems.ALUMINUM_STONE_AXE.get());
+                        output.accept(ModItems.ALUMINUM_STONE_SHOVEL.get());
+                        output.accept(ModItems.ALUMINUM_STONE_HOE.get());
+                        output.accept(ModItems.ALUMINUM_STONE_POLISHER.get());
+                        output.accept(ModItems.ALUMINUM_STONE_SWORD.get());
+                        output.accept(ModItems.ALUMINUM_STONE_DAGGER.get());
+
+                        //Aluminum Golden
+                        output.accept(ModItems.ALUMINUM_GOLDEN_PICKAXE.get());
+                        output.accept(ModItems.ALUMINUM_GOLDEN_AXE.get());
+                        output.accept(ModItems.ALUMINUM_GOLDEN_SHOVEL.get());
+                        output.accept(ModItems.ALUMINUM_GOLDEN_HOE.get());
+                        output.accept(ModItems.ALUMINUM_GOLDEN_POLISHER.get());
+                        output.accept(ModItems.ALUMINUM_GOLDEN_SWORD.get());
+                        output.accept(ModItems.ALUMINUM_GOLDEN_DAGGER.get());
+
+                        //Aluminum Silver
+                        output.accept(ModItems.ALUMINUM_SILVER_PICKAXE.get());
+                        output.accept(ModItems.ALUMINUM_SILVER_AXE.get());
+                        output.accept(ModItems.ALUMINUM_SILVER_SHOVEL.get());
+                        output.accept(ModItems.ALUMINUM_SILVER_HOE.get());
+                        output.accept(ModItems.ALUMINUM_SILVER_POLISHER.get());
+                        output.accept(ModItems.ALUMINUM_SILVER_SWORD.get());
+                        output.accept(ModItems.ALUMINUM_SILVER_DAGGER.get());
+
+                        //Aluminum Bronze
+                        output.accept(ModItems.ALUMINUM_BRONZE_PICKAXE.get());
+                        output.accept(ModItems.ALUMINUM_BRONZE_AXE.get());
+                        output.accept(ModItems.ALUMINUM_BRONZE_SHOVEL.get());
+                        output.accept(ModItems.ALUMINUM_BRONZE_HOE.get());
+                        output.accept(ModItems.ALUMINUM_BRONZE_POLISHER.get());
+                        output.accept(ModItems.ALUMINUM_BRONZE_SWORD.get());
+                        output.accept(ModItems.ALUMINUM_BRONZE_DAGGER.get());
+
+                        //Aluminum Brass
+                        output.accept(ModItems.ALUMINUM_BRASS_PICKAXE.get());
+                        output.accept(ModItems.ALUMINUM_BRASS_AXE.get());
+                        output.accept(ModItems.ALUMINUM_BRASS_SHOVEL.get());
+                        output.accept(ModItems.ALUMINUM_BRASS_HOE.get());
+                        output.accept(ModItems.ALUMINUM_BRASS_POLISHER.get());
+                        output.accept(ModItems.ALUMINUM_BRASS_SWORD.get());
+                        output.accept(ModItems.ALUMINUM_BRASS_DAGGER.get());
+
+                        //Aluminum Rose Gold
+                        output.accept(ModItems.ALUMINUM_ROSE_GOLDEN_PICKAXE.get());
+                        output.accept(ModItems.ALUMINUM_ROSE_GOLDEN_AXE.get());
+                        output.accept(ModItems.ALUMINUM_ROSE_GOLDEN_SHOVEL.get());
+                        output.accept(ModItems.ALUMINUM_ROSE_GOLDEN_HOE.get());
+                        output.accept(ModItems.ALUMINUM_ROSE_GOLDEN_POLISHER.get());
+                        output.accept(ModItems.ALUMINUM_ROSE_GOLDEN_SWORD.get());
+                        output.accept(ModItems.ALUMINUM_ROSE_GOLDEN_DAGGER.get());
+
+                        //Aluminum Iron
+                        output.accept(ModItems.ALUMINUM_IRON_PICKAXE.get());
+                        output.accept(ModItems.ALUMINUM_IRON_AXE.get());
+                        output.accept(ModItems.ALUMINUM_IRON_SHOVEL.get());
+                        output.accept(ModItems.ALUMINUM_IRON_HOE.get());
+                        output.accept(ModItems.ALUMINUM_IRON_POLISHER.get());
+                        output.accept(ModItems.ALUMINUM_IRON_SWORD.get());
+                        output.accept(ModItems.ALUMINUM_IRON_DAGGER.get());
+
+                        //Aluminum Bronzium
+                        output.accept(ModItems.ALUMINUM_BRONZIUM_PICKAXE.get());
+                        output.accept(ModItems.ALUMINUM_BRONZIUM_AXE.get());
+                        output.accept(ModItems.ALUMINUM_BRONZIUM_SHOVEL.get());
+                        output.accept(ModItems.ALUMINUM_BRONZIUM_HOE.get());
+                        output.accept(ModItems.ALUMINUM_BRONZIUM_POLISHER.get());
+                        output.accept(ModItems.ALUMINUM_BRONZIUM_SWORD.get());
+                        output.accept(ModItems.ALUMINUM_BRONZIUM_DAGGER.get());
+
+                        //Aluminum Green Gold
+                        output.accept(ModItems.ALUMINUM_GREEN_GOLDEN_PICKAXE.get());
+                        output.accept(ModItems.ALUMINUM_GREEN_GOLDEN_AXE.get());
+                        output.accept(ModItems.ALUMINUM_GREEN_GOLDEN_SHOVEL.get());
+                        output.accept(ModItems.ALUMINUM_GREEN_GOLDEN_HOE.get());
+                        output.accept(ModItems.ALUMINUM_GREEN_GOLDEN_POLISHER.get());
+                        output.accept(ModItems.ALUMINUM_GREEN_GOLDEN_SWORD.get());
+                        output.accept(ModItems.ALUMINUM_GREEN_GOLDEN_DAGGER.get());
+
+                        //Aluminum Steel
+                        output.accept(ModItems.ALUMINUM_STEEL_PICKAXE.get());
+                        output.accept(ModItems.ALUMINUM_STEEL_AXE.get());
+                        output.accept(ModItems.ALUMINUM_STEEL_SHOVEL.get());
+                        output.accept(ModItems.ALUMINUM_STEEL_HOE.get());
+                        output.accept(ModItems.ALUMINUM_STEEL_POLISHER.get());
+                        output.accept(ModItems.ALUMINUM_STEEL_SWORD.get());
+                        output.accept(ModItems.ALUMINUM_STEEL_DAGGER.get());
+
+                        //Aluminum Blue Gold
+                        output.accept(ModItems.ALUMINUM_BLUE_GOLDEN_PICKAXE.get());
+                        output.accept(ModItems.ALUMINUM_BLUE_GOLDEN_AXE.get());
+                        output.accept(ModItems.ALUMINUM_BLUE_GOLDEN_SHOVEL.get());
+                        output.accept(ModItems.ALUMINUM_BLUE_GOLDEN_HOE.get());
+                        output.accept(ModItems.ALUMINUM_BLUE_GOLDEN_POLISHER.get());
+                        output.accept(ModItems.ALUMINUM_BLUE_GOLDEN_SWORD.get());
+                        output.accept(ModItems.ALUMINUM_BLUE_GOLDEN_DAGGER.get());
+
+                        //Aluminum Diamond
+                        output.accept(ModItems.ALUMINUM_DIAMOND_PICKAXE.get());
+                        output.accept(ModItems.ALUMINUM_DIAMOND_AXE.get());
+                        output.accept(ModItems.ALUMINUM_DIAMOND_SHOVEL.get());
+                        output.accept(ModItems.ALUMINUM_DIAMOND_HOE.get());
+                        output.accept(ModItems.ALUMINUM_DIAMOND_POLISHER.get());
+                        output.accept(ModItems.ALUMINUM_DIAMOND_SWORD.get());
+                        output.accept(ModItems.ALUMINUM_DIAMOND_DAGGER.get());
+                    }).build());
+
     public static final RegistryObject<CreativeModeTab> WEAPONS = TABS.register(
             "weapons",() -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.STEEL_SWORD.get()))
                     .title(Component.translatable("creativetab." + EnhancedPlaythrough.MOD_ID + ".weapons"))
                     .withTabsAfter(ModTabs.JEWELERY.getId())
-                    .withTabsBefore(ModTabs.TOOLS.getId())
+                    .withTabsBefore(ModTabs.ALUMINUM_TOOLS.getId())
                     .displayItems((itemDisplayParameters, output) -> {
                         //Silver
                         output.accept(ModItems.SILVER_SWORD.get());
@@ -534,20 +676,6 @@ public class ModTabs {
                     .withTabsBefore(ModTabs.MINERALS.getId())
                     .withSearchBar()
                     .displayItems((itemDisplayParameters, output) ->{
-                        output.accept(ModBlocks.STONE_WALL.get());
-
-                        output.accept(ModBlocks.POLISHED_DIORITE_WALL.get());
-                        output.accept(ModBlocks.POLISHED_ANDESITE_WALL.get());
-                        output.accept(ModBlocks.POLISHED_GRANITE_WALL.get());
-
-                        output.accept(ModBlocks.DRIPSTONE_SLAB.get());
-                        output.accept(ModBlocks.DRIPSTONE_STAIRS.get());
-                        output.accept(ModBlocks.DRIPSTONE_WALL.get());
-
-                        output.accept(ModBlocks.CALCITE_SLAB.get());
-                        output.accept(ModBlocks.CALCITE_STAIRS.get());
-                        output.accept(ModBlocks.CALCITE_WALL.get());
-
                         output.accept(ModBlocks.POLISHED_STONE.get());
                         output.accept(ModBlocks.POLISHED_STONE_SLAB.get());
                         output.accept(ModBlocks.POLISHED_STONE_STAIRS.get());
@@ -594,39 +722,6 @@ public class ModTabs {
                         output.accept(ModBlocks.STEEL_BLOCK.get());
                         output.accept(ModBlocks.GREEN_GOLD_BLOCK.get());
                         output.accept(ModBlocks.BLUE_GOLD_BLOCK.get());
-
-                        output.accept(ModBlocks.WHITE_CONCRETE_SLAB.get());
-                        output.accept(ModBlocks.WHITE_CONCRETE_STAIRS.get());
-                        output.accept(ModBlocks.LIGHT_GRAY_CONCRETE_SLAB.get());
-                        output.accept(ModBlocks.LIGHT_GRAY_CONCRETE_STAIRS.get());
-                        output.accept(ModBlocks.GRAY_CONCRETE_SLAB.get());
-                        output.accept(ModBlocks.GRAY_CONCRETE_STAIRS.get());
-                        output.accept(ModBlocks.BLACK_CONCRETE_SLAB.get());
-                        output.accept(ModBlocks.BLACK_CONCRETE_STAIRS.get());
-                        output.accept(ModBlocks.BROWN_CONCRETE_SLAB.get());
-                        output.accept(ModBlocks.BROWN_CONCRETE_STAIRS.get());
-                        output.accept(ModBlocks.RED_CONCRETE_SLAB.get());
-                        output.accept(ModBlocks.RED_CONCRETE_STAIRS.get());
-                        output.accept(ModBlocks.ORANGE_CONCRETE_SLAB.get());
-                        output.accept(ModBlocks.ORANGE_CONCRETE_STAIRS.get());
-                        output.accept(ModBlocks.YELLOW_CONCRETE_SLAB.get());
-                        output.accept(ModBlocks.YELLOW_CONCRETE_STAIRS.get());
-                        output.accept(ModBlocks.LIME_CONCRETE_SLAB.get());
-                        output.accept(ModBlocks.LIME_CONCRETE_STAIRS.get());
-                        output.accept(ModBlocks.GREEN_CONCRETE_SLAB.get());
-                        output.accept(ModBlocks.GREEN_CONCRETE_STAIRS.get());
-                        output.accept(ModBlocks.CYAN_CONCRETE_SLAB.get());
-                        output.accept(ModBlocks.CYAN_CONCRETE_STAIRS.get());
-                        output.accept(ModBlocks.LIGHT_BLUE_CONCRETE_SLAB.get());
-                        output.accept(ModBlocks.LIGHT_BLUE_CONCRETE_STAIRS.get());
-                        output.accept(ModBlocks.BLUE_CONCRETE_SLAB.get());
-                        output.accept(ModBlocks.BLUE_CONCRETE_STAIRS.get());
-                        output.accept(ModBlocks.PURPLE_CONCRETE_SLAB.get());
-                        output.accept(ModBlocks.PURPLE_CONCRETE_STAIRS.get());
-                        output.accept(ModBlocks.MAGENTA_CONCRETE_SLAB.get());
-                        output.accept(ModBlocks.MAGENTA_CONCRETE_STAIRS.get());
-                        output.accept(ModBlocks.PINK_CONCRETE_SLAB.get());
-                        output.accept(ModBlocks.PINK_CONCRETE_STAIRS.get());
                     }).build());
 
     public static void register(IEventBus eventBus){

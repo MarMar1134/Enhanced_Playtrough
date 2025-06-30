@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_aluminum_silver_dagger": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:aluminum_silver_dagger"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_silver_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:silver_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "enhanced_playthrough:aluminum_silver_dagger"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_silver_ingot",
+      "has_aluminum_silver_dagger",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "enhanced_playthrough:aluminum_silver_dagger"
+    ]
+  },
+  "sends_telemetry_event": false
+}

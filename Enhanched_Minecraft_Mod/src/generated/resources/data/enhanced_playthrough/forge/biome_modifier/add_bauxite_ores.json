@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#minecraft:is_badlands",
+  "features": "enhanced_playthrough:bauxite_ores_placed",
+  "step": "underground_ores"
+}

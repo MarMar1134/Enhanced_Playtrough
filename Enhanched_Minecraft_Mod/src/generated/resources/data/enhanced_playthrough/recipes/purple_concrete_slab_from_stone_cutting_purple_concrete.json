@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "item": "minecraft:purple_concrete"
-  },
-  "result": "enhanced_playthrough:purple_concrete_slab"
-}

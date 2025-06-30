@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_aluminum_green_golden_polisher": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:aluminum_green_golden_polisher"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_green_gold_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:green_gold_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "enhanced_playthrough:aluminum_green_golden_polisher"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_green_gold_ingot",
+      "has_aluminum_green_golden_polisher",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "enhanced_playthrough:aluminum_green_golden_polisher"
+    ]
+  },
+  "sends_telemetry_event": false
+}

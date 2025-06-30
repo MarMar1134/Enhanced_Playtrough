@@ -49,7 +49,9 @@ public class AlloyRecipeSubProvider extends RecipeProvider {
                 AlloyRecipeCategory.COMPLEX_ALLOY, "bronzium_ingot");
 
         //Firebrick
-        singleIngredientAlloying(consumer, Items.CLAY_BALL, ModItems.FIREBRICK.get(), 2,
+        superOreAlloying(consumer, ModItems.RAW_ALUMINUM.get(), Items.CLAY_BALL, ModItems.FIREBRICK.get(), 2,
+                AlloyRecipeCategory.SIMPLE_ALLOY, "firebrick");
+        superOreAlloying(consumer, ModItems.ALUMINUM_DUST.get(), Items.CLAY_BALL, ModItems.FIREBRICK.get(), 4,
                 AlloyRecipeCategory.SIMPLE_ALLOY, "firebrick");
 
         //Green gold

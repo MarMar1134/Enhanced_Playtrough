@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "enhanced_playthrough:item/aluminum_golden_dagger"
+  }
+}

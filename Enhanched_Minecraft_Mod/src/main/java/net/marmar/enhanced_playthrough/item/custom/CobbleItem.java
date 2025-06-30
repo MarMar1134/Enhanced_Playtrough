@@ -12,8 +12,11 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 
 public class CobbleItem extends Item {
-    public CobbleItem(Properties pProperties) {
+    private final int cobbleDamage;
+
+    public CobbleItem(Properties pProperties, int cobbleDamage) {
         super(pProperties);
+        this.cobbleDamage = cobbleDamage;
     }
 
     @Override
@@ -24,7 +27,7 @@ public class CobbleItem extends Item {
                 SoundEvents.SNOWBALL_THROW, SoundSource.NEUTRAL, 0.5F, 0.4F / (pLevel.getRandom().nextFloat() * 0.4F + 0.8F));
 
         if (!pLevel.isClientSide) {
-            CobbleProjectileEntity cobble = new CobbleProjectileEntity(pLevel, pPlayer);
+            CobbleProjectileEntity cobble = new CobbleProjectileEntity(pLevel, pPlayer, this.cobbleDamage);
             cobble.setItem(itemStack);
             cobble.shootFromRotation(pPlayer, pPlayer.getXRot(), pPlayer.getYRot(), 0.0F, 1.5F, 1.0F);
             pLevel.addFreshEntity(cobble);

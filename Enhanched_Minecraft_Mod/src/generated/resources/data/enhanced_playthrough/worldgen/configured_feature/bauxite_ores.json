@@ -1,0 +1,72 @@
+{
+  "type": "minecraft:ore",
+  "config": {
+    "discard_chance_on_air_exposure": 0.0,
+    "size": 8,
+    "targets": [
+      {
+        "state": {
+          "Name": "enhanced_playthrough:bauxite"
+        },
+        "target": {
+          "block": "minecraft:terracotta",
+          "predicate_type": "minecraft:block_match"
+        }
+      },
+      {
+        "state": {
+          "Name": "enhanced_playthrough:white_bauxite"
+        },
+        "target": {
+          "block": "minecraft:white_terracotta",
+          "predicate_type": "minecraft:block_match"
+        }
+      },
+      {
+        "state": {
+          "Name": "enhanced_playthrough:light_gray_bauxite"
+        },
+        "target": {
+          "block": "minecraft:light_gray_terracotta",
+          "predicate_type": "minecraft:block_match"
+        }
+      },
+      {
+        "state": {
+          "Name": "enhanced_playthrough:brown_bauxite"
+        },
+        "target": {
+          "block": "minecraft:brown_terracotta",
+          "predicate_type": "minecraft:block_match"
+        }
+      },
+      {
+        "state": {
+          "Name": "enhanced_playthrough:red_bauxite"
+        },
+        "target": {
+          "block": "minecraft:red_terracotta",
+          "predicate_type": "minecraft:block_match"
+        }
+      },
+      {
+        "state": {
+          "Name": "enhanced_playthrough:orange_bauxite"
+        },
+        "target": {
+          "block": "minecraft:orange_terracotta",
+          "predicate_type": "minecraft:block_match"
+        }
+      },
+      {
+        "state": {
+          "Name": "enhanced_playthrough:yellow_bauxite"
+        },
+        "target": {
+          "block": "minecraft:yellow_terracotta",
+          "predicate_type": "minecraft:block_match"
+        }
+      }
+    ]
+  }
+}

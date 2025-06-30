@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "tag": "enhanced_playthrough:rods/aluminum"
+    },
+    "I": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "pattern": [
+    "III",
+    " # ",
+    " # "
+  ],
+  "result": {
+    "item": "enhanced_playthrough:aluminum_diamond_pickaxe"
+  },
+  "show_notification": true
+}

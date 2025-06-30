@@ -37,12 +37,21 @@ public class ModSmithingTemplateItem extends SmithingTemplateItem {
         return List.of(EMPTY_SLOT_INGOT);
     }
 
-    public static ModSmithingTemplateItem CreateSmithingUpgradeTemplate(String material){
-        Component SMITHING_UPGRADE = Component.translatable("smithing." + EnhancedPlaythrough.MOD_ID + "." + material + ".title").withStyle(TITLES);
-        Component APPLIES_TO = Component.translatable("smithing." + EnhancedPlaythrough.MOD_ID + "." + material + ".applies_to").withStyle(DESCS);
-        Component INGREDIENTS = Component.translatable("smithing." + EnhancedPlaythrough.MOD_ID + "." + material + ".ingredients").withStyle(DESCS);
-        Component BASE_SLOT_DESCRIPTION = Component.translatable("smithing." + EnhancedPlaythrough.MOD_ID + "." + material + ".base_slot_description");
-        Component ADDITIONS_SLOT_DESCRIPTION = Component.translatable("smithing." + EnhancedPlaythrough.MOD_ID + "." + material + ".additions_slot_description");
+    public static ModSmithingTemplateItem createBronziumSmithingTemplate(){
+        Component SMITHING_UPGRADE = Component.translatable("smithing." + EnhancedPlaythrough.MOD_ID + ".bronzium.title").withStyle(TITLES);
+        Component APPLIES_TO = Component.translatable("smithing." + EnhancedPlaythrough.MOD_ID + ".bronzium.applies_to").withStyle(DESCS);
+        Component INGREDIENTS = Component.translatable("smithing." + EnhancedPlaythrough.MOD_ID + ".bronzium.ingredients").withStyle(DESCS);
+        Component BASE_SLOT_DESCRIPTION = Component.translatable("smithing." + EnhancedPlaythrough.MOD_ID + ".bronzium.base_slot_description");
+        Component ADDITIONS_SLOT_DESCRIPTION = Component.translatable("smithing." + EnhancedPlaythrough.MOD_ID + ".bronzium.additions_slot_description");
+        return new ModSmithingTemplateItem(APPLIES_TO, INGREDIENTS, SMITHING_UPGRADE, BASE_SLOT_DESCRIPTION, ADDITIONS_SLOT_DESCRIPTION, createSmithingUpgradeIconList(), createSmithingUpgradeMaterialList());
+    }
+
+    public static ModSmithingTemplateItem createAluminumSmithingUpgrade(){
+        Component SMITHING_UPGRADE = Component.translatable("smithing." + EnhancedPlaythrough.MOD_ID + ".aluminum.title").withStyle(TITLES);
+        Component APPLIES_TO = Component.translatable("smithing." + EnhancedPlaythrough.MOD_ID + ".aluminum.applies_to").withStyle(DESCS);
+        Component INGREDIENTS = Component.translatable("smithing." + EnhancedPlaythrough.MOD_ID + ".aluminum.ingredients").withStyle(DESCS);
+        Component BASE_SLOT_DESCRIPTION = Component.translatable("smithing." + EnhancedPlaythrough.MOD_ID + ".aluminum.base_slot_description");
+        Component ADDITIONS_SLOT_DESCRIPTION = Component.translatable("smithing." + EnhancedPlaythrough.MOD_ID + ".aluminum.additions_slot_description");
         return new ModSmithingTemplateItem(APPLIES_TO, INGREDIENTS, SMITHING_UPGRADE, BASE_SLOT_DESCRIPTION, ADDITIONS_SLOT_DESCRIPTION, createSmithingUpgradeIconList(), createSmithingUpgradeMaterialList());
     }
 

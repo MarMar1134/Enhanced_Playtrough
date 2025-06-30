@@ -16,6 +16,7 @@ public class VenezuelanLanguageProvider extends AbstractModLanguageProvider{
         //Creative tabs
         addCreativeTab("weapons", "Armas y armaduras");
         addCreativeTab("tools", "Herramientas");
+        addCreativeTab("aluminum_tools", "Herramientas de aluminio");
         addCreativeTab("minerals", "Minerales");
         addCreativeTab("jewelery", "Joyeria");
         addCreativeTab("utility", "Utiles");
@@ -51,6 +52,7 @@ public class VenezuelanLanguageProvider extends AbstractModLanguageProvider{
         addGuiElements("gem_polisher_screen", "Usos");
 
         //Descriptions
+        addDescription("aluminum_tool", "Mango de aluminio: 20% mayor durabilidad");
         addDescription("polisher_item","Utilizado en el pulidor de gemas como combustible");
         addDescription("silver_armor", "Con toda la equipación: otorga Apuro al jugador");
         addDescription("rose_gold_armor", "Con toda la equipación: otorga Apuro al jugador");
@@ -223,61 +225,6 @@ public class VenezuelanLanguageProvider extends AbstractModLanguageProvider{
                 addBlock(ModBlocks.LIME_SAPLING, "Brote de limera");
                 addBlock(ModBlocks.LIME_LEAVES, "Hojas de limera");
 
-        //Stone
-        addBlock(ModBlocks.STONE_WALL, "Pared de piedra");
-
-        //D,A,G
-        addBlock(ModBlocks.POLISHED_DIORITE_WALL, "Pared de diorita pulida");
-        addBlock(ModBlocks.POLISHED_ANDESITE_WALL, "Pared de andesita pulida");
-        addBlock(ModBlocks.POLISHED_GRANITE_WALL, "Pared de granito pulido");
-
-        //Dripstone
-        addBlock(ModBlocks.DRIPSTONE_SLAB, "Baldosa de bloque de espeleotema");
-        addBlock(ModBlocks.DRIPSTONE_STAIRS, "Escaleras de bloque de espeleotema");
-        addBlock(ModBlocks.DRIPSTONE_WALL, "Pared de bloque de espeleotema");
-
-        //Calcite
-        addBlock(ModBlocks.CALCITE_SLAB, "Baldosa de calcita");
-        addBlock(ModBlocks.CALCITE_STAIRS, "Escaleras de calcita");
-        addBlock(ModBlocks.CALCITE_WALL, "Pared de calcita");
-
-        //Concrete
-            //Slabs
-            addBlock(ModBlocks.WHITE_CONCRETE_SLAB, "Baldosa de concreto blanco");
-            addBlock(ModBlocks.BLACK_CONCRETE_SLAB, "Baldosa de concreto negro");
-            addBlock(ModBlocks.BROWN_CONCRETE_SLAB, "Baldosa de concreto marrón");
-            addBlock(ModBlocks.LIGHT_GRAY_CONCRETE_SLAB, "Baldosa de concreto gris claro");
-            addBlock(ModBlocks.GRAY_CONCRETE_SLAB, "Baldosa de concreto gris");
-            addBlock(ModBlocks.RED_CONCRETE_SLAB, "Baldosa de concreto rojo");
-            addBlock(ModBlocks.ORANGE_CONCRETE_SLAB, "Baldosa de concreto naranja");
-            addBlock(ModBlocks.YELLOW_CONCRETE_SLAB, "Baldosa de concreto amarillo");
-            addBlock(ModBlocks.LIME_CONCRETE_SLAB, "Baldosa de concreto lima");
-            addBlock(ModBlocks.GREEN_CONCRETE_SLAB, "Baldosa de concreto verde");
-            addBlock(ModBlocks.CYAN_CONCRETE_SLAB, "Baldosa de concreto cyan");
-            addBlock(ModBlocks.LIGHT_BLUE_CONCRETE_SLAB, "Baldosa de concreto celeste");
-            addBlock(ModBlocks.BLUE_CONCRETE_SLAB, "Baldosa de concreto azul");
-            addBlock(ModBlocks.PURPLE_CONCRETE_SLAB, "Baldosa de concreto púrpura");
-            addBlock(ModBlocks.MAGENTA_CONCRETE_SLAB, "Baldosa de concreto magenta");
-            addBlock(ModBlocks.PINK_CONCRETE_SLAB, "Baldosa de concreto rosa");
-
-            //Stairs
-            addBlock(ModBlocks.WHITE_CONCRETE_STAIRS, "Escaleras de concreto blanco");
-            addBlock(ModBlocks.BLACK_CONCRETE_STAIRS, "Escaleras de concreto negro");
-            addBlock(ModBlocks.BROWN_CONCRETE_STAIRS, "Escaleras de concreto marrón");
-            addBlock(ModBlocks.LIGHT_GRAY_CONCRETE_STAIRS, "Escaleras de concreto gris claro");
-            addBlock(ModBlocks.GRAY_CONCRETE_STAIRS, "Escaleras de concreto gris");
-            addBlock(ModBlocks.RED_CONCRETE_STAIRS, "Escaleras de concreto rojo");
-            addBlock(ModBlocks.ORANGE_CONCRETE_STAIRS, "Escaleras de concreto naranja");
-            addBlock(ModBlocks.YELLOW_CONCRETE_STAIRS, "Escaleras de concreto amarillo");
-            addBlock(ModBlocks.LIME_CONCRETE_STAIRS, "Escaleras de concreto lima");
-            addBlock(ModBlocks.GREEN_CONCRETE_STAIRS, "Escaleras de concreto verde");
-            addBlock(ModBlocks.CYAN_CONCRETE_STAIRS, "Escaleras de concreto cyan");
-            addBlock(ModBlocks.LIGHT_BLUE_CONCRETE_STAIRS, "Escaleras de concreto celeste");
-            addBlock(ModBlocks.BLUE_CONCRETE_STAIRS, "Escaleras de concreto azul");
-            addBlock(ModBlocks.PURPLE_CONCRETE_STAIRS, "Escaleras de concreto púrpura");
-            addBlock(ModBlocks.MAGENTA_CONCRETE_STAIRS, "Escaleras de concreto magenta");
-            addBlock(ModBlocks.PINK_CONCRETE_STAIRS, "Escaleras de concreto rosa");
-
         //Polished stone
         addBlock(ModBlocks.POLISHED_STONE, "Piedra pulida");
         addBlock(ModBlocks.POLISHED_STONE_SLAB, "Baldosa de piedra pulida");
@@ -340,6 +287,13 @@ public class VenezuelanLanguageProvider extends AbstractModLanguageProvider{
         addBlock(ModBlocks.NETHER_GARNET_ORE, "Mena de granate del nether");
         addBlock(ModBlocks.COBALT_ORE, "Mena de cobalto");
         addBlock(ModBlocks.DEEPSLATE_COBALT_ORE, "Mena de cobalto de pizarra profunda");
+        addBlock(ModBlocks.BAUXITE, "Bauxita");
+        addBlock(ModBlocks.WHITE_BAUXITE, "Bauxita blanca");
+        addBlock(ModBlocks.LIGHT_GRAY_BAUXITE, "Bauxita gris claro");
+        addBlock(ModBlocks.BROWN_BAUXITE, "Bauxita marrón");
+        addBlock(ModBlocks.RED_BAUXITE, "Bauxita roja");
+        addBlock(ModBlocks.ORANGE_BAUXITE, "Bauxita naranja");
+        addBlock(ModBlocks.YELLOW_BAUXITE, "Bauxita amarilla");
 
         //Ore blocks
         addBlock(ModBlocks.TIN_BLOCK, "Bloque de estaño");
@@ -365,73 +319,97 @@ public class VenezuelanLanguageProvider extends AbstractModLanguageProvider{
         addBlock(ModBlocks.MECHANICAL_GRINDER, "Moledora mecánizada");
 
         //Items
-        //Raw ores
-        addItem(ModItems.RAW_TIN, "Estaño en bruto");
-        addItem(ModItems.RAW_ZINC, "Zinc en bruto");
-        addItem(ModItems.RAW_SILVER, "Plata en bruto");
-        addItem(ModItems.RAW_EMERALD, "Esmeralda impura");
-        addItem(ModItems.RAW_SAPPHIRE, "Zafiro impuro");
-        addItem(ModItems.RAW_RUBY, "Rubi impuro");
-        addItem(ModItems.RAW_GARNET, "Granate impuro");
-        addItem(ModItems.RAW_DIAMOND, "Diamante impuro");
+            //Raw ores
+            addItem(ModItems.RAW_TIN, "Estaño en bruto");
+            addItem(ModItems.RAW_ZINC, "Zinc en bruto");
+            addItem(ModItems.RAW_SILVER, "Plata en bruto");
+            addItem(ModItems.RAW_ALUMINUM, "Aluminio en bruto");
+            addItem(ModItems.RAW_EMERALD, "Esmeralda impura");
+            addItem(ModItems.RAW_SAPPHIRE, "Zafiro impuro");
+            addItem(ModItems.RAW_RUBY, "Rubi impuro");
+            addItem(ModItems.RAW_GARNET, "Granate impuro");
+            addItem(ModItems.RAW_DIAMOND, "Diamante impuro");
 
-        //Materials and melted ores
-        addItem(ModItems.TIN_INGOT, "Lingote de estaño");
-        addItem(ModItems.TIN_NUGGET, "Pepita de estaño");
-        addItem(ModItems.ZINC_INGOT, "Lingote de zinc");
-        addItem(ModItems.ZINC_NUGGET, "Pepita de zinc");
-        addItem(ModItems.SULFUR, "Azufre");
-        addItem(ModItems.SILVER_INGOT, "Lingote de plata");
-        addItem(ModItems.SILVER_NUGGET, "Pepita de plata");
-        addItem(ModItems.BRASS_INGOT, "Lingote de latón");
-        addItem(ModItems.BRASS_NUGGET, "Pepita de latón");
-        addItem(ModItems.BRONZE_INGOT, "Lingote de bronce");
-        addItem(ModItems.BRONZE_NUGGET, "Pepita de bronce");
-        addItem(ModItems.ROSE_GOLD_INGOT, "Lingote de oro rosado");
-        addItem(ModItems.ROSE_GOLD_NUGGET, "Pepita de oro rosado");
-        addItem(ModItems.BRONZIUM_INGOT, "Lingote de broncio");
-        addItem(ModItems.BRONZIUM_NUGGET, "Pepita de broncio");
-        addItem(ModItems.GREEN_GOLD_INGOT, "Lingote de oro verde");
-        addItem(ModItems.GREEN_GOLD_NUGGET, "Pepita de oro verde");
-        addItem(ModItems.STEEL_INGOT, "Lingote de acero");
-        addItem(ModItems.BLUE_GOLD_INGOT, "Lingote de oro azul");
-        addItem(ModItems.BLUE_GOLD_NUGGET, "Pepita de oro verde");
-        addItem(ModItems.SAPPHIRE, "Zafiro");
-        addItem(ModItems.RUBY, "Rubí");
-        addItem(ModItems.GARNET, "Granate");
+            //Materials and melted ores
+            addItem(ModItems.TIN_INGOT, "Lingote de estaño");
+            addItem(ModItems.TIN_NUGGET, "Pepita de estaño");
+            addItem(ModItems.ZINC_INGOT, "Lingote de zinc");
+            addItem(ModItems.ZINC_NUGGET, "Pepita de zinc");
+            addItem(ModItems.SULFUR, "Azufre");
+            addItem(ModItems.SILVER_INGOT, "Lingote de plata");
+            addItem(ModItems.SILVER_NUGGET, "Pepita de plata");
+            addItem(ModItems.ALUMINUM_INGOT, "Lingote de aluminio");
+            addItem(ModItems.ALUMINUM_NUGGET, "Pepita de aluminio");
+            addItem(ModItems.BRASS_INGOT, "Lingote de latón");
+            addItem(ModItems.BRASS_NUGGET, "Pepita de latón");
+            addItem(ModItems.BRONZE_INGOT, "Lingote de bronce");
+            addItem(ModItems.BRONZE_NUGGET, "Pepita de bronce");
+            addItem(ModItems.ROSE_GOLD_INGOT, "Lingote de oro rosado");
+            addItem(ModItems.ROSE_GOLD_NUGGET, "Pepita de oro rosado");
+            addItem(ModItems.BRONZIUM_INGOT, "Lingote de broncio");
+            addItem(ModItems.BRONZIUM_NUGGET, "Pepita de broncio");
+            addItem(ModItems.GREEN_GOLD_INGOT, "Lingote de oro verde");
+            addItem(ModItems.GREEN_GOLD_NUGGET, "Pepita de oro verde");
+            addItem(ModItems.STEEL_INGOT, "Lingote de acero");
+            addItem(ModItems.BLUE_GOLD_INGOT, "Lingote de oro azul");
+            addItem(ModItems.BLUE_GOLD_NUGGET, "Pepita de oro verde");
+            addItem(ModItems.SAPPHIRE, "Zafiro");
+            addItem(ModItems.RUBY, "Rubí");
+            addItem(ModItems.GARNET, "Granate");
 
-        //Others
-        addItem(ModItems.MUD_BRICK, "Ladrillo de adobe");
-        addItem(ModItems.FIREBRICK, "Ladrillo refractario");
-        addItem(ModItems.COBALT, "Cobalto");
-        addItem(ModItems.REED_HEAD, "Cabeza de caña");
-        addItem(ModItems.WATER_REED_HEAD, "Cabeza de junco");
-        addItem(ModItems.VEGETABLE_FIBBER, "Fibra vegetal");
+            //Others
+            addItem(ModItems.MUD_BRICK, "Ladrillo de adobe");
+            addItem(ModItems.FIREBRICK, "Ladrillo refractario");
+            addItem(ModItems.ALUMINUM_ROD, "Vara de aluminio");
+            addItem(ModItems.COBALT, "Cobalto");
+            addItem(ModItems.REED_HEAD, "Cabeza de caña");
+            addItem(ModItems.WATER_REED_HEAD, "Cabeza de junco");
+            addItem(ModItems.VEGETABLE_FIBBER, "Fibra vegetal");
 
-        //Cobble
-        addItem(ModItems.COBBLE, "Adoquín");
-        addItem(ModItems.LIMESTONE_COBBLE, "Adoquín de piedra caliza");
-        addItem(ModItems.DEEPSLATE_COBBLE, "Adoquín de pizarra profunda");
-        addItem(ModItems.NETHERRACK_RUBBLE, "Restos de netherrack");
-        addItem(ModItems.BLACKSTONE_COBBLE, "Adoquín de piedra negra");
+            //Cobble
+            addItem(ModItems.COBBLE, "Adoquín");
+            addItem(ModItems.LIMESTONE_COBBLE, "Adoquín de piedra caliza");
+            addItem(ModItems.DEEPSLATE_COBBLE, "Adoquín de pizarra profunda");
+            addItem(ModItems.NETHERRACK_RUBBLE, "Restos de netherrack");
+            addItem(ModItems.BLACKSTONE_COBBLE, "Adoquín de piedra negra");
 
-        //Dusts
-        addItem(ModItems.GOLD_DUST, "Pólvo de oro");
-        addItem(ModItems.SILVER_DUST, "Pólvo de plata");
-        addItem(ModItems.ZINC_DUST, "Pólvo de zinc");
-        addItem(ModItems.TIN_DUST, "Pólvo de estaño");
-        addItem(ModItems.COPPER_DUST, "Pólvo de cobre");
-        addItem(ModItems.BRASS_DUST, "Pólvo de latón");
-        addItem(ModItems.BRONZE_DUST, "Pólvo de bronce");
-        addItem(ModItems.ROSE_GOLD_DUST, "Pólvo de oro rosado");
-        addItem(ModItems.IRON_DUST, "Pólvo de hierro");
-        addItem(ModItems.BRONZIUM_DUST, "Pólvo de broncio");
-        addItem(ModItems.GREEN_GOLD_DUST, "Pólvo de oro verde");
-        addItem(ModItems.STEEL_DUST, "Pólvo de acero");
-        addItem(ModItems.BLUE_GOLD_DUST, "Pólvo de oro azul");
+            //Terracotta shards
+            addItem(ModItems.TERRACOTTA_SHARD, "Fragmento de terracota");
+            addItem(ModItems.WHITE_TERRACOTTA_SHARD, "Fragmento de terracota blanca");
+            addItem(ModItems.ORANGE_TERRACOTTA_SHARD, "Fragmento de terracota naranja");
+            addItem(ModItems.MAGENTA_TERRACOTTA_SHARD, "Fragmento de terracota magenta");
+            addItem(ModItems.LIGHT_BLUE_TERRACOTTA_SHARD, "Fragmento de terracota celeste");
+            addItem(ModItems.YELLOW_TERRACOTTA_SHARD, "Fragmento de terracota amarilla");
+            addItem(ModItems.LIME_TERRACOTTA_SHARD, "Fragmento de terracota lima");
+            addItem(ModItems.PINK_TERRACOTTA_SHARD, "Fragmento de terracota rosada");
+            addItem(ModItems.GRAY_TERRACOTTA_SHARD, "Fragmento de terracota gris");
+            addItem(ModItems.LIGHT_GRAY_TERRACOTTA_SHARD, "Fragmento de terracota gris claro");
+            addItem(ModItems.CYAN_TERRACOTTA_SHARD, "Fragmento de terracota cian");
+            addItem(ModItems.PURPLE_TERRACOTTA_SHARD, "Fragmento de terracota morada");
+            addItem(ModItems.BLUE_TERRACOTTA_SHARD, "Fragmento de terracota azul");
+            addItem(ModItems.BROWN_TERRACOTTA_SHARD, "Fragmento de terracota marrón");
+            addItem(ModItems.GREEN_TERRACOTTA_SHARD, "Fragmento de terracota verde");
+            addItem(ModItems.RED_TERRACOTTA_SHARD, "Fragmento de terracota roja");
+            addItem(ModItems.BLACK_TERRACOTTA_SHARD, "Fragmento de terracota negra");
 
-        //Acids and potions
-        addAcid("sulfuric_acid", "Ácido sulfurico");
+            //Dusts
+            addItem(ModItems.GOLD_DUST, "Pólvo de oro");
+            addItem(ModItems.SILVER_DUST, "Pólvo de plata");
+            addItem(ModItems.ALUMINUM_DUST, "Pólvo de aluminio");
+            addItem(ModItems.ZINC_DUST, "Pólvo de zinc");
+            addItem(ModItems.TIN_DUST, "Pólvo de estaño");
+            addItem(ModItems.COPPER_DUST, "Pólvo de cobre");
+            addItem(ModItems.BRASS_DUST, "Pólvo de latón");
+            addItem(ModItems.BRONZE_DUST, "Pólvo de bronce");
+            addItem(ModItems.ROSE_GOLD_DUST, "Pólvo de oro rosado");
+            addItem(ModItems.IRON_DUST, "Pólvo de hierro");
+            addItem(ModItems.BRONZIUM_DUST, "Pólvo de broncio");
+            addItem(ModItems.GREEN_GOLD_DUST, "Pólvo de oro verde");
+            addItem(ModItems.STEEL_DUST, "Pólvo de acero");
+            addItem(ModItems.BLUE_GOLD_DUST, "Pólvo de oro azul");
+
+            //Acids and potions
+            addAcid("sulfuric_acid", "Ácido sulfurico");
 
         //Other tools
         addItem(ModItems.FLINT_AND_COBBLE, "Pedernal y adoquín");
@@ -450,16 +428,47 @@ public class VenezuelanLanguageProvider extends AbstractModLanguageProvider{
         addItem(ModItems.SILVER_LEGGINGS, "Grebas de plata");
         addItem(ModItems.SILVER_BOOTS, "Botas de plata");
 
+        addItem(ModItems.ALUMINUM_SILVER_SWORD, "Espada de plata");
+        addItem(ModItems.ALUMINUM_SILVER_DAGGER, "Daga de plata");
+        addItem(ModItems.ALUMINUM_SILVER_PICKAXE, "Pico de plata");
+        addItem(ModItems.ALUMINUM_SILVER_AXE, "Hacha de plata");
+        addItem(ModItems.ALUMINUM_SILVER_SHOVEL, "Pala de plata");
+        addItem(ModItems.ALUMINUM_SILVER_HOE, "Azadón de plata");
+        addItem(ModItems.ALUMINUM_SILVER_POLISHER, "Pulidora de plata");
+
         //Gold equipment
         addItem(ModItems.GOLDEN_POLISHER, "Pulidora de oro");
         addItem(ModItems.GOLDEN_DAGGER, "Daga de oro");
 
+        addItem(ModItems.ALUMINUM_GOLDEN_SWORD, "Espada de oro");
+        addItem(ModItems.ALUMINUM_GOLDEN_DAGGER, "Daga de oro");
+        addItem(ModItems.ALUMINUM_GOLDEN_PICKAXE, "Pico de oro");
+        addItem(ModItems.ALUMINUM_GOLDEN_AXE, "Hacha de oro");
+        addItem(ModItems.ALUMINUM_GOLDEN_SHOVEL, "Pala de oro");
+        addItem(ModItems.ALUMINUM_GOLDEN_HOE, "Azadón de oro");
+        addItem(ModItems.ALUMINUM_GOLDEN_POLISHER, "Pulidora de oro");
+
         //Wood equipment
         addItem(ModItems.WOODEN_DAGGER, "Daga de madera");
+
+        addItem(ModItems.ALUMINUM_WOODEN_SWORD, "Espada de madera");
+        addItem(ModItems.ALUMINUM_WOODEN_DAGGER, "Daga de madera");
+        addItem(ModItems.ALUMINUM_WOODEN_PICKAXE, "Pico de madera");
+        addItem(ModItems.ALUMINUM_WOODEN_AXE, "Hacha de madera");
+        addItem(ModItems.ALUMINUM_WOODEN_SHOVEL, "Pala de madera");
+        addItem(ModItems.ALUMINUM_WOODEN_HOE, "Azadón de madera");
 
         //Stone equipment
         addItem(ModItems.STONE_POLISHER, "Pulidora de piedra");
         addItem(ModItems.STONE_DAGGER, "Daga de piedra");
+
+        addItem(ModItems.ALUMINUM_STONE_SWORD, "Espada de piedra");
+        addItem(ModItems.ALUMINUM_STONE_DAGGER, "Daga de piedra");
+        addItem(ModItems.ALUMINUM_STONE_PICKAXE, "Pico de piedra");
+        addItem(ModItems.ALUMINUM_STONE_AXE, "Hacha de piedra");
+        addItem(ModItems.ALUMINUM_STONE_SHOVEL, "Pala de piedra");
+        addItem(ModItems.ALUMINUM_STONE_HOE, "Azadón de piedra");
+        addItem(ModItems.ALUMINUM_STONE_POLISHER, "Pulidora de piedra");
 
         //Brass equipment
         addItem(ModItems.BRASS_SWORD, "Espada de latón");
@@ -474,6 +483,14 @@ public class VenezuelanLanguageProvider extends AbstractModLanguageProvider{
         addItem(ModItems.BRASS_LEGGINGS, "Grebas de latón");
         addItem(ModItems.BRASS_BOOTS, "Botas de latón");
 
+        addItem(ModItems.ALUMINUM_BRASS_SWORD, "Espada de latón");
+        addItem(ModItems.ALUMINUM_BRASS_DAGGER, "Daga de latón");
+        addItem(ModItems.ALUMINUM_BRASS_PICKAXE, "Pico de latón");
+        addItem(ModItems.ALUMINUM_BRASS_AXE, "Hacha de latón");
+        addItem(ModItems.ALUMINUM_BRASS_SHOVEL, "Pala de latón");
+        addItem(ModItems.ALUMINUM_BRASS_HOE, "Azadón de latón");
+        addItem(ModItems.ALUMINUM_BRASS_POLISHER, "Pulidora de latón");
+
         //Bronze equipment
         addItem(ModItems.BRONZE_SWORD, "Espada de bronce");
         addItem(ModItems.BRONZE_DAGGER, "Daga de bronce");
@@ -486,6 +503,14 @@ public class VenezuelanLanguageProvider extends AbstractModLanguageProvider{
         addItem(ModItems.BRONZE_CHESTPLATE, "Pechera de bronce");
         addItem(ModItems.BRONZE_LEGGINGS, "Grebas de bronce");
         addItem(ModItems.BRONZE_BOOTS, "Botas de bronce");
+
+        addItem(ModItems.ALUMINUM_BRONZE_SWORD, "Espada de bronce");
+        addItem(ModItems.ALUMINUM_BRONZE_DAGGER, "Daga de bronce");
+        addItem(ModItems.ALUMINUM_BRONZE_PICKAXE, "Pico de bronce");
+        addItem(ModItems.ALUMINUM_BRONZE_AXE, "Hacha de bronce");
+        addItem(ModItems.ALUMINUM_BRONZE_SHOVEL, "Pala de bronce");
+        addItem(ModItems.ALUMINUM_BRONZE_HOE, "Azadón de bronce");
+        addItem(ModItems.ALUMINUM_BRONZE_POLISHER, "Pulidora de bronce");
 
         //Rose golden equipment
         addItem(ModItems.ROSE_GOLDEN_SWORD, "Espada de oro rosado");
@@ -500,6 +525,14 @@ public class VenezuelanLanguageProvider extends AbstractModLanguageProvider{
         addItem(ModItems.ROSE_GOLDEN_LEGGINGS, "Grebas de oro rosado");
         addItem(ModItems.ROSE_GOLDEN_BOOTS, "Botas de oro rosado");
 
+        addItem(ModItems.ALUMINUM_ROSE_GOLDEN_SWORD, "Espada de oro rosado");
+        addItem(ModItems.ALUMINUM_ROSE_GOLDEN_DAGGER, "Daga de oro rosado");
+        addItem(ModItems.ALUMINUM_ROSE_GOLDEN_PICKAXE, "Pico de oro rosado");
+        addItem(ModItems.ALUMINUM_ROSE_GOLDEN_AXE, "Hacha de oro rosado");
+        addItem(ModItems.ALUMINUM_ROSE_GOLDEN_SHOVEL, "Pala de oro rosado");
+        addItem(ModItems.ALUMINUM_ROSE_GOLDEN_HOE, "Azadón de oro rosado");
+        addItem(ModItems.ALUMINUM_ROSE_GOLDEN_POLISHER, "Pulidora de oro rosado");
+
         //Bronzium equipment
         addItem(ModItems.BRONZIUM_SWORD, "Espada de broncio");
         addItem(ModItems.BRONZIUM_DAGGER, "Daga de broncio");
@@ -513,9 +546,25 @@ public class VenezuelanLanguageProvider extends AbstractModLanguageProvider{
         addItem(ModItems.BRONZIUM_LEGGINGS, "Grebas de broncio");
         addItem(ModItems.BRONZIUM_BOOTS, "Botas de broncio");
 
+        addItem(ModItems.ALUMINUM_BRONZIUM_SWORD, "Espada de broncio");
+        addItem(ModItems.ALUMINUM_BRONZIUM_DAGGER, "Daga de broncio");
+        addItem(ModItems.ALUMINUM_BRONZIUM_PICKAXE, "Pico de broncio");
+        addItem(ModItems.ALUMINUM_BRONZIUM_AXE, "Hacha de broncio");
+        addItem(ModItems.ALUMINUM_BRONZIUM_SHOVEL, "Pala de broncio");
+        addItem(ModItems.ALUMINUM_BRONZIUM_HOE, "Azadón de broncio");
+        addItem(ModItems.ALUMINUM_BRONZIUM_POLISHER, "Pulidora de broncio");
+
         //Iron equipment
         addItem(ModItems.IRON_POLISHER, "Pulidora de hierro");
         addItem(ModItems.IRON_DAGGER, "Daga de hierro");
+
+        addItem(ModItems.ALUMINUM_IRON_SWORD, "Espada de hierro");
+        addItem(ModItems.ALUMINUM_IRON_DAGGER, "Daga de hierro");
+        addItem(ModItems.ALUMINUM_IRON_PICKAXE, "Pico de hierro");
+        addItem(ModItems.ALUMINUM_IRON_AXE, "Hacha de hierro");
+        addItem(ModItems.ALUMINUM_IRON_SHOVEL, "Pala de hierro");
+        addItem(ModItems.ALUMINUM_IRON_HOE, "Azadón de hierro");
+        addItem(ModItems.ALUMINUM_IRON_POLISHER, "Pulidora de hierro");
 
         //Green golden equipment
         addItem(ModItems.GREEN_GOLDEN_SWORD, "Espada de oro verde");
@@ -530,6 +579,14 @@ public class VenezuelanLanguageProvider extends AbstractModLanguageProvider{
         addItem(ModItems.GREEN_GOLDEN_LEGGINGS, "Grebas de oro verde");
         addItem(ModItems.GREEN_GOLDEN_BOOTS, "Botas de oro verde");
 
+        addItem(ModItems.ALUMINUM_GREEN_GOLDEN_SWORD, "Espada de oro verde");
+        addItem(ModItems.ALUMINUM_GREEN_GOLDEN_DAGGER, "Daga de oro verde");
+        addItem(ModItems.ALUMINUM_GREEN_GOLDEN_PICKAXE, "Pico de oro verde");
+        addItem(ModItems.ALUMINUM_GREEN_GOLDEN_AXE, "Hacha de oro verde");
+        addItem(ModItems.ALUMINUM_GREEN_GOLDEN_SHOVEL, "Pala de oro verde");
+        addItem(ModItems.ALUMINUM_GREEN_GOLDEN_HOE, "Azadón de oro verde");
+        addItem(ModItems.ALUMINUM_GREEN_GOLDEN_POLISHER, "Pulidora de oro verde");
+
         //Steel equipment
         addItem(ModItems.STEEL_SWORD, "Espada de acero");
         addItem(ModItems.STEEL_DAGGER, "Daga de acero");
@@ -542,6 +599,14 @@ public class VenezuelanLanguageProvider extends AbstractModLanguageProvider{
         addItem(ModItems.STEEL_CHESTPLATE, "Pechera de acero");
         addItem(ModItems.STEEL_LEGGINGS, "Grebas de acero");
         addItem(ModItems.STEEL_BOOTS, "Botas de acero");
+
+        addItem(ModItems.ALUMINUM_STEEL_SWORD, "Espada de acero");
+        addItem(ModItems.ALUMINUM_STEEL_DAGGER, "Daga de acero");
+        addItem(ModItems.ALUMINUM_STEEL_PICKAXE, "Pico de acero");
+        addItem(ModItems.ALUMINUM_STEEL_AXE, "Hacha de acero");
+        addItem(ModItems.ALUMINUM_STEEL_SHOVEL, "Pala de acero");
+        addItem(ModItems.ALUMINUM_STEEL_HOE, "Azadón de acero");
+        addItem(ModItems.ALUMINUM_STEEL_POLISHER, "Pulidora de acero");
 
         //Blue gold equipment
         addItem(ModItems.BLUE_GOLDEN_SWORD, "Espada de oro azul");
@@ -556,9 +621,25 @@ public class VenezuelanLanguageProvider extends AbstractModLanguageProvider{
         addItem(ModItems.BLUE_GOLDEN_LEGGINGS, "Grebas de oro azul");
         addItem(ModItems.BLUE_GOLDEN_BOOTS, "Botas de oro azul");
 
+        addItem(ModItems.ALUMINUM_BLUE_GOLDEN_SWORD, "Espada de oro azul");
+        addItem(ModItems.ALUMINUM_BLUE_GOLDEN_DAGGER, "Daga de oro azul");
+        addItem(ModItems.ALUMINUM_BLUE_GOLDEN_PICKAXE, "Pico de oro azul");
+        addItem(ModItems.ALUMINUM_BLUE_GOLDEN_AXE, "Hacha de oro azul");
+        addItem(ModItems.ALUMINUM_BLUE_GOLDEN_SHOVEL, "Pala de oro azul");
+        addItem(ModItems.ALUMINUM_BLUE_GOLDEN_HOE, "Azadón de oro azul");
+        addItem(ModItems.ALUMINUM_BLUE_GOLDEN_POLISHER, "Pulidora de oro azul");
+
         //Diamond equipment
         addItem(ModItems.DIAMOND_POLISHER, "Pulidora de diamante");
         addItem(ModItems.DIAMOND_DAGGER, "Daga de diamante");
+
+        addItem(ModItems.ALUMINUM_DIAMOND_SWORD, "Espada de diamante");
+        addItem(ModItems.ALUMINUM_DIAMOND_DAGGER, "Daga de diamante");
+        addItem(ModItems.ALUMINUM_DIAMOND_PICKAXE, "Pico de diamante");
+        addItem(ModItems.ALUMINUM_DIAMOND_AXE, "Hacha de diamante");
+        addItem(ModItems.ALUMINUM_DIAMOND_SHOVEL, "Pala de diamante");
+        addItem(ModItems.ALUMINUM_DIAMOND_HOE, "Azadón de diamante");
+        addItem(ModItems.ALUMINUM_DIAMOND_POLISHER, "Pulidora de diamante");
 
         //Netherite equipment
         addItem(ModItems.NETHERITE_POLISHER, "Pulidora de netherita");
@@ -611,11 +692,13 @@ public class VenezuelanLanguageProvider extends AbstractModLanguageProvider{
             addItem(ModItems.RICE_BOWL, "Bowl de arroz");
 
         //Smithing templates
-        addSmithingTitles("Se aplica a:", "Ingredientes:");
+        addSmithingTitles("Plantilla de herreria", "Se aplica a:", "Ingredientes:");
 
-        addSmithingTranslations(ModItems.BRONZIUM_SMITHING_UPGRADE_TEMPLATE, "Plantilla de herreria","bronzium",
-                " Mejora de broncio", "Equipo de bronze, equipo de latón", "Lingote de broncio",
-                "Coloque un arma, herramienta o armadora de bronce o de latón", "Coloque un Lingote de broncio");
+        addSmithingTranslations("bronzium", "Mejora de broncio", "Equipo de bronze, equipo de latón",
+                "Lingote de broncio", "Coloque un arma, herramienta o armadora de bronce o de latón", "Coloque un Lingote de broncio");
+
+        addSmithingTranslations("aluminum", "Mejora de aluminio", "Equipación con mango de madera",
+                "Lingote de aluminio", "Coloque cualquier equipo con un mango de madera", "Coloque un lingote de aluminio");
 
         //Enchantments
         addEnchantment(ModEnchantments.FINE_MINING, "Minado fino");

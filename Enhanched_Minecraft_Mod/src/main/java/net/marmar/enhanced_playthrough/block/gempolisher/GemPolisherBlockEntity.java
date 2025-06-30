@@ -1,7 +1,7 @@
 package net.marmar.enhanced_playthrough.block.gempolisher;
 
 import net.marmar.enhanced_playthrough.block.ModBlockEntities;
-import net.marmar.enhanced_playthrough.item.custom.PolisherItem;
+import net.marmar.enhanced_playthrough.item.custom.tool.PolisherItem;
 import net.marmar.enhanced_playthrough.recipe.GemPolishingRecipe;
 import net.marmar.enhanced_playthrough.menu.gempolisher.GemPolisherMenu;
 import net.minecraft.core.BlockPos;

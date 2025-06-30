@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "enhanced_playthrough:aluminum_ingot"
+  },
+  "base": {
+    "item": "enhanced_playthrough:wooden_dagger"
+  },
+  "result": {
+    "item": "enhanced_playthrough:aluminum_wooden_dagger"
+  },
+  "template": {
+    "item": "enhanced_playthrough:aluminum_upgrade_smithing_template"
+  }
+}

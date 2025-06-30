@@ -7,7 +7,6 @@ import net.minecraft.core.HolderGetter;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
-import net.minecraft.data.worldgen.PillagerOutpostPools;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BiomeTags;
@@ -36,13 +35,13 @@ public class ModStructures {
     //Bandit camp
     public static final ResourceKey<Structure> BANDIT_CAMP = registryKey("bandit_camp");
 
-    public static void bootstrap(BootstapContext<Structure> pContext){
-        HolderGetter<Biome> biomesGetter = pContext.lookup(Registries.BIOME);
-        HolderGetter<StructureTemplatePool> structureGetter = pContext.lookup(Registries.TEMPLATE_POOL);
+    public static void bootstrap(BootstapContext<Structure> context){
+        HolderGetter<Biome> biomesGetter = context.lookup(Registries.BIOME);
+        HolderGetter<StructureTemplatePool> structureGetter = context.lookup(Registries.TEMPLATE_POOL);
 
-        pContext.register(JEWELER_HOUSE, houseStructure(biomesGetter, structureGetter,
+        context.register(JEWELER_HOUSE, houseStructure(biomesGetter, structureGetter,
                 ModTags.Biomes.JEWELER_HOUSE, ModStructureTemplatePools.JEWELER_HOUSE_START_POOL));
-        pContext.register(BANDIT_CAMP, campStructure(biomesGetter, structureGetter,
+        context.register(BANDIT_CAMP, campStructure(biomesGetter, structureGetter,
                 BiomeTags.IS_FOREST, ModStructureTemplatePools.BANDIT_CAMP_START_POOL, ModEntities.BANDIT.get()));
     }
 
@@ -53,7 +52,7 @@ public class ModStructures {
 
     private static JigsawStructure campStructure(HolderGetter<Biome> biomesGetter, HolderGetter<StructureTemplatePool> structureGetter, TagKey<Biome> pBiomes, ResourceKey<StructureTemplatePool> pCamp, EntityType<?> pMob){
        return new JigsawStructure(structure(biomesGetter.getOrThrow(pBiomes),
-                Map.of(MobCategory.MONSTER, new StructureSpawnOverride(StructureSpawnOverride.BoundingBoxType.STRUCTURE,
+                Map.of(MobCategory.MONSTER, new StructureSpawnOverride(StructureSpawnOverride.BoundingBoxType.PIECE,
                         WeightedRandomList.create(new MobSpawnSettings.SpawnerData(pMob, 1, 1, 3)))),
                 GenerationStep.Decoration.SURFACE_STRUCTURES, TerrainAdjustment.BEARD_THIN), structureGetter.getOrThrow(pCamp),
                 5, ConstantHeight.of(VerticalAnchor.absolute(0)), false, Heightmap.Types.WORLD_SURFACE_WG);

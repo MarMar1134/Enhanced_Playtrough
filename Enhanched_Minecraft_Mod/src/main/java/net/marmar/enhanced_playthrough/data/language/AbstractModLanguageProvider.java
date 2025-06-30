@@ -60,13 +60,13 @@ public abstract class AbstractModLanguageProvider extends LanguageProvider {
         this.add("creativetab." + EnhancedPlaythrough.MOD_ID + "." + tabName, translation);
     }
 
-    protected void addSmithingTitles(String pAppliesTo, String pIngredients){
+    protected void addSmithingTitles(String pName, String pAppliesTo, String pIngredients){
         this.add("smithing." + EnhancedPlaythrough.MOD_ID + ".applies_to_title", pAppliesTo);
         this.add("smithing." + EnhancedPlaythrough.MOD_ID + ".ingredients_title", pIngredients);
+        this.add("item.minecraft.smithing_template", pName);
     }
 
-    protected void addSmithingTranslations(RegistryObject<Item> pItem, String pItemTranslation, String smithingMaterial, String title, String appliesTo, String ingredients, String baseSlotDesc, String addSlotDesc){
-        addItem(pItem, pItemTranslation);
+    protected void addSmithingTranslations(String smithingMaterial, String title, String appliesTo, String ingredients, String baseSlotDesc, String addSlotDesc){
         this.add("smithing." + EnhancedPlaythrough.MOD_ID + "." + smithingMaterial + ".title", title);
         this.add("smithing." + EnhancedPlaythrough.MOD_ID + "." + smithingMaterial + ".applies_to", appliesTo);
         this.add("smithing." + EnhancedPlaythrough.MOD_ID + "." + smithingMaterial + ".ingredients", ingredients);

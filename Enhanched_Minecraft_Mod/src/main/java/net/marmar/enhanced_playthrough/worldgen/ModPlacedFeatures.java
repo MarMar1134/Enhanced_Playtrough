@@ -74,6 +74,8 @@ public class ModPlacedFeatures {
 
     public static final ResourceKey<PlacedFeature> NETHER_GARNET_ORE_PLACED_KEY = registerKey("nether_garnet_ore_placed");
 
+    public static final ResourceKey<PlacedFeature> BAUXITE_ORES_PLACED_KEY = registerKey("bauxite_ores_placed");
+
     public static void  bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
@@ -120,6 +122,11 @@ public class ModPlacedFeatures {
         register(context, BADLANDS_SILVER_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BADLANDS_SILVER_ORE_KEY),
                 ModOrePlacement.commonOrePlacement(10,
                         HeightRangePlacement.triangle(VerticalAnchor.absolute(-30), VerticalAnchor.absolute(90))));
+
+        //Bauxite
+        register(context, BAUXITE_ORES_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BAUXITE_ORES_KEY),
+                ModOrePlacement.commonOrePlacement(9,
+                        HeightRangePlacement.triangle(VerticalAnchor.absolute(55), VerticalAnchor.absolute(150))));
 
         //Sulphur
         register(context, SULPHUR_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SULFUR_ORE_KEY),

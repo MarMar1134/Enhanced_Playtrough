@@ -12,6 +12,7 @@ import net.minecraft.world.level.block.Block;
 
 public class ModTags {
     public static class Blocks {
+        public static final TagKey<Block> BAUXITE_ORE = blockTag("bauxite_ore");
         public static final TagKey<Block> NEEDS_SILVER_TOOL = blockTag("needs_silver_tool");
         public static final TagKey<Block> NEEDS_BRASS_TOOL = blockTag("needs_brass_tool");
         public static final TagKey<Block> NEEDS_BRONZE_TOOL= blockTag("needs_bronze_tool");
@@ -33,6 +34,8 @@ public class ModTags {
         //Materials
         public static final TagKey<Item> GOLD = itemTag("gold");
         public static final TagKey<Item> SILVER = itemTag("silver");
+        public static final TagKey<Item> ALUMINUM = itemTag("aluminum");
+        public static final TagKey<Item> ALUMINUM_ROD = itemTag("rods/aluminum");
         public static final TagKey<Item> BRASS = itemTag("brass");
         public static final TagKey<Item> BRONZE = itemTag("bronze");
         public static final TagKey<Item> ROSE_GOLD = itemTag("rose_gold");
@@ -43,6 +46,19 @@ public class ModTags {
         public static final TagKey<Item> BLUE_GOLD = itemTag("blue_gold");
         public static final TagKey<Item> RAW_GEM = itemTag("raw_gem");
         public static final TagKey<Item> COBBLE = forgeTag("cobble");
+        public static final TagKey<Item> TERRACOTTA_SHARD = itemTag("terracotta_shard");
+
+        //Ingots
+        public static final TagKey<Item> TIN_INGOT = ingotTag("tin");
+        public static final TagKey<Item> ZINC_INGOT = ingotTag("zinc");
+        public static final TagKey<Item> SILVER_INGOT = ingotTag("silver");
+        public static final TagKey<Item> BRASS_INGOT = ingotTag("brass");
+        public static final TagKey<Item> BRONZE_INGOT = ingotTag("bronze");
+        public static final TagKey<Item> ROSE_GOLD_INGOT = ingotTag("rose_gold");
+        public static final TagKey<Item> BRONZIUM_INGOT = ingotTag("bronzium");
+        public static final TagKey<Item> GREEN_GOLD_INGOT = ingotTag("green_gold");
+        public static final TagKey<Item> STEEL_INGOT = ingotTag("steel");
+        public static final TagKey<Item> BLUE_GOLD_INGOT = ingotTag("blue_gold");
 
         //Tools
         public static final TagKey<Item> POLISHER = forgeTag("polisher");
@@ -71,11 +87,18 @@ public class ModTags {
         public static final TagKey<Item> STEEL_MANUFACTURABLE = itemTag("steel_manufacturable");
         public static final TagKey<Item> BLUE_GOLD_MANUFACTURABLE = itemTag("blue_gold_manufacturable");
 
+        //Others
+        public static final TagKey<Item> BAUXITE_ORE = itemTag("bauxite_ore");
+
         //Logs
         public static final TagKey<Item> WALNUT_LOGS = itemTag("walnut_logs");
         public static final TagKey<Item> APPLE_LOGS = itemTag("apple_logs");
         public static final TagKey<Item> ORANGE_LOGS = itemTag("orange_logs");
         public static final TagKey<Item> LEMON_LOGS = itemTag("lemon_logs");
+
+        private static TagKey<Item> ingotTag(String name){
+            return ItemTags.create(new ResourceLocation(EnhancedPlaythrough.MOD_ID, "ingots/" + name));
+        }
 
         private static TagKey<Item> itemTag(String name){
             return ItemTags.create(new ResourceLocation(EnhancedPlaythrough.MOD_ID, name));

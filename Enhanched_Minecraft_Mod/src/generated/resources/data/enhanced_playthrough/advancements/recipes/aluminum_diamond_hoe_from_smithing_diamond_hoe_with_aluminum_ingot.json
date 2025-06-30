@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_diamond_hoe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:diamond_hoe"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "enhanced_playthrough:aluminum_diamond_hoe_from_smithing_diamond_hoe_with_aluminum_ingot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_diamond_hoe",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "enhanced_playthrough:aluminum_diamond_hoe_from_smithing_diamond_hoe_with_aluminum_ingot"
+    ]
+  },
+  "sends_telemetry_event": false
+}

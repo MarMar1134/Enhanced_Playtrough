@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bronzium_polisher": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:bronzium_polisher"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "enhanced_playthrough:aluminum_bronzium_polisher_from_smithing_bronzium_polisher_with_aluminum_ingot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_bronzium_polisher",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "enhanced_playthrough:aluminum_bronzium_polisher_from_smithing_bronzium_polisher_with_aluminum_ingot"
+    ]
+  },
+  "sends_telemetry_event": false
+}

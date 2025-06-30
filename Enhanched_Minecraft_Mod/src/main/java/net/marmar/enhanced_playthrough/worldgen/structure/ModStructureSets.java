@@ -19,13 +19,13 @@ public class ModStructureSets {
     //Bandit camp
     public static final ResourceKey<StructureSet> BANDIT_CAMP = registryKey("bandit_camp");
 
-    public static void bootstrap(BootstapContext<StructureSet> pContext){
-        HolderGetter<Structure> structureGetter = pContext.lookup(Registries.STRUCTURE);
-        HolderGetter<Biome> biomesGetter = pContext.lookup(Registries.BIOME);
+    public static void bootstrap(BootstapContext<StructureSet> context){
+        HolderGetter<Structure> structureGetter = context.lookup(Registries.STRUCTURE);
+        HolderGetter<Biome> biomesGetter = context.lookup(Registries.BIOME);
 
-        pContext.register(JEWELER_HOUSE, new StructureSet(structureGetter.getOrThrow(ModStructures.JEWELER_HOUSE),
+        context.register(JEWELER_HOUSE, new StructureSet(structureGetter.getOrThrow(ModStructures.JEWELER_HOUSE),
                 new RandomSpreadStructurePlacement(40, 10, RandomSpreadType.LINEAR, 16113412)));
-        pContext.register(BANDIT_CAMP, new StructureSet(structureGetter.getOrThrow(ModStructures.BANDIT_CAMP),
+        context.register(BANDIT_CAMP, new StructureSet(structureGetter.getOrThrow(ModStructures.BANDIT_CAMP),
                 new RandomSpreadStructurePlacement(25, 20, RandomSpreadType.LINEAR, 33121233)));
     }
 

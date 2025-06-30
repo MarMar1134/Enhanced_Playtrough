@@ -106,7 +106,7 @@ public class SmeltingRecipeSubProvider extends RecipeProvider {
             //Gold
             oreBlasting(consumer, ModItems.GOLD_DUST.get(), RecipeCategory.MISC, Items.GOLD_INGOT, 1f, "gold_ingot");
 
-            //silver
+            //Silver
             oreSmelting(consumer, SILVER_SMELTABLES, RecipeCategory.MISC, ModItems.SILVER_INGOT.get(), 0.7f, "silver_ingot");
             oreBlasting(consumer, SILVER_SMELTABLES, RecipeCategory.MISC, ModItems.SILVER_INGOT.get(), 0.7f,  "silver_ingot");
 
@@ -114,6 +114,10 @@ public class SmeltingRecipeSubProvider extends RecipeProvider {
             oreBlasting(consumer, ModTags.Items.SILVER_MANUFACTURABLE, RecipeCategory.MISC, ModItems.SILVER_NUGGET.get(), 0.1f, "silver_nugget");
 
             oreBlasting(consumer, ModItems.SILVER_DUST.get(), RecipeCategory.MISC, ModItems.SILVER_INGOT.get(), 1f, "silver_ingot");
+
+            //Bauxite
+            oreBlasting(consumer, ModTags.Items.BAUXITE_ORE, RecipeCategory.MISC, ModItems.ALUMINUM_INGOT.get(), 1.2f, "aluminum_ingot");
+            oreBlasting(consumer, ModItems.RAW_ALUMINUM.get(), RecipeCategory.MISC, ModItems.ALUMINUM_INGOT.get(), 1.2f, "aluminum_ingot");
 
             //Zinc
             smeltingByCampfire(consumer, ModItems.RAW_ZINC.get(), RecipeCategory.MISC, ModItems.ZINC_NUGGET.get(), 0.1f, "zinc_nugget");

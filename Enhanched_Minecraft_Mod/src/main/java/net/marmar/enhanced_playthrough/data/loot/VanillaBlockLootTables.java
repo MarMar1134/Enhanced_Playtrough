@@ -29,6 +29,25 @@ public class VanillaBlockLootTables extends BlockLootSubProvider implements Bloc
         this.add(Blocks.FERN, block -> createPlantDrops(Blocks.FERN));
         this.add(Blocks.LARGE_FERN, block -> createPlantDrops(Blocks.LARGE_FERN));
 
+        //Terracotta
+        this.add(Blocks.TERRACOTTA, block -> createTerracottaDrops(Blocks.TERRACOTTA, ModItems.TERRACOTTA_SHARD.get()));
+        this.add(Blocks.WHITE_TERRACOTTA, block -> createTerracottaDrops(Blocks.WHITE_TERRACOTTA, ModItems.WHITE_TERRACOTTA_SHARD.get()));
+        this.add(Blocks.ORANGE_TERRACOTTA, block -> createTerracottaDrops(Blocks.ORANGE_TERRACOTTA, ModItems.ORANGE_TERRACOTTA_SHARD.get()));
+        this.add(Blocks.MAGENTA_TERRACOTTA, block -> createTerracottaDrops(Blocks.MAGENTA_TERRACOTTA, ModItems.MAGENTA_TERRACOTTA_SHARD.get()));
+        this.add(Blocks.LIGHT_BLUE_TERRACOTTA, block -> createTerracottaDrops(Blocks.LIGHT_BLUE_TERRACOTTA, ModItems.LIGHT_BLUE_TERRACOTTA_SHARD.get()));
+        this.add(Blocks.YELLOW_TERRACOTTA, block -> createTerracottaDrops(Blocks.YELLOW_TERRACOTTA, ModItems.YELLOW_TERRACOTTA_SHARD.get()));
+        this.add(Blocks.LIME_TERRACOTTA, block -> createTerracottaDrops(Blocks.LIME_TERRACOTTA, ModItems.LIME_TERRACOTTA_SHARD.get()));
+        this.add(Blocks.PINK_TERRACOTTA, block -> createTerracottaDrops(Blocks.PINK_TERRACOTTA, ModItems.PINK_TERRACOTTA_SHARD.get()));
+        this.add(Blocks.GRAY_TERRACOTTA, block -> createTerracottaDrops(Blocks.GRAY_TERRACOTTA, ModItems.GRAY_TERRACOTTA_SHARD.get()));
+        this.add(Blocks.LIGHT_GRAY_TERRACOTTA, block -> createTerracottaDrops(Blocks.LIGHT_GRAY_TERRACOTTA, ModItems.LIGHT_GRAY_TERRACOTTA_SHARD.get()));
+        this.add(Blocks.CYAN_TERRACOTTA, block -> createTerracottaDrops(Blocks.CYAN_TERRACOTTA, ModItems.CYAN_TERRACOTTA_SHARD.get()));
+        this.add(Blocks.PURPLE_TERRACOTTA, block -> createTerracottaDrops(Blocks.PURPLE_TERRACOTTA, ModItems.PURPLE_TERRACOTTA_SHARD.get()));
+        this.add(Blocks.BLUE_TERRACOTTA, block -> createTerracottaDrops(Blocks.BLUE_TERRACOTTA, ModItems.BLUE_TERRACOTTA_SHARD.get()));
+        this.add(Blocks.BROWN_TERRACOTTA, block -> createTerracottaDrops(Blocks.BROWN_TERRACOTTA, ModItems.BROWN_TERRACOTTA_SHARD.get()));
+        this.add(Blocks.GREEN_TERRACOTTA, block -> createTerracottaDrops(Blocks.GREEN_TERRACOTTA, ModItems.GREEN_TERRACOTTA_SHARD.get()));
+        this.add(Blocks.RED_TERRACOTTA, block -> createTerracottaDrops(Blocks.RED_TERRACOTTA, ModItems.RED_TERRACOTTA_SHARD.get()));
+        this.add(Blocks.BLACK_TERRACOTTA, block -> createTerracottaDrops(Blocks.BLACK_TERRACOTTA, ModItems.BLACK_TERRACOTTA_SHARD.get()));
+
         //Stone
         this.add(Blocks.STONE, block -> createRockDrops(Blocks.STONE, Blocks.COBBLESTONE, ModItems.COBBLE.get()));
         this.add(Blocks.COBBLESTONE, block -> createRockDrops(Blocks.COBBLESTONE, Blocks.COBBLESTONE, ModItems.COBBLE.get()));
@@ -107,6 +126,16 @@ public class VanillaBlockLootTables extends BlockLootSubProvider implements Bloc
         block == Blocks.STONE || block == Blocks.COBBLESTONE ||
         block == Blocks.DEEPSLATE || block == Blocks.COBBLED_DEEPSLATE ||
         block == Blocks.NETHERRACK || block == Blocks.BLACKSTONE ||
+
+        block == Blocks.TERRACOTTA || block == Blocks.WHITE_TERRACOTTA ||
+        block == Blocks.ORANGE_TERRACOTTA || block == Blocks.MAGENTA_TERRACOTTA ||
+        block == Blocks.LIGHT_BLUE_TERRACOTTA || block == Blocks.YELLOW_TERRACOTTA ||
+        block == Blocks.LIME_TERRACOTTA || block == Blocks.PINK_TERRACOTTA ||
+        block == Blocks.GRAY_TERRACOTTA || block == Blocks.LIGHT_GRAY_TERRACOTTA ||
+        block == Blocks.CYAN_TERRACOTTA || block == Blocks.PURPLE_TERRACOTTA ||
+        block == Blocks.BLUE_TERRACOTTA || block == Blocks.BROWN_TERRACOTTA ||
+        block == Blocks.GREEN_TERRACOTTA || block == Blocks.RED_TERRACOTTA ||
+        block == Blocks.BLACK_TERRACOTTA ||
 
         block == Blocks.BRICKS || block == Blocks.NETHER_BRICKS ||
         block == Blocks.BRICK_SLAB || block == Blocks.NETHER_BRICK_SLAB ||

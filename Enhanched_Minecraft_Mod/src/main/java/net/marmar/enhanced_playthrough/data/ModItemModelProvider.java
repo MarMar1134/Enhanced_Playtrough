@@ -11,7 +11,6 @@ import net.minecraft.world.item.*;
 import net.minecraft.world.item.armortrim.TrimMaterial;
 import net.minecraft.world.item.armortrim.TrimMaterials;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
@@ -29,61 +28,6 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         //Blocks with item
-            //Stone
-            wallItem(ModBlocks.STONE_WALL, Blocks.STONE);
-
-            //D,A,G
-            wallItem(ModBlocks.POLISHED_DIORITE_WALL, Blocks.POLISHED_DIORITE);
-            wallItem(ModBlocks.POLISHED_ANDESITE_WALL, Blocks.POLISHED_ANDESITE);
-            wallItem(ModBlocks.POLISHED_GRANITE_WALL, Blocks.POLISHED_GRANITE);
-
-            //Dripstone
-            blockWithItem(ModBlocks.DRIPSTONE_SLAB);
-            blockWithItem(ModBlocks.DRIPSTONE_STAIRS);
-            wallItem(ModBlocks.DRIPSTONE_WALL, Blocks.DRIPSTONE_BLOCK);
-
-            //Calcite
-            blockWithItem(ModBlocks.CALCITE_SLAB);
-            blockWithItem(ModBlocks.CALCITE_STAIRS);
-            wallItem(ModBlocks.CALCITE_WALL, Blocks.CALCITE);
-
-            //Concrete
-                //Slabs
-                blockWithItem(ModBlocks.WHITE_CONCRETE_SLAB);
-                blockWithItem(ModBlocks.LIGHT_GRAY_CONCRETE_SLAB);
-                blockWithItem(ModBlocks.GRAY_CONCRETE_SLAB);
-                blockWithItem(ModBlocks.BLACK_CONCRETE_SLAB);
-                blockWithItem(ModBlocks.BROWN_CONCRETE_SLAB);
-                blockWithItem(ModBlocks.RED_CONCRETE_SLAB);
-                blockWithItem(ModBlocks.ORANGE_CONCRETE_SLAB);
-                blockWithItem(ModBlocks.YELLOW_CONCRETE_SLAB);
-                blockWithItem(ModBlocks.LIME_CONCRETE_SLAB);
-                blockWithItem(ModBlocks.GREEN_CONCRETE_SLAB);
-                blockWithItem(ModBlocks.CYAN_CONCRETE_SLAB);
-                blockWithItem(ModBlocks.LIGHT_BLUE_CONCRETE_SLAB);
-                blockWithItem(ModBlocks.BLUE_CONCRETE_SLAB);
-                blockWithItem(ModBlocks.PURPLE_CONCRETE_SLAB);
-                blockWithItem(ModBlocks.MAGENTA_CONCRETE_SLAB);
-                blockWithItem(ModBlocks.PINK_CONCRETE_SLAB);
-
-                //Stairs
-                blockWithItem(ModBlocks.WHITE_CONCRETE_STAIRS);
-                blockWithItem(ModBlocks.LIGHT_GRAY_CONCRETE_STAIRS);
-                blockWithItem(ModBlocks.GRAY_CONCRETE_STAIRS);
-                blockWithItem(ModBlocks.BLACK_CONCRETE_STAIRS);
-                blockWithItem(ModBlocks.BROWN_CONCRETE_STAIRS);
-                blockWithItem(ModBlocks.RED_CONCRETE_STAIRS);
-                blockWithItem(ModBlocks.ORANGE_CONCRETE_STAIRS);
-                blockWithItem(ModBlocks.YELLOW_CONCRETE_STAIRS);
-                blockWithItem(ModBlocks.LIME_CONCRETE_STAIRS);
-                blockWithItem(ModBlocks.GREEN_CONCRETE_STAIRS);
-                blockWithItem(ModBlocks.CYAN_CONCRETE_STAIRS);
-                blockWithItem(ModBlocks.LIGHT_BLUE_CONCRETE_STAIRS);
-                blockWithItem(ModBlocks.BLUE_CONCRETE_STAIRS);
-                blockWithItem(ModBlocks.PURPLE_CONCRETE_STAIRS);
-                blockWithItem(ModBlocks.MAGENTA_CONCRETE_STAIRS);
-                blockWithItem(ModBlocks.PINK_CONCRETE_STAIRS);
-
             //Polished stone
             blockWithItem(ModBlocks.POLISHED_STONE_SLAB);
             blockWithItem(ModBlocks.POLISHED_STONE_STAIRS);
@@ -299,6 +243,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.SILVER_INGOT);
         simpleItem(ModItems.SILVER_NUGGET);
 
+        simpleItem(ModItems.RAW_ALUMINUM);
+        simpleItem(ModItems.ALUMINUM_INGOT);
+        simpleItem(ModItems.ALUMINUM_NUGGET);
+
         simpleItem(ModItems.ROSE_GOLD_INGOT);
         simpleItem(ModItems.ROSE_GOLD_NUGGET);
 
@@ -325,6 +273,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         //Dusts
         simpleItem(ModItems.GOLD_DUST);
         simpleItem(ModItems.SILVER_DUST);
+        simpleItem(ModItems.ALUMINUM_DUST);
         simpleItem(ModItems.ZINC_DUST);
         simpleItem(ModItems.TIN_DUST);
         simpleItem(ModItems.COPPER_DUST);
@@ -339,6 +288,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         //templates
         simpleItem(ModItems.BRONZIUM_SMITHING_UPGRADE_TEMPLATE);
+        simpleItem(ModItems.ALUMINUM_SMITHING_UPGRADE_TEMPLATE);
 
         //Cobble
         simpleItem(ModItems.COBBLE);
@@ -347,9 +297,29 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.NETHERRACK_RUBBLE);
         simpleItem(ModItems.BLACKSTONE_COBBLE);
 
+        //Terracotta Shards
+        simpleItem(ModItems.TERRACOTTA_SHARD);
+        simpleItem(ModItems.WHITE_TERRACOTTA_SHARD);
+        simpleItem(ModItems.ORANGE_TERRACOTTA_SHARD);
+        simpleItem(ModItems.MAGENTA_TERRACOTTA_SHARD);
+        simpleItem(ModItems.LIGHT_BLUE_TERRACOTTA_SHARD);
+        simpleItem(ModItems.YELLOW_TERRACOTTA_SHARD);
+        simpleItem(ModItems.LIME_TERRACOTTA_SHARD);
+        simpleItem(ModItems.PINK_TERRACOTTA_SHARD);
+        simpleItem(ModItems.GRAY_TERRACOTTA_SHARD);
+        simpleItem(ModItems.LIGHT_GRAY_TERRACOTTA_SHARD);
+        simpleItem(ModItems.CYAN_TERRACOTTA_SHARD);
+        simpleItem(ModItems.PURPLE_TERRACOTTA_SHARD);
+        simpleItem(ModItems.BLUE_TERRACOTTA_SHARD);
+        simpleItem(ModItems.BROWN_TERRACOTTA_SHARD);
+        simpleItem(ModItems.GREEN_TERRACOTTA_SHARD);
+        simpleItem(ModItems.RED_TERRACOTTA_SHARD);
+        simpleItem(ModItems.BLACK_TERRACOTTA_SHARD);
+
         //Other materials
         simpleItem(ModItems.MUD_BRICK);
         simpleItem(ModItems.FIREBRICK);
+        simpleItem(ModItems.ALUMINUM_ROD);
         simpleItem(ModItems.VEGETABLE_FIBBER);
         simpleItem(ModItems.REED_HEAD);
         simpleItem(ModItems.WATER_REED_HEAD);
@@ -364,10 +334,25 @@ public class ModItemModelProvider extends ItemModelProvider {
 
             //Wood
             handheldItem(ModItems.WOODEN_DAGGER);
+                //Aluminum wood
+                handheldItem(ModItems.ALUMINUM_WOODEN_SWORD);
+                handheldItem(ModItems.ALUMINUM_WOODEN_DAGGER);
+                handheldItem(ModItems.ALUMINUM_WOODEN_PICKAXE);
+                handheldItem(ModItems.ALUMINUM_WOODEN_AXE);
+                handheldItem(ModItems.ALUMINUM_WOODEN_SHOVEL);
+                handheldItem(ModItems.ALUMINUM_WOODEN_HOE);
 
             //Gold
             handheldItem(ModItems.GOLDEN_POLISHER);
             handheldItem(ModItems.GOLDEN_DAGGER);
+                //Aluminum gold
+                handheldItem(ModItems.ALUMINUM_GOLDEN_SWORD);
+                handheldItem(ModItems.ALUMINUM_GOLDEN_DAGGER);
+                handheldItem(ModItems.ALUMINUM_GOLDEN_PICKAXE);
+                handheldItem(ModItems.ALUMINUM_GOLDEN_AXE);
+                handheldItem(ModItems.ALUMINUM_GOLDEN_SHOVEL);
+                handheldItem(ModItems.ALUMINUM_GOLDEN_HOE);
+                handheldItem(ModItems.ALUMINUM_GOLDEN_POLISHER);
 
             //Silver
             handheldItem(ModItems.SILVER_SWORD);
@@ -377,6 +362,14 @@ public class ModItemModelProvider extends ItemModelProvider {
             handheldItem(ModItems.SILVER_SHOVEL);
             handheldItem(ModItems.SILVER_HOE);
             handheldItem(ModItems.SILVER_POLISHER);
+                //Aluminum silver
+                handheldItem(ModItems.ALUMINUM_SILVER_SWORD);
+                handheldItem(ModItems.ALUMINUM_SILVER_DAGGER);
+                handheldItem(ModItems.ALUMINUM_SILVER_PICKAXE);
+                handheldItem(ModItems.ALUMINUM_SILVER_AXE);
+                handheldItem(ModItems.ALUMINUM_SILVER_SHOVEL);
+                handheldItem(ModItems.ALUMINUM_SILVER_HOE);
+                handheldItem(ModItems.ALUMINUM_SILVER_POLISHER);
 
             trimmedArmorItem(ModItems.SILVER_HELMET);
             trimmedArmorItem(ModItems.SILVER_CHESTPLATE);
@@ -386,6 +379,14 @@ public class ModItemModelProvider extends ItemModelProvider {
             //Stone
             handheldItem(ModItems.STONE_POLISHER);
             handheldItem(ModItems.STONE_DAGGER);
+                //Aluminum stone
+                handheldItem(ModItems.ALUMINUM_STONE_SWORD);
+                handheldItem(ModItems.ALUMINUM_STONE_DAGGER);
+                handheldItem(ModItems.ALUMINUM_STONE_PICKAXE);
+                handheldItem(ModItems.ALUMINUM_STONE_AXE);
+                handheldItem(ModItems.ALUMINUM_STONE_SHOVEL);
+                handheldItem(ModItems.ALUMINUM_STONE_HOE);
+                handheldItem(ModItems.ALUMINUM_STONE_POLISHER);
 
             //Bronze
             handheldItem(ModItems.BRONZE_SWORD);
@@ -395,6 +396,14 @@ public class ModItemModelProvider extends ItemModelProvider {
             handheldItem(ModItems.BRONZE_SHOVEL);
             handheldItem(ModItems.BRONZE_HOE);
             handheldItem(ModItems.BRONZE_POLISHER);
+                //Aluminum bronze
+                handheldItem(ModItems.ALUMINUM_BRONZE_SWORD);
+                handheldItem(ModItems.ALUMINUM_BRONZE_DAGGER);
+                handheldItem(ModItems.ALUMINUM_BRONZE_PICKAXE);
+                handheldItem(ModItems.ALUMINUM_BRONZE_AXE);
+                handheldItem(ModItems.ALUMINUM_BRONZE_SHOVEL);
+                handheldItem(ModItems.ALUMINUM_BRONZE_HOE);
+                handheldItem(ModItems.ALUMINUM_BRONZE_POLISHER);
 
             trimmedArmorItem(ModItems.BRONZE_HELMET);
             trimmedArmorItem(ModItems.BRONZE_CHESTPLATE);
@@ -409,6 +418,14 @@ public class ModItemModelProvider extends ItemModelProvider {
             handheldItem(ModItems.BRASS_SHOVEL);
             handheldItem(ModItems.BRASS_HOE);
             handheldItem(ModItems.BRASS_POLISHER);
+                //Aluminum brass
+                handheldItem(ModItems.ALUMINUM_BRASS_SWORD);
+                handheldItem(ModItems.ALUMINUM_BRASS_DAGGER);
+                handheldItem(ModItems.ALUMINUM_BRASS_PICKAXE);
+                handheldItem(ModItems.ALUMINUM_BRASS_AXE);
+                handheldItem(ModItems.ALUMINUM_BRASS_SHOVEL);
+                handheldItem(ModItems.ALUMINUM_BRASS_HOE);
+                handheldItem(ModItems.ALUMINUM_BRASS_POLISHER);
 
             trimmedArmorItem(ModItems.BRASS_HELMET);
             trimmedArmorItem(ModItems.BRASS_CHESTPLATE);
@@ -423,6 +440,14 @@ public class ModItemModelProvider extends ItemModelProvider {
             handheldItem(ModItems.ROSE_GOLDEN_SHOVEL);
             handheldItem(ModItems.ROSE_GOLDEN_HOE);
             handheldItem(ModItems.ROSE_GOLDEN_POLISHER);
+                //Aluminum rose gold
+                handheldItem(ModItems.ALUMINUM_ROSE_GOLDEN_SWORD);
+                handheldItem(ModItems.ALUMINUM_ROSE_GOLDEN_DAGGER);
+                handheldItem(ModItems.ALUMINUM_ROSE_GOLDEN_PICKAXE);
+                handheldItem(ModItems.ALUMINUM_ROSE_GOLDEN_AXE);
+                handheldItem(ModItems.ALUMINUM_ROSE_GOLDEN_SHOVEL);
+                handheldItem(ModItems.ALUMINUM_ROSE_GOLDEN_HOE);
+                handheldItem(ModItems.ALUMINUM_ROSE_GOLDEN_POLISHER);
 
             trimmedArmorItem(ModItems.ROSE_GOLDEN_HELMET);
             trimmedArmorItem(ModItems.ROSE_GOLDEN_CHESTPLATE);
@@ -437,6 +462,14 @@ public class ModItemModelProvider extends ItemModelProvider {
             handheldItem(ModItems.BRONZIUM_SHOVEL);
             handheldItem(ModItems.BRONZIUM_HOE);
             handheldItem(ModItems.BRONZIUM_POLISHER);
+                //Aluminum bronzium
+                handheldItem(ModItems.ALUMINUM_BRONZIUM_SWORD);
+                handheldItem(ModItems.ALUMINUM_BRONZIUM_DAGGER);
+                handheldItem(ModItems.ALUMINUM_BRONZIUM_PICKAXE);
+                handheldItem(ModItems.ALUMINUM_BRONZIUM_AXE);
+                handheldItem(ModItems.ALUMINUM_BRONZIUM_SHOVEL);
+                handheldItem(ModItems.ALUMINUM_BRONZIUM_HOE);
+                handheldItem(ModItems.ALUMINUM_BRONZIUM_POLISHER);
 
             trimmedArmorItem(ModItems.BRONZIUM_HELMET);
             trimmedArmorItem(ModItems.BRONZIUM_CHESTPLATE);
@@ -446,6 +479,14 @@ public class ModItemModelProvider extends ItemModelProvider {
             //Iron
             handheldItem(ModItems.IRON_POLISHER);
             handheldItem(ModItems.IRON_DAGGER);
+                //Aluminum iron
+                handheldItem(ModItems.ALUMINUM_IRON_SWORD);
+                handheldItem(ModItems.ALUMINUM_IRON_DAGGER);
+                handheldItem(ModItems.ALUMINUM_IRON_PICKAXE);
+                handheldItem(ModItems.ALUMINUM_IRON_AXE);
+                handheldItem(ModItems.ALUMINUM_IRON_SHOVEL);
+                handheldItem(ModItems.ALUMINUM_IRON_HOE);
+                handheldItem(ModItems.ALUMINUM_IRON_POLISHER);
 
             //Steel
             handheldItem(ModItems.STEEL_SWORD);
@@ -455,6 +496,14 @@ public class ModItemModelProvider extends ItemModelProvider {
             handheldItem(ModItems.STEEL_SHOVEL);
             handheldItem(ModItems.STEEL_HOE);
             handheldItem(ModItems.STEEL_POLISHER);
+                //Aluminum steel
+                handheldItem(ModItems.ALUMINUM_STEEL_SWORD);
+                handheldItem(ModItems.ALUMINUM_STEEL_DAGGER);
+                handheldItem(ModItems.ALUMINUM_STEEL_PICKAXE);
+                handheldItem(ModItems.ALUMINUM_STEEL_AXE);
+                handheldItem(ModItems.ALUMINUM_STEEL_SHOVEL);
+                handheldItem(ModItems.ALUMINUM_STEEL_HOE);
+                handheldItem(ModItems.ALUMINUM_STEEL_POLISHER);
 
             trimmedArmorItem(ModItems.STEEL_HELMET);
             trimmedArmorItem(ModItems.STEEL_CHESTPLATE);
@@ -469,6 +518,14 @@ public class ModItemModelProvider extends ItemModelProvider {
             handheldItem(ModItems.GREEN_GOLDEN_SHOVEL);
             handheldItem(ModItems.GREEN_GOLDEN_HOE);
             handheldItem(ModItems.GREEN_GOLDEN_POLISHER);
+                //Aluminum green gold
+                handheldItem(ModItems.ALUMINUM_GREEN_GOLDEN_SWORD);
+                handheldItem(ModItems.ALUMINUM_GREEN_GOLDEN_DAGGER);
+                handheldItem(ModItems.ALUMINUM_GREEN_GOLDEN_PICKAXE);
+                handheldItem(ModItems.ALUMINUM_GREEN_GOLDEN_AXE);
+                handheldItem(ModItems.ALUMINUM_GREEN_GOLDEN_SHOVEL);
+                handheldItem(ModItems.ALUMINUM_GREEN_GOLDEN_HOE);
+                handheldItem(ModItems.ALUMINUM_GREEN_GOLDEN_POLISHER);
 
             trimmedArmorItem(ModItems.GREEN_GOLDEN_HELMET);
             trimmedArmorItem(ModItems.GREEN_GOLDEN_CHESTPLATE);
@@ -483,6 +540,14 @@ public class ModItemModelProvider extends ItemModelProvider {
             handheldItem(ModItems.BLUE_GOLDEN_SHOVEL);
             handheldItem(ModItems.BLUE_GOLDEN_HOE);
             handheldItem(ModItems.BLUE_GOLDEN_POLISHER);
+                //Aluminum blue gold
+                handheldItem(ModItems.ALUMINUM_BLUE_GOLDEN_SWORD);
+                handheldItem(ModItems.ALUMINUM_BLUE_GOLDEN_DAGGER);
+                handheldItem(ModItems.ALUMINUM_BLUE_GOLDEN_PICKAXE);
+                handheldItem(ModItems.ALUMINUM_BLUE_GOLDEN_AXE);
+                handheldItem(ModItems.ALUMINUM_BLUE_GOLDEN_SHOVEL);
+                handheldItem(ModItems.ALUMINUM_BLUE_GOLDEN_HOE);
+                handheldItem(ModItems.ALUMINUM_BLUE_GOLDEN_POLISHER);
 
             trimmedArmorItem(ModItems.BLUE_GOLDEN_HELMET);
             trimmedArmorItem(ModItems.BLUE_GOLDEN_CHESTPLATE);
@@ -492,6 +557,14 @@ public class ModItemModelProvider extends ItemModelProvider {
             //Diamond
             handheldItem(ModItems.DIAMOND_POLISHER);
             handheldItem(ModItems.DIAMOND_DAGGER);
+                //Aluminum diamond
+                handheldItem(ModItems.ALUMINUM_DIAMOND_SWORD);
+                handheldItem(ModItems.ALUMINUM_DIAMOND_DAGGER);
+                handheldItem(ModItems.ALUMINUM_DIAMOND_PICKAXE);
+                handheldItem(ModItems.ALUMINUM_DIAMOND_AXE);
+                handheldItem(ModItems.ALUMINUM_DIAMOND_SHOVEL);
+                handheldItem(ModItems.ALUMINUM_DIAMOND_HOE);
+                handheldItem(ModItems.ALUMINUM_DIAMOND_POLISHER);
 
             //Netherite
             handheldItem(ModItems.NETHERITE_POLISHER);

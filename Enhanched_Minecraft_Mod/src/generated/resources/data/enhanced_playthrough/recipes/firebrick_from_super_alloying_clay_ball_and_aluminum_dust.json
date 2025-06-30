@@ -1,0 +1,18 @@
+{
+  "type": "enhanced_playthrough:super_ore_alloying",
+  "alloytime": 100,
+  "category": "simple_alloy",
+  "group": "firebrick",
+  "ingredients": [
+    {
+      "item": "minecraft:clay_ball"
+    },
+    {
+      "item": "enhanced_playthrough:aluminum_dust"
+    }
+  ],
+  "output": {
+    "count": 4,
+    "item": "enhanced_playthrough:firebrick"
+  }
+}

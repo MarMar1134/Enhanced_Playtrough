@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "tag": "enhanced_playthrough:rods/aluminum"
+    },
+    "I": {
+      "tag": "forge:cobble"
+    },
+    "S": {
+      "tag": "forge:string"
+    }
+  },
+  "pattern": [
+    "SI",
+    "# "
+  ],
+  "result": {
+    "item": "enhanced_playthrough:aluminum_stone_polisher"
+  },
+  "show_notification": true
+}

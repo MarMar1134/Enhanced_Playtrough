@@ -29,6 +29,8 @@ public interface BlockLootTableBuilders {
     float[] BASE_SAPLING_CHANCES = new float[]{0.05F, 0.0625F, 0.083333336F, 0.1F};
     float[] BASE_STICK_CHANCES = new float[]{0.02F, 0.022222223F, 0.025F, 0.033333335F, 0.1F};
 
+    LootItemCondition.Builder IS_WOODEN_PICKAXE = MatchTool.toolMatches(ItemPredicate.Builder.item().of(Items.WOODEN_PICKAXE));
+
     LootItemCondition.Builder IS_WOODEN_OR_STONE_PICKAXE = MatchTool.toolMatches(ItemPredicate.Builder.item().of(Items.WOODEN_PICKAXE))
             .or(MatchTool.toolMatches(ItemPredicate.Builder.item().of(Items.STONE_PICKAXE)));
 
@@ -52,7 +54,11 @@ public interface BlockLootTableBuilders {
                     .hasEnchantment(new EnchantmentPredicate(Enchantments.SILK_TOUCH, MinMaxBounds.Ints.atLeast(1))))
             .and(IS_STEEL_PICKAXE.invert()).and(IS_WOODEN_OR_STONE_PICKAXE.invert());
 
-    LootItemCondition.Builder HAS_NOT_ROUGH_MINING_OR_WOOD_PICKAXE = MatchTool.toolMatches(ItemPredicate.Builder.item()
+    LootItemCondition.Builder HAS_NOT_ROUGH_MINING_OR_WOODEN_PICKAXE = MatchTool.toolMatches(ItemPredicate.Builder.item()
+                    .hasEnchantment(new EnchantmentPredicate(ModEnchantments.ROUGH_MINING.get(), MinMaxBounds.Ints.atLeast(1)))).invert()
+            .and(IS_WOODEN_PICKAXE.invert());
+
+    LootItemCondition.Builder HAS_NOT_ROUGH_MINING_OR_WOODEN_AND_STONE_PICKAXE = MatchTool.toolMatches(ItemPredicate.Builder.item()
                     .hasEnchantment(new EnchantmentPredicate(ModEnchantments.ROUGH_MINING.get(), MinMaxBounds.Ints.atLeast(1)))).invert()
             .and(IS_WOODEN_OR_STONE_PICKAXE.invert());
 
@@ -95,36 +101,35 @@ public interface BlockLootTableBuilders {
             .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CornCropBlock.AGE, 7));
 
     /**
-     *
      * @param pBlock specifies the block that will have the loot table
      * @param minDrops specifies the minimum quantity of items that can drop the block
      * @param maxDrops specifies the maximum quantity of items that can drop the block
-     * @param drop specifies the item that will be dropped
-     * @param cobbleType specifies the type of cobble dropped if the player does not have Fine Mining
+     * @param pRawOre specifies the dropped ore
+     * @param pRemnant specifies the type of cobble dropped if the player does not have Fine Mining
      * @return the loot table for the specified block
      */
-    default LootTable.Builder createBaseOreDrops(Block pBlock, int minDrops, int maxDrops, ItemLike drop, ItemLike cobbleType){
+    default LootTable.Builder createBaseOreDrops(Block pBlock, int minDrops, int maxDrops, ItemLike pRawOre, ItemLike pRemnant){
         return LootTable.lootTable()
                 .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F))
                         .add(LootItem.lootTableItem(pBlock).when(CUSTOM_HAS_SILK_TOUCH)
-                                .otherwise(LootItem.lootTableItem(drop).when(HAS_FINE_MINING)
+                                .otherwise(LootItem.lootTableItem(pRawOre).when(HAS_FINE_MINING)
                                         .apply(SetItemCountFunction.setCount(UniformGenerator.between(minDrops, maxDrops)))
                                         .apply(ApplyBonusCount.addUniformBonusCount(Enchantments.BLOCK_FORTUNE)))))
 
                 .withPool(LootPool.lootPool()
-                        .add(LootItem.lootTableItem(drop)
+                        .add(LootItem.lootTableItem(pRawOre)
                                 .apply(SetItemCountFunction.setCount(UniformGenerator.between(minDrops, maxDrops)))
                                 .apply(ApplyBonusCount.addUniformBonusCount(Enchantments.BLOCK_FORTUNE)))
                         .when(HAS_NOT_FINE_MINING_NOR_ROUGH_MINING))
 
                 .withPool(LootPool.lootPool()
-                        .add(LootItem.lootTableItem(cobbleType)
+                        .add(LootItem.lootTableItem(pRemnant)
                                 .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 3)))
                                 .apply(ApplyBonusCount.addUniformBonusCount(Enchantments.BLOCK_FORTUNE)))
                         .when(HAS_NOT_FINE_MINING_NOR_ROUGH_MINING))
 
                 .withPool(LootPool.lootPool()
-                        .add(LootItem.lootTableItem(cobbleType)
+                        .add(LootItem.lootTableItem(pRemnant)
                                 .apply(SetItemCountFunction.setCount(ConstantValue.exactly(4)))
                                 .apply(ApplyBonusCount.addUniformBonusCount(Enchantments.BLOCK_FORTUNE)))
                         .when(HAS_ROUGH_MINING));
@@ -141,8 +146,13 @@ public interface BlockLootTableBuilders {
     default LootTable.Builder createOreDrops(Block pBlock, ItemLike drop){
         return createBaseOreDrops(pBlock, 1, 1, drop, ModItems.COBBLE.get());
     }
+
     default LootTable.Builder createDeepslateOreDrops(Block pBlock, ItemLike drop){
         return createBaseOreDrops(pBlock, 1, 1, drop, ModItems.DEEPSLATE_COBBLE.get());
+    }
+
+    default LootTable.Builder createBauxiteOreDrops(Block pBlock, ItemLike terracottaShard){
+        return createBaseOreDrops(pBlock, 1, 1, ModItems.RAW_ALUMINUM.get(), terracottaShard);
     }
 
     default LootTable.Builder createNetherOreDrops(Block pBlock, int minDrops, int maxDrops, ItemLike pDrop){
@@ -230,11 +240,15 @@ public interface BlockLootTableBuilders {
     }
 
     default LootTable.Builder createRockDrops(Block baseRock, Block cobbleRock, ItemLike cobbleType){
-        return createBaseRockDrops(baseRock, cobbleRock, cobbleType, HAS_NOT_ROUGH_MINING_OR_WOOD_PICKAXE, IS_WOODEN_OR_STONE_PICKAXE);
+        return createBaseRockDrops(baseRock, cobbleRock, cobbleType, HAS_NOT_ROUGH_MINING_OR_WOODEN_AND_STONE_PICKAXE, IS_WOODEN_OR_STONE_PICKAXE);
     }
 
     default LootTable.Builder createHardRockDrops(Block baseRock, Block cobbleRock, ItemLike cobbleType){
         return createBaseRockDrops(baseRock, cobbleRock, cobbleType, HAS_NOT_ROUGH_MINING_OR_STEEL_PICKAXE, IS_STEEL_PICKAXE);
+    }
+
+    default LootTable.Builder createTerracottaDrops(Block baseBlock, ItemLike terracottaShard){
+        return createBaseRockDrops(baseBlock,baseBlock, terracottaShard, HAS_NOT_ROUGH_MINING_OR_WOODEN_PICKAXE, IS_WOODEN_PICKAXE);
     }
 
     default LootTable.Builder createRoughMiningDrops(Block pBlock, ItemLike pRoughDrop, int pRoughQuantity){

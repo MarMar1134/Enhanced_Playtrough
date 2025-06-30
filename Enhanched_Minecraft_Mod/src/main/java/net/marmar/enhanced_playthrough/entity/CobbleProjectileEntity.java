@@ -17,16 +17,19 @@ import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
 
 public class CobbleProjectileEntity extends ThrowableItemProjectile {
+    private int cobbleDamage;
+
     public CobbleProjectileEntity(EntityType<? extends ThrowableItemProjectile> pEntityType, Level pLevel) {
-        super(pEntityType, pLevel);
+        super(pEntityType, pLevel);;
     }
 
     public CobbleProjectileEntity(Level pLevel) {
         super(ModEntities.THROWABLE_COBBLE.get(), pLevel);
     }
 
-    public CobbleProjectileEntity(Level pLevel, LivingEntity pShooter) {
+    public CobbleProjectileEntity(Level pLevel, LivingEntity pShooter, int pCobbleDamage) {
         super(ModEntities.THROWABLE_COBBLE.get(), pShooter, pLevel);
+        this.cobbleDamage = pCobbleDamage;
     }
 
     @Override
@@ -38,7 +41,7 @@ public class CobbleProjectileEntity extends ThrowableItemProjectile {
     protected void onHitEntity(EntityHitResult pResult) {
         super.onHitEntity(pResult);
         Entity entity = pResult.getEntity();
-        entity.hurt(new ModDamageSources(entity.level().registryAccess()).cobble(), 2);
+        entity.hurt(new ModDamageSources(entity.level().registryAccess()).cobble(), this.cobbleDamage);
     }
 
     protected void onHit(HitResult pResult) {
