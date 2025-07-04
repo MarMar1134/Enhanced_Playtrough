@@ -1,4 +1,4 @@
-package net.marmar.enhanced_playthrough.Util.particle;
+package net.marmar.enhanced_playthrough.util.particle;
 
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.particle.*;

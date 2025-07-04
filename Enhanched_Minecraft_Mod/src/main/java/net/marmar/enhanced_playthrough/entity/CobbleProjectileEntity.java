@@ -1,6 +1,6 @@
 package net.marmar.enhanced_playthrough.entity;
 
-import net.marmar.enhanced_playthrough.Util.damage.ModDamageSources;
+import net.marmar.enhanced_playthrough.util.damage.ModDamageSources;
 import net.marmar.enhanced_playthrough.item.ModItems;
 import net.minecraft.core.particles.ItemParticleOption;
 import net.minecraft.core.particles.ParticleOptions;

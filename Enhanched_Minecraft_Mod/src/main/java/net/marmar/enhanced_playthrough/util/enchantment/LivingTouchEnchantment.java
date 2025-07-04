@@ -1,4 +1,4 @@
-package net.marmar.enhanced_playthrough.Util.enchantment;
+package net.marmar.enhanced_playthrough.util.enchantment;
 
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;

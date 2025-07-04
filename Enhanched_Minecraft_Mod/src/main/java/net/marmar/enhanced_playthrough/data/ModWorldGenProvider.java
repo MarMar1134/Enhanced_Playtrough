@@ -1,7 +1,7 @@
 package net.marmar.enhanced_playthrough.data;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
-import net.marmar.enhanced_playthrough.Util.damage.ModDamageTypes;
+import net.marmar.enhanced_playthrough.util.damage.ModDamageTypes;
 import net.marmar.enhanced_playthrough.worldgen.ModBiomeModifiers;
 import net.marmar.enhanced_playthrough.worldgen.ModConfiguredFeatures;
 import net.marmar.enhanced_playthrough.worldgen.ModPlacedFeatures;

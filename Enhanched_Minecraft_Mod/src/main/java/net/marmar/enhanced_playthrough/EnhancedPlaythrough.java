@@ -1,18 +1,18 @@
 package net.marmar.enhanced_playthrough;
 
-import net.marmar.enhanced_playthrough.Util.effect.ModEffects;
-import net.marmar.enhanced_playthrough.Util.particle.ModParticles;
+import net.marmar.enhanced_playthrough.util.effect.ModEffects;
+import net.marmar.enhanced_playthrough.util.particle.ModParticles;
 import net.marmar.enhanced_playthrough.block.ModBlocks;
 import net.marmar.enhanced_playthrough.block.ModBlockEntities;
-import net.marmar.enhanced_playthrough.Util.enchantment.ModEnchantments;
+import net.marmar.enhanced_playthrough.util.enchantment.ModEnchantments;
 import net.marmar.enhanced_playthrough.entity.ModEntities;
 import net.marmar.enhanced_playthrough.item.ModItems;
-import net.marmar.enhanced_playthrough.Util.tab.ModTabs;
+import net.marmar.enhanced_playthrough.util.tab.ModTabs;
 import net.marmar.enhanced_playthrough.data.loot.ModLootModifiers;
 import net.marmar.enhanced_playthrough.recipe.ModRecipes;
 import net.marmar.enhanced_playthrough.menu.ModMenuTypes;
-import net.marmar.enhanced_playthrough.Util.ModSounds;
 import net.marmar.enhanced_playthrough.entity.ModVillagers;
+import net.marmar.enhanced_playthrough.util.ModSounds;
 import net.marmar.enhanced_playthrough.worldgen.feature.ModFeatures;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;

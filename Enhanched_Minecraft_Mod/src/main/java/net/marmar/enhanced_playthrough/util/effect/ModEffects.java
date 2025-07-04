@@ -1,4 +1,4 @@
-package net.marmar.enhanced_playthrough.Util.effect;
+package net.marmar.enhanced_playthrough.util.effect;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.minecraft.core.registries.Registries;

@@ -2,7 +2,7 @@ package net.marmar.enhanced_playthrough.block.grinder;
 
 import net.marmar.enhanced_playthrough.block.ModBlockEntities;
 import net.marmar.enhanced_playthrough.block.grinder.entity.PrimalGrinderBlockEntity;
-import net.marmar.enhanced_playthrough.Util.ModSounds;
+import net.marmar.enhanced_playthrough.util.ModSounds;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;

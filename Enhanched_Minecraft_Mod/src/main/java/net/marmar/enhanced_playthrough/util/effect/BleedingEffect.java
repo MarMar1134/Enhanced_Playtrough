@@ -1,7 +1,7 @@
-package net.marmar.enhanced_playthrough.Util.effect;
+package net.marmar.enhanced_playthrough.util.effect;
 
-import net.marmar.enhanced_playthrough.Util.damage.ModDamageSources;
-import net.marmar.enhanced_playthrough.Util.particle.ModParticles;
+import net.marmar.enhanced_playthrough.util.damage.ModDamageSources;
+import net.marmar.enhanced_playthrough.util.particle.ModParticles;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.LivingEntity;

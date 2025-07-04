@@ -2,7 +2,7 @@ package net.marmar.enhanced_playthrough.event;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.block.ModBlocks;
-import net.marmar.enhanced_playthrough.Util.enchantment.ModEnchantments;
+import net.marmar.enhanced_playthrough.util.enchantment.ModEnchantments;
 import net.marmar.enhanced_playthrough.item.ModItems;
 import net.marmar.enhanced_playthrough.entity.ModVillagers;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;

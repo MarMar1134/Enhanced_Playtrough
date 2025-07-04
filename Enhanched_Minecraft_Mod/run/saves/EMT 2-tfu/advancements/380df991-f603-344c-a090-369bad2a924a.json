@@ -4019,5 +4019,401 @@
     },
     "done": true
   },
+  "enhanced_playthrough:recipes/combat/aluminum_golden_sword": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_brass_polisher": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_green_golden_pickaxe": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_brass_pickaxe": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_green_golden_axe": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_bronze_polisher": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_silver_hoe": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/aluminum_blue_golden_dagger": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_green_golden_shovel": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_iron_axe": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/aluminum_iron_sword": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_rose_golden_polisher": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_rose_golden_axe": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/aluminum_bronze_dagger": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_golden_polisher": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/aluminum_green_golden_dagger": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_diamond_axe": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/aluminum_silver_sword": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_silver_polisher": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_diamond_shovel": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_blue_golden_axe": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/aluminum_iron_dagger": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_steel_axe": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_steel_polisher": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_brass_axe": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/aluminum_rose_golden_sword": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_iron_pickaxe": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/aluminum_bronze_sword": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_rose_golden_shovel": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_green_golden_polisher": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/aluminum_golden_dagger": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/aluminum_blue_golden_sword": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_brass_shovel": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_silver_pickaxe": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/aluminum_silver_dagger": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_steel_shovel": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/aluminum_green_golden_sword": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_golden_shovel": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_bronze_axe": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_bronze_pickaxe": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/aluminum_brass_sword": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_golden_pickaxe": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_bronze_shovel": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_brass_hoe": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_rose_golden_hoe": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/aluminum_rose_golden_dagger": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_diamond_polisher": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_rose_golden_pickaxe": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_green_golden_hoe": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/aluminum_steel_dagger": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/aluminum_diamond_dagger": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_iron_hoe": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_golden_axe": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_diamond_hoe": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_iron_shovel": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_steel_hoe": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_golden_hoe": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_blue_golden_polisher": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/aluminum_steel_sword": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_blue_golden_hoe": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/aluminum_diamond_sword": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_silver_shovel": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/aluminum_brass_dagger": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_bronze_hoe": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_blue_golden_shovel": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_iron_polisher": {
+    "criteria": {
+      "has_smithing_template": "2025-07-04 14:45:55 -0300"
+    },
+    "done": true
+  },
   "DataVersion": 3465
 }

@@ -1,7 +1,7 @@
 package net.marmar.enhanced_playthrough.entity;
 
 import com.google.common.collect.Maps;
-import net.marmar.enhanced_playthrough.Util.enchantment.ModEnchantments;
+import net.marmar.enhanced_playthrough.util.enchantment.ModEnchantments;
 import net.marmar.enhanced_playthrough.item.ModItems;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;

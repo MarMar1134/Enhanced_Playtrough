@@ -1,4 +1,4 @@
-package net.marmar.enhanced_playthrough.Util.enchantment;
+package net.marmar.enhanced_playthrough.util.enchantment;
 
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.DiggerItem;

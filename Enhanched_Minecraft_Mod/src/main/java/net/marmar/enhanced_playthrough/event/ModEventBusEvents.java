@@ -1,8 +1,8 @@
 package net.marmar.enhanced_playthrough.event;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
-import net.marmar.enhanced_playthrough.Util.particle.BleedParticle;
-import net.marmar.enhanced_playthrough.Util.particle.ModParticles;
+import net.marmar.enhanced_playthrough.util.particle.BleedParticle;
+import net.marmar.enhanced_playthrough.util.particle.ModParticles;
 import net.marmar.enhanced_playthrough.entity.Bandit;
 import net.marmar.enhanced_playthrough.entity.ModEntities;
 import net.minecraftforge.client.event.RegisterParticleProvidersEvent;

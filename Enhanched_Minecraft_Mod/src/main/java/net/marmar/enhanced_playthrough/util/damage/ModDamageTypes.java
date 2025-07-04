@@ -1,4 +1,4 @@
-package net.marmar.enhanced_playthrough.Util.damage;
+package net.marmar.enhanced_playthrough.util.damage;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.minecraft.core.registries.Registries;

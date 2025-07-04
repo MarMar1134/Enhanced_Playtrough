@@ -1,4 +1,4 @@
-package net.marmar.enhanced_playthrough.Util.particle;
+package net.marmar.enhanced_playthrough.util.particle;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.minecraft.core.particles.ParticleType;

@@ -5,7 +5,7 @@ import net.marmar.enhanced_playthrough.block.custom.crop.CornCropBlock;
 import net.marmar.enhanced_playthrough.block.custom.crop.TomatoCropBlock;
 import net.marmar.enhanced_playthrough.block.custom.crop.YerbaMateCropBlock;
 import net.marmar.enhanced_playthrough.block.custom.crop.ZapalloCropBlock;
-import net.marmar.enhanced_playthrough.Util.enchantment.ModEnchantments;
+import net.marmar.enhanced_playthrough.util.enchantment.ModEnchantments;
 import net.marmar.enhanced_playthrough.item.ModItems;
 import net.minecraft.advancements.critereon.EnchantmentPredicate;
 import net.minecraft.advancements.critereon.ItemPredicate;

@@ -1,7 +1,7 @@
 package net.marmar.enhanced_playthrough.item.custom.weapon;
 
-import net.marmar.enhanced_playthrough.Util.effect.ModEffects;
-import net.marmar.enhanced_playthrough.Util.enchantment.BloodyBladeEnchantment;
+import net.marmar.enhanced_playthrough.util.effect.ModEffects;
+import net.marmar.enhanced_playthrough.util.enchantment.BloodyBladeEnchantment;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;

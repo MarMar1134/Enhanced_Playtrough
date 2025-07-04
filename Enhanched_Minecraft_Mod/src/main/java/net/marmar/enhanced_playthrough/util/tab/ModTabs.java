@@ -1,4 +1,4 @@
-package net.marmar.enhanced_playthrough.Util.tab;
+package net.marmar.enhanced_playthrough.util.tab;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.block.ModBlocks;
