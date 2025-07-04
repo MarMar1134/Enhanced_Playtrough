@@ -348,9 +348,37 @@ public class ModBlocks {
         public static final RegistryObject<Block> DEEPSLATE_COBALT_ORE = registerBlockWithItem("deepslate_cobalt_ore",
                 () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_DIAMOND_ORE)));
 
+        //Bauxite
+        public static final RegistryObject<Block> BAUXITE = registerBlockWithItem("bauxite",
+                () -> new Block(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA).requiresCorrectToolForDrops()));
+        public static final RegistryObject<Block> WHITE_BAUXITE = registerBlockWithItem("white_bauxite",
+                () -> new Block(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA).requiresCorrectToolForDrops()));
+        public static final RegistryObject<Block> LIGHT_GRAY_BAUXITE = registerBlockWithItem("light_gray_bauxite",
+                () -> new Block(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA).requiresCorrectToolForDrops()));
+        public static final RegistryObject<Block> BROWN_BAUXITE = registerBlockWithItem("brown_bauxite",
+                () -> new Block(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA).requiresCorrectToolForDrops()));
+        public static final RegistryObject<Block> RED_BAUXITE = registerBlockWithItem("red_bauxite",
+                () -> new Block(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA).requiresCorrectToolForDrops()));
+        public static final RegistryObject<Block> ORANGE_BAUXITE = registerBlockWithItem("orange_bauxite",
+                () -> new Block(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA).requiresCorrectToolForDrops()));
+        public static final RegistryObject<Block> YELLOW_BAUXITE = registerBlockWithItem("yellow_bauxite",
+                () -> new Block(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA).requiresCorrectToolForDrops()));
+
+        //Raw ores blocks
+        public static final RegistryObject<Block> RAW_SILVER_BLOCK = registerBlockWithItem("raw_silver_block",
+                ()-> new Block(BlockBehaviour.Properties.copy(Blocks.RAW_GOLD_BLOCK)));
+        public static final RegistryObject<Block> RAW_ALUMINUM_BLOCK = registerBlockWithItem("raw_aluminum_block",
+                ()-> new Block(BlockBehaviour.Properties.copy(Blocks.RAW_IRON_BLOCK).strength(2, 3)));
+        public static final RegistryObject<Block> RAW_TIN_BLOCK = registerBlockWithItem("raw_tin_block",
+                ()-> new Block(BlockBehaviour.Properties.copy(Blocks.RAW_IRON_BLOCK).strength(2, 3)));
+        public static final RegistryObject<Block> RAW_ZINC_BLOCK = registerBlockWithItem("raw_zinc_block",
+                ()-> new Block(BlockBehaviour.Properties.copy(Blocks.RAW_IRON_BLOCK).strength(2, 3)));
+
         //Ores blocks
         public static final RegistryObject<Block> SILVER_BLOCK = registerBlockWithItem("silver_block",
                 () -> new Block(BlockBehaviour.Properties.copy(Blocks.GOLD_BLOCK)));
+        public static final RegistryObject<Block> ALUMINUM_BLOCK = registerBlockWithItem("aluminum_block",
+                () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(2, 3)));
         public static final RegistryObject<Block> TIN_BLOCK = registerBlockWithItem("tin_block",
                 () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(2, 3)));
         public static final RegistryObject<Block> ZINC_BLOCK = registerBlockWithItem("zinc_block",
@@ -370,21 +398,7 @@ public class ModBlocks {
         public static final RegistryObject<Block> BLUE_GOLD_BLOCK = registerBlockWithItem("blue_gold_block",
                 () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(6, 8)));
 
-            //Bauxite
-            public static final RegistryObject<Block> BAUXITE = registerBlockWithItem("bauxite",
-                    () -> new Block(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA).requiresCorrectToolForDrops()));
-            public static final RegistryObject<Block> WHITE_BAUXITE = registerBlockWithItem("white_bauxite",
-                    () -> new Block(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA).requiresCorrectToolForDrops()));
-            public static final RegistryObject<Block> LIGHT_GRAY_BAUXITE = registerBlockWithItem("light_gray_bauxite",
-                    () -> new Block(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA).requiresCorrectToolForDrops()));
-            public static final RegistryObject<Block> BROWN_BAUXITE = registerBlockWithItem("brown_bauxite",
-                    () -> new Block(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA).requiresCorrectToolForDrops()));
-            public static final RegistryObject<Block> RED_BAUXITE = registerBlockWithItem("red_bauxite",
-                    () -> new Block(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA).requiresCorrectToolForDrops()));
-            public static final RegistryObject<Block> ORANGE_BAUXITE = registerBlockWithItem("orange_bauxite",
-                    () -> new Block(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA).requiresCorrectToolForDrops()));
-            public static final RegistryObject<Block> YELLOW_BAUXITE = registerBlockWithItem("yellow_bauxite",
-                    () -> new Block(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA).requiresCorrectToolForDrops()));
+
 
     //Entity blocks
         //Basic furnaces

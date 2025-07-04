@@ -3611,9 +3611,15 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/combat/aluminum_stone_sword": {
+  "enhanced_playthrough:recipes/aluminum_steel_pickaxe_from_smithing_steel_pickaxe_with_aluminum_ingot": {
     "criteria": {
-      "has_aluminum_rod": "2025-06-30 18:07:06 -0300"
+      "has_steel_pickaxe": "2025-06-30 18:04:10 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/aluminum_rod": {
+    "criteria": {
+      "has_aluminum_ingot": "2025-06-30 18:06:31 -0300"
     },
     "done": true
   },
@@ -3629,60 +3635,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/tools/aluminum_silver_hoe": {
-    "criteria": {
-      "has_silver_ingot": "2025-06-30 18:06:36 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/tools/aluminum_iron_axe": {
-    "criteria": {
-      "has_iron_ingot": "2025-06-30 18:06:32 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/combat/aluminum_iron_sword": {
-    "criteria": {
-      "has_iron_ingot": "2025-06-30 18:06:32 -0300"
-    },
-    "done": true
-  },
-  "minecraft:nether/obtain_blaze_rod": {
-    "criteria": {
-      "blaze_rod": "2025-06-30 18:08:03 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/aluminum_dust_from_mechanical_grinding_aluminum_ingot": {
-    "criteria": {
-      "has_aluminum_ingot": "2025-06-30 18:06:31 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/combat/aluminum_silver_sword": {
-    "criteria": {
-      "has_silver_ingot": "2025-06-30 18:06:36 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/tools/aluminum_silver_polisher": {
-    "criteria": {
-      "has_silver_ingot": "2025-06-30 18:06:36 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/combat/aluminum_stone_dagger": {
-    "criteria": {
-      "has_aluminum_rod": "2025-06-30 18:07:06 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/combat/aluminum_iron_dagger": {
-    "criteria": {
-      "has_iron_ingot": "2025-06-30 18:06:32 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:recipes/tools/silver_polisher": {
     "criteria": {
       "has_silver_ingot": "2025-06-30 18:06:36 -0300"
@@ -3692,12 +3644,6 @@
   "enhanced_playthrough:recipes/misc/silver_nugget": {
     "criteria": {
       "has_silver_ingot": "2025-06-30 18:06:36 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/tools/aluminum_iron_pickaxe": {
-    "criteria": {
-      "has_iron_ingot": "2025-06-30 18:06:32 -0300"
     },
     "done": true
   },
@@ -3713,31 +3659,7 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/tools/aluminum_stone_pickaxe": {
-    "criteria": {
-      "has_aluminum_rod": "2025-06-30 18:07:06 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/tools/aluminum_stone_hoe": {
-    "criteria": {
-      "has_aluminum_rod": "2025-06-30 18:07:06 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/tools/aluminum_silver_pickaxe": {
-    "criteria": {
-      "has_silver_ingot": "2025-06-30 18:06:36 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:recipes/misc/silver_block": {
-    "criteria": {
-      "has_silver_ingot": "2025-06-30 18:06:36 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/combat/aluminum_silver_dagger": {
     "criteria": {
       "has_silver_ingot": "2025-06-30 18:06:36 -0300"
     },
@@ -3746,12 +3668,6 @@
   "enhanced_playthrough:recipes/misc/silver_ingot_from_nuggets": {
     "criteria": {
       "has_silver_ingot": "2025-06-30 18:06:36 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/aluminum_rod": {
-    "criteria": {
-      "has_aluminum_ingot": "2025-06-30 18:06:31 -0300"
     },
     "done": true
   },
@@ -3767,67 +3683,7 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/tools/aluminum_stone_polisher": {
-    "criteria": {
-      "has_aluminum_rod": "2025-06-30 18:07:06 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/tools/aluminum_iron_hoe": {
-    "criteria": {
-      "has_iron_ingot": "2025-06-30 18:06:32 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/tools/aluminum_steel_pickaxe": {
-    "criteria": {
-      "has_aluminum_steel_pickaxe": "2025-06-30 18:04:05 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/aluminum_steel_pickaxe_from_smithing_steel_pickaxe_with_aluminum_ingot": {
-    "criteria": {
-      "has_steel_pickaxe": "2025-06-30 18:04:10 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/tools/aluminum_iron_shovel": {
-    "criteria": {
-      "has_iron_ingot": "2025-06-30 18:06:32 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/tools/aluminum_stone_axe": {
-    "criteria": {
-      "has_aluminum_rod": "2025-06-30 18:07:06 -0300"
-    },
-    "done": true
-  },
-  "minecraft:recipes/brewing/blaze_powder": {
-    "criteria": {
-      "has_blaze_rod": "2025-06-30 18:08:03 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/tools/aluminum_silver_axe": {
-    "criteria": {
-      "has_silver_ingot": "2025-06-30 18:06:36 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/tools/aluminum_stone_shovel": {
-    "criteria": {
-      "has_aluminum_rod": "2025-06-30 18:07:06 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:recipes/tools/silver_shovel": {
-    "criteria": {
-      "has_silver_ingot": "2025-06-30 18:06:36 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/tools/aluminum_silver_shovel": {
     "criteria": {
       "has_silver_ingot": "2025-06-30 18:06:36 -0300"
     },
@@ -3839,15 +3695,327 @@
     },
     "done": true
   },
+  "enhanced_playthrough:recipes/combat/aluminum_stone_sword": {
+    "criteria": {
+      "has_aluminum_rod": "2025-06-30 18:07:06 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/aluminum_stone_dagger": {
+    "criteria": {
+      "has_aluminum_rod": "2025-06-30 18:07:06 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_stone_pickaxe": {
+    "criteria": {
+      "has_aluminum_rod": "2025-06-30 18:07:06 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_stone_hoe": {
+    "criteria": {
+      "has_aluminum_rod": "2025-06-30 18:07:06 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_stone_polisher": {
+    "criteria": {
+      "has_aluminum_rod": "2025-06-30 18:07:06 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_stone_axe": {
+    "criteria": {
+      "has_aluminum_rod": "2025-06-30 18:07:06 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_stone_shovel": {
+    "criteria": {
+      "has_aluminum_rod": "2025-06-30 18:07:06 -0300"
+    },
+    "done": true
+  },
+  "minecraft:nether/obtain_blaze_rod": {
+    "criteria": {
+      "blaze_rod": "2025-06-30 18:08:03 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/brewing/blaze_powder": {
+    "criteria": {
+      "has_blaze_rod": "2025-06-30 18:08:03 -0300"
+    },
+    "done": true
+  },
   "minecraft:recipes/brewing/brewing_stand": {
     "criteria": {
       "has_blaze_rod": "2025-06-30 18:08:03 -0300"
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/tools/aluminum_iron_polisher": {
+  "enhanced_playthrough:recipes/aluminum_dust_from_mechanical_grinding": {
     "criteria": {
-      "has_iron_ingot": "2025-06-30 18:06:32 -0300"
+      "TagKey[minecraft:item / enhanced_playthrough:aluminum_manufacturable]": "2025-07-03 20:16:06 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/aluminum_block": {
+    "criteria": {
+      "has_aluminum_ingot": "2025-07-03 20:16:06 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/aluminum_nugget": {
+    "criteria": {
+      "has_aluminum_ingot": "2025-07-03 20:16:06 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/aluminum_ingot_from_block": {
+    "criteria": {
+      "has_aluminum_ingot": "2025-07-03 20:16:06 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/aluminum_ingot_from_nuggets": {
+    "criteria": {
+      "has_aluminum_ingot": "2025-07-03 20:16:06 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/blue_golden_polisher": {
+    "criteria": {
+      "has_blue_golden_polisher": "2025-07-03 20:17:38 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/aluminum_blue_golden_polisher_from_smithing_blue_golden_polisher_with_aluminum_ingot": {
+    "criteria": {
+      "has_blue_golden_polisher": "2025-07-03 20:17:38 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/emerald_from_gem_polishing_raw_emerald": {
+    "criteria": {
+      "has_raw_emerald": "2025-07-03 20:18:34 -0300"
+    },
+    "done": true
+  },
+  "minecraft:nether/create_beacon": {
+    "criteria": {
+      "beacon": "2025-07-03 20:21:11 -0300"
+    },
+    "done": true
+  },
+  "minecraft:nether/create_full_beacon": {
+    "criteria": {
+      "beacon": "2025-07-03 20:21:11 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/iron_ingot_from_iron_block": {
+    "criteria": {
+      "has_iron_block": "2025-07-03 20:21:42 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/anvil": {
+    "criteria": {
+      "has_iron_block": "2025-07-03 20:21:42 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/silver_ingot__from_blasting_silver_dust": {
+    "criteria": {
+      "has_silver_dust": "2025-07-03 23:03:13 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/raw_silver_from_block": {
+    "criteria": {
+      "has_raw_silver": "2025-07-03 23:03:14 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/raw_silver_block": {
+    "criteria": {
+      "has_raw_silver": "2025-07-03 23:03:14 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/raw_aluminum_block": {
+    "criteria": {
+      "has_raw_aluminum_block": "2025-07-03 23:06:43 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/raw_tin_block": {
+    "criteria": {
+      "has_raw_tin_block": "2025-07-03 23:06:44 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/raw_zinc_block": {
+    "criteria": {
+      "has_raw_zinc_block": "2025-07-03 23:06:45 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/raw_iron": {
+    "criteria": {
+      "has_raw_iron_block": "2025-07-03 23:06:54 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/raw_copper": {
+    "criteria": {
+      "has_raw_copper_block": "2025-07-03 23:06:54 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/raw_gold": {
+    "criteria": {
+      "has_raw_gold_block": "2025-07-03 23:06:55 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/aluminum_silver_pickaxe_from_smithing_silver_pickaxe_with_aluminum_ingot": {
+    "criteria": {
+      "has_silver_pickaxe": "2025-07-03 23:11:49 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/aluminum_silver_axe_from_smithing_silver_axe_with_aluminum_ingot": {
+    "criteria": {
+      "has_silver_axe": "2025-07-03 23:11:50 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/aluminum_silver_shovel_from_smithing_silver_shovel_with_aluminum_ingot": {
+    "criteria": {
+      "has_silver_shovel": "2025-07-03 23:11:50 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/aluminum_silver_hoe_from_smithing_silver_hoe_with_aluminum_ingot": {
+    "criteria": {
+      "has_silver_hoe": "2025-07-03 23:11:51 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/bronzium_polisher_from_smithing_bronze_polisher_with_bronzium_ingot": {
+    "criteria": {
+      "has_bronze_polisher": "2025-07-03 23:12:17 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/aluminum_bronze_polisher_from_smithing_bronze_polisher_with_aluminum_ingot": {
+    "criteria": {
+      "has_bronze_polisher": "2025-07-03 23:12:17 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/aluminum_ingot__from_blasting": {
+    "criteria": {
+      "TagKey[minecraft:item / enhanced_playthrough:bauxite_ore]": "2025-07-03 23:13:49 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/zinc_ingot_from_soul_basic_smelting_zinc_ore": {
+    "criteria": {
+      "has_zinc_ore": "2025-07-03 23:13:52 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/zinc_ingot__from_blasting_zinc_ore": {
+    "criteria": {
+      "has_zinc_ore": "2025-07-03 23:13:52 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/zinc_ingot__from_smelting_zinc_ore": {
+    "criteria": {
+      "has_zinc_ore": "2025-07-03 23:13:52 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/zinc_ingot_from_basic_smelting_zinc_ore": {
+    "criteria": {
+      "has_zinc_ore": "2025-07-03 23:13:52 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/aluminum_upgrade_smithing_template": {
+    "criteria": {
+      "has_aluminum_upgrade_smithing_template": "2025-07-03 23:14:38 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_silver_axe": {
+    "criteria": {
+      "has_tool": "2025-07-03 23:15:06 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_diamond_pickaxe": {
+    "criteria": {
+      "has_tool": "2025-07-03 23:16:01 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/aluminum_diamond_pickaxe_from_smithing_diamond_pickaxe_with_aluminum_ingot": {
+    "criteria": {
+      "has_diamond_pickaxe": "2025-07-03 23:16:19 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_steel_pickaxe": {
+    "criteria": {
+      "has_tool": "2025-07-03 23:17:01 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/blue_golden_pickaxe": {
+    "criteria": {
+      "has_blue_golden_pickaxe": "2025-07-03 23:17:34 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/aluminum_blue_golden_pickaxe_from_smithing_blue_golden_pickaxe_with_aluminum_ingot": {
+    "criteria": {
+      "has_blue_golden_pickaxe": "2025-07-03 23:17:34 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/aluminum_blue_golden_pickaxe": {
+    "criteria": {
+      "has_tool": "2025-07-03 23:17:41 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/steel_ingot_from_nuggets": {
+    "criteria": {
+      "has_steel_ingot": "2025-07-04 11:02:20 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/flint_and_steel": {
+    "criteria": {
+      "has_the_recipe": "2025-07-04 11:02:20 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/steel_nugget": {
+    "criteria": {
+      "has_steel_ingot": "2025-07-04 11:02:20 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/flint_and_steel": {
+    "criteria": {
+      "has_steel_ingot": "2025-07-04 11:02:20 -0300"
     },
     "done": true
   },

@@ -296,9 +296,14 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
             addBlock(ModBlocks.YELLOW_BAUXITE, "Yellow bauxite");
 
             //Ore blocks
+            addBlock(ModBlocks.RAW_TIN_BLOCK, "Block of raw tin");
             addBlock(ModBlocks.TIN_BLOCK, "Block of tin");
+            addBlock(ModBlocks.RAW_ZINC_BLOCK, "Block of raw zinc");
             addBlock(ModBlocks.ZINC_BLOCK, "Block of zinc");
+            addBlock(ModBlocks.RAW_SILVER_BLOCK, "block of raw silver");
             addBlock(ModBlocks.SILVER_BLOCK, "Block of silver");
+            addBlock(ModBlocks.RAW_ALUMINUM_BLOCK, "Block of raw aluminum");
+            addBlock(ModBlocks.ALUMINUM_BLOCK, "Block of aluminum");
             addBlock(ModBlocks.BRASS_BLOCK, "Block of brass");
             addBlock(ModBlocks.BRONZE_BLOCK, "Block of bronze");
             addBlock(ModBlocks.ROSE_GOLD_BLOCK, "Block of rose gold");
@@ -323,7 +328,7 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
             addItem(ModItems.RAW_TIN, "Raw tin");
             addItem(ModItems.RAW_ZINC, "Raw zinc");
             addItem(ModItems.RAW_SILVER, "Raw silver");
-        addItem(ModItems.RAW_ALUMINUM, "Raw aluminum");
+            addItem(ModItems.RAW_ALUMINUM, "Raw aluminum");
             addItem(ModItems.RAW_EMERALD, "Unpolished emerald");
             addItem(ModItems.RAW_SAPPHIRE, "Unpolished sapphire");
             addItem(ModItems.RAW_RUBY, "Unpolished ruby");
@@ -340,6 +345,7 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
             addItem(ModItems.SILVER_NUGGET, "Silver nugget");
             addItem(ModItems.ALUMINUM_INGOT, "Aluminum ingot");
             addItem(ModItems.ALUMINUM_NUGGET, "Aluminum nugget");
+            addItem(ModItems.COPPER_NUGGET, "Copper nugget");
             addItem(ModItems.BRASS_INGOT, "Brass ingot");
             addItem(ModItems.BRASS_NUGGET, "Brass nugget");
             addItem(ModItems.BRONZE_INGOT, "Bronze ingot");
@@ -351,6 +357,7 @@ public class EnglishLanguageProvider extends AbstractModLanguageProvider {
             addItem(ModItems.GREEN_GOLD_INGOT, "Green gold ingot");
             addItem(ModItems.GREEN_GOLD_NUGGET, "Green gold nugget");
             addItem(ModItems.STEEL_INGOT, "Steel ingot");
+            addItem(ModItems.STEEL_NUGGET, "Steel nugget");
             addItem(ModItems.BLUE_GOLD_INGOT, "Blue gold ingot");
             addItem(ModItems.BLUE_GOLD_NUGGET, "Blue gold nugget");
             addItem(ModItems.SAPPHIRE, "Sapphire");

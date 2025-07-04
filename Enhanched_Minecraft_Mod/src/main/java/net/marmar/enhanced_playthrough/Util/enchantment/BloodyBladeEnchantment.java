@@ -19,21 +19,6 @@ public class BloodyBladeEnchantment extends Enchantment {
     }
 
     @Override
-    public boolean isTreasureOnly() {
-        return false;
-    }
-
-    @Override
-    public boolean isTradeable() {
-        return true;
-    }
-
-    @Override
-    public boolean isAllowedOnBooks() {
-        return true;
-    }
-
-    @Override
     public boolean canApplyAtEnchantingTable(ItemStack stack) {
         return true;
     }

@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_raw_aluminum": {
+    "has_aluminum_ingot": {
       "conditions": {
         "items": [
           {
             "items": [
-              "enhanced_playthrough:raw_aluminum"
+              "enhanced_playthrough:aluminum_ingot"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "enhanced_playthrough:aluminum_dust_from_mechanical_grinding_raw_aluminum"
+        "recipe": "enhanced_playthrough:aluminum_nugget"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_raw_aluminum",
+      "has_aluminum_ingot",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "enhanced_playthrough:aluminum_dust_from_mechanical_grinding_raw_aluminum"
+      "enhanced_playthrough:aluminum_nugget"
     ]
   },
   "sends_telemetry_event": false

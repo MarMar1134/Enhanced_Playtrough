@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_aluminum_ingot": {
+    "has_raw_tin": {
       "conditions": {
         "items": [
           {
             "items": [
-              "enhanced_playthrough:aluminum_ingot"
+              "enhanced_playthrough:raw_tin"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "enhanced_playthrough:aluminum_dust_from_mechanical_grinding_aluminum_ingot"
+        "recipe": "enhanced_playthrough:raw_tin_from_block"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_aluminum_ingot",
+      "has_raw_tin",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "enhanced_playthrough:aluminum_dust_from_mechanical_grinding_aluminum_ingot"
+      "enhanced_playthrough:raw_tin_from_block"
     ]
   },
   "sends_telemetry_event": false

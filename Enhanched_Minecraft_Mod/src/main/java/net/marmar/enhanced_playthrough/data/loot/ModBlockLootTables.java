@@ -131,8 +131,15 @@ public class ModBlockLootTables extends BlockLootSubProvider implements BlockLoo
             this.add(ModBlocks.YELLOW_BAUXITE.get(),
                     block -> createBauxiteOreDrops(ModBlocks.YELLOW_BAUXITE.get(), ModItems.YELLOW_TERRACOTTA_SHARD.get()));
 
+        //Raw ore blocks
+        this.dropSelf(ModBlocks.RAW_SILVER_BLOCK.get());
+        this.dropSelf(ModBlocks.RAW_ALUMINUM_BLOCK.get());
+        this.dropSelf(ModBlocks.RAW_TIN_BLOCK.get());
+        this.dropSelf(ModBlocks.RAW_ZINC_BLOCK.get());
+
         //ore blocks
         this.dropSelf(ModBlocks.SILVER_BLOCK.get());
+        this.dropSelf(ModBlocks.ALUMINUM_BLOCK.get());
         this.dropSelf(ModBlocks.TIN_BLOCK.get());
         this.dropSelf(ModBlocks.ZINC_BLOCK.get());
         this.dropSelf(ModBlocks.BRASS_BLOCK.get());

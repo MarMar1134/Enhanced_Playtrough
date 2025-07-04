@@ -1,6 +1,7 @@
 {
   "values": [
     "enhanced_playthrough:silver_nugget",
+    "enhanced_playthrough:aluminum_nugget",
     "enhanced_playthrough:copper_nugget",
     "enhanced_playthrough:tin_nugget",
     "enhanced_playthrough:zinc_nugget",
@@ -8,6 +9,7 @@
     "enhanced_playthrough:brass_nugget",
     "enhanced_playthrough:rose_gold_nugget",
     "enhanced_playthrough:bronzium_nugget",
+    "enhanced_playthrough:steel_nugget",
     "enhanced_playthrough:green_gold_nugget",
     "enhanced_playthrough:blue_gold_nugget"
   ]

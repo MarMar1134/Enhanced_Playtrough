@@ -295,9 +295,14 @@ public class ArgentinianLanguageProvider extends AbstractModLanguageProvider{
         addBlock(ModBlocks.YELLOW_BAUXITE, "Bauxita amarilla");
 
         //Ore blocks
+        addBlock(ModBlocks.RAW_TIN_BLOCK, "Bloque de estaño crudo");
         addBlock(ModBlocks.TIN_BLOCK, "Bloque de estaño");
+        addBlock(ModBlocks.RAW_ZINC_BLOCK, "Bloque de zinc crudo");
         addBlock(ModBlocks.ZINC_BLOCK, "Bloque de zinc");
+        addBlock(ModBlocks.RAW_SILVER_BLOCK, "Bloque de plata cruda");
         addBlock(ModBlocks.SILVER_BLOCK, "Bloque de plata");
+        addBlock(ModBlocks.RAW_ALUMINUM_BLOCK, "Bloque de aluminio crudo");
+        addBlock(ModBlocks.ALUMINUM_BLOCK, "Bloque de aluminio");
         addBlock(ModBlocks.BRASS_BLOCK, "Bloque de latón");
         addBlock(ModBlocks.BRONZE_BLOCK, "Bloque de bronce");
         addBlock(ModBlocks.ROSE_GOLD_BLOCK, "Bloque de oro rosado");
@@ -339,6 +344,7 @@ public class ArgentinianLanguageProvider extends AbstractModLanguageProvider{
         addItem(ModItems.SILVER_NUGGET, "Pepita de plata");
         addItem(ModItems.ALUMINUM_INGOT, "Lingote de aluminio");
         addItem(ModItems.ALUMINUM_NUGGET, "Pepita de aluminio");
+        addItem(ModItems.COPPER_NUGGET, "Pepita de cobre");
         addItem(ModItems.BRASS_INGOT, "Lingote de latón");
         addItem(ModItems.BRASS_NUGGET, "Pepita de latón");
         addItem(ModItems.BRONZE_INGOT, "Lingote de bronce");
@@ -350,6 +356,7 @@ public class ArgentinianLanguageProvider extends AbstractModLanguageProvider{
         addItem(ModItems.GREEN_GOLD_INGOT, "Lingote de oro verde");
         addItem(ModItems.GREEN_GOLD_NUGGET, "Pepita de oro verde");
         addItem(ModItems.STEEL_INGOT, "Lingote de acero");
+        addItem(ModItems.STEEL_NUGGET, "Pepita de acero");
         addItem(ModItems.BLUE_GOLD_INGOT, "Lingote de oro azul");
         addItem(ModItems.BLUE_GOLD_NUGGET, "Pepita de oro verde");
         addItem(ModItems.SAPPHIRE, "Zafiro");

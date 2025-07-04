@@ -1,13 +1,10 @@
 package net.marmar.enhanced_playthrough.data.loot;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
-import net.marmar.enhanced_playthrough.Util.enchantment.ModEnchantments;
 import net.marmar.enhanced_playthrough.item.ModItems;
 import net.minecraft.data.loot.LootTableSubProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.alchemy.Potions;
-import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.EmptyLootItem;

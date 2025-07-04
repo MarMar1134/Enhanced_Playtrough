@@ -14,31 +14,6 @@ public class FineMiningEnchantment extends Enchantment {
     }
 
     @Override
-    public boolean isTreasureOnly() {
-        return false;
-    }
-
-    @Override
-    public boolean isTradeable() {
-        return true;
-    }
-
-    @Override
-    public boolean isDiscoverable() {
-        return true;
-    }
-
-    @Override
-    public int getMaxLevel() {
-        return 1;
-    }
-
-    @Override
-    public boolean isAllowedOnBooks() {
-        return true;
-    }
-
-    @Override
     public boolean canEnchant(ItemStack pStack) {
         return pStack.getItem() instanceof DiggerItem && !(pStack.getItem() instanceof HoeItem);
     }

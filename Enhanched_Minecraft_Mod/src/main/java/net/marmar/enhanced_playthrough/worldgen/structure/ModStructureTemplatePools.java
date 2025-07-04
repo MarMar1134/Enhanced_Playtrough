@@ -24,7 +24,6 @@ public class ModStructureTemplatePools {
 
     //Bandit camp
     public static final ResourceKey<StructureTemplatePool> BANDIT_CAMP_START_POOL = registryKey("bandit_camp/start_pool");
-    public static final ResourceKey<StructureTemplatePool> BANDIT_ENTITY = registryKey("bandit_camp/bandit");
 
     public static void bootstrap(BootstapContext<StructureTemplatePool> pContext){
         //Holder getters
@@ -42,8 +41,6 @@ public class ModStructureTemplatePools {
 
         pContext.register(BANDIT_CAMP_START_POOL, new StructureTemplatePool(emptyFallback, ImmutableList.of(Pair.of(singlePoolElement(
                 "bandit_camp/bandit_camp", mossy10Percent), 1)), StructureTemplatePool.Projection.RIGID));
-//        pContext.register(BANDIT_ENTITY, new StructureTemplatePool(emptyFallback, ImmutableList.of(Pair.of(singlePoolElement(
-//                "bandit_camp/entities/bandit", mossy10Percent), 1)), StructureTemplatePool.Projection.RIGID));
     }
 
     public static Function<StructureTemplatePool.Projection, ModSinglePoolElement> singlePoolElement(String pName, Holder<StructureProcessorList> pProcessor){

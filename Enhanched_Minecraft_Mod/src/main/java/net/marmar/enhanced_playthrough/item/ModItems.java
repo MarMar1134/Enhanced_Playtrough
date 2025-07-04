@@ -77,6 +77,8 @@ public class ModItems {
 
         public static final RegistryObject<Item> STEEL_INGOT = ITEMS.register(
                 "steel_ingot", () -> new Item(new Item.Properties()));
+        public static final RegistryObject<Item> STEEL_NUGGET = ITEMS.register(
+                "steel_nugget", () -> new Item(new Item.Properties()));
 
         public static final RegistryObject<Item> SILVER_INGOT = ITEMS.register(
                 "silver_ingot", () -> new Item(new Item.Properties()));

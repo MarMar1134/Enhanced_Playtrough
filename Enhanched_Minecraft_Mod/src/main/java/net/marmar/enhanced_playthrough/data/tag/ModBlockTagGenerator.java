@@ -355,6 +355,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
                 //ore blocks
                 ModBlocks.SILVER_BLOCK.get(),
+                ModBlocks.ALUMINUM_BLOCK.get(),
                 ModBlocks.TIN_BLOCK.get(),
                 ModBlocks.ZINC_BLOCK.get(),
                 ModBlocks.BRASS_BLOCK.get(),
@@ -407,6 +408,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         );
 
         this.tag(ModTags.Blocks.NEEDS_SILVER_TOOL).add(
+                ModBlocks.RAW_SILVER_BLOCK.get(),
                 ModBlocks.SILVER_BLOCK.get()
         );
 
@@ -434,7 +436,9 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.NETHER_COPPER_ORE.get(),
 
                 //Others
+                ModBlocks.RAW_TIN_BLOCK.get(),
                 ModBlocks.TIN_BLOCK.get(),
+                ModBlocks.RAW_ZINC_BLOCK.get(),
                 ModBlocks.ZINC_BLOCK.get()
         );
 
@@ -467,6 +471,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.SILVER_ORE.get(),
                 ModBlocks.SAPPHIRE_ORE.get(),
                 ModBlocks.RUBY_ORE.get(),
+                ModBlocks.ALUMINUM_BLOCK.get(),
+                ModBlocks.RAW_ALUMINUM_BLOCK.get(),
                 ModBlocks.FIREBRICKS.get(),
                 ModBlocks.FIREBRICK_SLAB.get(),
                 ModBlocks.FIREBRICK_STAIRS.get(),
@@ -556,6 +562,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
         this.tag(BlockTags.BEACON_BASE_BLOCKS).add(
                 ModBlocks.SILVER_BLOCK.get(),
+                ModBlocks.ALUMINUM_BLOCK.get(),
                 ModBlocks.TIN_BLOCK.get(),
                 ModBlocks.ZINC_BLOCK.get(),
                 ModBlocks.BRASS_BLOCK.get(),

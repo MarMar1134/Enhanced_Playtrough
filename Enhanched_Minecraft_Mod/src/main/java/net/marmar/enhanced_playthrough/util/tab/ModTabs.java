@@ -105,9 +105,6 @@ public class ModTabs {
                         output.accept(ModItems.SULFUR.get());
 
                         //Melted
-                        output.accept(Items.GOLD_INGOT);
-                        output.accept(Items.GOLD_NUGGET);
-
                         output.accept(ModItems.SILVER_INGOT.get());
                         output.accept(ModItems.SILVER_DUST.get());
                         output.accept(ModItems.SILVER_NUGGET.get());
@@ -154,6 +151,7 @@ public class ModTabs {
 
                         output.accept(ModItems.STEEL_INGOT.get());
                         output.accept(ModItems.STEEL_DUST.get());
+                        output.accept(ModItems.STEEL_NUGGET.get());
 
                         output.accept(ModItems.BLUE_GOLD_INGOT.get());
                         output.accept(ModItems.BLUE_GOLD_DUST.get());
@@ -668,6 +666,15 @@ public class ModTabs {
                         output.accept(ModBlocks.DEEPSLATE_RUBY_ORE.get());
 
                         output.accept(ModBlocks.NETHER_GARNET_ORE.get());
+
+                        // Bauxite
+                        output.accept(ModBlocks.BAUXITE.get());
+                        output.accept(ModBlocks.WHITE_BAUXITE.get());
+                        output.accept(ModBlocks.LIGHT_GRAY_BAUXITE.get());
+                        output.accept(ModBlocks.BROWN_BAUXITE.get());
+                        output.accept(ModBlocks.RED_BAUXITE.get());
+                        output.accept(ModBlocks.ORANGE_BAUXITE.get());
+                        output.accept(ModBlocks.YELLOW_BAUXITE.get());
                     }).build());
 
     public static final RegistryObject<CreativeModeTab> BLOCKS = TABS.register(
@@ -712,15 +719,20 @@ public class ModTabs {
                         output.accept(ModBlocks.FIREBRICK_STAIRS.get());
                         output.accept(ModBlocks.FIREBRICK_WALL.get());
 
+                        output.accept(ModBlocks.RAW_SILVER_BLOCK.get());
                         output.accept(ModBlocks.SILVER_BLOCK.get());
+                        output.accept(ModBlocks.RAW_ALUMINUM_BLOCK.get());
+                        output.accept(ModBlocks.ALUMINUM_BLOCK.get());
+                        output.accept(ModBlocks.RAW_TIN_BLOCK.get());
                         output.accept(ModBlocks.TIN_BLOCK.get());
+                        output.accept(ModBlocks.RAW_ZINC_BLOCK.get());
                         output.accept(ModBlocks.ZINC_BLOCK.get());
                         output.accept(ModBlocks.BRASS_BLOCK.get());
                         output.accept(ModBlocks.BRONZE_BLOCK.get());
-                        output.accept(ModBlocks.BRONZIUM_BLOCK.get());
                         output.accept(ModBlocks.ROSE_GOLD_BLOCK.get());
-                        output.accept(ModBlocks.STEEL_BLOCK.get());
+                        output.accept(ModBlocks.BRONZIUM_BLOCK.get());
                         output.accept(ModBlocks.GREEN_GOLD_BLOCK.get());
+                        output.accept(ModBlocks.STEEL_BLOCK.get());
                         output.accept(ModBlocks.BLUE_GOLD_BLOCK.get());
                     }).build());
 

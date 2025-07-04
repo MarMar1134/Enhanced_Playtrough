@@ -19,11 +19,6 @@ public class RoughMiningEnchantment extends Enchantment {
     }
 
     @Override
-    public boolean isAllowedOnBooks() {
-        return true;
-    }
-
-    @Override
     public boolean isTradeable() {
         return false;
     }
@@ -31,11 +26,6 @@ public class RoughMiningEnchantment extends Enchantment {
     @Override
     public boolean isTreasureOnly() {
         return true;
-    }
-
-    @Override
-    public int getMaxLevel() {
-        return 1;
     }
 
     @Override

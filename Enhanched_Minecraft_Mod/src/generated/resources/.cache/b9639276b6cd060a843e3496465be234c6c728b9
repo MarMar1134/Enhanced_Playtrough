@@ -1,5 +1,7 @@
-// 1.20.1	2025-06-30T17:55:30.7359015	Tags for minecraft:item mod id enhanced_playthrough
+// 1.20.1	2025-07-04T10:56:58.3897397	Tags for minecraft:item mod id enhanced_playthrough
 2ddd5b0739572968da601d14fbf131d78e8e673b data/enhanced_playthrough/tags/items/alloy_ingredient.json
+0ff3092eb36a0159ae287d2f429e5f5eb6fb0c0a data/enhanced_playthrough/tags/items/aluminum.json
+91cf5755eef6ce5bae0c30aefa6873e817134ca3 data/enhanced_playthrough/tags/items/aluminum_manufacturable.json
 b3b284c126879d981b4f706eb8ea0e63bd17ae12 data/enhanced_playthrough/tags/items/apple_logs.json
 7b224db4176e22e364423c251f906262bd8f8200 data/enhanced_playthrough/tags/items/basic_ingredient.json
 245378e75a40ed5a8e70756f73fa0c2f31a2e7df data/enhanced_playthrough/tags/items/bauxite_ore.json
@@ -17,6 +19,7 @@ d6b36cf68ac26be577a83f121f9abcfaab6e6f7c data/enhanced_playthrough/tags/items/co
 7d85c4c506cfe02a7aa4a061eb9eccd1744bc7c4 data/enhanced_playthrough/tags/items/gold_manufacturable.json
 4cd234ea284fc873dea734a75ab1f95edd7b67f5 data/enhanced_playthrough/tags/items/green_gold.json
 561f1c89d20272cc13ab76fbc2c48cbff15a85a0 data/enhanced_playthrough/tags/items/green_gold_manufacturable.json
+5cb953245495326a2398eaee4bea383aee7977df data/enhanced_playthrough/tags/items/ingots/aluminum.json
 e0e0c5e3b09ac1077d7935e70b6703de286273e4 data/enhanced_playthrough/tags/items/ingots/blue_gold.json
 ce47231e83e04d0826e5a4a124a477a3b10117a1 data/enhanced_playthrough/tags/items/ingots/brass.json
 c8229ff4392aafc4f0a722c0a21676106c53de12 data/enhanced_playthrough/tags/items/ingots/bronze.json
@@ -40,21 +43,21 @@ c48734bcfcda2db12268011ee56ef74e370665d9 data/enhanced_playthrough/tags/items/ra
 187e4882bf4d10de3077ba13c84f617087681d38 data/enhanced_playthrough/tags/items/rose_gold_manufacturable.json
 f14df081c9b538e608510816b586011248049554 data/enhanced_playthrough/tags/items/silver.json
 e2efbc5442a7b107e5c5aae26c695e7ffee3a878 data/enhanced_playthrough/tags/items/silver_manufacturable.json
-3c19bafb8f4e53ad6dded53229145b4033ed075b data/enhanced_playthrough/tags/items/steel.json
+1ab5119f232160a3aac4d89154ae45506f878431 data/enhanced_playthrough/tags/items/steel.json
 8b87de869f64228292bb368e8b2356c2a09c6235 data/enhanced_playthrough/tags/items/steel_manufacturable.json
 a2809eefeb5127ce6cbb247c4ac406b07ce833a8 data/enhanced_playthrough/tags/items/terracotta_shard.json
 e1bc999c6c4d61597d2a65301cf1bf69ab2b342b data/enhanced_playthrough/tags/items/tin_manufacturable.json
 dd45b2fedd17b120ce07c3e9345d41c34387316a data/enhanced_playthrough/tags/items/walnut_logs.json
 2acd7c22d1ad4193180fe06ac5fa5d106c3c423d data/enhanced_playthrough/tags/items/zinc_manufacturable.json
 3296f05310ec1fc44e4609197e9990bf2d36e262 data/forge/tags/items/cobble.json
-86147b6c151803fc9a25e7f7c5803c82651357c1 data/forge/tags/items/dagger.json
-0fbf1589d04c903dce8929eab8e9c1880f8950ef data/forge/tags/items/dusts.json
+7c29c35bebd24b829a4cf1887cf9904075611e3e data/forge/tags/items/dagger.json
+3892794950b545d7a5e0aa50938deed6cb26924b data/forge/tags/items/dusts.json
 5b5bda12ee2c87e66357b3ddefa6fcb923541da1 data/forge/tags/items/ingots.json
-ad72c4acd2fc784e5dc9e630401ffaeb6c456acc data/forge/tags/items/nuggets.json
-fa4d153d545cfc7e4c935f168cd555fbbb78ccad data/forge/tags/items/polisher.json
+eebf869982f97218c46d8e95347dd6d73785a0c3 data/forge/tags/items/nuggets.json
+984db190102566af6ee73f27a147216a4b1b6b98 data/forge/tags/items/polisher.json
 03adcf9e1c5624d36188b8f3deb8bd459cb9b98f data/forge/tags/items/raw_materials.json
 876c6e51b4f82186254c20d7fcf5864802e41088 data/forge/tags/items/string.json
-edbe4e197275d51e9c7c44e42f9460a1e6cbe969 data/minecraft/tags/items/beacon_payment_items.json
+846fafa1105aad614b66576fb00816ef553538e2 data/minecraft/tags/items/beacon_payment_items.json
 83157d251b625cdc1bbf3ccc7134043e5f6f924d data/minecraft/tags/items/hanging_signs.json
 cc7f01de72464bfac0275de5c6aaeeb445bc06d0 data/minecraft/tags/items/logs_that_burn.json
 773e01be4bd2159228e78e0aaa616a1e4f11c02a data/minecraft/tags/items/piglin_loved.json

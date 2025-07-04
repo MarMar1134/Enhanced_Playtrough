@@ -1,4 +1,4 @@
-// 1.20.1	2025-06-25T16:41:46.0453399	Tags for minecraft:block mod id enhanced_playthrough
+// 1.20.1	2025-07-03T22:49:59.6866088	Tags for minecraft:block mod id enhanced_playthrough
 e6fa99c5023af44c49111c3ab003d4a2131da11d data/enhanced_playthrough/tags/blocks/alloy_furnace.json
 47a02117dd60bac3b440fb46f534e4d5442d0e64 data/enhanced_playthrough/tags/blocks/basic_furnace.json
 245378e75a40ed5a8e70756f73fa0c2f31a2e7df data/enhanced_playthrough/tags/blocks/bauxite_ore.json
@@ -8,22 +8,22 @@ d3c28a03337da0044db4602dc42545d2a430a227 data/enhanced_playthrough/tags/blocks/n
 c8284696febfeb02590ee1fbf339ed6041c80abd data/enhanced_playthrough/tags/blocks/needs_bronzium_tool.json
 c82d67c58c8bcd5ce74f70409c804b16c84863e1 data/enhanced_playthrough/tags/blocks/needs_green_gold_tool.json
 d9b0572e63f6e5806699ce5a20179cf3ab6cc928 data/enhanced_playthrough/tags/blocks/needs_rose_gold_tool.json
-a71b39253b98a5b49c236554384a6b9cd0087cf7 data/enhanced_playthrough/tags/blocks/needs_silver_tool.json
+100189b480ab435b5ba90dae9b94664ac34c1b92 data/enhanced_playthrough/tags/blocks/needs_silver_tool.json
 80445a24d24d8456bf14103d7cfa300c5a4f3f9f data/enhanced_playthrough/tags/blocks/needs_steel_tool.json
 96e380ee46bdf6ada90c49ef0a38f17556c8fc87 data/forge/tags/blocks/needs_wood_tool.json
 1d2b1859ed6769e93f6807d6eab5463ffeefc4d4 data/forge/tags/blocks/ores.json
 98c8337310ed121b816c834fde588afce4b7c192 data/forge/tags/blocks/stone.json
-3a870f1b1f1eb9966568798ce658fc95cfda076b data/minecraft/tags/blocks/beacon_base_blocks.json
+6f2688a3532795748cc8f7a7cedcc7548c53081f data/minecraft/tags/blocks/beacon_base_blocks.json
 27e60c70e70af1db39bde73645a398c6b70bec63 data/minecraft/tags/blocks/fences.json
 bfecdab9baabf8268fd1903dba73ff07fa8fd1e1 data/minecraft/tags/blocks/fence_gates.json
 e6b33c19b8f9affa593da912431dc3d087fef999 data/minecraft/tags/blocks/leaves.json
 cc7f01de72464bfac0275de5c6aaeeb445bc06d0 data/minecraft/tags/blocks/logs_that_burn.json
 e700fb1bf9137bf8cdd9b95907c50db453f3094e data/minecraft/tags/blocks/mineable/axe.json
 e6b33c19b8f9affa593da912431dc3d087fef999 data/minecraft/tags/blocks/mineable/hoe.json
-3e6cce03c8e8a89fbb598b5354beb6f04950970d data/minecraft/tags/blocks/mineable/pickaxe.json
+4268d29b2291af467dd35037f8835936ae2c4b86 data/minecraft/tags/blocks/mineable/pickaxe.json
 114b85c5020f2489ec29e69f25614b7c3dec9eaf data/minecraft/tags/blocks/needs_diamond_tool.json
-0580ff3ac7f7bbc9802025bbe3c9d4502305f8c3 data/minecraft/tags/blocks/needs_iron_tool.json
-338e94f7780fd16f5849e94532e2255ce0453a39 data/minecraft/tags/blocks/needs_stone_tool.json
+23ad57ba412805da0344712f95ef8198eb2fa7e4 data/minecraft/tags/blocks/needs_iron_tool.json
+3cb2f132143f1514a68ea074f38005ab351f33e3 data/minecraft/tags/blocks/needs_stone_tool.json
 34fcc954121e727482e6b9d94d2c998b7d9338f8 data/minecraft/tags/blocks/overworld_natural_logs.json
 09c1bed1eb894a8dc53a3c61aa274cfa3f6f7197 data/minecraft/tags/blocks/planks.json
 7a8133bffd05a155a8ad345699aef62815d1a031 data/minecraft/tags/blocks/pressure_plates.json

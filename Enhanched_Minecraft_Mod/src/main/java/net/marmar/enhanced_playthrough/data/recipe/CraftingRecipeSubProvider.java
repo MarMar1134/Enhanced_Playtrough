@@ -5,6 +5,7 @@ import net.marmar.enhanced_playthrough.block.ModBlocks;
 import net.marmar.enhanced_playthrough.data.tag.ModTags;
 import net.marmar.enhanced_playthrough.item.ModItems;
 import net.minecraft.advancements.critereon.EnterBlockTrigger;
+import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
@@ -335,6 +336,7 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
 
             //Silver
             materialRecipes(ModItems.SILVER_INGOT.get(), ModItems.SILVER_NUGGET.get(), ModBlocks.SILVER_BLOCK.get(), consumer);
+            materialRecipes(ModItems.RAW_SILVER.get(), ModBlocks.RAW_SILVER_BLOCK.get(), consumer);
 
             addGear(ModItems.SILVER_INGOT.get(), ModItems.SILVER_AXE.get(), ModItems.SILVER_PICKAXE.get(), ModItems.SILVER_SWORD.get(),
                     ModItems.SILVER_DAGGER.get(), ModItems.SILVER_SHOVEL.get(), ModItems.SILVER_HOE.get(), ModItems.SILVER_POLISHER.get(),
@@ -344,6 +346,10 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
             addAluminumGear(ModItems.SILVER_INGOT.get(), ModItems.ALUMINUM_SILVER_AXE.get(), ModItems.ALUMINUM_SILVER_PICKAXE.get(),
                     ModItems.ALUMINUM_SILVER_SWORD.get(), ModItems.ALUMINUM_SILVER_DAGGER.get(), ModItems.ALUMINUM_SILVER_SHOVEL.get(),
                     ModItems.ALUMINUM_SILVER_HOE.get(), ModItems.ALUMINUM_SILVER_POLISHER.get(), consumer);
+
+            //Aluminum
+            materialRecipes(ModItems.ALUMINUM_INGOT.get(), ModItems.ALUMINUM_NUGGET.get(), ModBlocks.ALUMINUM_BLOCK.get(), consumer);
+            materialRecipes(ModItems.RAW_ALUMINUM.get(), ModBlocks.RAW_ALUMINUM_BLOCK.get(),consumer);
 
             //Gold
             ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.GOLDEN_POLISHER.get())
@@ -373,6 +379,12 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
 
             addStoneGear(Items.STONE_AXE, Items.STONE_PICKAXE, Items.STONE_SWORD, ModItems.STONE_DAGGER.get(),
                     Items.STONE_SHOVEL, Items.STONE_HOE, ModItems.STONE_POLISHER.get(), false, consumer);
+
+            //Tin
+            materialRecipes(ModItems.RAW_TIN.get(), ModBlocks.RAW_TIN_BLOCK.get(), consumer);
+
+            //Zinc
+            materialRecipes(ModItems.RAW_ZINC.get(), ModBlocks.RAW_ZINC_BLOCK.get(), consumer);
 
             //Brass
             materialRecipes(ModItems.BRASS_INGOT.get(), ModItems.BRASS_NUGGET.get(), ModBlocks.BRASS_BLOCK.get(), consumer);
@@ -444,7 +456,7 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                     ModItems.ALUMINUM_GREEN_GOLDEN_HOE.get(), ModItems.ALUMINUM_GREEN_GOLDEN_POLISHER.get(), consumer);
 
             //Steel
-            materialRecipes(ModItems.STEEL_INGOT.get(), ModBlocks.STEEL_BLOCK.get(), consumer);
+            materialRecipes(ModItems.STEEL_INGOT.get(), ModItems.STEEL_NUGGET.get(), ModBlocks.STEEL_BLOCK.get(), consumer);
 
             addGear(ModItems.STEEL_INGOT.get(), ModItems.STEEL_AXE.get(), ModItems.STEEL_PICKAXE.get(), ModItems.STEEL_SWORD.get(),
                     ModItems.STEEL_DAGGER.get(), ModItems.STEEL_SHOVEL.get(), ModItems.STEEL_HOE.get(), ModItems.STEEL_POLISHER.get(),
@@ -697,6 +709,10 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .unlockedBy(getHasName(pIngot), has(pIngot))
                 .unlockedBy(getHasName(pBlock), has(pBlock))
                 .save(pConsumer);
+    }
+
+    protected static InventoryChangeTrigger.TriggerInstance HAS_ALUMINUM_ROD(){
+        return InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.ALUMINUM_ROD.get());
     }
 
     protected static void materialRecipes(ItemLike pIngot, Block pBlock, Consumer<FinishedRecipe> pConsumer){
@@ -1024,16 +1040,18 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .pattern("#")
                 .define('I', pIngot)
                 .define('#', ModTags.Items.ALUMINUM_ROD)
-                .unlockedBy(getHasName(pIngot), has(pIngot))
-                .unlockedBy(getHasName(pSword), has(pSword))
+                .unlockedBy("has_tool", has(pSword))
+                .unlockedBy("has_rod", HAS_ALUMINUM_ROD())
+                .unlockedBy("has_smithing_template", has(ModItems.ALUMINUM_SMITHING_UPGRADE_TEMPLATE.get()))
                 .save(pConsumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, pDagger)
                 .pattern("I")
                 .pattern("#")
                 .define('I', pIngot)
                 .define('#', ModTags.Items.ALUMINUM_ROD)
-                .unlockedBy(getHasName(pIngot), has(pIngot))
-                .unlockedBy(getHasName(pDagger), has(pDagger))
+                .unlockedBy("has_tool", has(pDagger))
+                .unlockedBy("has_rod", HAS_ALUMINUM_ROD())
+                .unlockedBy("has_smithing_template", has(ModItems.ALUMINUM_SMITHING_UPGRADE_TEMPLATE.get()))
                 .save(pConsumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, pPickaxe)
                 .pattern("III")
@@ -1041,8 +1059,9 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .pattern(" # ")
                 .define('I', pIngot)
                 .define('#', ModTags.Items.ALUMINUM_ROD)
-                .unlockedBy(getHasName(pIngot), has(pIngot))
-                .unlockedBy(getHasName(pPickaxe), has(pPickaxe))
+                .unlockedBy("has_tool", has(pPickaxe))
+                .unlockedBy("has_rod", HAS_ALUMINUM_ROD())
+                .unlockedBy("has_smithing_template", has(ModItems.ALUMINUM_SMITHING_UPGRADE_TEMPLATE.get()))
                 .save(pConsumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, pAxe)
                 .pattern("II")
@@ -1050,8 +1069,9 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .pattern(" #")
                 .define('I', pIngot)
                 .define('#', ModTags.Items.ALUMINUM_ROD)
-                .unlockedBy(getHasName(pIngot), has(pIngot))
-                .unlockedBy(getHasName(pAxe), has(pAxe))
+                .unlockedBy("has_tool", has(pAxe))
+                .unlockedBy("has_rod", HAS_ALUMINUM_ROD())
+                .unlockedBy("has_smithing_template", has(ModItems.ALUMINUM_SMITHING_UPGRADE_TEMPLATE.get()))
                 .save(pConsumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, pShovel)
                 .pattern("I")
@@ -1059,8 +1079,9 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .pattern("#")
                 .define('I', pIngot)
                 .define('#', ModTags.Items.ALUMINUM_ROD)
-                .unlockedBy(getHasName(pIngot), has(pIngot))
-                .unlockedBy(getHasName(pShovel), has(pShovel))
+                .unlockedBy("has_tool", has(pShovel))
+                .unlockedBy("has_rod", HAS_ALUMINUM_ROD())
+                .unlockedBy("has_smithing_template", has(ModItems.ALUMINUM_SMITHING_UPGRADE_TEMPLATE.get()))
                 .save(pConsumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, pHoe)
                 .pattern("II")
@@ -1068,16 +1089,18 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .pattern(" #")
                 .define('I', pIngot)
                 .define('#', ModTags.Items.ALUMINUM_ROD)
-                .unlockedBy(getHasName(pIngot), has(pIngot))
-                .unlockedBy(getHasName(pHoe), has(pHoe))
+                .unlockedBy("has_tool", has(pHoe))
+                .unlockedBy("has_rod", HAS_ALUMINUM_ROD())
+                .unlockedBy("has_smithing_template", has(ModItems.ALUMINUM_SMITHING_UPGRADE_TEMPLATE.get()))
                 .save(pConsumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, pPolisher)
                 .pattern(" I")
                 .pattern("# ")
                 .define('I', pIngot)
                 .define('#', ModTags.Items.ALUMINUM_ROD)
-                .unlockedBy(getHasName(pIngot), has(pIngot))
-                .unlockedBy(getHasName(pPolisher), has(pPolisher))
+                .unlockedBy("has_tool", has(pPolisher))
+                .unlockedBy("has_rod", HAS_ALUMINUM_ROD())
+                .unlockedBy("has_smithing_template", has(ModItems.ALUMINUM_SMITHING_UPGRADE_TEMPLATE.get()))
                 .save(pConsumer);
     }
 

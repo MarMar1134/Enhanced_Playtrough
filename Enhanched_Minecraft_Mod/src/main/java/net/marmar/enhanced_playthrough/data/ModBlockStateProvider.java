@@ -98,8 +98,24 @@ public class ModBlockStateProvider extends BlockStateProvider{
         blockWithItem(ModBlocks.COBALT_ORE);
         blockWithItem(ModBlocks.DEEPSLATE_COBALT_ORE);
 
-        //Ores
+        //Bauxite
+        blockWithItem(ModBlocks.BAUXITE);
+        blockWithItem(ModBlocks.WHITE_BAUXITE);
+        blockWithItem(ModBlocks.LIGHT_GRAY_BAUXITE);
+        blockWithItem(ModBlocks.BROWN_BAUXITE);
+        blockWithItem(ModBlocks.RED_BAUXITE);
+        blockWithItem(ModBlocks.ORANGE_BAUXITE);
+        blockWithItem(ModBlocks.YELLOW_BAUXITE);
+
+        //Raw ore blocks
+        blockWithItem(ModBlocks.RAW_SILVER_BLOCK);
+        blockWithItem(ModBlocks.RAW_ALUMINUM_BLOCK);
+        blockWithItem(ModBlocks.RAW_TIN_BLOCK);
+        blockWithItem(ModBlocks.RAW_ZINC_BLOCK);
+
+        //Ore blocks
         blockWithItem(ModBlocks.SILVER_BLOCK);
+        blockWithItem(ModBlocks.ALUMINUM_BLOCK);
         blockWithItem(ModBlocks.TIN_BLOCK);
         blockWithItem(ModBlocks.ZINC_BLOCK);
         blockWithItem(ModBlocks.BRASS_BLOCK);
@@ -109,14 +125,7 @@ public class ModBlockStateProvider extends BlockStateProvider{
         blockWithItem(ModBlocks.STEEL_BLOCK);
         blockWithItem(ModBlocks.GREEN_GOLD_BLOCK);
         blockWithItem(ModBlocks.BLUE_GOLD_BLOCK);
-            //Bauxite
-            blockWithItem(ModBlocks.BAUXITE);
-            blockWithItem(ModBlocks.WHITE_BAUXITE);
-            blockWithItem(ModBlocks.LIGHT_GRAY_BAUXITE);
-            blockWithItem(ModBlocks.BROWN_BAUXITE);
-            blockWithItem(ModBlocks.RED_BAUXITE);
-            blockWithItem(ModBlocks.ORANGE_BAUXITE);
-            blockWithItem(ModBlocks.YELLOW_BAUXITE);
+
 
         //Crops
         makeYerbaMateCrop((CropBlock) ModBlocks.YERBA_MATE_CROP.get(), "yerba_mate_stage","yerba_mate_stage");
@@ -378,13 +387,13 @@ public class ModBlockStateProvider extends BlockStateProvider{
             return models;
         }
 
-    private void blockWithItem(RegistryObject<Block> blockRegistryObject){
-        simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
+    private void blockWithItem(RegistryObject<Block> pBlock){
+        simpleBlockWithItem(pBlock.get(), cubeAll(pBlock.get()));
     }
 
-    private void blockItem(RegistryObject<Block> blockRegistryObject) {
-        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile(EnhancedPlaythrough.MOD_ID +
-                ":block/" + ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath()));
+    private void blockItem(RegistryObject<Block> pBlock) {
+        simpleBlockItem(pBlock.get(), new ModelFile.UncheckedModelFile(EnhancedPlaythrough.MOD_ID +
+                ":block/" + ForgeRegistries.BLOCKS.getKey(pBlock.get()).getPath()));
     }
 
     private void doublePlantBlock(RegistryObject<Block> pBlock){

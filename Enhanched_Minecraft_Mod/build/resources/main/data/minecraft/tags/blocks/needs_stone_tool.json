@@ -16,7 +16,9 @@
     "enhanced_playthrough:tin_ore",
     "enhanced_playthrough:zinc_ore",
     "enhanced_playthrough:nether_copper_ore",
+    "enhanced_playthrough:raw_tin_block",
     "enhanced_playthrough:tin_block",
+    "enhanced_playthrough:raw_zinc_block",
     "enhanced_playthrough:zinc_block"
   ]
 }

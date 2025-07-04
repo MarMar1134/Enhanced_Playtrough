@@ -20,11 +20,7 @@ public class CobbleProjectileEntity extends ThrowableItemProjectile {
     private int cobbleDamage;
 
     public CobbleProjectileEntity(EntityType<? extends ThrowableItemProjectile> pEntityType, Level pLevel) {
-        super(pEntityType, pLevel);;
-    }
-
-    public CobbleProjectileEntity(Level pLevel) {
-        super(ModEntities.THROWABLE_COBBLE.get(), pLevel);
+        super(pEntityType, pLevel);
     }
 
     public CobbleProjectileEntity(Level pLevel, LivingEntity pShooter, int pCobbleDamage) {

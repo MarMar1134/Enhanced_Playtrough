@@ -52,6 +52,7 @@ public class ModTags {
         public static final TagKey<Item> TIN_INGOT = ingotTag("tin");
         public static final TagKey<Item> ZINC_INGOT = ingotTag("zinc");
         public static final TagKey<Item> SILVER_INGOT = ingotTag("silver");
+        public static final TagKey<Item> ALUMINUM_INGOT = ingotTag("aluminum");
         public static final TagKey<Item> BRASS_INGOT = ingotTag("brass");
         public static final TagKey<Item> BRONZE_INGOT = ingotTag("bronze");
         public static final TagKey<Item> ROSE_GOLD_INGOT = ingotTag("rose_gold");
@@ -75,6 +76,7 @@ public class ModTags {
         //Manufacturable goods (for dusts and nuggets)
         public static final TagKey<Item> GOLD_MANUFACTURABLE = itemTag("gold_manufacturable");
         public static final TagKey<Item> SILVER_MANUFACTURABLE = itemTag("silver_manufacturable");
+        public static final TagKey<Item> ALUMINUM_MANUFACTURABLE = itemTag("aluminum_manufacturable");
         public static final TagKey<Item> ZINC_MANUFACTURABLE = itemTag("zinc_manufacturable");
         public static final TagKey<Item> TIN_MANUFACTURABLE = itemTag("tin_manufacturable");
         public static final TagKey<Item> COPPER_MANUFACTURABLE = itemTag("copper_manufacturable");

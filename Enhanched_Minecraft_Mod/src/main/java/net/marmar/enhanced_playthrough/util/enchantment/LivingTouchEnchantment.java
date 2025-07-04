@@ -11,11 +11,10 @@ import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentCategory;
 import net.minecraft.world.item.enchantment.Enchantments;
 
-public class PoisonTouchEnchantment extends Enchantment {
-    protected PoisonTouchEnchantment(Rarity pRarity, EnchantmentCategory pCategory, EquipmentSlot... pApplicableSlots) {
+public class LivingTouchEnchantment extends Enchantment {
+    protected LivingTouchEnchantment(Rarity pRarity, EnchantmentCategory pCategory, EquipmentSlot... pApplicableSlots) {
         super(pRarity, pCategory, pApplicableSlots);
     }
-
     @Override
     public boolean isTreasureOnly() {
         return true;
@@ -24,11 +23,6 @@ public class PoisonTouchEnchantment extends Enchantment {
     @Override
     public boolean isTradeable() {
         return false;
-    }
-
-    @Override
-    public boolean isAllowedOnBooks() {
-        return true;
     }
 
     @Override
@@ -46,13 +40,13 @@ public class PoisonTouchEnchantment extends Enchantment {
         if(pTarget instanceof LivingEntity){
             switch (pLevel){
                 case 1:
-                    ((LivingEntity) pTarget).addEffect(new MobEffectInstance(MobEffects.POISON, 100, 0, false, true, true));
+                    ((LivingEntity) pTarget).addEffect(new MobEffectInstance(MobEffects.REGENERATION, 100, 0, false, true, true));
                     break;
                 case 2:
-                    ((LivingEntity) pTarget).addEffect(new MobEffectInstance(MobEffects.POISON, 100, 1, false, true, true));
+                    ((LivingEntity) pTarget).addEffect(new MobEffectInstance(MobEffects.REGENERATION, 100, 1, false, true, true));
                     break;
                 case 3:
-                    ((LivingEntity) pTarget).addEffect(new MobEffectInstance(MobEffects.POISON, 100, 2, false, true, true));
+                    ((LivingEntity) pTarget).addEffect(new MobEffectInstance(MobEffects.REGENERATION, 100, 2, false, true, true));
                     break;
             }
         }
@@ -60,7 +54,7 @@ public class PoisonTouchEnchantment extends Enchantment {
     }
     @Override
     protected boolean checkCompatibility(Enchantment pOther) {
-        return super.checkCompatibility(pOther) && pOther != Enchantments.FIRE_ASPECT && pOther != ModEnchantments.LIVING_TOUCH.get()
+        return super.checkCompatibility(pOther) && pOther != Enchantments.FIRE_ASPECT && pOther != ModEnchantments.POISON_TOUCH.get()
                 && pOther != ModEnchantments.SHARP_BLADE.get();
     }
 }

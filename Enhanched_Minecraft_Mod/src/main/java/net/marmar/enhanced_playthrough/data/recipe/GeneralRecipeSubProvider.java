@@ -361,8 +361,7 @@ public class GeneralRecipeSubProvider extends RecipeProvider {
 
         mechanicalItemGrinding(consumer, ModTags.Items.SILVER_MANUFACTURABLE, "silver_dust", ModItems.SILVER_DUST.get(), 1);
 
-        mechanicalItemGrinding(consumer, ModItems.RAW_ALUMINUM.get(), "aluminum_dust", ModItems.ALUMINUM_DUST.get(), 1);
-        mechanicalItemGrinding(consumer, ModItems.ALUMINUM_INGOT.get(), "aluminum_dust", ModItems.ALUMINUM_DUST.get(), 1);
+        mechanicalItemGrinding(consumer, ModTags.Items.ALUMINUM_MANUFACTURABLE, "aluminum_dust", ModItems.ALUMINUM_DUST.get(), 1);
 
         primalItemGrinding(consumer, ModTags.Items.ZINC_MANUFACTURABLE, "zinc_dust", ModItems.ZINC_DUST.get(), 1);
         mechanicalItemGrinding(consumer, ModTags.Items.ZINC_MANUFACTURABLE, "zinc_dust", ModItems.ZINC_DUST.get(), 1);

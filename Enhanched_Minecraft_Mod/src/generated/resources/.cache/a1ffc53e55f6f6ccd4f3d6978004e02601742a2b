@@ -1,4 +1,4 @@
-// 1.20.1	2025-06-30T17:55:30.6885294	Item Models: enhanced_playthrough
+// 1.20.1	2025-07-04T10:56:58.3718284	Item Models: enhanced_playthrough
 69b87023c4572f465b207519fdb24da84c63747a assets/enhanced_playthrough/models/item/aluminum_blue_golden_axe.json
 42abd45757faf841fe4bcceddf28cd4b2214a253 assets/enhanced_playthrough/models/item/aluminum_blue_golden_dagger.json
 1c95996977a3f9ada077d8d16270882180769982 assets/enhanced_playthrough/models/item/aluminum_blue_golden_hoe.json
@@ -655,6 +655,7 @@ beca2d3d85f590103028e2882dff6c0178f470a2 assets/enhanced_playthrough/models/item
 e662158d2ebb0dfb6260868620d0ccc92e0d2303 assets/enhanced_playthrough/models/item/steel_leggings_netherite_trim.json
 2b418550a77658ab9a80b7be04c4a637e12a3182 assets/enhanced_playthrough/models/item/steel_leggings_quartz_trim.json
 3be7bb46bb44e674f5b57bd8af32145f60550670 assets/enhanced_playthrough/models/item/steel_leggings_redstone_trim.json
+a0fa81897a4c3e87b5dc51ded0d2cbde15b1bd3b assets/enhanced_playthrough/models/item/steel_nugget.json
 c7d4f789e0f91fcc6916d443c30a21fc48fe1f14 assets/enhanced_playthrough/models/item/steel_pickaxe.json
 23cb7a7bafe55527702c78795c62bc492dd7fd51 assets/enhanced_playthrough/models/item/steel_polisher.json
 e9d2c8effc99a42daaedf75f67f7f54d2e2e4446 assets/enhanced_playthrough/models/item/steel_shovel.json
