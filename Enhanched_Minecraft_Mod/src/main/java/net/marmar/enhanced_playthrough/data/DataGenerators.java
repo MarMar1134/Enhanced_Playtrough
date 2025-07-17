@@ -3,14 +3,13 @@ package net.marmar.enhanced_playthrough.data;
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.data.advancement.GemAdvancementGenerator;
 import net.marmar.enhanced_playthrough.data.advancement.SurvivalAdvancementGenerator;
-import net.marmar.enhanced_playthrough.data.language.*;
-import net.marmar.enhanced_playthrough.data.loot.ModGlobalLootModifiersProvider;
-import net.marmar.enhanced_playthrough.data.loot.ModLootTableProvider;
-import net.marmar.enhanced_playthrough.data.recipe.ModRecipeProvider;
-import net.marmar.enhanced_playthrough.data.tag.ModBiomeTagGenerator;
-import net.marmar.enhanced_playthrough.data.tag.ModBlockTagGenerator;
-import net.marmar.enhanced_playthrough.data.tag.ModItemTagGenerator;
-import net.marmar.enhanced_playthrough.data.tag.ModPoiTypesTagProvider;
+import net.marmar.enhanced_playthrough.data.lang.*;
+import net.marmar.enhanced_playthrough.data.loot.EPGlobalLootModifiersProvider;
+import net.marmar.enhanced_playthrough.data.loot.EPLootTableProvider;
+import net.marmar.enhanced_playthrough.data.model.EPBlockStateProvider;
+import net.marmar.enhanced_playthrough.data.model.EPItemModelProvider;
+import net.marmar.enhanced_playthrough.data.recipe.EPRecipeProvider;
+import net.marmar.enhanced_playthrough.data.tag.*;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -32,6 +31,9 @@ public class DataGenerators {
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
         CompletableFuture<HolderLookup.Provider> LookupProvider = event.getLookupProvider();
 
+        //Worldgen
+        generator.addProvider(event.includeServer(), new EPDataPackProvider(packOutput, LookupProvider));
+
         //Advancements
         GemAdvancementGenerator gem_advancements = new GemAdvancementGenerator();
         SurvivalAdvancementGenerator survival_advancements = new SurvivalAdvancementGenerator();
@@ -39,38 +41,37 @@ public class DataGenerators {
                 List.of(gem_advancements, survival_advancements)));
 
         //Recipes
-        generator.addProvider(event.includeServer(), new ModRecipeProvider(packOutput));
+        generator.addProvider(event.includeServer(), new EPRecipeProvider(packOutput));
 
         //Loot tables
-        generator.addProvider(event.includeServer(), ModLootTableProvider.create(packOutput));
-        generator.addProvider(event.includeServer(), new ModGlobalLootModifiersProvider(packOutput));
+        generator.addProvider(event.includeServer(), EPLootTableProvider.create(packOutput));
+        generator.addProvider(event.includeServer(), new EPGlobalLootModifiersProvider(packOutput));
 
         //Models
-        generator.addProvider(event.includeClient(), new ModBlockStateProvider(packOutput, existingFileHelper));
-        generator.addProvider(event.includeClient(), new ModItemModelProvider(packOutput, existingFileHelper));
+        generator.addProvider(event.includeClient(), new EPBlockStateProvider(packOutput, existingFileHelper));
+        generator.addProvider(event.includeClient(), new EPItemModelProvider(packOutput, existingFileHelper));
 
-        //Worldgen
-        generator.addProvider(event.includeServer(), new ModWorldGenProvider(packOutput, LookupProvider));
+
 
         //POI types
-        generator.addProvider(event.includeServer(), new ModPoiTypesTagProvider(packOutput, LookupProvider, existingFileHelper));
+        generator.addProvider(event.includeServer(), new EPPoiTypesTagProvider(packOutput, LookupProvider, existingFileHelper));
 
         //Tags
-        ModBlockTagGenerator blockTagGenerator = generator.addProvider(event.includeServer(),
-                new ModBlockTagGenerator(packOutput, LookupProvider, existingFileHelper));
-        generator.addProvider(event.includeServer(), new ModItemTagGenerator(packOutput, LookupProvider, blockTagGenerator.contentsGetter(),
+        EPBlockTagGenerator blockTagGenerator = generator.addProvider(event.includeServer(),
+                new EPBlockTagGenerator(packOutput, LookupProvider, existingFileHelper));
+        generator.addProvider(event.includeServer(), new EPItemTagGenerator(packOutput, LookupProvider, blockTagGenerator.contentsGetter(),
                 existingFileHelper));
-        generator.addProvider(event.includeServer(), new ModBiomeTagGenerator(packOutput, LookupProvider, existingFileHelper));
+        generator.addProvider(event.includeServer(), new EPBiomeTagGenerator(packOutput, LookupProvider, existingFileHelper));
 
         //Languages
-        generator.addProvider(event.includeClient(), new EnglishLanguageProvider(packOutput));
-        generator.addProvider(event.includeClient(), new ArgentinianLanguageProvider(packOutput));
-        generator.addProvider(event.includeClient(), new UruguayanLanguageProvider(packOutput));
-        generator.addProvider(event.includeClient(), new ChileanLanguageProvider(packOutput));
-        generator.addProvider(event.includeClient(), new EcuatorianLanguageProvider(packOutput));
-        generator.addProvider(event.includeClient(), new SpanishLanguageProvider(packOutput));
-        generator.addProvider(event.includeClient(), new MexicanLanguageProvider(packOutput));
-        generator.addProvider(event.includeClient(), new VenezuelanLanguageProvider(packOutput));
+        generator.addProvider(event.includeClient(), new EnglishLangProvider(packOutput));
+        generator.addProvider(event.includeClient(), new ArgentinianLangProvider(packOutput));
+        generator.addProvider(event.includeClient(), new UruguayanLangProvider(packOutput));
+        generator.addProvider(event.includeClient(), new ChileanLangProvider(packOutput));
+        generator.addProvider(event.includeClient(), new EcuatorianLangProvider(packOutput));
+        generator.addProvider(event.includeClient(), new SpanishLangProvider(packOutput));
+        generator.addProvider(event.includeClient(), new MexicanLangProvider(packOutput));
+        generator.addProvider(event.includeClient(), new VenezuelanLangProvider(packOutput));
 
     }
 }

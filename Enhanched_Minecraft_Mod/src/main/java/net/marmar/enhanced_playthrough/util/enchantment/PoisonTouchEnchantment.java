@@ -38,24 +38,14 @@ public class PoisonTouchEnchantment extends Enchantment {
 
     @Override
     public void doPostAttack(LivingEntity pAttacker, Entity pTarget, int pLevel) {
-        if(pTarget instanceof LivingEntity){
-            switch (pLevel){
-                case 1:
-                    ((LivingEntity) pTarget).addEffect(new MobEffectInstance(MobEffects.POISON, 100, 0, false, true, true));
-                    break;
-                case 2:
-                    ((LivingEntity) pTarget).addEffect(new MobEffectInstance(MobEffects.POISON, 100, 1, false, true, true));
-                    break;
-                case 3:
-                    ((LivingEntity) pTarget).addEffect(new MobEffectInstance(MobEffects.POISON, 100, 2, false, true, true));
-                    break;
-            }
+        if(pTarget instanceof LivingEntity entity){
+            entity.addEffect(new MobEffectInstance(MobEffects.POISON, 100, pLevel - 1, false, true, true));
         }
         super.doPostAttack(pAttacker, pTarget, pLevel);
     }
     @Override
     protected boolean checkCompatibility(Enchantment pOther) {
-        return super.checkCompatibility(pOther) && pOther != Enchantments.FIRE_ASPECT && pOther != ModEnchantments.LIVING_TOUCH.get()
-                && pOther != ModEnchantments.SHARP_BLADE.get();
+        return super.checkCompatibility(pOther) && pOther != Enchantments.FIRE_ASPECT && pOther != EPEnchantments.LIVING_TOUCH.get()
+                && pOther != EPEnchantments.BLOODY_BLADE.get() && pOther != EPEnchantments.FROSTBITE.get();
     }
 }

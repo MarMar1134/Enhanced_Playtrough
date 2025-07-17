@@ -1,9 +1,9 @@
 package net.marmar.enhanced_playthrough.data.recipe;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
-import net.marmar.enhanced_playthrough.block.ModBlocks;
-import net.marmar.enhanced_playthrough.data.tag.ModTags;
-import net.marmar.enhanced_playthrough.item.ModItems;
+import net.marmar.enhanced_playthrough.block.EPBlocks;
+import net.marmar.enhanced_playthrough.data.tag.EPTags;
+import net.marmar.enhanced_playthrough.item.EPItems;
 import net.minecraft.advancements.critereon.EnterBlockTrigger;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.data.PackOutput;
@@ -28,61 +28,67 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
 
     public static void addCraftingRecipes(Consumer<FinishedRecipe> consumer){
         //Foods
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModItems.EMPTY_MATE.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, EPItems.EMPTY_MATE.get())
                 .pattern("#")
                 .pattern("I")
                 .define('#', Items.IRON_INGOT)
-                .define('I', ModItems.COOKED_ZAPALLO.get())
-                .unlockedBy(getHasName(ModItems.COOKED_ZAPALLO.get()), has(ModItems.COOKED_ZAPALLO.get()))
+                .define('I', EPItems.COOKED_ZAPALLO.get())
+                .unlockedBy(getHasName(EPItems.COOKED_ZAPALLO.get()), has(EPItems.COOKED_ZAPALLO.get()))
                 .save(consumer);
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModItems.GROUNDED_YERBA_MATE.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, EPItems.GROUNDED_YERBA_MATE.get())
                 .pattern(" I ")
                 .pattern("I I")
                 .pattern(" I ")
-                .define('I', ModItems.YERBA_MATE.get())
-                .unlockedBy(getHasName(ModItems.YERBA_MATE.get()), has(ModItems.YERBA_MATE.get()))
+                .define('I', EPItems.YERBA_MATE.get())
+                .unlockedBy(getHasName(EPItems.YERBA_MATE.get()), has(EPItems.YERBA_MATE.get()))
                 .save(consumer);
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModItems.MATE.get())
-                .pattern("I")
-                .pattern("A")
-                .define('I', ModItems.GROUNDED_YERBA_MATE.get())
-                .define('A', ModItems.EMPTY_MATE.get())
-                .unlockedBy(getHasName(ModItems.YERBA_MATE.get()), has(ModItems.YERBA_MATE.get()))
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, EPItems.MATE.get())
+                .requires(EPItems.EMPTY_MATE.get())
+                .requires(EPItems.GROUNDED_YERBA_MATE.get())
+                .unlockedBy(getHasName(EPItems.YERBA_MATE.get()), has(EPItems.YERBA_MATE.get()))
                 .save(consumer);
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.YEAST.get(), 4)
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, EPItems.PEELED_WALNUT.get())
+                .requires(EPItems.WALNUT.get())
+                .unlockedBy(getHasName(EPItems.WALNUT.get()), has(EPItems.WALNUT.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, EPItems.YEAST.get(), 4)
                 .requires(Items.BROWN_MUSHROOM, 2)
                 .requires(Items.SUGAR)
                 .unlockedBy(getHasName(Items.SUGAR), has(Items.SUGAR))
                 .unlockedBy(getHasName(Items.BROWN_MUSHROOM), has(Items.BROWN_MUSHROOM))
                 .save(consumer);
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModItems.WHEAT_FLOUR.get(), 3)
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, EPItems.WHEAT_FLOUR.get(), 3)
                 .pattern("AAA")
                 .define('A', Items.WHEAT)
                 .unlockedBy(getHasName(Items.WHEAT), has(Items.WHEAT))
-                .unlockedBy(getHasName(ModItems.WHEAT_FLOUR.get()), has(ModItems.WHEAT_FLOUR.get()))
+                .unlockedBy(getHasName(EPItems.WHEAT_FLOUR.get()), has(EPItems.WHEAT_FLOUR.get()))
                 .save(consumer);
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModItems.RICE_BOWL.get())
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, EPItems.RICE_BOWL.get())
                 .pattern("#I")
                 .define('I', Items.BOWL)
-                .define('#', ModItems.RICE_GRAINS.get())
-                .unlockedBy(getHasName(ModItems.RICE_GRAINS.get()), has(ModItems.RICE_GRAINS.get()))
+                .define('#', EPItems.RICE_GRAINS.get())
+                .unlockedBy(getHasName(EPItems.RICE_GRAINS.get()), has(EPItems.RICE_GRAINS.get()))
                 .save(consumer);
 
         //Seeds
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.TOMATO_SEEDS.get(), 2)
-                .requires(ModItems.WILD_TOMATO.get())
-                .unlockedBy(getHasName(ModItems.WILD_TOMATO.get()), has(ModItems.WILD_TOMATO.get()))
-                .unlockedBy(getHasName(ModItems.TOMATO_SEEDS.get()), has(ModItems.TOMATO_SEEDS.get()))
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, EPItems.TOMATO_SEEDS.get(), 2)
+                .requires(EPItems.WILD_TOMATO.get())
+                .unlockedBy(getHasName(EPItems.WILD_TOMATO.get()), has(EPItems.WILD_TOMATO.get()))
+                .unlockedBy(getHasName(EPItems.TOMATO_SEEDS.get()), has(EPItems.TOMATO_SEEDS.get()))
                 .save(consumer);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.CORN_SEEDS.get(), 2)
-                .requires(ModItems.WILD_CORN.get())
-                .unlockedBy(getHasName(ModItems.WILD_CORN.get()), has(ModItems.WILD_CORN.get()))
-                .unlockedBy(getHasName(ModItems.CORN_SEEDS.get()), has(ModItems.CORN_SEEDS.get()))
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, EPItems.CORN_SEEDS.get(), 2)
+                .requires(EPItems.WILD_CORN.get())
+                .unlockedBy(getHasName(EPItems.WILD_CORN.get()), has(EPItems.WILD_CORN.get()))
+                .unlockedBy(getHasName(EPItems.CORN_SEEDS.get()), has(EPItems.CORN_SEEDS.get()))
                 .save(consumer);
 
         //Misc
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.MUD_BRICK.get(), 3)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EPItems.MUD_BRICK.get(), 3)
                 .requires(Items.DIRT)
                 .requires(Items.WHEAT)
                 .requires(Items.CLAY_BALL)
@@ -90,113 +96,113 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .unlockedBy(getHasName(Items.CLAY_BALL), has(Items.CLAY_BALL))
                 .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ALUMINUM_ROD.get(), 4)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, EPItems.ALUMINUM_ROD.get(), 4)
                 .pattern("A")
                 .pattern("A")
-                .define('A', ModItems.ALUMINUM_INGOT.get())
-                .unlockedBy(getHasName(ModItems.ALUMINUM_INGOT.get()), has(ModItems.ALUMINUM_INGOT.get()))
+                .define('A', EPItems.ALUMINUM_INGOT.get())
+                .unlockedBy(getHasName(EPItems.ALUMINUM_INGOT.get()), has(EPItems.ALUMINUM_INGOT.get()))
                 .save(consumer);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.VEGETABLE_FIBBER.get())
-                .requires(ModItems.REED_HEAD.get(), 2)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EPItems.VEGETABLE_FIBBER.get())
+                .requires(EPItems.REED_HEAD.get(), 2)
                 .group("vegetable_fiber")
-                .unlockedBy(getHasName(ModItems.REED_HEAD.get()), has(ModItems.REED_HEAD.get()))
-                .unlockedBy(getHasName(ModItems.VEGETABLE_FIBBER.get()), has(ModItems.VEGETABLE_FIBBER.get()))
-                .save(consumer, recipeName(ModItems.VEGETABLE_FIBBER.get(), "from_reed_head"));
+                .unlockedBy(getHasName(EPItems.REED_HEAD.get()), has(EPItems.REED_HEAD.get()))
+                .unlockedBy(getHasName(EPItems.VEGETABLE_FIBBER.get()), has(EPItems.VEGETABLE_FIBBER.get()))
+                .save(consumer, recipeName(EPItems.VEGETABLE_FIBBER.get(), "from_reed_head"));
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.VEGETABLE_FIBBER.get())
-                .requires(ModItems.WATER_REED_HEAD.get(), 4)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EPItems.VEGETABLE_FIBBER.get())
+                .requires(EPItems.WATER_REED_HEAD.get(), 4)
                 .group("vegetable_fiber")
-                .unlockedBy(getHasName(ModItems.WATER_REED_HEAD.get()), has(ModItems.WATER_REED_HEAD.get()))
-                .unlockedBy(getHasName(ModItems.VEGETABLE_FIBBER.get()), has(ModItems.VEGETABLE_FIBBER.get()))
-                .save(consumer, recipeName(ModItems.VEGETABLE_FIBBER.get(), "from_water_reed_head"));
+                .unlockedBy(getHasName(EPItems.WATER_REED_HEAD.get()), has(EPItems.WATER_REED_HEAD.get()))
+                .unlockedBy(getHasName(EPItems.VEGETABLE_FIBBER.get()), has(EPItems.VEGETABLE_FIBBER.get()))
+                .save(consumer, recipeName(EPItems.VEGETABLE_FIBBER.get(), "from_water_reed_head"));
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.COPPER_NUGGET.get(), 9)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EPItems.COPPER_NUGGET.get(), 9)
                 .requires(Items.COPPER_INGOT)
                 .unlockedBy(getHasName(Items.COPPER_INGOT), has(Items.COPPER_INGOT))
-                .save(consumer, recipeName(ModItems.COPPER_NUGGET.get(), "from_ingots"));
+                .save(consumer, recipeName(EPItems.COPPER_NUGGET.get(), "from_ingots"));
 
         //Smithing templates
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.BRONZIUM_SMITHING_UPGRADE_TEMPLATE.get(), 2)
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, EPItems.BRONZIUM_SMITHING_UPGRADE_TEMPLATE.get(), 2)
                 .pattern("DAD")
                 .pattern("DVD")
                 .pattern("CCC")
-                .define('A', ModItems.BRONZIUM_SMITHING_UPGRADE_TEMPLATE.get())
-                .define('V', ModItems.BRONZIUM_INGOT.get())
-                .define('D', ModItems.ZINC_INGOT.get())
-                .define('C', ModItems.TIN_INGOT.get())
-                .unlockedBy(getHasName(ModItems.BRONZIUM_SMITHING_UPGRADE_TEMPLATE.get()), has(ModItems.BRONZIUM_SMITHING_UPGRADE_TEMPLATE.get()))
+                .define('A', EPItems.BRONZIUM_SMITHING_UPGRADE_TEMPLATE.get())
+                .define('V', EPItems.BRONZIUM_INGOT.get())
+                .define('D', EPItems.ZINC_INGOT.get())
+                .define('C', EPItems.TIN_INGOT.get())
+                .unlockedBy(getHasName(EPItems.BRONZIUM_SMITHING_UPGRADE_TEMPLATE.get()), has(EPItems.BRONZIUM_SMITHING_UPGRADE_TEMPLATE.get()))
                 .save(consumer);
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.ALUMINUM_SMITHING_UPGRADE_TEMPLATE.get(), 2)
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, EPItems.ALUMINUM_SMITHING_UPGRADE_TEMPLATE.get(), 2)
                 .pattern("SAS")
                 .pattern("SVS")
                 .pattern("SSS")
-                .define('A', ModItems.ALUMINUM_SMITHING_UPGRADE_TEMPLATE.get())
-                .define('V', ModItems.ALUMINUM_INGOT.get())
-                .define('S', ModTags.Items.TERRACOTTA_SHARD)
-                .unlockedBy(getHasName(ModItems.ALUMINUM_SMITHING_UPGRADE_TEMPLATE.get()), has(ModItems.ALUMINUM_SMITHING_UPGRADE_TEMPLATE.get()))
+                .define('A', EPItems.ALUMINUM_SMITHING_UPGRADE_TEMPLATE.get())
+                .define('V', EPItems.ALUMINUM_INGOT.get())
+                .define('S', EPTags.Items.TERRACOTTA_SHARD)
+                .unlockedBy(getHasName(EPItems.ALUMINUM_SMITHING_UPGRADE_TEMPLATE.get()), has(EPItems.ALUMINUM_SMITHING_UPGRADE_TEMPLATE.get()))
                 .save(consumer);
 
         //Block recipes
             //Wood
                 //walnut wood
-                woodRecipes(ModBlocks.WALNUT_LOG.get(), ModBlocks.STRIPPED_WALNUT_LOG.get(), ModBlocks.WALNUT_WOOD.get(), ModBlocks.STRIPPED_WALNUT_WOOD.get(),
-                        ModBlocks.WALNUT_PLANKS.get(), ModBlocks.WALNUT_DOOR.get(), ModBlocks.WALNUT_TRAPDOOR.get(),
-                        ModBlocks.WALNUT_STAIRS.get(), ModBlocks.WALNUT_SLAB.get(), ModBlocks.WALNUT_FENCE.get(), ModBlocks.WALNUT_FENCEGATE.get(),
-                        ModItems.WALNUT_SIGN.get(), ModItems.WALNUT_HANGING_SIGN.get(), ModItems.WALNUT_BOAT.get(), ModItems.WALNUT_CHEST_BOAT.get(),
-                        ModBlocks.WALNUT_BUTTON.get(), ModBlocks.WALNUT_PRESSURE_PLATE.get(), ModTags.Items.WALNUT_LOGS, consumer);
+                woodRecipes(EPBlocks.WALNUT_LOG.get(), EPBlocks.STRIPPED_WALNUT_LOG.get(), EPBlocks.WALNUT_WOOD.get(), EPBlocks.STRIPPED_WALNUT_WOOD.get(),
+                        EPBlocks.WALNUT_PLANKS.get(), EPBlocks.WALNUT_DOOR.get(), EPBlocks.WALNUT_TRAPDOOR.get(),
+                        EPBlocks.WALNUT_STAIRS.get(), EPBlocks.WALNUT_SLAB.get(), EPBlocks.WALNUT_FENCE.get(), EPBlocks.WALNUT_FENCEGATE.get(),
+                        EPItems.WALNUT_SIGN.get(), EPItems.WALNUT_HANGING_SIGN.get(), EPItems.WALNUT_BOAT.get(), EPItems.WALNUT_CHEST_BOAT.get(),
+                        EPBlocks.WALNUT_BUTTON.get(), EPBlocks.WALNUT_PRESSURE_PLATE.get(), EPTags.Items.WALNUT_LOGS, consumer);
 
                 //Apple wood
-                woodRecipes(ModBlocks.APPLE_LOG.get(), ModBlocks.STRIPPED_APPLE_LOG.get(), ModBlocks.APPLE_WOOD.get(), ModBlocks.STRIPPED_APPLE_WOOD.get(),
-                        ModBlocks.APPLE_PLANKS.get(), ModBlocks.APPLE_DOOR.get(), ModBlocks.APPLE_TRAPDOOR.get(),
-                        ModBlocks.APPLE_STAIRS.get(), ModBlocks.APPLE_SLAB.get(), ModBlocks.APPLE_FENCE.get(), ModBlocks.APPLE_FENCEGATE.get(),
-                        ModItems.APPLE_SIGN.get(), ModItems.APPLE_HANGING_SIGN.get(), ModItems.APPLE_BOAT.get(), ModItems.APPLE_CHEST_BOAT.get(),
-                        ModBlocks.APPLE_BUTTON.get(), ModBlocks.APPLE_PRESSURE_PLATE.get(), ModTags.Items.APPLE_LOGS, consumer);
+                woodRecipes(EPBlocks.APPLE_LOG.get(), EPBlocks.STRIPPED_APPLE_LOG.get(), EPBlocks.APPLE_WOOD.get(), EPBlocks.STRIPPED_APPLE_WOOD.get(),
+                        EPBlocks.APPLE_PLANKS.get(), EPBlocks.APPLE_DOOR.get(), EPBlocks.APPLE_TRAPDOOR.get(),
+                        EPBlocks.APPLE_STAIRS.get(), EPBlocks.APPLE_SLAB.get(), EPBlocks.APPLE_FENCE.get(), EPBlocks.APPLE_FENCEGATE.get(),
+                        EPItems.APPLE_SIGN.get(), EPItems.APPLE_HANGING_SIGN.get(), EPItems.APPLE_BOAT.get(), EPItems.APPLE_CHEST_BOAT.get(),
+                        EPBlocks.APPLE_BUTTON.get(), EPBlocks.APPLE_PRESSURE_PLATE.get(), EPTags.Items.APPLE_LOGS, consumer);
 
                 //Orange wood
-                woodRecipes(ModBlocks.ORANGE_LOG.get(), ModBlocks.STRIPPED_ORANGE_LOG.get(), ModBlocks.ORANGE_WOOD.get(), ModBlocks.STRIPPED_ORANGE_WOOD.get(),
-                        ModBlocks.ORANGE_PLANKS.get(), ModBlocks.ORANGE_DOOR.get(), ModBlocks.ORANGE_TRAPDOOR.get(),
-                        ModBlocks.ORANGE_STAIRS.get(), ModBlocks.ORANGE_SLAB.get(), ModBlocks.ORANGE_FENCE.get(), ModBlocks.ORANGE_FENCEGATE.get(),
-                        ModItems.ORANGE_SIGN.get(), ModItems.ORANGE_HANGING_SIGN.get(), ModItems.ORANGE_BOAT.get(), ModItems.ORANGE_CHEST_BOAT.get(),
-                        ModBlocks.ORANGE_BUTTON.get(), ModBlocks.ORANGE_PRESSURE_PLATE.get(), ModTags.Items.ORANGE_LOGS, consumer);
+                woodRecipes(EPBlocks.ORANGE_LOG.get(), EPBlocks.STRIPPED_ORANGE_LOG.get(), EPBlocks.ORANGE_WOOD.get(), EPBlocks.STRIPPED_ORANGE_WOOD.get(),
+                        EPBlocks.ORANGE_PLANKS.get(), EPBlocks.ORANGE_DOOR.get(), EPBlocks.ORANGE_TRAPDOOR.get(),
+                        EPBlocks.ORANGE_STAIRS.get(), EPBlocks.ORANGE_SLAB.get(), EPBlocks.ORANGE_FENCE.get(), EPBlocks.ORANGE_FENCEGATE.get(),
+                        EPItems.ORANGE_SIGN.get(), EPItems.ORANGE_HANGING_SIGN.get(), EPItems.ORANGE_BOAT.get(), EPItems.ORANGE_CHEST_BOAT.get(),
+                        EPBlocks.ORANGE_BUTTON.get(), EPBlocks.ORANGE_PRESSURE_PLATE.get(), EPTags.Items.ORANGE_LOGS, consumer);
 
                 //Lemon wood
-                woodRecipes(ModBlocks.LEMON_LOG.get(), ModBlocks.STRIPPED_LEMON_LOG.get(), ModBlocks.LEMON_WOOD.get(), ModBlocks.STRIPPED_LEMON_WOOD.get(),
-                        ModBlocks.LEMON_PLANKS.get(), ModBlocks.LEMON_DOOR.get(), ModBlocks.LEMON_TRAPDOOR.get(),
-                        ModBlocks.LEMON_STAIRS.get(), ModBlocks.LEMON_SLAB.get(), ModBlocks.LEMON_FENCE.get(), ModBlocks.LEMON_FENCEGATE.get(),
-                        ModItems.LEMON_SIGN.get(), ModItems.LEMON_HANGING_SIGN.get(), ModItems.LEMON_BOAT.get(), ModItems.LEMON_CHEST_BOAT.get(),
-                        ModBlocks.LEMON_BUTTON.get(), ModBlocks.LEMON_PRESSURE_PLATE.get(), ModTags.Items.LEMON_LOGS, consumer);
+                woodRecipes(EPBlocks.LEMON_LOG.get(), EPBlocks.STRIPPED_LEMON_LOG.get(), EPBlocks.LEMON_WOOD.get(), EPBlocks.STRIPPED_LEMON_WOOD.get(),
+                        EPBlocks.LEMON_PLANKS.get(), EPBlocks.LEMON_DOOR.get(), EPBlocks.LEMON_TRAPDOOR.get(),
+                        EPBlocks.LEMON_STAIRS.get(), EPBlocks.LEMON_SLAB.get(), EPBlocks.LEMON_FENCE.get(), EPBlocks.LEMON_FENCEGATE.get(),
+                        EPItems.LEMON_SIGN.get(), EPItems.LEMON_HANGING_SIGN.get(), EPItems.LEMON_BOAT.get(), EPItems.LEMON_CHEST_BOAT.get(),
+                        EPBlocks.LEMON_BUTTON.get(), EPBlocks.LEMON_PRESSURE_PLATE.get(), EPTags.Items.LEMON_LOGS, consumer);
 
             //Polished stone
-            blockWithPolishedVersionRecipes(Blocks.STONE, ModBlocks.POLISHED_STONE.get(), ModBlocks.POLISHED_STONE_WALL.get(), ModBlocks.POLISHED_STONE_STAIRS.get(),
-                    ModBlocks.POLISHED_STONE_SLAB.get(), consumer);
+            blockWithPolishedVersionRecipes(Blocks.STONE, EPBlocks.POLISHED_STONE.get(), EPBlocks.POLISHED_STONE_WALL.get(), EPBlocks.POLISHED_STONE_STAIRS.get(),
+                    EPBlocks.POLISHED_STONE_SLAB.get(), consumer);
 
             //Cobbled limestone
-            ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.COBBLED_LIMESTONE.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EPBlocks.COBBLED_LIMESTONE.get())
                     .pattern("LL")
                     .pattern("LL")
-                    .define('L', ModItems.LIMESTONE_COBBLE.get())
-                    .unlockedBy(getHasName(ModItems.LIMESTONE_COBBLE.get()), has(ModItems.LIMESTONE_COBBLE.get()))
-                    .unlockedBy(getHasName(ModBlocks.COBBLED_LIMESTONE.get()), has(ModBlocks.COBBLED_LIMESTONE.get()))
+                    .define('L', EPItems.LIMESTONE_COBBLE.get())
+                    .unlockedBy(getHasName(EPItems.LIMESTONE_COBBLE.get()), has(EPItems.LIMESTONE_COBBLE.get()))
+                    .unlockedBy(getHasName(EPBlocks.COBBLED_LIMESTONE.get()), has(EPBlocks.COBBLED_LIMESTONE.get()))
                     .save(consumer);
 
-            blockWithoutPolishedVersionRecipes(ModBlocks.COBBLED_LIMESTONE.get(), ModBlocks.COBBLED_LIMESTONE_WALL.get(), ModBlocks.COBBLED_LIMESTONE_STAIRS.get(),
-                    ModBlocks.COBBLED_LIMESTONE_SLAB.get(), consumer);
+            blockWithoutPolishedVersionRecipes(EPBlocks.COBBLED_LIMESTONE.get(), EPBlocks.COBBLED_LIMESTONE_WALL.get(), EPBlocks.COBBLED_LIMESTONE_STAIRS.get(),
+                    EPBlocks.COBBLED_LIMESTONE_SLAB.get(), consumer);
 
             //Limestone
-            blockWithoutPolishedVersionRecipes(ModBlocks.LIMESTONE.get(), ModBlocks.LIMESTONE_WALL.get(), ModBlocks.LIMESTONE_STAIRS.get(),
-                    ModBlocks.LIMESTONE_SLAB.get(), consumer);
+            blockWithoutPolishedVersionRecipes(EPBlocks.LIMESTONE.get(), EPBlocks.LIMESTONE_WALL.get(), EPBlocks.LIMESTONE_STAIRS.get(),
+                    EPBlocks.LIMESTONE_SLAB.get(), consumer);
 
             //Polished limestone
-            blockWithPolishedVersionRecipes(ModBlocks.LIMESTONE.get(), ModBlocks.POLISHED_LIMESTONE.get(), ModBlocks.POLISHED_LIMESTONE_WALL.get(),
-                    ModBlocks.POLISHED_LIMESTONE_STAIRS.get(), ModBlocks.POLISHED_LIMESTONE_SLAB.get(), consumer);
+            blockWithPolishedVersionRecipes(EPBlocks.LIMESTONE.get(), EPBlocks.POLISHED_LIMESTONE.get(), EPBlocks.POLISHED_LIMESTONE_WALL.get(),
+                    EPBlocks.POLISHED_LIMESTONE_STAIRS.get(), EPBlocks.POLISHED_LIMESTONE_SLAB.get(), consumer);
 
             //Limestone bricks
-            blockWithPolishedVersionRecipes(ModBlocks.POLISHED_LIMESTONE.get(), ModBlocks.LIMESTONE_BRICKS.get(), ModBlocks.LIMESTONE_BRICK_WALL.get(),
-                    ModBlocks.LIMESTONE_BRICK_STAIRS.get(), ModBlocks.LIMESTONE_BRICK_SLAB.get(), consumer);
+            blockWithPolishedVersionRecipes(EPBlocks.POLISHED_LIMESTONE.get(), EPBlocks.LIMESTONE_BRICKS.get(), EPBlocks.LIMESTONE_BRICK_WALL.get(),
+                    EPBlocks.LIMESTONE_BRICK_STAIRS.get(), EPBlocks.LIMESTONE_BRICK_SLAB.get(), consumer);
 
             //Soul
-            ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SOUL_MUD.get(), 4)
+            ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EPBlocks.SOUL_MUD.get(), 4)
                     .pattern("MG")
                     .pattern("GM")
                     .define('M', Items.GRAVEL)
@@ -204,23 +210,23 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                     .unlockedBy(getHasName(Items.SOUL_SOIL), has(Items.SOUL_SOIL))
                     .save(consumer);
 
-            blockWithPolishedVersionRecipes(ModBlocks.SOUL_MUD.get(), ModBlocks.SOUL_MUD_BRICKS.get(), ModBlocks.SOUL_MUD_BRICK_WALL.get(),
-                    ModBlocks.SOUL_MUD_BRICK_STAIRS.get(), ModBlocks.SOUL_MUD_BRICK_SLAB.get(), consumer);
+            blockWithPolishedVersionRecipes(EPBlocks.SOUL_MUD.get(), EPBlocks.SOUL_MUD_BRICKS.get(), EPBlocks.SOUL_MUD_BRICK_WALL.get(),
+                    EPBlocks.SOUL_MUD_BRICK_STAIRS.get(), EPBlocks.SOUL_MUD_BRICK_SLAB.get(), consumer);
 
             //Firebricks
-            ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FIREBRICKS.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EPBlocks.FIREBRICKS.get())
                     .pattern("FF")
                     .pattern("FF")
-                    .define('F', ModItems.FIREBRICK.get())
-                    .unlockedBy(getHasName(ModItems.FIREBRICK.get()), has(ModItems.FIREBRICK.get()))
-                    .unlockedBy(getHasName(ModBlocks.FIREBRICKS.get()), has(ModBlocks.FIREBRICKS.get()))
+                    .define('F', EPItems.FIREBRICK.get())
+                    .unlockedBy(getHasName(EPItems.FIREBRICK.get()), has(EPItems.FIREBRICK.get()))
+                    .unlockedBy(getHasName(EPBlocks.FIREBRICKS.get()), has(EPBlocks.FIREBRICKS.get()))
                     .save(consumer);
 
-            blockWithoutPolishedVersionRecipes(ModBlocks.FIREBRICKS.get(), ModBlocks.FIREBRICK_WALL.get(), ModBlocks.FIREBRICK_STAIRS.get(),
-                    ModBlocks.FIREBRICK_SLAB.get(), consumer);
+            blockWithoutPolishedVersionRecipes(EPBlocks.FIREBRICKS.get(), EPBlocks.FIREBRICK_WALL.get(), EPBlocks.FIREBRICK_STAIRS.get(),
+                    EPBlocks.FIREBRICK_SLAB.get(), consumer);
 
         //Entities
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ADOBE_FURNACE.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, EPBlocks.ADOBE_FURNACE.get())
                 .pattern("###")
                 .pattern("# #")
                 .pattern("III")
@@ -230,59 +236,59 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .unlockedBy(getHasName(Blocks.PACKED_MUD), has(Blocks.PACKED_MUD))
                 .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.SOUL_FURNACE.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, EPBlocks.SOUL_FURNACE.get())
                 .pattern("###")
                 .pattern("# #")
                 .pattern("###")
-                .define('#', ModBlocks.SOUL_MUD.get())
-                .unlockedBy(getHasName(ModBlocks.SOUL_MUD.get()), has(ModBlocks.SOUL_MUD.get()))
+                .define('#', EPBlocks.SOUL_MUD.get())
+                .unlockedBy(getHasName(EPBlocks.SOUL_MUD.get()), has(EPBlocks.SOUL_MUD.get()))
                 .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MASONRY_FURNACE.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, EPBlocks.MASONRY_FURNACE.get())
                 .pattern("III")
                 .pattern("BFB")
                 .pattern("CCC")
-                .define('I', ModItems.BRONZE_INGOT.get())
-                .define('B', ModBlocks.FIREBRICKS.get())
+                .define('I', EPItems.BRONZE_INGOT.get())
+                .define('B', EPBlocks.FIREBRICKS.get())
                 .define('F', Blocks.FURNACE)
                 .define('C', Blocks.COBBLESTONE)
                 .unlockedBy(getHasName(Blocks.FURNACE), has(Blocks.FURNACE))
-                .unlockedBy(getHasName(ModBlocks.MASONRY_FURNACE.get()), has(ModBlocks.MASONRY_FURNACE.get()))
+                .unlockedBy(getHasName(EPBlocks.MASONRY_FURNACE.get()), has(EPBlocks.MASONRY_FURNACE.get()))
                 .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ADOBE_ALLOYING_FURNACE.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, EPBlocks.ADOBE_ALLOYING_FURNACE.get())
                 .pattern("###")
                 .pattern("#A#")
                 .pattern("III")
                 .define('#', Blocks.BRICKS)
-                .define('A', ModBlocks.ADOBE_FURNACE.get())
+                .define('A', EPBlocks.ADOBE_FURNACE.get())
                 .define('I', Blocks.COBBLESTONE)
-                .unlockedBy(getHasName(ModBlocks.ADOBE_FURNACE.get()), has(ModBlocks.ADOBE_FURNACE.get()))
-                .unlockedBy(getHasName(ModBlocks.ADOBE_ALLOYING_FURNACE.get()), has(ModBlocks.ADOBE_ALLOYING_FURNACE.get()))
-                .unlockedBy(getHasName(ModItems.RAW_TIN.get()), has(ModItems.RAW_TIN.get()))
+                .unlockedBy(getHasName(EPBlocks.ADOBE_FURNACE.get()), has(EPBlocks.ADOBE_FURNACE.get()))
+                .unlockedBy(getHasName(EPBlocks.ADOBE_ALLOYING_FURNACE.get()), has(EPBlocks.ADOBE_ALLOYING_FURNACE.get()))
+                .unlockedBy(getHasName(EPItems.RAW_TIN.get()), has(EPItems.RAW_TIN.get()))
                 .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.SUPER_ALLOYING_FURNACE.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, EPBlocks.SUPER_ALLOYING_FURNACE.get())
                 .pattern("###")
                 .pattern("#A#")
                 .pattern("III")
-                .define('#', ModItems.STEEL_INGOT.get())
-                .define('A', ModBlocks.ADOBE_ALLOYING_FURNACE.get())
+                .define('#', EPItems.STEEL_INGOT.get())
+                .define('A', EPBlocks.ADOBE_ALLOYING_FURNACE.get())
                 .define('I', Blocks.COBBLED_DEEPSLATE)
                 .unlockedBy(getHasName(Blocks.COBBLED_DEEPSLATE), has(Blocks.COBBLED_DEEPSLATE))
                 .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.SOUL_ALLOY_FURNACE.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, EPBlocks.SOUL_ALLOY_FURNACE.get())
                 .pattern("###")
                 .pattern("#A#")
                 .pattern("III")
-                .define('#', ModBlocks.SOUL_MUD_BRICKS.get())
-                .define('A', ModBlocks.SOUL_FURNACE.get())
+                .define('#', EPBlocks.SOUL_MUD_BRICKS.get())
+                .define('A', EPBlocks.SOUL_FURNACE.get())
                 .define('I', Blocks.BLACKSTONE)
-                .unlockedBy(getHasName(ModBlocks.SOUL_FURNACE.get()), has(ModBlocks.SOUL_FURNACE.get()))
+                .unlockedBy(getHasName(EPBlocks.SOUL_FURNACE.get()), has(EPBlocks.SOUL_FURNACE.get()))
                 .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GEM_POLISHER.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, EPBlocks.GEM_POLISHER.get())
                 .pattern("###")
                 .pattern("AIA")
                 .pattern("AIA")
@@ -292,235 +298,235 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .unlockedBy(getHasName(Blocks.STONE), has(Blocks.STONE))
                 .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PRIMAL_GRINDER.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, EPBlocks.PRIMAL_GRINDER.get())
                 .pattern("AAA")
                 .pattern("ABA")
                 .pattern("CCC")
                 .define('A', Blocks.MUD_BRICKS)
-                .define('B', ModItems.BRONZE_INGOT.get())
+                .define('B', EPItems.BRONZE_INGOT.get())
                 .define('C', Blocks.COBBLESTONE)
-                .unlockedBy(getHasName(ModItems.BRONZE_INGOT.get()), has(ModItems.BRONZE_INGOT.get()))
+                .unlockedBy(getHasName(EPItems.BRONZE_INGOT.get()), has(EPItems.BRONZE_INGOT.get()))
                 .unlockedBy(getHasName(Blocks.MUD_BRICKS), has(Blocks.MUD_BRICKS))
                 .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MECHANICAL_GRINDER.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, EPBlocks.MECHANICAL_GRINDER.get())
                 .pattern("#A#")
                 .pattern("SIS")
                 .pattern("###")
                 .define('#', ItemTags.STONE_CRAFTING_MATERIALS)
                 .define('A', Items.IRON_BARS)
-                .define('S', ModItems.STEEL_INGOT.get())
+                .define('S', EPItems.STEEL_INGOT.get())
                 .define('I', Items.REDSTONE)
-                .unlockedBy(getHasName(ModBlocks.PRIMAL_GRINDER.get()), has(ModBlocks.PRIMAL_GRINDER.get()))
+                .unlockedBy(getHasName(EPBlocks.PRIMAL_GRINDER.get()), has(EPBlocks.PRIMAL_GRINDER.get()))
                 .unlockedBy(getHasName(Items.REDSTONE), has(Items.REDSTONE))
                 .save(consumer);
 
         //Equipment recipes
             //Other tools
-            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.FLINT_AND_COBBLE.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, EPItems.FLINT_AND_COBBLE.get())
                     .pattern("C ")
                     .pattern(" F")
-                    .define('C', ModTags.Items.COBBLE)
+                    .define('C', EPTags.Items.COBBLE)
                     .define('F', Items.FLINT)
-                    .unlockedBy("has_cobble", has(ModTags.Items.COBBLE))
+                    .unlockedBy("has_cobble", has(EPTags.Items.COBBLE))
                     .unlockedBy(getHasName(Items.FLINT), has(Items.FLINT))
                     .save(consumer);
-            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.FLINT_AND_BRONZE.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, EPItems.FLINT_AND_BRONZE.get())
                     .pattern("B ")
                     .pattern(" F")
-                    .define('B', ModItems.BRONZE_INGOT.get())
+                    .define('B', EPItems.BRONZE_INGOT.get())
                     .define('F', Items.FLINT)
-                    .unlockedBy(getHasName(ModItems.BRONZE_INGOT.get()), has(ModItems.BRONZE_INGOT.get()))
+                    .unlockedBy(getHasName(EPItems.BRONZE_INGOT.get()), has(EPItems.BRONZE_INGOT.get()))
                     .unlockedBy(getHasName(Items.FLINT), has(Items.FLINT))
                     .save(consumer);
 
             //Silver
-            materialRecipes(ModItems.SILVER_INGOT.get(), ModItems.SILVER_NUGGET.get(), ModBlocks.SILVER_BLOCK.get(), consumer);
-            materialRecipes(ModItems.RAW_SILVER.get(), ModBlocks.RAW_SILVER_BLOCK.get(), consumer);
+            materialRecipes(EPItems.SILVER_INGOT.get(), EPItems.SILVER_NUGGET.get(), EPBlocks.SILVER_BLOCK.get(), consumer);
+            materialRecipes(EPItems.RAW_SILVER.get(), EPBlocks.RAW_SILVER_BLOCK.get(), consumer);
 
-            addGear(ModItems.SILVER_INGOT.get(), ModItems.SILVER_AXE.get(), ModItems.SILVER_PICKAXE.get(), ModItems.SILVER_SWORD.get(),
-                    ModItems.SILVER_DAGGER.get(), ModItems.SILVER_SHOVEL.get(), ModItems.SILVER_HOE.get(), ModItems.SILVER_POLISHER.get(),
-                    ModItems.SILVER_HELMET.get(), ModItems.SILVER_CHESTPLATE.get(), ModItems.SILVER_LEGGINGS.get(), ModItems.SILVER_BOOTS.get(),
+            addGear(EPItems.SILVER_INGOT.get(), EPItems.SILVER_AXE.get(), EPItems.SILVER_PICKAXE.get(), EPItems.SILVER_SWORD.get(),
+                    EPItems.SILVER_DAGGER.get(), EPItems.SILVER_SHOVEL.get(), EPItems.SILVER_HOE.get(), EPItems.SILVER_POLISHER.get(),
+                    EPItems.SILVER_HELMET.get(), EPItems.SILVER_CHESTPLATE.get(), EPItems.SILVER_LEGGINGS.get(), EPItems.SILVER_BOOTS.get(),
                     consumer);
 
-            addAluminumGear(ModItems.SILVER_INGOT.get(), ModItems.ALUMINUM_SILVER_AXE.get(), ModItems.ALUMINUM_SILVER_PICKAXE.get(),
-                    ModItems.ALUMINUM_SILVER_SWORD.get(), ModItems.ALUMINUM_SILVER_DAGGER.get(), ModItems.ALUMINUM_SILVER_SHOVEL.get(),
-                    ModItems.ALUMINUM_SILVER_HOE.get(), ModItems.ALUMINUM_SILVER_POLISHER.get(), consumer);
+            addAluminumGear(EPItems.SILVER_INGOT.get(), EPItems.ALUMINUM_SILVER_AXE.get(), EPItems.ALUMINUM_SILVER_PICKAXE.get(),
+                    EPItems.ALUMINUM_SILVER_SWORD.get(), EPItems.ALUMINUM_SILVER_DAGGER.get(), EPItems.ALUMINUM_SILVER_SHOVEL.get(),
+                    EPItems.ALUMINUM_SILVER_HOE.get(), EPItems.ALUMINUM_SILVER_POLISHER.get(), consumer);
 
             //Aluminum
-            materialRecipes(ModItems.ALUMINUM_INGOT.get(), ModItems.ALUMINUM_NUGGET.get(), ModBlocks.ALUMINUM_BLOCK.get(), consumer);
-            materialRecipes(ModItems.RAW_ALUMINUM.get(), ModBlocks.RAW_ALUMINUM_BLOCK.get(),consumer);
+            materialRecipes(EPItems.ALUMINUM_INGOT.get(), EPItems.ALUMINUM_NUGGET.get(), EPBlocks.ALUMINUM_BLOCK.get(), consumer);
+            materialRecipes(EPItems.RAW_ALUMINUM.get(), EPBlocks.RAW_ALUMINUM_BLOCK.get(),consumer);
 
             //Gold
-            ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.GOLDEN_POLISHER.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, EPItems.GOLDEN_POLISHER.get())
                     .pattern(" I")
                     .pattern("# ")
                     .define('I', Items.GOLD_INGOT)
                     .define('#', Tags.Items.RODS_WOODEN)
                     .unlockedBy(getHasName(Items.GOLD_INGOT), has(Items.GOLD_INGOT))
                     .save(consumer);
-            ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.GOLDEN_DAGGER.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, EPItems.GOLDEN_DAGGER.get())
                     .pattern("I")
                     .pattern("#")
                     .define('I', Items.GOLD_INGOT)
                     .define('#', Tags.Items.RODS_WOODEN)
                     .unlockedBy(getHasName(Items.GOLD_INGOT), has(Items.GOLD_INGOT))
-                    .unlockedBy(getHasName(ModItems.GOLDEN_DAGGER.get()), has(ModItems.GOLDEN_DAGGER.get()))
+                    .unlockedBy(getHasName(EPItems.GOLDEN_DAGGER.get()), has(EPItems.GOLDEN_DAGGER.get()))
                     .save(consumer);
 
-            addAluminumGear(Items.GOLD_INGOT, ModItems.ALUMINUM_GOLDEN_AXE.get(), ModItems.ALUMINUM_GOLDEN_PICKAXE.get(),
-                    ModItems.ALUMINUM_GOLDEN_SWORD.get(), ModItems.ALUMINUM_GOLDEN_DAGGER.get(), ModItems.ALUMINUM_GOLDEN_SHOVEL.get(),
-                    ModItems.ALUMINUM_GOLDEN_HOE.get(), ModItems.ALUMINUM_GOLDEN_POLISHER.get(), consumer);
+            addAluminumGear(Items.GOLD_INGOT, EPItems.ALUMINUM_GOLDEN_AXE.get(), EPItems.ALUMINUM_GOLDEN_PICKAXE.get(),
+                    EPItems.ALUMINUM_GOLDEN_SWORD.get(), EPItems.ALUMINUM_GOLDEN_DAGGER.get(), EPItems.ALUMINUM_GOLDEN_SHOVEL.get(),
+                    EPItems.ALUMINUM_GOLDEN_HOE.get(), EPItems.ALUMINUM_GOLDEN_POLISHER.get(), consumer);
 
             //Stone
-            addStoneGear(ModItems.ALUMINUM_STONE_AXE.get(),  ModItems.ALUMINUM_STONE_PICKAXE.get(),  ModItems.ALUMINUM_STONE_SWORD.get(),
-                    ModItems.ALUMINUM_STONE_DAGGER.get(),  ModItems.ALUMINUM_STONE_SHOVEL.get(),  ModItems.ALUMINUM_STONE_HOE.get(),
-                    ModItems.ALUMINUM_STONE_POLISHER.get(), true, consumer);
+            addStoneGear(EPItems.ALUMINUM_STONE_AXE.get(),  EPItems.ALUMINUM_STONE_PICKAXE.get(),  EPItems.ALUMINUM_STONE_SWORD.get(),
+                    EPItems.ALUMINUM_STONE_DAGGER.get(),  EPItems.ALUMINUM_STONE_SHOVEL.get(),  EPItems.ALUMINUM_STONE_HOE.get(),
+                    EPItems.ALUMINUM_STONE_POLISHER.get(), true, consumer);
 
-            addStoneGear(Items.STONE_AXE, Items.STONE_PICKAXE, Items.STONE_SWORD, ModItems.STONE_DAGGER.get(),
-                    Items.STONE_SHOVEL, Items.STONE_HOE, ModItems.STONE_POLISHER.get(), false, consumer);
+            addStoneGear(Items.STONE_AXE, Items.STONE_PICKAXE, Items.STONE_SWORD, EPItems.STONE_DAGGER.get(),
+                    Items.STONE_SHOVEL, Items.STONE_HOE, EPItems.STONE_POLISHER.get(), false, consumer);
 
             //Tin
-            materialRecipes(ModItems.RAW_TIN.get(), ModBlocks.RAW_TIN_BLOCK.get(), consumer);
+            materialRecipes(EPItems.RAW_TIN.get(), EPBlocks.RAW_TIN_BLOCK.get(), consumer);
 
             //Zinc
-            materialRecipes(ModItems.RAW_ZINC.get(), ModBlocks.RAW_ZINC_BLOCK.get(), consumer);
+            materialRecipes(EPItems.RAW_ZINC.get(), EPBlocks.RAW_ZINC_BLOCK.get(), consumer);
 
             //Brass
-            materialRecipes(ModItems.BRASS_INGOT.get(), ModItems.BRASS_NUGGET.get(), ModBlocks.BRASS_BLOCK.get(), consumer);
+            materialRecipes(EPItems.BRASS_INGOT.get(), EPItems.BRASS_NUGGET.get(), EPBlocks.BRASS_BLOCK.get(), consumer);
 
-            addGear(ModItems.BRASS_INGOT.get(), ModItems.BRASS_AXE.get(), ModItems.BRASS_PICKAXE.get(), ModItems.BRASS_SWORD.get(),
-                    ModItems.BRASS_DAGGER.get(), ModItems.BRASS_SHOVEL.get(), ModItems.BRASS_HOE.get(), ModItems.BRASS_POLISHER.get(),
-                    ModItems.BRASS_HELMET.get(), ModItems.BRASS_CHESTPLATE.get(), ModItems.BRASS_LEGGINGS.get(), ModItems.BRASS_BOOTS.get(),
+            addGear(EPItems.BRASS_INGOT.get(), EPItems.BRASS_AXE.get(), EPItems.BRASS_PICKAXE.get(), EPItems.BRASS_SWORD.get(),
+                    EPItems.BRASS_DAGGER.get(), EPItems.BRASS_SHOVEL.get(), EPItems.BRASS_HOE.get(), EPItems.BRASS_POLISHER.get(),
+                    EPItems.BRASS_HELMET.get(), EPItems.BRASS_CHESTPLATE.get(), EPItems.BRASS_LEGGINGS.get(), EPItems.BRASS_BOOTS.get(),
                     consumer);
 
-            addAluminumGear(ModItems.BRASS_INGOT.get(), ModItems.ALUMINUM_BRASS_AXE.get(), ModItems.ALUMINUM_BRASS_PICKAXE.get(),
-                    ModItems.ALUMINUM_BRASS_SWORD.get(), ModItems.ALUMINUM_BRASS_DAGGER.get(), ModItems.ALUMINUM_BRASS_SHOVEL.get(),
-                    ModItems.ALUMINUM_BRASS_HOE.get(), ModItems.ALUMINUM_BRASS_POLISHER.get(), consumer);
+            addAluminumGear(EPItems.BRASS_INGOT.get(), EPItems.ALUMINUM_BRASS_AXE.get(), EPItems.ALUMINUM_BRASS_PICKAXE.get(),
+                    EPItems.ALUMINUM_BRASS_SWORD.get(), EPItems.ALUMINUM_BRASS_DAGGER.get(), EPItems.ALUMINUM_BRASS_SHOVEL.get(),
+                    EPItems.ALUMINUM_BRASS_HOE.get(), EPItems.ALUMINUM_BRASS_POLISHER.get(), consumer);
 
             //Bronze
-            materialRecipes(ModItems.BRONZE_INGOT.get(), ModItems.BRONZE_NUGGET.get(), ModBlocks.BRONZE_BLOCK.get(), consumer);
+            materialRecipes(EPItems.BRONZE_INGOT.get(), EPItems.BRONZE_NUGGET.get(), EPBlocks.BRONZE_BLOCK.get(), consumer);
 
-            addGear(ModItems.BRONZE_INGOT.get(), ModItems.BRONZE_AXE.get(), ModItems.BRONZE_PICKAXE.get(), ModItems.BRONZE_SWORD.get(),
-                    ModItems.BRONZE_DAGGER.get(), ModItems.BRONZE_SHOVEL.get(), ModItems.BRONZE_HOE.get(), ModItems.BRONZE_POLISHER.get(),
-                    ModItems.BRONZE_HELMET.get(), ModItems.BRONZE_CHESTPLATE.get(), ModItems.BRONZE_LEGGINGS.get(), ModItems.BRONZE_BOOTS.get(),
+            addGear(EPItems.BRONZE_INGOT.get(), EPItems.BRONZE_AXE.get(), EPItems.BRONZE_PICKAXE.get(), EPItems.BRONZE_SWORD.get(),
+                    EPItems.BRONZE_DAGGER.get(), EPItems.BRONZE_SHOVEL.get(), EPItems.BRONZE_HOE.get(), EPItems.BRONZE_POLISHER.get(),
+                    EPItems.BRONZE_HELMET.get(), EPItems.BRONZE_CHESTPLATE.get(), EPItems.BRONZE_LEGGINGS.get(), EPItems.BRONZE_BOOTS.get(),
                     consumer);
 
-            addAluminumGear(ModItems.BRONZE_INGOT.get(), ModItems.ALUMINUM_BRONZE_AXE.get(), ModItems.ALUMINUM_BRONZE_PICKAXE.get(),
-                    ModItems.ALUMINUM_BRONZE_SWORD.get(), ModItems.ALUMINUM_BRONZE_DAGGER.get(), ModItems.ALUMINUM_BRONZE_SHOVEL.get(),
-                    ModItems.ALUMINUM_BRONZE_HOE.get(), ModItems.ALUMINUM_BRONZE_POLISHER.get(), consumer);
+            addAluminumGear(EPItems.BRONZE_INGOT.get(), EPItems.ALUMINUM_BRONZE_AXE.get(), EPItems.ALUMINUM_BRONZE_PICKAXE.get(),
+                    EPItems.ALUMINUM_BRONZE_SWORD.get(), EPItems.ALUMINUM_BRONZE_DAGGER.get(), EPItems.ALUMINUM_BRONZE_SHOVEL.get(),
+                    EPItems.ALUMINUM_BRONZE_HOE.get(), EPItems.ALUMINUM_BRONZE_POLISHER.get(), consumer);
 
             //Rose gold
-            materialRecipes(ModItems.ROSE_GOLD_INGOT.get(), ModItems.ROSE_GOLD_NUGGET.get(), ModBlocks.ROSE_GOLD_BLOCK.get(), consumer);
+            materialRecipes(EPItems.ROSE_GOLD_INGOT.get(), EPItems.ROSE_GOLD_NUGGET.get(), EPBlocks.ROSE_GOLD_BLOCK.get(), consumer);
 
-            addGear(ModItems.ROSE_GOLD_INGOT.get(), ModItems.ROSE_GOLDEN_AXE.get(), ModItems.ROSE_GOLDEN_PICKAXE.get(), ModItems.ROSE_GOLDEN_SWORD.get(),
-                    ModItems.ROSE_GOLDEN_DAGGER.get(), ModItems.ROSE_GOLDEN_SHOVEL.get(), ModItems.ROSE_GOLDEN_HOE.get(), ModItems.ROSE_GOLDEN_POLISHER.get(),
-                    ModItems.ROSE_GOLDEN_HELMET.get(), ModItems.ROSE_GOLDEN_CHESTPLATE.get(), ModItems.ROSE_GOLDEN_LEGGINGS.get(), ModItems.ROSE_GOLDEN_BOOTS.get(),
+            addGear(EPItems.ROSE_GOLD_INGOT.get(), EPItems.ROSE_GOLDEN_AXE.get(), EPItems.ROSE_GOLDEN_PICKAXE.get(), EPItems.ROSE_GOLDEN_SWORD.get(),
+                    EPItems.ROSE_GOLDEN_DAGGER.get(), EPItems.ROSE_GOLDEN_SHOVEL.get(), EPItems.ROSE_GOLDEN_HOE.get(), EPItems.ROSE_GOLDEN_POLISHER.get(),
+                    EPItems.ROSE_GOLDEN_HELMET.get(), EPItems.ROSE_GOLDEN_CHESTPLATE.get(), EPItems.ROSE_GOLDEN_LEGGINGS.get(), EPItems.ROSE_GOLDEN_BOOTS.get(),
                     consumer);
 
-            addAluminumGear(ModItems.ROSE_GOLD_INGOT.get(), ModItems.ALUMINUM_ROSE_GOLDEN_AXE.get(), ModItems.ALUMINUM_ROSE_GOLDEN_PICKAXE.get(),
-                    ModItems.ALUMINUM_ROSE_GOLDEN_SWORD.get(), ModItems.ALUMINUM_ROSE_GOLDEN_DAGGER.get(), ModItems.ALUMINUM_ROSE_GOLDEN_SHOVEL.get(),
-                    ModItems.ALUMINUM_ROSE_GOLDEN_HOE.get(), ModItems.ALUMINUM_ROSE_GOLDEN_POLISHER.get(), consumer);
+            addAluminumGear(EPItems.ROSE_GOLD_INGOT.get(), EPItems.ALUMINUM_ROSE_GOLDEN_AXE.get(), EPItems.ALUMINUM_ROSE_GOLDEN_PICKAXE.get(),
+                    EPItems.ALUMINUM_ROSE_GOLDEN_SWORD.get(), EPItems.ALUMINUM_ROSE_GOLDEN_DAGGER.get(), EPItems.ALUMINUM_ROSE_GOLDEN_SHOVEL.get(),
+                    EPItems.ALUMINUM_ROSE_GOLDEN_HOE.get(), EPItems.ALUMINUM_ROSE_GOLDEN_POLISHER.get(), consumer);
 
             //Iron
-            ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.IRON_POLISHER.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, EPItems.IRON_POLISHER.get())
                     .pattern(" I")
                     .pattern("# ")
                     .define('I', Items.IRON_INGOT)
                     .define('#', Tags.Items.RODS_WOODEN)
                     .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
                     .save(consumer);
-            ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.IRON_DAGGER.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, EPItems.IRON_DAGGER.get())
                     .pattern("I")
                     .pattern("#")
                     .define('I', Items.IRON_INGOT)
                     .define('#', Tags.Items.RODS_WOODEN)
                     .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
-                    .unlockedBy(getHasName(ModItems.IRON_DAGGER.get()), has(ModItems.IRON_DAGGER.get()))
+                    .unlockedBy(getHasName(EPItems.IRON_DAGGER.get()), has(EPItems.IRON_DAGGER.get()))
                     .save(consumer);
 
-            addAluminumGear(Items.IRON_INGOT, ModItems.ALUMINUM_IRON_AXE.get(), ModItems.ALUMINUM_IRON_PICKAXE.get(),
-                    ModItems.ALUMINUM_IRON_SWORD.get(), ModItems.ALUMINUM_IRON_DAGGER.get(), ModItems.ALUMINUM_IRON_SHOVEL.get(),
-                    ModItems.ALUMINUM_IRON_HOE.get(), ModItems.ALUMINUM_IRON_POLISHER.get(), consumer);
+            addAluminumGear(Items.IRON_INGOT, EPItems.ALUMINUM_IRON_AXE.get(), EPItems.ALUMINUM_IRON_PICKAXE.get(),
+                    EPItems.ALUMINUM_IRON_SWORD.get(), EPItems.ALUMINUM_IRON_DAGGER.get(), EPItems.ALUMINUM_IRON_SHOVEL.get(),
+                    EPItems.ALUMINUM_IRON_HOE.get(), EPItems.ALUMINUM_IRON_POLISHER.get(), consumer);
 
             //Green gold
-            materialRecipes(ModItems.GREEN_GOLD_INGOT.get(), ModItems.GREEN_GOLD_NUGGET.get(), ModBlocks.GREEN_GOLD_BLOCK.get(), consumer);
+            materialRecipes(EPItems.GREEN_GOLD_INGOT.get(), EPItems.GREEN_GOLD_NUGGET.get(), EPBlocks.GREEN_GOLD_BLOCK.get(), consumer);
 
-            addGear(ModItems.GREEN_GOLD_INGOT.get(), ModItems.GREEN_GOLDEN_AXE.get(), ModItems.GREEN_GOLDEN_PICKAXE.get(), ModItems.GREEN_GOLDEN_SWORD.get(),
-                    ModItems.GREEN_GOLDEN_DAGGER.get(), ModItems.GREEN_GOLDEN_SHOVEL.get(), ModItems.GREEN_GOLDEN_HOE.get(), ModItems.GREEN_GOLDEN_POLISHER.get(),
-                    ModItems.GREEN_GOLDEN_HELMET.get(), ModItems.GREEN_GOLDEN_CHESTPLATE.get(), ModItems.GREEN_GOLDEN_LEGGINGS.get(), ModItems.GREEN_GOLDEN_BOOTS.get(),
+            addGear(EPItems.GREEN_GOLD_INGOT.get(), EPItems.GREEN_GOLDEN_AXE.get(), EPItems.GREEN_GOLDEN_PICKAXE.get(), EPItems.GREEN_GOLDEN_SWORD.get(),
+                    EPItems.GREEN_GOLDEN_DAGGER.get(), EPItems.GREEN_GOLDEN_SHOVEL.get(), EPItems.GREEN_GOLDEN_HOE.get(), EPItems.GREEN_GOLDEN_POLISHER.get(),
+                    EPItems.GREEN_GOLDEN_HELMET.get(), EPItems.GREEN_GOLDEN_CHESTPLATE.get(), EPItems.GREEN_GOLDEN_LEGGINGS.get(), EPItems.GREEN_GOLDEN_BOOTS.get(),
                     consumer);
 
-            addAluminumGear(ModItems.GREEN_GOLD_INGOT.get(), ModItems.ALUMINUM_GREEN_GOLDEN_AXE.get(), ModItems.ALUMINUM_GREEN_GOLDEN_PICKAXE.get(),
-                    ModItems.ALUMINUM_GREEN_GOLDEN_SWORD.get(), ModItems.ALUMINUM_GREEN_GOLDEN_DAGGER.get(), ModItems.ALUMINUM_GREEN_GOLDEN_SHOVEL.get(),
-                    ModItems.ALUMINUM_GREEN_GOLDEN_HOE.get(), ModItems.ALUMINUM_GREEN_GOLDEN_POLISHER.get(), consumer);
+            addAluminumGear(EPItems.GREEN_GOLD_INGOT.get(), EPItems.ALUMINUM_GREEN_GOLDEN_AXE.get(), EPItems.ALUMINUM_GREEN_GOLDEN_PICKAXE.get(),
+                    EPItems.ALUMINUM_GREEN_GOLDEN_SWORD.get(), EPItems.ALUMINUM_GREEN_GOLDEN_DAGGER.get(), EPItems.ALUMINUM_GREEN_GOLDEN_SHOVEL.get(),
+                    EPItems.ALUMINUM_GREEN_GOLDEN_HOE.get(), EPItems.ALUMINUM_GREEN_GOLDEN_POLISHER.get(), consumer);
 
             //Steel
-            materialRecipes(ModItems.STEEL_INGOT.get(), ModItems.STEEL_NUGGET.get(), ModBlocks.STEEL_BLOCK.get(), consumer);
+            materialRecipes(EPItems.STEEL_INGOT.get(), EPItems.STEEL_NUGGET.get(), EPBlocks.STEEL_BLOCK.get(), consumer);
 
-            addGear(ModItems.STEEL_INGOT.get(), ModItems.STEEL_AXE.get(), ModItems.STEEL_PICKAXE.get(), ModItems.STEEL_SWORD.get(),
-                    ModItems.STEEL_DAGGER.get(), ModItems.STEEL_SHOVEL.get(), ModItems.STEEL_HOE.get(), ModItems.STEEL_POLISHER.get(),
-                    ModItems.STEEL_HELMET.get(), ModItems.STEEL_CHESTPLATE.get(), ModItems.STEEL_LEGGINGS.get(), ModItems.STEEL_BOOTS.get(),
+            addGear(EPItems.STEEL_INGOT.get(), EPItems.STEEL_AXE.get(), EPItems.STEEL_PICKAXE.get(), EPItems.STEEL_SWORD.get(),
+                    EPItems.STEEL_DAGGER.get(), EPItems.STEEL_SHOVEL.get(), EPItems.STEEL_HOE.get(), EPItems.STEEL_POLISHER.get(),
+                    EPItems.STEEL_HELMET.get(), EPItems.STEEL_CHESTPLATE.get(), EPItems.STEEL_LEGGINGS.get(), EPItems.STEEL_BOOTS.get(),
                     consumer);
 
-            addAluminumGear(ModItems.STEEL_INGOT.get(), ModItems.ALUMINUM_STEEL_AXE.get(), ModItems.ALUMINUM_STEEL_PICKAXE.get(),
-                    ModItems.ALUMINUM_STEEL_SWORD.get(), ModItems.ALUMINUM_STEEL_DAGGER.get(), ModItems.ALUMINUM_STEEL_SHOVEL.get(),
-                    ModItems.ALUMINUM_STEEL_HOE.get(), ModItems.ALUMINUM_STEEL_POLISHER.get(), consumer);
+            addAluminumGear(EPItems.STEEL_INGOT.get(), EPItems.ALUMINUM_STEEL_AXE.get(), EPItems.ALUMINUM_STEEL_PICKAXE.get(),
+                    EPItems.ALUMINUM_STEEL_SWORD.get(), EPItems.ALUMINUM_STEEL_DAGGER.get(), EPItems.ALUMINUM_STEEL_SHOVEL.get(),
+                    EPItems.ALUMINUM_STEEL_HOE.get(), EPItems.ALUMINUM_STEEL_POLISHER.get(), consumer);
 
             //Blue gold
-            materialRecipes(ModItems.BLUE_GOLD_INGOT.get(), ModItems.BLUE_GOLD_NUGGET.get(), ModBlocks.BLUE_GOLD_BLOCK.get(), consumer);
+            materialRecipes(EPItems.BLUE_GOLD_INGOT.get(), EPItems.BLUE_GOLD_NUGGET.get(), EPBlocks.BLUE_GOLD_BLOCK.get(), consumer);
 
-            addGear(ModItems.BLUE_GOLD_INGOT.get(), ModItems.BLUE_GOLDEN_AXE.get(), ModItems.BLUE_GOLDEN_PICKAXE.get(), ModItems.BLUE_GOLDEN_SWORD.get(),
-                    ModItems.BLUE_GOLDEN_DAGGER.get(), ModItems.BLUE_GOLDEN_SHOVEL.get(), ModItems.BLUE_GOLDEN_HOE.get(), ModItems.BLUE_GOLDEN_POLISHER.get(),
-                    ModItems.BLUE_GOLDEN_HELMET.get(), ModItems.BLUE_GOLDEN_CHESTPLATE.get(), ModItems.BLUE_GOLDEN_LEGGINGS.get(), ModItems.BLUE_GOLDEN_BOOTS.get(),
+            addGear(EPItems.BLUE_GOLD_INGOT.get(), EPItems.BLUE_GOLDEN_AXE.get(), EPItems.BLUE_GOLDEN_PICKAXE.get(), EPItems.BLUE_GOLDEN_SWORD.get(),
+                    EPItems.BLUE_GOLDEN_DAGGER.get(), EPItems.BLUE_GOLDEN_SHOVEL.get(), EPItems.BLUE_GOLDEN_HOE.get(), EPItems.BLUE_GOLDEN_POLISHER.get(),
+                    EPItems.BLUE_GOLDEN_HELMET.get(), EPItems.BLUE_GOLDEN_CHESTPLATE.get(), EPItems.BLUE_GOLDEN_LEGGINGS.get(), EPItems.BLUE_GOLDEN_BOOTS.get(),
                     consumer);
 
-            addAluminumGear(ModItems.BLUE_GOLD_INGOT.get(), ModItems.ALUMINUM_BLUE_GOLDEN_AXE.get(), ModItems.ALUMINUM_BLUE_GOLDEN_PICKAXE.get(),
-                    ModItems.ALUMINUM_BLUE_GOLDEN_SWORD.get(), ModItems.ALUMINUM_BLUE_GOLDEN_DAGGER.get(), ModItems.ALUMINUM_BLUE_GOLDEN_SHOVEL.get(),
-                    ModItems.ALUMINUM_BLUE_GOLDEN_HOE.get(), ModItems.ALUMINUM_BLUE_GOLDEN_POLISHER.get(), consumer);
+            addAluminumGear(EPItems.BLUE_GOLD_INGOT.get(), EPItems.ALUMINUM_BLUE_GOLDEN_AXE.get(), EPItems.ALUMINUM_BLUE_GOLDEN_PICKAXE.get(),
+                    EPItems.ALUMINUM_BLUE_GOLDEN_SWORD.get(), EPItems.ALUMINUM_BLUE_GOLDEN_DAGGER.get(), EPItems.ALUMINUM_BLUE_GOLDEN_SHOVEL.get(),
+                    EPItems.ALUMINUM_BLUE_GOLDEN_HOE.get(), EPItems.ALUMINUM_BLUE_GOLDEN_POLISHER.get(), consumer);
 
             //Diamond
-            ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.DIAMOND_POLISHER.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, EPItems.DIAMOND_POLISHER.get())
                     .pattern(" I")
                     .pattern("# ")
                     .define('I', Items.DIAMOND)
                     .define('#', Tags.Items.RODS_WOODEN)
                     .unlockedBy(getHasName(Items.DIAMOND), has(Items.DIAMOND))
                     .save(consumer);
-            ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.DIAMOND_DAGGER.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, EPItems.DIAMOND_DAGGER.get())
                     .pattern("I")
                     .pattern("#")
                     .define('I', Items.DIAMOND)
                     .define('#', Tags.Items.RODS_WOODEN)
                     .unlockedBy(getHasName(Items.DIAMOND), has(Items.DIAMOND))
-                    .unlockedBy(getHasName(ModItems.DIAMOND_DAGGER.get()), has(ModItems.DIAMOND_DAGGER.get()))
+                    .unlockedBy(getHasName(EPItems.DIAMOND_DAGGER.get()), has(EPItems.DIAMOND_DAGGER.get()))
                     .save(consumer);
 
-            addAluminumGear(Items.DIAMOND, ModItems.ALUMINUM_DIAMOND_AXE.get(), ModItems.ALUMINUM_DIAMOND_PICKAXE.get(),
-                    ModItems.ALUMINUM_DIAMOND_SWORD.get(), ModItems.ALUMINUM_DIAMOND_DAGGER.get(), ModItems.ALUMINUM_DIAMOND_SHOVEL.get(),
-                    ModItems.ALUMINUM_DIAMOND_HOE.get(), ModItems.ALUMINUM_DIAMOND_POLISHER.get(), consumer);
+            addAluminumGear(Items.DIAMOND, EPItems.ALUMINUM_DIAMOND_AXE.get(), EPItems.ALUMINUM_DIAMOND_PICKAXE.get(),
+                    EPItems.ALUMINUM_DIAMOND_SWORD.get(), EPItems.ALUMINUM_DIAMOND_DAGGER.get(), EPItems.ALUMINUM_DIAMOND_SHOVEL.get(),
+                    EPItems.ALUMINUM_DIAMOND_HOE.get(), EPItems.ALUMINUM_DIAMOND_POLISHER.get(), consumer);
 
         //New vanilla recipes
             //Food
             ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, Items.BREAD, 3)
-                    .requires(ModItems.WHEAT_FLOUR.get(), 2)
+                    .requires(EPItems.WHEAT_FLOUR.get(), 2)
                     .requires(Items.MILK_BUCKET)
-                    .requires(ModItems.YEAST.get())
-                    .unlockedBy(getHasName(ModItems.WHEAT_FLOUR.get()), has(ModItems.WHEAT_FLOUR.get()))
+                    .requires(EPItems.YEAST.get())
+                    .unlockedBy(getHasName(EPItems.WHEAT_FLOUR.get()), has(EPItems.WHEAT_FLOUR.get()))
                     .unlockedBy(getHasName(Items.WHEAT), has(Items.WHEAT))
                     .save(consumer);
             ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, Items.COOKIE, 8)
-                    .requires(ModItems.WHEAT_FLOUR.get(), 2)
+                    .requires(EPItems.WHEAT_FLOUR.get(), 2)
                     .requires(Items.COCOA_BEANS, 2)
-                    .requires(ModItems.YEAST.get())
-                    .unlockedBy(getHasName(ModItems.WHEAT_FLOUR.get()), has(ModItems.WHEAT_FLOUR.get()))
+                    .requires(EPItems.YEAST.get())
+                    .unlockedBy(getHasName(EPItems.WHEAT_FLOUR.get()), has(EPItems.WHEAT_FLOUR.get()))
                     .unlockedBy(getHasName(Items.WHEAT), has(Items.WHEAT))
                     .unlockedBy(getHasName(Items.COCOA_BEANS), has(Items.COCOA_BEANS))
                     .save(consumer);
             ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, Items.PUMPKIN_PIE)
-                    .requires(ModItems.PUMPKIN_FLOUR.get(), 2)
-                    .requires(ModItems.YEAST.get())
-                    .unlockedBy(getHasName(ModItems.PUMPKIN_FLOUR.get()), has(ModItems.PUMPKIN_FLOUR.get()))
+                    .requires(EPItems.PUMPKIN_FLOUR.get(), 2)
+                    .requires(EPItems.YEAST.get())
+                    .unlockedBy(getHasName(EPItems.PUMPKIN_FLOUR.get()), has(EPItems.PUMPKIN_FLOUR.get()))
                     .unlockedBy(getHasName(Items.PUMPKIN), has(Items.PUMPKIN))
                     .save(consumer);
 
@@ -529,19 +535,19 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                     .pattern("W#W")
                     .pattern("III")
                     .define('W', Items.REDSTONE_TORCH)
-                    .define('#', ModItems.TIN_INGOT.get())
+                    .define('#', EPItems.TIN_INGOT.get())
                     .define('I', Blocks.STONE)
-                    .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                    .unlockedBy(getHasName(EPItems.TIN_INGOT.get()), has(EPItems.TIN_INGOT.get()))
                     .save(consumer);
             ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, Items.COMPARATOR)
                     .pattern("WWW")
                     .pattern("AFA")
                     .pattern("III")
                     .define('W', Items.REDSTONE_TORCH)
-                    .define('F', ModItems.TIN_INGOT.get())
+                    .define('F', EPItems.TIN_INGOT.get())
                     .define('A', Items.REDSTONE)
                     .define('I', Blocks.STONE)
-                    .unlockedBy(getHasName(ModItems.TIN_INGOT.get()), has(ModItems.TIN_INGOT.get()))
+                    .unlockedBy(getHasName(EPItems.TIN_INGOT.get()), has(EPItems.TIN_INGOT.get()))
                     .unlockedBy(getHasName(Items.REDSTONE), has(Items.REDSTONE))
                     .save(consumer);
 
@@ -549,9 +555,9 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.FLINT_AND_STEEL)
                     .pattern("S ")
                     .pattern(" F")
-                    .define('S', ModItems.STEEL_INGOT.get())
+                    .define('S', EPItems.STEEL_INGOT.get())
                     .define('F', Items.FLINT)
-                    .unlockedBy(getHasName(ModItems.STEEL_INGOT.get()), has(ModItems.STEEL_INGOT.get()))
+                    .unlockedBy(getHasName(EPItems.STEEL_INGOT.get()), has(EPItems.STEEL_INGOT.get()))
                     .unlockedBy(getHasName(Items.FLINT), has(Items.FLINT))
                     .save(consumer);
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.SADDLE)
@@ -564,9 +570,9 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                     .unlockedBy(getHasName(Items.SADDLE), has(Items.SADDLE))
                     .save(consumer);
             ShapelessRecipeBuilder.shapeless(RecipeCategory.BREWING, Items.GUNPOWDER)
-                    .requires(ModItems.SULFUR.get())
+                    .requires(EPItems.SULFUR.get())
                     .requires(Items.CHARCOAL)
-                    .unlockedBy(getHasName(ModItems.SULFUR.get()), has(ModItems.SULFUR.get()))
+                    .unlockedBy(getHasName(EPItems.SULFUR.get()), has(EPItems.SULFUR.get()))
                     .unlockedBy(getHasName(Items.CHARCOAL), has(Items.CHARCOAL))
                     .save(consumer);
             ShapelessRecipeBuilder.shapeless(RecipeCategory.BREWING, Items.BONE_MEAL, 3)
@@ -589,54 +595,54 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
 
             //Blocks
                 //Terracotta
-                terracottaFromShardsRecipe(Blocks.TERRACOTTA, ModItems.TERRACOTTA_SHARD.get(), consumer);
-                terracottaFromShardsRecipe(Blocks.WHITE_TERRACOTTA, ModItems.WHITE_TERRACOTTA_SHARD.get(), consumer);
-                terracottaFromShardsRecipe(Blocks.ORANGE_TERRACOTTA, ModItems.ORANGE_TERRACOTTA_SHARD.get(), consumer);
-                terracottaFromShardsRecipe(Blocks.MAGENTA_TERRACOTTA, ModItems.MAGENTA_TERRACOTTA_SHARD.get(), consumer);
-                terracottaFromShardsRecipe(Blocks.LIGHT_BLUE_TERRACOTTA, ModItems.LIGHT_BLUE_TERRACOTTA_SHARD.get(), consumer);
-                terracottaFromShardsRecipe(Blocks.YELLOW_TERRACOTTA, ModItems.YELLOW_TERRACOTTA_SHARD.get(), consumer);
-                terracottaFromShardsRecipe(Blocks.LIME_TERRACOTTA, ModItems.LIME_TERRACOTTA_SHARD.get(), consumer);
-                terracottaFromShardsRecipe(Blocks.PINK_TERRACOTTA, ModItems.PINK_TERRACOTTA_SHARD.get(), consumer);
-                terracottaFromShardsRecipe(Blocks.GRAY_TERRACOTTA, ModItems.GRAY_TERRACOTTA_SHARD.get(), consumer);
-                terracottaFromShardsRecipe(Blocks.LIGHT_GRAY_TERRACOTTA, ModItems.LIGHT_GRAY_TERRACOTTA_SHARD.get(), consumer);
-                terracottaFromShardsRecipe(Blocks.CYAN_TERRACOTTA, ModItems.CYAN_TERRACOTTA_SHARD.get(), consumer);
-                terracottaFromShardsRecipe(Blocks.PURPLE_TERRACOTTA, ModItems.PURPLE_TERRACOTTA_SHARD.get(), consumer);
-                terracottaFromShardsRecipe(Blocks.BLUE_TERRACOTTA, ModItems.BLUE_TERRACOTTA_SHARD.get(), consumer);
-                terracottaFromShardsRecipe(Blocks.BROWN_TERRACOTTA, ModItems.BROWN_TERRACOTTA_SHARD.get(), consumer);
-                terracottaFromShardsRecipe(Blocks.GREEN_TERRACOTTA, ModItems.GREEN_TERRACOTTA_SHARD.get(), consumer);
-                terracottaFromShardsRecipe(Blocks.RED_TERRACOTTA, ModItems.RED_TERRACOTTA_SHARD.get(), consumer);
-                terracottaFromShardsRecipe(Blocks.BLACK_TERRACOTTA, ModItems.BLACK_TERRACOTTA_SHARD.get(), consumer);
+                terracottaFromShardsRecipe(Blocks.TERRACOTTA, EPItems.TERRACOTTA_SHARD.get(), consumer);
+                terracottaFromShardsRecipe(Blocks.WHITE_TERRACOTTA, EPItems.WHITE_TERRACOTTA_SHARD.get(), consumer);
+                terracottaFromShardsRecipe(Blocks.ORANGE_TERRACOTTA, EPItems.ORANGE_TERRACOTTA_SHARD.get(), consumer);
+                terracottaFromShardsRecipe(Blocks.MAGENTA_TERRACOTTA, EPItems.MAGENTA_TERRACOTTA_SHARD.get(), consumer);
+                terracottaFromShardsRecipe(Blocks.LIGHT_BLUE_TERRACOTTA, EPItems.LIGHT_BLUE_TERRACOTTA_SHARD.get(), consumer);
+                terracottaFromShardsRecipe(Blocks.YELLOW_TERRACOTTA, EPItems.YELLOW_TERRACOTTA_SHARD.get(), consumer);
+                terracottaFromShardsRecipe(Blocks.LIME_TERRACOTTA, EPItems.LIME_TERRACOTTA_SHARD.get(), consumer);
+                terracottaFromShardsRecipe(Blocks.PINK_TERRACOTTA, EPItems.PINK_TERRACOTTA_SHARD.get(), consumer);
+                terracottaFromShardsRecipe(Blocks.GRAY_TERRACOTTA, EPItems.GRAY_TERRACOTTA_SHARD.get(), consumer);
+                terracottaFromShardsRecipe(Blocks.LIGHT_GRAY_TERRACOTTA, EPItems.LIGHT_GRAY_TERRACOTTA_SHARD.get(), consumer);
+                terracottaFromShardsRecipe(Blocks.CYAN_TERRACOTTA, EPItems.CYAN_TERRACOTTA_SHARD.get(), consumer);
+                terracottaFromShardsRecipe(Blocks.PURPLE_TERRACOTTA, EPItems.PURPLE_TERRACOTTA_SHARD.get(), consumer);
+                terracottaFromShardsRecipe(Blocks.BLUE_TERRACOTTA, EPItems.BLUE_TERRACOTTA_SHARD.get(), consumer);
+                terracottaFromShardsRecipe(Blocks.BROWN_TERRACOTTA, EPItems.BROWN_TERRACOTTA_SHARD.get(), consumer);
+                terracottaFromShardsRecipe(Blocks.GREEN_TERRACOTTA, EPItems.GREEN_TERRACOTTA_SHARD.get(), consumer);
+                terracottaFromShardsRecipe(Blocks.RED_TERRACOTTA, EPItems.RED_TERRACOTTA_SHARD.get(), consumer);
+                terracottaFromShardsRecipe(Blocks.BLACK_TERRACOTTA, EPItems.BLACK_TERRACOTTA_SHARD.get(), consumer);
 
             ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, Blocks.COBBLESTONE)
                     .pattern("CC")
                     .pattern("CC")
-                    .define('C', ModItems.COBBLE.get())
-                    .unlockedBy(getHasName(ModItems.COBBLE.get()), has(ModItems.COBBLE.get()))
+                    .define('C', EPItems.COBBLE.get())
+                    .unlockedBy(getHasName(EPItems.COBBLE.get()), has(EPItems.COBBLE.get()))
                     .save(consumer);
             ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, Blocks.NETHERRACK)
                     .pattern("NN")
                     .pattern("NN")
-                    .define('N', ModItems.NETHERRACK_RUBBLE.get())
-                    .unlockedBy(getHasName(ModItems.NETHERRACK_RUBBLE.get()), has(ModItems.NETHERRACK_RUBBLE.get()))
+                    .define('N', EPItems.NETHERRACK_RUBBLE.get())
+                    .unlockedBy(getHasName(EPItems.NETHERRACK_RUBBLE.get()), has(EPItems.NETHERRACK_RUBBLE.get()))
                     .save(consumer);
             ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, Blocks.BLACKSTONE)
                     .pattern("CC")
                     .pattern("CC")
-                    .define('C', ModItems.BLACKSTONE_COBBLE.get())
-                    .unlockedBy(getHasName(ModItems.BLACKSTONE_COBBLE.get()), has(ModItems.BLACKSTONE_COBBLE.get()))
+                    .define('C', EPItems.BLACKSTONE_COBBLE.get())
+                    .unlockedBy(getHasName(EPItems.BLACKSTONE_COBBLE.get()), has(EPItems.BLACKSTONE_COBBLE.get()))
                     .save(consumer);
             ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, Blocks.COBBLED_DEEPSLATE)
                     .pattern("CC")
                     .pattern("CC")
-                    .define('C', ModItems.DEEPSLATE_COBBLE.get())
-                    .unlockedBy(getHasName(ModItems.DEEPSLATE_COBBLE.get()), has(ModItems.DEEPSLATE_COBBLE.get()))
+                    .define('C', EPItems.DEEPSLATE_COBBLE.get())
+                    .unlockedBy(getHasName(EPItems.DEEPSLATE_COBBLE.get()), has(EPItems.DEEPSLATE_COBBLE.get()))
                     .save(consumer);
 
             ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, Blocks.STONE_BRICKS, 4)
                     .pattern("AA")
                     .pattern("AA")
-                    .define('A', ModBlocks.POLISHED_STONE.get())
-                    .unlockedBy(getHasName(ModBlocks.POLISHED_STONE.get()), has(ModBlocks.POLISHED_STONE.get()))
+                    .define('A', EPBlocks.POLISHED_STONE.get())
+                    .unlockedBy(getHasName(EPBlocks.POLISHED_STONE.get()), has(EPBlocks.POLISHED_STONE.get()))
                     .save(consumer);
             ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, Blocks.MUD, 2)
                     .pattern("#A")
@@ -649,15 +655,15 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
             ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, Blocks.MUD_BRICKS, 1)
                     .pattern("BB")
                     .pattern("BB")
-                    .define('B', ModItems.MUD_BRICK.get())
+                    .define('B', EPItems.MUD_BRICK.get())
                     .unlockedBy(getHasName(Items.PACKED_MUD), has(Items.PACKED_MUD))
-                    .unlockedBy(getHasName(ModItems.MUD_BRICK.get()), has(ModItems.MUD_BRICK.get()))
+                    .unlockedBy(getHasName(EPItems.MUD_BRICK.get()), has(EPItems.MUD_BRICK.get()))
                     .save(consumer);
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Blocks.BLAST_FURNACE)
                     .pattern("III")
                     .pattern("IFI")
                     .pattern("###")
-                    .define('I', ModItems.STEEL_INGOT.get())
+                    .define('I', EPItems.STEEL_INGOT.get())
                     .define('F', Blocks.FURNACE)
                     .define('#', Blocks.SMOOTH_STONE)
                     .unlockedBy(getHasName(Blocks.FURNACE), has(Blocks.FURNACE))
@@ -666,8 +672,8 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                     .pattern("III")
                     .pattern("#F#")
                     .pattern("###")
-                    .define('I', ModItems.BRONZE_INGOT.get())
-                    .define('F', ModBlocks.ADOBE_FURNACE.get())
+                    .define('I', EPItems.BRONZE_INGOT.get())
+                    .define('F', EPBlocks.ADOBE_FURNACE.get())
                     .define('#', Blocks.COBBLESTONE)
                     .unlockedBy(getHasName(Blocks.FURNACE), has(Blocks.FURNACE))
                     .save(consumer);
@@ -712,7 +718,7 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
     }
 
     protected static InventoryChangeTrigger.TriggerInstance HAS_ALUMINUM_ROD(){
-        return InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.ALUMINUM_ROD.get());
+        return InventoryChangeTrigger.TriggerInstance.hasItems(EPItems.ALUMINUM_ROD.get());
     }
 
     protected static void materialRecipes(ItemLike pIngot, Block pBlock, Consumer<FinishedRecipe> pConsumer){
@@ -1039,68 +1045,68 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .pattern("I")
                 .pattern("#")
                 .define('I', pIngot)
-                .define('#', ModTags.Items.ALUMINUM_ROD)
+                .define('#', EPTags.Items.ALUMINUM_ROD)
                 .unlockedBy("has_tool", has(pSword))
                 .unlockedBy("has_rod", HAS_ALUMINUM_ROD())
-                .unlockedBy("has_smithing_template", has(ModItems.ALUMINUM_SMITHING_UPGRADE_TEMPLATE.get()))
+                .unlockedBy("has_smithing_template", has(EPItems.ALUMINUM_SMITHING_UPGRADE_TEMPLATE.get()))
                 .save(pConsumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, pDagger)
                 .pattern("I")
                 .pattern("#")
                 .define('I', pIngot)
-                .define('#', ModTags.Items.ALUMINUM_ROD)
+                .define('#', EPTags.Items.ALUMINUM_ROD)
                 .unlockedBy("has_tool", has(pDagger))
                 .unlockedBy("has_rod", HAS_ALUMINUM_ROD())
-                .unlockedBy("has_smithing_template", has(ModItems.ALUMINUM_SMITHING_UPGRADE_TEMPLATE.get()))
+                .unlockedBy("has_smithing_template", has(EPItems.ALUMINUM_SMITHING_UPGRADE_TEMPLATE.get()))
                 .save(pConsumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, pPickaxe)
                 .pattern("III")
                 .pattern(" # ")
                 .pattern(" # ")
                 .define('I', pIngot)
-                .define('#', ModTags.Items.ALUMINUM_ROD)
+                .define('#', EPTags.Items.ALUMINUM_ROD)
                 .unlockedBy("has_tool", has(pPickaxe))
                 .unlockedBy("has_rod", HAS_ALUMINUM_ROD())
-                .unlockedBy("has_smithing_template", has(ModItems.ALUMINUM_SMITHING_UPGRADE_TEMPLATE.get()))
+                .unlockedBy("has_smithing_template", has(EPItems.ALUMINUM_SMITHING_UPGRADE_TEMPLATE.get()))
                 .save(pConsumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, pAxe)
                 .pattern("II")
                 .pattern("I#")
                 .pattern(" #")
                 .define('I', pIngot)
-                .define('#', ModTags.Items.ALUMINUM_ROD)
+                .define('#', EPTags.Items.ALUMINUM_ROD)
                 .unlockedBy("has_tool", has(pAxe))
                 .unlockedBy("has_rod", HAS_ALUMINUM_ROD())
-                .unlockedBy("has_smithing_template", has(ModItems.ALUMINUM_SMITHING_UPGRADE_TEMPLATE.get()))
+                .unlockedBy("has_smithing_template", has(EPItems.ALUMINUM_SMITHING_UPGRADE_TEMPLATE.get()))
                 .save(pConsumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, pShovel)
                 .pattern("I")
                 .pattern("#")
                 .pattern("#")
                 .define('I', pIngot)
-                .define('#', ModTags.Items.ALUMINUM_ROD)
+                .define('#', EPTags.Items.ALUMINUM_ROD)
                 .unlockedBy("has_tool", has(pShovel))
                 .unlockedBy("has_rod", HAS_ALUMINUM_ROD())
-                .unlockedBy("has_smithing_template", has(ModItems.ALUMINUM_SMITHING_UPGRADE_TEMPLATE.get()))
+                .unlockedBy("has_smithing_template", has(EPItems.ALUMINUM_SMITHING_UPGRADE_TEMPLATE.get()))
                 .save(pConsumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, pHoe)
                 .pattern("II")
                 .pattern(" #")
                 .pattern(" #")
                 .define('I', pIngot)
-                .define('#', ModTags.Items.ALUMINUM_ROD)
+                .define('#', EPTags.Items.ALUMINUM_ROD)
                 .unlockedBy("has_tool", has(pHoe))
                 .unlockedBy("has_rod", HAS_ALUMINUM_ROD())
-                .unlockedBy("has_smithing_template", has(ModItems.ALUMINUM_SMITHING_UPGRADE_TEMPLATE.get()))
+                .unlockedBy("has_smithing_template", has(EPItems.ALUMINUM_SMITHING_UPGRADE_TEMPLATE.get()))
                 .save(pConsumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, pPolisher)
                 .pattern(" I")
                 .pattern("# ")
                 .define('I', pIngot)
-                .define('#', ModTags.Items.ALUMINUM_ROD)
+                .define('#', EPTags.Items.ALUMINUM_ROD)
                 .unlockedBy("has_tool", has(pPolisher))
                 .unlockedBy("has_rod", HAS_ALUMINUM_ROD())
-                .unlockedBy("has_smithing_template", has(ModItems.ALUMINUM_SMITHING_UPGRADE_TEMPLATE.get()))
+                .unlockedBy("has_smithing_template", has(EPItems.ALUMINUM_SMITHING_UPGRADE_TEMPLATE.get()))
                 .save(pConsumer);
     }
 
@@ -1111,68 +1117,68 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                     .pattern(" I ")
                     .pattern(" IS")
                     .pattern(" # ")
-                    .define('I', ModTags.Items.COBBLE)
+                    .define('I', EPTags.Items.COBBLE)
                     .define('S', Tags.Items.STRING)
-                    .define('#', ModTags.Items.ALUMINUM_ROD)
-                    .unlockedBy("has_aluminum_rod", has(ModTags.Items.ALUMINUM_ROD))
+                    .define('#', EPTags.Items.ALUMINUM_ROD)
+                    .unlockedBy("has_aluminum_rod", has(EPTags.Items.ALUMINUM_ROD))
                     .unlockedBy(getHasName(pSword), has(pSword))
                     .save(pConsumer);
             ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, pPickaxe)
                     .pattern("III")
                     .pattern(" #S")
                     .pattern(" # ")
-                    .define('I', ModTags.Items.COBBLE)
+                    .define('I', EPTags.Items.COBBLE)
                     .define('S', Tags.Items.STRING)
-                    .define('#', ModTags.Items.ALUMINUM_ROD)
-                    .unlockedBy("has_aluminum_rod", has(ModTags.Items.ALUMINUM_ROD))
+                    .define('#', EPTags.Items.ALUMINUM_ROD)
+                    .unlockedBy("has_aluminum_rod", has(EPTags.Items.ALUMINUM_ROD))
                     .unlockedBy(getHasName(pPickaxe), has(pPickaxe))
                     .save(pConsumer);
             ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, pAxe)
                     .pattern("IIS")
                     .pattern("I# ")
                     .pattern(" # ")
-                    .define('I', ModTags.Items.COBBLE)
+                    .define('I', EPTags.Items.COBBLE)
                     .define('S', Tags.Items.STRING)
-                    .define('#', ModTags.Items.ALUMINUM_ROD)
-                    .unlockedBy("has_aluminum_rod", has(ModTags.Items.ALUMINUM_ROD))
+                    .define('#', EPTags.Items.ALUMINUM_ROD)
+                    .unlockedBy("has_aluminum_rod", has(EPTags.Items.ALUMINUM_ROD))
                     .unlockedBy(getHasName(pAxe), has(pAxe))
                     .save(pConsumer);
             ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, pShovel)
                     .pattern(" I ")
                     .pattern(" #S")
                     .pattern(" # ")
-                    .define('I', ModTags.Items.COBBLE)
+                    .define('I', EPTags.Items.COBBLE)
                     .define('S', Tags.Items.STRING)
-                    .define('#', ModTags.Items.ALUMINUM_ROD)
-                    .unlockedBy("has_aluminum_rod", has(ModTags.Items.ALUMINUM_ROD))
+                    .define('#', EPTags.Items.ALUMINUM_ROD)
+                    .unlockedBy("has_aluminum_rod", has(EPTags.Items.ALUMINUM_ROD))
                     .unlockedBy(getHasName(pShovel), has(pShovel))
                     .save(pConsumer);
             ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, pHoe)
                     .pattern("IIS")
                     .pattern(" # ")
                     .pattern(" # ")
-                    .define('I', ModTags.Items.COBBLE)
+                    .define('I', EPTags.Items.COBBLE)
                     .define('S', Tags.Items.STRING)
-                    .define('#', ModTags.Items.ALUMINUM_ROD)
-                    .unlockedBy("has_aluminum_rod", has(ModTags.Items.ALUMINUM_ROD))
+                    .define('#', EPTags.Items.ALUMINUM_ROD)
+                    .unlockedBy("has_aluminum_rod", has(EPTags.Items.ALUMINUM_ROD))
                     .unlockedBy(getHasName(pHoe), has(pHoe))
                     .save(pConsumer);
             ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, pPolisher)
                     .pattern("SI")
                     .pattern("# ")
-                    .define('I', ModTags.Items.COBBLE)
+                    .define('I', EPTags.Items.COBBLE)
                     .define('S', Tags.Items.STRING)
-                    .define('#', ModTags.Items.ALUMINUM_ROD)
-                    .unlockedBy("has_aluminum_rod", has(ModTags.Items.ALUMINUM_ROD))
+                    .define('#', EPTags.Items.ALUMINUM_ROD)
+                    .unlockedBy("has_aluminum_rod", has(EPTags.Items.ALUMINUM_ROD))
                     .unlockedBy(getHasName(pPolisher), has(pPolisher))
                     .save(pConsumer);
             ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, pDagger)
                     .pattern("I ")
                     .pattern("#S")
-                    .define('I', ModTags.Items.COBBLE)
+                    .define('I', EPTags.Items.COBBLE)
                     .define('S', Tags.Items.STRING)
-                    .define('#', ModTags.Items.ALUMINUM_ROD)
-                    .unlockedBy("has_aluminum_rod", has(ModTags.Items.ALUMINUM_ROD))
+                    .define('#', EPTags.Items.ALUMINUM_ROD)
+                    .unlockedBy("has_aluminum_rod", has(EPTags.Items.ALUMINUM_ROD))
                     .unlockedBy(getHasName(pDagger), has(pDagger))
                     .save(pConsumer);
         } else {
@@ -1180,68 +1186,68 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                     .pattern(" I ")
                     .pattern(" IS")
                     .pattern(" # ")
-                    .define('I', ModTags.Items.COBBLE)
+                    .define('I', EPTags.Items.COBBLE)
                     .define('S', Tags.Items.STRING)
                     .define('#', Tags.Items.RODS_WOODEN)
-                    .unlockedBy("has_cobble", has(ModTags.Items.COBBLE))
+                    .unlockedBy("has_cobble", has(EPTags.Items.COBBLE))
                     .unlockedBy(getHasName(pSword), has(pSword))
                     .save(pConsumer);
             ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, pPickaxe)
                     .pattern("III")
                     .pattern(" #S")
                     .pattern(" # ")
-                    .define('I', ModTags.Items.COBBLE)
+                    .define('I', EPTags.Items.COBBLE)
                     .define('S', Tags.Items.STRING)
                     .define('#', Tags.Items.RODS_WOODEN)
-                    .unlockedBy("has_cobble", has(ModTags.Items.COBBLE))
+                    .unlockedBy("has_cobble", has(EPTags.Items.COBBLE))
                     .unlockedBy(getHasName(pPickaxe), has(pPickaxe))
                     .save(pConsumer);
             ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, pAxe)
                     .pattern("IIS")
                     .pattern("I# ")
                     .pattern(" # ")
-                    .define('I', ModTags.Items.COBBLE)
+                    .define('I', EPTags.Items.COBBLE)
                     .define('S', Tags.Items.STRING)
                     .define('#', Tags.Items.RODS_WOODEN)
-                    .unlockedBy("has_cobble", has(ModTags.Items.COBBLE))
+                    .unlockedBy("has_cobble", has(EPTags.Items.COBBLE))
                     .unlockedBy(getHasName(pAxe), has(pAxe))
                     .save(pConsumer);
             ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, pShovel)
                     .pattern(" I ")
                     .pattern(" #S")
                     .pattern(" # ")
-                    .define('I', ModTags.Items.COBBLE)
+                    .define('I', EPTags.Items.COBBLE)
                     .define('S', Tags.Items.STRING)
                     .define('#', Tags.Items.RODS_WOODEN)
-                    .unlockedBy("has_cobble", has(ModTags.Items.COBBLE))
+                    .unlockedBy("has_cobble", has(EPTags.Items.COBBLE))
                     .unlockedBy(getHasName(pShovel), has(pShovel))
                     .save(pConsumer);
             ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, pHoe)
                     .pattern("IIS")
                     .pattern(" # ")
                     .pattern(" # ")
-                    .define('I', ModTags.Items.COBBLE)
+                    .define('I', EPTags.Items.COBBLE)
                     .define('S', Tags.Items.STRING)
                     .define('#', Tags.Items.RODS_WOODEN)
-                    .unlockedBy("has_cobble", has(ModTags.Items.COBBLE))
+                    .unlockedBy("has_cobble", has(EPTags.Items.COBBLE))
                     .unlockedBy(getHasName(pHoe), has(pHoe))
                     .save(pConsumer);
             ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, pPolisher)
                     .pattern("SI")
                     .pattern("# ")
-                    .define('I', ModTags.Items.COBBLE)
+                    .define('I', EPTags.Items.COBBLE)
                     .define('S', Tags.Items.STRING)
                     .define('#', Tags.Items.RODS_WOODEN)
-                    .unlockedBy("has_cobble", has(ModTags.Items.COBBLE))
+                    .unlockedBy("has_cobble", has(EPTags.Items.COBBLE))
                     .unlockedBy(getHasName(pPolisher), has(pPolisher))
                     .save(pConsumer);
             ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, pDagger)
                     .pattern("I ")
                     .pattern("#S")
-                    .define('I', ModTags.Items.COBBLE)
+                    .define('I', EPTags.Items.COBBLE)
                     .define('S', Tags.Items.STRING)
                     .define('#', Tags.Items.RODS_WOODEN)
-                    .unlockedBy("has_cobble", has(ModTags.Items.COBBLE))
+                    .unlockedBy("has_cobble", has(EPTags.Items.COBBLE))
                     .unlockedBy(getHasName(pDagger), has(pDagger))
                     .save(pConsumer);
         }

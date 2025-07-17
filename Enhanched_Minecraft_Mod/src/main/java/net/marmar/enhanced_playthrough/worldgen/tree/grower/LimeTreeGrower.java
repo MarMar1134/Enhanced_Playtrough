@@ -1,6 +1,6 @@
 package net.marmar.enhanced_playthrough.worldgen.tree.grower;
 
-import net.marmar.enhanced_playthrough.worldgen.ModConfiguredFeatures;
+import net.marmar.enhanced_playthrough.worldgen.EPConfiguredFeatures;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.block.grower.AbstractTreeGrower;
@@ -10,6 +10,6 @@ import org.jetbrains.annotations.Nullable;
 public class LimeTreeGrower extends AbstractTreeGrower {
     @Override
     protected @Nullable ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource randomSource, boolean b) {
-        return ModConfiguredFeatures.LIME_KEY;
+        return EPConfiguredFeatures.LIME_TREES;
     }
 }

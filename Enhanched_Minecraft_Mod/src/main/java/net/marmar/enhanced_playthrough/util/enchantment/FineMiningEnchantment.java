@@ -20,6 +20,6 @@ public class FineMiningEnchantment extends Enchantment {
 
     @Override
     protected boolean checkCompatibility(Enchantment pOther) {
-        return super.checkCompatibility(pOther) && pOther != Enchantments.SILK_TOUCH && pOther != ModEnchantments.ROUGH_MINING.get();
+        return super.checkCompatibility(pOther) && pOther != Enchantments.SILK_TOUCH && pOther != EPEnchantments.ROUGH_MINING.get();
     }
 }

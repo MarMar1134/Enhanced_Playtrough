@@ -1,8 +1,8 @@
 package net.marmar.enhanced_playthrough.menu.alloyfurnace;
 
-import net.marmar.enhanced_playthrough.data.tag.ModTags;
-import net.marmar.enhanced_playthrough.block.alloyfurnace.entity.AbstractAlloyFurnaceBlockEntity;
-import net.marmar.enhanced_playthrough.block.alloyfurnace.entity.SuperAlloyFurnaceBlockEntity;
+import net.marmar.enhanced_playthrough.data.tag.EPTags;
+import net.marmar.enhanced_playthrough.block.custom.alloyfurnace.entity.AbstractAlloyFurnaceBlockEntity;
+import net.marmar.enhanced_playthrough.block.custom.alloyfurnace.entity.SuperAlloyFurnaceBlockEntity;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -120,9 +120,9 @@ public abstract class AbstractAlloyFurnaceMenu extends AbstractContainerMenu {
                     @Override
                     public boolean mayPlace(@NotNull ItemStack stack) {
                         if (blockEntity instanceof SuperAlloyFurnaceBlockEntity){
-                            return stack.is(ModTags.Items.BLAST_ALLOY_INGREDIENT);
+                            return stack.is(EPTags.Items.BLAST_ALLOY_INGREDIENT);
                         }
-                        return stack.is(ModTags.Items.ALLOY_INGREDIENT);
+                        return stack.is(EPTags.Items.ALLOY_INGREDIENT);
                     }
                 }));
 
@@ -132,9 +132,9 @@ public abstract class AbstractAlloyFurnaceMenu extends AbstractContainerMenu {
                     @Override
                     public boolean mayPlace(@NotNull ItemStack stack) {
                         if (blockEntity instanceof SuperAlloyFurnaceBlockEntity){
-                            return stack.is(ModTags.Items.BLAST_ALLOY_INGREDIENT);
+                            return stack.is(EPTags.Items.BLAST_ALLOY_INGREDIENT);
                         }
-                        return stack.is(ModTags.Items.ALLOY_INGREDIENT);
+                        return stack.is(EPTags.Items.ALLOY_INGREDIENT);
                     }
                 }));
 

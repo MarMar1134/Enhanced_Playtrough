@@ -1,9 +1,9 @@
 package net.marmar.enhanced_playthrough.menu.grinder;
 
-import net.marmar.enhanced_playthrough.data.tag.ModTags;
-import net.marmar.enhanced_playthrough.block.ModBlocks;
-import net.marmar.enhanced_playthrough.block.grinder.entity.PrimalGrinderBlockEntity;
-import net.marmar.enhanced_playthrough.menu.ModMenuTypes;
+import net.marmar.enhanced_playthrough.data.tag.EPTags;
+import net.marmar.enhanced_playthrough.block.EPBlocks;
+import net.marmar.enhanced_playthrough.block.custom.grinder.entity.PrimalGrinderBlockEntity;
+import net.marmar.enhanced_playthrough.menu.EPMenuTypes;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -24,7 +24,7 @@ public class PrimalGrinderMenu extends AbstractContainerMenu{
                 new SimpleContainerData(4));
     }
     public PrimalGrinderMenu(int containerID, Inventory inv, BlockEntity entity, ContainerData data){
-        super(ModMenuTypes.PRIMAL_GRINDER_MENU.get(), containerID);
+        super(EPMenuTypes.PRIMAL_GRINDER_MENU.get(), containerID);
         blockEntity = ((PrimalGrinderBlockEntity) entity);
         this.level = inv.player.level();
         this.data = data;
@@ -43,7 +43,7 @@ public class PrimalGrinderMenu extends AbstractContainerMenu{
                 addSlot(new SlotItemHandler(itemStackHandler, 0, 44, 20){
                     @Override
                     public boolean mayPlace(@NotNull ItemStack stack) {
-                        return stack.is(ModTags.Items.PRIMAL_GRIND_INGREDIENT);
+                        return stack.is(EPTags.Items.PRIMAL_GRIND_INGREDIENT);
                     }
                 }));
 
@@ -147,7 +147,7 @@ public class PrimalGrinderMenu extends AbstractContainerMenu{
     @Override
     public boolean stillValid(Player pPlayer) {
         return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()),
-                pPlayer, ModBlocks.PRIMAL_GRINDER.get());
+                pPlayer, EPBlocks.PRIMAL_GRINDER.get());
     }
 
     private void addPlayerInventory(Inventory playerInventory) {

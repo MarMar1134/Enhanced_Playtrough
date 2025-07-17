@@ -1,0 +1,38 @@
+package net.marmar.enhanced_playthrough.entity;
+
+import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
+import net.marmar.enhanced_playthrough.entity.boat.EPBoatEntity;
+import net.marmar.enhanced_playthrough.entity.boat.EPChestBoatEntity;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.MobCategory;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
+
+public class EPEntityTypes {
+    public static final DeferredRegister<EntityType<?>> ENTITY_TYPES =
+            DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, EnhancedPlaythrough.MOD_ID);
+
+    //Mobs
+    public static final RegistryObject<EntityType<Bandit>> BANDIT =
+            ENTITY_TYPES.register("bandit", ()-> EntityType.Builder.of(Bandit::new, MobCategory.MONSTER)
+                    .sized(0.6F, 1.95F).build("bandit"));
+
+    //Boats
+    public static final RegistryObject<EntityType<EPBoatEntity>> MOD_BOAT =
+            ENTITY_TYPES.register("mod_boat", () -> EntityType.Builder.<EPBoatEntity>of(EPBoatEntity::new, MobCategory.MISC)
+                    .sized(1.375f, 0.5625f).build("mod_boat"));
+    public static final RegistryObject<EntityType<EPChestBoatEntity>> MOD_CHEST_BOAT =
+            ENTITY_TYPES.register("mod_chest_boat", () -> EntityType.Builder.<EPChestBoatEntity>of(EPChestBoatEntity::new, MobCategory.MISC)
+                    .sized(1.375f, 0.5625f).build("mod_chest_boat"));
+
+    //Throwable objects
+    public static final RegistryObject<EntityType<CobbleProjectileEntity>> THROWABLE_COBBLE =
+            ENTITY_TYPES.register("throwable_cobble", () -> EntityType.Builder.<CobbleProjectileEntity>of(CobbleProjectileEntity::new, MobCategory.MISC)
+                    .sized(0.5f, 0.5f).build("throwable_cobble"));
+
+    public static void register(IEventBus eventBus){
+        ENTITY_TYPES.register(eventBus);
+    }
+}

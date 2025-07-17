@@ -1,8 +1,8 @@
 package net.marmar.enhanced_playthrough.entity;
 
 import com.google.common.collect.Maps;
-import net.marmar.enhanced_playthrough.util.enchantment.ModEnchantments;
-import net.marmar.enhanced_playthrough.item.ModItems;
+import net.marmar.enhanced_playthrough.util.enchantment.EPEnchantments;
+import net.marmar.enhanced_playthrough.item.EPItems;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
@@ -132,9 +132,9 @@ public class Bandit extends AbstractIllager {
     @Override
     protected void populateDefaultEquipmentSlots(RandomSource pRandom, DifficultyInstance pDifficulty) {
         switch (pDifficulty.getDifficulty()){
-            case HARD -> this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(ModItems.STEEL_DAGGER.get()));
-            case NORMAL -> this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(ModItems.IRON_DAGGER.get()));
-            case EASY -> this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(ModItems.STONE_DAGGER.get()));
+            case HARD -> this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(EPItems.STEEL_DAGGER.get()));
+            case NORMAL -> this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(EPItems.IRON_DAGGER.get()));
+            case EASY -> this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(EPItems.STONE_DAGGER.get()));
         }
     }
 
@@ -144,8 +144,8 @@ public class Bandit extends AbstractIllager {
         if (pRandom.nextInt(300) == 0){
             ItemStack currentWeapon = this.getMainHandItem();
             Map<Enchantment, Integer> enchantments = EnchantmentHelper.getEnchantments(currentWeapon);
-            if (currentWeapon.is(ModItems.STEEL_DAGGER.get())){
-                enchantments.put(ModEnchantments.SHARP_BLADE.get(), 2);
+            if (currentWeapon.is(EPItems.STEEL_DAGGER.get())){
+                enchantments.put(EPEnchantments.BLOODY_BLADE.get(), 2);
             } else {
                 enchantments.put(Enchantments.SHARPNESS, 2);
             }
@@ -176,7 +176,7 @@ public class Bandit extends AbstractIllager {
         if (canEnchant) {
             Map<Enchantment, Integer> enchantments = Maps.newHashMap();
             enchantments.put(Enchantments.SHARPNESS, enchantLevelMultiplier);
-            enchantments.put(ModEnchantments.SHARP_BLADE.get(), enchantLevelMultiplier);
+            enchantments.put(EPEnchantments.BLOODY_BLADE.get(), enchantLevelMultiplier);
             EnchantmentHelper.setEnchantments(enchantments, daggerStack);
         }
 

@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#enhanced_playthrough:humidity_biomes",
+  "features": "enhanced_playthrough:sapphire_ores_placed",
+  "step": "underground_ores"
+}

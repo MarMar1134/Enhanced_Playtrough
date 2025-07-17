@@ -1,6 +1,6 @@
 package net.marmar.enhanced_playthrough.data.loot;
 
-import net.marmar.enhanced_playthrough.item.ModItems;
+import net.marmar.enhanced_playthrough.item.EPItems;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Items;
@@ -30,40 +30,40 @@ public class VanillaBlockLootTables extends BlockLootSubProvider implements Bloc
         this.add(Blocks.LARGE_FERN, block -> createPlantDrops(Blocks.LARGE_FERN));
 
         //Terracotta
-        this.add(Blocks.TERRACOTTA, block -> createTerracottaDrops(Blocks.TERRACOTTA, ModItems.TERRACOTTA_SHARD.get()));
-        this.add(Blocks.WHITE_TERRACOTTA, block -> createTerracottaDrops(Blocks.WHITE_TERRACOTTA, ModItems.WHITE_TERRACOTTA_SHARD.get()));
-        this.add(Blocks.ORANGE_TERRACOTTA, block -> createTerracottaDrops(Blocks.ORANGE_TERRACOTTA, ModItems.ORANGE_TERRACOTTA_SHARD.get()));
-        this.add(Blocks.MAGENTA_TERRACOTTA, block -> createTerracottaDrops(Blocks.MAGENTA_TERRACOTTA, ModItems.MAGENTA_TERRACOTTA_SHARD.get()));
-        this.add(Blocks.LIGHT_BLUE_TERRACOTTA, block -> createTerracottaDrops(Blocks.LIGHT_BLUE_TERRACOTTA, ModItems.LIGHT_BLUE_TERRACOTTA_SHARD.get()));
-        this.add(Blocks.YELLOW_TERRACOTTA, block -> createTerracottaDrops(Blocks.YELLOW_TERRACOTTA, ModItems.YELLOW_TERRACOTTA_SHARD.get()));
-        this.add(Blocks.LIME_TERRACOTTA, block -> createTerracottaDrops(Blocks.LIME_TERRACOTTA, ModItems.LIME_TERRACOTTA_SHARD.get()));
-        this.add(Blocks.PINK_TERRACOTTA, block -> createTerracottaDrops(Blocks.PINK_TERRACOTTA, ModItems.PINK_TERRACOTTA_SHARD.get()));
-        this.add(Blocks.GRAY_TERRACOTTA, block -> createTerracottaDrops(Blocks.GRAY_TERRACOTTA, ModItems.GRAY_TERRACOTTA_SHARD.get()));
-        this.add(Blocks.LIGHT_GRAY_TERRACOTTA, block -> createTerracottaDrops(Blocks.LIGHT_GRAY_TERRACOTTA, ModItems.LIGHT_GRAY_TERRACOTTA_SHARD.get()));
-        this.add(Blocks.CYAN_TERRACOTTA, block -> createTerracottaDrops(Blocks.CYAN_TERRACOTTA, ModItems.CYAN_TERRACOTTA_SHARD.get()));
-        this.add(Blocks.PURPLE_TERRACOTTA, block -> createTerracottaDrops(Blocks.PURPLE_TERRACOTTA, ModItems.PURPLE_TERRACOTTA_SHARD.get()));
-        this.add(Blocks.BLUE_TERRACOTTA, block -> createTerracottaDrops(Blocks.BLUE_TERRACOTTA, ModItems.BLUE_TERRACOTTA_SHARD.get()));
-        this.add(Blocks.BROWN_TERRACOTTA, block -> createTerracottaDrops(Blocks.BROWN_TERRACOTTA, ModItems.BROWN_TERRACOTTA_SHARD.get()));
-        this.add(Blocks.GREEN_TERRACOTTA, block -> createTerracottaDrops(Blocks.GREEN_TERRACOTTA, ModItems.GREEN_TERRACOTTA_SHARD.get()));
-        this.add(Blocks.RED_TERRACOTTA, block -> createTerracottaDrops(Blocks.RED_TERRACOTTA, ModItems.RED_TERRACOTTA_SHARD.get()));
-        this.add(Blocks.BLACK_TERRACOTTA, block -> createTerracottaDrops(Blocks.BLACK_TERRACOTTA, ModItems.BLACK_TERRACOTTA_SHARD.get()));
+        this.add(Blocks.TERRACOTTA, block -> createTerracottaDrops(Blocks.TERRACOTTA, EPItems.TERRACOTTA_SHARD.get()));
+        this.add(Blocks.WHITE_TERRACOTTA, block -> createTerracottaDrops(Blocks.WHITE_TERRACOTTA, EPItems.WHITE_TERRACOTTA_SHARD.get()));
+        this.add(Blocks.ORANGE_TERRACOTTA, block -> createTerracottaDrops(Blocks.ORANGE_TERRACOTTA, EPItems.ORANGE_TERRACOTTA_SHARD.get()));
+        this.add(Blocks.MAGENTA_TERRACOTTA, block -> createTerracottaDrops(Blocks.MAGENTA_TERRACOTTA, EPItems.MAGENTA_TERRACOTTA_SHARD.get()));
+        this.add(Blocks.LIGHT_BLUE_TERRACOTTA, block -> createTerracottaDrops(Blocks.LIGHT_BLUE_TERRACOTTA, EPItems.LIGHT_BLUE_TERRACOTTA_SHARD.get()));
+        this.add(Blocks.YELLOW_TERRACOTTA, block -> createTerracottaDrops(Blocks.YELLOW_TERRACOTTA, EPItems.YELLOW_TERRACOTTA_SHARD.get()));
+        this.add(Blocks.LIME_TERRACOTTA, block -> createTerracottaDrops(Blocks.LIME_TERRACOTTA, EPItems.LIME_TERRACOTTA_SHARD.get()));
+        this.add(Blocks.PINK_TERRACOTTA, block -> createTerracottaDrops(Blocks.PINK_TERRACOTTA, EPItems.PINK_TERRACOTTA_SHARD.get()));
+        this.add(Blocks.GRAY_TERRACOTTA, block -> createTerracottaDrops(Blocks.GRAY_TERRACOTTA, EPItems.GRAY_TERRACOTTA_SHARD.get()));
+        this.add(Blocks.LIGHT_GRAY_TERRACOTTA, block -> createTerracottaDrops(Blocks.LIGHT_GRAY_TERRACOTTA, EPItems.LIGHT_GRAY_TERRACOTTA_SHARD.get()));
+        this.add(Blocks.CYAN_TERRACOTTA, block -> createTerracottaDrops(Blocks.CYAN_TERRACOTTA, EPItems.CYAN_TERRACOTTA_SHARD.get()));
+        this.add(Blocks.PURPLE_TERRACOTTA, block -> createTerracottaDrops(Blocks.PURPLE_TERRACOTTA, EPItems.PURPLE_TERRACOTTA_SHARD.get()));
+        this.add(Blocks.BLUE_TERRACOTTA, block -> createTerracottaDrops(Blocks.BLUE_TERRACOTTA, EPItems.BLUE_TERRACOTTA_SHARD.get()));
+        this.add(Blocks.BROWN_TERRACOTTA, block -> createTerracottaDrops(Blocks.BROWN_TERRACOTTA, EPItems.BROWN_TERRACOTTA_SHARD.get()));
+        this.add(Blocks.GREEN_TERRACOTTA, block -> createTerracottaDrops(Blocks.GREEN_TERRACOTTA, EPItems.GREEN_TERRACOTTA_SHARD.get()));
+        this.add(Blocks.RED_TERRACOTTA, block -> createTerracottaDrops(Blocks.RED_TERRACOTTA, EPItems.RED_TERRACOTTA_SHARD.get()));
+        this.add(Blocks.BLACK_TERRACOTTA, block -> createTerracottaDrops(Blocks.BLACK_TERRACOTTA, EPItems.BLACK_TERRACOTTA_SHARD.get()));
 
         //Stone
-        this.add(Blocks.STONE, block -> createRockDrops(Blocks.STONE, Blocks.COBBLESTONE, ModItems.COBBLE.get()));
-        this.add(Blocks.COBBLESTONE, block -> createRockDrops(Blocks.COBBLESTONE, Blocks.COBBLESTONE, ModItems.COBBLE.get()));
+        this.add(Blocks.STONE, block -> createRockDrops(Blocks.STONE, Blocks.COBBLESTONE, EPItems.COBBLE.get()));
+        this.add(Blocks.COBBLESTONE, block -> createRockDrops(Blocks.COBBLESTONE, Blocks.COBBLESTONE, EPItems.COBBLE.get()));
 
         //Deepslate
         this.add(Blocks.DEEPSLATE, block ->
-                createHardRockDrops(Blocks.DEEPSLATE, Blocks.COBBLED_DEEPSLATE, ModItems.DEEPSLATE_COBBLE.get()));
+                createHardRockDrops(Blocks.DEEPSLATE, Blocks.COBBLED_DEEPSLATE, EPItems.DEEPSLATE_COBBLE.get()));
         this.add(Blocks.COBBLED_DEEPSLATE, block ->
-                createHardRockDrops(Blocks.COBBLED_DEEPSLATE, Blocks.COBBLED_DEEPSLATE, ModItems.DEEPSLATE_COBBLE.get()));
+                createHardRockDrops(Blocks.COBBLED_DEEPSLATE, Blocks.COBBLED_DEEPSLATE, EPItems.DEEPSLATE_COBBLE.get()));
 
         //Netherrack
         this.add(Blocks.NETHERRACK, block ->
-                createRockDrops(Blocks.NETHERRACK, Blocks.NETHERRACK, ModItems.NETHERRACK_RUBBLE.get()));
+                createRockDrops(Blocks.NETHERRACK, Blocks.NETHERRACK, EPItems.NETHERRACK_RUBBLE.get()));
 
         //Blackstone
-        this.add(Blocks.BLACKSTONE, block -> createRockDrops(Blocks.BLACKSTONE, Blocks.BLACKSTONE, ModItems.BLACKSTONE_COBBLE.get()));
+        this.add(Blocks.BLACKSTONE, block -> createRockDrops(Blocks.BLACKSTONE, Blocks.BLACKSTONE, EPItems.BLACKSTONE_COBBLE.get()));
 
         //Other blocks
             //Bricks
@@ -107,15 +107,15 @@ public class VanillaBlockLootTables extends BlockLootSubProvider implements Bloc
 
             //Emerald
             this.add(Blocks.EMERALD_ORE, block ->
-                    createGemsDrops(Blocks.EMERALD_ORE, ModItems.RAW_EMERALD.get(), 2, Items.EMERALD, 3));
+                    createGemsDrops(Blocks.EMERALD_ORE, EPItems.RAW_EMERALD.get(), 2, Items.EMERALD, 3));
             this.add(Blocks.DEEPSLATE_EMERALD_ORE, block ->
-                    createDeepslateGemsDrops(Blocks.DEEPSLATE_EMERALD_ORE, ModItems.RAW_EMERALD.get(), 2,  Items.EMERALD, 3));
+                    createDeepslateGemsDrops(Blocks.DEEPSLATE_EMERALD_ORE, EPItems.RAW_EMERALD.get(), 2,  Items.EMERALD, 3));
 
             //Diamond
             this.add(Blocks.DIAMOND_ORE, block ->
-                    createGemsDrops(Blocks.DIAMOND_ORE, ModItems.RAW_DIAMOND.get(), 1, Items.DIAMOND, 1));
+                    createGemsDrops(Blocks.DIAMOND_ORE, EPItems.RAW_DIAMOND.get(), 1, Items.DIAMOND, 1));
             this.add(Blocks.DEEPSLATE_DIAMOND_ORE, block ->
-                    createDeepslateGemsDrops(Blocks.DEEPSLATE_DIAMOND_ORE, ModItems.RAW_DIAMOND.get(), 1,  Items.DIAMOND, 1));
+                    createDeepslateGemsDrops(Blocks.DEEPSLATE_DIAMOND_ORE, EPItems.RAW_DIAMOND.get(), 1,  Items.DIAMOND, 1));
     }
 
     private final Predicate<Block> overrideBlocks = block ->

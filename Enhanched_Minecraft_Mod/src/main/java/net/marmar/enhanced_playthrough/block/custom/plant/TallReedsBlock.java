@@ -1,6 +1,6 @@
 package net.marmar.enhanced_playthrough.block.custom.plant;
 
-import net.marmar.enhanced_playthrough.util.damage.ModDamageSources;
+import net.marmar.enhanced_playthrough.util.damage.EPDamageSources;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
@@ -25,7 +25,7 @@ public class TallReedsBlock extends DoublePlantBlock {
                 double d1 = Math.abs(pEntity.getZ() - pEntity.zOld);
                 if (d0 >= (double)0.003F || d1 >= (double)0.003F) {
 
-                    pEntity.hurt(new ModDamageSources(pLevel.registryAccess()).tallReed(), 1.5F);
+                    pEntity.hurt(new EPDamageSources(pLevel.registryAccess()).tallReed(), 1.5F);
                 }
             }
         }

@@ -35,6 +35,6 @@ public class RoughMiningEnchantment extends Enchantment {
 
     @Override
     protected boolean checkCompatibility(Enchantment pOther) {
-        return super.checkCompatibility(pOther) && pOther != Enchantments.SILK_TOUCH && pOther != ModEnchantments.FINE_MINING.get();
+        return super.checkCompatibility(pOther) && pOther != Enchantments.SILK_TOUCH && pOther != EPEnchantments.FINE_MINING.get();
     }
 }

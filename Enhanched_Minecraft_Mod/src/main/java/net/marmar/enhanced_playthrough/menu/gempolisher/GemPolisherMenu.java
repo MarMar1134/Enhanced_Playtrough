@@ -1,10 +1,10 @@
 package net.marmar.enhanced_playthrough.menu.gempolisher;
 
-import net.marmar.enhanced_playthrough.data.tag.ModTags;
-import net.marmar.enhanced_playthrough.block.ModBlocks;
-import net.marmar.enhanced_playthrough.block.gempolisher.GemPolisherBlockEntity;
+import net.marmar.enhanced_playthrough.block.EPBlocks;
+import net.marmar.enhanced_playthrough.data.tag.EPTags;
+import net.marmar.enhanced_playthrough.block.custom.gempolisher.GemPolisherBlockEntity;
 import net.marmar.enhanced_playthrough.item.custom.tool.PolisherItem;
-import net.marmar.enhanced_playthrough.menu.ModMenuTypes;
+import net.marmar.enhanced_playthrough.menu.EPMenuTypes;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -25,7 +25,7 @@ public class GemPolisherMenu extends AbstractContainerMenu {
                 new SimpleContainerData(5));
     }
     public GemPolisherMenu(int containerID, Inventory inv, BlockEntity entity, ContainerData data){
-        super(ModMenuTypes.GEM_POLISHER_MENU.get(), containerID);
+        super(EPMenuTypes.GEM_POLISHER_MENU.get(), containerID);
         blockEntity = ((GemPolisherBlockEntity) entity);
         this.level = inv.player.level();
         this.data = data;
@@ -58,7 +58,7 @@ public class GemPolisherMenu extends AbstractContainerMenu {
                 addSlot(new SlotItemHandler(itemStackHandler, 0, 55, 34){
                     @Override
                     public boolean mayPlace(@NotNull ItemStack stack) {
-                        return stack.is(ModTags.Items.RAW_GEM);
+                        return stack.is(EPTags.Items.RAW_GEM);
                     }
                 }));
 
@@ -142,7 +142,7 @@ public class GemPolisherMenu extends AbstractContainerMenu {
     @Override
     public boolean stillValid(Player pPlayer) {
         return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()),
-                pPlayer, ModBlocks.GEM_POLISHER.get());
+                pPlayer, EPBlocks.GEM_POLISHER.get());
     }
 
     private void addPlayerInventory(Inventory playerInventory) {

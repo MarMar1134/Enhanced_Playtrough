@@ -1,6 +1,7 @@
 /run
 /run-data
 /build
-/.idea
+.idea
+logs
 /gradle
 /.gradle

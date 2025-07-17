@@ -27,7 +27,7 @@ displayURL="https://www.curseforge.com/minecraft/mc-mods/enhanced-playthrough" #
 # A file name (in the root of the mod JAR) containing a logo for display
 logoFile="EP2_logo.png" #optional
 # A text field displayed in the mod UI
-credits="To all the open source developers, that provided me the resources to elaborate the mod." #optional
+credits="To all the open source developers, whose contribution to these community is invaluable." #optional
 # A text field displayed in the mod UI
 authors="Mar Mar" #optional
 # Display Test controls the display for your mod in the server connection screen

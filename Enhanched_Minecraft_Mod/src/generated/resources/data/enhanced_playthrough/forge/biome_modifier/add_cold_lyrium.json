@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#minecraft:spawns_snow_foxes",
+  "features": "enhanced_playthrough:cold_lyrium_placed",
+  "step": "vegetal_decoration"
+}

@@ -1,7 +1,7 @@
 package net.marmar.enhanced_playthrough.menu.screen.modfurnace;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
-import net.marmar.enhanced_playthrough.menu.modfurnace.AbstractModFurnaceMenu;
+import net.marmar.enhanced_playthrough.menu.epfurnace.AbstractEPFurnaceMenu;
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
@@ -11,7 +11,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 
-public abstract class AbstractModFurnaceScreen<T extends AbstractModFurnaceMenu> extends AbstractContainerScreen<T> {
+public abstract class AbstractModFurnaceScreen<T extends AbstractEPFurnaceMenu> extends AbstractContainerScreen<T> {
     private static final ResourceLocation Texture =
             new ResourceLocation(EnhancedPlaythrough.MOD_ID, "textures/gui/basic_furnace_gui.png");
 

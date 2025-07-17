@@ -1,7 +1,8 @@
 package net.marmar.enhanced_playthrough.util.enchantment;
 
-import net.marmar.enhanced_playthrough.util.effect.ModEffects;
+import net.marmar.enhanced_playthrough.util.effect.EPMobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
@@ -35,14 +36,11 @@ public class BloodyBladeEnchantment extends Enchantment {
 
     @Override
     public void doPostAttack(LivingEntity pAttacker, Entity pTarget, int pLevel) {
-        if (pTarget instanceof LivingEntity && !(pTarget instanceof AbstractSkeleton)){
-            switch (pLevel){
-                case 1:
-                    ((LivingEntity) pTarget).addEffect(new MobEffectInstance(ModEffects.BLEEDING.get(), 200, 0, true, true));
-                case 2:
-                    ((LivingEntity) pTarget).addEffect(new MobEffectInstance(ModEffects.BLEEDING.get(), 100, 1, true, true));
-                case 3:
-                    ((LivingEntity) pTarget).addEffect(new MobEffectInstance(ModEffects.BLEEDING.get(), 100, 2, true, true));
+        if (pTarget instanceof LivingEntity entity && !(pTarget instanceof AbstractSkeleton)){
+            if (pLevel == 1){
+                entity.addEffect(new MobEffectInstance(EPMobEffects.BLEEDING.get(), 200, 0, false, true, true));
+            } else {
+                entity.addEffect(new MobEffectInstance(MobEffects.POISON, 100, pLevel - 1, false, true, true));
             }
         }
         super.doPostAttack(pAttacker, pTarget, pLevel);
@@ -50,7 +48,7 @@ public class BloodyBladeEnchantment extends Enchantment {
 
     @Override
     protected boolean checkCompatibility(Enchantment pOther) {
-        return super.checkCompatibility(pOther) && pOther != ModEnchantments.POISON_TOUCH.get() && pOther != ModEnchantments.LIVING_TOUCH.get()
-                && pOther != Enchantments.FIRE_ASPECT;
+        return super.checkCompatibility(pOther) && pOther != EPEnchantments.POISON_TOUCH.get() && pOther != EPEnchantments.LIVING_TOUCH.get()
+                && pOther != Enchantments.FIRE_ASPECT && pOther != EPEnchantments.FROSTBITE.get();
     }
 }

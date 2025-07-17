@@ -1,8 +1,8 @@
 package net.marmar.enhanced_playthrough.worldgen.structure;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
-import net.marmar.enhanced_playthrough.data.tag.ModTags;
-import net.marmar.enhanced_playthrough.entity.ModEntities;
+import net.marmar.enhanced_playthrough.data.tag.EPTags;
+import net.marmar.enhanced_playthrough.entity.EPEntityTypes;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
@@ -40,9 +40,9 @@ public class ModStructures {
         HolderGetter<StructureTemplatePool> structureGetter = context.lookup(Registries.TEMPLATE_POOL);
 
         context.register(JEWELER_HOUSE, houseStructure(biomesGetter, structureGetter,
-                ModTags.Biomes.JEWELER_HOUSE, ModStructureTemplatePools.JEWELER_HOUSE_START_POOL));
+                EPTags.Biomes.JEWELER_HOUSE, ModStructureTemplatePools.JEWELER_HOUSE_START_POOL));
         context.register(BANDIT_CAMP, campStructure(biomesGetter, structureGetter,
-                BiomeTags.IS_FOREST, ModStructureTemplatePools.BANDIT_CAMP_START_POOL, ModEntities.BANDIT.get()));
+                BiomeTags.IS_FOREST, ModStructureTemplatePools.BANDIT_CAMP_START_POOL, EPEntityTypes.BANDIT.get()));
     }
 
     private static JigsawStructure houseStructure(HolderGetter<Biome> biomesGetter, HolderGetter<StructureTemplatePool> structureGetter, TagKey<Biome> pBiomes, ResourceKey<StructureTemplatePool> pHouse){

@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cold_lyrium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:cold_lyrium"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "enhanced_playthrough:cyan_dye_from_primal_grinding_cold_lyrium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_cold_lyrium",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "enhanced_playthrough:cyan_dye_from_primal_grinding_cold_lyrium"
+    ]
+  },
+  "sends_telemetry_event": false
+}

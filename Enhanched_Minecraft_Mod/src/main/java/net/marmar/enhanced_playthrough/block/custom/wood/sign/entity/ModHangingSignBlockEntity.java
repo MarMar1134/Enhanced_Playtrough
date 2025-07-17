@@ -1,6 +1,6 @@
 package net.marmar.enhanced_playthrough.block.custom.wood.sign.entity;
 
-import net.marmar.enhanced_playthrough.block.ModBlockEntities;
+import net.marmar.enhanced_playthrough.block.EPBlockEntities;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.entity.SignBlockEntity;
@@ -8,11 +8,11 @@ import net.minecraft.world.level.block.state.BlockState;
 
 public class ModHangingSignBlockEntity extends SignBlockEntity {
     public ModHangingSignBlockEntity(BlockPos pPos, BlockState pBlockState) {
-        super(ModBlockEntities.HANGING_SIGN_BLOCK_ENTITY.get(), pPos, pBlockState);
+        super(EPBlockEntities.HANGING_SIGN_BLOCK_ENTITY.get(), pPos, pBlockState);
     }
 
     @Override
     public BlockEntityType<?> getType() {
-        return ModBlockEntities.HANGING_SIGN_BLOCK_ENTITY.get();
+        return EPBlockEntities.HANGING_SIGN_BLOCK_ENTITY.get();
     }
 }

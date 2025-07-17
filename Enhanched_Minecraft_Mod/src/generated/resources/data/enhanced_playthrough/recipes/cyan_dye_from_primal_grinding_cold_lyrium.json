@@ -1,0 +1,12 @@
+{
+  "type": "enhanced_playthrough:primal_grinding",
+  "category": "grind",
+  "group": "cyan_dye",
+  "ingredient": {
+    "item": "enhanced_playthrough:cold_lyrium"
+  },
+  "output": {
+    "count": 3,
+    "item": "minecraft:cyan_dye"
+  }
+}

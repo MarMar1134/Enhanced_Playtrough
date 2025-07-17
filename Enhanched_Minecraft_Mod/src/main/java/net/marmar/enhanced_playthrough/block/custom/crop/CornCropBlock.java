@@ -1,6 +1,6 @@
 package net.marmar.enhanced_playthrough.block.custom.crop;
 
-import net.marmar.enhanced_playthrough.item.ModItems;
+import net.marmar.enhanced_playthrough.item.EPItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -76,7 +76,7 @@ public class CornCropBlock extends CropBlock {
     }
     @Override
     protected ItemLike getBaseSeedId() {
-        return ModItems.CORN_SEEDS.get();
+        return EPItems.CORN_SEEDS.get();
     }
 
     @Override

@@ -1,6 +1,6 @@
 package net.marmar.enhanced_playthrough.block.custom.crop;
 
-import net.marmar.enhanced_playthrough.item.ModItems;
+import net.marmar.enhanced_playthrough.item.EPItems;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.CropBlock;
@@ -18,7 +18,7 @@ public class TomatoCropBlock extends CropBlock {
 
     @Override
     protected ItemLike getBaseSeedId() {
-        return ModItems.TOMATO_SEEDS.get();
+        return EPItems.TOMATO_SEEDS.get();
     }
 
     @Override

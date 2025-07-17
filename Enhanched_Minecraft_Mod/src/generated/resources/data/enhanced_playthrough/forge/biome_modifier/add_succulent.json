@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#enhanced_playthrough:desert_biomes",
+  "features": "enhanced_playthrough:succulent_placed",
+  "step": "vegetal_decoration"
+}

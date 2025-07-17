@@ -1,6 +1,6 @@
 {
   "type": "forge:add_features",
   "biomes": "minecraft:birch_forest",
-  "features": "enhanced_playthrough:lime_placed",
+  "features": "enhanced_playthrough:lime_trees_placed",
   "step": "vegetal_decoration"
 }

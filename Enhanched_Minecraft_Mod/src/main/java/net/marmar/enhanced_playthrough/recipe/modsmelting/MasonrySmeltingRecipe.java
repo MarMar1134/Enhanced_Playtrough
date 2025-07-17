@@ -3,7 +3,7 @@ package net.marmar.enhanced_playthrough.recipe.modsmelting;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
-import net.marmar.enhanced_playthrough.block.ModBlocks;
+import net.marmar.enhanced_playthrough.block.EPBlocks;
 import net.marmar.enhanced_playthrough.recipe.recipecategory.ModRecipeCategory;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
@@ -45,7 +45,7 @@ public class MasonrySmeltingRecipe extends AbstractSmeltingRecipe implements Rec
 
     @Override
     public ItemStack getToastSymbol() {
-        return new ItemStack(ModBlocks.MASONRY_FURNACE.get());
+        return new ItemStack(EPBlocks.MASONRY_FURNACE.get());
     }
 
     public static class Type implements RecipeType<MasonrySmeltingRecipe>{

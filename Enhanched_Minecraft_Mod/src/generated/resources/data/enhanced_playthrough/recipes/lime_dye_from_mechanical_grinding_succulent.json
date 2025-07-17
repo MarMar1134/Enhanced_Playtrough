@@ -1,0 +1,12 @@
+{
+  "type": "enhanced_playthrough:mechanical_grinding",
+  "category": "mechanical_grind",
+  "group": "lime_dye",
+  "ingredient": {
+    "item": "enhanced_playthrough:succulent"
+  },
+  "output": {
+    "count": 3,
+    "item": "minecraft:lime_dye"
+  }
+}

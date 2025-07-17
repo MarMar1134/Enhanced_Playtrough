@@ -1,7 +1,7 @@
 package net.marmar.enhanced_playthrough.recipe.modsmelting;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
-import net.marmar.enhanced_playthrough.block.ModBlocks;
+import net.marmar.enhanced_playthrough.block.EPBlocks;
 import net.marmar.enhanced_playthrough.recipe.recipecategory.ModRecipeCategory;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -48,7 +48,7 @@ public class BasicSmeltingRecipe extends AbstractSmeltingRecipe implements Recip
 
     @Override
     public ItemStack getToastSymbol() {
-        return new ItemStack(ModBlocks.ADOBE_FURNACE.get());
+        return new ItemStack(EPBlocks.ADOBE_FURNACE.get());
     }
 
     public static class Type implements RecipeType<BasicSmeltingRecipe>{

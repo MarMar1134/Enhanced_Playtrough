@@ -74,6 +74,20 @@
       <excludeFolder url="file://$MODULE_DIR$/../../Enhanched_Minecraft_Mod/run/saves/EMT 2-tfu/generated" />
       <excludeFolder url="file://$MODULE_DIR$/../../Enhanched_Minecraft_Mod/run/saves/EMT 2-tfucbjk" />
       <excludeFolder url="file://$MODULE_DIR$/../../Enhanched_Minecraft_Mod/run/saves/EMT 2/datapacks" />
+      <excludeFolder url="file://$MODULE_DIR$/../../Enhanched_Minecraft_Mod/run/config/jei/world/local/EMT_2-tfu-1" />
+      <excludeFolder url="file://$MODULE_DIR$/../../Enhanched_Minecraft_Mod/run/config/jei/world/local/EMT_2-tfu-2" />
+      <excludeFolder url="file://$MODULE_DIR$/../../Enhanched_Minecraft_Mod/run/config/jei/world/local/EMT_2-tfu-3" />
+      <excludeFolder url="file://$MODULE_DIR$/../../Enhanched_Minecraft_Mod/run/config/jei/world/local/EMT_2-tfu23" />
+      <excludeFolder url="file://$MODULE_DIR$/../../Enhanched_Minecraft_Mod/run/config/jei/world/local/EMT_2-tfubfx" />
+      <excludeFolder url="file://$MODULE_DIR$/../../Enhanched_Minecraft_Mod/run/config/jei/world/local/EMT_2-tfucgyf" />
+      <excludeFolder url="file://$MODULE_DIR$/../../Enhanched_Minecraft_Mod/run/config/jei/world/local/EMT_2-tfufg" />
+      <excludeFolder url="file://$MODULE_DIR$/../../Enhanched_Minecraft_Mod/run/config/jei/world/local/EMT_2-tfug76tm" />
+      <excludeFolder url="file://$MODULE_DIR$/../../Enhanched_Minecraft_Mod/run/config/jei/world/local/EMT_2-tfuhiu" />
+      <excludeFolder url="file://$MODULE_DIR$/../../Enhanched_Minecraft_Mod/run/config/jei/world/local/EMT_2-tfuniu" />
+      <excludeFolder url="file://$MODULE_DIR$/../../Enhanched_Minecraft_Mod/run/config/jei/world/local/EMT_2-tfurgrge" />
+      <excludeFolder url="file://$MODULE_DIR$/../../Enhanched_Minecraft_Mod/run/config/jei/world/local/EMT_2-tfuvgyh" />
+      <excludeFolder url="file://$MODULE_DIR$/../../Enhanched_Minecraft_Mod/run/config/jei/world/local/EPT_2" />
+      <excludeFolder url="file://$MODULE_DIR$/../../Enhanched_Minecraft_Mod/run/saves/EPT 2/datapacks" />
     </content>
   </component>
 </module>

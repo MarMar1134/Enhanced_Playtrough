@@ -1,7 +1,7 @@
 package net.marmar.enhanced_playthrough.compat.jade;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
-import net.marmar.enhanced_playthrough.block.gempolisher.GemPolisherBlockEntity;
+import net.marmar.enhanced_playthrough.block.custom.gempolisher.GemPolisherBlockEntity;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;

@@ -1,19 +1,19 @@
 package net.marmar.enhanced_playthrough;
 
-import net.marmar.enhanced_playthrough.util.effect.ModEffects;
-import net.marmar.enhanced_playthrough.util.particle.ModParticles;
-import net.marmar.enhanced_playthrough.block.ModBlocks;
-import net.marmar.enhanced_playthrough.block.ModBlockEntities;
-import net.marmar.enhanced_playthrough.util.enchantment.ModEnchantments;
-import net.marmar.enhanced_playthrough.entity.ModEntities;
-import net.marmar.enhanced_playthrough.item.ModItems;
-import net.marmar.enhanced_playthrough.util.tab.ModTabs;
-import net.marmar.enhanced_playthrough.data.loot.ModLootModifiers;
-import net.marmar.enhanced_playthrough.recipe.ModRecipes;
-import net.marmar.enhanced_playthrough.menu.ModMenuTypes;
-import net.marmar.enhanced_playthrough.entity.ModVillagers;
-import net.marmar.enhanced_playthrough.util.ModSounds;
-import net.marmar.enhanced_playthrough.worldgen.feature.ModFeatures;
+import net.marmar.enhanced_playthrough.util.effect.EPMobEffects;
+import net.marmar.enhanced_playthrough.util.particle.EPParticleTypes;
+import net.marmar.enhanced_playthrough.block.EPBlocks;
+import net.marmar.enhanced_playthrough.block.EPBlockEntities;
+import net.marmar.enhanced_playthrough.util.enchantment.EPEnchantments;
+import net.marmar.enhanced_playthrough.entity.EPEntityTypes;
+import net.marmar.enhanced_playthrough.item.EPItems;
+import net.marmar.enhanced_playthrough.util.tab.EPTabs;
+import net.marmar.enhanced_playthrough.data.loot.EPLootModifiers;
+import net.marmar.enhanced_playthrough.recipe.EPRecipes;
+import net.marmar.enhanced_playthrough.menu.EPMenuTypes;
+import net.marmar.enhanced_playthrough.entity.EPVillagerProfessions;
+import net.marmar.enhanced_playthrough.util.EPSounds;
+import net.marmar.enhanced_playthrough.worldgen.feature.EPFeatures;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -25,31 +25,30 @@ public class EnhancedPlaythrough
     public static final String MOD_ID = "enhanced_playthrough";
 
     public EnhancedPlaythrough(){
-
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        ModLootModifiers.register(modEventBus);
+        EPLootModifiers.register(modEventBus);
 
-        ModTabs.register(modEventBus);
-        ModItems.register(modEventBus);
-        ModEnchantments.register(modEventBus);
+        EPTabs.register(modEventBus);
+        EPItems.register(modEventBus);
+        EPEnchantments.register(modEventBus);
 
-        ModBlocks.Register(modEventBus);
-        ModBlockEntities.register(modEventBus);
+        EPBlocks.Register(modEventBus);
+        EPBlockEntities.register(modEventBus);
 
-        ModSounds.register(modEventBus);
+        EPSounds.register(modEventBus);
 
-        ModMenuTypes.register(modEventBus);
-        ModRecipes.register(modEventBus);
+        EPMenuTypes.register(modEventBus);
+        EPRecipes.register(modEventBus);
 
-        ModVillagers.register(modEventBus);
+        EPVillagerProfessions.register(modEventBus);
 
-        ModEntities.register(modEventBus);
+        EPEntityTypes.register(modEventBus);
 
-        ModFeatures.register(modEventBus);
+        EPFeatures.register(modEventBus);
 
-        ModEffects.register(modEventBus);
-        ModParticles.register(modEventBus);
+        EPMobEffects.register(modEventBus);
+        EPParticleTypes.register(modEventBus);
 
     //Register
         MinecraftForge.EVENT_BUS.register(this);

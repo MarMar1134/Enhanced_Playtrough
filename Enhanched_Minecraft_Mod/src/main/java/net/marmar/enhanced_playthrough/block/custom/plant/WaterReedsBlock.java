@@ -1,6 +1,6 @@
 package net.marmar.enhanced_playthrough.block.custom.plant;
 
-import net.marmar.enhanced_playthrough.block.ModBlocks;
+import net.marmar.enhanced_playthrough.block.EPBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.tags.BlockTags;
@@ -45,7 +45,7 @@ public class WaterReedsBlock extends DoublePlantBlock implements SimpleWaterlogg
         if (state.getValue(DoublePlantBlock.HALF) == DoubleBlockHalf.LOWER) {
             return super.canSurvive(state, level, pos) && this.mayPlaceOn(level.getBlockState(floorPos), level, floorPos) && fluid.is(FluidTags.WATER) && fluid.getAmount() == 8;
         }
-        return super.canSurvive(state, level, pos) && level.getBlockState(pos.below()).getBlock() == ModBlocks.WATER_REEDS.get();
+        return super.canSurvive(state, level, pos) && level.getBlockState(pos.below()).getBlock() == EPBlocks.WATER_REEDS.get();
     }
 
     @Override

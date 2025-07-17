@@ -3,7 +3,7 @@ package net.marmar.enhanced_playthrough.recipe.grind;
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import net.marmar.enhanced_playthrough.block.ModBlocks;
+import net.marmar.enhanced_playthrough.block.EPBlocks;
 import net.marmar.enhanced_playthrough.recipe.recipecategory.ModRecipeCategory;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
@@ -36,7 +36,7 @@ public class MechanicalGrindRecipe extends AbstractGrindRecipe {
 
     @Override
     public ItemStack getToastSymbol() {
-        return new ItemStack(ModBlocks.MECHANICAL_GRINDER.get());
+        return new ItemStack(EPBlocks.MECHANICAL_GRINDER.get());
     }
 
     public static class Type implements RecipeType<MechanicalGrindRecipe>{

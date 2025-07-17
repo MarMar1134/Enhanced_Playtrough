@@ -77,7 +77,7 @@ java.lang.RuntimeException: null
 		at net.minecraft.world.level.block.state.StateHolder.setValue(StateHolder.java:122) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?] {re:classloading}
 		at net.minecraft.world.level.block.DoublePlantBlock.<init>(DoublePlantBlock.java:28) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?] {re:classloading}
 		at net.marmar.enhanced_playthrough.block.custom.plant.WaterReedsBlock.<init>(WaterReedsBlock.java:24) ~[%23196!/:?] {re:classloading}
-		at net.marmar.enhanced_playthrough.block.ModBlocks.lambda$static$161(ModBlocks.java:418) ~[%23196!/:?] {re:classloading}
+		at net.marmar.enhanced_playthrough.block.EPBlocks.lambda$static$161(ModBlocks.java:418) ~[%23196!/:?] {re:classloading}
 		at net.minecraftforge.registries.DeferredRegister.lambda$addEntries$1(DeferredRegister.java:386) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23190%23197!/:?] {re:classloading}
 		at net.minecraftforge.registries.RegisterEvent.register(RegisterEvent.java:59) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23190%23197!/:?] {re:classloading,pl:eventbus:A}
 		at net.minecraftforge.registries.DeferredRegister.addEntries(DeferredRegister.java:386) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23190%23197!/:?] {re:classloading}
@@ -129,7 +129,7 @@ java.lang.RuntimeException: null
 	Caused by: java.lang.NullPointerException: Registry Object not present: enhanced_playthrough:water_reeds
 		at java.util.Objects.requireNonNull(Objects.java:336) ~[?:?] {}
 		at net.minecraftforge.registries.RegistryObject.get(RegistryObject.java:204) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23190%23197!/:?] {re:classloading}
-		at net.marmar.enhanced_playthrough.block.ModBlocks.lambda$RegisterBlockItem$162(ModBlocks.java:428) ~[%23196!/:?] {re:classloading}
+		at net.marmar.enhanced_playthrough.block.EPBlocks.lambda$RegisterBlockItem$162(ModBlocks.java:428) ~[%23196!/:?] {re:classloading}
 		at net.minecraftforge.registries.DeferredRegister.lambda$addEntries$1(DeferredRegister.java:386) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23190%23197!/:?] {re:classloading}
 		at net.minecraftforge.registries.RegisterEvent.register(RegisterEvent.java:59) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23190%23197!/:?] {re:classloading,pl:eventbus:A}
 		at net.minecraftforge.registries.DeferredRegister.addEntries(DeferredRegister.java:386) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23190%23197!/:?] {re:classloading}

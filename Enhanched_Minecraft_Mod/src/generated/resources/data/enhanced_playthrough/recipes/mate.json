@@ -1,20 +1,15 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "key": {
-    "A": {
+  "ingredients": [
+    {
       "item": "enhanced_playthrough:empty_mate"
     },
-    "I": {
+    {
       "item": "enhanced_playthrough:grounded_yerba_mate"
     }
-  },
-  "pattern": [
-    "I",
-    "A"
   ],
   "result": {
     "item": "enhanced_playthrough:mate"
-  },
-  "show_notification": true
+  }
 }

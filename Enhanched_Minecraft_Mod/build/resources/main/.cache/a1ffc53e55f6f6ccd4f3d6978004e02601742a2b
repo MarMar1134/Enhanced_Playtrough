@@ -1,4 +1,4 @@
-// 1.20.1	2025-07-04T10:56:58.3718284	Item Models: enhanced_playthrough
+// 1.20.1	2025-07-17T00:35:05.9560812	Item Models: enhanced_playthrough
 69b87023c4572f465b207519fdb24da84c63747a assets/enhanced_playthrough/models/item/aluminum_blue_golden_axe.json
 42abd45757faf841fe4bcceddf28cd4b2214a253 assets/enhanced_playthrough/models/item/aluminum_blue_golden_dagger.json
 1c95996977a3f9ada077d8d16270882180769982 assets/enhanced_playthrough/models/item/aluminum_blue_golden_hoe.json
@@ -334,6 +334,7 @@ e80c07624658d5b64ecf6e3d6d7ccedbd806f5e9 assets/enhanced_playthrough/models/item
 ad60d530c37d712ecf865ccd8c35dc5ba0375ee0 assets/enhanced_playthrough/models/item/cobbeled_limestone_stair.json
 1b3ce89eb7e42cf0b275f0f9bd3e7b76cb10316a assets/enhanced_playthrough/models/item/cobbeled_limestone_wall.json
 d6a46a5e758a417e06bd72435092b768b4cc42f9 assets/enhanced_playthrough/models/item/cobble.json
+9cd76eb6b307110963af7688d87309d73e37b099 assets/enhanced_playthrough/models/item/cold_lyrium.json
 ee2c3477376429ebbe27a8cd9af3732e06dca052 assets/enhanced_playthrough/models/item/cooked_corn.json
 b390484311afce0c4eb6ff0ab04884dd78d40c26 assets/enhanced_playthrough/models/item/cooked_eggplant.json
 62947b93e0b87d53f3ef61e68db24b8beab5ee19 assets/enhanced_playthrough/models/item/cooked_zapallo.json
@@ -662,6 +663,7 @@ e9d2c8effc99a42daaedf75f67f7f54d2e2e4446 assets/enhanced_playthrough/models/item
 82d6a3d4d4b563511d9abbea3346de90d57c1b31 assets/enhanced_playthrough/models/item/steel_sword.json
 0cad8384348b7dc80f65ea97b4c723a150e3170a assets/enhanced_playthrough/models/item/stone_dagger.json
 02939f7fd784612c7f238420b394cc2ae8baa046 assets/enhanced_playthrough/models/item/stone_polisher.json
+6b66410cff4cfbe26411fdcc7c495096607b8d9f assets/enhanced_playthrough/models/item/succulent.json
 1c9542b589dc1a956694abc279e4bef5033c6c92 assets/enhanced_playthrough/models/item/sulfur.json
 0ddc0833d66fd0315fd16b1cfaaaf9ae8bd14081 assets/enhanced_playthrough/models/item/tall_reeds.json
 f39a6f9bba858e0a5084e98c9d3c89d71425d952 assets/enhanced_playthrough/models/item/terracotta_shard.json

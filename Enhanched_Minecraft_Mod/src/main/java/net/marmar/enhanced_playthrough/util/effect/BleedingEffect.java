@@ -1,12 +1,11 @@
 package net.marmar.enhanced_playthrough.util.effect;
 
-import net.marmar.enhanced_playthrough.util.damage.ModDamageSources;
-import net.marmar.enhanced_playthrough.util.particle.ModParticles;
+import net.marmar.enhanced_playthrough.util.damage.EPDamageSources;
+import net.marmar.enhanced_playthrough.util.particle.EPParticleTypes;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.monster.AbstractSkeleton;
-import net.minecraft.world.entity.monster.Zombie;
 import net.minecraft.world.phys.Vec3;
 
 public class BleedingEffect extends MobEffect {
@@ -29,22 +28,19 @@ public class BleedingEffect extends MobEffect {
             applyEffectAccordingToAmplifier(entity, pAmplifier);
         }
 
-        if (entity instanceof Zombie){
-            addParticles(entity);
-        }
         addParticles(entity);
     }
 
     private void applyEffectAccordingToAmplifier(LivingEntity pEntity, int pAmplifier){
         switch (pAmplifier){
             case 1:
-                pEntity.hurt(new ModDamageSources(pEntity.level().registryAccess()).bleed(), 2F);
+                pEntity.hurt(new EPDamageSources(pEntity.level().registryAccess()).bleed(), 2F);
                 break;
             case 2:
-                pEntity.hurt(new ModDamageSources(pEntity.level().registryAccess()).bleed(), 3F);
+                pEntity.hurt(new EPDamageSources(pEntity.level().registryAccess()).bleed(), 3F);
                 break;
             default:
-                pEntity.hurt(new ModDamageSources(pEntity.level().registryAccess()).bleed(), 1F);
+                pEntity.hurt(new EPDamageSources(pEntity.level().registryAccess()).bleed(), 1.5F * pAmplifier);
         }
     }
 
@@ -66,7 +62,7 @@ public class BleedingEffect extends MobEffect {
                     random.nextFloat() * 2 - 0.5f
             );
             motion = motion.scale(0.04f).add(backwards);
-            pEntity.level().addParticle(ModParticles.BLEED_PARTICLE.get(), pEntity.getRandomX(0.4f), pEntity.getRandomY(), pEntity.getRandomZ(0.4f),
+            pEntity.level().addParticle(EPParticleTypes.BLEED_PARTICLE.get(), pEntity.getRandomX(0.4f), pEntity.getRandomY(), pEntity.getRandomZ(0.4f),
                     motion.x, -motion.y, motion.z);
         }
     }

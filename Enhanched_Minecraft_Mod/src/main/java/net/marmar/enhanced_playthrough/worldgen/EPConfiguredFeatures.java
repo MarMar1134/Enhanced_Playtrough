@@ -1,0 +1,335 @@
+package net.marmar.enhanced_playthrough.worldgen;
+
+import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
+import net.marmar.enhanced_playthrough.block.EPBlocks;
+import net.marmar.enhanced_playthrough.worldgen.feature.EPFeatures;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.data.worldgen.features.FeatureUtils;
+import net.minecraft.data.worldgen.placement.PlacementUtils;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.util.valueproviders.ConstantInt;
+import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
+import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
+import net.minecraft.world.level.levelgen.feature.Feature;
+import net.minecraft.world.level.levelgen.feature.configurations.*;
+import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
+import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
+import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
+import net.minecraft.world.level.levelgen.feature.stateproviders.RuleBasedBlockStateProvider;
+import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
+import net.minecraft.world.level.levelgen.placement.BlockPredicateFilter;
+import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
+import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
+import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
+import net.minecraft.world.level.material.Fluids;
+
+import java.util.List;
+
+public class EPConfiguredFeatures {
+    //Trees
+    public static final ResourceKey<ConfiguredFeature<?, ?>> WALNUT_TREES = registerKey("walnut_trees");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> APPLE_TREES = registerKey("apple_trees");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> GREEN_APPLE_TREES = registerKey("green_apple_trees");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> ORANGE_TREES = registerKey("orange_trees");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> LEMON_TREES = registerKey("lemon_trees");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> LIME_TREES = registerKey("lime_trees");
+
+    //Nature
+    public static final ResourceKey<ConfiguredFeature<?, ?>> LIMESTONE_PATCH = registerKey("limestone_patch");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> MUD_PATCH = registerKey("mud_patch");
+
+    //Wild crops
+    public static final ResourceKey<ConfiguredFeature<?, ?>> WILD_WHEAT = registerKey("wild_wheat");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> WILD_TOMATO = registerKey("wild_tomato");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> WILD_CORN = registerKey("wild_corn");
+
+    //Plants
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SMALL_REEDS_OVERWORLD = registerKey("small_reeds_overworld");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SMALL_REEDS_PLATEAU = registerKey("small_reeds_plateau");
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> REEDS = registerKey("reeds");
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> TALL_REEDS = registerKey("tall_reeds");
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> WATER_REEDS_OVERWORLD = registerKey("water_reeds_overworld");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> WATER_REEDS_SWAMP = registerKey("water_reeds_swamp");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> WATER_REEDS_LUSH_CAVES = registerKey("water_reeds_lush_caves");
+
+    //Flowers
+    public static final ResourceKey<ConfiguredFeature<?, ?>> COLD_LYRIUM = registerKey("cold_lyrium");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SUCCULENT = registerKey("succulent");
+
+    //Ores
+    public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_COPPER_ORES = registerKey("nether_copper_ores");
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SMALL_TIN_ORES = registerKey("small_tin_ores");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BIG_TIN_ORES = registerKey("big_tin_ores");
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SMALL_ZINC_ORES = registerKey("small_zinc_ores");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BIG_ZINC_ORES = registerKey("big_zinc_ores");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_ZINC_ORES = registerKey("nether_zinc_ores");
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SMALL_SULFUR_ORES = registerKey("small_sulfur_ores");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BIG_SULFUR_ORES = registerKey("big_sulfur_ores");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_SULFUR_ORES = registerKey("nether_sulfur_ores");
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SILVER_ORES = registerKey("silver_ores");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BADLANDS_SILVER_ORES = registerKey("badlands_silver_ores");
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BAUXITE_ORES = registerKey("bauxite_ores");
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SAPPHIRE_ORES = registerKey("sapphire_ores");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> EXTRA_SAPPHIRE_ORES = registerKey("extra_sapphire_ores");
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> RUBY_ORES = registerKey("ruby_ores");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> EXTRA_RUBY_ORES = registerKey("extra_ruby_ores");
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_GARNET_ORES = registerKey("nether_garnet_ores");
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> COBALT_ORES = registerKey("cobalt_ores");
+
+    public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
+        //Rule tests
+        RuleTest stoneReplaceable = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
+        RuleTest deepslateReplaceable = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
+        RuleTest netherrackReplaceable = new BlockMatchTest(Blocks.NETHERRACK);
+
+            //Terracotta
+            RuleTest terracottaReplaceable = new BlockMatchTest(Blocks.TERRACOTTA);
+            RuleTest whiteTerracottaReplaceable = new BlockMatchTest(Blocks.WHITE_TERRACOTTA);
+            RuleTest lightGrayTerracottaReplaceable = new BlockMatchTest(Blocks.LIGHT_GRAY_TERRACOTTA);
+            RuleTest brownTerracottaReplaceable = new BlockMatchTest(Blocks.BROWN_TERRACOTTA);
+            RuleTest redTerracottaReplaceable = new BlockMatchTest(Blocks.RED_TERRACOTTA);
+            RuleTest orangeTerracottaReplaceable = new BlockMatchTest(Blocks.ORANGE_TERRACOTTA);
+            RuleTest yellowTerracottaReplaceable = new BlockMatchTest(Blocks.YELLOW_TERRACOTTA);
+
+        //Predicates
+        BlockPredicate isCloseToWater = BlockPredicate.anyOf(
+                BlockPredicate.matchesFluids(new BlockPos(1, -1, 0), Fluids.WATER, Fluids.FLOWING_WATER),
+                BlockPredicate.matchesFluids(new BlockPos(-1, -1, 0), Fluids.WATER, Fluids.FLOWING_WATER),
+                BlockPredicate.matchesFluids(new BlockPos(0, -1, 1), Fluids.WATER, Fluids.FLOWING_WATER),
+                BlockPredicate.matchesFluids(new BlockPos(0, -1, -1), Fluids.WATER, Fluids.FLOWING_WATER));
+
+        //Mud
+        register(context, MUD_PATCH, Feature.DISK, new DiskConfiguration(
+                RuleBasedBlockStateProvider.simple(Blocks.MUD), BlockPredicate.matchesBlocks(Blocks.DIRT, Blocks.SAND, Blocks.GRAVEL),
+                UniformInt.of(1, 4), 2));
+
+        //Limestone
+        List<OreConfiguration.TargetBlockState> limestone = List.of(
+                OreConfiguration.target(stoneReplaceable, EPBlocks.LIMESTONE.get().defaultBlockState()));
+
+        register(context, LIMESTONE_PATCH, Feature.ORE, new OreConfiguration(limestone, 32));
+
+        //Nether copper
+        List<OreConfiguration.TargetBlockState> netherCopperOres = List.of(
+                OreConfiguration.target(netherrackReplaceable, EPBlocks.NETHER_COPPER_ORE.get().defaultBlockState()));
+
+        register(context, NETHER_COPPER_ORES, Feature.ORE, new OreConfiguration(netherCopperOres, 8));
+
+        //Tin
+        List<OreConfiguration.TargetBlockState> tinOres = List.of(
+                OreConfiguration.target(stoneReplaceable, EPBlocks.TIN_ORE.get().defaultBlockState()),
+                OreConfiguration.target(deepslateReplaceable, EPBlocks.DEEPSLATE_TIN_ORE.get().defaultBlockState()));
+
+        register(context, SMALL_TIN_ORES, Feature.ORE, new OreConfiguration(tinOres, 6, 0.2f));
+        register(context, BIG_TIN_ORES, Feature.ORE, new OreConfiguration(tinOres, 12));
+
+        //Zinc
+        List<OreConfiguration.TargetBlockState> zincOres = List.of(
+                OreConfiguration.target(stoneReplaceable, EPBlocks.ZINC_ORE.get().defaultBlockState()),
+                OreConfiguration.target(deepslateReplaceable, EPBlocks.DEEPSLATE_ZINC_ORE.get().defaultBlockState()));
+
+        List<OreConfiguration.TargetBlockState> netherZincOres = List.of(
+                OreConfiguration.target(netherrackReplaceable, EPBlocks.NETHER_ZINC_ORE.get().defaultBlockState()));
+
+        register(context, SMALL_ZINC_ORES, Feature.ORE, new OreConfiguration(zincOres, 6, 0.2f));
+        register(context, BIG_ZINC_ORES, Feature.ORE, new OreConfiguration(zincOres, 10, 0.3f));
+        register(context, NETHER_ZINC_ORES, Feature.ORE, new OreConfiguration(netherZincOres, 14));
+
+        //Sulfur
+        List<OreConfiguration.TargetBlockState> sulfurOres = List.of(
+                OreConfiguration.target(stoneReplaceable, EPBlocks.SULFUR_ORE.get().defaultBlockState()),
+                OreConfiguration.target(deepslateReplaceable, EPBlocks.DEEPSLATE_SULFUR_ORE.get().defaultBlockState()));
+
+        register(context, SMALL_SULFUR_ORES, Feature.ORE, new OreConfiguration(sulfurOres, 6, 0.2f));
+        register(context, BIG_SULFUR_ORES, Feature.ORE, new OreConfiguration(sulfurOres, 9, 0.4f));
+
+        List<OreConfiguration.TargetBlockState> netherSulphurOres = List.of(
+                OreConfiguration.target(netherrackReplaceable, EPBlocks.NETHER_SULFUR_ORE.get().defaultBlockState()));
+
+        register(context, NETHER_SULFUR_ORES, Feature.ORE, new OreConfiguration(netherSulphurOres, 10));
+
+        //Silver
+        List<OreConfiguration.TargetBlockState> silverOres = List.of(
+                OreConfiguration.target(stoneReplaceable, EPBlocks.SILVER_ORE.get().defaultBlockState()),
+                OreConfiguration.target(deepslateReplaceable, EPBlocks.DEEPSLATE_SILVER_ORE.get().defaultBlockState()));
+
+        register(context, SILVER_ORES, Feature.ORE, new OreConfiguration(silverOres, 5, 0.5f));
+        register(context, BADLANDS_SILVER_ORES, Feature.ORE, new OreConfiguration(silverOres, 5));
+
+        //Bauxite
+        List<OreConfiguration.TargetBlockState> bauxiteOres = List.of(
+                OreConfiguration.target(terracottaReplaceable, EPBlocks.BAUXITE.get().defaultBlockState()),
+                OreConfiguration.target(whiteTerracottaReplaceable, EPBlocks.WHITE_BAUXITE.get().defaultBlockState()),
+                OreConfiguration.target(lightGrayTerracottaReplaceable, EPBlocks.LIGHT_GRAY_BAUXITE.get().defaultBlockState()),
+                OreConfiguration.target(brownTerracottaReplaceable, EPBlocks.BROWN_BAUXITE.get().defaultBlockState()),
+                OreConfiguration.target(redTerracottaReplaceable, EPBlocks.RED_BAUXITE.get().defaultBlockState()),
+                OreConfiguration.target(orangeTerracottaReplaceable, EPBlocks.ORANGE_BAUXITE.get().defaultBlockState()),
+                OreConfiguration.target(yellowTerracottaReplaceable, EPBlocks.YELLOW_BAUXITE.get().defaultBlockState()));
+
+        register(context, BAUXITE_ORES, Feature.ORE, new OreConfiguration(bauxiteOres, 8));
+
+        //Sapphire
+        List<OreConfiguration.TargetBlockState> sapphireOres = List.of(
+                OreConfiguration.target(stoneReplaceable, EPBlocks.SAPPHIRE_ORE.get().defaultBlockState()),
+                OreConfiguration.target(deepslateReplaceable, EPBlocks.DEEPSLATE_SAPPHIRE_ORE.get().defaultBlockState()));
+
+        register(context, SAPPHIRE_ORES, Feature.ORE, new OreConfiguration(sapphireOres, 8, 0.4f));
+        register(context, EXTRA_SAPPHIRE_ORES, Feature.ORE, new OreConfiguration(sapphireOres, 6, 0.6f));
+
+        //Ruby
+        List<OreConfiguration.TargetBlockState> rubyOres = List.of(
+                OreConfiguration.target(stoneReplaceable, EPBlocks.RUBY_ORE.get().defaultBlockState()),
+                OreConfiguration.target(deepslateReplaceable, EPBlocks.DEEPSLATE_RUBY_ORE.get().defaultBlockState()));
+
+        register(context, RUBY_ORES, Feature.ORE, new OreConfiguration(rubyOres, 6, 0.5f));
+        register(context, EXTRA_RUBY_ORES, Feature.ORE, new OreConfiguration(rubyOres, 4, 0.6f));
+
+        //Nether garnet
+        List<OreConfiguration.TargetBlockState> garnetOres = List.of(
+                OreConfiguration.target(netherrackReplaceable, EPBlocks.NETHER_GARNET_ORE.get().defaultBlockState()));
+
+        register(context, NETHER_GARNET_ORES, Feature.ORE, new OreConfiguration(garnetOres, 5));
+
+        //Cobalt
+        List<OreConfiguration.TargetBlockState> cobaltOres = List.of(
+                OreConfiguration.target(stoneReplaceable, EPBlocks.COBALT_ORE.get().defaultBlockState()),
+                OreConfiguration.target(deepslateReplaceable, EPBlocks.DEEPSLATE_COBALT_ORE.get().defaultBlockState()));
+
+        register(context, COBALT_ORES, Feature.ORE, new OreConfiguration(cobaltOres, 5));
+
+        //trees
+            //Walnut
+            register(context, WALNUT_TREES, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                    BlockStateProvider.simple(EPBlocks.WALNUT_LOG.get()),
+                    new StraightTrunkPlacer(4, 2, 1),
+
+                    BlockStateProvider.simple(EPBlocks.WALNUT_LEAVES.get()),
+                    new BlobFoliagePlacer(ConstantInt.of(3),ConstantInt.of(2),3),
+
+                    new TwoLayersFeatureSize(2, 1, 3)).build());
+
+            //Apple
+            register(context, APPLE_TREES, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                    BlockStateProvider.simple(EPBlocks.APPLE_LOG.get()),
+                    new StraightTrunkPlacer(3, 2, 1),
+
+                    BlockStateProvider.simple(EPBlocks.APPLE_LEAVES.get()),
+                    new BlobFoliagePlacer(ConstantInt.of(3),ConstantInt.of(2),3),
+
+                    new TwoLayersFeatureSize(2, 1, 2)).build());
+
+            //Green apple
+            register(context, GREEN_APPLE_TREES, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                    BlockStateProvider.simple(EPBlocks.APPLE_LOG.get()),
+                    new StraightTrunkPlacer(3, 2, 1),
+
+                    BlockStateProvider.simple(EPBlocks.GREEN_APPLE_LEAVES.get()),
+                    new BlobFoliagePlacer(ConstantInt.of(2),ConstantInt.of(1),2),
+
+                    new TwoLayersFeatureSize(2, 1, 2)).build());
+
+            //Orange
+            register(context, ORANGE_TREES, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                    BlockStateProvider.simple(EPBlocks.ORANGE_LOG.get()),
+                    new StraightTrunkPlacer(3, 1, 1),
+
+                    BlockStateProvider.simple(EPBlocks.ORANGE_LEAVES.get()),
+                    new BlobFoliagePlacer(ConstantInt.of(2),ConstantInt.of(0),2),
+
+                    new TwoLayersFeatureSize(1, 1, 2)).build());
+
+            //Lemon
+            register(context, LEMON_TREES, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                    BlockStateProvider.simple(EPBlocks.LEMON_LOG.get()),
+                    new StraightTrunkPlacer(4, 2, 1),
+
+                    BlockStateProvider.simple(EPBlocks.LEMON_LEAVES.get()),
+                    new BlobFoliagePlacer(ConstantInt.of(2),ConstantInt.of(0),2),
+
+                    new TwoLayersFeatureSize(2, 1, 2)).build());
+
+            //Lime
+            register(context, LIME_TREES, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                    BlockStateProvider.simple(EPBlocks.LEMON_LOG.get()),
+                    new StraightTrunkPlacer(3, 1, 1),
+
+                    BlockStateProvider.simple(EPBlocks.LIME_LEAVES.get()),
+                    new BlobFoliagePlacer(ConstantInt.of(2),ConstantInt.of(0),2),
+
+                    new TwoLayersFeatureSize(1, 1, 2)).build());
+
+        //Wild crops
+        register(context, WILD_WHEAT, Feature.RANDOM_PATCH,
+                FeatureUtils.simplePatchConfiguration(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(EPBlocks.WILD_WHEAT.get()))));
+        register(context, WILD_TOMATO, Feature.RANDOM_PATCH,
+                FeatureUtils.simplePatchConfiguration(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(EPBlocks.WILD_TOMATO.get()))));
+        register(context, WILD_CORN, Feature.RANDOM_PATCH,
+                FeatureUtils.simplePatchConfiguration(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(EPBlocks.WILD_CORN.get()))));
+
+        //Plants
+        register(context, SMALL_REEDS_OVERWORLD, Feature.RANDOM_PATCH,
+                new RandomPatchConfiguration(50, 15, 0, PlacementUtils.inlinePlaced(
+                        Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(EPBlocks.SMALL_REEDS.get()))
+                        , BlockPredicateFilter.forPredicate(BlockPredicate.allOf(BlockPredicate.ONLY_IN_AIR_PREDICATE, isCloseToWater)))));
+        register(context, SMALL_REEDS_PLATEAU, Feature.RANDOM_PATCH,
+                new RandomPatchConfiguration(40, 10, 0, PlacementUtils.inlinePlaced(
+                        Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(EPBlocks.SMALL_REEDS.get())))));
+
+        register(context, REEDS, Feature.RANDOM_PATCH,
+                new RandomPatchConfiguration(80, 10, 0, PlacementUtils.inlinePlaced(
+                        Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(EPBlocks.REEDS.get()))
+                        , BlockPredicateFilter.forPredicate(BlockPredicate.allOf(BlockPredicate.ONLY_IN_AIR_PREDICATE, isCloseToWater)))));
+
+        register(context, TALL_REEDS, Feature.RANDOM_PATCH,
+                new RandomPatchConfiguration(50, 5, 0, PlacementUtils.inlinePlaced(
+                        Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(EPBlocks.TALL_REEDS.get()))
+                        , BlockPredicateFilter.forPredicate(BlockPredicate.allOf(BlockPredicate.ONLY_IN_AIR_PREDICATE, isCloseToWater)))));
+
+        register(context, WATER_REEDS_OVERWORLD, EPFeatures.WATER_REEDS.get(),
+                new RandomPatchConfiguration(120, 3, 0, PlacementUtils.inlinePlaced(
+                        Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(EPBlocks.WATER_REEDS.get())))));
+        register(context, WATER_REEDS_SWAMP, EPFeatures.WATER_REEDS.get(),
+                new RandomPatchConfiguration(60, 6, 0, PlacementUtils.inlinePlaced(
+                        Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(EPBlocks.WATER_REEDS.get())))));
+        register(context, WATER_REEDS_LUSH_CAVES, EPFeatures.WATER_REEDS.get(),
+                new RandomPatchConfiguration(40, 3, 0, PlacementUtils.inlinePlaced(
+                        Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(EPBlocks.WATER_REEDS.get())))));
+
+
+
+        //Flowers
+        register(context, COLD_LYRIUM, Feature.RANDOM_PATCH, FeatureUtils.simpleRandomPatchConfiguration(12,
+                PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(EPBlocks.COLD_LYRIUM.get())))));
+        register(context, SUCCULENT, Feature.RANDOM_PATCH, FeatureUtils.simpleRandomPatchConfiguration(8,
+                PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(EPBlocks.SUCCULENT.get())))));
+    }
+
+    public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {
+        return ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(EnhancedPlaythrough.MOD_ID, name));
+    }
+
+    private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(BootstapContext<ConfiguredFeature<?, ?>> context, ResourceKey<ConfiguredFeature<?, ?>> key, F feature, FC configuration) {
+        context.register(key, new ConfiguredFeature<>(feature, configuration));
+    }
+}

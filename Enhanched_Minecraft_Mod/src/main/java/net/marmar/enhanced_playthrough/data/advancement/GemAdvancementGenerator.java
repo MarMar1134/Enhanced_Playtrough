@@ -1,8 +1,8 @@
 package net.marmar.enhanced_playthrough.data.advancement;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
-import net.marmar.enhanced_playthrough.block.ModBlocks;
-import net.marmar.enhanced_playthrough.item.ModItems;
+import net.marmar.enhanced_playthrough.block.EPBlocks;
+import net.marmar.enhanced_playthrough.item.EPItems;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.advancements.RequirementsStrategy;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
@@ -19,7 +19,7 @@ public class GemAdvancementGenerator implements ForgeAdvancementProvider.Advance
     @Override
     public void generate(HolderLookup.Provider provider, Consumer<Advancement> consumer, ExistingFileHelper existingFileHelper) {
         Advancement gems_root = Advancement.Builder.advancement()
-                .display(rootDisplayInfo(ModBlocks.GEM_POLISHER.get(), "root"))
+                .display(rootDisplayInfo(EPBlocks.GEM_POLISHER.get(), "root"))
                 .addCriterion("spawn", PlayerTrigger.TriggerInstance.tick())
                 .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "gem_root"), existingFileHelper);
 
@@ -32,22 +32,22 @@ public class GemAdvancementGenerator implements ForgeAdvancementProvider.Advance
 
         Advancement get_sapphire = Advancement.Builder.advancement()
                 .parent(get_emerald)
-                .display(taskDisplayInfo(ModItems.SAPPHIRE.get(), "polish_sapphire"))
-                .addCriterion("has_material", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.SAPPHIRE.get()))
+                .display(taskDisplayInfo(EPItems.SAPPHIRE.get(), "polish_sapphire"))
+                .addCriterion("has_material", InventoryChangeTrigger.TriggerInstance.hasItems(EPItems.SAPPHIRE.get()))
                 .requirements(RequirementsStrategy.OR)
                 .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "polish_sapphire"), existingFileHelper);
 
         Advancement get_ruby = Advancement.Builder.advancement()
                 .parent(get_sapphire)
-                .display(taskDisplayInfo(ModItems.RUBY.get(), "polish_ruby"))
-                .addCriterion("has_material", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.RUBY.get()))
+                .display(taskDisplayInfo(EPItems.RUBY.get(), "polish_ruby"))
+                .addCriterion("has_material", InventoryChangeTrigger.TriggerInstance.hasItems(EPItems.RUBY.get()))
                 .requirements(RequirementsStrategy.OR)
                 .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "polish_ruby"), existingFileHelper);
 
         Advancement get_garnet = Advancement.Builder.advancement()
                 .parent(gems_root)
-                .display(taskDisplayInfo(ModItems.GARNET.get(), "polish_garnet"))
-                .addCriterion("has_material", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.GARNET.get()))
+                .display(taskDisplayInfo(EPItems.GARNET.get(), "polish_garnet"))
+                .addCriterion("has_material", InventoryChangeTrigger.TriggerInstance.hasItems(EPItems.GARNET.get()))
                 .requirements(RequirementsStrategy.OR)
                 .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "polish_garnet"), existingFileHelper);
 
@@ -60,8 +60,8 @@ public class GemAdvancementGenerator implements ForgeAdvancementProvider.Advance
 
         Advancement get_all_gems = Advancement.Builder.advancement()
                 .parent(gems_root)
-                .display(challengeDisplayInfo(ModItems.NETHERITE_POLISHER.get(), "get_all_gems"))
-                .addCriterion("has_materials", InventoryChangeTrigger.TriggerInstance.hasItems(Items.EMERALD, ModItems.SAPPHIRE.get(), ModItems.RUBY.get(), ModItems.GARNET.get() ,Items.DIAMOND))
+                .display(challengeDisplayInfo(EPItems.NETHERITE_POLISHER.get(), "get_all_gems"))
+                .addCriterion("has_materials", InventoryChangeTrigger.TriggerInstance.hasItems(Items.EMERALD, EPItems.SAPPHIRE.get(), EPItems.RUBY.get(), EPItems.GARNET.get() ,Items.DIAMOND))
                 .requirements(RequirementsStrategy.AND)
                 .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "get_all_gems"), existingFileHelper);
     }

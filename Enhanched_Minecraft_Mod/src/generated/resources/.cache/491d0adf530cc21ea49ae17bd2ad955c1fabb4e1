@@ -1,7 +1,8 @@
-// 1.20.1	2025-07-03T22:49:59.6866088	Tags for minecraft:block mod id enhanced_playthrough
+// 1.20.1	2025-07-17T17:30:03.8775442	Tags for minecraft:block mod id enhanced_playthrough
 e6fa99c5023af44c49111c3ab003d4a2131da11d data/enhanced_playthrough/tags/blocks/alloy_furnace.json
 47a02117dd60bac3b440fb46f534e4d5442d0e64 data/enhanced_playthrough/tags/blocks/basic_furnace.json
 245378e75a40ed5a8e70756f73fa0c2f31a2e7df data/enhanced_playthrough/tags/blocks/bauxite_ore.json
+1f5cf10f07e099c1622d22f405556db4cd56ef09 data/enhanced_playthrough/tags/blocks/desert_flower_base.json
 023988d30dc163bbcd76c736a27aa7bc15a6b5f1 data/enhanced_playthrough/tags/blocks/needs_blue_gold_tool.json
 d3c28a03337da0044db4602dc42545d2a430a227 data/enhanced_playthrough/tags/blocks/needs_brass_tool.json
 47a4586d993194701bdbeb1950e7b6d78a5958b9 data/enhanced_playthrough/tags/blocks/needs_bronze_tool.json
@@ -26,10 +27,10 @@ e6b33c19b8f9affa593da912431dc3d087fef999 data/minecraft/tags/blocks/mineable/hoe
 3cb2f132143f1514a68ea074f38005ab351f33e3 data/minecraft/tags/blocks/needs_stone_tool.json
 34fcc954121e727482e6b9d94d2c998b7d9338f8 data/minecraft/tags/blocks/overworld_natural_logs.json
 09c1bed1eb894a8dc53a3c61aa274cfa3f6f7197 data/minecraft/tags/blocks/planks.json
-7a8133bffd05a155a8ad345699aef62815d1a031 data/minecraft/tags/blocks/pressure_plates.json
 42fbb5b826aeef1ab4b40b9b2d8874432db83515 data/minecraft/tags/blocks/saplings.json
 eee53ecd7b65edaeef85566d7a3cb6bd7c197e5d data/minecraft/tags/blocks/signs.json
 950589640e3aa849fae3299a718f95814ef4921f data/minecraft/tags/blocks/slabs.json
+119add4a82207dd6987fe6832893d0e152099368 data/minecraft/tags/blocks/small_flowers.json
 eff9b24b7c88bad70cd4c584dcf77ee6d76fc0e8 data/minecraft/tags/blocks/stairs.json
 e6b33c19b8f9affa593da912431dc3d087fef999 data/minecraft/tags/blocks/sword_efficient.json
 6bc69911cb4c2737f452ee4adaa0dc89dfd0fe0d data/minecraft/tags/blocks/walls.json
@@ -37,4 +38,5 @@ d0657640c8fa39e9bde57e12e5cf4b44c72dc118 data/minecraft/tags/blocks/wall_hanging
 b62f8b2a8869e5686642b3ad30dcd911900867cc data/minecraft/tags/blocks/wall_signs.json
 e375e05d2f37e53d24c1942511515ee6772bed57 data/minecraft/tags/blocks/wooden_buttons.json
 561aec59497f419ae403266bf617c3787757a810 data/minecraft/tags/blocks/wooden_doors.json
+7a8133bffd05a155a8ad345699aef62815d1a031 data/minecraft/tags/blocks/wooden_pressure_plates.json
 055fae93a8e6c36cf3667dc1b02a6e7a23c9cc24 data/minecraft/tags/blocks/wooden_trapdoors.json

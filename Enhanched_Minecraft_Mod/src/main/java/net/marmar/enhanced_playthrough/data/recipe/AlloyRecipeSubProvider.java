@@ -1,7 +1,7 @@
 package net.marmar.enhanced_playthrough.data.recipe;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
-import net.marmar.enhanced_playthrough.item.ModItems;
+import net.marmar.enhanced_playthrough.item.EPItems;
 import net.marmar.enhanced_playthrough.recipe.recipebuilder.AlloyRecipeBuilder;
 import net.marmar.enhanced_playthrough.recipe.recipecategory.AlloyRecipeCategory;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
@@ -21,58 +21,58 @@ public class AlloyRecipeSubProvider extends RecipeProvider {
 
     public static void addAlloyRecipes(Consumer<FinishedRecipe> consumer){
         //Brass
-        oreAlloying(consumer, Items.RAW_COPPER, ModItems.RAW_ZINC.get(), ModItems.BRASS_INGOT.get(),
+        oreAlloying(consumer, Items.RAW_COPPER, EPItems.RAW_ZINC.get(), EPItems.BRASS_INGOT.get(),
                 AlloyRecipeCategory.SIMPLE_ALLOY, "brass_ingot");
 
-        superOreAlloying(consumer, Items.RAW_COPPER, ModItems.RAW_ZINC.get(), ModItems.BRASS_INGOT.get(),
+        superOreAlloying(consumer, Items.RAW_COPPER, EPItems.RAW_ZINC.get(), EPItems.BRASS_INGOT.get(),
                 AlloyRecipeCategory.SIMPLE_ALLOY, "brass_ingot");
-        superOreAlloying(consumer, Items.COPPER_INGOT, ModItems.ZINC_INGOT.get(), ModItems.BRASS_INGOT.get(), 2,
+        superOreAlloying(consumer, Items.COPPER_INGOT, EPItems.ZINC_INGOT.get(), EPItems.BRASS_INGOT.get(), 2,
                 AlloyRecipeCategory.COMPLEX_ALLOY, "brass_ingot");
 
         //Bronze
-        oreAlloying(consumer, Items.RAW_COPPER, ModItems.RAW_TIN.get(), ModItems.BRONZE_INGOT.get(),
+        oreAlloying(consumer, Items.RAW_COPPER, EPItems.RAW_TIN.get(), EPItems.BRONZE_INGOT.get(),
                 AlloyRecipeCategory.SIMPLE_ALLOY, "bronze_ingot");
 
-        superOreAlloying(consumer, Items.RAW_COPPER, ModItems.RAW_TIN.get(), ModItems.BRONZE_INGOT.get(),
+        superOreAlloying(consumer, Items.RAW_COPPER, EPItems.RAW_TIN.get(), EPItems.BRONZE_INGOT.get(),
                 AlloyRecipeCategory.SIMPLE_ALLOY, "bronze_ingot");
-        superOreAlloying(consumer, Items.COPPER_INGOT, ModItems.TIN_INGOT.get(), ModItems.BRONZE_INGOT.get(), 2,
+        superOreAlloying(consumer, Items.COPPER_INGOT, EPItems.TIN_INGOT.get(), EPItems.BRONZE_INGOT.get(), 2,
                 AlloyRecipeCategory.COMPLEX_ALLOY, "bronze_ingot");
 
         //Rose gold
-        goldenAlloy(consumer, Items.RAW_GOLD, Items.RAW_COPPER, ModItems.ROSE_GOLD_INGOT.get(), 1,
+        goldenAlloy(consumer, Items.RAW_GOLD, Items.RAW_COPPER, EPItems.ROSE_GOLD_INGOT.get(), 1,
                 AlloyRecipeCategory.SIMPLE_ALLOY, "rose_gold_ingot");
-        goldenAlloy(consumer, Items.GOLD_INGOT, Items.COPPER_INGOT, ModItems.ROSE_GOLD_INGOT.get(), 2,
+        goldenAlloy(consumer, Items.GOLD_INGOT, Items.COPPER_INGOT, EPItems.ROSE_GOLD_INGOT.get(), 2,
                 AlloyRecipeCategory.COMPLEX_ALLOY, "rose_gold_ingot");
 
         //Bronzium
-        superOreAlloying(consumer, ModItems.BRONZE_INGOT.get(), ModItems.BRASS_INGOT.get(), ModItems.BRONZIUM_INGOT.get(),
+        superOreAlloying(consumer, EPItems.BRONZE_INGOT.get(), EPItems.BRASS_INGOT.get(), EPItems.BRONZIUM_INGOT.get(),
                 AlloyRecipeCategory.COMPLEX_ALLOY, "bronzium_ingot");
 
         //Firebrick
-        superOreAlloying(consumer, ModItems.RAW_ALUMINUM.get(), Items.CLAY_BALL, ModItems.FIREBRICK.get(), 2,
+        superOreAlloying(consumer, EPItems.RAW_ALUMINUM.get(), Items.CLAY_BALL, EPItems.FIREBRICK.get(), 2,
                 AlloyRecipeCategory.SIMPLE_ALLOY, "firebrick");
-        superOreAlloying(consumer, ModItems.ALUMINUM_DUST.get(), Items.CLAY_BALL, ModItems.FIREBRICK.get(), 4,
+        superOreAlloying(consumer, EPItems.ALUMINUM_DUST.get(), Items.CLAY_BALL, EPItems.FIREBRICK.get(), 4,
                 AlloyRecipeCategory.SIMPLE_ALLOY, "firebrick");
 
         //Green gold
-        goldenAlloy(consumer, Items.RAW_GOLD, ModItems.RAW_SILVER.get(), ModItems.GREEN_GOLD_INGOT.get(), 1,
+        goldenAlloy(consumer, Items.RAW_GOLD, EPItems.RAW_SILVER.get(), EPItems.GREEN_GOLD_INGOT.get(), 1,
                 AlloyRecipeCategory.SIMPLE_ALLOY, "green_gold_ingot");
-        goldenAlloy(consumer, Items.GOLD_INGOT, ModItems.SILVER_INGOT.get(), ModItems.GREEN_GOLD_INGOT.get(), 2,
+        goldenAlloy(consumer, Items.GOLD_INGOT, EPItems.SILVER_INGOT.get(), EPItems.GREEN_GOLD_INGOT.get(), 2,
                 AlloyRecipeCategory.COMPLEX_ALLOY, "green_gold_ingot");
 
         //Steel
-        oreAlloying(consumer, Items.RAW_IRON, Items.COAL, ModItems.STEEL_INGOT.get(),
+        oreAlloying(consumer, Items.RAW_IRON, Items.COAL, EPItems.STEEL_INGOT.get(),
                 AlloyRecipeCategory.SIMPLE_ALLOY, "steel_ingot");
 
-        superOreAlloying(consumer, Items.RAW_IRON, Items.COAL, ModItems.STEEL_INGOT.get(),
+        superOreAlloying(consumer, Items.RAW_IRON, Items.COAL, EPItems.STEEL_INGOT.get(),
                 AlloyRecipeCategory.SIMPLE_ALLOY, "steel_ingot");
-        superOreAlloying(consumer, Items.IRON_INGOT, Items.COAL, ModItems.STEEL_INGOT.get(), 2,
+        superOreAlloying(consumer, Items.IRON_INGOT, Items.COAL, EPItems.STEEL_INGOT.get(), 2,
                 AlloyRecipeCategory.COMPLEX_ALLOY, "steel_ingot");
 
         //Blue gold
-        goldenAlloy(consumer, Items.RAW_GOLD, ModItems.COBALT.get(), ModItems.BLUE_GOLD_INGOT.get(), 1,
+        goldenAlloy(consumer, Items.RAW_GOLD, EPItems.COBALT.get(), EPItems.BLUE_GOLD_INGOT.get(), 1,
                 AlloyRecipeCategory.SIMPLE_ALLOY, "blue_gold_ingot");
-        goldenAlloy(consumer, Items.GOLD_INGOT, ModItems.COBALT.get(), ModItems.BLUE_GOLD_INGOT.get(), 2,
+        goldenAlloy(consumer, Items.GOLD_INGOT, EPItems.COBALT.get(), EPItems.BLUE_GOLD_INGOT.get(), 2,
                 AlloyRecipeCategory.COMPLEX_ALLOY, "blue_gold_ingot");
     }
 

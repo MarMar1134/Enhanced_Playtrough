@@ -1,7 +1,7 @@
 package net.marmar.enhanced_playthrough.entity;
 
-import net.marmar.enhanced_playthrough.util.damage.ModDamageSources;
-import net.marmar.enhanced_playthrough.item.ModItems;
+import net.marmar.enhanced_playthrough.util.damage.EPDamageSources;
+import net.marmar.enhanced_playthrough.item.EPItems;
 import net.minecraft.core.particles.ItemParticleOption;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
@@ -24,20 +24,20 @@ public class CobbleProjectileEntity extends ThrowableItemProjectile {
     }
 
     public CobbleProjectileEntity(Level pLevel, LivingEntity pShooter, int pCobbleDamage) {
-        super(ModEntities.THROWABLE_COBBLE.get(), pShooter, pLevel);
+        super(EPEntityTypes.THROWABLE_COBBLE.get(), pShooter, pLevel);
         this.cobbleDamage = pCobbleDamage;
     }
 
     @Override
     protected Item getDefaultItem() {
-        return ModItems.COBBLE.get();
+        return EPItems.COBBLE.get();
     }
 
     @Override
     protected void onHitEntity(EntityHitResult pResult) {
         super.onHitEntity(pResult);
         Entity entity = pResult.getEntity();
-        entity.hurt(new ModDamageSources(entity.level().registryAccess()).cobble(), this.cobbleDamage);
+        entity.hurt(new EPDamageSources(entity.level().registryAccess()).cobble(), this.cobbleDamage);
     }
 
     protected void onHit(HitResult pResult) {

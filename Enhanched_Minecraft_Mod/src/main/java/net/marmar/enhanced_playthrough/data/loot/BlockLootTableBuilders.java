@@ -1,12 +1,12 @@
 package net.marmar.enhanced_playthrough.data.loot;
 
-import net.marmar.enhanced_playthrough.block.ModBlocks;
+import net.marmar.enhanced_playthrough.block.EPBlocks;
 import net.marmar.enhanced_playthrough.block.custom.crop.CornCropBlock;
 import net.marmar.enhanced_playthrough.block.custom.crop.TomatoCropBlock;
 import net.marmar.enhanced_playthrough.block.custom.crop.YerbaMateCropBlock;
 import net.marmar.enhanced_playthrough.block.custom.crop.ZapalloCropBlock;
-import net.marmar.enhanced_playthrough.util.enchantment.ModEnchantments;
-import net.marmar.enhanced_playthrough.item.ModItems;
+import net.marmar.enhanced_playthrough.util.enchantment.EPEnchantments;
+import net.marmar.enhanced_playthrough.item.EPItems;
 import net.minecraft.advancements.critereon.EnchantmentPredicate;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.advancements.critereon.MinMaxBounds;
@@ -34,36 +34,36 @@ public interface BlockLootTableBuilders {
     LootItemCondition.Builder IS_WOODEN_OR_STONE_PICKAXE = MatchTool.toolMatches(ItemPredicate.Builder.item().of(Items.WOODEN_PICKAXE))
             .or(MatchTool.toolMatches(ItemPredicate.Builder.item().of(Items.STONE_PICKAXE)));
 
-    LootItemCondition.Builder IS_STEEL_PICKAXE = MatchTool.toolMatches(ItemPredicate.Builder.item().of(ModItems.STEEL_PICKAXE.get()));
+    LootItemCondition.Builder IS_STEEL_PICKAXE = MatchTool.toolMatches(ItemPredicate.Builder.item().of(EPItems.STEEL_PICKAXE.get()));
 
     LootItemCondition.Builder HAS_FINE_MINING = MatchTool.toolMatches(ItemPredicate.Builder.item()
-            .hasEnchantment(new EnchantmentPredicate(ModEnchantments.FINE_MINING.get(), MinMaxBounds.Ints.atLeast(1))));
+            .hasEnchantment(new EnchantmentPredicate(EPEnchantments.FINE_MINING.get(), MinMaxBounds.Ints.atLeast(1))));
 
     LootItemCondition.Builder HAS_NOT_FINE_MINING_NOR_ROUGH_MINING = MatchTool.toolMatches(ItemPredicate.Builder.item()
-                    .hasEnchantment(new EnchantmentPredicate(ModEnchantments.FINE_MINING.get(), MinMaxBounds.Ints.atLeast(1))))
+                    .hasEnchantment(new EnchantmentPredicate(EPEnchantments.FINE_MINING.get(), MinMaxBounds.Ints.atLeast(1))))
             .or(MatchTool.toolMatches(ItemPredicate.Builder.item()
                     .hasEnchantment(new EnchantmentPredicate(Enchantments.SILK_TOUCH, MinMaxBounds.Ints.atLeast(1)))))
             .or(MatchTool.toolMatches(ItemPredicate.Builder.item()
-                    .hasEnchantment(new EnchantmentPredicate(ModEnchantments.ROUGH_MINING.get(), MinMaxBounds.Ints.atLeast(1)))))
+                    .hasEnchantment(new EnchantmentPredicate(EPEnchantments.ROUGH_MINING.get(), MinMaxBounds.Ints.atLeast(1)))))
             .invert();
 
     LootItemCondition.Builder HAS_ROUGH_MINING = MatchTool.toolMatches(ItemPredicate.Builder.item()
-            .hasEnchantment(new EnchantmentPredicate(ModEnchantments.ROUGH_MINING.get(), MinMaxBounds.Ints.atLeast(1))));
+            .hasEnchantment(new EnchantmentPredicate(EPEnchantments.ROUGH_MINING.get(), MinMaxBounds.Ints.atLeast(1))));
 
     LootItemCondition.Builder HAS_SILK_TOUCH_AND_NOT_SPECIAL_PICKAXES = MatchTool.toolMatches(ItemPredicate.Builder.item()
                     .hasEnchantment(new EnchantmentPredicate(Enchantments.SILK_TOUCH, MinMaxBounds.Ints.atLeast(1))))
             .and(IS_STEEL_PICKAXE.invert()).and(IS_WOODEN_OR_STONE_PICKAXE.invert());
 
     LootItemCondition.Builder HAS_NOT_ROUGH_MINING_OR_WOODEN_PICKAXE = MatchTool.toolMatches(ItemPredicate.Builder.item()
-                    .hasEnchantment(new EnchantmentPredicate(ModEnchantments.ROUGH_MINING.get(), MinMaxBounds.Ints.atLeast(1)))).invert()
+                    .hasEnchantment(new EnchantmentPredicate(EPEnchantments.ROUGH_MINING.get(), MinMaxBounds.Ints.atLeast(1)))).invert()
             .and(IS_WOODEN_PICKAXE.invert());
 
     LootItemCondition.Builder HAS_NOT_ROUGH_MINING_OR_WOODEN_AND_STONE_PICKAXE = MatchTool.toolMatches(ItemPredicate.Builder.item()
-                    .hasEnchantment(new EnchantmentPredicate(ModEnchantments.ROUGH_MINING.get(), MinMaxBounds.Ints.atLeast(1)))).invert()
+                    .hasEnchantment(new EnchantmentPredicate(EPEnchantments.ROUGH_MINING.get(), MinMaxBounds.Ints.atLeast(1)))).invert()
             .and(IS_WOODEN_OR_STONE_PICKAXE.invert());
 
     LootItemCondition.Builder HAS_NOT_ROUGH_MINING_OR_STEEL_PICKAXE = MatchTool.toolMatches(ItemPredicate.Builder.item()
-                    .hasEnchantment(new EnchantmentPredicate(ModEnchantments.ROUGH_MINING.get(), MinMaxBounds.Ints.atLeast(1)))).invert()
+                    .hasEnchantment(new EnchantmentPredicate(EPEnchantments.ROUGH_MINING.get(), MinMaxBounds.Ints.atLeast(1)))).invert()
             .and(IS_STEEL_PICKAXE.invert());
 
     LootItemCondition.Builder CUSTOM_HAS_SILK_TOUCH = MatchTool.toolMatches(ItemPredicate.Builder.item()
@@ -81,23 +81,23 @@ public interface BlockLootTableBuilders {
 
     //Crop builders
     LootItemCondition.Builder YERBA_MATE_BUILDER = LootItemBlockStatePropertyCondition
-            .hasBlockStateProperties(ModBlocks.YERBA_MATE_CROP.get())
+            .hasBlockStateProperties(EPBlocks.YERBA_MATE_CROP.get())
             .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(YerbaMateCropBlock.AGE, 4));
 
     LootItemCondition.Builder ZAPALLO_BUILDER = LootItemBlockStatePropertyCondition
-            .hasBlockStateProperties(ModBlocks.ZAPALLO_CROP.get())
+            .hasBlockStateProperties(EPBlocks.ZAPALLO_CROP.get())
             .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(ZapalloCropBlock.AGE, 3));
 
     LootItemCondition.Builder EGGPLANT_BUILDER = LootItemBlockStatePropertyCondition
-            .hasBlockStateProperties(ModBlocks.EGGPLANT_CROP.get())
+            .hasBlockStateProperties(EPBlocks.EGGPLANT_CROP.get())
             .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(ZapalloCropBlock.AGE, 5));
 
     LootItemCondition.Builder TOMATO_BUILDER = LootItemBlockStatePropertyCondition
-            .hasBlockStateProperties(ModBlocks.TOMATO_CROP.get())
+            .hasBlockStateProperties(EPBlocks.TOMATO_CROP.get())
             .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(TomatoCropBlock.AGE, 5));
 
     LootItemCondition.Builder CORN_BUILDER = LootItemBlockStatePropertyCondition
-            .hasBlockStateProperties(ModBlocks.CORN_CROP.get())
+            .hasBlockStateProperties(EPBlocks.CORN_CROP.get())
             .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CornCropBlock.AGE, 7));
 
     /**
@@ -136,27 +136,27 @@ public interface BlockLootTableBuilders {
     }
 
     default LootTable.Builder createOreDrops(Block pBlock, int minDrops, int maxDrops, ItemLike drop){
-        return createBaseOreDrops(pBlock, minDrops, maxDrops, drop, ModItems.COBBLE.get());
+        return createBaseOreDrops(pBlock, minDrops, maxDrops, drop, EPItems.COBBLE.get());
     }
 
     default LootTable.Builder createDeepslateOreDrops(Block pBlock, int minDrops, int maxDrops, ItemLike drop){
-        return createBaseOreDrops(pBlock, minDrops, maxDrops, drop, ModItems.DEEPSLATE_COBBLE.get());
+        return createBaseOreDrops(pBlock, minDrops, maxDrops, drop, EPItems.DEEPSLATE_COBBLE.get());
     }
 
     default LootTable.Builder createOreDrops(Block pBlock, ItemLike drop){
-        return createBaseOreDrops(pBlock, 1, 1, drop, ModItems.COBBLE.get());
+        return createBaseOreDrops(pBlock, 1, 1, drop, EPItems.COBBLE.get());
     }
 
     default LootTable.Builder createDeepslateOreDrops(Block pBlock, ItemLike drop){
-        return createBaseOreDrops(pBlock, 1, 1, drop, ModItems.DEEPSLATE_COBBLE.get());
+        return createBaseOreDrops(pBlock, 1, 1, drop, EPItems.DEEPSLATE_COBBLE.get());
     }
 
     default LootTable.Builder createBauxiteOreDrops(Block pBlock, ItemLike terracottaShard){
-        return createBaseOreDrops(pBlock, 1, 1, ModItems.RAW_ALUMINUM.get(), terracottaShard);
+        return createBaseOreDrops(pBlock, 1, 1, EPItems.RAW_ALUMINUM.get(), terracottaShard);
     }
 
     default LootTable.Builder createNetherOreDrops(Block pBlock, int minDrops, int maxDrops, ItemLike pDrop){
-        return createBaseOreDrops(pBlock, minDrops, maxDrops, pDrop, ModItems.NETHERRACK_RUBBLE.get());
+        return createBaseOreDrops(pBlock, minDrops, maxDrops, pDrop, EPItems.NETHERRACK_RUBBLE.get());
     }
 
     /**
@@ -197,15 +197,15 @@ public interface BlockLootTableBuilders {
     }
 
     default LootTable.Builder createGemsDrops(Block pBlock, ItemLike rawGem, int maxRawGems, ItemLike gem, int maxGems){
-        return createBaseGemsDrops(pBlock, rawGem, maxRawGems, gem, maxGems, ModItems.COBBLE.get());
+        return createBaseGemsDrops(pBlock, rawGem, maxRawGems, gem, maxGems, EPItems.COBBLE.get());
     }
 
     default LootTable.Builder createDeepslateGemsDrops(Block pBlock, ItemLike rawGem, int maxRawGems, ItemLike gem, int maxGems){
-        return createBaseGemsDrops(pBlock, rawGem, maxRawGems, gem, maxGems, ModItems.DEEPSLATE_COBBLE.get());
+        return createBaseGemsDrops(pBlock, rawGem, maxRawGems, gem, maxGems, EPItems.DEEPSLATE_COBBLE.get());
     }
 
     default LootTable.Builder createNetherGemsDrops(Block pBlock, ItemLike rawGem, int maxRawGems, ItemLike gem, int maxGems){
-        return createBaseGemsDrops(pBlock, rawGem, maxRawGems, gem, maxGems, ModItems.NETHERRACK_RUBBLE.get());
+        return createBaseGemsDrops(pBlock, rawGem, maxRawGems, gem, maxGems, EPItems.NETHERRACK_RUBBLE.get());
     }
 
     /**
@@ -278,6 +278,21 @@ public interface BlockLootTableBuilders {
                                 .apply(SetItemCountFunction.setCount(UniformGenerator.between(0, pMaxQuantity)))
                                 .apply(ApplyBonusCount.addUniformBonusCount(Enchantments.BLOCK_FORTUNE))
                                 .when(LootItemRandomChanceCondition.randomChance(pChances)))));
+    }
+
+    /**
+     * The following method generates a loot table that drops the base block when broken with shears, otherwise it will drop a vegetable fiber.
+     * @param pPlant the block dropped when broken with shears
+     * @param pMaxQuantity the maximum quantity of vegetable fibber that will be dropped if the player doesn't have shears
+     * @return the JSON loot table
+     */
+    default LootTable.Builder createFlowerDrops(Block pPlant, int pMaxQuantity){
+        return LootTable.lootTable().withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F))
+                .add(LootItem.lootTableItem(pPlant).when(CUSTOM_HAS_SHEARS)
+                        .otherwise(LootItem.lootTableItem(EPItems.VEGETABLE_FIBBER.get())
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, pMaxQuantity)))
+                                .apply(ApplyBonusCount.addUniformBonusCount(Enchantments.BLOCK_FORTUNE))
+                                .when(LootItemRandomChanceCondition.randomChance(0.15f)))));
     }
 
     default LootTable.Builder createPlantDrops(Block pPlant){

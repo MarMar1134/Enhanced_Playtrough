@@ -1,7 +1,7 @@
 package net.marmar.enhanced_playthrough.item.custom;
 
-import net.marmar.enhanced_playthrough.entity.boat.ModBoatEntity;
-import net.marmar.enhanced_playthrough.entity.boat.ModChestBoatEntity;
+import net.marmar.enhanced_playthrough.entity.boat.EPBoatEntity;
+import net.marmar.enhanced_playthrough.entity.boat.EPChestBoatEntity;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
@@ -23,10 +23,10 @@ import java.util.function.Predicate;
 
 public class ModBoatItem extends Item {
     private static final Predicate<Entity> ENTITY_PREDICATE = EntitySelector.NO_SPECTATORS.and(Entity::isPickable);
-    private final ModBoatEntity.Type type;
+    private final EPBoatEntity.Type type;
     private final boolean hasChest;
 
-    public ModBoatItem(boolean pHasChest, ModBoatEntity.Type pType, Item.Properties pProperties) {
+    public ModBoatItem(boolean pHasChest, EPBoatEntity.Type pType, Item.Properties pProperties) {
         super(pProperties);
         this.hasChest = pHasChest;
         this.type = pType;
@@ -53,10 +53,10 @@ public class ModBoatItem extends Item {
 
             if (hitresult.getType() == HitResult.Type.BLOCK) {
                 Boat boat = this.getBoat(pLevel, hitresult);
-                if(boat instanceof ModChestBoatEntity chestBoat) {
+                if(boat instanceof EPChestBoatEntity chestBoat) {
                     chestBoat.setVariant(this.type);
-                } else if(boat instanceof ModBoatEntity) {
-                    ((ModBoatEntity)boat).setVariant(this.type);
+                } else if(boat instanceof EPBoatEntity) {
+                    ((EPBoatEntity)boat).setVariant(this.type);
                 }
                 boat.setYRot(pPlayer.getYRot());
                 if (!pLevel.noCollision(boat, boat.getBoundingBox())) {
@@ -80,7 +80,7 @@ public class ModBoatItem extends Item {
     }
 
     private Boat getBoat(Level p_220017_, HitResult p_220018_) {
-        return this.hasChest ? new ModChestBoatEntity(p_220017_, p_220018_.getLocation().x, p_220018_.getLocation().y, p_220018_.getLocation().z) :
-                new ModBoatEntity(p_220017_, p_220018_.getLocation().x, p_220018_.getLocation().y, p_220018_.getLocation().z);
+        return this.hasChest ? new EPChestBoatEntity(p_220017_, p_220018_.getLocation().x, p_220018_.getLocation().y, p_220018_.getLocation().z) :
+                new EPBoatEntity(p_220017_, p_220018_.getLocation().x, p_220018_.getLocation().y, p_220018_.getLocation().z);
     }
 }

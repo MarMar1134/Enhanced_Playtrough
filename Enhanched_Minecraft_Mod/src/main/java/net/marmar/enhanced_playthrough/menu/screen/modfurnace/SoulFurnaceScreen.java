@@ -1,6 +1,6 @@
 package net.marmar.enhanced_playthrough.menu.screen.modfurnace;
 
-import net.marmar.enhanced_playthrough.menu.modfurnace.SoulFurnaceMenu;
+import net.marmar.enhanced_playthrough.menu.epfurnace.SoulFurnaceMenu;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Inventory;

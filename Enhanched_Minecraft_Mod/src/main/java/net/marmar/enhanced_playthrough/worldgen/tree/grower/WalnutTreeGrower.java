@@ -1,6 +1,6 @@
 package net.marmar.enhanced_playthrough.worldgen.tree.grower;
 
-import net.marmar.enhanced_playthrough.worldgen.ModConfiguredFeatures;
+import net.marmar.enhanced_playthrough.worldgen.EPConfiguredFeatures;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.block.grower.AbstractTreeGrower;
@@ -11,6 +11,6 @@ public class WalnutTreeGrower extends AbstractTreeGrower {
     @Nullable
     @Override
     protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource randomSource, boolean b) {
-        return ModConfiguredFeatures.WALNUT_KEY;
+        return EPConfiguredFeatures.WALNUT_TREES;
     }
 }

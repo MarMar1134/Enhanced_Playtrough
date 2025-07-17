@@ -1,6 +1,6 @@
 package net.marmar.enhanced_playthrough.recipe.recipebuilder;
 
-import net.marmar.enhanced_playthrough.recipe.ModRecipes;
+import net.marmar.enhanced_playthrough.recipe.EPRecipes;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import net.marmar.enhanced_playthrough.recipe.recipecategory.AlloyRecipeCategory;
@@ -43,11 +43,11 @@ public class AlloyRecipeBuilder implements RecipeBuilder {
     }
 
     public static AlloyRecipeBuilder oreAlloying(Ingredient firstIngredient, Ingredient secondIngredient, AlloyRecipeCategory recipeCategory, ItemLike pResult, String group) {
-        return new AlloyRecipeBuilder(recipeCategory, group, 200, pResult, 1, firstIngredient, secondIngredient, ModRecipes.ALLOYING_SERIALIZER.get());
+        return new AlloyRecipeBuilder(recipeCategory, group, 200, pResult, 1, firstIngredient, secondIngredient, EPRecipes.ALLOYING_SERIALIZER.get());
     }
 
     public static AlloyRecipeBuilder superOreAlloying(Ingredient firstIngredient, Ingredient secondIngredient, AlloyRecipeCategory recipeCategory, ItemLike pResult, String group, int count) {
-        return new AlloyRecipeBuilder(recipeCategory, group, 100, pResult, count, firstIngredient, secondIngredient, ModRecipes.SUPER_ALLOYING_SERIALIZER.get());
+        return new AlloyRecipeBuilder(recipeCategory, group, 100, pResult, count, firstIngredient, secondIngredient, EPRecipes.SUPER_ALLOYING_SERIALIZER.get());
     }
 
 

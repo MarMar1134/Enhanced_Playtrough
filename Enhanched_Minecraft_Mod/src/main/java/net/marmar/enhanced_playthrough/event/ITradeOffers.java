@@ -1,7 +1,7 @@
 package net.marmar.enhanced_playthrough.event;
 
-import net.marmar.enhanced_playthrough.util.enchantment.ModEnchantments;
-import net.marmar.enhanced_playthrough.item.ModItems;
+import net.marmar.enhanced_playthrough.util.enchantment.EPEnchantments;
+import net.marmar.enhanced_playthrough.item.EPItems;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.EnchantedBookItem;
@@ -88,14 +88,14 @@ public interface ITradeOffers {
 
         //Enchantments with only one level and with high rarity always costs rubies
         boolean isSpecialEnchantment = selectedEnchantment == Enchantments.INFINITY_ARROWS || selectedEnchantment == Enchantments.MENDING
-                || selectedEnchantment == ModEnchantments.FINE_MINING.get() || selectedEnchantment == ModEnchantments.ROUGH_MINING.get();
+                || selectedEnchantment == EPEnchantments.FINE_MINING.get() || selectedEnchantment == EPEnchantments.ROUGH_MINING.get();
 
         //The coin is selected based on the enchantment rarity and the enchantment level
         ItemLike coin;
         if (selectedEnchantment.getRarity() == Enchantment.Rarity.VERY_RARE || enchantmentLevel > 3 || isSpecialEnchantment){
-            coin = ModItems.RUBY.get();
+            coin = EPItems.RUBY.get();
         } else if (selectedEnchantment.getRarity() == Enchantment.Rarity.RARE || enchantmentLevel == 3){
-            coin = ModItems.SAPPHIRE.get();
+            coin = EPItems.SAPPHIRE.get();
         } else {
             coin = Items.EMERALD;
         }

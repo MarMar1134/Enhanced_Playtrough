@@ -1,7 +1,7 @@
 package net.marmar.enhanced_playthrough.util.tab;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
-import net.marmar.enhanced_playthrough.item.ModItems;
+import net.marmar.enhanced_playthrough.item.EPItems;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Items;
@@ -14,37 +14,37 @@ public class VanillaTabs {
     @SubscribeEvent
     public static void addItemsToVanilla(BuildCreativeModeTabContentsEvent event){
         if (event.getTabKey().equals(CreativeModeTabs.COMBAT)){
-            event.getEntries().putAfter(Items.NETHERITE_AXE.getDefaultInstance(), ModItems.WOODEN_DAGGER.get().getDefaultInstance(),
+            event.getEntries().putAfter(Items.NETHERITE_AXE.getDefaultInstance(), EPItems.WOODEN_DAGGER.get().getDefaultInstance(),
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putAfter(ModItems.WOODEN_DAGGER.get().getDefaultInstance(), ModItems.STONE_DAGGER.get().getDefaultInstance(),
+            event.getEntries().putAfter(EPItems.WOODEN_DAGGER.get().getDefaultInstance(), EPItems.STONE_DAGGER.get().getDefaultInstance(),
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putAfter(ModItems.STONE_DAGGER.get().getDefaultInstance(), ModItems.IRON_DAGGER.get().getDefaultInstance(),
+            event.getEntries().putAfter(EPItems.STONE_DAGGER.get().getDefaultInstance(), EPItems.IRON_DAGGER.get().getDefaultInstance(),
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putAfter(ModItems.IRON_DAGGER.get().getDefaultInstance(), ModItems.GOLDEN_DAGGER.get().getDefaultInstance(),
+            event.getEntries().putAfter(EPItems.IRON_DAGGER.get().getDefaultInstance(), EPItems.GOLDEN_DAGGER.get().getDefaultInstance(),
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putAfter(ModItems.GOLDEN_DAGGER.get().getDefaultInstance(), ModItems.DIAMOND_DAGGER.get().getDefaultInstance(),
+            event.getEntries().putAfter(EPItems.GOLDEN_DAGGER.get().getDefaultInstance(), EPItems.DIAMOND_DAGGER.get().getDefaultInstance(),
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putAfter(ModItems.DIAMOND_DAGGER.get().getDefaultInstance(), ModItems.NETHERITE_DAGGER.get().getDefaultInstance(),
+            event.getEntries().putAfter(EPItems.DIAMOND_DAGGER.get().getDefaultInstance(), EPItems.NETHERITE_DAGGER.get().getDefaultInstance(),
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
         }
         if (event.getTabKey().equals(CreativeModeTabs.TOOLS_AND_UTILITIES)){
-            event.getEntries().putAfter(Items.STONE_HOE.getDefaultInstance(), ModItems.STONE_POLISHER.get().getDefaultInstance(),
+            event.getEntries().putAfter(Items.STONE_HOE.getDefaultInstance(), EPItems.STONE_POLISHER.get().getDefaultInstance(),
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putAfter(Items.IRON_HOE.getDefaultInstance(), ModItems.IRON_POLISHER.get().getDefaultInstance(),
+            event.getEntries().putAfter(Items.IRON_HOE.getDefaultInstance(), EPItems.IRON_POLISHER.get().getDefaultInstance(),
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putAfter(Items.GOLDEN_HOE.getDefaultInstance(), ModItems.GOLDEN_POLISHER.get().getDefaultInstance(),
+            event.getEntries().putAfter(Items.GOLDEN_HOE.getDefaultInstance(), EPItems.GOLDEN_POLISHER.get().getDefaultInstance(),
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putAfter(Items.DIAMOND_HOE.getDefaultInstance(), ModItems.DIAMOND_POLISHER.get().getDefaultInstance(),
+            event.getEntries().putAfter(Items.DIAMOND_HOE.getDefaultInstance(), EPItems.DIAMOND_POLISHER.get().getDefaultInstance(),
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putAfter(Items.NETHERITE_HOE.getDefaultInstance(), ModItems.NETHERITE_POLISHER.get().getDefaultInstance(),
+            event.getEntries().putAfter(Items.NETHERITE_HOE.getDefaultInstance(), EPItems.NETHERITE_POLISHER.get().getDefaultInstance(),
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putBefore(Items.FLINT_AND_STEEL.getDefaultInstance(), ModItems.FLINT_AND_BRONZE.get().getDefaultInstance(),
+            event.getEntries().putBefore(Items.FLINT_AND_STEEL.getDefaultInstance(), EPItems.FLINT_AND_BRONZE.get().getDefaultInstance(),
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putBefore(ModItems.FLINT_AND_BRONZE.get().getDefaultInstance(), ModItems.FLINT_AND_COBBLE.get().getDefaultInstance(),
+            event.getEntries().putBefore(EPItems.FLINT_AND_BRONZE.get().getDefaultInstance(), EPItems.FLINT_AND_COBBLE.get().getDefaultInstance(),
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
         }
         if (event.getTabKey().equals(CreativeModeTabs.SPAWN_EGGS)){
-            event.getEntries().putAfter(Items.PILLAGER_SPAWN_EGG.getDefaultInstance(), ModItems.BANDIT_SPAWN_EGG.get().getDefaultInstance(),
+            event.getEntries().putAfter(Items.PILLAGER_SPAWN_EGG.getDefaultInstance(), EPItems.BANDIT_SPAWN_EGG.get().getDefaultInstance(),
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
         }
     }

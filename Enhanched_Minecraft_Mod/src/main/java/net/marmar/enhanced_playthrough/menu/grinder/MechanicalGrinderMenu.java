@@ -1,9 +1,9 @@
 package net.marmar.enhanced_playthrough.menu.grinder;
 
-import net.marmar.enhanced_playthrough.data.tag.ModTags;
-import net.marmar.enhanced_playthrough.block.ModBlocks;
-import net.marmar.enhanced_playthrough.block.grinder.entity.MechanicalGrinderBlockEntity;
-import net.marmar.enhanced_playthrough.menu.ModMenuTypes;
+import net.marmar.enhanced_playthrough.data.tag.EPTags;
+import net.marmar.enhanced_playthrough.block.EPBlocks;
+import net.marmar.enhanced_playthrough.block.custom.grinder.entity.MechanicalGrinderBlockEntity;
+import net.marmar.enhanced_playthrough.menu.EPMenuTypes;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -24,7 +24,7 @@ public class MechanicalGrinderMenu extends AbstractContainerMenu {
                 new SimpleContainerData(4));
     }
     public MechanicalGrinderMenu(int containerID, Inventory inv, BlockEntity entity, ContainerData data){
-        super(ModMenuTypes.MECHANICAL_GRINDER_MENU.get(), containerID);
+        super(EPMenuTypes.MECHANICAL_GRINDER_MENU.get(), containerID);
         blockEntity = ((MechanicalGrinderBlockEntity) entity);
         this.level = inv.player.level();
         this.data = data;
@@ -46,7 +46,7 @@ public class MechanicalGrinderMenu extends AbstractContainerMenu {
                 addSlot(new SlotItemHandler(itemStackHandler, 0, 49, 32){
                     @Override
                     public boolean mayPlace(@NotNull ItemStack stack) {
-                        return stack.is(ModTags.Items.MECHANICAL_GRIND_INGREDIENT);
+                        return stack.is(EPTags.Items.MECHANICAL_GRIND_INGREDIENT);
                     }
                 }));
 
@@ -125,7 +125,7 @@ public class MechanicalGrinderMenu extends AbstractContainerMenu {
     @Override
     public boolean stillValid(Player pPlayer) {
         return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()),
-                pPlayer, ModBlocks.MECHANICAL_GRINDER.get());
+                pPlayer, EPBlocks.MECHANICAL_GRINDER.get());
     }
 
     private void addPlayerInventory(Inventory playerInventory) {
