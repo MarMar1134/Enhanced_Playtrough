@@ -28,7 +28,7 @@ public class OreAlloyingCategory implements IRecipeCategory<AlloyRecipe> {
 
     public OreAlloyingCategory(IGuiHelper helper) {
         this.background = helper.createDrawable(TEXTURE, 0, 0, 176, 82);
-        this.icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(EPBlocks.ADOBE_ALLOYING_FURNACE.get()));
+        this.icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(EPBlocks.ADOBE_ALLOY_FURNACE.get()));
     }
 
     @Override

@@ -15,12 +15,12 @@ import org.jetbrains.annotations.Nullable;
 public class SuperAlloyFurnaceBlockEntity extends AbstractAlloyFurnaceBlockEntity implements MenuProvider {
 
     public SuperAlloyFurnaceBlockEntity(BlockPos pPos, BlockState pBlockState) {
-        super(EPBlockEntities.SUPER_ALLOYING_FURNACE_BLOCK_ENTITY.get(), pPos, pBlockState, EPRecipes.SUPER_ALLOYING_TYPE.get());
+        super(EPBlockEntities.SUPER_ALLOY_FURNACE_BLOCK_ENTITY.get(), pPos, pBlockState, EPRecipes.SUPER_ALLOYING_TYPE.get());
     }
 
     @Override
     public Component getDisplayName() {
-        return Component.translatable("block.enhanced_playthrough.super_alloying_furnace");
+        return Component.translatable("block.enhanced_playthrough.super_alloy_furnace");
     }
 
     @Nullable

@@ -15,12 +15,12 @@ import org.jetbrains.annotations.Nullable;
 public class AdobeAlloyFurnaceBlockEntity extends AbstractAlloyFurnaceBlockEntity implements MenuProvider {
 
     public AdobeAlloyFurnaceBlockEntity(BlockPos pPos, BlockState pBlockState) {
-        super(EPBlockEntities.ADOBE_ALLOYING_FURNACE_BLOCK_ENTITY.get(), pPos, pBlockState, EPRecipes.ALLOYING_TYPE.get());
+        super(EPBlockEntities.ADOBE_ALLOY_FURNACE_BLOCK_ENTITY.get(), pPos, pBlockState, EPRecipes.ALLOYING_TYPE.get());
     }
 
     @Override
     public Component getDisplayName() {
-        return Component.translatable("block.enhanced_playthrough.adobe_alloying_furnace");
+        return Component.translatable("block.enhanced_playthrough.adobe_alloy_furnace");
     }
 
     @Nullable

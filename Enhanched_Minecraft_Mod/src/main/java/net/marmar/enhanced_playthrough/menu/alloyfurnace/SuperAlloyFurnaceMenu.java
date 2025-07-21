@@ -9,10 +9,10 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 public class SuperAlloyFurnaceMenu extends AbstractAlloyFurnaceMenu {
 
     public SuperAlloyFurnaceMenu(int containerID, Inventory inv, FriendlyByteBuf extraData) {
-        super(EPMenuTypes.SUPER_ALLOYING_FURNACE_MENU.get(), containerID, inv, extraData);
+        super(EPMenuTypes.SUPER_ALLOY_FURNACE_MENU.get(), containerID, inv, extraData);
     }
 
     public SuperAlloyFurnaceMenu(int containerID, Inventory inv, BlockEntity entity, ContainerData data) {
-        super(EPMenuTypes.SUPER_ALLOYING_FURNACE_MENU.get(), containerID, inv, entity, data);
+        super(EPMenuTypes.SUPER_ALLOY_FURNACE_MENU.get(), containerID, inv, entity, data);
     }
 }

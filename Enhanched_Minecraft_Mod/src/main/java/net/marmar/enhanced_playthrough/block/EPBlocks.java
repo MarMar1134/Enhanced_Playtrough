@@ -2,6 +2,7 @@ package net.marmar.enhanced_playthrough.block;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.block.custom.plant.DesertFlowerBlock;
+import net.marmar.enhanced_playthrough.block.custom.plant.DoublePlantGrowingHeadBlock;
 import net.marmar.enhanced_playthrough.block.custom.plant.TallReedsBlock;
 import net.marmar.enhanced_playthrough.block.custom.plant.WaterReedsBlock;
 import net.marmar.enhanced_playthrough.block.custom.alloyfurnace.AdobeAlloyFurnaceBlock;
@@ -27,6 +28,7 @@ import net.marmar.enhanced_playthrough.util.effect.EPMobEffects;
 import net.marmar.enhanced_playthrough.worldgen.tree.grower.*;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.ConstantInt;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -320,25 +322,25 @@ public class EPBlocks {
 
         public static final RegistryObject<Block> SULFUR_ORE = registerBlockWithItem("sulfur_ore",
                 () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.DIAMOND_ORE)
-                        .requiresCorrectToolForDrops()));
+                        .requiresCorrectToolForDrops(), UniformInt.of(2, 4)));
         public static final RegistryObject<Block> DEEPSLATE_SULFUR_ORE = registerBlockWithItem("deepslate_sulfur_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.DEEPSLATE_DIAMOND_ORE)
-                    .requiresCorrectToolForDrops()));
+                    .requiresCorrectToolForDrops(), UniformInt.of(2, 4)));
         public static final RegistryObject<Block> NETHER_SULFUR_ORE = registerBlockWithItem("nether_sulfur_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.DEEPSLATE_DIAMOND_ORE)
-                    .sound(SoundType.NETHER_ORE).requiresCorrectToolForDrops()));
+                    .sound(SoundType.NETHER_ORE).requiresCorrectToolForDrops(), UniformInt.of(3, 6)));
 
         public static final RegistryObject<Block> SILVER_ORE = registerBlockWithItem("silver_ore",
                 () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.GOLD_ORE).requiresCorrectToolForDrops()));
         public static final RegistryObject<Block> DEEPSLATE_SILVER_ORE = registerBlockWithItem("deepslate_silver_ore",
                 () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.DEEPSLATE_GOLD_ORE).requiresCorrectToolForDrops()));
 
-        public static final RegistryObject<Block> RUBY_ORE = registerBlockWithItem("rubi_ore",
+        public static final RegistryObject<Block> RUBY_ORE = registerBlockWithItem("ruby_ore",
                 () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.EMERALD_ORE).requiresCorrectToolForDrops()));
         public static final RegistryObject<Block> SAPPHIRE_ORE = registerBlockWithItem("sapphire_ore",
                 () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.EMERALD_ORE).requiresCorrectToolForDrops()));
 
-        public static final RegistryObject<Block> DEEPSLATE_RUBY_ORE = registerBlockWithItem("deepslate_rubi_ore",
+        public static final RegistryObject<Block> DEEPSLATE_RUBY_ORE = registerBlockWithItem("deepslate_ruby_ore",
                 () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.DEEPSLATE_EMERALD_ORE).requiresCorrectToolForDrops(), ConstantInt.of(3)));
         public static final RegistryObject<Block> DEEPSLATE_SAPPHIRE_ORE = registerBlockWithItem("deepslate_sapphire_ore",
                 () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.DEEPSLATE_EMERALD_ORE).requiresCorrectToolForDrops()));
@@ -401,8 +403,6 @@ public class EPBlocks {
         public static final RegistryObject<Block> BLUE_GOLD_BLOCK = registerBlockWithItem("blue_gold_block",
                 () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(6, 8)));
 
-
-
     //Entity blocks
         //Basic furnaces
         public static final RegistryObject<Block> ADOBE_FURNACE = registerBlockWithItem("adobe_furnace",
@@ -415,9 +415,9 @@ public class EPBlocks {
                 () -> new MasonryFurnaceBlock(BlockBehaviour.Properties.copy(EPBlocks.FIREBRICKS.get()).noOcclusion()));
 
         //Alloy furnaces
-        public static final RegistryObject<Block> ADOBE_ALLOYING_FURNACE = registerBlockWithItem("adobe_alloying_furnace",
+        public static final RegistryObject<Block> ADOBE_ALLOY_FURNACE = registerBlockWithItem("adobe_alloy_furnace",
                 () -> new AdobeAlloyFurnaceBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE).noOcclusion()));
-        public static final RegistryObject<Block> SUPER_ALLOYING_FURNACE = registerBlockWithItem("super_alloying_furnace",
+        public static final RegistryObject<Block> SUPER_ALLOY_FURNACE = registerBlockWithItem("super_alloy_furnace",
                 () -> new SuperAlloyFurnaceBlock(BlockBehaviour.Properties.copy(Blocks.COBBLED_DEEPSLATE).noOcclusion()));
         public static final RegistryObject<Block> SOUL_ALLOY_FURNACE = registerBlockWithItem("soul_alloy_furnace",
                 () -> new SoulAlloyFurnaceBlock(BlockBehaviour.Properties.copy(Blocks.BLACKSTONE).noOcclusion()));
@@ -445,18 +445,18 @@ public class EPBlocks {
             () -> new CornCropBlock(BlockBehaviour.Properties.copy(EPBlocks.YERBA_MATE_CROP.get()).noOcclusion().noCollission()));
 
     //Wild crops
-        public static final RegistryObject<Block> WILD_WHEAT = registerBlockWithItem("wild_wheat_crop",
+        public static final RegistryObject<Block> WILD_WHEAT_CROP = registerBlockWithItem("wild_wheat_crop",
             () -> new BushBlock(BlockBehaviour.Properties.copy(Blocks.GRASS).noOcclusion().noCollission().sound(SoundType.CROP)));
-        public static final RegistryObject<Block> WILD_TOMATO = registerBlockWithItem("wild_tomato_crop",
+        public static final RegistryObject<Block> WILD_TOMATO_CROP = registerBlockWithItem("wild_tomato_crop",
             () -> new BushBlock(BlockBehaviour.Properties.copy(Blocks.GRASS).noOcclusion().noCollission().sound(SoundType.CROP)));
-        public static final RegistryObject<Block> WILD_CORN = registerBlockWithItem("wild_corn_crop",
+        public static final RegistryObject<Block> WILD_CORN_CROP = registerBlockWithItem("wild_corn_crop",
             () -> new DoublePlantBlock(BlockBehaviour.Properties.copy(Blocks.TALL_GRASS).noOcclusion().noCollission().sound(SoundType.CROP)));
 
     //Other plants
     public static final RegistryObject<Block> SMALL_REEDS = registerBlockWithItem("small_reeds",
             () -> new BushBlock(BlockBehaviour.Properties.copy(Blocks.GRASS).noOcclusion().noCollission()));
     public static final RegistryObject<Block> REEDS = registerBlockWithItem("reeds",
-            () -> new DoublePlantBlock(BlockBehaviour.Properties.copy(Blocks.TALL_GRASS).noOcclusion().noCollission()));
+            () -> new DoublePlantGrowingHeadBlock(BlockBehaviour.Properties.copy(Blocks.TALL_GRASS).noOcclusion().noCollission()));
     public static final RegistryObject<Block> TALL_REEDS = registerBlockWithItem("tall_reeds",
             () -> new TallReedsBlock(BlockBehaviour.Properties.copy(Blocks.TALL_GRASS).noOcclusion().noCollission()));
     public static final RegistryObject<Block> WATER_REEDS = registerBlockWithItem("water_reeds",

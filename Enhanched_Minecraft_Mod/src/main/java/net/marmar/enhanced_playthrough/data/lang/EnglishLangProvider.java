@@ -123,9 +123,9 @@ public class EnglishLangProvider extends AbstractLangProvider {
 
         //Blocks
             //Wild crops
-            addBlock(EPBlocks.WILD_WHEAT, "Wild wheat");
-            addBlock(EPBlocks.WILD_TOMATO, "Wild tomato");
-            addBlock(EPBlocks.WILD_CORN, "Wild corn");
+            addBlock(EPBlocks.WILD_WHEAT_CROP, "Wild wheat");
+            addBlock(EPBlocks.WILD_TOMATO_CROP, "Wild tomato");
+            addBlock(EPBlocks.WILD_CORN_CROP, "Wild corn");
 
             //Plants
             addBlock(EPBlocks.TALL_REEDS, "Gigant reed");
@@ -321,9 +321,9 @@ public class EnglishLangProvider extends AbstractLangProvider {
             addBlock(EPBlocks.ADOBE_FURNACE, "Mud furnace");
             addBlock(EPBlocks.SOUL_FURNACE, "Soul mud furnace");
             addBlock(EPBlocks.MASONRY_FURNACE, "Masonry furnace");
-            addBlock(EPBlocks.ADOBE_ALLOYING_FURNACE, "Bricks alloy furnace");
+            addBlock(EPBlocks.ADOBE_ALLOY_FURNACE, "Bricks alloy furnace");
             addBlock(EPBlocks.SOUL_ALLOY_FURNACE, "Soul bricks alloy furnace");
-            addBlock(EPBlocks.SUPER_ALLOYING_FURNACE, "Blast alloy furnace");
+            addBlock(EPBlocks.SUPER_ALLOY_FURNACE, "Blast alloy furnace");
             addBlock(EPBlocks.GEM_POLISHER, "Gem polisher");
             addBlock(EPBlocks.PRIMAL_GRINDER, "Grinder");
             addBlock(EPBlocks.MECHANICAL_GRINDER, "Mechanical grinder");
@@ -374,8 +374,9 @@ public class EnglishLangProvider extends AbstractLangProvider {
             addItem(EPItems.FIREBRICK, "Firebrick");
             addItem(EPItems.ALUMINUM_ROD, "Aluminum rod");
             addItem(EPItems.COBALT, "Cobalt");
-            addItem(EPItems.REED_HEAD, "Pampas grass head");
-            addItem(EPItems.WATER_REED_HEAD, "Reed head");
+            addItem(EPItems.REEDS_HEAD, "Pampas grass head");
+            addItem(EPItems.TALL_REEDS_HEAD, "tall reed head");
+            addItem(EPItems.WATER_REEDS_HEAD, "Reed head");
             addItem(EPItems.VEGETABLE_FIBBER, "Vegetable fiber");
 
             //Cobble

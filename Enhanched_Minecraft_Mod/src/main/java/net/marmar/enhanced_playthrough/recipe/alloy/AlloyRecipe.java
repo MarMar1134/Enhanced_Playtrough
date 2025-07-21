@@ -54,7 +54,7 @@ public class AlloyRecipe extends AbstractAlloyRecipe implements Recipe<SimpleCon
 
     @Override
     public ItemStack getToastSymbol() {
-        return new ItemStack(EPBlocks.ADOBE_ALLOYING_FURNACE.get());
+        return new ItemStack(EPBlocks.ADOBE_ALLOY_FURNACE.get());
     }
 
     public static class Type implements RecipeType<AlloyRecipe>{

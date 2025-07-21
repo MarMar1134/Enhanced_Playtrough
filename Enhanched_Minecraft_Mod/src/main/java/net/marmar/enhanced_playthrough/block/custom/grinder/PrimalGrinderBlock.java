@@ -51,6 +51,7 @@ public class PrimalGrinderBlock extends BaseEntityBlock implements EntityBlock {
         pBuilder.add(FACING, ON);
     }
 
+    @SuppressWarnings("all")
     @Override
     public RenderShape getRenderShape(BlockState pState) {
         return RenderShape.MODEL;
@@ -114,10 +115,9 @@ public class PrimalGrinderBlock extends BaseEntityBlock implements EntityBlock {
         }
     }
 
-    @Nullable
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext pContext) {
-        return defaultBlockState().setValue(FACING, pContext.getHorizontalDirection().getOpposite());
+        return defaultBlockState().setValue(FACING, pContext.getHorizontalDirection());
     }
 
     static {

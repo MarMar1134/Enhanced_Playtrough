@@ -333,15 +333,15 @@ public class EPBlockLootTables extends BlockLootSubProvider implements BlockLoot
                  EPItems.CORN_SEEDS.get(), CORN_BUILDER));
 
         //Wild crops
-        this.add(EPBlocks.WILD_WHEAT.get(), createPlantWithSeedsDrops(EPBlocks.WILD_WHEAT.get(), Items.WHEAT_SEEDS, 2, 0.125f));
-        this.add(EPBlocks.WILD_TOMATO.get(), createPlantWithSeedsDrops(EPBlocks.WILD_TOMATO.get(), EPItems.WILD_TOMATO.get(), 2, 0.25f));
-        this.add(EPBlocks.WILD_CORN.get(), createPlantWithSeedsDrops(EPBlocks.WILD_CORN.get(), EPItems.WILD_CORN.get(), 2, 0.25f));
+        this.add(EPBlocks.WILD_WHEAT_CROP.get(), createPlantWithSeedsDrops(EPBlocks.WILD_WHEAT_CROP.get(), Items.WHEAT_SEEDS, 2, 0.125f));
+        this.add(EPBlocks.WILD_TOMATO_CROP.get(), createPlantWithSeedsDrops(EPBlocks.WILD_TOMATO_CROP.get(), EPItems.WILD_TOMATO.get(), 2, 0.25f));
+        this.add(EPBlocks.WILD_CORN_CROP.get(), createPlantWithSeedsDrops(EPBlocks.WILD_CORN_CROP.get(), EPItems.WILD_CORN.get(), 2, 0.25f));
 
         //Plants
-        this.add(EPBlocks.SMALL_REEDS.get(), createPlantWithSeedsDrops(EPBlocks.SMALL_REEDS.get(), EPItems.REED_HEAD.get(), 2, 0.25f));
-        this.add(EPBlocks.REEDS.get(), createPlantWithSeedsDrops(EPBlocks.REEDS.get(), EPItems.REED_HEAD.get(), 2, 0.25f));
-        this.add(EPBlocks.TALL_REEDS.get(), createPlantWithSeedsDrops(EPBlocks.TALL_REEDS.get(), EPItems.REED_HEAD.get(), 3, 0.25f));
-        this.add(EPBlocks.WATER_REEDS.get(), createPlantWithSeedsDrops(EPBlocks.WATER_REEDS.get(), EPItems.WATER_REED_HEAD.get(), 4, 0.125f));
+        this.add(EPBlocks.SMALL_REEDS.get(), createPlantWithSeedsDrops(EPBlocks.SMALL_REEDS.get(), EPItems.REEDS_HEAD.get(), 2, 0.25f));
+        this.add(EPBlocks.REEDS.get(), createPlantWithSeedsDrops(EPBlocks.REEDS.get(), EPItems.REEDS_HEAD.get(), 2, 0.25f));
+        this.add(EPBlocks.TALL_REEDS.get(), createPlantWithSeedsDrops(EPBlocks.TALL_REEDS.get(), EPItems.TALL_REEDS_HEAD.get(), 3, 0.25f));
+        this.add(EPBlocks.WATER_REEDS.get(), createPlantWithSeedsDrops(EPBlocks.WATER_REEDS.get(), EPItems.WATER_REEDS_HEAD.get(), 4, 0.125f));
 
         //Flowers
         this.add(EPBlocks.COLD_LYRIUM.get(), block -> createFlowerDrops(block, 1));
@@ -356,8 +356,8 @@ public class EPBlockLootTables extends BlockLootSubProvider implements BlockLoot
 
         this.dropSelf(EPBlocks.MASONRY_FURNACE.get());
 
-        this.dropSelf(EPBlocks.ADOBE_ALLOYING_FURNACE.get());
-        this.dropSelf(EPBlocks.SUPER_ALLOYING_FURNACE.get());
+        this.dropSelf(EPBlocks.ADOBE_ALLOY_FURNACE.get());
+        this.dropSelf(EPBlocks.SUPER_ALLOY_FURNACE.get());
         this.dropSelf(EPBlocks.SOUL_ALLOY_FURNACE.get());
 
         this.dropSelf(EPBlocks.GEM_POLISHER.get());

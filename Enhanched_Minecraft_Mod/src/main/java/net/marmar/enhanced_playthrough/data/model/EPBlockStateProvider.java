@@ -3,10 +3,15 @@ package net.marmar.enhanced_playthrough.data.model;
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.block.EPBlocks;
 import net.marmar.enhanced_playthrough.block.custom.crop.*;
+import net.marmar.enhanced_playthrough.block.custom.epfurnace.AbstractEPFurnaceBlock;
+import net.marmar.enhanced_playthrough.block.custom.epfurnace.MasonryFurnaceBlock;
+import net.marmar.enhanced_playthrough.block.custom.grinder.PrimalGrinderBlock;
+import net.marmar.enhanced_playthrough.block.custom.plant.DoublePlantGrowingHeadBlock;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
@@ -16,7 +21,9 @@ import net.minecraftforge.registries.RegistryObject;
 
 import java.util.function.Function;
 
+import static net.marmar.enhanced_playthrough.block.custom.alloyfurnace.AbstractAlloyFurnaceBlock.BURNING;
 import static net.minecraft.world.level.block.DoublePlantBlock.HALF;
+import static net.minecraft.world.level.block.state.properties.BlockStateProperties.FACING;
 
 public class EPBlockStateProvider extends BlockStateProvider {
 
@@ -135,14 +142,14 @@ public class EPBlockStateProvider extends BlockStateProvider {
         makeCornCrop((CropBlock) EPBlocks.CORN_CROP.get(), "corn_stage","corn_stage");
 
         //Wild crops
-        doublePlantBlock(EPBlocks.WILD_CORN);
-        plantBlock(EPBlocks.WILD_WHEAT, false);
-        plantBlock(EPBlocks.WILD_TOMATO, true);
+        doublePlantBlock(EPBlocks.WILD_CORN_CROP);
+        plantBlock(EPBlocks.WILD_WHEAT_CROP, false);
+        plantBlock(EPBlocks.WILD_TOMATO_CROP, true);
 
         //Plants
-        doublePlantBlock(EPBlocks.REEDS);
+        doublePlantWithAgeBlock(EPBlocks.REEDS);
         plantBlock(EPBlocks.SMALL_REEDS, true);
-        doublePlantBlock(EPBlocks.TALL_REEDS);
+        doublePlantWithAgeBlock(EPBlocks.TALL_REEDS);
         doublePlantBlock(EPBlocks.WATER_REEDS);
 
         //Flowers
@@ -150,8 +157,20 @@ public class EPBlockStateProvider extends BlockStateProvider {
 
         flowerWithPotBlock(EPBlocks.SUCCULENT, EPBlocks.POTTED_SUCCULENT);
 
-        //EntityBlocks
+        //Block entities
+        furnaceBlock(EPBlocks.ADOBE_FURNACE);
+        furnaceBlock(EPBlocks.SOUL_FURNACE);
+
+        furnaceBlock(EPBlocks.MASONRY_FURNACE);
+
+        furnaceBlock(EPBlocks.ADOBE_ALLOY_FURNACE);
+        furnaceBlock(EPBlocks.SUPER_ALLOY_FURNACE);
+        furnaceBlock(EPBlocks.SOUL_ALLOY_FURNACE);
+
         simpleBlockWithItem(EPBlocks.GEM_POLISHER.get(), new ModelFile.UncheckedModelFile(modLoc("block/gem_polisher")));
+
+        grinderBlock(EPBlocks.PRIMAL_GRINDER);
+        grinderBlock(EPBlocks.MECHANICAL_GRINDER);
 
         //Wood
             //walnut
@@ -392,16 +411,30 @@ public class EPBlockStateProvider extends BlockStateProvider {
         }
 
     //Other model builders
-    private void blockWithItem(RegistryObject<Block> pBlock){
+    public void blockWithItem(RegistryObject<Block> pBlock){
         simpleBlockWithItem(pBlock.get(), cubeAll(pBlock.get()));
     }
 
-    private void blockItem(RegistryObject<Block> pBlock) {
+    public void blockItem(RegistryObject<Block> pBlock) {
         simpleBlockItem(pBlock.get(), new ModelFile.UncheckedModelFile(EnhancedPlaythrough.MOD_ID +
                 ":block/" + ForgeRegistries.BLOCKS.getKey(pBlock.get()).getPath()));
     }
 
-    private ConfiguredModel[] doublePlantModel(BlockState state, RegistryObject<Block> pBlock){
+    public void leavesBlock(RegistryObject<Block> blockRegistryObject) {
+        simpleBlockWithItem(blockRegistryObject.get(),
+                models().singleTexture(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), new ResourceLocation("minecraft:block/leaves"),
+                        "all", blockTexture(blockRegistryObject.get())).renderType("cutout"));
+    }
+
+    public void plantBlock(RegistryObject<Block> pBlock, boolean isCross){
+        if (isCross){
+            simpleBlock(pBlock.get(), models().cross(ForgeRegistries.BLOCKS.getKey(pBlock.get()).getPath(), blockTexture(pBlock.get())).renderType("cutout"));
+        } else {
+            simpleBlock(pBlock.get(), models().crop(ForgeRegistries.BLOCKS.getKey(pBlock.get()).getPath(), blockTexture(pBlock.get())).renderType("cutout"));
+        }
+    }
+
+    protected ConfiguredModel[] doublePlantModel(BlockState state, RegistryObject<Block> pBlock){
         String path = ForgeRegistries.BLOCKS.getKey(pBlock.get()).getPath() + "_";
 
         ConfiguredModel[] plantModel = new ConfiguredModel[1];
@@ -412,34 +445,125 @@ public class EPBlockStateProvider extends BlockStateProvider {
         return plantModel;
     }
 
-    private void doublePlantBlock(RegistryObject<Block> pBlock){
+    public void doublePlantBlock(RegistryObject<Block> pBlock){
         Function<BlockState, ConfiguredModel[]> model = blockState -> doublePlantModel(blockState, pBlock);
 
         getVariantBuilder(pBlock.get()).forAllStates(model);
     }
 
-    private void leavesBlock(RegistryObject<Block> blockRegistryObject) {
-        simpleBlockWithItem(blockRegistryObject.get(),
-                models().singleTexture(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), new ResourceLocation("minecraft:block/leaves"),
-                        "all", blockTexture(blockRegistryObject.get())).renderType("cutout"));
+    protected ConfiguredModel[] furnaceModel(BlockState state, RegistryObject<Block> pBlock){
+        String path = ForgeRegistries.BLOCKS.getKey(pBlock.get()).getPath();
+
+        ModelFile blockModels = models().orientable(
+                state.getValue(BURNING) ? path + "_on" : path,
+                new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/" + path + "_side"),
+                state.getValue(BURNING) ? new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/" + path + "_front_on") :
+                        new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/" + path + "_front"),
+                new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/" + path + "_top")
+        );
+
+        return ConfiguredModel.builder().modelFile(blockModels)
+                .rotationY((int) state.getValue(FACING).toYRot())
+                .build();
     }
 
-    private void plantBlock(RegistryObject<Block> pBlock, boolean isCross){
-        if (isCross){
-            simpleBlock(pBlock.get(), models().cross(ForgeRegistries.BLOCKS.getKey(pBlock.get()).getPath(), blockTexture(pBlock.get())).renderType("cutout"));
-        } else {
-            simpleBlock(pBlock.get(), models().crop(ForgeRegistries.BLOCKS.getKey(pBlock.get()).getPath(), blockTexture(pBlock.get())).renderType("cutout"));
-        }
+    protected ConfiguredModel[] masonryFurnaceModel(BlockState state, RegistryObject<Block> pBlock){
+        String path = ForgeRegistries.BLOCKS.getKey(pBlock.get()).getPath();
+
+        ModelFile blockModels = models().orientableWithBottom(
+                state.getValue(BURNING) ? path + "_on" : path,
+                new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/" + path + "_side"),
+                state.getValue(BURNING) ? new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/" + path + "_front_on") :
+                        new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/" + path + "_front"),
+                new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/" + path + "_bottom"),
+                state.getValue(BURNING) ? new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/" + path + "_top_on")
+                        : new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/" + path + "_top")
+        );
+
+        return ConfiguredModel.builder().modelFile(blockModels)
+                .rotationY((int) state.getValue(FACING).toYRot())
+                .build();
     }
 
-    private void flowerWithPotBlock(RegistryObject<Block> pFlower, RegistryObject<Block> pPottedFlower){
+    protected ConfiguredModel[] alloyFurnaceModel(BlockState state, RegistryObject<Block> pBlock){
+        String path = ForgeRegistries.BLOCKS.getKey(pBlock.get()).getPath();
+
+        ModelFile blockModels = models().orientableWithBottom(
+                state.getValue(BURNING) ? path + "_on" : path,
+                new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/" + path + "_side"),
+                state.getValue(BURNING) ? new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/" + path + "_front_on") :
+                        new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/" + path + "_front"),
+                new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/" + path + "_bottom"),
+                new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/" + path + "_top")
+        );
+
+        return ConfiguredModel.builder().modelFile(blockModels)
+                .rotationY((int) state.getValue(FACING).toYRot())
+                .build();
+    }
+
+    public void furnaceBlock(RegistryObject<Block> pBlock){
+        Function<BlockState, ConfiguredModel[]> model = pBlock.get() instanceof AbstractEPFurnaceBlock
+                ? blockState -> furnaceModel(blockState, pBlock)
+                : blockState -> alloyFurnaceModel(blockState, pBlock);
+
+        if (pBlock.get() instanceof MasonryFurnaceBlock) model  = state -> masonryFurnaceModel(state, pBlock);
+
+        getVariantBuilder(pBlock.get()).forAllStates(model);
+    }
+
+    protected ConfiguredModel[] grinderModel(BlockState state, RegistryObject<Block> pBlock){
+        String path = ForgeRegistries.BLOCKS.getKey(pBlock.get()).getPath();
+
+        ModelFile blockModels = models().orientableWithBottom(
+                state.getValue(PrimalGrinderBlock.ON) ? path + "_on" : path,
+                new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/" + path + "_side"),
+                state.getValue(PrimalGrinderBlock.ON) ? new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/" + path + "_front_on") :
+                        new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/" + path + "_front"),
+                new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/" + path + "_bottom"),
+                new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/" + path + "_top")
+        );
+
+        return ConfiguredModel.builder().modelFile(blockModels)
+                .rotationY((int) state.getValue(FACING).toYRot())
+                .build();
+    }
+
+    public void grinderBlock(RegistryObject<Block> pBlock){
+        Function<BlockState, ConfiguredModel[]> model = blockState -> grinderModel(blockState, pBlock);
+
+        getVariantBuilder(pBlock.get()).forAllStates(model);
+    }
+
+    protected ConfiguredModel[] doublePlantWithAgeModel(BlockState state, DoublePlantGrowingHeadBlock pBlock){
+        String path = ForgeRegistries.BLOCKS.getKey(pBlock).getPath() + "_";
+
+        ConfiguredModel[] plantModel = new ConfiguredModel[1];
+
+        plantModel[0] = new ConfiguredModel(models().cross(path + state.getValue(HALF) + "_" + pBlock.getCurrentAge(state),
+                new ResourceLocation(EnhancedPlaythrough.MOD_ID, state.getValue(HALF) == DoubleBlockHalf.LOWER
+                        ? "block/" + path + state.getValue(HALF)
+                        : "block/" + path + state.getValue(HALF) + "_" + pBlock.getCurrentAge(state)))
+                .renderType("cutout"));
+
+        return plantModel;
+    }
+
+    public void doublePlantWithAgeBlock(RegistryObject<Block> pBlock){
+        Function<BlockState, ConfiguredModel[]> model = blockState ->
+                doublePlantWithAgeModel(blockState, (DoublePlantGrowingHeadBlock) pBlock.get());
+
+        getVariantBuilder(pBlock.get()).forAllStates(model);
+    }
+
+    public void flowerWithPotBlock(RegistryObject<Block> pFlower, RegistryObject<Block> pPottedFlower){
         plantBlock(pFlower, true);
 
         simpleBlockWithItem(pPottedFlower.get(), models().singleTexture("potted_" + blockName(pFlower.get()), new ResourceLocation("flower_pot_cross"), "plant",
                 blockTexture(pFlower.get())).renderType("cutout"));
     }
 
-    private void saplingBlock(RegistryObject<Block> blockRegistryObject) {
+    public void saplingBlock(RegistryObject<Block> blockRegistryObject) {
         simpleBlock(blockRegistryObject.get(),
                 models().cross(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
     }
@@ -455,11 +579,11 @@ public class EPBlockStateProvider extends BlockStateProvider {
     }
 
     //Helpers
-    private String blockName(Block block) {
+    public String blockName(Block block) {
         return blockKey(block).getPath();
     }
 
-    private ResourceLocation blockKey(Block block) {
+    public ResourceLocation blockKey(Block block) {
         return ForgeRegistries.BLOCKS.getKey(block);
     }
 }

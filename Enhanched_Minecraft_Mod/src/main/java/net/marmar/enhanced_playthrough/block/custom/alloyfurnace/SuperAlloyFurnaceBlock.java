@@ -25,6 +25,6 @@ public class SuperAlloyFurnaceBlock extends AbstractAlloyFurnaceBlock{
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level pLevel, BlockState pState, BlockEntityType<T> pBlockEntityType) {
-        return createAlloyFurnaceTicker(pLevel, pBlockEntityType, EPBlockEntities.SUPER_ALLOYING_FURNACE_BLOCK_ENTITY.get());
+        return createAlloyFurnaceTicker(pLevel, pBlockEntityType, EPBlockEntities.SUPER_ALLOY_FURNACE_BLOCK_ENTITY.get());
     }
 }

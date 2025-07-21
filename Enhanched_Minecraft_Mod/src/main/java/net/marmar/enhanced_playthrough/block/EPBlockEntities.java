@@ -33,12 +33,12 @@ public class EPBlockEntities {
             BLOCK_ENTITIES.register("masonry_furnace", () -> BlockEntityType
                     .Builder.of(MasonryFurnaceBlockEntity::new, EPBlocks.MASONRY_FURNACE.get()).build(null));
 
-    public static final RegistryObject<BlockEntityType<AdobeAlloyFurnaceBlockEntity>> ADOBE_ALLOYING_FURNACE_BLOCK_ENTITY =
-            BLOCK_ENTITIES.register("adobe_alloying_furnace", () -> BlockEntityType
-                    .Builder.of(AdobeAlloyFurnaceBlockEntity::new, EPBlocks.ADOBE_ALLOYING_FURNACE.get()).build(null));
-    public static final RegistryObject<BlockEntityType<SuperAlloyFurnaceBlockEntity>> SUPER_ALLOYING_FURNACE_BLOCK_ENTITY =
-            BLOCK_ENTITIES.register("super_alloying_furnace", () -> BlockEntityType
-                    .Builder.of(SuperAlloyFurnaceBlockEntity::new, EPBlocks.SUPER_ALLOYING_FURNACE.get()).build(null));
+    public static final RegistryObject<BlockEntityType<AdobeAlloyFurnaceBlockEntity>> ADOBE_ALLOY_FURNACE_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("adobe_alloy_furnace", () -> BlockEntityType
+                    .Builder.of(AdobeAlloyFurnaceBlockEntity::new, EPBlocks.ADOBE_ALLOY_FURNACE.get()).build(null));
+    public static final RegistryObject<BlockEntityType<SuperAlloyFurnaceBlockEntity>> SUPER_ALLOY_FURNACE_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("super_alloy_furnace", () -> BlockEntityType
+                    .Builder.of(SuperAlloyFurnaceBlockEntity::new, EPBlocks.SUPER_ALLOY_FURNACE.get()).build(null));
     public static final RegistryObject<BlockEntityType<SoulAlloyFurnaceBlockEntity>> SOUL_ALLOY_FURNACE_BLOCK_ENTITY =
             BLOCK_ENTITIES.register("soul_alloy_furnace", () -> BlockEntityType
                     .Builder.of(SoulAlloyFurnaceBlockEntity::new, EPBlocks.SOUL_ALLOY_FURNACE.get()).build(null));

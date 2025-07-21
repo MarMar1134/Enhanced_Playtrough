@@ -116,7 +116,7 @@ public class MechanicalGrinderBlock extends BaseEntityBlock implements EntityBlo
     @Nullable
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext pContext) {
-        return defaultBlockState().setValue(FACING, pContext.getHorizontalDirection().getOpposite());
+        return defaultBlockState().setValue(FACING, pContext.getHorizontalDirection());
     }
 
     static {

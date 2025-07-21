@@ -21,8 +21,8 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class EPItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(
-            ForgeRegistries.ITEMS, EnhancedPlaythrough.MOD_ID
-    );
+            ForgeRegistries.ITEMS, EnhancedPlaythrough.MOD_ID);
+
     //Ores
         //raw
         public static final RegistryObject<Item> SULFUR = ITEMS.register(
@@ -207,9 +207,11 @@ public class EPItems {
             "aluminum_rod", ()-> new Item(new Item.Properties()));
     public static final RegistryObject<Item> VEGETABLE_FIBBER = ITEMS.register(
             "vegetable_fibber", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> REED_HEAD = ITEMS.register(
+    public static final RegistryObject<Item> REEDS_HEAD = ITEMS.register(
             "reeds_head", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> WATER_REED_HEAD = ITEMS.register(
+    public static final RegistryObject<Item> TALL_REEDS_HEAD = ITEMS.register(
+            "tall_reeds_head", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> WATER_REEDS_HEAD = ITEMS.register(
             "water_reeds_head", () -> new Item(new Item.Properties()));
 
     //Spawn eggs

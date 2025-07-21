@@ -31,10 +31,10 @@ public class EPMenuTypes {
     public static final RegistryObject<MenuType<MasonryFurnaceMenu>> MASONRY_FURNACE_MENU =
             registerMenuType("masonry_furnace_menu", MasonryFurnaceMenu::new);
 
-    public static final RegistryObject<MenuType<AdobeAlloyFurnaceMenu>> ADOBE_ALLOYING_FURNACE_MENU =
-            registerMenuType("adobe_alloying_furnace_menu", AdobeAlloyFurnaceMenu::new);
-    public static final RegistryObject<MenuType<SuperAlloyFurnaceMenu>> SUPER_ALLOYING_FURNACE_MENU =
-            registerMenuType("super_alloying_furnace_menu", SuperAlloyFurnaceMenu::new);
+    public static final RegistryObject<MenuType<AdobeAlloyFurnaceMenu>> ADOBE_ALLOY_FURNACE_MENU =
+            registerMenuType("adobe_alloy_furnace_menu", AdobeAlloyFurnaceMenu::new);
+    public static final RegistryObject<MenuType<SuperAlloyFurnaceMenu>> SUPER_ALLOY_FURNACE_MENU =
+            registerMenuType("super_alloy_furnace_menu", SuperAlloyFurnaceMenu::new);
     public static final RegistryObject<MenuType<SoulAlloyFurnaceMenu>> SOUL_ALLOY_FURNACE_MENU =
             registerMenuType("soul_alloy_furnace_menu", SoulAlloyFurnaceMenu::new);
 

@@ -39,4 +39,4 @@ authors="Mar Mar" #optional
 #displayTest="MATCH_VERSION" # MATCH_VERSION is the default if nothing is specified (#optional)
 
 # The description text for the mod (multi line!) (#mandatory)
-description='''Enhanced Playthrough is a mod that adds lots of features to the game. Explore new resources and valuable items. Find new foods and crops for more variety for your diet.'''
+description='''Explore a diferent way to play Minecraft with new resources, foods and a rebalanced trade system.'''

@@ -279,7 +279,7 @@ public class EPBlockTagGenerator extends BlockTagsProvider {
         );
 
         this.tag(EPTags.Blocks.ALLOY_FURNACE).add(
-                EPBlocks.ADOBE_ALLOYING_FURNACE.get()
+                EPBlocks.ADOBE_ALLOY_FURNACE.get()
         );
 
         this.tag(Tags.Blocks.STONE).add(
@@ -331,9 +331,9 @@ public class EPBlockTagGenerator extends BlockTagsProvider {
                 EPBlocks.ADOBE_FURNACE.get(),
                 EPBlocks.SOUL_FURNACE.get(),
                 EPBlocks.MASONRY_FURNACE.get(),
-                EPBlocks.ADOBE_ALLOYING_FURNACE.get(),
+                EPBlocks.ADOBE_ALLOY_FURNACE.get(),
                 EPBlocks.SOUL_ALLOY_FURNACE.get(),
-                EPBlocks.SUPER_ALLOYING_FURNACE.get(),
+                EPBlocks.SUPER_ALLOY_FURNACE.get(),
                 EPBlocks.PRIMAL_GRINDER.get(),
                 EPBlocks.MECHANICAL_GRINDER.get(),
                 EPBlocks.GEM_POLISHER.get(),
@@ -493,7 +493,7 @@ public class EPBlockTagGenerator extends BlockTagsProvider {
         );
 
         this.tag(EPTags.Blocks.NEEDS_STEEL_TOOL).add(
-                EPBlocks.SUPER_ALLOYING_FURNACE.get(),
+                EPBlocks.SUPER_ALLOY_FURNACE.get(),
                 Blocks.DIAMOND_ORE,
                 Blocks.DIAMOND_BLOCK,
                 Blocks.DEEPSLATE,

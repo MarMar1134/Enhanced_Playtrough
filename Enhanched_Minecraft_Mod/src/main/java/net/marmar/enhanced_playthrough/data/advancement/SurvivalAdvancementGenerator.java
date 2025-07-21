@@ -23,8 +23,8 @@ public class SurvivalAdvancementGenerator implements ForgeAdvancementProvider.Ad
 
         //Root
         Advancement survival_root = Advancement.Builder.advancement()
-                .display(rootDisplayInfo(EPBlocks.ADOBE_ALLOYING_FURNACE.get(), "unity_makes_strength"))
-                .addCriterion("has_block", hasItems(EPBlocks.ADOBE_ALLOYING_FURNACE.get()))
+                .display(rootDisplayInfo(EPBlocks.ADOBE_ALLOY_FURNACE.get(), "unity_makes_strength"))
+                .addCriterion("has_block", hasItems(EPBlocks.ADOBE_ALLOY_FURNACE.get()))
                 .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "survival_root"), existingFileHelper);
 
         Advancement stone_age = Advancement.Builder.advancement()

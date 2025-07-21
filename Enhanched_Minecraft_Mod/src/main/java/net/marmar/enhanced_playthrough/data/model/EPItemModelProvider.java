@@ -20,7 +20,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 import java.util.LinkedHashMap;
 
-@SuppressWarnings({"nullable"})
+@SuppressWarnings({"all"})
 public class EPItemModelProvider extends ItemModelProvider {
     public EPItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
         super(output, EnhancedPlaythrough.MOD_ID, existingFileHelper);
@@ -160,19 +160,32 @@ public class EPItemModelProvider extends ItemModelProvider {
                 saplingAndCropItem(EPBlocks.LIME_SAPLING);
 
         //Wild crops
-        doubleBlockItem(EPBlocks.WILD_CORN);
-        saplingAndCropItem(EPBlocks.WILD_WHEAT);
-        saplingAndCropItem(EPBlocks.WILD_TOMATO);
+        doubleBlockItem(EPBlocks.WILD_CORN_CROP);
+        saplingAndCropItem(EPBlocks.WILD_WHEAT_CROP);
+        saplingAndCropItem(EPBlocks.WILD_TOMATO_CROP);
 
         //Plants
         saplingAndCropItem(EPBlocks.SMALL_REEDS);
-        doubleBlockItem(EPBlocks.REEDS);
-        doubleBlockItem(EPBlocks.TALL_REEDS);
+        doubleBlockWithAgeItem(EPBlocks.REEDS);
+        doubleBlockWithAgeItem(EPBlocks.TALL_REEDS);
         doubleBlockItem(EPBlocks.WATER_REEDS);
 
         //Flowers
         saplingAndCropItem(EPBlocks.COLD_LYRIUM);
         saplingAndCropItem(EPBlocks.SUCCULENT);
+
+        //Block entities
+        blockWithItem(EPBlocks.ADOBE_FURNACE);
+        blockWithItem(EPBlocks.SOUL_FURNACE);
+
+        blockWithItem(EPBlocks.MASONRY_FURNACE);
+
+        blockWithItem(EPBlocks.ADOBE_ALLOY_FURNACE);
+        blockWithItem(EPBlocks.SUPER_ALLOY_FURNACE);
+        blockWithItem(EPBlocks.SOUL_ALLOY_FURNACE);
+
+        blockWithItem(EPBlocks.PRIMAL_GRINDER);
+        blockWithItem(EPBlocks.MECHANICAL_GRINDER);
 
         //Food
         simpleItem(EPItems.RICE_GRAINS);
@@ -328,8 +341,9 @@ public class EPItemModelProvider extends ItemModelProvider {
         simpleItem(EPItems.FIREBRICK);
         simpleItem(EPItems.ALUMINUM_ROD);
         simpleItem(EPItems.VEGETABLE_FIBBER);
-        simpleItem(EPItems.REED_HEAD);
-        simpleItem(EPItems.WATER_REED_HEAD);
+        simpleItem(EPItems.REEDS_HEAD);
+        simpleItem(EPItems.TALL_REEDS_HEAD);
+        simpleItem(EPItems.WATER_REEDS_HEAD);
 
         //Spawn eggs
         spawnEggItem(EPItems.BANDIT_SPAWN_EGG);
@@ -667,6 +681,13 @@ public class EPItemModelProvider extends ItemModelProvider {
                 new ResourceLocation("item/generated")).texture ("layer0",
                 new ResourceLocation(EnhancedPlaythrough.MOD_ID,
                         "block/" + item.getId().getPath() + "_upper"));
+    }
+
+    private ItemModelBuilder doubleBlockWithAgeItem(RegistryObject<Block> item){
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture ("layer0",
+                new ResourceLocation(EnhancedPlaythrough.MOD_ID,
+                        "block/" + item.getId().getPath() + "_upper_1"));
     }
 
     private ItemModelBuilder saplingAndCropItem(RegistryObject<Block> item) {

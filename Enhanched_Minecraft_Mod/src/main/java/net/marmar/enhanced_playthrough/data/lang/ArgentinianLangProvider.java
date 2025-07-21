@@ -122,9 +122,9 @@ public class ArgentinianLangProvider extends AbstractLangProvider {
 
         //Blocks
             //Wild crops
-            addBlock(EPBlocks.WILD_WHEAT, "Trigo silvestre");
-            addBlock(EPBlocks.WILD_TOMATO, "Tomate silvestre");
-            addBlock(EPBlocks.WILD_CORN, "Choclo silvestre");
+            addBlock(EPBlocks.WILD_WHEAT_CROP, "Trigo silvestre");
+            addBlock(EPBlocks.WILD_TOMATO_CROP, "Tomate silvestre");
+            addBlock(EPBlocks.WILD_CORN_CROP, "Choclo silvestre");
 
             //Plants
             addBlock(EPBlocks.TALL_REEDS, "Carrizo");
@@ -320,9 +320,9 @@ public class ArgentinianLangProvider extends AbstractLangProvider {
         addBlock(EPBlocks.ADOBE_FURNACE, "Horno de adobe");
         addBlock(EPBlocks.SOUL_FURNACE, "Horno de adobe de almas");
         addBlock(EPBlocks.MASONRY_FURNACE, "Horno de mamposteria");
-        addBlock(EPBlocks.ADOBE_ALLOYING_FURNACE, "Horno de aleación de larillos");
+        addBlock(EPBlocks.ADOBE_ALLOY_FURNACE, "Horno de aleación de larillos");
         addBlock(EPBlocks.SOUL_ALLOY_FURNACE, "Horno de aleación de almas");
-        addBlock(EPBlocks.SUPER_ALLOYING_FURNACE, "Alto horno de aleación");
+        addBlock(EPBlocks.SUPER_ALLOY_FURNACE, "Alto horno de aleación");
         addBlock(EPBlocks.GEM_POLISHER, "Mesa de pulido");
         addBlock(EPBlocks.PRIMAL_GRINDER, "Moledora");
         addBlock(EPBlocks.MECHANICAL_GRINDER, "Moledora mecánizada");
@@ -373,8 +373,9 @@ public class ArgentinianLangProvider extends AbstractLangProvider {
         addItem(EPItems.FIREBRICK, "Ladrillo refractario");
         addItem(EPItems.ALUMINUM_ROD, "Vara de aluminio");
         addItem(EPItems.COBALT, "Cobalto");
-        addItem(EPItems.REED_HEAD, "Cabeza de caña");
-        addItem(EPItems.WATER_REED_HEAD, "Cabeza de junco");
+        addItem(EPItems.REEDS_HEAD, "Cabeza de plumero");
+        addItem(EPItems.TALL_REEDS_HEAD, "Cabeza de carrizo");
+        addItem(EPItems.WATER_REEDS_HEAD, "Cabeza de junco");
         addItem(EPItems.VEGETABLE_FIBBER, "Fibra vegetal");
 
         //Cobble

@@ -1,6 +1,6 @@
 {
   "values": [
-    "enhanced_playthrough:super_alloying_furnace",
+    "enhanced_playthrough:super_alloy_furnace",
     "minecraft:diamond_ore",
     "minecraft:diamond_block",
     "minecraft:deepslate",
@@ -34,7 +34,7 @@
     "enhanced_playthrough:deepslate_zinc_ore",
     "enhanced_playthrough:deepslate_sulfur_ore",
     "enhanced_playthrough:deepslate_silver_ore",
-    "enhanced_playthrough:deepslate_rubi_ore",
+    "enhanced_playthrough:deepslate_ruby_ore",
     "enhanced_playthrough:deepslate_sapphire_ore",
     "enhanced_playthrough:steel_block"
   ]

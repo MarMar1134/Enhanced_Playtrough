@@ -19,7 +19,7 @@ public class EPTabs {
 
     public static final RegistryObject<CreativeModeTab> UTILITY_BLOCKS = TABS.register(
             "utility_blocks", () -> CreativeModeTab.builder()
-                    .icon(() -> new ItemStack(EPBlocks.ADOBE_ALLOYING_FURNACE.get()))
+                    .icon(() -> new ItemStack(EPBlocks.ADOBE_ALLOY_FURNACE.get()))
                     .title(Component.translatable("creativetab." + EnhancedPlaythrough.MOD_ID + ".utility_blocks"))
                     .withTabsAfter(EPTabs.UTILITY.getId())
                     .displayItems(((itemDisplayParameters, output) -> {
@@ -28,8 +28,8 @@ public class EPTabs {
 
                         output.accept(EPBlocks.MASONRY_FURNACE.get());
 
-                        output.accept(EPBlocks.ADOBE_ALLOYING_FURNACE.get());
-                        output.accept(EPBlocks.SUPER_ALLOYING_FURNACE.get());
+                        output.accept(EPBlocks.ADOBE_ALLOY_FURNACE.get());
+                        output.accept(EPBlocks.SUPER_ALLOY_FURNACE.get());
                         output.accept(EPBlocks.SOUL_ALLOY_FURNACE.get());
 
                         output.accept(EPBlocks.GEM_POLISHER.get());
@@ -84,8 +84,9 @@ public class EPTabs {
                         output.accept(EPItems.TERRACOTTA_SHARD.get());
 
                         //Misc
-                        output.accept(EPItems.REED_HEAD.get());
-                        output.accept(EPItems.WATER_REED_HEAD.get());
+                        output.accept(EPItems.REEDS_HEAD.get());
+                        output.accept(EPItems.TALL_REEDS_HEAD.get());
+                        output.accept(EPItems.WATER_REEDS_HEAD.get());
                         output.accept(EPItems.VEGETABLE_FIBBER.get());
                         output.accept(EPItems.MUD_BRICK.get());
                         output.accept(EPItems.FIREBRICK.get());
@@ -540,9 +541,9 @@ public class EPTabs {
                         output.accept(EPBlocks.TALL_REEDS.get());
                         output.accept(EPBlocks.WATER_REEDS.get());
 
-                        output.accept(EPBlocks.WILD_WHEAT.get());
-                        output.accept(EPBlocks.WILD_TOMATO.get());
-                        output.accept(EPBlocks.WILD_CORN.get());
+                        output.accept(EPBlocks.WILD_WHEAT_CROP.get());
+                        output.accept(EPBlocks.WILD_TOMATO_CROP.get());
+                        output.accept(EPBlocks.WILD_CORN_CROP.get());
 
                         output.accept(EPBlocks.COLD_LYRIUM.get());
                         output.accept(EPBlocks.SUCCULENT.get());

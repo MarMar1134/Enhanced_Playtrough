@@ -4810,5 +4810,11 @@
     },
     "done": true
   },
+  "minecraft:husbandry/axolotl_in_a_bucket": {
+    "criteria": {
+      "axolotl_bucket": "2025-07-17 21:58:02 -0300"
+    },
+    "done": true
+  },
   "DataVersion": 3465
 }

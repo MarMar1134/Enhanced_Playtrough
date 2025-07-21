@@ -16,12 +16,14 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import net.minecraftforge.common.ForgeHooks;
 import net.minecraftforge.common.IPlantable;
 
 public class CornCropBlock extends CropBlock {
     public static final int FIRST_MAX_AGE = 4;
     public static final int SECOND_MAX_AGE = 3;
     public static final IntegerProperty AGE = BlockStateProperties.AGE_7;
+
     public CornCropBlock(Properties pProperties) {
         super(pProperties);
     }
@@ -34,7 +36,7 @@ public class CornCropBlock extends CropBlock {
             if (currentAge < this.getMaxAge()) {
                 float growthSpeed = getGrowthSpeed(this, pLevel, pPos);
 
-                if (net.minecraftforge.common.ForgeHooks.onCropsGrowPre(pLevel, pPos, pState, pRandom.nextInt((int)(25.0F / growthSpeed) + 1) == 0)) {
+                if (ForgeHooks.onCropsGrowPre(pLevel, pPos, pState, pRandom.nextInt((int)(25.0F / growthSpeed) + 1) == 0)) {
                     if(currentAge == FIRST_MAX_AGE) {
                         if(pLevel.getBlockState(pPos.above(1)).is(Blocks.AIR)) {
                             pLevel.setBlock(pPos.above(1), this.getStateForAge(currentAge + 1), 2);
@@ -43,7 +45,7 @@ public class CornCropBlock extends CropBlock {
                         pLevel.setBlock(pPos, this.getStateForAge(currentAge + 1), 2);
                     }
 
-                    net.minecraftforge.common.ForgeHooks.onCropsGrowPost(pLevel, pPos, pState);
+                   ForgeHooks.onCropsGrowPost(pLevel, pPos, pState);
                 }
             }
         }

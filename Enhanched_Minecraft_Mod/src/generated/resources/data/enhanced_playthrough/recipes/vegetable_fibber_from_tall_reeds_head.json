@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "vegetable_fiber",
+  "ingredients": [
+    {
+      "item": "enhanced_playthrough:tall_reeds_head"
+    },
+    {
+      "item": "enhanced_playthrough:tall_reeds_head"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "enhanced_playthrough:vegetable_fibber"
+  }
+}

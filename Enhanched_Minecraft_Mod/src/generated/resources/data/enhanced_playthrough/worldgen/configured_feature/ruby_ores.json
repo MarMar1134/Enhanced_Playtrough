@@ -6,7 +6,7 @@
     "targets": [
       {
         "state": {
-          "Name": "enhanced_playthrough:rubi_ore"
+          "Name": "enhanced_playthrough:ruby_ore"
         },
         "target": {
           "predicate_type": "minecraft:tag_match",
@@ -15,7 +15,7 @@
       },
       {
         "state": {
-          "Name": "enhanced_playthrough:deepslate_rubi_ore"
+          "Name": "enhanced_playthrough:deepslate_ruby_ore"
         },
         "target": {
           "predicate_type": "minecraft:tag_match",

@@ -10,6 +10,7 @@
             "state": {
               "Name": "enhanced_playthrough:reeds",
               "Properties": {
+                "age": "0",
                 "half": "lower"
               }
             }

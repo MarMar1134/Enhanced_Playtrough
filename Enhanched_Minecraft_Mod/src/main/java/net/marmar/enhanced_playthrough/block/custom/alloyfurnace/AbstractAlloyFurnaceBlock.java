@@ -115,7 +115,7 @@ public abstract class AbstractAlloyFurnaceBlock extends BaseEntityBlock implemen
     @Nullable
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext pContext) {
-        return defaultBlockState().setValue(FACING, pContext.getHorizontalDirection().getOpposite());
+        return defaultBlockState().setValue(FACING, pContext.getHorizontalDirection());
     }
 
     static {

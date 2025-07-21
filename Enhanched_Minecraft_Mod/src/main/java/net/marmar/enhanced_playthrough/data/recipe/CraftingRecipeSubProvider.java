@@ -103,19 +103,27 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .unlockedBy(getHasName(EPItems.ALUMINUM_INGOT.get()), has(EPItems.ALUMINUM_INGOT.get()))
                 .save(consumer);
 
+        //Vegetable fibber
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EPItems.VEGETABLE_FIBBER.get())
-                .requires(EPItems.REED_HEAD.get(), 2)
+                .requires(EPItems.REEDS_HEAD.get(), 2)
                 .group("vegetable_fiber")
-                .unlockedBy(getHasName(EPItems.REED_HEAD.get()), has(EPItems.REED_HEAD.get()))
+                .unlockedBy(getHasName(EPItems.REEDS_HEAD.get()), has(EPItems.REEDS_HEAD.get()))
                 .unlockedBy(getHasName(EPItems.VEGETABLE_FIBBER.get()), has(EPItems.VEGETABLE_FIBBER.get()))
-                .save(consumer, recipeName(EPItems.VEGETABLE_FIBBER.get(), "from_reed_head"));
+                .save(consumer, recipeName(EPItems.VEGETABLE_FIBBER.get(), "from_reeds_head"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EPItems.VEGETABLE_FIBBER.get(), 2)
+                .requires(EPItems.TALL_REEDS_HEAD.get(), 2)
+                .group("vegetable_fiber")
+                .unlockedBy(getHasName(EPItems.TALL_REEDS_HEAD.get()), has(EPItems.TALL_REEDS_HEAD.get()))
+                .unlockedBy(getHasName(EPItems.VEGETABLE_FIBBER.get()), has(EPItems.VEGETABLE_FIBBER.get()))
+                .save(consumer, recipeName(EPItems.VEGETABLE_FIBBER.get(), "from_tall_reeds_head"));
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EPItems.VEGETABLE_FIBBER.get())
-                .requires(EPItems.WATER_REED_HEAD.get(), 4)
+                .requires(EPItems.WATER_REEDS_HEAD.get(), 4)
                 .group("vegetable_fiber")
-                .unlockedBy(getHasName(EPItems.WATER_REED_HEAD.get()), has(EPItems.WATER_REED_HEAD.get()))
+                .unlockedBy(getHasName(EPItems.WATER_REEDS_HEAD.get()), has(EPItems.WATER_REEDS_HEAD.get()))
                 .unlockedBy(getHasName(EPItems.VEGETABLE_FIBBER.get()), has(EPItems.VEGETABLE_FIBBER.get()))
-                .save(consumer, recipeName(EPItems.VEGETABLE_FIBBER.get(), "from_water_reed_head"));
+                .save(consumer, recipeName(EPItems.VEGETABLE_FIBBER.get(), "from_water_reeds_head"));
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EPItems.COPPER_NUGGET.get(), 9)
                 .requires(Items.COPPER_INGOT)
@@ -256,7 +264,7 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .unlockedBy(getHasName(EPBlocks.MASONRY_FURNACE.get()), has(EPBlocks.MASONRY_FURNACE.get()))
                 .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, EPBlocks.ADOBE_ALLOYING_FURNACE.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, EPBlocks.ADOBE_ALLOY_FURNACE.get())
                 .pattern("###")
                 .pattern("#A#")
                 .pattern("III")
@@ -264,16 +272,16 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .define('A', EPBlocks.ADOBE_FURNACE.get())
                 .define('I', Blocks.COBBLESTONE)
                 .unlockedBy(getHasName(EPBlocks.ADOBE_FURNACE.get()), has(EPBlocks.ADOBE_FURNACE.get()))
-                .unlockedBy(getHasName(EPBlocks.ADOBE_ALLOYING_FURNACE.get()), has(EPBlocks.ADOBE_ALLOYING_FURNACE.get()))
+                .unlockedBy(getHasName(EPBlocks.ADOBE_ALLOY_FURNACE.get()), has(EPBlocks.ADOBE_ALLOY_FURNACE.get()))
                 .unlockedBy(getHasName(EPItems.RAW_TIN.get()), has(EPItems.RAW_TIN.get()))
                 .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, EPBlocks.SUPER_ALLOYING_FURNACE.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, EPBlocks.SUPER_ALLOY_FURNACE.get())
                 .pattern("###")
                 .pattern("#A#")
                 .pattern("III")
                 .define('#', EPItems.STEEL_INGOT.get())
-                .define('A', EPBlocks.ADOBE_ALLOYING_FURNACE.get())
+                .define('A', EPBlocks.ADOBE_ALLOY_FURNACE.get())
                 .define('I', Blocks.COBBLED_DEEPSLATE)
                 .unlockedBy(getHasName(Blocks.COBBLED_DEEPSLATE), has(Blocks.COBBLED_DEEPSLATE))
                 .save(consumer);

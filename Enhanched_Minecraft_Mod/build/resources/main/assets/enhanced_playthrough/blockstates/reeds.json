@@ -1,10 +1,16 @@
 {
   "variants": {
-    "half=lower": {
-      "model": "enhanced_playthrough:block/reeds_lower"
+    "age=0,half=lower": {
+      "model": "enhanced_playthrough:block/reeds_lower_0"
     },
-    "half=upper": {
-      "model": "enhanced_playthrough:block/reeds_upper"
+    "age=0,half=upper": {
+      "model": "enhanced_playthrough:block/reeds_upper_0"
+    },
+    "age=1,half=lower": {
+      "model": "enhanced_playthrough:block/reeds_lower_1"
+    },
+    "age=1,half=upper": {
+      "model": "enhanced_playthrough:block/reeds_upper_1"
     }
   }
 }

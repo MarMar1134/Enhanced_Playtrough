@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "bottom": "enhanced_playthrough:block/adobe_alloy_furnace_bottom",
+    "front": "enhanced_playthrough:block/adobe_alloy_furnace_front",
+    "side": "enhanced_playthrough:block/adobe_alloy_furnace_side",
+    "top": "enhanced_playthrough:block/adobe_alloy_furnace_top"
+  }
+}

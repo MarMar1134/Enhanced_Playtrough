@@ -279,13 +279,13 @@ public class EPConfiguredFeatures {
         //Wild crops
         register(context, WILD_WHEAT, Feature.RANDOM_PATCH,
                 FeatureUtils.simplePatchConfiguration(Feature.SIMPLE_BLOCK,
-                        new SimpleBlockConfiguration(BlockStateProvider.simple(EPBlocks.WILD_WHEAT.get()))));
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(EPBlocks.WILD_WHEAT_CROP.get()))));
         register(context, WILD_TOMATO, Feature.RANDOM_PATCH,
                 FeatureUtils.simplePatchConfiguration(Feature.SIMPLE_BLOCK,
-                        new SimpleBlockConfiguration(BlockStateProvider.simple(EPBlocks.WILD_TOMATO.get()))));
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(EPBlocks.WILD_TOMATO_CROP.get()))));
         register(context, WILD_CORN, Feature.RANDOM_PATCH,
                 FeatureUtils.simplePatchConfiguration(Feature.SIMPLE_BLOCK,
-                        new SimpleBlockConfiguration(BlockStateProvider.simple(EPBlocks.WILD_CORN.get()))));
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(EPBlocks.WILD_CORN_CROP.get()))));
 
         //Plants
         register(context, SMALL_REEDS_OVERWORLD, Feature.RANDOM_PATCH,

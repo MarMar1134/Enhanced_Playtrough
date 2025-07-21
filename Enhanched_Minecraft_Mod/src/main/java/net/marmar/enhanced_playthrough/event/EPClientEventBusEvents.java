@@ -90,8 +90,8 @@ public class EPClientEventBusEvents {
 
         MenuScreens.register(EPMenuTypes.MASONRY_FURNACE_MENU.get(), MasonryFurnaceScreen::new);
 
-        MenuScreens.register(EPMenuTypes.ADOBE_ALLOYING_FURNACE_MENU.get(), AdobeAlloyFurnaceScreen::new);
-        MenuScreens.register(EPMenuTypes.SUPER_ALLOYING_FURNACE_MENU.get(), SuperAlloyFurnaceScreen::new);
+        MenuScreens.register(EPMenuTypes.ADOBE_ALLOY_FURNACE_MENU.get(), AdobeAlloyFurnaceScreen::new);
+        MenuScreens.register(EPMenuTypes.SUPER_ALLOY_FURNACE_MENU.get(), SuperAlloyFurnaceScreen::new);
         MenuScreens.register(EPMenuTypes.SOUL_ALLOY_FURNACE_MENU.get(), SoulAlloyScreen::new);
 
         MenuScreens.register(EPMenuTypes.GEM_POLISHER_MENU.get(), GemPolisherScreen::new);

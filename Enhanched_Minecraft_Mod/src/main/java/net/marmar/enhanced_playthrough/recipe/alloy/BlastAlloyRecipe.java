@@ -45,7 +45,7 @@ public class BlastAlloyRecipe extends AbstractAlloyRecipe implements Recipe<Simp
 
     @Override
     public ItemStack getToastSymbol() {
-        return new ItemStack(EPBlocks.SUPER_ALLOYING_FURNACE.get());
+        return new ItemStack(EPBlocks.SUPER_ALLOY_FURNACE.get());
     }
 
     public static class Type implements RecipeType<BlastAlloyRecipe>{

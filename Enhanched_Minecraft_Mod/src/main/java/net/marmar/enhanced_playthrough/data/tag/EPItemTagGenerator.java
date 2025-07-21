@@ -21,6 +21,7 @@ public class EPItemTagGenerator extends ItemTagsProvider {
         super(packOutput, lookupProvider, lookupProviderBlocks, EnhancedPlaythrough.MOD_ID, existingFileHelper);
     }
 
+    @SuppressWarnings("unchecked")
     @Override
     protected void addTags(HolderLookup.Provider provider) {
         this.tag(ItemTags.LOGS_THAT_BURN).add(

@@ -8,10 +8,10 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 
 public class AdobeAlloyFurnaceMenu extends AbstractAlloyFurnaceMenu {
     public AdobeAlloyFurnaceMenu(int containerID, Inventory inv, FriendlyByteBuf extraData) {
-        super(EPMenuTypes.ADOBE_ALLOYING_FURNACE_MENU.get(), containerID, inv, extraData);
+        super(EPMenuTypes.ADOBE_ALLOY_FURNACE_MENU.get(), containerID, inv, extraData);
     }
 
     public AdobeAlloyFurnaceMenu(int containerID, Inventory inv, BlockEntity entity, ContainerData data) {
-        super(EPMenuTypes.ADOBE_ALLOYING_FURNACE_MENU.get(), containerID, inv, entity, data);
+        super(EPMenuTypes.ADOBE_ALLOY_FURNACE_MENU.get(), containerID, inv, entity, data);
     }
 }

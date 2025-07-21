@@ -5,7 +5,7 @@
         "items": [
           {
             "items": [
-              "enhanced_playthrough:adobe_alloying_furnace"
+              "enhanced_playthrough:adobe_alloy_furnace"
             ]
           }
         ]
@@ -22,7 +22,7 @@
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "enhanced_playthrough:adobe_alloying_furnace"
+      "item": "enhanced_playthrough:adobe_alloy_furnace"
     },
     "show_toast": false,
     "title": {
