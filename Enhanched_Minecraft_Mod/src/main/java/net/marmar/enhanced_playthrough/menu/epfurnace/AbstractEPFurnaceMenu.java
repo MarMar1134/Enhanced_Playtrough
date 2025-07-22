@@ -40,7 +40,7 @@ public abstract class AbstractEPFurnaceMenu extends AbstractContainerMenu {
                 addSlot(new SlotItemHandler(itemStackHandler, 0, 56, 17){
                     @Override
                     public boolean mayPlace(@NotNull ItemStack stack) {
-                        return blockEntity instanceof MasonryFurnaceBlockEntity ? stack.is(EPTags.Items.MASONRY_INGREDIENT) : stack.is(EPTags.Items.BASIC_INGREDIENT);
+                        return blockEntity instanceof MasonryFurnaceBlockEntity ? stack.is(EPTags.Items.MASONRY_INGREDIENT) : stack.is(EPTags.Items.BASIC_SMELT_INGREDIENT);
                     }
                 }));
 

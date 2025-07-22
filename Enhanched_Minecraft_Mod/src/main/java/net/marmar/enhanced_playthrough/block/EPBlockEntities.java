@@ -10,8 +10,8 @@ import net.marmar.enhanced_playthrough.block.custom.gempolisher.GemPolisherBlock
 import net.marmar.enhanced_playthrough.block.custom.grinder.entity.MechanicalGrinderBlockEntity;
 import net.marmar.enhanced_playthrough.block.custom.grinder.entity.PrimalGrinderBlockEntity;
 import net.marmar.enhanced_playthrough.block.custom.epfurnace.entity.MasonryFurnaceBlockEntity;
-import net.marmar.enhanced_playthrough.block.custom.wood.sign.entity.ModHangingSignBlockEntity;
-import net.marmar.enhanced_playthrough.block.custom.wood.sign.entity.ModSignBlockEntity;
+import net.marmar.enhanced_playthrough.block.custom.wood.sign.entity.EPHangingSignBlockEntity;
+import net.marmar.enhanced_playthrough.block.custom.wood.sign.entity.EPSignBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -55,9 +55,9 @@ public class EPBlockEntities {
                     .Builder.of(MechanicalGrinderBlockEntity::new, EPBlocks.MECHANICAL_GRINDER.get()).build(null));
 
     //Signs
-    public static final RegistryObject<BlockEntityType<ModSignBlockEntity>> SIGN_BLOCK_ENTITY =
+    public static final RegistryObject<BlockEntityType<EPSignBlockEntity>> SIGN_BLOCK_ENTITY =
             BLOCK_ENTITIES.register("mod_sign_block", () -> BlockEntityType
-                    .Builder.of(ModSignBlockEntity::new,
+                    .Builder.of(EPSignBlockEntity::new,
                             EPBlocks.WALNUT_SIGN.get(), EPBlocks.WALNUT_WALL_SIGN.get(),
                             EPBlocks.APPLE_SIGN.get(), EPBlocks.APPLE_WALL_SIGN.get(),
                             EPBlocks.ORANGE_SIGN.get(), EPBlocks.ORANGE_WALL_SIGN.get(),
@@ -65,9 +65,9 @@ public class EPBlockEntities {
                     .build(null));
 
     //Hanging signs
-    public static final RegistryObject<BlockEntityType<ModHangingSignBlockEntity>> HANGING_SIGN_BLOCK_ENTITY =
+    public static final RegistryObject<BlockEntityType<EPHangingSignBlockEntity>> HANGING_SIGN_BLOCK_ENTITY =
             BLOCK_ENTITIES.register("mod_hanging_sign_block", () -> BlockEntityType
-                    .Builder.of(ModHangingSignBlockEntity::new,
+                    .Builder.of(EPHangingSignBlockEntity::new,
                             EPBlocks.WALNUT_HANGING_SIGN.get(), EPBlocks.WALNUT_WALL_HANGING_SIGN.get(),
                             EPBlocks.APPLE_HANGING_SIGN.get(), EPBlocks.APPLE_WALL_HANGING_SIGN.get(),
                             EPBlocks.ORANGE_HANGING_SIGN.get(), EPBlocks.ORANGE_WALL_HANGING_SIGN.get(),

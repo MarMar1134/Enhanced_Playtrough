@@ -1,7 +1,7 @@
-// 1.20.1	2025-07-20T10:21:43.3682839	Tags for minecraft:block mod id enhanced_playthrough
+// 1.20.1	2025-07-21T15:25:41.5583246	Tags for minecraft:block mod id enhanced_playthrough
 79753f202ed6cd2b07dd609dec19558e6c68c837 data/enhanced_playthrough/tags/blocks/alloy_furnace.json
 47a02117dd60bac3b440fb46f534e4d5442d0e64 data/enhanced_playthrough/tags/blocks/basic_furnace.json
-245378e75a40ed5a8e70756f73fa0c2f31a2e7df data/enhanced_playthrough/tags/blocks/bauxite_ore.json
+245378e75a40ed5a8e70756f73fa0c2f31a2e7df data/enhanced_playthrough/tags/blocks/bauxite_ores.json
 1f5cf10f07e099c1622d22f405556db4cd56ef09 data/enhanced_playthrough/tags/blocks/desert_flower_base.json
 023988d30dc163bbcd76c736a27aa7bc15a6b5f1 data/enhanced_playthrough/tags/blocks/needs_blue_gold_tool.json
 d3c28a03337da0044db4602dc42545d2a430a227 data/enhanced_playthrough/tags/blocks/needs_brass_tool.json

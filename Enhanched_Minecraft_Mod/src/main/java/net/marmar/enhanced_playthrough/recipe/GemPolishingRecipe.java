@@ -1,6 +1,5 @@
 package net.marmar.enhanced_playthrough.recipe;
 
-import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import net.marmar.enhanced_playthrough.recipe.recipecategory.ModRecipeCategory;
@@ -21,18 +20,18 @@ public class GemPolishingRecipe implements Recipe<SimpleContainer> {
     private final ModRecipeCategory category;
     private final String group;
 
-    public GemPolishingRecipe(Ingredient input, ItemStack output, ResourceLocation id, ModRecipeCategory category, String group) {
-        this.input = input;
-        this.output = output;
-        this.id = id;
-        this.category = category;
-        this.group = group;
+    public GemPolishingRecipe(Ingredient pInput, ItemStack pOutput, ResourceLocation RecipeId, ModRecipeCategory pCategory, String pGroup) {
+        this.input = pInput;
+        this.output = pOutput;
+        this.id = RecipeId;
+        this.category = pCategory;
+        this.group = pGroup;
     }
-
 
     public Ingredient getIngredient() {
         return this.input;
     }
+
     @Override
     public boolean matches(SimpleContainer simpleContainer, Level level) {
         if (level.isClientSide){
@@ -73,12 +72,10 @@ public class GemPolishingRecipe implements Recipe<SimpleContainer> {
 
     public static class Type implements RecipeType<GemPolishingRecipe>{
         public static final Type INSTANCE = new Type();
-        private static final String ID = "gem_polishing";
     }
 
     public static class Serializer implements RecipeSerializer<GemPolishingRecipe>{
         public static final Serializer INSTANCE = new Serializer();
-        public static final ResourceLocation ID = new ResourceLocation(EnhancedPlaythrough.MOD_ID, "gem_polishing");
 
         @Override
         public GemPolishingRecipe fromJson(ResourceLocation resourceLocation, JsonObject jsonObject) {

@@ -1,7 +1,7 @@
 {
   "parent": "enhanced_playthrough:polish_emerald",
   "criteria": {
-    "has_material": {
+    "has_sapphire": {
       "conditions": {
         "items": [
           {
@@ -32,7 +32,7 @@
   },
   "requirements": [
     [
-      "has_material"
+      "has_sapphire"
     ]
   ],
   "sends_telemetry_event": true

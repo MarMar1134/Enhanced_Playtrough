@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "TagKey[minecraft:item / enhanced_playthrough:tin_manufacturable]": {
+    "TagKey[minecraft:item / enhanced_playthrough:manufacturable/tin]": {
       "conditions": {
         "items": [
           {
-            "tag": "enhanced_playthrough:tin_manufacturable"
+            "tag": "enhanced_playthrough:manufacturable/tin"
           }
         ]
       },
@@ -20,7 +20,7 @@
   },
   "requirements": [
     [
-      "TagKey[minecraft:item / enhanced_playthrough:tin_manufacturable]",
+      "TagKey[minecraft:item / enhanced_playthrough:manufacturable/tin]",
       "has_the_recipe"
     ]
   ],

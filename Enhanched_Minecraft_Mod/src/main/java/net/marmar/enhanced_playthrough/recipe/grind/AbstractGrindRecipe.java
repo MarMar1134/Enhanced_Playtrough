@@ -11,17 +11,18 @@ import net.minecraft.world.level.Level;
 public abstract class AbstractGrindRecipe implements Recipe<SimpleContainer> {
     private final Ingredient input;
     private final ItemStack output;
-    private final ResourceLocation id;
+    private final ResourceLocation recipeId;
 
-    public AbstractGrindRecipe(Ingredient pInput, ItemStack pOutput, ResourceLocation id){
+    public AbstractGrindRecipe(Ingredient pInput, ItemStack pOutput, ResourceLocation pRecipeId){
         this.input = pInput;
         this.output = pOutput;
-        this.id = id;
+        this.recipeId = pRecipeId;
     }
 
     public Ingredient getIngredient() {
         return this.input;
     }
+
     @Override
     public boolean matches(SimpleContainer simpleContainer, Level level) {
         if (level.isClientSide){
@@ -47,6 +48,6 @@ public abstract class AbstractGrindRecipe implements Recipe<SimpleContainer> {
 
     @Override
     public ResourceLocation getId() {
-        return id;
+        return recipeId;
     }
 }

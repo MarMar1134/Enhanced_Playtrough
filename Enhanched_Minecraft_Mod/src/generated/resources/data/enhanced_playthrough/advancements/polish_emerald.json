@@ -1,7 +1,7 @@
 {
   "parent": "enhanced_playthrough:gem_root",
   "criteria": {
-    "has_material": {
+    "has_emerald": {
       "conditions": {
         "items": [
           {
@@ -32,7 +32,7 @@
   },
   "requirements": [
     [
-      "has_material"
+      "has_emerald"
     ]
   ],
   "sends_telemetry_event": true

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.6,
+  "group": "cobalt",
+  "ingredient": {
+    "tag": "enhanced_playthrough:ores/cobalt"
+  },
+  "result": "enhanced_playthrough:cobalt"
+}

@@ -1,14 +1,36 @@
 {
   "parent": "enhanced_playthrough:survival_root",
   "criteria": {
-    "has_items": {
+    "has_blue_gold_ingot": {
       "conditions": {
         "items": [
           {
             "items": [
-              "enhanced_playthrough:rose_gold_ingot",
-              "enhanced_playthrough:green_gold_ingot",
               "enhanced_playthrough:blue_gold_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_green_gold_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:green_gold_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_rose_gold_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:rose_gold_ingot"
             ]
           }
         ]
@@ -35,8 +57,17 @@
   },
   "requirements": [
     [
-      "has_items"
+      "has_rose_gold_ingot"
+    ],
+    [
+      "has_green_gold_ingot"
+    ],
+    [
+      "has_blue_gold_ingot"
     ]
   ],
+  "rewards": {
+    "experience": 400
+  },
   "sends_telemetry_event": true
 }

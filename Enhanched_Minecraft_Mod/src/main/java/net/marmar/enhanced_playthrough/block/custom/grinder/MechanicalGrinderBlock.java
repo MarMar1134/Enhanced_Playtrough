@@ -35,7 +35,7 @@ public class MechanicalGrinderBlock extends BaseEntityBlock implements EntityBlo
     public static final BooleanProperty ON;
     public MechanicalGrinderBlock(Properties pProperties) {
         super(pProperties);
-        registerDefaultState(defaultBlockState().setValue(FACING, Direction.NORTH).setValue(ON, false));
+        registerDefaultState(defaultBlockState().setValue(FACING, Direction.SOUTH).setValue(ON, false));
     }
 
     @Nullable

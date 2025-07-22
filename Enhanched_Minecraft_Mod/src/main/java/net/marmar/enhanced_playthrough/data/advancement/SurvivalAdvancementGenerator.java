@@ -5,7 +5,9 @@ import net.marmar.enhanced_playthrough.block.EPBlocks;
 import net.marmar.enhanced_playthrough.data.tag.EPTags;
 import net.marmar.enhanced_playthrough.item.EPItems;
 import net.minecraft.advancements.Advancement;
+import net.minecraft.advancements.AdvancementRewards;
 import net.minecraft.advancements.RequirementsStrategy;
+import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.resources.ResourceLocation;
@@ -18,8 +20,6 @@ public class SurvivalAdvancementGenerator implements ForgeAdvancementProvider.Ad
     @Override
     public void generate(HolderLookup.Provider provider, Consumer<Advancement> consumer, ExistingFileHelper existingFileHelper) {
         ItemPredicate hasCobble = ItemPredicate.Builder.item().of(EPTags.Items.COBBLE).build();
-        ItemPredicate specialGoldenIngots = ItemPredicate.Builder.item()
-                .of(EPItems.ROSE_GOLD_INGOT.get(), EPItems.GREEN_GOLD_INGOT.get(), EPItems.BLUE_GOLD_INGOT.get()).build();
 
         //Root
         Advancement survival_root = Advancement.Builder.advancement()
@@ -80,7 +80,10 @@ public class SurvivalAdvancementGenerator implements ForgeAdvancementProvider.Ad
         Advancement the_goldenpuff_girls = Advancement.Builder.advancement()
                 .parent(survival_root)
                 .display(challengeDisplayInfo(EPItems.BLUE_GOLDEN_SWORD.get(), "the_goldenpuff_girls"))
-                .addCriterion("has_items", hasItems(specialGoldenIngots))
+                .addCriterion("has_rose_gold_ingot", InventoryChangeTrigger.TriggerInstance.hasItems(EPItems.ROSE_GOLD_INGOT.get()))
+                .addCriterion("has_green_gold_ingot", InventoryChangeTrigger.TriggerInstance.hasItems(EPItems.GREEN_GOLD_INGOT.get()))
+                .addCriterion("has_blue_gold_ingot", InventoryChangeTrigger.TriggerInstance.hasItems(EPItems.BLUE_GOLD_INGOT.get()))
+                .rewards(AdvancementRewards.Builder.experience(100))
                 .requirements(RequirementsStrategy.AND)
                 .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "the_goldenpuff_girls"), existingFileHelper);
     }

@@ -1,7 +1,7 @@
 {
   "type": "enhanced_playthrough:gem_polishing",
   "category": "gem_polish",
-  "group": "gems",
+  "group": "emerald",
   "ingredient": {
     "item": "enhanced_playthrough:raw_emerald"
   },

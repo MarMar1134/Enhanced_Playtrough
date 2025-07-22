@@ -14,7 +14,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class SoulAlloyFurnaceBlockEntity extends AbstractAlloyFurnaceBlockEntity implements MenuProvider {
     public SoulAlloyFurnaceBlockEntity(BlockPos pPos, BlockState pBlockState) {
-        super(EPBlockEntities.SOUL_ALLOY_FURNACE_BLOCK_ENTITY.get(), pPos, pBlockState, EPRecipes.SUPER_ALLOYING_TYPE.get());
+        super(EPBlockEntities.SOUL_ALLOY_FURNACE_BLOCK_ENTITY.get(), pPos, pBlockState, EPRecipes.SUPER_ALLOY_TYPE.get());
     }
 
     @Override

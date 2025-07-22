@@ -12,7 +12,7 @@ import net.minecraft.world.level.block.Block;
 
 public class EPTags {
     public static class Blocks {
-        public static final TagKey<Block> BAUXITE_ORE = blockTag("bauxite_ore");
+        public static final TagKey<Block> BAUXITE_ORES = blockTag("bauxite_ores");
         public static final TagKey<Block> NEEDS_SILVER_TOOL = blockTag("needs_silver_tool");
         public static final TagKey<Block> NEEDS_BRASS_TOOL = blockTag("needs_brass_tool");
         public static final TagKey<Block> NEEDS_BRONZE_TOOL= blockTag("needs_bronze_tool");
@@ -32,6 +32,15 @@ public class EPTags {
         }
     }
     public static class Items {
+        //Ores
+        public static final TagKey<Item> TIN_ORES = oreTag("tin");
+        public static final TagKey<Item> ZINC_ORES = oreTag("zinc");
+        public static final TagKey<Item> SILVER_ORES = oreTag("silver");
+        public static final TagKey<Item> BAUXITE_ORES = oreTag("bauxite");
+        public static final TagKey<Item> SAPPHIRE_ORES = oreTag("sapphire");
+        public static final TagKey<Item> RUBY_ORES = oreTag("ruby");
+        public static final TagKey<Item> COBALT_ORES = oreTag("cobalt");
+
         //Materials
         public static final TagKey<Item> GOLD = itemTag("gold");
         public static final TagKey<Item> SILVER = itemTag("silver");
@@ -45,8 +54,8 @@ public class EPTags {
         public static final TagKey<Item> GREEN_GOLD = itemTag("green_gold");
         public static final TagKey<Item> STEEL = itemTag("steel");
         public static final TagKey<Item> BLUE_GOLD = itemTag("blue_gold");
-        public static final TagKey<Item> RAW_GEM = itemTag("raw_gem");
-        public static final TagKey<Item> COBBLE = forgeTag("cobble");
+        public static final TagKey<Item> RAW_GEMS = itemTag("raw_gems");
+        public static final TagKey<Item> COBBLE = itemTag("cobble");
         public static final TagKey<Item> TERRACOTTA_SHARD = itemTag("terracotta_shard");
 
         //Ingots
@@ -63,35 +72,34 @@ public class EPTags {
         public static final TagKey<Item> BLUE_GOLD_INGOT = ingotTag("blue_gold");
 
         //Tools
-        public static final TagKey<Item> POLISHER = forgeTag("polisher");
-        public static final TagKey<Item> DAGGER = forgeTag("dagger");
+        public static final TagKey<Item> POLISHER = toolsTag("polishers");
+        public static final TagKey<Item> DAGGER = toolsTag("daggers");
 
         //Ingredients
-        public static final TagKey<Item> BASIC_INGREDIENT = itemTag("basic_ingredient");
-        public static final TagKey<Item> MASONRY_INGREDIENT = itemTag("masonry_ingredient");
-        public static final TagKey<Item> ALLOY_INGREDIENT = itemTag("alloy_ingredient");
-        public static final TagKey<Item> BLAST_ALLOY_INGREDIENT = itemTag("blast_alloy_ingredient");
-        public static final TagKey<Item> PRIMAL_GRIND_INGREDIENT = itemTag("primal_grind_ingredient");
-        public static final TagKey<Item> MECHANICAL_GRIND_INGREDIENT = itemTag("mechanical_grind_ingredient");
+        public static final TagKey<Item> INGREDIENTS = itemTag("ingredients");
+        public static final TagKey<Item> BASIC_SMELT_INGREDIENT = ingredientTag("basic_smelt");
+        public static final TagKey<Item> MASONRY_INGREDIENT = ingredientTag("masonry");
+        public static final TagKey<Item> ALLOY_INGREDIENT = ingredientTag("alloy");
+        public static final TagKey<Item> BLAST_ALLOY_INGREDIENT = ingredientTag("blast_alloy");
+        public static final TagKey<Item> PRIMAL_GRIND_INGREDIENT = ingredientTag("primal_grind");
+        public static final TagKey<Item> MECHANICAL_GRIND_INGREDIENT = ingredientTag("mechanical_grind");
 
         //Manufacturable goods (for dusts and nuggets)
-        public static final TagKey<Item> GOLD_MANUFACTURABLE = itemTag("gold_manufacturable");
-        public static final TagKey<Item> SILVER_MANUFACTURABLE = itemTag("silver_manufacturable");
-        public static final TagKey<Item> ALUMINUM_MANUFACTURABLE = itemTag("aluminum_manufacturable");
-        public static final TagKey<Item> ZINC_MANUFACTURABLE = itemTag("zinc_manufacturable");
-        public static final TagKey<Item> TIN_MANUFACTURABLE = itemTag("tin_manufacturable");
-        public static final TagKey<Item> COPPER_MANUFACTURABLE = itemTag("copper_manufacturable");
-        public static final TagKey<Item> BRASS_MANUFACTURABLE = itemTag("brass_manufacturable");
-        public static final TagKey<Item> BRONZE_MANUFACTURABLE = itemTag("bronze_manufacturable");
-        public static final TagKey<Item> ROSE_GOLD_MANUFACTURABLE = itemTag("rose_gold_manufacturable");
-        public static final TagKey<Item> IRON_MANUFACTURABLE = itemTag("iron_manufacturable");
-        public static final TagKey<Item> BRONZIUM_MANUFACTURABLE = itemTag("bronzium_manufacturable");
-        public static final TagKey<Item> GREEN_GOLD_MANUFACTURABLE = itemTag("green_gold_manufacturable");
-        public static final TagKey<Item> STEEL_MANUFACTURABLE = itemTag("steel_manufacturable");
-        public static final TagKey<Item> BLUE_GOLD_MANUFACTURABLE = itemTag("blue_gold_manufacturable");
-
-        //Others
-        public static final TagKey<Item> BAUXITE_ORE = itemTag("bauxite_ore");
+        public static final TagKey<Item> MANUFACTURABLE = itemTag("manufacturable");
+        public static final TagKey<Item> GOLD_MANUFACTURABLE = manufacturableTag("gold");
+        public static final TagKey<Item> SILVER_MANUFACTURABLE = manufacturableTag("silver");
+        public static final TagKey<Item> ALUMINUM_MANUFACTURABLE = manufacturableTag("aluminum");
+        public static final TagKey<Item> ZINC_MANUFACTURABLE = manufacturableTag("zinc");
+        public static final TagKey<Item> TIN_MANUFACTURABLE = manufacturableTag("tin");
+        public static final TagKey<Item> COPPER_MANUFACTURABLE = manufacturableTag("copper");
+        public static final TagKey<Item> BRASS_MANUFACTURABLE = manufacturableTag("brass");
+        public static final TagKey<Item> BRONZE_MANUFACTURABLE = manufacturableTag("bronze");
+        public static final TagKey<Item> ROSE_GOLD_MANUFACTURABLE = manufacturableTag("rose_gold");
+        public static final TagKey<Item> IRON_MANUFACTURABLE = manufacturableTag("iron");
+        public static final TagKey<Item> BRONZIUM_MANUFACTURABLE = manufacturableTag("bronzium");
+        public static final TagKey<Item> GREEN_GOLD_MANUFACTURABLE = manufacturableTag("green_gold");
+        public static final TagKey<Item> STEEL_MANUFACTURABLE = manufacturableTag("steel");
+        public static final TagKey<Item> BLUE_GOLD_MANUFACTURABLE = manufacturableTag("blue_gold");
 
         //Logs
         public static final TagKey<Item> WALNUT_LOGS = itemTag("walnut_logs");
@@ -99,16 +107,28 @@ public class EPTags {
         public static final TagKey<Item> ORANGE_LOGS = itemTag("orange_logs");
         public static final TagKey<Item> LEMON_LOGS = itemTag("lemon_logs");
 
-        private static TagKey<Item> ingotTag(String name){
-            return ItemTags.create(new ResourceLocation(EnhancedPlaythrough.MOD_ID, "ingots/" + name));
-        }
-
         private static TagKey<Item> itemTag(String name){
             return ItemTags.create(new ResourceLocation(EnhancedPlaythrough.MOD_ID, name));
         }
 
-        private static TagKey<Item> forgeTag(String name){
-            return ItemTags.create(new ResourceLocation("forge", name));
+        private static TagKey<Item> oreTag(String name){
+            return ItemTags.create(new ResourceLocation(EnhancedPlaythrough.MOD_ID, "ores/" + name));
+        }
+
+        private static TagKey<Item> ingredientTag(String name){
+            return ItemTags.create(new ResourceLocation(EnhancedPlaythrough.MOD_ID, "ingredients/" + name));
+        }
+
+        private static TagKey<Item> ingotTag(String name){
+            return ItemTags.create(new ResourceLocation(EnhancedPlaythrough.MOD_ID, "ingots/" + name));
+        }
+
+        private static TagKey<Item> toolsTag(String name){
+            return ItemTags.create(new ResourceLocation(EnhancedPlaythrough.MOD_ID, "tools/" + name));
+        }
+
+        private static TagKey<Item> manufacturableTag(String name){
+            return ItemTags.create(new ResourceLocation(EnhancedPlaythrough.MOD_ID, "manufacturable/" + name));
         }
     }
 

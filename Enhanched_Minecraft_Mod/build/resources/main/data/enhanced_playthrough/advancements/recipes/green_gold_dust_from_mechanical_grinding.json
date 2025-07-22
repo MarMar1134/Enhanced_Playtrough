@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "TagKey[minecraft:item / enhanced_playthrough:green_gold_manufacturable]": {
+    "TagKey[minecraft:item / enhanced_playthrough:manufacturable/green_gold]": {
       "conditions": {
         "items": [
           {
-            "tag": "enhanced_playthrough:green_gold_manufacturable"
+            "tag": "enhanced_playthrough:manufacturable/green_gold"
           }
         ]
       },
@@ -20,7 +20,7 @@
   },
   "requirements": [
     [
-      "TagKey[minecraft:item / enhanced_playthrough:green_gold_manufacturable]",
+      "TagKey[minecraft:item / enhanced_playthrough:manufacturable/green_gold]",
       "has_the_recipe"
     ]
   ],

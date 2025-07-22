@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.1,
+  "group": "bronze_nugget",
+  "ingredient": {
+    "tag": "enhanced_playthrough:manufacturable/bronze"
+  },
+  "result": "enhanced_playthrough:bronze_nugget"
+}

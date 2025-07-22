@@ -3,7 +3,7 @@
   "category": "mechanical_grind",
   "group": "iron_dust",
   "ingredient": {
-    "tag": "enhanced_playthrough:iron_manufacturable"
+    "tag": "enhanced_playthrough:manufacturable/iron"
   },
   "output": {
     "item": "enhanced_playthrough:iron_dust"

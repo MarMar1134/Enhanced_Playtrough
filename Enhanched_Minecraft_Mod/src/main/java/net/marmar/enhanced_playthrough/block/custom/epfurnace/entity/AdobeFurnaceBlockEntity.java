@@ -15,7 +15,7 @@ import org.jetbrains.annotations.Nullable;
 public class AdobeFurnaceBlockEntity extends AbstractEPFurnaceBlockEntity implements MenuProvider {
 
     public AdobeFurnaceBlockEntity(BlockPos pPos, BlockState pBlockState) {
-        super(EPBlockEntities.ADOBE_FURNACE_BLOCK_ENTITY.get(), pPos, pBlockState, EPRecipes.BASIC_SMELTING_TYPE.get());
+        super(EPBlockEntities.ADOBE_FURNACE_BLOCK_ENTITY.get(), pPos, pBlockState, EPRecipes.BASIC_SMELT_TYPE.get());
     }
 
     @Override

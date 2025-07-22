@@ -125,11 +125,6 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .unlockedBy(getHasName(EPItems.VEGETABLE_FIBBER.get()), has(EPItems.VEGETABLE_FIBBER.get()))
                 .save(consumer, recipeName(EPItems.VEGETABLE_FIBBER.get(), "from_water_reeds_head"));
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EPItems.COPPER_NUGGET.get(), 9)
-                .requires(Items.COPPER_INGOT)
-                .unlockedBy(getHasName(Items.COPPER_INGOT), has(Items.COPPER_INGOT))
-                .save(consumer, recipeName(EPItems.COPPER_NUGGET.get(), "from_ingots"));
-
         //Smithing templates
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, EPItems.BRONZIUM_SMITHING_UPGRADE_TEMPLATE.get(), 2)
                 .pattern("DAD")
@@ -394,11 +389,30 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
             addStoneGear(Items.STONE_AXE, Items.STONE_PICKAXE, Items.STONE_SWORD, EPItems.STONE_DAGGER.get(),
                     Items.STONE_SHOVEL, Items.STONE_HOE, EPItems.STONE_POLISHER.get(), false, consumer);
 
+            //Copper
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EPItems.COPPER_NUGGET.get(), 9)
+                    .requires(Items.COPPER_INGOT)
+                    .unlockedBy(getHasName(Items.COPPER_INGOT), has(Items.COPPER_INGOT))
+                    .unlockedBy(getHasName(EPItems.COPPER_NUGGET.get()), has(EPItems.COPPER_NUGGET.get()))
+                    .save(consumer, recipeName(EPItems.COPPER_NUGGET.get(), "from_ingots"));
+
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.COPPER_INGOT)
+                    .pattern("NNN")
+                    .pattern("NNN")
+                    .pattern("NNN")
+                    .define('N', EPItems.COPPER_NUGGET.get())
+                    .unlockedBy(getHasName(EPItems.COPPER_NUGGET.get()), has(EPItems.COPPER_NUGGET.get()))
+                    .unlockedBy(getHasName(Items.COPPER_INGOT), has(Items.COPPER_INGOT))
+                    .group("copper_ingot")
+                    .save(consumer, recipeName(Items.COPPER_INGOT, "from_nuggets"));
+
             //Tin
             materialRecipes(EPItems.RAW_TIN.get(), EPBlocks.RAW_TIN_BLOCK.get(), consumer);
+            materialRecipes(EPItems.TIN_INGOT.get(), EPItems.TIN_NUGGET.get(), EPBlocks.TIN_BLOCK.get(), consumer);
 
             //Zinc
             materialRecipes(EPItems.RAW_ZINC.get(), EPBlocks.RAW_ZINC_BLOCK.get(), consumer);
+            materialRecipes(EPItems.ZINC_INGOT.get(), EPItems.ZINC_NUGGET.get(), EPBlocks.ZINC_BLOCK.get(), consumer);
 
             //Brass
             materialRecipes(EPItems.BRASS_INGOT.get(), EPItems.BRASS_NUGGET.get(), EPBlocks.BRASS_BLOCK.get(), consumer);
@@ -902,10 +916,6 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
 
     protected static void blockWithoutPolishedVersionRecipes(Block baseBlock, Block wallBlock, Block stairBlock, Block slabBlock, Consumer<FinishedRecipe> consumer){
         baseAddRock(baseBlock, null, wallBlock, stairBlock, slabBlock, consumer);
-    }
-
-    protected static void blockWithoutWallNorPolished(Block baseBlock, Block stairBlock, Block slabBlock, Consumer<FinishedRecipe> consumer){
-        baseAddRock(baseBlock, null, null, stairBlock, slabBlock, consumer);
     }
 
     private static void wallBlockRecipe(Block baseBlock, Block wallBlock, Consumer<FinishedRecipe> consumer){

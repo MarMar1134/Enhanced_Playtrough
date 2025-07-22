@@ -1,7 +1,7 @@
 {
   "parent": "enhanced_playthrough:gem_root",
   "criteria": {
-    "has_material": {
+    "has_garnet": {
       "conditions": {
         "items": [
           {
@@ -32,7 +32,7 @@
   },
   "requirements": [
     [
-      "has_material"
+      "has_garnet"
     ]
   ],
   "sends_telemetry_event": true

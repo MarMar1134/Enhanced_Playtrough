@@ -10,7 +10,7 @@ import net.minecraft.data.recipes.RecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.RecipeSerializer;
-import net.minecraft.world.item.crafting.SmithingTransformRecipe;
+import net.minecraft.world.item.crafting.SmithingRecipe;
 import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.jetbrains.annotations.Nullable;
@@ -23,9 +23,9 @@ public class ModSmithingTransformRecipeBuilder implements RecipeBuilder {
     private final Item result;
     private final Item template;
     private final Advancement.Builder advancement = Advancement.Builder.recipeAdvancement();
-    private final RecipeSerializer<?> serializer;
+    private final RecipeSerializer<? extends SmithingRecipe> serializer;
 
-    public ModSmithingTransformRecipeBuilder(ItemLike addition, ItemLike base, ItemLike result, ItemLike template, RecipeSerializer<?> serializer) {
+    public ModSmithingTransformRecipeBuilder(ItemLike addition, ItemLike base, ItemLike result, ItemLike template, RecipeSerializer<? extends SmithingRecipe> serializer) {
         this.addition = addition.asItem();
         this.base = base.asItem();
         this.result = result.asItem();
@@ -33,8 +33,12 @@ public class ModSmithingTransformRecipeBuilder implements RecipeBuilder {
         this.serializer = serializer;
     }
 
-    public static ModSmithingTransformRecipeBuilder SmithingReipeBuilder(ItemLike template, ItemLike base, ItemLike addition, ItemLike result, RecipeSerializer<SmithingTransformRecipe> recipeSerializer){
-        return new ModSmithingTransformRecipeBuilder(addition, base, result, template, recipeSerializer);
+    public static ModSmithingTransformRecipeBuilder SmithingTransform(ItemLike template, ItemLike base, ItemLike addition, ItemLike result){
+        return new ModSmithingTransformRecipeBuilder(addition, base, result, template, RecipeSerializer.SMITHING_TRANSFORM);
+    }
+
+    public static ModSmithingTransformRecipeBuilder SmithingTrim(ItemLike template, ItemLike base, ItemLike addition, ItemLike result){
+        return new ModSmithingTransformRecipeBuilder(addition, base, result, template, RecipeSerializer.SMITHING_TRIM);
     }
 
     @Override
@@ -74,9 +78,9 @@ public class ModSmithingTransformRecipeBuilder implements RecipeBuilder {
         private final Item template;
         private final Advancement.Builder advancement;
         private final ResourceLocation resourceLocation;
-        private final RecipeSerializer<?> serializer;
+        private final RecipeSerializer<? extends SmithingRecipe> serializer;
 
-        public Result(ResourceLocation id, Item addition, Item base, Item result, Item template, Advancement.Builder advancement, ResourceLocation resourceLocation, RecipeSerializer<?> serializer) {
+        public Result(ResourceLocation id, Item addition, Item base, Item result, Item template, Advancement.Builder advancement, ResourceLocation resourceLocation, RecipeSerializer<? extends SmithingRecipe> serializer) {
             this.id = id;
             this.addition = addition;
             this.base = base;

@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "TagKey[minecraft:item / enhanced_playthrough:manufacturable/green_gold]": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "enhanced_playthrough:manufacturable/green_gold"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "enhanced_playthrough:green_gold_nugget_from_blasting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "TagKey[minecraft:item / enhanced_playthrough:manufacturable/green_gold]",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "enhanced_playthrough:green_gold_nugget_from_blasting"
+    ]
+  },
+  "sends_telemetry_event": false
+}

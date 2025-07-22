@@ -3,7 +3,7 @@
   "category": "mechanical_grind",
   "group": "tin_dust",
   "ingredient": {
-    "tag": "enhanced_playthrough:tin_manufacturable"
+    "tag": "enhanced_playthrough:manufacturable/tin"
   },
   "output": {
     "item": "enhanced_playthrough:tin_dust"

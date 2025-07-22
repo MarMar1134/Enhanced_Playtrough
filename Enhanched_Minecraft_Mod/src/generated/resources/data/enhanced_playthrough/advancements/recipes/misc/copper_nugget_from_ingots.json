@@ -13,6 +13,18 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
+    "has_copper_nugget": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:copper_nugget"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "has_the_recipe": {
       "conditions": {
         "recipe": "enhanced_playthrough:copper_nugget_from_ingots"
@@ -23,6 +35,7 @@
   "requirements": [
     [
       "has_copper_ingot",
+      "has_copper_nugget",
       "has_the_recipe"
     ]
   ],

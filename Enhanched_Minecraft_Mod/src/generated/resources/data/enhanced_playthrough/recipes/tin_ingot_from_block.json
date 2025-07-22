@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "tin_ingot",
+  "ingredients": [
+    {
+      "item": "enhanced_playthrough:tin_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "enhanced_playthrough:tin_ingot"
+  }
+}

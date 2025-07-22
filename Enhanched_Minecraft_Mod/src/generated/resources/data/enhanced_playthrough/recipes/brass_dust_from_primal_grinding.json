@@ -3,7 +3,7 @@
   "category": "grind",
   "group": "brass_dust",
   "ingredient": {
-    "tag": "enhanced_playthrough:brass_manufacturable"
+    "tag": "enhanced_playthrough:manufacturable/brass"
   },
   "output": {
     "item": "enhanced_playthrough:brass_dust"

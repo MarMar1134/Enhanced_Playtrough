@@ -4,7 +4,6 @@ import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.block.EPBlocks;
 import net.marmar.enhanced_playthrough.data.tag.EPTags;
 import net.marmar.enhanced_playthrough.item.EPItems;
-import net.marmar.enhanced_playthrough.recipe.GemPolishingRecipe;
 import net.marmar.enhanced_playthrough.recipe.EPRecipes;
 import net.marmar.enhanced_playthrough.recipe.grind.AbstractGrindRecipe;
 import net.marmar.enhanced_playthrough.recipe.recipebuilder.GenericRecipeBuilder;
@@ -21,7 +20,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
-import net.minecraft.world.item.crafting.SmithingTransformRecipe;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
 
@@ -215,11 +213,11 @@ public class GeneralRecipeSubProvider extends RecipeProvider {
     }
 
     private static void gemPolishingRecipes(Consumer<FinishedRecipe> consumer){
-        gemPolishing(consumer, EPItems.RAW_EMERALD.get(), "gems", Items.EMERALD);
-        gemPolishing(consumer, EPItems.RAW_SAPPHIRE.get(), "gems", EPItems.SAPPHIRE.get());
-        gemPolishing(consumer, EPItems.RAW_RUBY.get(), "gems", EPItems.RUBY.get());
-        gemPolishing(consumer, EPItems.RAW_DIAMOND.get(), "gems", Items.DIAMOND);
-        gemPolishing(consumer, EPItems.RAW_GARNET.get(), "gems", EPItems.GARNET.get());
+        gemPolishing(consumer, EPItems.RAW_EMERALD.get(), "emerald", Items.EMERALD);
+        gemPolishing(consumer, EPItems.RAW_SAPPHIRE.get(), "sapphire", EPItems.SAPPHIRE.get());
+        gemPolishing(consumer, EPItems.RAW_RUBY.get(), "ruby", EPItems.RUBY.get());
+        gemPolishing(consumer, EPItems.RAW_DIAMOND.get(), "diamond", Items.DIAMOND);
+        gemPolishing(consumer, EPItems.RAW_GARNET.get(), "garnet", EPItems.GARNET.get());
     }
 
     private static void grindingRecipes(Consumer<FinishedRecipe> consumer){
@@ -401,11 +399,11 @@ public class GeneralRecipeSubProvider extends RecipeProvider {
 
     //Helpers
     protected static void stoneCutting(Consumer<FinishedRecipe> consumer, ItemLike input, ItemLike output, int count){
-        stoneCuttingBuilder(consumer, input, RecipeCategory.BUILDING_BLOCKS, output, count, "from_stone_cutting");
+        stoneCuttingBuilder(consumer, input, output, count);
     }
 
     protected static void smithingUpgrade(Consumer<FinishedRecipe> consumer, ItemLike template, ItemLike base, ItemLike addition, ItemLike result){
-        smithingTransformSerialize(consumer, template, base, addition, result, RecipeSerializer.SMITHING_TRANSFORM, "from_smithing");
+        smithingTransformSerialize(consumer, template, base, addition, result);
     }
 
     protected static void bronziumSmithingTemplate(Consumer<FinishedRecipe> consumer, ItemLike bronzeItem, ItemLike brassItem, ItemLike bronziumItem){
@@ -422,42 +420,42 @@ public class GeneralRecipeSubProvider extends RecipeProvider {
         //Grind
             //Primal
             protected static void primalItemGrinding(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike ingredient, String group, ItemLike result, int count){
-                oreGrindingSerialize(pFinishedRecipeConsumer, ingredient, result, group, count, ModRecipeCategory.GRIND, EPRecipes.PRIMAL_GRINDING_SERIALIZER.get(), "from_primal_grinding");
+                oreGrindingSerialize(pFinishedRecipeConsumer, ingredient, result, group, count, ModRecipeCategory.GRIND, EPRecipes.PRIMAL_GRIND_SERIALIZER.get(), "from_primal_grinding");
             }
             protected static void primalItemGrinding(Consumer<FinishedRecipe> pFinishedRecipeConsumer, TagKey<Item> ingredient, String group, ItemLike result, int count){
-                oreGrindingTagSerialize(pFinishedRecipeConsumer, ingredient, result, group, count, ModRecipeCategory.GRIND, EPRecipes.PRIMAL_GRINDING_SERIALIZER.get(), "from_primal_grinding");
+                oreGrindingTagSerialize(pFinishedRecipeConsumer, ingredient, result, group, count, ModRecipeCategory.GRIND, EPRecipes.PRIMAL_GRIND_SERIALIZER.get(), "from_primal_grinding");
             }
 
             //Mechanical
             protected static void mechanicalItemGrinding(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike ingredient, String group, ItemLike result, int count){
-                oreGrindingSerialize(pFinishedRecipeConsumer, ingredient, result, group, count, ModRecipeCategory.MECHANICAL_GRIND, EPRecipes.MECHANICAL_GRINDING_SERIALIZER.get(), "from_mechanical_grinding");
+                oreGrindingSerialize(pFinishedRecipeConsumer, ingredient, result, group, count, ModRecipeCategory.MECHANICAL_GRIND, EPRecipes.MECHANICAL_GRIND_SERIALIZER.get(), "from_mechanical_grinding");
             }
             protected static void mechanicalItemGrinding(Consumer<FinishedRecipe> pFinishedRecipeConsumer, TagKey<Item> ingredient, String group, ItemLike result, int count){
-                oreGrindingTagSerialize(pFinishedRecipeConsumer, ingredient, result, group, count, ModRecipeCategory.MECHANICAL_GRIND, EPRecipes.MECHANICAL_GRINDING_SERIALIZER.get(), "from_mechanical_grinding");
+                oreGrindingTagSerialize(pFinishedRecipeConsumer, ingredient, result, group, count, ModRecipeCategory.MECHANICAL_GRIND, EPRecipes.MECHANICAL_GRIND_SERIALIZER.get(), "from_mechanical_grinding");
             }
 
     //Polish
     protected static void gemPolishing(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike ingredient, String group, ItemLike result){
-        gemPolishingSerialize(pFinishedRecipeConsumer, ingredient, result, group, EPRecipes.POLISHING_SERIALIZER.get(), "from_gem_polishing");
+        gemPolishingSerialize(pFinishedRecipeConsumer, ingredient, result, group);
     }
 
     //Builders
-    protected static void smithingTransformSerialize(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike template, ItemLike base, ItemLike addition, ItemLike result, RecipeSerializer<SmithingTransformRecipe> serializer, String recipeName){
-        ModSmithingTransformRecipeBuilder.SmithingReipeBuilder(template, base, addition, result, serializer)
+    protected static void smithingTransformSerialize(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike template, ItemLike base, ItemLike addition, ItemLike result){
+        ModSmithingTransformRecipeBuilder.SmithingTransform(template, base, addition, result)
                 .unlockedBy(getHasName(base), has(base))
-                .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(result) + "_" + recipeName + "_" + getItemName(base) + "_with_" + getItemName(addition));
+                .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(result) + "_from_smithing_" + getItemName(base) + "_with_" + getItemName(addition));
     }
 
-    protected static void stoneCuttingBuilder(Consumer<FinishedRecipe> consumer, ItemLike input, RecipeCategory category, ItemLike result, int count, String recipeName){
-        SingleItemRecipeBuilder.stonecutting(Ingredient.of(input), category, result, count)
+    protected static void stoneCuttingBuilder(Consumer<FinishedRecipe> consumer, ItemLike input, ItemLike result, int count){
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(input), RecipeCategory.BUILDING_BLOCKS, result, count)
                 .unlockedBy(getHasName(input), has(input))
-                .save(consumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(result) + "_" + recipeName + "_" + getItemName(input));
+                .save(consumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(result) + "_from_stone_cutting_" + getItemName(input));
     }
 
-    protected static void gemPolishingSerialize(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike input, ItemLike output, String group, RecipeSerializer<GemPolishingRecipe> recipeSerializer, String recipeName){
-        GenericRecipeBuilder.gemPolishing(Ingredient.of(input), output, group, recipeSerializer)
+    protected static void gemPolishingSerialize(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike input, ItemLike output, String group){
+        GenericRecipeBuilder.gemPolishing(Ingredient.of(input), output, group)
                 .unlockedBy(getHasName(input), has(input))
-                .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(output) + "_" + recipeName + "_" + getItemName(input));
+                .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(output) + "_from_gem_polishing_" + getItemName(input));
     }
 
     protected static void oreGrindingSerialize(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike input, ItemLike output, String group, int quantity, ModRecipeCategory pRecipeCategory, RecipeSerializer<? extends AbstractGrindRecipe> recipeSerializer, String recipeName){

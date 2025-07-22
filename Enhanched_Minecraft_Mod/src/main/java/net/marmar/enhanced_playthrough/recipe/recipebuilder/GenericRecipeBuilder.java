@@ -1,5 +1,6 @@
 package net.marmar.enhanced_playthrough.recipe.recipebuilder;
 
+import net.marmar.enhanced_playthrough.recipe.EPRecipes;
 import net.marmar.enhanced_playthrough.recipe.GemPolishingRecipe;
 import net.marmar.enhanced_playthrough.recipe.grind.AbstractGrindRecipe;
 import net.marmar.enhanced_playthrough.recipe.recipecategory.ModRecipeCategory;
@@ -31,19 +32,25 @@ public class GenericRecipeBuilder implements RecipeBuilder {
     private final Advancement.Builder advancement = Advancement.Builder.recipeAdvancement();
     private final RecipeSerializer<?> serializer;
 
-    private GenericRecipeBuilder(ItemLike pResult, int count, Ingredient pIngredient, ModRecipeCategory category, String group, RecipeSerializer<?> pSerializer) {
+    private GenericRecipeBuilder(ItemLike pResult, int pCount, Ingredient pIngredient, ModRecipeCategory pCategory, String pGroup, RecipeSerializer<?> pSerializer) {
         this.result = pResult.asItem();
-        this.category = category;
-        this.group = group;
-        this.count = count;
+        this.category = pCategory;
+        this.group = pGroup;
+        this.count = pCount;
         this.ingredient = pIngredient;
         this.serializer = pSerializer;
     }
-    public static GenericRecipeBuilder gemPolishing(Ingredient pIngredient, ItemLike pResult, String group, RecipeSerializer<? extends GemPolishingRecipe> pCookingSerializer) {
-        return new GenericRecipeBuilder(pResult, 1, pIngredient, ModRecipeCategory.GEM_POLISH, group, pCookingSerializer);
+
+    public static GenericRecipeBuilder generic(Ingredient pIngredient, ItemLike pResult, int pCount, String pGroup, ModRecipeCategory pCategory, RecipeSerializer<?> pSerializer){
+        return new GenericRecipeBuilder(pResult, pCount, pIngredient, pCategory, pGroup, pSerializer);
     }
-    public static GenericRecipeBuilder itemGrinding(Ingredient pIngredient, ItemLike pResult, String group, int quantity, ModRecipeCategory pRecipeCategory, RecipeSerializer<? extends AbstractGrindRecipe> pSerializer) {
-        return new GenericRecipeBuilder(pResult, quantity, pIngredient, pRecipeCategory, group, pSerializer);
+
+    public static GenericRecipeBuilder gemPolishing(Ingredient pIngredient, ItemLike pResult, String pGroup) {
+        return generic(pIngredient, pResult, 1, pGroup, ModRecipeCategory.GEM_POLISH, EPRecipes.POLISHING_SERIALIZER.get());
+    }
+
+    public static GenericRecipeBuilder itemGrinding(Ingredient pIngredient, ItemLike pResult, String pGroup, int pCount, ModRecipeCategory pCategory, RecipeSerializer<? extends AbstractGrindRecipe> pSerializer) {
+        return generic(pIngredient, pResult, pCount, pGroup, pCategory, pSerializer);
     }
 
     @Override

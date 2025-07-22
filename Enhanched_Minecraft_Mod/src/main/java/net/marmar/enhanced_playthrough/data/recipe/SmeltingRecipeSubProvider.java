@@ -4,11 +4,7 @@ import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.block.EPBlocks;
 import net.marmar.enhanced_playthrough.data.tag.EPTags;
 import net.marmar.enhanced_playthrough.item.EPItems;
-import net.marmar.enhanced_playthrough.recipe.modsmelting.MasonrySmeltingRecipe;
-import net.marmar.enhanced_playthrough.recipe.EPRecipes;
-import net.marmar.enhanced_playthrough.recipe.modsmelting.BasicSmeltingRecipe;
-import net.marmar.enhanced_playthrough.recipe.modsmelting.SoulBasicSmeltingRecipe;
-import net.marmar.enhanced_playthrough.recipe.recipebuilder.ModSmeltingRecipeBuilder;
+import net.marmar.enhanced_playthrough.recipe.recipebuilder.EPSmeltingRecipeBuilder;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeCategory;
@@ -22,28 +18,20 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraftforge.common.Tags;
 
 import java.util.List;
 import java.util.function.Consumer;
 
 public class SmeltingRecipeSubProvider extends RecipeProvider {
-    //silver
-    public static final List<ItemLike> SILVER_SMELTABLES;
-
     //tin
     public static final List<ItemLike> BASIC_TIN_SMELTABLES;
-    public static final List<ItemLike> TIN_SMELTABLES;
 
     //zinc
     public static final List<ItemLike> BASIC_ZINC_SMELTABLES;
-    public static final List<ItemLike> ZINC_SMELTABLES;
-
-    //Cobalt
-    public static final List<ItemLike> COBALT_SMELTABLES;
 
     //copper
     public static final List<ItemLike> BASIC_COPPER_SMELTABLES;
-    public static final List<ItemLike> COPPER_SMELTABLES;
 
     public SmeltingRecipeSubProvider(PackOutput pOutput) {
         super(pOutput);
@@ -99,25 +87,25 @@ public class SmeltingRecipeSubProvider extends RecipeProvider {
             oreSmelting(consumer, EPItems.EGGPLANT.get(), RecipeCategory.FOOD, EPItems.COOKED_EGGPLANT.get(), 0.35f, "eggplant");
             oreSmelting(consumer, EPItems.CORN.get(), RecipeCategory.FOOD, EPItems.COOKED_CORN.get(), 0.35f, "corn");
 
-            smoking(consumer, EPItems.ZAPALLO.get(), RecipeCategory.FOOD, EPItems.COOKED_ZAPALLO.get(), 0.35f, "zapallo");
-            smoking(consumer, EPItems.EGGPLANT.get(), RecipeCategory.FOOD, EPItems.COOKED_EGGPLANT.get(), 0.35f, "eggplant");
-            smoking(consumer, EPItems.CORN.get(), RecipeCategory.FOOD, EPItems.COOKED_CORN.get(), 0.35f, "corn");
+            smoking(consumer, EPItems.ZAPALLO.get(), EPItems.COOKED_ZAPALLO.get(), "zapallo");
+            smoking(consumer, EPItems.EGGPLANT.get(), EPItems.COOKED_EGGPLANT.get(), "eggplant");
+            smoking(consumer, EPItems.CORN.get(), EPItems.COOKED_CORN.get(), "corn");
 
             //Gold
-            oreBlasting(consumer, EPItems.GOLD_DUST.get(), RecipeCategory.MISC, Items.GOLD_INGOT, 1f, "gold_ingot");
+            oreBlasting(consumer, EPItems.GOLD_DUST.get(), Items.GOLD_INGOT, 1f, "gold_ingot");
 
             //Silver
-            oreSmelting(consumer, SILVER_SMELTABLES, RecipeCategory.MISC, EPItems.SILVER_INGOT.get(), 0.7f, "silver_ingot");
-            oreBlasting(consumer, SILVER_SMELTABLES, RecipeCategory.MISC, EPItems.SILVER_INGOT.get(), 0.7f,  "silver_ingot");
+            oreSmelting(consumer, EPTags.Items.SILVER_ORES, EPItems.SILVER_INGOT.get(), 0.7f, "silver_ingot");
+            oreBlasting(consumer, EPTags.Items.SILVER_ORES, EPItems.SILVER_INGOT.get(), 0.7f,  "silver_ingot");
 
-            oreSmelting(consumer, EPTags.Items.SILVER_MANUFACTURABLE, RecipeCategory.MISC, EPItems.SILVER_NUGGET.get(), 0.1f, "silver_nugget");
-            oreBlasting(consumer, EPTags.Items.SILVER_MANUFACTURABLE, RecipeCategory.MISC, EPItems.SILVER_NUGGET.get(), 0.1f, "silver_nugget");
+            oreSmelting(consumer, EPTags.Items.SILVER_MANUFACTURABLE, EPItems.SILVER_NUGGET.get(), 0.1f, "silver_nugget");
+            oreBlasting(consumer, EPTags.Items.SILVER_MANUFACTURABLE, EPItems.SILVER_NUGGET.get(), 0.1f, "silver_nugget");
 
-            oreBlasting(consumer, EPItems.SILVER_DUST.get(), RecipeCategory.MISC, EPItems.SILVER_INGOT.get(), 1f, "silver_ingot");
+            oreBlasting(consumer, EPItems.SILVER_DUST.get(), EPItems.SILVER_INGOT.get(), 0.7f, "silver_ingot");
 
             //Bauxite
-            oreBlasting(consumer, EPTags.Items.BAUXITE_ORE, RecipeCategory.MISC, EPItems.ALUMINUM_INGOT.get(), 1.2f, "aluminum_ingot");
-            oreBlasting(consumer, EPItems.RAW_ALUMINUM.get(), RecipeCategory.MISC, EPItems.ALUMINUM_INGOT.get(), 1.2f, "aluminum_ingot");
+            oreBlasting(consumer, EPTags.Items.BAUXITE_ORES, EPItems.ALUMINUM_INGOT.get(), 1.2f, "aluminum_ingot");
+            oreBlasting(consumer, EPItems.RAW_ALUMINUM.get(), EPItems.ALUMINUM_INGOT.get(), 1.2f, "aluminum_ingot");
 
             //Zinc
             smeltingByCampfire(consumer, EPItems.RAW_ZINC.get(), RecipeCategory.MISC, EPItems.ZINC_NUGGET.get(), 0.1f, "zinc_nugget");
@@ -125,10 +113,10 @@ public class SmeltingRecipeSubProvider extends RecipeProvider {
             basicSmelting(consumer, BASIC_ZINC_SMELTABLES, EPItems.ZINC_INGOT.get(), "zinc_ingot");
             soulBasicSmelting(consumer, BASIC_ZINC_SMELTABLES, EPItems.ZINC_INGOT.get(), "zinc_ingot");
 
-            oreSmelting(consumer, ZINC_SMELTABLES, RecipeCategory.MISC, EPItems.ZINC_INGOT.get(), 0.7f, "zinc_ingot");
-            oreBlasting(consumer, ZINC_SMELTABLES, RecipeCategory.MISC, EPItems.ZINC_INGOT.get(), 0.7f, "zinc_ingot");
+            oreSmelting(consumer, EPTags.Items.ZINC_ORES, EPItems.ZINC_INGOT.get(), 0.5f, "zinc_ingot");
+            oreBlasting(consumer, EPTags.Items.ZINC_ORES, EPItems.ZINC_INGOT.get(), 0.5f, "zinc_ingot");
 
-            oreBlasting(consumer, EPItems.ZINC_DUST.get(), RecipeCategory.MISC, EPItems.ZINC_INGOT.get(), 1f, "zinc_ingot");
+            oreBlasting(consumer, EPItems.ZINC_DUST.get(), EPItems.ZINC_INGOT.get(), 0.5f, "zinc_ingot");
 
             //tin
             smeltingByCampfire(consumer, EPItems.RAW_TIN.get(), RecipeCategory.MISC, EPItems.TIN_NUGGET.get(), 0.1f, "tin_nugget");
@@ -136,14 +124,10 @@ public class SmeltingRecipeSubProvider extends RecipeProvider {
             basicSmelting(consumer, BASIC_TIN_SMELTABLES, EPItems.TIN_INGOT.get(), "tin_ingot");
             soulBasicSmelting(consumer, BASIC_TIN_SMELTABLES, EPItems.TIN_INGOT.get(), "tin_ingot");
 
-            oreSmelting(consumer, TIN_SMELTABLES, RecipeCategory.MISC, EPItems.TIN_INGOT.get(), 0.7f, "tin_ingot");
-            oreBlasting(consumer, TIN_SMELTABLES, RecipeCategory.MISC, EPItems.TIN_INGOT.get(), 0.7f, "tin_ingot");
+            oreSmelting(consumer, EPTags.Items.TIN_ORES, EPItems.TIN_INGOT.get(), 0.5f, "tin_ingot");
+            oreBlasting(consumer, EPTags.Items.TIN_ORES, EPItems.TIN_INGOT.get(), 0.5f, "tin_ingot");
 
-            oreBlasting(consumer, EPItems.TIN_DUST.get(), RecipeCategory.MISC, EPItems.TIN_INGOT.get(), 1f, "tin_ingot");
-
-            //Cobalt
-            oreSmelting(consumer, COBALT_SMELTABLES, RecipeCategory.MISC, EPItems.COBALT.get(), 1f, "cobalt");
-            oreBlasting(consumer, COBALT_SMELTABLES, RecipeCategory.MISC, EPItems.COBALT.get(), 1f, "cobalt");
+            oreBlasting(consumer, EPItems.TIN_DUST.get(), EPItems.TIN_INGOT.get(), 0.5f, "tin_ingot");
 
             //copper
             smeltingByCampfire(consumer, Items.RAW_COPPER, RecipeCategory.MISC, EPItems.COPPER_NUGGET.get(), 0.1f, "copper_nugget");
@@ -151,51 +135,63 @@ public class SmeltingRecipeSubProvider extends RecipeProvider {
             basicSmelting(consumer, BASIC_COPPER_SMELTABLES, Items.COPPER_INGOT, "copper_ingot");
             soulBasicSmelting(consumer, BASIC_COPPER_SMELTABLES, Items.COPPER_INGOT, "copper_ingot");
 
-            oreSmelting(consumer, COPPER_SMELTABLES, RecipeCategory.MISC, Items.COPPER_INGOT, 0.7f, "copper_ingot");
-            oreBlasting(consumer, COPPER_SMELTABLES, RecipeCategory.MISC, Items.COPPER_INGOT, 0.7f, "copper_ingot");
+            oreSmelting(consumer, Tags.Items.ORES_COPPER, Items.COPPER_INGOT, 0.5f, "copper_ingot");
+            oreBlasting(consumer, Tags.Items.ORES_COPPER, Items.COPPER_INGOT, 0.5f, "copper_ingot");
 
-            oreBlasting(consumer, EPItems.COPPER_DUST.get(), RecipeCategory.MISC, Items.COPPER_INGOT, 1f, "copper_ingot");
+            oreBlasting(consumer, EPItems.COPPER_DUST.get(), Items.COPPER_INGOT, 0.5f, "copper_ingot");
 
             //brass
-            oreSmelting(consumer, EPTags.Items.BRASS_MANUFACTURABLE, RecipeCategory.MISC, EPItems.BRASS_NUGGET.get(), 0.1f, "brass_nugget");
-            oreBlasting(consumer, EPTags.Items.BRASS_MANUFACTURABLE, RecipeCategory.MISC, EPItems.BRASS_NUGGET.get(), 0.1f, "brass_nugget");
+            oreSmelting(consumer, EPTags.Items.BRASS_MANUFACTURABLE, EPItems.BRASS_NUGGET.get(), 0.1f, "brass_nugget");
+            oreBlasting(consumer, EPTags.Items.BRASS_MANUFACTURABLE, EPItems.BRASS_NUGGET.get(), 0.1f, "brass_nugget");
 
-            oreBlasting(consumer, EPItems.BRASS_DUST.get(), RecipeCategory.MISC, EPItems.BRASS_INGOT.get(), 1f, "brass_ingot");
+            oreBlasting(consumer, EPItems.BRASS_DUST.get(), EPItems.BRASS_INGOT.get(), 0.5f, "brass_ingot");
 
             //bronze
-            oreSmelting(consumer, EPTags.Items.BRONZE_MANUFACTURABLE, RecipeCategory.MISC, EPItems.BRONZE_NUGGET.get(), 0.1f, "bronze_nugget");
-            oreBlasting(consumer, EPTags.Items.BRONZE_MANUFACTURABLE, RecipeCategory.MISC, EPItems.BRONZE_NUGGET.get(), 0.1f, "bronze_nugget");
+            oreSmelting(consumer, EPTags.Items.BRONZE_MANUFACTURABLE, EPItems.BRONZE_NUGGET.get(), 0.1f, "bronze_nugget");
+            oreBlasting(consumer, EPTags.Items.BRONZE_MANUFACTURABLE, EPItems.BRONZE_NUGGET.get(), 0.1f, "bronze_nugget");
 
-            oreBlasting(consumer, EPItems.BRONZE_DUST.get(), RecipeCategory.MISC, EPItems.BRONZE_INGOT.get(), 1f, "bronze_ingot");
+            oreBlasting(consumer, EPItems.BRONZE_DUST.get(), EPItems.BRONZE_INGOT.get(), 0.5f, "bronze_ingot");
 
             //rose gold
-            oreSmelting(consumer, EPTags.Items.ROSE_GOLD_MANUFACTURABLE, RecipeCategory.MISC, EPItems.ROSE_GOLD_NUGGET.get(), 0.1f, "rose_gold_nugget");
-            oreBlasting(consumer, EPTags.Items.ROSE_GOLD_MANUFACTURABLE, RecipeCategory.MISC, EPItems.ROSE_GOLD_NUGGET.get(), 0.1f, "rose_gold_nugget");
+            oreSmelting(consumer, EPTags.Items.ROSE_GOLD_MANUFACTURABLE, EPItems.ROSE_GOLD_NUGGET.get(), 0.1f, "rose_gold_nugget");
+            oreBlasting(consumer, EPTags.Items.ROSE_GOLD_MANUFACTURABLE, EPItems.ROSE_GOLD_NUGGET.get(), 0.1f, "rose_gold_nugget");
 
-            oreBlasting(consumer, EPItems.ROSE_GOLD_DUST.get(), RecipeCategory.MISC, EPItems.ROSE_GOLD_INGOT.get(), 1f, "rose_gold_ingot");
+            oreBlasting(consumer, EPItems.ROSE_GOLD_DUST.get(), EPItems.ROSE_GOLD_INGOT.get(), 0.5f, "rose_gold_ingot");
 
             //Iron
-            oreBlasting(consumer, EPItems.IRON_DUST.get(), RecipeCategory.MISC, Items.IRON_INGOT, 1f, "iron_ingot");
+            oreBlasting(consumer, EPItems.IRON_DUST.get(), Items.IRON_INGOT, 1f, "iron_ingot");
 
             //Bronzium
-            oreBlasting(consumer, EPTags.Items.BRONZIUM_MANUFACTURABLE, RecipeCategory.MISC, EPItems.BRONZIUM_NUGGET.get(), 0.1f, "bronzium_nugget");
+            oreBlasting(consumer, EPTags.Items.BRONZIUM_MANUFACTURABLE, EPItems.BRONZIUM_NUGGET.get(), 0.1f, "bronzium_nugget");
 
-            oreBlasting(consumer, EPItems.BRONZIUM_DUST.get(), RecipeCategory.MISC, EPItems.BRONZIUM_INGOT.get(), 1f, "bronzium_ingot");
+            oreBlasting(consumer, EPItems.BRONZIUM_DUST.get(), EPItems.BRONZIUM_INGOT.get(), 0.5f, "bronzium_ingot");
 
             //Green gold
-            oreSmelting(consumer, EPTags.Items.GREEN_GOLD_MANUFACTURABLE, RecipeCategory.MISC, EPItems.GREEN_GOLD_NUGGET.get(), 0.1f, "green_gold_nugget");
-            oreBlasting(consumer, EPTags.Items.GREEN_GOLD_MANUFACTURABLE, RecipeCategory.MISC, EPItems.GREEN_GOLD_NUGGET.get(), 0.1f, "green_gold_nugget");
+            oreSmelting(consumer, EPTags.Items.GREEN_GOLD_MANUFACTURABLE, EPItems.GREEN_GOLD_NUGGET.get(), 0.1f, "green_gold_nugget");
+            oreBlasting(consumer, EPTags.Items.GREEN_GOLD_MANUFACTURABLE, EPItems.GREEN_GOLD_NUGGET.get(), 0.1f, "green_gold_nugget");
 
-            oreBlasting(consumer, EPItems.GREEN_GOLD_DUST.get(), RecipeCategory.MISC, EPItems.GREEN_GOLD_INGOT.get(), 1f, "green_gold_ingot");
+            oreBlasting(consumer, EPItems.GREEN_GOLD_DUST.get(), EPItems.GREEN_GOLD_INGOT.get(), 0.5f, "green_gold_ingot");
 
             //Steel
-            oreBlasting(consumer, EPItems.STEEL_DUST.get(), RecipeCategory.MISC, EPItems.STEEL_INGOT.get(), 1f, "steel_ingot");
+            oreBlasting(consumer, EPItems.STEEL_DUST.get(), EPItems.STEEL_INGOT.get(), 0.5f, "steel_ingot");
 
             //Blue gold
-            oreSmelting(consumer, EPTags.Items.BLUE_GOLD_MANUFACTURABLE, RecipeCategory.MISC, EPItems.BLUE_GOLD_NUGGET.get(), 0.1f, "blue_gold_nugget");
-            oreBlasting(consumer, EPTags.Items.BLUE_GOLD_MANUFACTURABLE, RecipeCategory.MISC, EPItems.BLUE_GOLD_NUGGET.get(), 0.1f, "blue_gold_nugget");
+            oreSmelting(consumer, EPTags.Items.BLUE_GOLD_MANUFACTURABLE, EPItems.BLUE_GOLD_NUGGET.get(), 0.1f, "blue_gold_nugget");
+            oreBlasting(consumer, EPTags.Items.BLUE_GOLD_MANUFACTURABLE, EPItems.BLUE_GOLD_NUGGET.get(), 0.1f, "blue_gold_nugget");
 
-            oreBlasting(consumer, EPItems.BLUE_GOLD_DUST.get(), RecipeCategory.MISC, EPItems.BLUE_GOLD_INGOT.get(), 1f, "blue_gold_ingot");
+            oreBlasting(consumer, EPItems.BLUE_GOLD_DUST.get(), EPItems.BLUE_GOLD_INGOT.get(), 0.5f, "blue_gold_ingot");
+
+            //Cobalt
+            oreSmelting(consumer, EPTags.Items.COBALT_ORES, EPItems.COBALT.get(), 0.6f, "cobalt");
+            oreBlasting(consumer, EPTags.Items.COBALT_ORES, EPItems.COBALT.get(), 0.6f, "cobalt");
+
+            //Sapphire
+            oreSmelting(consumer, EPTags.Items.SAPPHIRE_ORES, EPItems.SAPPHIRE.get(), 1f, "sapphire");
+            oreBlasting(consumer, EPTags.Items.SAPPHIRE_ORES, EPItems.SAPPHIRE.get(), 1f, "sapphire");
+
+            //Ruby
+            oreSmelting(consumer, EPTags.Items.RUBY_ORES, EPItems.RUBY.get(), 1f, "ruby");
+            oreBlasting(consumer, EPTags.Items.RUBY_ORES, EPItems.RUBY.get(), 1f, "ruby");
 
             //limestone
             oreSmelting(consumer, EPBlocks.COBBLED_LIMESTONE.get(), RecipeCategory.BUILDING_BLOCKS, EPBlocks.LIMESTONE.get(), 0.1f, "limestone");
@@ -235,7 +231,7 @@ public class SmeltingRecipeSubProvider extends RecipeProvider {
         masonrySmelting(consumer, Blocks.QUARTZ_BLOCK, Blocks.SMOOTH_QUARTZ, "smooth_quartz");
     }
 
-    private static void addTerracottaRecipes(Consumer<FinishedRecipe> pConsumer){
+    public static void addTerracottaRecipes(Consumer<FinishedRecipe> pConsumer){
         masonrySmelting(pConsumer, Blocks.WHITE_TERRACOTTA, Blocks.WHITE_GLAZED_TERRACOTTA, "white_glazed_terracotta");
         masonrySmelting(pConsumer, Blocks.BLACK_TERRACOTTA, Blocks.BLACK_GLAZED_TERRACOTTA, "black_glazed_terracotta");
         masonrySmelting(pConsumer, Blocks.YELLOW_TERRACOTTA, Blocks.YELLOW_GLAZED_TERRACOTTA, "yellow_glazed_terracotta");
@@ -256,53 +252,53 @@ public class SmeltingRecipeSubProvider extends RecipeProvider {
 
     //Vanilla
     protected static void smeltingByCampfire(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike pIngredient, RecipeCategory pCategory, ItemLike pResult, float pExperience, String pGroup){
-        oreCookingSerializer(pFinishedRecipeConsumer, RecipeSerializer.CAMPFIRE_COOKING_RECIPE, pIngredient, pCategory, pResult, pExperience, 600, pGroup, "_from_campfire");
+        oreCookingSerializer(pFinishedRecipeConsumer, RecipeSerializer.CAMPFIRE_COOKING_RECIPE, pIngredient, pCategory, pResult, pExperience, 600, pGroup, "from_campfire");
     }
     protected static void smeltingByCampfire(Consumer<FinishedRecipe> pFinishedRecipeConsumer, TagKey<Item> pIngredient, RecipeCategory pCategory, ItemLike pResult, float pExperience, String pGroup){
-        oreCookingSerializerWithTag(pFinishedRecipeConsumer, RecipeSerializer.CAMPFIRE_COOKING_RECIPE, pIngredient, pCategory, pResult, pExperience, 600, pGroup, "_from_campfire");
+        oreCookingSerializerWithTag(pFinishedRecipeConsumer, RecipeSerializer.CAMPFIRE_COOKING_RECIPE, pIngredient, pCategory, pResult, pExperience, 600, pGroup, "from_campfire");
     }
 
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike pIngredient, RecipeCategory pCategory, ItemLike pResult, float pExperience, String pGroup){
-        oreCookingSerializer(pFinishedRecipeConsumer, RecipeSerializer.SMELTING_RECIPE, pIngredient, pCategory, pResult, pExperience, 200, pGroup, "_from_smelting");
+        oreCookingSerializer(pFinishedRecipeConsumer, RecipeSerializer.SMELTING_RECIPE, pIngredient, pCategory, pResult, pExperience, 200, pGroup, "from_smelting");
     }
-    protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, TagKey<Item> pIngredient, RecipeCategory pCategory, ItemLike pResult, float pExperience, String pGroup){
-        oreCookingSerializerWithTag(pFinishedRecipeConsumer, RecipeSerializer.SMELTING_RECIPE, pIngredient, pCategory, pResult, pExperience, 200, pGroup, "_from_smelting");
+    protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, TagKey<Item> pIngredient, ItemLike pResult, float pExperience, String pGroup){
+        oreCookingSerializerWithTag(pFinishedRecipeConsumer, RecipeSerializer.SMELTING_RECIPE, pIngredient, RecipeCategory.MISC, pResult, pExperience, 200, pGroup, "from_smelting");
     }
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, String pGroup) {
-        oreCookingSerializerWithList(pFinishedRecipeConsumer, RecipeSerializer.SMELTING_RECIPE, pIngredients, pCategory, pResult, pExperience, 200, pGroup, "_from_smelting");
+        oreCookingSerializerWithList(pFinishedRecipeConsumer, RecipeSerializer.SMELTING_RECIPE, pIngredients, pCategory, pResult, pExperience, 200, pGroup, "from_smelting");
     }
 
-    protected static void smoking(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike pIngredient, RecipeCategory pCategory, ItemLike pResult, float pExperience, String pGroup){
-        oreCookingSerializer(pFinishedRecipeConsumer, RecipeSerializer.SMOKING_RECIPE, pIngredient, pCategory, pResult, pExperience, 100, pGroup, "_from_smoking");
+    protected static void smoking(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike pIngredient, ItemLike pResult, String pGroup){
+        oreCookingSerializer(pFinishedRecipeConsumer, RecipeSerializer.SMOKING_RECIPE, pIngredient, RecipeCategory.FOOD, pResult, 0.35f, 100, pGroup, "from_smoking");
     }
 
-    protected static void oreBlasting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike pIngredient, RecipeCategory pCategory, ItemLike pResult, float pExperience, String pGroup){
-        oreCookingSerializer(pFinishedRecipeConsumer, RecipeSerializer.BLASTING_RECIPE, pIngredient, pCategory, pResult, pExperience, 100, pGroup, "_from_blasting");
+    protected static void oreBlasting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike pIngredient, ItemLike pResult, float pExperience, String pGroup){
+        oreCookingSerializer(pFinishedRecipeConsumer, RecipeSerializer.BLASTING_RECIPE, pIngredient, RecipeCategory.MISC, pResult, pExperience, 100, pGroup, "from_blasting");
     }
-    protected static void oreBlasting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, TagKey<Item> pIngredient, RecipeCategory pCategory, ItemLike pResult, float pExperience, String pGroup){
-        oreCookingSerializerWithTag(pFinishedRecipeConsumer, RecipeSerializer.BLASTING_RECIPE, pIngredient, pCategory, pResult, pExperience, 100, pGroup, "_from_blasting");
+    protected static void oreBlasting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, TagKey<Item> pIngredient, ItemLike pResult, float pExperience, String pGroup){
+        oreCookingSerializerWithTag(pFinishedRecipeConsumer, RecipeSerializer.BLASTING_RECIPE, pIngredient, RecipeCategory.MISC, pResult, pExperience, 100, pGroup, "from_blasting");
     }
-    protected static void oreBlasting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, String pGroup) {
-        oreCookingSerializerWithList(pFinishedRecipeConsumer, RecipeSerializer.BLASTING_RECIPE, pIngredients, pCategory, pResult, pExperience, 100, pGroup, "_from_blasting");
+    protected static void oreBlasting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, ItemLike pResult, float pExperience, String pGroup) {
+        oreCookingSerializerWithList(pFinishedRecipeConsumer, RecipeSerializer.BLASTING_RECIPE, pIngredients, RecipeCategory.MISC, pResult, pExperience, 100, pGroup, "from_blasting");
     }
 
     //Basic smelt
     protected static void basicSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike ingredient, ItemLike result, String group){
-        basicSmeltingSerializer(pFinishedRecipeConsumer, ingredient, result, group, EPRecipes.BASIC_SMELTING_SERIALIZER.get(), "from_basic_smelting");
+        basicSmeltingSerializer(pFinishedRecipeConsumer, ingredient, result, group);
     }
     protected static void basicSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> ingredients, ItemLike result, String group){
-        basicSmeltingSerializerWithList(pFinishedRecipeConsumer, ingredients, result, group, EPRecipes.BASIC_SMELTING_SERIALIZER.get(), "from_basic_smelting");
+        basicSmeltingSerializerWithList(pFinishedRecipeConsumer, ingredients, result, group);
     }
     protected static void soulBasicSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike ingredient, ItemLike result, String group){
-        soulBasicSmeltingSerializer(pFinishedRecipeConsumer, ingredient, result, group, EPRecipes.SOUL_BASIC_SMELTING_SERIALIZER.get(), "from_soul_basic_smelting");
+        soulBasicSmeltingSerializer(pFinishedRecipeConsumer, ingredient, result, group);
     }
     protected static void soulBasicSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> ingredients, ItemLike result, String group){
-        soulBasicSmeltingSerializerWithList(pFinishedRecipeConsumer, ingredients, result, group, EPRecipes.SOUL_BASIC_SMELTING_SERIALIZER.get(), "from_soul_basic_smelting");
+        soulBasicSmeltingSerializerWithList(pFinishedRecipeConsumer, ingredients, result, group);
     }
 
     //Masonry smelt
     protected static void masonrySmelting(Consumer<FinishedRecipe> pConsumer, ItemLike input, ItemLike result, String group){
-        masonrySmeltingSerializer(pConsumer, input, result, group, EPRecipes.MASONRY_SMELTING_SERIALIZER.get(), "from_masonry_smelting");
+        masonrySmeltingSerializer(pConsumer, input, result, group);
     }
 
     protected static void oreCookingSerializer(Consumer<FinishedRecipe> pFinishedRecipeConsumer, RecipeSerializer<? extends AbstractCookingRecipe> pCookingSerializer, ItemLike pIngredient, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup, String pRecipeName){
@@ -328,47 +324,47 @@ public class SmeltingRecipeSubProvider extends RecipeProvider {
         }
     }
 
-    protected static void basicSmeltingSerializer(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike input, ItemLike output, String group, RecipeSerializer<BasicSmeltingRecipe> recipeSerializer, String recipeName){
-        ModSmeltingRecipeBuilder.basicSmelting(Ingredient.of(input), output, group, recipeSerializer)
+    protected static void basicSmeltingSerializer(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike input, ItemLike output, String group){
+        EPSmeltingRecipeBuilder.basicSmelting(Ingredient.of(input), output, group)
                 .group(group)
                 .unlockedBy(getHasName(input), has(input))
-                .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(output) +  "_" + recipeName + "_" + getItemName(input));
+                .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(output) +  "_from_basic_smelting_" + getItemName(input));
     }
 
-    protected static void basicSmeltingSerializerWithList(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> inputs, ItemLike output, String group, RecipeSerializer<BasicSmeltingRecipe> recipeSerializer, String recipeName){
+    protected static void basicSmeltingSerializerWithList(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> inputs, ItemLike output, String group){
         for (ItemLike itemlike : inputs) {
-            ModSmeltingRecipeBuilder.basicSmelting(Ingredient.of(itemlike), output, group, recipeSerializer)
+            EPSmeltingRecipeBuilder.basicSmelting(Ingredient.of(itemlike), output, group)
                     .group(group)
                     .unlockedBy(getHasName(itemlike), has(itemlike))
-                    .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(output) + "_" + recipeName + "_" + getItemName(itemlike));
+                    .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(output) + "_from_basic_smelting_" + getItemName(itemlike));
         }
     }
 
-    protected static void soulBasicSmeltingSerializer(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike input, ItemLike output, String group, RecipeSerializer<SoulBasicSmeltingRecipe> recipeSerializer, String recipeName){
-        ModSmeltingRecipeBuilder.soulBasicSmelting(Ingredient.of(input), output, group, recipeSerializer)
+    protected static void soulBasicSmeltingSerializer(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike input, ItemLike output, String group){
+        EPSmeltingRecipeBuilder.soulBasicSmelting(Ingredient.of(input), output, group)
                 .group(group)
                 .unlockedBy(getHasName(input), has(input))
-                .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(output) +  "_" + recipeName + "_" + getItemName(input));
+                .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(output) +  "_from_soul_basic_smelting_" + getItemName(input));
     }
 
-    protected static void soulBasicSmeltingSerializerWithList(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> inputs, ItemLike output, String group, RecipeSerializer<SoulBasicSmeltingRecipe> recipeSerializer, String recipeName){
+    protected static void soulBasicSmeltingSerializerWithList(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> inputs, ItemLike output, String group){
         for (ItemLike itemlike : inputs) {
-            ModSmeltingRecipeBuilder.soulBasicSmelting(Ingredient.of(itemlike), output, group, recipeSerializer)
+            EPSmeltingRecipeBuilder.soulBasicSmelting(Ingredient.of(itemlike), output, group)
                     .group(group)
                     .unlockedBy(getHasName(itemlike), has(itemlike))
-                    .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(output) + "_" + recipeName + "_" + getItemName(itemlike));
+                    .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(output) + "_from_soul_basic_smelting_" + getItemName(itemlike));
         }
     }
 
-    protected static void masonrySmeltingSerializer(Consumer<FinishedRecipe> pConsumer, ItemLike input, ItemLike output, String group, RecipeSerializer<MasonrySmeltingRecipe> pSerializer, String pRecipeName){
-        ModSmeltingRecipeBuilder.masonrySmelting(Ingredient.of(input), output, group, pSerializer)
+    protected static void masonrySmeltingSerializer(Consumer<FinishedRecipe> pConsumer, ItemLike input, ItemLike output, String group){
+        EPSmeltingRecipeBuilder.masonrySmelting(Ingredient.of(input), output, group)
                 .group(group)
                 .unlockedBy(getHasName(input), has(input))
-                .save(pConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(output) + "_" + pRecipeName + "_" + getItemName(input));
+                .save(pConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(output) + "_from_masonry_smelting_" + getItemName(input));
     }
 
-    protected static void masonrySmeltingSerializerWithTag(Consumer<FinishedRecipe> pConsumer, TagKey<Item> input, ItemLike output, String group, RecipeSerializer<MasonrySmeltingRecipe> pSerializer, String pRecipeName){
-        ModSmeltingRecipeBuilder.masonrySmelting(Ingredient.of(input), output, group, pSerializer)
+    protected static void masonrySmeltingSerializerWithTag(Consumer<FinishedRecipe> pConsumer, TagKey<Item> input, ItemLike output, String group, String pRecipeName){
+        EPSmeltingRecipeBuilder.masonrySmelting(Ingredient.of(input), output, group)
                 .group(group)
                 .unlockedBy(input.toString(), has(input))
                 .save(pConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(output) + pRecipeName + "_" + input);
@@ -379,22 +375,11 @@ public class SmeltingRecipeSubProvider extends RecipeProvider {
     }
 
     static {
-        //Silver
-        SILVER_SMELTABLES = List.of(EPItems.RAW_SILVER.get(), EPBlocks.SILVER_ORE.get(), EPBlocks.DEEPSLATE_SILVER_ORE.get());
-
         //Zinc
         BASIC_ZINC_SMELTABLES = List.of(EPItems.RAW_ZINC.get(), EPBlocks.ZINC_ORE.get(), EPBlocks.NETHER_ZINC_ORE.get());
-        ZINC_SMELTABLES = List.of(EPItems.RAW_ZINC.get(), EPBlocks.ZINC_ORE.get(), EPBlocks.NETHER_ZINC_ORE.get(), EPBlocks.DEEPSLATE_ZINC_ORE.get());
-
         //Tin
         BASIC_TIN_SMELTABLES = List.of(EPItems.RAW_TIN.get(), EPBlocks.TIN_ORE.get());
-        TIN_SMELTABLES = List.of(EPItems.RAW_TIN.get(), EPBlocks.TIN_ORE.get(), EPBlocks.DEEPSLATE_TIN_ORE.get());
-
-        //Cobalt
-        COBALT_SMELTABLES = List.of(EPBlocks.COBALT_ORE.get(), EPBlocks.DEEPSLATE_COBALT_ORE.get());
-
         //Copper
         BASIC_COPPER_SMELTABLES = List.of(Items.RAW_COPPER, Blocks.COPPER_ORE);
-        COPPER_SMELTABLES = List.of(Items.RAW_COPPER, Blocks.COPPER_ORE, Blocks.DEEPSLATE_COPPER_ORE, EPBlocks.NETHER_COPPER_ORE.get());
     }
 }

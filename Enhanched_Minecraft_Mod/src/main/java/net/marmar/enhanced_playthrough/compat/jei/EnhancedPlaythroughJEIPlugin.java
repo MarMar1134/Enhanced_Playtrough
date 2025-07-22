@@ -10,13 +10,13 @@ import net.marmar.enhanced_playthrough.menu.screen.grinder.MechanicalGrinderScre
 import net.marmar.enhanced_playthrough.menu.screen.grinder.PrimalGrinderScreen;
 import net.marmar.enhanced_playthrough.menu.screen.modfurnace.MasonryFurnaceScreen;
 import net.marmar.enhanced_playthrough.recipe.GemPolishingRecipe;
-import net.marmar.enhanced_playthrough.recipe.modsmelting.MasonrySmeltingRecipe;
+import net.marmar.enhanced_playthrough.recipe.epsmelting.MasonrySmeltingRecipe;
 import net.marmar.enhanced_playthrough.recipe.grind.MechanicalGrindRecipe;
 import net.marmar.enhanced_playthrough.recipe.EPRecipes;
 import net.marmar.enhanced_playthrough.recipe.alloy.AlloyRecipe;
 import net.marmar.enhanced_playthrough.recipe.alloy.BlastAlloyRecipe;
-import net.marmar.enhanced_playthrough.recipe.modsmelting.BasicSmeltingRecipe;
-import net.marmar.enhanced_playthrough.recipe.modsmelting.SoulBasicSmeltingRecipe;
+import net.marmar.enhanced_playthrough.recipe.epsmelting.BasicSmeltingRecipe;
+import net.marmar.enhanced_playthrough.recipe.epsmelting.SoulBasicSmeltingRecipe;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
 import mezz.jei.api.registration.IGuiHandlerRegistration;
@@ -61,21 +61,21 @@ public class EnhancedPlaythroughJEIPlugin implements IModPlugin {
         RecipeManager recipeManager = Minecraft.getInstance().level.getRecipeManager();
 
         //Basic smelting
-        List<BasicSmeltingRecipe> basicSmeltingRecipes = recipeManager.getAllRecipesFor(EPRecipes.BASIC_SMELTING_TYPE.get());
+        List<BasicSmeltingRecipe> basicSmeltingRecipes = recipeManager.getAllRecipesFor(EPRecipes.BASIC_SMELT_TYPE.get());
         registration.addRecipes(BasicSmeltingCategory.BASIC_SMELTING_TYPE, basicSmeltingRecipes);
 
-        List<SoulBasicSmeltingRecipe> soulBasicSmeltingRecipes = recipeManager.getAllRecipesFor(EPRecipes.SOUL_BASIC_SMELTING_TYPE.get());
+        List<SoulBasicSmeltingRecipe> soulBasicSmeltingRecipes = recipeManager.getAllRecipesFor(EPRecipes.SOUL_BASIC_SMELT_TYPE.get());
         registration.addRecipes(SoulBasicSmeltingCategory.SOUL_BASIC_SMELTING_TYPE, soulBasicSmeltingRecipes);
 
         //Masonry smelting
-        List<MasonrySmeltingRecipe> masonrySmeltingRecipes = recipeManager.getAllRecipesFor(EPRecipes.MASONRY_SMELTING_TYPE.get());
+        List<MasonrySmeltingRecipe> masonrySmeltingRecipes = recipeManager.getAllRecipesFor(EPRecipes.MASONRY_SMELT_TYPE.get());
         registration.addRecipes(MasonrySmeltingCategory.MASONRY_SMELTING_TYPE, masonrySmeltingRecipes);
 
         //Alloying
-        List<AlloyRecipe> alloyingRecipes = recipeManager.getAllRecipesFor(EPRecipes.ALLOYING_TYPE.get());
+        List<AlloyRecipe> alloyingRecipes = recipeManager.getAllRecipesFor(EPRecipes.ALLOY_TYPE.get());
         registration.addRecipes(OreAlloyingCategory.ALLOYING_FURNACE_RECIPE_RECIPE_TYPE, alloyingRecipes);
 
-        List<BlastAlloyRecipe> blastAlloyRecipes = recipeManager.getAllRecipesFor(EPRecipes.SUPER_ALLOYING_TYPE.get());
+        List<BlastAlloyRecipe> blastAlloyRecipes = recipeManager.getAllRecipesFor(EPRecipes.SUPER_ALLOY_TYPE.get());
         registration.addRecipes(SuperAlloyingCategory.SUPER_ALLOYING_RECIPE_TYPE, blastAlloyRecipes);
 
         //Gem polishing
@@ -83,10 +83,10 @@ public class EnhancedPlaythroughJEIPlugin implements IModPlugin {
         registration.addRecipes(GemPolishingCategory.GEM_POLISHER_RECIPE_TYPE, gemPolishingRecipes);
 
         //Grinding
-        List<PrimalGrindRecipe> primalGrindRecipes = recipeManager.getAllRecipesFor(EPRecipes.PRIMAL_GRINDING_TYPE.get());
+        List<PrimalGrindRecipe> primalGrindRecipes = recipeManager.getAllRecipesFor(EPRecipes.PRIMAL_GRIND_TYPE.get());
         registration.addRecipes(PrimalGrindCategory.PRIMAL_GRINDING_RECIPE_RECIPE_TYPE, primalGrindRecipes);
 
-        List<MechanicalGrindRecipe> mechanicalGrindRecipes = recipeManager.getAllRecipesFor(EPRecipes.MECHANICAL_GRINDING_TYPE.get());
+        List<MechanicalGrindRecipe> mechanicalGrindRecipes = recipeManager.getAllRecipesFor(EPRecipes.MECHANICAL_GRIND_TYPE.get());
         registration.addRecipes(MechanicalGrindCategory.GRINDING_RECIPE_RECIPE_TYPE, mechanicalGrindRecipes);
     }
 

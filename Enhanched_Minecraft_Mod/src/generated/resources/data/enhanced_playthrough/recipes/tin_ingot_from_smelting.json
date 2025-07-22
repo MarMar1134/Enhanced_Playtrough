@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.5,
+  "group": "tin_ingot",
+  "ingredient": {
+    "tag": "enhanced_playthrough:ores/tin"
+  },
+  "result": "enhanced_playthrough:tin_ingot"
+}

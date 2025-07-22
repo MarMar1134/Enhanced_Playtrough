@@ -58,7 +58,7 @@ public class GemPolisherMenu extends AbstractContainerMenu {
                 addSlot(new SlotItemHandler(itemStackHandler, 0, 55, 34){
                     @Override
                     public boolean mayPlace(@NotNull ItemStack stack) {
-                        return stack.is(EPTags.Items.RAW_GEM);
+                        return stack.is(EPTags.Items.RAW_GEMS);
                     }
                 }));
 

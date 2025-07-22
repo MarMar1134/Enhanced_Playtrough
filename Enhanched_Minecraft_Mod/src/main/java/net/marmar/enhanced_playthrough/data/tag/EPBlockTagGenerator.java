@@ -409,7 +409,7 @@ public class EPBlockTagGenerator extends BlockTagsProvider {
                 EPBlocks.PRIMAL_GRINDER.get()
         );
 
-        this.tag(EPTags.Blocks.BAUXITE_ORE).add(
+        this.tag(EPTags.Blocks.BAUXITE_ORES).add(
                 EPBlocks.BAUXITE.get(),
                 EPBlocks.WHITE_BAUXITE.get(),
                 EPBlocks.LIGHT_GRAY_BAUXITE.get(),

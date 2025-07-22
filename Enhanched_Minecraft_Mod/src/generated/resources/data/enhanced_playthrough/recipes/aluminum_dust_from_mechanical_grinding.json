@@ -3,7 +3,7 @@
   "category": "mechanical_grind",
   "group": "aluminum_dust",
   "ingredient": {
-    "tag": "enhanced_playthrough:aluminum_manufacturable"
+    "tag": "enhanced_playthrough:manufacturable/aluminum"
   },
   "output": {
     "item": "enhanced_playthrough:aluminum_dust"

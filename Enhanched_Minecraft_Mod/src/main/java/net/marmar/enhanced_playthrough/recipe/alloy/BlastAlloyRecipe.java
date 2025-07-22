@@ -1,6 +1,5 @@
 package net.marmar.enhanced_playthrough.recipe.alloy;
 
-import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.block.EPBlocks;
 import net.marmar.enhanced_playthrough.recipe.EPRecipes;
 import com.google.gson.JsonArray;
@@ -21,12 +20,12 @@ public class BlastAlloyRecipe extends AbstractAlloyRecipe implements Recipe<Simp
     private final AlloyRecipeCategory category;
     private final String group;
 
-    public BlastAlloyRecipe(NonNullList<Ingredient> inputs, ItemStack output, int alloyingTime, ResourceLocation id, AlloyRecipeCategory category, String group) {
-        super(inputs, output, alloyingTime, id, EPRecipes.SUPER_ALLOYING_TYPE.get(), category, group);
-        this.inputs = inputs;
-        this.alloyTime = alloyingTime;
-        this.category = category;
-        this.group = group;
+    public BlastAlloyRecipe(NonNullList<Ingredient> pInputs, ItemStack pOutput, int pAlloyTime, ResourceLocation pRecipeId, AlloyRecipeCategory pCategory, String pGroup) {
+        super(pInputs, pOutput, pAlloyTime, pRecipeId, EPRecipes.SUPER_ALLOY_TYPE.get(), pCategory, pGroup);
+        this.inputs = pInputs;
+        this.alloyTime = pAlloyTime;
+        this.category = pCategory;
+        this.group = pGroup;
     }
 
     @Override
@@ -49,14 +48,13 @@ public class BlastAlloyRecipe extends AbstractAlloyRecipe implements Recipe<Simp
     }
 
     public static class Type implements RecipeType<BlastAlloyRecipe>{
-        public static final BlastAlloyRecipe.Type INSTANCE = new BlastAlloyRecipe.Type();
-        private static final String ID = "super_ore_alloying";
+        public static final Type INSTANCE = new Type();
     }
     public static class Serializer implements RecipeSerializer<BlastAlloyRecipe>{
-        public static final BlastAlloyRecipe.Serializer INSTANCE = new BlastAlloyRecipe.Serializer();
-        public static final ResourceLocation ID = new ResourceLocation(EnhancedPlaythrough.MOD_ID, "super_ore_alloying");
+        public static final Serializer INSTANCE = new Serializer();
 
         public final int defaultAlloyTime = 0;
+
         @Override
         public BlastAlloyRecipe fromJson(ResourceLocation resourceLocation, JsonObject jsonObject) {
             AlloyRecipeCategory recipeCategory = AlloyRecipeCategory.findCategory(GsonHelper.getAsString(jsonObject, "category"));

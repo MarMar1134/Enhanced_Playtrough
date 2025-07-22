@@ -1,7 +1,7 @@
 {
   "parent": "enhanced_playthrough:polish_sapphire",
   "criteria": {
-    "has_material": {
+    "has_ruby": {
       "conditions": {
         "items": [
           {
@@ -32,7 +32,7 @@
   },
   "requirements": [
     [
-      "has_material"
+      "has_ruby"
     ]
   ],
   "sends_telemetry_event": true

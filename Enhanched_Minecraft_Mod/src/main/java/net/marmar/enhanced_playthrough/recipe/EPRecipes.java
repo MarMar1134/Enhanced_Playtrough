@@ -3,9 +3,9 @@ package net.marmar.enhanced_playthrough.recipe;
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.recipe.alloy.AlloyRecipe;
 import net.marmar.enhanced_playthrough.recipe.alloy.BlastAlloyRecipe;
-import net.marmar.enhanced_playthrough.recipe.modsmelting.BasicSmeltingRecipe;
-import net.marmar.enhanced_playthrough.recipe.modsmelting.MasonrySmeltingRecipe;
-import net.marmar.enhanced_playthrough.recipe.modsmelting.SoulBasicSmeltingRecipe;
+import net.marmar.enhanced_playthrough.recipe.epsmelting.BasicSmeltingRecipe;
+import net.marmar.enhanced_playthrough.recipe.epsmelting.MasonrySmeltingRecipe;
+import net.marmar.enhanced_playthrough.recipe.epsmelting.SoulBasicSmeltingRecipe;
 import net.marmar.enhanced_playthrough.recipe.grind.MechanicalGrindRecipe;
 import net.marmar.enhanced_playthrough.recipe.grind.PrimalGrindRecipe;
 import net.minecraft.world.item.crafting.RecipeSerializer;
@@ -24,33 +24,33 @@ public class EPRecipes {
 
     //Recipes
         //Basic Smelting
-        public static final RegistryObject<RecipeSerializer<BasicSmeltingRecipe>> BASIC_SMELTING_SERIALIZER =
+        public static final RegistryObject<RecipeSerializer<BasicSmeltingRecipe>> BASIC_SMELT_SERIALIZER =
                 RECIPE_SERIALIZER.register("basic_smelting", () -> BasicSmeltingRecipe.Serializer.INSTANCE);
-        public static final RegistryObject<RecipeType<BasicSmeltingRecipe>> BASIC_SMELTING_TYPE =
+        public static final RegistryObject<RecipeType<BasicSmeltingRecipe>> BASIC_SMELT_TYPE =
                 RECIPE_TYPE.register("basic_smelting", () -> BasicSmeltingRecipe.Type.INSTANCE);
 
         //Soul basic smelting
-        public static final RegistryObject<RecipeSerializer<SoulBasicSmeltingRecipe>> SOUL_BASIC_SMELTING_SERIALIZER =
+        public static final RegistryObject<RecipeSerializer<SoulBasicSmeltingRecipe>> SOUL_BASIC_SMELT_SERIALIZER =
                     RECIPE_SERIALIZER.register("soul_basic_smelting", () -> SoulBasicSmeltingRecipe.Serializer.INSTANCE);
-        public static final RegistryObject<RecipeType<SoulBasicSmeltingRecipe>> SOUL_BASIC_SMELTING_TYPE =
+        public static final RegistryObject<RecipeType<SoulBasicSmeltingRecipe>> SOUL_BASIC_SMELT_TYPE =
                 RECIPE_TYPE.register("soul_basic_smelting", () -> SoulBasicSmeltingRecipe.Type.INSTANCE);
 
         //Masonry smelting
-        public static final RegistryObject<RecipeSerializer<MasonrySmeltingRecipe>> MASONRY_SMELTING_SERIALIZER =
+        public static final RegistryObject<RecipeSerializer<MasonrySmeltingRecipe>> MASONRY_SMELT_SERIALIZER =
                 RECIPE_SERIALIZER.register("masonry_smelting", () -> MasonrySmeltingRecipe.Serializer.INSTANCE);
-        public static final RegistryObject<RecipeType<MasonrySmeltingRecipe>> MASONRY_SMELTING_TYPE =
+        public static final RegistryObject<RecipeType<MasonrySmeltingRecipe>> MASONRY_SMELT_TYPE =
                 RECIPE_TYPE.register("masonry_smelting", () -> MasonrySmeltingRecipe.Type.INSTANCE);
 
         //Ore alloying
-        public static final RegistryObject<RecipeSerializer<AlloyRecipe>> ALLOYING_SERIALIZER =
+        public static final RegistryObject<RecipeSerializer<AlloyRecipe>> ALLOY_SERIALIZER =
                 RECIPE_SERIALIZER.register("ore_alloying", () -> AlloyRecipe.Serializer.INSTANCE);
-        public static final RegistryObject<RecipeType<AlloyRecipe>> ALLOYING_TYPE =
+        public static final RegistryObject<RecipeType<AlloyRecipe>> ALLOY_TYPE =
                 RECIPE_TYPE.register("ore_alloying", () -> AlloyRecipe.Type.INSTANCE);
 
         //Super ore alloying
-        public static final RegistryObject<RecipeSerializer<BlastAlloyRecipe>> SUPER_ALLOYING_SERIALIZER =
+        public static final RegistryObject<RecipeSerializer<BlastAlloyRecipe>> SUPER_ALLOY_SERIALIZER =
                 RECIPE_SERIALIZER.register("super_ore_alloying", () -> BlastAlloyRecipe.Serializer.INSTANCE);
-        public static final RegistryObject<RecipeType<BlastAlloyRecipe>> SUPER_ALLOYING_TYPE =
+        public static final RegistryObject<RecipeType<BlastAlloyRecipe>> SUPER_ALLOY_TYPE =
                 RECIPE_TYPE.register("super_ore_alloying", () -> BlastAlloyRecipe.Type.INSTANCE);
 
         //Gem polishing
@@ -60,15 +60,15 @@ public class EPRecipes {
                 RECIPE_TYPE.register("gem_polishing", () -> GemPolishingRecipe.Type.INSTANCE);
 
         //Primal grinding
-        public static final RegistryObject<RecipeSerializer<PrimalGrindRecipe>> PRIMAL_GRINDING_SERIALIZER =
+        public static final RegistryObject<RecipeSerializer<PrimalGrindRecipe>> PRIMAL_GRIND_SERIALIZER =
                 RECIPE_SERIALIZER.register("primal_grinding", () -> PrimalGrindRecipe.Serializer.INSTANCE);
-        public static final RegistryObject<RecipeType<PrimalGrindRecipe>> PRIMAL_GRINDING_TYPE =
+        public static final RegistryObject<RecipeType<PrimalGrindRecipe>> PRIMAL_GRIND_TYPE =
                 RECIPE_TYPE.register("primal_grinding", () -> PrimalGrindRecipe.Type.INSTANCE);
 
         //Mechanical grinding
-        public static final RegistryObject<RecipeSerializer<MechanicalGrindRecipe>> MECHANICAL_GRINDING_SERIALIZER =
+        public static final RegistryObject<RecipeSerializer<MechanicalGrindRecipe>> MECHANICAL_GRIND_SERIALIZER =
                     RECIPE_SERIALIZER.register("mechanical_grinding", () -> MechanicalGrindRecipe.Serializer.INSTANCE);
-        public static final RegistryObject<RecipeType<MechanicalGrindRecipe>> MECHANICAL_GRINDING_TYPE =
+        public static final RegistryObject<RecipeType<MechanicalGrindRecipe>> MECHANICAL_GRIND_TYPE =
                 RECIPE_TYPE.register("mechanical_grinding", () -> MechanicalGrindRecipe.Type.INSTANCE);
 
     public static void register(IEventBus eventBus){

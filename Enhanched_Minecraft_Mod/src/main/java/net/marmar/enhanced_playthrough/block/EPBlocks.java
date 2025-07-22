@@ -15,14 +15,14 @@ import net.marmar.enhanced_playthrough.block.custom.gempolisher.GemPolisherBlock
 import net.marmar.enhanced_playthrough.block.custom.grinder.MechanicalGrinderBlock;
 import net.marmar.enhanced_playthrough.block.custom.grinder.PrimalGrinderBlock;
 import net.marmar.enhanced_playthrough.block.custom.epfurnace.MasonryFurnaceBlock;
-import net.marmar.enhanced_playthrough.block.custom.wood.ModLeavesBlock;
-import net.marmar.enhanced_playthrough.block.custom.wood.ModLogsBlock;
-import net.marmar.enhanced_playthrough.block.custom.wood.ModPlanksBlock;
-import net.marmar.enhanced_playthrough.block.custom.wood.ModWoodTypes;
-import net.marmar.enhanced_playthrough.block.custom.wood.sign.ModHangingSignBlock;
-import net.marmar.enhanced_playthrough.block.custom.wood.sign.ModStandingSignBlock;
-import net.marmar.enhanced_playthrough.block.custom.wood.sign.ModWallHangingSignBlock;
-import net.marmar.enhanced_playthrough.block.custom.wood.sign.ModWallSignBlock;
+import net.marmar.enhanced_playthrough.block.custom.wood.EPLeavesBlock;
+import net.marmar.enhanced_playthrough.block.custom.wood.EPLogsBlock;
+import net.marmar.enhanced_playthrough.block.custom.wood.EPPlanksBlock;
+import net.marmar.enhanced_playthrough.block.custom.wood.EPWoodTypes;
+import net.marmar.enhanced_playthrough.block.custom.wood.sign.EPHangingSignBlock;
+import net.marmar.enhanced_playthrough.block.custom.wood.sign.EPStandingSignBlock;
+import net.marmar.enhanced_playthrough.block.custom.wood.sign.EPWallHangingSignBlock;
+import net.marmar.enhanced_playthrough.block.custom.wood.sign.EPWallSignBlock;
 import net.marmar.enhanced_playthrough.item.EPItems;
 import net.marmar.enhanced_playthrough.util.effect.EPMobEffects;
 import net.marmar.enhanced_playthrough.worldgen.tree.grower.*;
@@ -52,17 +52,17 @@ public class EPBlocks {
             public static final RegistryObject<Block> WALNUT_SAPLING = registerBlockWithItem("walnut_sapling",
                     () -> new SaplingBlock(new WalnutTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
             public static final RegistryObject<Block> WALNUT_LOG = registerBlockWithItem("walnut_log",
-                    () -> new ModLogsBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
+                    () -> new EPLogsBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
             public static final RegistryObject<Block> STRIPPED_WALNUT_LOG = registerBlockWithItem("stripped_walnut_log",
-                    () -> new ModLogsBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
+                    () -> new EPLogsBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
             public static final RegistryObject<Block> WALNUT_WOOD = registerBlockWithItem("walnut_wood",
-                    () -> new ModLogsBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
+                    () -> new EPLogsBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
             public static final RegistryObject<Block> STRIPPED_WALNUT_WOOD = registerBlockWithItem("stripped_walnut_wood",
-                    () -> new ModLogsBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
+                    () -> new EPLogsBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
             public static final RegistryObject<Block> WALNUT_LEAVES = registerBlockWithItem("walnut_leaves",
-                    () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+                    () -> new EPLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
             public static final RegistryObject<Block> WALNUT_PLANKS = registerBlockWithItem("walnut_planks",
-                    () -> new ModPlanksBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+                    () -> new EPPlanksBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
             public static final RegistryObject<Block> WALNUT_DOOR = registerBlockWithItem("walnut_door",
                     () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion(), BlockSetType.OAK));
             public static final RegistryObject<Block> WALNUT_TRAPDOOR = registerBlockWithItem("walnut_trapdoor",
@@ -82,14 +82,14 @@ public class EPBlocks {
                     () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
 
             public static final RegistryObject<Block> WALNUT_SIGN = BLOCKS.register("walnut_sign",
-                    () -> new ModStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.WALNUT));
+                    () -> new EPStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), EPWoodTypes.WALNUT));
             public static final RegistryObject<Block> WALNUT_WALL_SIGN = BLOCKS.register("walnut_wall_sign",
-                    () -> new ModWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.WALNUT));
+                    () -> new EPWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), EPWoodTypes.WALNUT));
 
             public static final RegistryObject<Block> WALNUT_HANGING_SIGN = BLOCKS.register("walnut_hanging_sign",
-                    () -> new ModHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.WALNUT));
+                    () -> new EPHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), EPWoodTypes.WALNUT));
             public static final RegistryObject<Block> WALNUT_WALL_HANGING_SIGN = BLOCKS.register("walnut_wall_hanging_sign",
-                    () -> new ModWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.WALNUT));
+                    () -> new EPWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), EPWoodTypes.WALNUT));
 
             //Apple
             public static final RegistryObject<Block> APPLE_SAPLING = registerBlockWithItem("apple_sapling",
@@ -97,19 +97,19 @@ public class EPBlocks {
             public static final RegistryObject<Block> GREEN_APPLE_SAPLING = registerBlockWithItem("green_apple_sapling",
                     () -> new SaplingBlock(new GreenAppleTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
             public static final RegistryObject<Block> APPLE_LOG = registerBlockWithItem("apple_log",
-                    () -> new ModLogsBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
+                    () -> new EPLogsBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
             public static final RegistryObject<Block> STRIPPED_APPLE_LOG = registerBlockWithItem("stripped_apple_log",
-                    () -> new ModLogsBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
+                    () -> new EPLogsBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
             public static final RegistryObject<Block> APPLE_WOOD = registerBlockWithItem("apple_wood",
-                    () -> new ModLogsBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
+                    () -> new EPLogsBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
             public static final RegistryObject<Block> STRIPPED_APPLE_WOOD = registerBlockWithItem("stripped_apple_wood",
-                    () -> new ModLogsBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
+                    () -> new EPLogsBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
             public static final RegistryObject<Block> APPLE_LEAVES = registerBlockWithItem("apple_leaves",
-                    () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+                    () -> new EPLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
             public static final RegistryObject<Block> GREEN_APPLE_LEAVES = registerBlockWithItem("green_apple_leaves",
-                    () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+                    () -> new EPLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
             public static final RegistryObject<Block> APPLE_PLANKS = registerBlockWithItem("apple_planks",
-                    () -> new ModPlanksBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+                    () -> new EPPlanksBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
             public static final RegistryObject<Block> APPLE_DOOR = registerBlockWithItem("apple_door",
                     () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion(), BlockSetType.OAK));
             public static final RegistryObject<Block> APPLE_TRAPDOOR = registerBlockWithItem("apple_trapdoor",
@@ -129,30 +129,30 @@ public class EPBlocks {
                     () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
 
             public static final RegistryObject<Block> APPLE_SIGN = BLOCKS.register("apple_sign",
-                    () -> new ModStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.APPLE));
+                    () -> new EPStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), EPWoodTypes.APPLE));
             public static final RegistryObject<Block> APPLE_WALL_SIGN = BLOCKS.register("apple_wall_sign",
-                    () -> new ModWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.APPLE));
+                    () -> new EPWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), EPWoodTypes.APPLE));
 
             public static final RegistryObject<Block> APPLE_HANGING_SIGN = BLOCKS.register("apple_hanging_sign",
-                    () -> new ModHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.APPLE));
+                    () -> new EPHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), EPWoodTypes.APPLE));
             public static final RegistryObject<Block> APPLE_WALL_HANGING_SIGN = BLOCKS.register("apple_wall_hanging_sign",
-                    () -> new ModWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.APPLE));
+                    () -> new EPWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), EPWoodTypes.APPLE));
 
             //Orange
             public static final RegistryObject<Block> ORANGE_SAPLING = registerBlockWithItem("orange_sapling",
                     () -> new SaplingBlock(new OrangeTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
             public static final RegistryObject<Block> ORANGE_LOG = registerBlockWithItem("orange_log",
-                    () -> new ModLogsBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
+                    () -> new EPLogsBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
             public static final RegistryObject<Block> STRIPPED_ORANGE_LOG = registerBlockWithItem("stripped_orange_log",
-                    () -> new ModLogsBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
+                    () -> new EPLogsBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
             public static final RegistryObject<Block> ORANGE_WOOD = registerBlockWithItem("orange_wood",
-                    () -> new ModLogsBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
+                    () -> new EPLogsBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
             public static final RegistryObject<Block> STRIPPED_ORANGE_WOOD = registerBlockWithItem("stripped_orange_wood",
-                    () -> new ModLogsBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
+                    () -> new EPLogsBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
             public static final RegistryObject<Block> ORANGE_LEAVES = registerBlockWithItem("orange_leaves",
-                    () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+                    () -> new EPLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
             public static final RegistryObject<Block> ORANGE_PLANKS = registerBlockWithItem("orange_planks",
-                    () -> new ModPlanksBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+                    () -> new EPPlanksBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
             public static final RegistryObject<Block> ORANGE_DOOR = registerBlockWithItem("orange_door",
                     () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion(), BlockSetType.OAK));
             public static final RegistryObject<Block> ORANGE_TRAPDOOR = registerBlockWithItem("orange_trapdoor",
@@ -172,30 +172,30 @@ public class EPBlocks {
                     () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
 
             public static final RegistryObject<Block> ORANGE_SIGN = BLOCKS.register("orange_sign",
-                    () -> new ModStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.ORANGE));
+                    () -> new EPStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), EPWoodTypes.ORANGE));
             public static final RegistryObject<Block> ORANGE_WALL_SIGN = BLOCKS.register("orange_wall_sign",
-                    () -> new ModWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.ORANGE));
+                    () -> new EPWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), EPWoodTypes.ORANGE));
 
             public static final RegistryObject<Block> ORANGE_HANGING_SIGN = BLOCKS.register("orange_hanging_sign",
-                    () -> new ModHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.ORANGE));
+                    () -> new EPHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), EPWoodTypes.ORANGE));
             public static final RegistryObject<Block> ORANGE_WALL_HANGING_SIGN = BLOCKS.register("orange_wall_hanging_sign",
-                    () -> new ModWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.ORANGE));
+                    () -> new EPWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), EPWoodTypes.ORANGE));
 
             //Lemon
             public static final RegistryObject<Block> LEMON_SAPLING = registerBlockWithItem("lemon_sapling",
                     () -> new SaplingBlock(new LemonTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
             public static final RegistryObject<Block> LEMON_LOG = registerBlockWithItem("lemon_log",
-                    () -> new ModLogsBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
+                    () -> new EPLogsBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
             public static final RegistryObject<Block> STRIPPED_LEMON_LOG = registerBlockWithItem("stripped_lemon_log",
-                    () -> new ModLogsBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
+                    () -> new EPLogsBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
             public static final RegistryObject<Block> LEMON_WOOD = registerBlockWithItem("lemon_wood",
-                    () -> new ModLogsBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
+                    () -> new EPLogsBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
             public static final RegistryObject<Block> STRIPPED_LEMON_WOOD = registerBlockWithItem("stripped_lemon_wood",
-                    () -> new ModLogsBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
+                    () -> new EPLogsBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
             public static final RegistryObject<Block> LEMON_LEAVES = registerBlockWithItem("lemon_leaves",
-                    () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+                    () -> new EPLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
             public static final RegistryObject<Block> LEMON_PLANKS = registerBlockWithItem("lemon_planks",
-                    () -> new ModPlanksBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+                    () -> new EPPlanksBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
             public static final RegistryObject<Block> LEMON_DOOR = registerBlockWithItem("lemon_door",
                     () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion(), BlockSetType.OAK));
             public static final RegistryObject<Block> LEMON_TRAPDOOR = registerBlockWithItem("lemon_trapdoor",
@@ -215,20 +215,20 @@ public class EPBlocks {
                     () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
 
             public static final RegistryObject<Block> LEMON_SIGN = BLOCKS.register("lemon_sign",
-                    () -> new ModStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.LEMON));
+                    () -> new EPStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), EPWoodTypes.LEMON));
             public static final RegistryObject<Block> LEMON_WALL_SIGN = BLOCKS.register("lemon_wall_sign",
-                    () -> new ModWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.LEMON));
+                    () -> new EPWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), EPWoodTypes.LEMON));
 
             public static final RegistryObject<Block> LEMON_HANGING_SIGN = BLOCKS.register("lemon_hanging_sign",
-                    () -> new ModHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.LEMON));
+                    () -> new EPHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), EPWoodTypes.LEMON));
             public static final RegistryObject<Block> LEMON_WALL_HANGING_SIGN = BLOCKS.register("lemon_wall_hanging_sign",
-                    () -> new ModWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.LEMON));
+                    () -> new EPWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), EPWoodTypes.LEMON));
 
             //Lime
             public static final RegistryObject<Block> LIME_SAPLING = registerBlockWithItem("lime_sapling",
                     () -> new SaplingBlock(new LimeTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
             public static final RegistryObject<Block> LIME_LEAVES = registerBlockWithItem("lime_leaves",
-                    () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).requiresCorrectToolForDrops()));
+                    () -> new EPLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).requiresCorrectToolForDrops()));
 
         //Polished stone
         public static final RegistryObject<Block> POLISHED_STONE = registerBlockWithItem("polished_stone",

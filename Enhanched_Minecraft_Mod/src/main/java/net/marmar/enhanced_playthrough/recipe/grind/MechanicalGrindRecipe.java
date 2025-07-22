@@ -1,6 +1,5 @@
 package net.marmar.enhanced_playthrough.recipe.grind;
 
-import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import net.marmar.enhanced_playthrough.block.EPBlocks;
@@ -17,11 +16,11 @@ public class MechanicalGrindRecipe extends AbstractGrindRecipe {
     private final ModRecipeCategory category;
     private final String group;
 
-    public MechanicalGrindRecipe(Ingredient input, ItemStack output, ResourceLocation id, ModRecipeCategory category, String group) {
-        super(input, output, id);
-        this.input = input;
-        this.category = category;
-        this.group = group;
+    public MechanicalGrindRecipe(Ingredient pInput, ItemStack pOutput, ResourceLocation pRecipeId, ModRecipeCategory pCategory, String pGroup) {
+        super(pInput, pOutput, pRecipeId);
+        this.input = pInput;
+        this.category = pCategory;
+        this.group = pGroup;
     }
 
     @Override
@@ -40,13 +39,11 @@ public class MechanicalGrindRecipe extends AbstractGrindRecipe {
     }
 
     public static class Type implements RecipeType<MechanicalGrindRecipe>{
-        public static final MechanicalGrindRecipe.Type INSTANCE = new MechanicalGrindRecipe.Type();
-        private static final String ID = "mechanical_grinding";
+        public static final Type INSTANCE = new Type();
     }
 
     public static class Serializer implements RecipeSerializer<MechanicalGrindRecipe>{
         public static final Serializer INSTANCE = new Serializer();
-        public static final ResourceLocation ID = new ResourceLocation(EnhancedPlaythrough.MOD_ID, "mechanical_grinding");
 
         @Override
         public MechanicalGrindRecipe fromJson(ResourceLocation resourceLocation, JsonObject jsonObject) {

@@ -3,8 +3,10 @@ package net.marmar.enhanced_playthrough.recipe.recipebuilder;
 import net.marmar.enhanced_playthrough.recipe.EPRecipes;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+import net.marmar.enhanced_playthrough.recipe.alloy.AbstractAlloyRecipe;
 import net.marmar.enhanced_playthrough.recipe.recipecategory.AlloyRecipeCategory;
 import net.minecraft.advancements.Advancement;
+import net.minecraft.advancements.AdvancementRewards;
 import net.minecraft.advancements.CriterionTriggerInstance;
 import net.minecraft.advancements.RequirementsStrategy;
 import net.minecraft.advancements.critereon.RecipeUnlockedTrigger;
@@ -20,6 +22,10 @@ import net.minecraftforge.registries.ForgeRegistries;
 import javax.annotation.Nullable;
 import java.util.function.Consumer;
 
+/**
+ * The following class serializes recipe data used on any alloy recipe. It takes the {@code alloyRecipe}
+ * parameters and, using the specified serializer, makes a JSON file that Minecraft can read and decode.
+ */
 public class AlloyRecipeBuilder implements RecipeBuilder {
     private final Ingredient firstIngredient;
     private final Ingredient secondIngredient;
@@ -31,26 +37,39 @@ public class AlloyRecipeBuilder implements RecipeBuilder {
     private final Advancement.Builder advancement = Advancement.Builder.recipeAdvancement();
     private final RecipeSerializer<?> serializer;
 
-    private AlloyRecipeBuilder(AlloyRecipeCategory recipeCategory, String pGroup, int alloyingTime, ItemLike pResult, int count, Ingredient firstIngredient, Ingredient secondIngredient, RecipeSerializer<?> pSerializer) {
+    private AlloyRecipeBuilder(AlloyRecipeCategory pRecipeCategory, String pGroup, int pAlloyTime, ItemLike pResult, int pCount, Ingredient firstIngredient, Ingredient secondIngredient, RecipeSerializer<?> pSerializer) {
         this.firstIngredient = firstIngredient;
         this.secondIngredient = secondIngredient;
         this.result = pResult.asItem();
-        this.count = count;
-        this.alloyTime = alloyingTime;
-        this.category = recipeCategory;
+        this.count = pCount;
+        this.alloyTime = pAlloyTime;
+        this.category = pRecipeCategory;
         this.group = pGroup;
         this.serializer = pSerializer;
     }
 
-    public static AlloyRecipeBuilder oreAlloying(Ingredient firstIngredient, Ingredient secondIngredient, AlloyRecipeCategory recipeCategory, ItemLike pResult, String group) {
-        return new AlloyRecipeBuilder(recipeCategory, group, 200, pResult, 1, firstIngredient, secondIngredient, EPRecipes.ALLOYING_SERIALIZER.get());
+    /**
+     * If you have a custom alloy recipe, use this method to serialize its data and make data driven recipes.
+     * @param firstIngredient the item used on the first slot
+     * @param secondIngredient the item used on the second slot
+     * @param pAlloyTime the amount of time it takes the recipe to be completed
+     * @param recipeCategory the category of the recipe
+     * @param pResult the alloy
+     * @param pCount the amount of items given per alloy
+     * @param pGroup the group with the alloy belongs
+     * @param pSerializer the custom serializer
+     */
+    public static AlloyRecipeBuilder genericAlloy(Ingredient firstIngredient, Ingredient secondIngredient, int pAlloyTime, AlloyRecipeCategory recipeCategory, ItemLike pResult, int pCount, String pGroup, RecipeSerializer<? extends AbstractAlloyRecipe> pSerializer){
+        return new AlloyRecipeBuilder(recipeCategory, pGroup, pAlloyTime, pResult, pCount, firstIngredient, secondIngredient, pSerializer);
     }
 
-    public static AlloyRecipeBuilder superOreAlloying(Ingredient firstIngredient, Ingredient secondIngredient, AlloyRecipeCategory recipeCategory, ItemLike pResult, String group, int count) {
-        return new AlloyRecipeBuilder(recipeCategory, group, 100, pResult, count, firstIngredient, secondIngredient, EPRecipes.SUPER_ALLOYING_SERIALIZER.get());
+    public static AlloyRecipeBuilder oreAlloying(Ingredient firstIngredient, Ingredient secondIngredient, AlloyRecipeCategory recipeCategory, ItemLike pResult, String pGroup) {
+        return genericAlloy(firstIngredient, secondIngredient, 200, recipeCategory, pResult, 1, pGroup, EPRecipes.ALLOY_SERIALIZER.get());
     }
 
-
+    public static AlloyRecipeBuilder superOreAlloying(Ingredient firstIngredient, Ingredient secondIngredient, AlloyRecipeCategory recipeCategory, ItemLike pResult, String pGroup, int pCount) {
+        return genericAlloy(firstIngredient, secondIngredient, 100, recipeCategory, pResult, pCount, pGroup, EPRecipes.SUPER_ALLOY_SERIALIZER.get());
+    }
 
     @Override
     public AlloyRecipeBuilder unlockedBy(String pCriterionName, CriterionTriggerInstance pCriterionTrigger) {
@@ -59,7 +78,7 @@ public class AlloyRecipeBuilder implements RecipeBuilder {
     }
 
     @Override
-    public AlloyRecipeBuilder group(@javax.annotation.Nullable String pGroupName) {
+    public AlloyRecipeBuilder group(@Nullable String pGroupName) {
         this.group = pGroupName;
         return this;
     }
@@ -72,16 +91,22 @@ public class AlloyRecipeBuilder implements RecipeBuilder {
     @Override
     public void save(Consumer<FinishedRecipe> consumer, ResourceLocation resourceLocation) {
         this.ensureValid(resourceLocation);
-        this.advancement.parent(ROOT_RECIPE_ADVANCEMENT).addCriterion("has_the_recipe", RecipeUnlockedTrigger.unlocked(resourceLocation)).rewards(net.minecraft.advancements.AdvancementRewards.Builder.recipe(resourceLocation)).requirements(RequirementsStrategy.OR);
-        consumer.accept(new AlloyRecipeBuilder.Result(resourceLocation, this.firstIngredient, this.secondIngredient, this.result, this.count, this.alloyTime, this.category, this.group, this.advancement, resourceLocation.withPrefix("recipes/"), this.serializer));
+
+        this.advancement.parent(ROOT_RECIPE_ADVANCEMENT).addCriterion("has_the_recipe", RecipeUnlockedTrigger.unlocked(resourceLocation))
+                .rewards(AdvancementRewards.Builder.recipe(resourceLocation)).requirements(RequirementsStrategy.OR);
+
+        consumer.accept(new AlloyRecipeBuilder.Result(resourceLocation, this.firstIngredient, this.secondIngredient, this.result, this.count,
+                this.alloyTime, this.category, this.group, this.advancement, resourceLocation.withPrefix("recipes/"), this.serializer));
     }
+
     private void ensureValid(ResourceLocation pId) {
         if (this.advancement.getCriteria().isEmpty()) {
             throw new IllegalStateException("No way of obtaining recipe " + pId);
         }
     }
+
     static class Result implements FinishedRecipe {
-        private final ResourceLocation id;
+        private final ResourceLocation recipeId;
         private final Ingredient firstIngredient;
         private final Ingredient secondIngredient;
         private final Item result;
@@ -90,33 +115,33 @@ public class AlloyRecipeBuilder implements RecipeBuilder {
         private final AlloyRecipeCategory category;
         private final String group;
         private final Advancement.Builder advancement;
-        private final ResourceLocation resourceLocation;
+        private final ResourceLocation advancementId;
         private final RecipeSerializer<?> serializer;
 
-        public Result(ResourceLocation pId, Ingredient firstIngredient, Ingredient secondIngredient, Item pResult, int count, int alloyingTime, AlloyRecipeCategory recipeCategory, String pGroup, Advancement.Builder pAdvancement, ResourceLocation pAdvancementId, RecipeSerializer<?> pSerializer) {
-            this.id = pId;
+        public Result(ResourceLocation pRecipeId, Ingredient firstIngredient, Ingredient secondIngredient, Item pResult, int pCount, int alloyingTime, AlloyRecipeCategory recipeCategory, String pGroup, Advancement.Builder pAdvancement, ResourceLocation pAdvancementId, RecipeSerializer<?> pSerializer) {
+            this.recipeId = pRecipeId;
             this.firstIngredient = firstIngredient;
             this.secondIngredient = secondIngredient;
             this.result = pResult;
-            this.count = count;
+            this.count = pCount;
             this.alloyTime = alloyingTime;
             this.category = recipeCategory;
             this.group = pGroup;
             this.advancement = pAdvancement;
-            this.resourceLocation = pAdvancementId;
+            this.advancementId = pAdvancementId;
             this.serializer = pSerializer;
         }
+
         public void serializeRecipeData(JsonObject pJson) {
-            if (!this.group.isEmpty()){
-                pJson.addProperty("group", this.group);
-            }
+            //Group is added if != null
+            if (!this.group.isEmpty()) pJson.addProperty("group", this.group);
 
             pJson.addProperty("category", this.category.getSerializedName());
 
+            pJson.addProperty("alloytime", this.alloyTime);
 
-                pJson.addProperty("alloytime", this.alloyTime);
-
-                JsonArray inputArray = new JsonArray();
+            //Inputs
+            JsonArray inputArray = new JsonArray();
 
                 inputArray.add(this.firstIngredient.toJson());
                 inputArray.add(this.secondIngredient.toJson());
@@ -126,13 +151,12 @@ public class AlloyRecipeBuilder implements RecipeBuilder {
             //Output
             JsonObject outputObject = new JsonObject();
 
-            outputObject.addProperty("item", ForgeRegistries.ITEMS.getKey(this.result).toString());
+                outputObject.addProperty("item", ForgeRegistries.ITEMS.getKey(this.result).toString());
 
-            if(this.count != 1){
-                outputObject.addProperty("count", this.count);
-            }
+                //Count defaults to 1, so is not necessary to be added if IT is 1.
+                if(this.count != 1) outputObject.addProperty("count", this.count);
 
-            pJson.add("output", outputObject);
+                pJson.add("output", outputObject);
         }
 
         public RecipeSerializer<?> getType() {
@@ -140,17 +164,17 @@ public class AlloyRecipeBuilder implements RecipeBuilder {
         }
 
         public ResourceLocation getId() {
-            return this.id;
+            return this.recipeId;
         }
 
-        @javax.annotation.Nullable
+        @Nullable
         public JsonObject serializeAdvancement() {
             return this.advancement.serializeToJson();
         }
 
         @Nullable
         public ResourceLocation getAdvancementId() {
-            return this.resourceLocation;
+            return this.advancementId;
         }
     }
 }

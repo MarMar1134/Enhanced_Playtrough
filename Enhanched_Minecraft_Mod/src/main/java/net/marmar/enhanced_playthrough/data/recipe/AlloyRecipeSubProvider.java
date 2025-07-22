@@ -21,8 +21,7 @@ public class AlloyRecipeSubProvider extends RecipeProvider {
 
     public static void addAlloyRecipes(Consumer<FinishedRecipe> consumer){
         //Brass
-        oreAlloying(consumer, Items.RAW_COPPER, EPItems.RAW_ZINC.get(), EPItems.BRASS_INGOT.get(),
-                AlloyRecipeCategory.SIMPLE_ALLOY, "brass_ingot");
+        oreAlloying(consumer, Items.RAW_COPPER, EPItems.RAW_ZINC.get(), EPItems.BRASS_INGOT.get(), "brass_ingot");
 
         superOreAlloying(consumer, Items.RAW_COPPER, EPItems.RAW_ZINC.get(), EPItems.BRASS_INGOT.get(),
                 AlloyRecipeCategory.SIMPLE_ALLOY, "brass_ingot");
@@ -30,8 +29,7 @@ public class AlloyRecipeSubProvider extends RecipeProvider {
                 AlloyRecipeCategory.COMPLEX_ALLOY, "brass_ingot");
 
         //Bronze
-        oreAlloying(consumer, Items.RAW_COPPER, EPItems.RAW_TIN.get(), EPItems.BRONZE_INGOT.get(),
-                AlloyRecipeCategory.SIMPLE_ALLOY, "bronze_ingot");
+        oreAlloying(consumer, Items.RAW_COPPER, EPItems.RAW_TIN.get(), EPItems.BRONZE_INGOT.get(), "bronze_ingot");
 
         superOreAlloying(consumer, Items.RAW_COPPER, EPItems.RAW_TIN.get(), EPItems.BRONZE_INGOT.get(),
                 AlloyRecipeCategory.SIMPLE_ALLOY, "bronze_ingot");
@@ -61,8 +59,7 @@ public class AlloyRecipeSubProvider extends RecipeProvider {
                 AlloyRecipeCategory.COMPLEX_ALLOY, "green_gold_ingot");
 
         //Steel
-        oreAlloying(consumer, Items.RAW_IRON, Items.COAL, EPItems.STEEL_INGOT.get(),
-                AlloyRecipeCategory.SIMPLE_ALLOY, "steel_ingot");
+        oreAlloying(consumer, Items.RAW_IRON, Items.COAL, EPItems.STEEL_INGOT.get(), "steel_ingot");
 
         superOreAlloying(consumer, Items.RAW_IRON, Items.COAL, EPItems.STEEL_INGOT.get(),
                 AlloyRecipeCategory.SIMPLE_ALLOY, "steel_ingot");
@@ -76,6 +73,7 @@ public class AlloyRecipeSubProvider extends RecipeProvider {
                 AlloyRecipeCategory.COMPLEX_ALLOY, "blue_gold_ingot");
     }
 
+    //Unlockment triggers
     private static InventoryChangeTrigger.TriggerInstance HAS_GOLD_INGOT_AND(ItemLike pOther){
         return InventoryChangeTrigger.TriggerInstance.hasItems(Items.GOLD_INGOT, pOther);
     }
@@ -87,76 +85,76 @@ public class AlloyRecipeSubProvider extends RecipeProvider {
         return InventoryChangeTrigger.TriggerInstance.hasItems(pFirst, pSecond);
     }
 
+    //Serializers
     protected static void singleIngredientAlloying(Consumer<FinishedRecipe> pConsumer, ItemLike ingredient, ItemLike result, int count, AlloyRecipeCategory pCategory, String pGroup){
-        oreAlloySerialize(pConsumer, ingredient, ingredient, result, pCategory, pGroup, "from_alloying");
-        superOreAlloySerialize(pConsumer, ingredient, ingredient, result, pCategory, pGroup, count, "from_super_alloying");
+        oreAlloySerialize(pConsumer, ingredient, ingredient, result, pCategory, pGroup);
+        superOreAlloySerialize(pConsumer, ingredient, ingredient, result, pCategory, pGroup, count);
     }
 
-    protected static void oreAlloying(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike firstIngredient, ItemLike secondIngredient, ItemLike result, AlloyRecipeCategory recipeCategory, String group){
-        oreAlloySerialize(pFinishedRecipeConsumer, firstIngredient, secondIngredient, result, recipeCategory, group, "from_alloying");
-        oreAlloySerialize(pFinishedRecipeConsumer, secondIngredient, firstIngredient, result, recipeCategory, group, "from_alloying");
+    protected static void oreAlloying(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike firstIngredient, ItemLike secondIngredient, ItemLike result, String group){
+        oreAlloySerialize(pFinishedRecipeConsumer, firstIngredient, secondIngredient, result, AlloyRecipeCategory.SIMPLE_ALLOY, group);
+        oreAlloySerialize(pFinishedRecipeConsumer, secondIngredient, firstIngredient, result, AlloyRecipeCategory.SIMPLE_ALLOY, group);
     }
     protected static void goldenAlloy(Consumer<FinishedRecipe> pConsumer, ItemLike firstIngredient, ItemLike secondIngredient, ItemLike result, int count, AlloyRecipeCategory recipeCategory, String group){
-        goldenSuperOreAlloySerialize(pConsumer, firstIngredient, secondIngredient, result, recipeCategory, group, count, "from_super_alloying");
-        goldenSuperOreAlloySerialize(pConsumer, secondIngredient, firstIngredient, result, recipeCategory, group, count, "from_super_alloying");
+        goldenSuperOreAlloySerialize(pConsumer, firstIngredient, secondIngredient, result, recipeCategory, group, count);
+        goldenSuperOreAlloySerialize(pConsumer, secondIngredient, firstIngredient, result, recipeCategory, group, count);
     }
     protected static void superOreAlloying(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike firstIngredient, ItemLike secondIngredient, ItemLike result, int count, AlloyRecipeCategory recipeCategory, String group){
-        superOreAlloySerialize(pFinishedRecipeConsumer, firstIngredient, secondIngredient, result, recipeCategory, group, count, "from_super_alloying");
-        superOreAlloySerialize(pFinishedRecipeConsumer, secondIngredient, firstIngredient, result, recipeCategory, group, count, "from_super_alloying");
+        superOreAlloySerialize(pFinishedRecipeConsumer, firstIngredient, secondIngredient, result, recipeCategory, group, count);
+        superOreAlloySerialize(pFinishedRecipeConsumer, secondIngredient, firstIngredient, result, recipeCategory, group, count);
     }
     protected static void superOreAlloying(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike firstIngredient, ItemLike secondIngredient, ItemLike result, AlloyRecipeCategory recipeCategory, String group){
-        superOreAlloySerialize(pFinishedRecipeConsumer, firstIngredient, secondIngredient, result, recipeCategory, group,1, "from_super_alloying");
-        superOreAlloySerialize(pFinishedRecipeConsumer, secondIngredient, firstIngredient, result, recipeCategory, group, 1, "from_super_alloying");
+        superOreAlloySerialize(pFinishedRecipeConsumer, firstIngredient, secondIngredient, result, recipeCategory, group,1);
+        superOreAlloySerialize(pFinishedRecipeConsumer, secondIngredient, firstIngredient, result, recipeCategory, group, 1);
     }
 
-    protected static void oreAlloySerialize(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike firstIngredient, ItemLike secondIngredient, ItemLike output, AlloyRecipeCategory recipeCategory, String group, String recipeName){
+    protected static void oreAlloySerialize(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike firstIngredient, ItemLike secondIngredient, ItemLike output, AlloyRecipeCategory recipeCategory, String group){
         boolean isSameIngredient = firstIngredient == secondIngredient;
 
         if (!isSameIngredient){
             AlloyRecipeBuilder.oreAlloying(Ingredient.of(firstIngredient), Ingredient.of(secondIngredient), recipeCategory, output, group)
                     .unlockedBy("has_required_materials", HAS_MATERIALS(firstIngredient, secondIngredient))
-                    .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(output) +  "_" + recipeName + "_" + getItemName(firstIngredient) + "_and_" + getItemName(secondIngredient));
+                    .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(output) +  "_from_alloying_" + getItemName(firstIngredient) + "_and_" + getItemName(secondIngredient));
         } else {
             AlloyRecipeBuilder.oreAlloying(Ingredient.of(firstIngredient), Ingredient.of(secondIngredient), recipeCategory, output, group)
                     .unlockedBy(getHasName(firstIngredient), has(firstIngredient))
-                    .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(output) +  "_" + recipeName + "_" + getItemName(firstIngredient));
+                    .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(output) +  "_from_alloying_" + getItemName(firstIngredient));
         }
     }
 
-    protected static void superOreAlloySerialize(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike firstIngredient, ItemLike secondIngredient, ItemLike output, AlloyRecipeCategory recipeCategory, String group, int count, String recipeName){
+    protected static void superOreAlloySerialize(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike firstIngredient, ItemLike secondIngredient, ItemLike output, AlloyRecipeCategory recipeCategory, String group, int count){
         boolean isSameIngredient = firstIngredient == secondIngredient;
 
         if (!isSameIngredient){
             AlloyRecipeBuilder.superOreAlloying(Ingredient.of(firstIngredient), Ingredient.of(secondIngredient), recipeCategory, output, group, count)
                     .unlockedBy("has_required_materials", HAS_MATERIALS(firstIngredient, secondIngredient))
-                    .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(output) +  "_" + recipeName + "_" + getItemName(firstIngredient) + "_and_" + getItemName(secondIngredient));
+                    .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(output) +  "_from_super_alloying_" + getItemName(firstIngredient) + "_and_" + getItemName(secondIngredient));
         } else {
             AlloyRecipeBuilder.superOreAlloying(Ingredient.of(firstIngredient), Ingredient.of(secondIngredient), recipeCategory, output, group, count)
                     .unlockedBy(getHasName(firstIngredient), has(firstIngredient))
-                    .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(output) +  "_" + recipeName + "_" + getItemName(firstIngredient));
+                    .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(output) +  "_from_super_alloying_" + getItemName(firstIngredient));
         }
     }
 
-    protected static void goldenSuperOreAlloySerialize(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike firstIngredient, ItemLike secondIngredient, ItemLike output, AlloyRecipeCategory recipeCategory, String group, int count, String recipeName){
+    protected static void goldenSuperOreAlloySerialize(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike firstIngredient, ItemLike secondIngredient, ItemLike output, AlloyRecipeCategory recipeCategory, String group, int count){
         if (firstIngredient.equals(Items.RAW_GOLD)){
             AlloyRecipeBuilder.superOreAlloying(Ingredient.of(firstIngredient), Ingredient.of(secondIngredient), recipeCategory, output, group, count)
                     .unlockedBy("has_gold_and_other", HAS_RAW_GOLD_AND(secondIngredient))
-                    .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(output) +  "_" + recipeName + "_" + getItemName(firstIngredient) + "_and_" + getItemName(secondIngredient));
+                    .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(output) +  "_from_super_alloying_" + getItemName(firstIngredient) + "_and_" + getItemName(secondIngredient));
         } else if (secondIngredient.equals(Items.RAW_GOLD)){
             AlloyRecipeBuilder.superOreAlloying(Ingredient.of(firstIngredient), Ingredient.of(secondIngredient), recipeCategory, output, group, count)
                     .unlockedBy("has_gold_and_other", HAS_RAW_GOLD_AND(firstIngredient))
-                    .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(output) +  "_" + recipeName + "_" + getItemName(firstIngredient) + "_and_" + getItemName(secondIngredient));
+                    .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(output) +  "_from_super_alloying_" + getItemName(firstIngredient) + "_and_" + getItemName(secondIngredient));
         } else if (firstIngredient.equals(Items.GOLD_INGOT)) {
             AlloyRecipeBuilder.superOreAlloying(Ingredient.of(firstIngredient), Ingredient.of(secondIngredient), recipeCategory, output, group, count)
                     .unlockedBy("has_gold_and_other", HAS_GOLD_INGOT_AND(secondIngredient))
-                    .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(output) +  "_" + recipeName + "_" + getItemName(firstIngredient) + "_and_" + getItemName(secondIngredient));
+                    .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(output) +  "_from_super_alloying_" + getItemName(firstIngredient) + "_and_" + getItemName(secondIngredient));
         } else {
             AlloyRecipeBuilder.superOreAlloying(Ingredient.of(firstIngredient), Ingredient.of(secondIngredient), recipeCategory, output, group, count)
                     .unlockedBy("has_gold_and_other", HAS_GOLD_INGOT_AND(firstIngredient))
-                    .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(output) +  "_" + recipeName + "_" + getItemName(firstIngredient) + "_and_" + getItemName(secondIngredient));
+                    .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(output) +  "_from_super_alloying_" + getItemName(firstIngredient) + "_and_" + getItemName(secondIngredient));
         }
     }
-
 
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> consumer) {

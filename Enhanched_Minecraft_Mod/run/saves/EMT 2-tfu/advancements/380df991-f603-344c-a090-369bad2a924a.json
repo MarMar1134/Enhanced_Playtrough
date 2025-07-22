@@ -195,12 +195,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/brass_dust_from_mechanical_grinding": {
-    "criteria": {
-      "TagKey[minecraft:item / enhanced_playthrough:brass_manufacturable]": "2025-04-23 23:01:40 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/decorations/chest": {
     "criteria": {
       "has_lots_of_items": "2025-04-23 23:01:40 -0300"
@@ -210,42 +204,6 @@
   "minecraft:adventure/trade": {
     "criteria": {
       "traded": "2025-04-23 23:01:40 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/brass_nugget__from_smelting": {
-    "criteria": {
-      "TagKey[minecraft:item / enhanced_playthrough:brass_manufacturable]": "2025-04-23 23:01:40 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/brass_nugget__from_blasting": {
-    "criteria": {
-      "TagKey[minecraft:item / enhanced_playthrough:brass_manufacturable]": "2025-04-23 23:01:40 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/brass_dust_from_primal_grinding": {
-    "criteria": {
-      "TagKey[minecraft:item / enhanced_playthrough:brass_manufacturable]": "2025-04-23 23:01:40 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/blue_gold_nugget__from_blasting": {
-    "criteria": {
-      "TagKey[minecraft:item / enhanced_playthrough:blue_gold_manufacturable]": "2025-04-23 23:25:26 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/blue_gold_dust_from_mechanical_grinding": {
-    "criteria": {
-      "TagKey[minecraft:item / enhanced_playthrough:blue_gold_manufacturable]": "2025-04-23 23:25:26 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/blue_gold_nugget__from_smelting": {
-    "criteria": {
-      "TagKey[minecraft:item / enhanced_playthrough:blue_gold_manufacturable]": "2025-04-23 23:25:26 -0300"
     },
     "done": true
   },
@@ -279,61 +237,13 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/iron_dust_from_mechanical_grinding": {
-    "criteria": {
-      "TagKey[minecraft:item / enhanced_playthrough:iron_manufacturable]": "2025-04-24 13:49:41 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/bronze_nugget__from_smelting": {
-    "criteria": {
-      "TagKey[minecraft:item / enhanced_playthrough:bronze_manufacturable]": "2025-04-24 13:51:29 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/bronze_dust_from_primal_grinding": {
-    "criteria": {
-      "TagKey[minecraft:item / enhanced_playthrough:bronze_manufacturable]": "2025-04-24 13:51:29 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/bronze_nugget__from_blasting": {
-    "criteria": {
-      "TagKey[minecraft:item / enhanced_playthrough:bronze_manufacturable]": "2025-04-24 13:51:29 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/bronze_dust_from_mechanical_grinding": {
-    "criteria": {
-      "TagKey[minecraft:item / enhanced_playthrough:bronze_manufacturable]": "2025-04-24 13:51:29 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:polish_ruby": {
     "criteria": {
       "has_material": "2025-04-24 13:52:25 -0300"
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/steel_dust_from_mechanical_grinding": {
-    "criteria": {
-      "TagKey[minecraft:item / enhanced_playthrough:steel_manufacturable]": "2025-04-24 13:52:30 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:recipes/tin_ingot_from_basic_smelting_tin_ore": {
-    "criteria": {
-      "has_tin_ore": "2025-04-24 17:51:29 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/tin_ingot__from_blasting_tin_ore": {
-    "criteria": {
-      "has_tin_ore": "2025-04-24 17:51:29 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/tin_ingot__from_smelting_tin_ore": {
     "criteria": {
       "has_tin_ore": "2025-04-24 17:51:29 -0300"
     },
@@ -357,49 +267,13 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/tin_dust_from_mechanical_grinding": {
-    "criteria": {
-      "TagKey[minecraft:item / enhanced_playthrough:tin_manufacturable]": "2025-04-24 17:52:07 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/adobe_alloying_furnace": {
-    "criteria": {
-      "has_raw_tin": "2025-04-24 17:52:07 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/cobblestone": {
     "criteria": {
       "has_cobble": "2025-04-24 17:52:07 -0300"
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/misc/tin_ingot__from_blasting_raw_tin": {
-    "criteria": {
-      "has_raw_tin": "2025-04-24 17:52:07 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:recipes/tin_ingot_from_basic_smelting_raw_tin": {
-    "criteria": {
-      "has_raw_tin": "2025-04-24 17:52:07 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/tin_nugget__from_campfire_raw_tin": {
-    "criteria": {
-      "has_raw_tin": "2025-04-24 17:52:07 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/tin_dust_from_primal_grinding": {
-    "criteria": {
-      "TagKey[minecraft:item / enhanced_playthrough:tin_manufacturable]": "2025-04-24 17:52:07 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/tin_ingot__from_smelting_raw_tin": {
     "criteria": {
       "has_raw_tin": "2025-04-24 17:52:07 -0300"
     },
@@ -519,33 +393,15 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/copper_dust_from_primal_grinding": {
-    "criteria": {
-      "TagKey[minecraft:item / enhanced_playthrough:copper_manufacturable]": "2025-04-24 17:55:03 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/andesite_stairs": {
     "criteria": {
       "has_andesite": "2025-04-24 17:55:03 -0300"
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/copper_dust_from_mechanical_grinding": {
-    "criteria": {
-      "TagKey[minecraft:item / enhanced_playthrough:copper_manufacturable]": "2025-04-24 17:55:03 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/decorations/andesite_wall_from_andesite_stonecutting": {
     "criteria": {
       "has_andesite": "2025-04-24 17:55:03 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/copper_nugget__from_campfire_raw_copper": {
-    "criteria": {
-      "has_raw_copper": "2025-04-24 17:55:03 -0300"
     },
     "done": true
   },
@@ -597,12 +453,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/misc/copper_ingot__from_blasting_raw_copper": {
-    "criteria": {
-      "has_raw_copper": "2025-04-24 17:55:03 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:recipes/copper_ingot_from_soul_basic_smelting_raw_copper": {
     "criteria": {
       "has_raw_copper": "2025-04-24 17:55:03 -0300"
@@ -624,12 +474,6 @@
   "minecraft:recipes/building_blocks/polished_andesite_stairs_from_andesite_stonecutting": {
     "criteria": {
       "has_andesite": "2025-04-24 17:55:03 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/copper_ingot__from_smelting_raw_copper": {
-    "criteria": {
-      "has_raw_copper": "2025-04-24 17:55:03 -0300"
     },
     "done": true
   },
@@ -898,12 +742,6 @@
     "done": true
   },
   "minecraft:recipes/building_blocks/deepslate_bricks_from_cobbled_deepslate_stonecutting": {
-    "criteria": {
-      "has_cobbled_deepslate": "2025-04-24 22:56:11 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/super_alloying_furnace": {
     "criteria": {
       "has_cobbled_deepslate": "2025-04-24 22:56:11 -0300"
     },
@@ -1998,33 +1836,9 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/gold_dust_from_mechanical_grinding": {
-    "criteria": {
-      "TagKey[minecraft:item / enhanced_playthrough:gold_manufacturable]": "2025-05-05 16:41:49 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:recipes/tools/silver_pickaxe": {
     "criteria": {
       "has_silver_pickaxe": "2025-05-05 16:42:22 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/silver_nugget__from_blasting": {
-    "criteria": {
-      "TagKey[minecraft:item / enhanced_playthrough:silver_manufacturable]": "2025-05-05 16:42:22 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/silver_dust_from_mechanical_grinding": {
-    "criteria": {
-      "TagKey[minecraft:item / enhanced_playthrough:silver_manufacturable]": "2025-05-05 16:42:22 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/silver_nugget__from_smelting": {
-    "criteria": {
-      "TagKey[minecraft:item / enhanced_playthrough:silver_manufacturable]": "2025-05-05 16:42:22 -0300"
     },
     "done": true
   },
@@ -2058,63 +1872,9 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/rose_gold_dust_from_mechanical_grinding": {
-    "criteria": {
-      "TagKey[minecraft:item / enhanced_playthrough:rose_gold_manufacturable]": "2025-05-05 16:42:26 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/rose_gold_nugget__from_smelting": {
-    "criteria": {
-      "TagKey[minecraft:item / enhanced_playthrough:rose_gold_manufacturable]": "2025-05-05 16:42:26 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:recipes/tools/rose_golden_pickaxe": {
     "criteria": {
       "has_rose_golden_pickaxe": "2025-05-05 16:42:26 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/rose_gold_nugget__from_blasting": {
-    "criteria": {
-      "TagKey[minecraft:item / enhanced_playthrough:rose_gold_manufacturable]": "2025-05-05 16:42:26 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/bronzium_dust_from_mechanical_grinding": {
-    "criteria": {
-      "TagKey[minecraft:item / enhanced_playthrough:bronzium_manufacturable]": "2025-05-05 16:42:28 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/bronzium_nugget__from_blasting": {
-    "criteria": {
-      "TagKey[minecraft:item / enhanced_playthrough:bronzium_manufacturable]": "2025-05-05 16:42:28 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/silver_ingot__from_blasting_raw_silver": {
-    "criteria": {
-      "has_raw_silver": "2025-05-05 16:43:12 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/silver_ingot__from_smelting_raw_silver": {
-    "criteria": {
-      "has_raw_silver": "2025-05-05 16:43:12 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/vegetable_fibber_from_reed_head": {
-    "criteria": {
-      "has_reeds_head": "2025-05-05 16:44:15 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/vegetable_fibber_from_water_reed_head": {
-    "criteria": {
-      "has_vegetable_fibber": "2025-05-05 16:44:27 -0300"
     },
     "done": true
   },
@@ -2347,12 +2107,6 @@
     "done": true
   },
   "enhanced_playthrough:recipes/building_blocks/cobbeled_limestone_wall": {
-    "criteria": {
-      "has_cobbeled_limestone": "2025-05-05 23:53:10 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/building_blocks/limestone__from_smelting_cobbeled_limestone": {
     "criteria": {
       "has_cobbeled_limestone": "2025-05-05 23:53:10 -0300"
     },
@@ -3448,24 +3202,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/green_gold_dust_from_mechanical_grinding": {
-    "criteria": {
-      "TagKey[minecraft:item / enhanced_playthrough:green_gold_manufacturable]": "2025-06-22 23:27:17 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/green_gold_nugget__from_blasting": {
-    "criteria": {
-      "TagKey[minecraft:item / enhanced_playthrough:green_gold_manufacturable]": "2025-06-22 23:27:17 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/green_gold_nugget__from_smelting": {
-    "criteria": {
-      "TagKey[minecraft:item / enhanced_playthrough:green_gold_manufacturable]": "2025-06-22 23:27:17 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/bookshelf": {
     "criteria": {
       "has_book": "2025-06-23 11:53:20 -0300"
@@ -3766,12 +3502,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/aluminum_dust_from_mechanical_grinding": {
-    "criteria": {
-      "TagKey[minecraft:item / enhanced_playthrough:aluminum_manufacturable]": "2025-07-03 20:16:06 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:recipes/misc/aluminum_block": {
     "criteria": {
       "has_aluminum_ingot": "2025-07-03 20:16:06 -0300"
@@ -3835,12 +3565,6 @@
   "minecraft:recipes/decorations/anvil": {
     "criteria": {
       "has_iron_block": "2025-07-03 20:21:42 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/silver_ingot__from_blasting_silver_dust": {
-    "criteria": {
-      "has_silver_dust": "2025-07-03 23:03:13 -0300"
     },
     "done": true
   },
@@ -3928,25 +3652,7 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/misc/aluminum_ingot__from_blasting": {
-    "criteria": {
-      "TagKey[minecraft:item / enhanced_playthrough:bauxite_ore]": "2025-07-03 23:13:49 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:recipes/zinc_ingot_from_soul_basic_smelting_zinc_ore": {
-    "criteria": {
-      "has_zinc_ore": "2025-07-03 23:13:52 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/zinc_ingot__from_blasting_zinc_ore": {
-    "criteria": {
-      "has_zinc_ore": "2025-07-03 23:13:52 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/zinc_ingot__from_smelting_zinc_ore": {
     "criteria": {
       "has_zinc_ore": "2025-07-03 23:13:52 -0300"
     },
@@ -4666,39 +4372,9 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/misc/zinc_ingot__from_smelting_raw_zinc": {
-    "criteria": {
-      "has_raw_zinc": "2025-07-07 13:58:05 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/zinc_nugget__from_campfire_raw_zinc": {
-    "criteria": {
-      "has_raw_zinc": "2025-07-07 13:58:05 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/zinc_ingot__from_blasting_raw_zinc": {
-    "criteria": {
-      "has_raw_zinc": "2025-07-07 13:58:05 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/zinc_dust_from_mechanical_grinding": {
-    "criteria": {
-      "TagKey[minecraft:item / enhanced_playthrough:zinc_manufacturable]": "2025-07-07 13:58:05 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:recipes/misc/raw_zinc_from_block": {
     "criteria": {
       "has_raw_zinc": "2025-07-07 13:58:05 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/zinc_dust_from_primal_grinding": {
-    "criteria": {
-      "TagKey[minecraft:item / enhanced_playthrough:zinc_manufacturable]": "2025-07-07 13:58:05 -0300"
     },
     "done": true
   },
@@ -4726,31 +4402,13 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/food/cooked_corn__from_smelting_corn": {
-    "criteria": {
-      "has_corn": "2025-07-08 17:25:21 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:recipes/cooked_corn_from_soul_basic_smelting_corn": {
     "criteria": {
       "has_corn": "2025-07-08 17:25:21 -0300"
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/food/cooked_corn__from_smoking_corn": {
-    "criteria": {
-      "has_corn": "2025-07-08 17:25:21 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:recipes/cooked_corn_from_basic_smelting_corn": {
-    "criteria": {
-      "has_corn": "2025-07-08 17:25:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/food/cooked_corn__from_campfire_corn": {
     "criteria": {
       "has_corn": "2025-07-08 17:25:21 -0300"
     },
@@ -4813,6 +4471,222 @@
   "minecraft:husbandry/axolotl_in_a_bucket": {
     "criteria": {
       "axolotl_bucket": "2025-07-17 21:58:02 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/adobe_alloy_furnace": {
+    "criteria": {
+      "has_adobe_furnace": "2025-07-21 12:40:28 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/vegetable_fibber_from_tall_reeds_head": {
+    "criteria": {
+      "has_tall_reeds_head": "2025-07-21 12:40:52 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/vegetable_fibber_from_reeds_head": {
+    "criteria": {
+      "has_reeds_head": "2025-07-21 12:41:56 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/vegetable_fibber_from_water_reeds_head": {
+    "criteria": {
+      "has_vegetable_fibber": "2025-07-21 12:42:18 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/copper_dust_from_primal_grinding": {
+    "criteria": {
+      "TagKey[minecraft:item / enhanced_playthrough:manufacturable/copper]": "2025-07-21 15:53:33 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/copper_dust_from_mechanical_grinding": {
+    "criteria": {
+      "TagKey[minecraft:item / enhanced_playthrough:manufacturable/copper]": "2025-07-21 15:53:33 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/aluminum_dust_from_mechanical_grinding": {
+    "criteria": {
+      "TagKey[minecraft:item / enhanced_playthrough:manufacturable/aluminum]": "2025-07-21 15:57:11 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/firebrick_from_super_alloying_raw_aluminum_and_clay_ball": {
+    "criteria": {
+      "has_required_materials": "2025-07-21 15:57:11 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/raw_aluminum_from_block": {
+    "criteria": {
+      "has_raw_aluminum": "2025-07-21 15:57:11 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/firebrick_from_super_alloying_clay_ball_and_raw_aluminum": {
+    "criteria": {
+      "has_required_materials": "2025-07-21 15:57:11 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/building_blocks/walnut_planks": {
+    "criteria": {
+      "has_log_or_wood": "2025-07-21 16:09:09 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/aluminum_ingot_from_blasting_raw_aluminum": {
+    "criteria": {
+      "has_raw_aluminum": "2025-07-22 17:48:24 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tin_dust_from_mechanical_grinding": {
+    "criteria": {
+      "TagKey[minecraft:item / enhanced_playthrough:manufacturable/tin]": "2025-07-22 18:11:27 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/green_golden_hoe": {
+    "criteria": {
+      "has_green_gold_ingot": "2025-07-22 18:19:51 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/copper_nugget_from_campfire_raw_copper": {
+    "criteria": {
+      "has_raw_copper": "2025-07-22 18:11:21 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/lime_dye_from_primal_grinding_succulent": {
+    "criteria": {
+      "has_succulent": "2025-07-22 18:13:58 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/green_gold_nugget": {
+    "criteria": {
+      "has_green_gold_ingot": "2025-07-22 18:19:51 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:the_goldenpuff_girls": {
+    "criteria": {
+      "has_items": "2025-07-22 18:19:51 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/green_gold_block": {
+    "criteria": {
+      "has_green_gold_ingot": "2025-07-22 18:19:51 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/green_golden_boots": {
+    "criteria": {
+      "has_green_gold_ingot": "2025-07-22 18:19:51 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/green_golden_helmet": {
+    "criteria": {
+      "has_green_gold_ingot": "2025-07-22 18:19:51 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/tin_nugget_from_campfire_raw_tin": {
+    "criteria": {
+      "has_raw_tin": "2025-07-22 18:11:27 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/cyan_dye_from_mechanical_grinding_cold_lyrium": {
+    "criteria": {
+      "has_cold_lyrium": "2025-07-22 18:14:39 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/green_golden_polisher": {
+    "criteria": {
+      "has_green_gold_ingot": "2025-07-22 18:19:51 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tin_dust_from_primal_grinding": {
+    "criteria": {
+      "TagKey[minecraft:item / enhanced_playthrough:manufacturable/tin]": "2025-07-22 18:11:27 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/green_golden_sword": {
+    "criteria": {
+      "has_green_gold_ingot": "2025-07-22 18:19:51 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/green_golden_dagger": {
+    "criteria": {
+      "has_green_gold_ingot": "2025-07-22 18:19:51 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/green_golden_chestplate": {
+    "criteria": {
+      "has_green_gold_ingot": "2025-07-22 18:19:51 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/green_golden_axe": {
+    "criteria": {
+      "has_green_gold_ingot": "2025-07-22 18:19:51 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/lime_dye_from_mechanical_grinding_succulent": {
+    "criteria": {
+      "has_succulent": "2025-07-22 18:13:58 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/green_gold_ingot_from_block": {
+    "criteria": {
+      "has_green_gold_ingot": "2025-07-22 18:19:51 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/green_golden_shovel": {
+    "criteria": {
+      "has_green_gold_ingot": "2025-07-22 18:19:51 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/green_gold_ingot_from_nuggets": {
+    "criteria": {
+      "has_green_gold_ingot": "2025-07-22 18:19:51 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/cyan_dye_from_primal_grinding_cold_lyrium": {
+    "criteria": {
+      "has_cold_lyrium": "2025-07-22 18:14:39 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/combat/green_golden_leggings": {
+    "criteria": {
+      "has_green_gold_ingot": "2025-07-22 18:19:51 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:buttercup": {
+    "criteria": {
+      "has_item": "2025-07-22 18:19:51 -0300"
     },
     "done": true
   },

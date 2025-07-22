@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "TagKey[minecraft:item / enhanced_playthrough:zinc_manufacturable]": {
+    "TagKey[minecraft:item / enhanced_playthrough:manufacturable/zinc]": {
       "conditions": {
         "items": [
           {
-            "tag": "enhanced_playthrough:zinc_manufacturable"
+            "tag": "enhanced_playthrough:manufacturable/zinc"
           }
         ]
       },
@@ -20,7 +20,7 @@
   },
   "requirements": [
     [
-      "TagKey[minecraft:item / enhanced_playthrough:zinc_manufacturable]",
+      "TagKey[minecraft:item / enhanced_playthrough:manufacturable/zinc]",
       "has_the_recipe"
     ]
   ],

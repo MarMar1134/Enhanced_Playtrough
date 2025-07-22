@@ -4,6 +4,7 @@ import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.block.EPBlocks;
 import net.marmar.enhanced_playthrough.item.EPItems;
 import net.minecraft.advancements.Advancement;
+import net.minecraft.advancements.AdvancementRewards;
 import net.minecraft.advancements.RequirementsStrategy;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.advancements.critereon.PlayerTrigger;
@@ -26,42 +27,42 @@ public class GemAdvancementGenerator implements ForgeAdvancementProvider.Advance
         Advancement get_emerald = Advancement.Builder.advancement()
                 .parent(gems_root)
                 .display(taskDisplayInfo(Items.EMERALD, "polish_emerald"))
-                .addCriterion("has_material", InventoryChangeTrigger.TriggerInstance.hasItems(Items.EMERALD))
-                .requirements(RequirementsStrategy.OR)
+                .addCriterion("has_emerald", InventoryChangeTrigger.TriggerInstance.hasItems(Items.EMERALD))
                 .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "polish_emerald"), existingFileHelper);
 
         Advancement get_sapphire = Advancement.Builder.advancement()
                 .parent(get_emerald)
                 .display(taskDisplayInfo(EPItems.SAPPHIRE.get(), "polish_sapphire"))
-                .addCriterion("has_material", InventoryChangeTrigger.TriggerInstance.hasItems(EPItems.SAPPHIRE.get()))
-                .requirements(RequirementsStrategy.OR)
+                .addCriterion("has_sapphire", InventoryChangeTrigger.TriggerInstance.hasItems(EPItems.SAPPHIRE.get()))
                 .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "polish_sapphire"), existingFileHelper);
 
         Advancement get_ruby = Advancement.Builder.advancement()
                 .parent(get_sapphire)
                 .display(taskDisplayInfo(EPItems.RUBY.get(), "polish_ruby"))
-                .addCriterion("has_material", InventoryChangeTrigger.TriggerInstance.hasItems(EPItems.RUBY.get()))
-                .requirements(RequirementsStrategy.OR)
+                .addCriterion("has_ruby", InventoryChangeTrigger.TriggerInstance.hasItems(EPItems.RUBY.get()))
                 .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "polish_ruby"), existingFileHelper);
 
         Advancement get_garnet = Advancement.Builder.advancement()
                 .parent(gems_root)
                 .display(taskDisplayInfo(EPItems.GARNET.get(), "polish_garnet"))
-                .addCriterion("has_material", InventoryChangeTrigger.TriggerInstance.hasItems(EPItems.GARNET.get()))
-                .requirements(RequirementsStrategy.OR)
+                .addCriterion("has_garnet", InventoryChangeTrigger.TriggerInstance.hasItems(EPItems.GARNET.get()))
                 .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "polish_garnet"), existingFileHelper);
 
         Advancement get_diamond = Advancement.Builder.advancement()
                 .parent(get_garnet)
                 .display(taskDisplayInfo(Items.DIAMOND, "polish_diamond"))
-                .addCriterion("has_material", InventoryChangeTrigger.TriggerInstance.hasItems(Items.DIAMOND))
-                .requirements(RequirementsStrategy.OR)
+                .addCriterion("has_diamond", InventoryChangeTrigger.TriggerInstance.hasItems(Items.DIAMOND))
                 .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "polish_diamond"), existingFileHelper);
 
         Advancement get_all_gems = Advancement.Builder.advancement()
                 .parent(gems_root)
                 .display(challengeDisplayInfo(EPItems.NETHERITE_POLISHER.get(), "get_all_gems"))
-                .addCriterion("has_materials", InventoryChangeTrigger.TriggerInstance.hasItems(Items.EMERALD, EPItems.SAPPHIRE.get(), EPItems.RUBY.get(), EPItems.GARNET.get() ,Items.DIAMOND))
+                .addCriterion("has_emerald", InventoryChangeTrigger.TriggerInstance.hasItems(Items.EMERALD))
+                .addCriterion("has_sapphire", InventoryChangeTrigger.TriggerInstance.hasItems(EPItems.SAPPHIRE.get()))
+                .addCriterion("has_ruby", InventoryChangeTrigger.TriggerInstance.hasItems(EPItems.RUBY.get()))
+                .addCriterion("has_diamond", InventoryChangeTrigger.TriggerInstance.hasItems(Items.EMERALD))
+                .addCriterion("has_garnet", InventoryChangeTrigger.TriggerInstance.hasItems(EPItems.GARNET.get()))
+                .rewards(AdvancementRewards.Builder.experience(100))
                 .requirements(RequirementsStrategy.AND)
                 .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "get_all_gems"), existingFileHelper);
     }

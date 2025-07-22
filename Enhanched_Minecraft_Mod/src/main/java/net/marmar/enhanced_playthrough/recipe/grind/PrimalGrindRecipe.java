@@ -2,7 +2,6 @@ package net.marmar.enhanced_playthrough.recipe.grind;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.block.EPBlocks;
 import net.marmar.enhanced_playthrough.recipe.recipecategory.ModRecipeCategory;
 import net.minecraft.network.FriendlyByteBuf;
@@ -20,11 +19,11 @@ public class PrimalGrindRecipe extends AbstractGrindRecipe{
     private final ModRecipeCategory category;
     private final String group;
 
-    public PrimalGrindRecipe(Ingredient input, ItemStack output, ResourceLocation id, ModRecipeCategory category, String group) {
-        super(input, output, id);
-        this.input = input;
-        this.category = category;
-        this.group = group;
+    public PrimalGrindRecipe(Ingredient Input, ItemStack pOutput, ResourceLocation pRecipeId, ModRecipeCategory pCategory, String pGroup) {
+        super(Input, pOutput, pRecipeId);
+        this.input = Input;
+        this.category = pCategory;
+        this.group = pGroup;
     }
 
     @Override
@@ -44,12 +43,10 @@ public class PrimalGrindRecipe extends AbstractGrindRecipe{
 
     public static class Type implements RecipeType<PrimalGrindRecipe>{
         public static final Type INSTANCE = new Type();
-        private static final String ID = "primal_grinding";
     }
 
     public static class Serializer implements RecipeSerializer<PrimalGrindRecipe>{
         public static final Serializer INSTANCE = new Serializer();
-        public static final ResourceLocation ID = new ResourceLocation(EnhancedPlaythrough.MOD_ID, "primal_grinding");
 
         @Override
         public PrimalGrindRecipe fromJson(ResourceLocation resourceLocation, JsonObject jsonObject) {

@@ -220,7 +220,7 @@ public class PrimalGrinderBlockEntity extends BlockEntity implements MenuProvide
     }
 
     public int getFuelBurnTime(ItemStack stack) {
-        return ForgeHooks.getBurnTime(stack, EPRecipes.PRIMAL_GRINDING_TYPE.get());
+        return ForgeHooks.getBurnTime(stack, EPRecipes.PRIMAL_GRIND_TYPE.get());
     }
 
     private boolean isBurning(){
@@ -262,7 +262,7 @@ public class PrimalGrinderBlockEntity extends BlockEntity implements MenuProvide
 
         inventory.setItem(0, inputHandler.getStackInSlot(0));
 
-        return this.level.getRecipeManager().getRecipeFor(EPRecipes.PRIMAL_GRINDING_TYPE.get(), inventory, level);
+        return this.level.getRecipeManager().getRecipeFor(EPRecipes.PRIMAL_GRIND_TYPE.get(), inventory, level);
     }
 
     private boolean canInsertItemIntoOutputSlot(Item item) {

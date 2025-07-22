@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "group": "ruby",
+  "ingredient": {
+    "tag": "enhanced_playthrough:ores/ruby"
+  },
+  "result": "enhanced_playthrough:ruby"
+}

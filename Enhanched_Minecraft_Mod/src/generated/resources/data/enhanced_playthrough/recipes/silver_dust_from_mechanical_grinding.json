@@ -3,7 +3,7 @@
   "category": "mechanical_grind",
   "group": "silver_dust",
   "ingredient": {
-    "tag": "enhanced_playthrough:silver_manufacturable"
+    "tag": "enhanced_playthrough:manufacturable/silver"
   },
   "output": {
     "item": "enhanced_playthrough:silver_dust"

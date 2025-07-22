@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.5,
+  "group": "copper_ingot",
+  "ingredient": {
+    "item": "enhanced_playthrough:copper_dust"
+  },
+  "result": "minecraft:copper_ingot"
+}

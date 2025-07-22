@@ -1,7 +1,7 @@
 package net.marmar.enhanced_playthrough.block.custom.epfurnace.entity;
 
 import net.marmar.enhanced_playthrough.block.custom.epfurnace.AbstractEPFurnaceBlock;
-import net.marmar.enhanced_playthrough.recipe.modsmelting.AbstractSmeltingRecipe;
+import net.marmar.enhanced_playthrough.recipe.epsmelting.AbstractEPSmeltingRecipe;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -54,11 +54,11 @@ public abstract class AbstractEPFurnaceBlockEntity extends BlockEntity {
             outputLazyHandler = LazyOptional.of(() -> this.outputHandler);
 
     protected final ContainerData data;
-    private final RecipeType<? extends AbstractSmeltingRecipe> recipeType;
+    private final RecipeType<? extends AbstractEPSmeltingRecipe> recipeType;
     private int progress = 0, maxProgress = 0;
     private int burnTime = 0, maxBurnTime = 0;
 
-    public AbstractEPFurnaceBlockEntity(@NotNull BlockEntityType<? extends AbstractEPFurnaceBlockEntity> pType, BlockPos pPos, BlockState pBlockState, RecipeType<? extends AbstractSmeltingRecipe> recipe) {
+    public AbstractEPFurnaceBlockEntity(@NotNull BlockEntityType<? extends AbstractEPFurnaceBlockEntity> pType, BlockPos pPos, BlockState pBlockState, RecipeType<? extends AbstractEPSmeltingRecipe> recipe) {
         super(pType, pPos, pBlockState);
         this.recipeType = recipe;
         this.data = new ContainerData() {
@@ -285,8 +285,8 @@ public abstract class AbstractEPFurnaceBlockEntity extends BlockEntity {
     }
 
     //Sets the maxProgress according to the recipeType
-    public void setMaxProgress(Optional<? extends AbstractSmeltingRecipe> pRecipe){
-        this.maxProgress = pRecipe.get().getCoockingTime();
+    public void setMaxProgress(Optional<? extends AbstractEPSmeltingRecipe> pRecipe){
+        this.maxProgress = pRecipe.get().getCookTime();
     }
 
     //Gets the current maxProgress
@@ -295,7 +295,7 @@ public abstract class AbstractEPFurnaceBlockEntity extends BlockEntity {
     }
 
     //Returns the current recipe found
-    protected Optional<? extends AbstractSmeltingRecipe> getCurrentRecipe(){
+    protected Optional<? extends AbstractEPSmeltingRecipe> getCurrentRecipe(){
         SimpleContainer inv = new SimpleContainer(1);
 
         inv.setItem(0, inputHandler.getStackInSlot(0));
@@ -305,7 +305,7 @@ public abstract class AbstractEPFurnaceBlockEntity extends BlockEntity {
 
     //Checks if the item on the inputSlot has a recipe
     protected boolean hasRecipe(){
-        Optional<? extends AbstractSmeltingRecipe> recipe = getCurrentRecipe();
+        Optional<? extends AbstractEPSmeltingRecipe> recipe = getCurrentRecipe();
 
         if (recipe.isEmpty()){
             return false;
@@ -318,7 +318,7 @@ public abstract class AbstractEPFurnaceBlockEntity extends BlockEntity {
 
     //Crafts the result of the recipe
     protected void smeltItem(){
-        Optional<? extends AbstractSmeltingRecipe> recipe = getCurrentRecipe();
+        Optional<? extends AbstractEPSmeltingRecipe> recipe = getCurrentRecipe();
 
         ItemStack output = recipe.get().getResultItem(getLevel().registryAccess());
 

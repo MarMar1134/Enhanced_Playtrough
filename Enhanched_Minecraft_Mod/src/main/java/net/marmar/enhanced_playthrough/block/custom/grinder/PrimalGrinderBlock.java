@@ -36,7 +36,7 @@ public class PrimalGrinderBlock extends BaseEntityBlock implements EntityBlock {
 
     public PrimalGrinderBlock(Properties pProperties) {
         super(pProperties);
-        registerDefaultState(defaultBlockState().setValue(FACING, Direction.NORTH).setValue(ON, false));
+        registerDefaultState(defaultBlockState().setValue(FACING, Direction.SOUTH).setValue(ON, false));
     }
 
     @Nullable

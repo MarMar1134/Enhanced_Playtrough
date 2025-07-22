@@ -15,7 +15,7 @@ import org.jetbrains.annotations.Nullable;
 public class MasonryFurnaceBlockEntity extends AbstractEPFurnaceBlockEntity implements MenuProvider {
 
     public MasonryFurnaceBlockEntity(BlockPos pPos, BlockState pBlockState) {
-        super(EPBlockEntities.MASONRY_FURNACE_BLOCK_ENTITY.get(), pPos, pBlockState, EPRecipes.MASONRY_SMELTING_TYPE.get());
+        super(EPBlockEntities.MASONRY_FURNACE_BLOCK_ENTITY.get(), pPos, pBlockState, EPRecipes.MASONRY_SMELT_TYPE.get());
     }
 
     @Override

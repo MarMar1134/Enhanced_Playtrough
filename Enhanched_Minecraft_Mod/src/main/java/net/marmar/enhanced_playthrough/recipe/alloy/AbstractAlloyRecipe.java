@@ -16,22 +16,24 @@ public abstract class AbstractAlloyRecipe implements Recipe<SimpleContainer> {
     protected final NonNullList<Ingredient> inputs;
     protected final ItemStack output;
     protected final int alloyTime;
-    protected final ResourceLocation id;
+    protected final ResourceLocation recipeId;
     private final AlloyRecipeCategory category;
     private final String group;
 
-    public AbstractAlloyRecipe(NonNullList<Ingredient> inputs, ItemStack output, int alloyingTime, ResourceLocation id, RecipeType<?> recipeType, AlloyRecipeCategory category, String group) {
-        this.inputs = inputs;
-        this.output = output;
-        this.alloyTime = alloyingTime;
-        this.id = id;
-        this.recipeType = recipeType;
-        this.category = category;
-        this.group = group;
+    public AbstractAlloyRecipe(NonNullList<Ingredient> pInputs, ItemStack pOutput, int pAlloyTime, ResourceLocation pRecipeId, RecipeType<?> pType, AlloyRecipeCategory pCategory, String pGroup) {
+        this.inputs = pInputs;
+        this.output = pOutput;
+        this.alloyTime = pAlloyTime;
+        this.recipeId = pRecipeId;
+        this.recipeType = pType;
+        this.category = pCategory;
+        this.group = pGroup;
     }
+
     public int getAlloyTime(){
         return this.alloyTime;
     }
+
     @Override
     public boolean matches(SimpleContainer simpleContainer, Level level) {
         if (level.isClientSide){
@@ -62,6 +64,6 @@ public abstract class AbstractAlloyRecipe implements Recipe<SimpleContainer> {
 
     @Override
     public ResourceLocation getId() {
-        return id;
+        return recipeId;
     }
 }

@@ -3,7 +3,7 @@ package net.marmar.enhanced_playthrough.event;
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.block.EPBlocks;
 import net.marmar.enhanced_playthrough.block.EPBlockEntities;
-import net.marmar.enhanced_playthrough.block.custom.wood.ModWoodTypes;
+import net.marmar.enhanced_playthrough.block.custom.wood.EPWoodTypes;
 import net.marmar.enhanced_playthrough.entity.EPEntityTypes;
 import net.marmar.enhanced_playthrough.entity.model.BanditModel;
 import net.marmar.enhanced_playthrough.entity.model.BanditRenderer;
@@ -102,9 +102,9 @@ public class EPClientEventBusEvents {
 
     @SubscribeEvent
     public static void subscribeWoodTypes(FMLClientSetupEvent event){
-        Sheets.addWoodType(ModWoodTypes.WALNUT);
-        Sheets.addWoodType(ModWoodTypes.APPLE);
-        Sheets.addWoodType(ModWoodTypes.ORANGE);
-        Sheets.addWoodType(ModWoodTypes.LEMON);
+        Sheets.addWoodType(EPWoodTypes.WALNUT);
+        Sheets.addWoodType(EPWoodTypes.APPLE);
+        Sheets.addWoodType(EPWoodTypes.ORANGE);
+        Sheets.addWoodType(EPWoodTypes.LEMON);
     }
 }

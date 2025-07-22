@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "TagKey[minecraft:item / enhanced_playthrough:aluminum_manufacturable]": {
+    "TagKey[minecraft:item / enhanced_playthrough:manufacturable/aluminum]": {
       "conditions": {
         "items": [
           {
-            "tag": "enhanced_playthrough:aluminum_manufacturable"
+            "tag": "enhanced_playthrough:manufacturable/aluminum"
           }
         ]
       },
@@ -20,7 +20,7 @@
   },
   "requirements": [
     [
-      "TagKey[minecraft:item / enhanced_playthrough:aluminum_manufacturable]",
+      "TagKey[minecraft:item / enhanced_playthrough:manufacturable/aluminum]",
       "has_the_recipe"
     ]
   ],

@@ -1,6 +1,5 @@
 package net.marmar.enhanced_playthrough.recipe.alloy;
 
-import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.block.EPBlocks;
 import net.marmar.enhanced_playthrough.recipe.EPRecipes;
 import com.google.gson.JsonArray;
@@ -22,12 +21,12 @@ public class AlloyRecipe extends AbstractAlloyRecipe implements Recipe<SimpleCon
     private final AlloyRecipeCategory category;
     private final String group;
 
-    public AlloyRecipe(NonNullList<Ingredient> inputs, ItemStack output, int alloyingTime, ResourceLocation id, AlloyRecipeCategory category, String group) {
-        super(inputs, output, alloyingTime, id, EPRecipes.ALLOYING_TYPE.get(), category, group);
-        this.inputs = inputs;
-        this.alloyTime = alloyingTime;
-        this.category = category;
-        this.group = group;
+    public AlloyRecipe(NonNullList<Ingredient> pInputs, ItemStack pOutput, int pAlloyTime, ResourceLocation pRecipeId, AlloyRecipeCategory pCategory, String pGroup) {
+        super(pInputs, pOutput, pAlloyTime, pRecipeId, EPRecipes.ALLOY_TYPE.get(), pCategory, pGroup);
+        this.inputs = pInputs;
+        this.alloyTime = pAlloyTime;
+        this.category = pCategory;
+        this.group = pGroup;
     }
 
     @Override
@@ -59,11 +58,9 @@ public class AlloyRecipe extends AbstractAlloyRecipe implements Recipe<SimpleCon
 
     public static class Type implements RecipeType<AlloyRecipe>{
         public static final Type INSTANCE = new Type();
-        private static final String ID = "ore_alloying";
     }
     public static class Serializer implements RecipeSerializer<AlloyRecipe>{
         public static final Serializer INSTANCE = new Serializer();
-        public static final ResourceLocation ID = new ResourceLocation(EnhancedPlaythrough.MOD_ID, "ore_alloying");
 
         public final int defaultAlloyTime = 0;
         @Override

@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "TagKey[minecraft:item / enhanced_playthrough:bronzium_manufacturable]": {
+    "TagKey[minecraft:item / enhanced_playthrough:manufacturable/bronzium]": {
       "conditions": {
         "items": [
           {
-            "tag": "enhanced_playthrough:bronzium_manufacturable"
+            "tag": "enhanced_playthrough:manufacturable/bronzium"
           }
         ]
       },
@@ -20,7 +20,7 @@
   },
   "requirements": [
     [
-      "TagKey[minecraft:item / enhanced_playthrough:bronzium_manufacturable]",
+      "TagKey[minecraft:item / enhanced_playthrough:manufacturable/bronzium]",
       "has_the_recipe"
     ]
   ],

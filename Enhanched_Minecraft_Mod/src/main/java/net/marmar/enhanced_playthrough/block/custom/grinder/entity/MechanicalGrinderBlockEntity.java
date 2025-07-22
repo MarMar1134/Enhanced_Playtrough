@@ -210,7 +210,7 @@ public class MechanicalGrinderBlockEntity extends BlockEntity implements MenuPro
 
         inventory.setItem(0, inputHandler.getStackInSlot(0));
 
-        return this.level.getRecipeManager().getRecipeFor(EPRecipes.MECHANICAL_GRINDING_TYPE.get(), inventory, level);
+        return this.level.getRecipeManager().getRecipeFor(EPRecipes.MECHANICAL_GRIND_TYPE.get(), inventory, level);
     }
 
     private boolean canInsertItemIntoOutputSlot(Item item) {

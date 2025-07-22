@@ -16,14 +16,22 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
 
+@SuppressWarnings("unchecked")
 public class EPItemTagGenerator extends ItemTagsProvider {
     public EPItemTagGenerator(PackOutput packOutput, CompletableFuture<HolderLookup.Provider> lookupProvider, CompletableFuture<TagLookup<Block>> lookupProviderBlocks, @Nullable ExistingFileHelper existingFileHelper) {
         super(packOutput, lookupProvider, lookupProviderBlocks, EnhancedPlaythrough.MOD_ID, existingFileHelper);
     }
 
-    @SuppressWarnings("unchecked")
     @Override
     protected void addTags(HolderLookup.Provider provider) {
+        addOresTags();
+
+        addToolsTags();
+
+        addIngredientTags();
+
+        addManufacturableTags();
+
         this.tag(ItemTags.LOGS_THAT_BURN).add(
                 //Walnut
                 EPBlocks.WALNUT_LOG.get().asItem(),
@@ -141,232 +149,8 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                 EPItems.RAW_DIAMOND.get()
         );
 
-        this.tag(EPTags.Items.BASIC_INGREDIENT).add(
-                Items.RAW_COPPER,
-                Blocks.COPPER_ORE.asItem(),
-                EPItems.RAW_ZINC.get(),
-                EPBlocks.ZINC_ORE.get().asItem(),
-                EPItems.RAW_TIN.get(),
-                EPBlocks.TIN_ORE.get().asItem(),
-                Items.BEEF,
-                Items.CHICKEN,
-                Items.PORKCHOP,
-                Items.MUTTON,
-                Items.RABBIT,
-                Items.KELP,
-                Items.SALMON,
-                Items.COD,
-                Items.POTATO,
-                Items.CLAY_BALL,
-                EPItems.ZAPALLO.get(),
-                EPItems.CORN.get(),
-                EPItems.EGGPLANT.get()
-        );
-
-        this.tag(EPTags.Items.MASONRY_INGREDIENT).add(
-                Items.CLAY_BALL,
-                Items.BRICK,
-                Blocks.CLAY.asItem(),
-                Blocks.WHITE_TERRACOTTA.asItem(),
-                Blocks.BLACK_TERRACOTTA.asItem(),
-                Blocks.YELLOW_TERRACOTTA.asItem(),
-                Blocks.RED_TERRACOTTA.asItem(),
-                Blocks.BLUE_TERRACOTTA.asItem(),
-                Blocks.GREEN_TERRACOTTA.asItem(),
-                Blocks.BROWN_TERRACOTTA.asItem(),
-                Blocks.PURPLE_TERRACOTTA.asItem(),
-                Blocks.PINK_TERRACOTTA.asItem(),
-                Blocks.MAGENTA_TERRACOTTA.asItem(),
-                Blocks.CYAN_TERRACOTTA.asItem(),
-                Blocks.LIGHT_BLUE_TERRACOTTA.asItem(),
-                Blocks.GRAY_TERRACOTTA.asItem(),
-                Blocks.LIGHT_GRAY_TERRACOTTA.asItem(),
-                Blocks.ORANGE_TERRACOTTA.asItem(),
-                Blocks.LIME_TERRACOTTA.asItem(),
-                Blocks.NETHERRACK.asItem(),
-                Blocks.COBBLESTONE.asItem(),
-                Blocks.STONE.asItem(),
-                Blocks.STONE_BRICKS.asItem(),
-                Blocks.COBBLED_DEEPSLATE.asItem(),
-                Blocks.DEEPSLATE.asItem(),
-                Blocks.DEEPSLATE_BRICKS.asItem(),
-                Blocks.DEEPSLATE_TILES.asItem(),
-                Blocks.SAND.asItem(),
-                Blocks.RED_SAND.asItem(),
-                Blocks.SANDSTONE.asItem(),
-                Blocks.RED_SANDSTONE.asItem()
-        );
-
-        this.tag(EPTags.Items.ALLOY_INGREDIENT).add(
-                Items.RAW_COPPER,
-                Items.RAW_IRON,
-                Items.COAL,
-                EPItems.RAW_TIN.get(),
-                EPItems.RAW_ZINC.get()
-        );
-
-        this.tag(EPTags.Items.BLAST_ALLOY_INGREDIENT).addTags(EPTags.Items.ALLOY_INGREDIENT).add(
-                        Items.RAW_GOLD,
-                        Items.COPPER_INGOT,
-                        Items.IRON_INGOT,
-                        Items.GOLD_INGOT,
-                        EPItems.TIN_INGOT.get(),
-                        EPItems.ZINC_INGOT.get(),
-                        EPItems.SILVER_INGOT.get(),
-                        EPItems.COBALT.get()
-                );
-
-        this.tag(EPTags.Items.PRIMAL_GRIND_INGREDIENT)
-                .addTags(ItemTags.WOOL,
-                        EPTags.Items.ZINC_MANUFACTURABLE,
-                        EPTags.Items.TIN_MANUFACTURABLE,
-                        EPTags.Items.COPPER_MANUFACTURABLE,
-                        EPTags.Items.BRASS_MANUFACTURABLE,
-                        EPTags.Items.BRONZE_MANUFACTURABLE
-        ).add(
-                EPBlocks.COBBLED_LIMESTONE.get().asItem(),
-                Blocks.COBBLESTONE.asItem(),
-                Blocks.COBBLED_DEEPSLATE.asItem(),
-                EPBlocks.SMALL_REEDS.get().asItem(),
-                EPBlocks.REEDS.get().asItem(),
-                EPBlocks.TALL_REEDS.get().asItem(),
-                EPItems.YERBA_MATE.get(),
-                Items.WHEAT,
-                Items.PUMPKIN,
-                Items.SUGAR_CANE,
-                Items.BONE,
-                Items.BONE_MEAL,
-                Items.LILY_OF_THE_VALLEY,
-                Items.AZURE_BLUET,
-                Items.OXEYE_DAISY,
-                Items.WHITE_TULIP,
-                Items.COCOA_BEANS,
-                Items.POPPY,
-                Items.RED_TULIP,
-                Items.BEETROOT,
-                Items.TORCHFLOWER,
-                Items.ORANGE_TULIP,
-                EPItems.ORANGE.get(),
-                EPItems.LEMON.get(),
-                Items.DANDELION,
-                Items.BLUE_ORCHID,
-                Items.CORNFLOWER,
-                EPItems.LIME.get(),
-                Items.ALLIUM,
-                Items.PINK_TULIP,
-                Items.PINK_PETALS
-        );
-
-        this.tag(EPTags.Items.MECHANICAL_GRIND_INGREDIENT)
-                .addTags(EPTags.Items.PRIMAL_GRIND_INGREDIENT,
-                        EPTags.Items.SILVER_MANUFACTURABLE,
-                        EPTags.Items.GOLD_MANUFACTURABLE,
-                        EPTags.Items.ROSE_GOLD_MANUFACTURABLE,
-                        EPTags.Items.IRON_MANUFACTURABLE,
-                        EPTags.Items.BRONZIUM_MANUFACTURABLE,
-                        EPTags.Items.GREEN_GOLD_MANUFACTURABLE,
-                        EPTags.Items.STEEL_MANUFACTURABLE,
-                        EPTags.Items.BLUE_GOLD_MANUFACTURABLE
-                ).add(
-                Items.WITHER_ROSE,
-                Items.ROSE_BUSH,
-                Items.SUNFLOWER,
-                Items.LAPIS_LAZULI,
-                Items.PEONY
-        );
-
         this.tag(EPTags.Items.ALUMINUM_ROD).add(
                 EPItems.ALUMINUM_ROD.get()
-        );
-
-        this.tag(EPTags.Items.GOLD_MANUFACTURABLE).add(
-                Items.GOLDEN_AXE, Items.GOLDEN_PICKAXE, Items.GOLDEN_SHOVEL, EPItems.GOLDEN_POLISHER.get(), Items.GOLDEN_HOE, Items.GOLDEN_SWORD,
-                EPItems.GOLDEN_DAGGER.get(), EPItems.ALUMINUM_GOLDEN_AXE.get(), EPItems.ALUMINUM_GOLDEN_PICKAXE.get(),
-                EPItems.ALUMINUM_GOLDEN_SWORD.get(), EPItems.ALUMINUM_GOLDEN_DAGGER.get(), EPItems.ALUMINUM_GOLDEN_SHOVEL.get(),
-                EPItems.ALUMINUM_GOLDEN_HOE.get(), EPItems.ALUMINUM_GOLDEN_POLISHER.get(), Items.GOLDEN_HELMET, Items.GOLDEN_CHESTPLATE, Items.GOLDEN_LEGGINGS, Items.GOLDEN_BOOTS);
-
-        this.tag(EPTags.Items.SILVER_MANUFACTURABLE).add(
-                EPItems.SILVER_AXE.get(), EPItems.SILVER_HOE.get(), EPItems.SILVER_PICKAXE.get(),
-                EPItems.SILVER_POLISHER.get(), EPItems.SILVER_SHOVEL.get(), EPItems.SILVER_SWORD.get(), EPItems.SILVER_DAGGER.get(),
-                EPItems.ALUMINUM_SILVER_AXE.get(), EPItems.ALUMINUM_SILVER_PICKAXE.get(),
-                EPItems.ALUMINUM_SILVER_SWORD.get(), EPItems.ALUMINUM_SILVER_DAGGER.get(), EPItems.ALUMINUM_SILVER_SHOVEL.get(),
-                EPItems.ALUMINUM_SILVER_HOE.get(), EPItems.ALUMINUM_SILVER_POLISHER.get(),
-                EPItems.SILVER_HELMET.get(), EPItems.SILVER_CHESTPLATE.get(), EPItems.SILVER_LEGGINGS.get(), EPItems.SILVER_BOOTS.get());
-
-        this.tag(EPTags.Items.ALUMINUM_MANUFACTURABLE).add(EPItems.RAW_ALUMINUM.get(), EPItems.ALUMINUM_INGOT.get());
-
-        this.tag(EPTags.Items.ZINC_MANUFACTURABLE).add(EPItems.RAW_ZINC.get(), EPItems.ZINC_INGOT.get());
-
-        this.tag(EPTags.Items.TIN_MANUFACTURABLE).add(EPItems.RAW_TIN.get(), EPItems.TIN_INGOT.get());
-
-        this.tag(EPTags.Items.COPPER_MANUFACTURABLE).add(Items.COPPER_INGOT, Items.RAW_COPPER);
-
-        this.tag(EPTags.Items.BRASS_MANUFACTURABLE).add(
-                EPItems.BRASS_AXE.get(), EPItems.BRASS_HOE.get(), EPItems.BRASS_PICKAXE.get(),
-                EPItems.BRASS_POLISHER.get(), EPItems.BRASS_SHOVEL.get(), EPItems.BRASS_SWORD.get(), EPItems.BRASS_DAGGER.get(),
-                EPItems.ALUMINUM_BRASS_AXE.get(), EPItems.ALUMINUM_BRASS_PICKAXE.get(),
-                EPItems.ALUMINUM_BRASS_SWORD.get(), EPItems.ALUMINUM_BRASS_DAGGER.get(), EPItems.ALUMINUM_BRASS_SHOVEL.get(),
-                EPItems.ALUMINUM_BRASS_HOE.get(), EPItems.ALUMINUM_BRASS_POLISHER.get(),
-                EPItems.BRASS_HELMET.get(), EPItems.BRASS_CHESTPLATE.get(), EPItems.BRASS_LEGGINGS.get(), EPItems.BRASS_BOOTS.get());
-
-        this.tag(EPTags.Items.BRONZE_MANUFACTURABLE).add(
-                EPItems.BRONZE_AXE.get(), EPItems.BRONZE_HOE.get(), EPItems.BRONZE_PICKAXE.get(),
-                EPItems.BRONZE_POLISHER.get(), EPItems.BRONZE_SHOVEL.get(), EPItems.BRONZE_SWORD.get(), EPItems.BRONZE_DAGGER.get(),
-                EPItems.ALUMINUM_BRONZE_AXE.get(), EPItems.ALUMINUM_BRONZE_PICKAXE.get(),
-                EPItems.ALUMINUM_BRONZE_SWORD.get(), EPItems.ALUMINUM_BRONZE_DAGGER.get(), EPItems.ALUMINUM_BRONZE_SHOVEL.get(),
-                EPItems.ALUMINUM_BRONZE_HOE.get(), EPItems.ALUMINUM_BRONZE_POLISHER.get(),
-                EPItems.BRONZE_HELMET.get(), EPItems.BRONZE_CHESTPLATE.get(), EPItems.BRONZE_LEGGINGS.get(), EPItems.BRONZE_BOOTS.get());
-
-        this.tag(EPTags.Items.ROSE_GOLD_MANUFACTURABLE).add(
-                EPItems.ROSE_GOLDEN_AXE.get(), EPItems.ROSE_GOLDEN_HOE.get(), EPItems.ROSE_GOLDEN_PICKAXE.get(),
-                EPItems.ROSE_GOLDEN_POLISHER.get(), EPItems.ROSE_GOLDEN_SHOVEL.get(), EPItems.ROSE_GOLDEN_SWORD.get(), EPItems.ROSE_GOLDEN_DAGGER.get(),
-                EPItems.ALUMINUM_ROSE_GOLDEN_AXE.get(), EPItems.ALUMINUM_ROSE_GOLDEN_PICKAXE.get(),
-                EPItems.ALUMINUM_ROSE_GOLDEN_SWORD.get(), EPItems.ALUMINUM_ROSE_GOLDEN_DAGGER.get(), EPItems.ALUMINUM_ROSE_GOLDEN_SHOVEL.get(),
-                EPItems.ALUMINUM_ROSE_GOLDEN_HOE.get(), EPItems.ALUMINUM_ROSE_GOLDEN_POLISHER.get(),
-                EPItems.ROSE_GOLDEN_HELMET.get(), EPItems.ROSE_GOLDEN_CHESTPLATE.get(), EPItems.ROSE_GOLDEN_LEGGINGS.get(), EPItems.ROSE_GOLDEN_BOOTS.get());
-
-        this.tag(EPTags.Items.IRON_MANUFACTURABLE).add(
-                Items.IRON_AXE, Items.IRON_PICKAXE, Items.IRON_SHOVEL, EPItems.IRON_POLISHER.get(), Items.IRON_HOE, Items.IRON_SWORD,
-                EPItems.IRON_DAGGER.get(), EPItems.ALUMINUM_IRON_AXE.get(), EPItems.ALUMINUM_IRON_PICKAXE.get(),
-                EPItems.ALUMINUM_IRON_SWORD.get(), EPItems.ALUMINUM_IRON_DAGGER.get(), EPItems.ALUMINUM_IRON_SHOVEL.get(),
-                EPItems.ALUMINUM_IRON_HOE.get(), EPItems.ALUMINUM_IRON_POLISHER.get(), Items.IRON_HELMET, Items.IRON_CHESTPLATE, Items.IRON_LEGGINGS, Items.IRON_BOOTS);
-
-        this.tag(EPTags.Items.BRONZIUM_MANUFACTURABLE).add(
-                EPItems.BRONZIUM_AXE.get(), EPItems.BRONZIUM_HOE.get(), EPItems.BRONZIUM_POLISHER.get(), EPItems.BRONZIUM_PICKAXE.get(), EPItems.BRONZIUM_SHOVEL.get(), EPItems.BRONZIUM_SWORD.get(),
-                EPItems.BRONZIUM_DAGGER.get(), EPItems.BRONZIUM_HELMET.get(), EPItems.BRONZIUM_CHESTPLATE.get(), EPItems.BRONZIUM_LEGGINGS.get(), EPItems.BRONZIUM_BOOTS.get());
-
-        this.tag(EPTags.Items.GREEN_GOLD_MANUFACTURABLE).add(
-                EPItems.GREEN_GOLDEN_AXE.get(), EPItems.GREEN_GOLDEN_HOE.get(), EPItems.GREEN_GOLDEN_PICKAXE.get(),
-                EPItems.GREEN_GOLDEN_POLISHER.get(), EPItems.GREEN_GOLDEN_SHOVEL.get(), EPItems.GREEN_GOLDEN_SWORD.get(), EPItems.GREEN_GOLDEN_DAGGER.get(),
-                EPItems.ALUMINUM_GREEN_GOLDEN_AXE.get(), EPItems.ALUMINUM_GREEN_GOLDEN_PICKAXE.get(),
-                EPItems.ALUMINUM_GREEN_GOLDEN_SWORD.get(), EPItems.ALUMINUM_GREEN_GOLDEN_DAGGER.get(), EPItems.ALUMINUM_GREEN_GOLDEN_SHOVEL.get(),
-                EPItems.ALUMINUM_GREEN_GOLDEN_HOE.get(), EPItems.ALUMINUM_GREEN_GOLDEN_POLISHER.get(),
-                EPItems.GREEN_GOLDEN_HELMET.get(), EPItems.GREEN_GOLDEN_CHESTPLATE.get(), EPItems.GREEN_GOLDEN_LEGGINGS.get(), EPItems.GREEN_GOLDEN_BOOTS.get());
-
-        this.tag(EPTags.Items.STEEL_MANUFACTURABLE).add(
-                EPItems.STEEL_AXE.get(), EPItems.STEEL_HOE.get(), EPItems.STEEL_POLISHER.get(),
-                EPItems.STEEL_PICKAXE.get(), EPItems.STEEL_SHOVEL.get(), EPItems.STEEL_SWORD.get(), EPItems.STEEL_DAGGER.get(),
-                EPItems.ALUMINUM_STEEL_AXE.get(), EPItems.ALUMINUM_STEEL_PICKAXE.get(),
-                EPItems.ALUMINUM_STEEL_SWORD.get(), EPItems.ALUMINUM_STEEL_DAGGER.get(), EPItems.ALUMINUM_STEEL_SHOVEL.get(),
-                EPItems.ALUMINUM_STEEL_HOE.get(), EPItems.ALUMINUM_STEEL_POLISHER.get(),
-                EPItems.STEEL_HELMET.get(), EPItems.STEEL_CHESTPLATE.get(), EPItems.STEEL_LEGGINGS.get(), EPItems.STEEL_BOOTS.get());
-
-        this.tag(EPTags.Items.BLUE_GOLD_MANUFACTURABLE).add(
-                EPItems.BLUE_GOLDEN_AXE.get(), EPItems.BLUE_GOLDEN_HOE.get(), EPItems.BLUE_GOLDEN_PICKAXE.get(),
-                EPItems.BLUE_GOLDEN_POLISHER.get(), EPItems.BLUE_GOLDEN_SHOVEL.get(), EPItems.BLUE_GOLDEN_SWORD.get(), EPItems.BLUE_GOLDEN_DAGGER.get(),
-                EPItems.ALUMINUM_BLUE_GOLDEN_AXE.get(), EPItems.ALUMINUM_BLUE_GOLDEN_PICKAXE.get(),
-                EPItems.ALUMINUM_BLUE_GOLDEN_SWORD.get(), EPItems.ALUMINUM_BLUE_GOLDEN_DAGGER.get(), EPItems.ALUMINUM_BLUE_GOLDEN_SHOVEL.get(),
-                EPItems.ALUMINUM_BLUE_GOLDEN_HOE.get(), EPItems.ALUMINUM_BLUE_GOLDEN_POLISHER.get(),
-                EPItems.BLUE_GOLDEN_HELMET.get(), EPItems.BLUE_GOLDEN_CHESTPLATE.get(), EPItems.BLUE_GOLDEN_LEGGINGS.get(), EPItems.BLUE_GOLDEN_BOOTS.get());
-
-        this.tag(EPTags.Items.BAUXITE_ORE).add(
-                EPBlocks.BAUXITE.get().asItem(),
-                EPBlocks.WHITE_BAUXITE.get().asItem(),
-                EPBlocks.LIGHT_GRAY_BAUXITE.get().asItem(),
-                EPBlocks.BROWN_BAUXITE.get().asItem(),
-                EPBlocks.RED_BAUXITE.get().asItem(),
-                EPBlocks.ORANGE_BAUXITE.get().asItem(),
-                EPBlocks.YELLOW_BAUXITE.get().asItem()
         );
 
         this.tag(Tags.Items.INGOTS).add(
@@ -516,13 +300,100 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                 EPItems.BLUE_GOLDEN_HELMET.get(), EPItems.BLUE_GOLDEN_CHESTPLATE.get(), EPItems.BLUE_GOLDEN_LEGGINGS.get(), EPItems.BLUE_GOLDEN_BOOTS.get()
                 );
 
-        this.tag(EPTags.Items.RAW_GEM).add(
+        this.tag(EPTags.Items.RAW_GEMS).add(
                 EPItems.RAW_RUBY.get(),
                 EPItems.RAW_SAPPHIRE.get(),
                 EPItems.RAW_GARNET.get(),
                 EPItems.RAW_EMERALD.get(),
                 EPItems.RAW_DIAMOND.get()
                 );
+
+        this.tag(ItemTags.BEACON_PAYMENT_ITEMS).add(
+                EPItems.RUBY.get(),
+                EPItems.SAPPHIRE.get(),
+                EPItems.GARNET.get(),
+                EPItems.SILVER_INGOT.get(),
+                EPItems.ALUMINUM_INGOT.get(),
+                EPItems.TIN_INGOT.get(),
+                EPItems.ZINC_INGOT.get(),
+                EPItems.BRASS_INGOT.get(),
+                EPItems.BRONZE_INGOT.get(),
+                EPItems.ROSE_GOLD_INGOT.get(),
+                EPItems.BRONZIUM_INGOT.get(),
+                EPItems.STEEL_INGOT.get(),
+                EPItems.GREEN_GOLD_INGOT.get(),
+                EPItems.BLUE_GOLD_INGOT.get()
+        );
+
+        this.tag(ItemTags.PIGLIN_LOVED).add(
+                EPItems.ROSE_GOLD_INGOT.get(),
+                EPItems.GREEN_GOLD_INGOT.get(),
+                EPItems.BLUE_GOLD_INGOT.get()
+        );
+    }
+
+    private void addOresTags(){
+        this.tag(Tags.Items.ORES).addTags(
+                EPTags.Items.TIN_ORES,
+                EPTags.Items.ZINC_ORES,
+                EPTags.Items.SILVER_ORES,
+                EPTags.Items.BAUXITE_ORES,
+                EPTags.Items.SAPPHIRE_ORES,
+                EPTags.Items.RUBY_ORES,
+                EPTags.Items.COBALT_ORES
+        );
+
+        this.tag(Tags.Items.ORES_COPPER).add(
+                EPBlocks.NETHER_COPPER_ORE.get().asItem()
+        );
+
+        this.tag(EPTags.Items.TIN_ORES).add(
+                EPBlocks.TIN_ORE.get().asItem(),
+                EPBlocks.DEEPSLATE_TIN_ORE.get().asItem()
+        );
+
+        this.tag(EPTags.Items.ZINC_ORES).add(
+                EPBlocks.ZINC_ORE.get().asItem(),
+                EPBlocks.DEEPSLATE_ZINC_ORE.get().asItem(),
+                EPBlocks.NETHER_ZINC_ORE.get().asItem()
+        );
+
+        this.tag(EPTags.Items.SILVER_ORES).add(
+                EPBlocks.SILVER_ORE.get().asItem(),
+                EPBlocks.DEEPSLATE_SILVER_ORE.get().asItem()
+        );
+
+        this.tag(EPTags.Items.BAUXITE_ORES).add(
+                EPBlocks.BAUXITE.get().asItem(),
+                EPBlocks.WHITE_BAUXITE.get().asItem(),
+                EPBlocks.LIGHT_GRAY_BAUXITE.get().asItem(),
+                EPBlocks.BROWN_BAUXITE.get().asItem(),
+                EPBlocks.RED_BAUXITE.get().asItem(),
+                EPBlocks.ORANGE_BAUXITE.get().asItem(),
+                EPBlocks.YELLOW_BAUXITE.get().asItem()
+        );
+
+        this.tag(EPTags.Items.SAPPHIRE_ORES).add(
+                EPBlocks.SAPPHIRE_ORE.get().asItem(),
+                EPBlocks.DEEPSLATE_SAPPHIRE_ORE.get().asItem()
+        );
+
+        this.tag(EPTags.Items.RUBY_ORES).add(
+                EPBlocks.RUBY_ORE.get().asItem(),
+                EPBlocks.DEEPSLATE_RUBY_ORE.get().asItem()
+        );
+
+        this.tag(EPTags.Items.COBALT_ORES).add(
+                EPBlocks.COBALT_ORE.get().asItem(),
+                EPBlocks.DEEPSLATE_COBALT_ORE.get().asItem()
+        );
+    }
+
+    private void addToolsTags(){
+        this.tag(Tags.Items.TOOLS).addTags(
+                EPTags.Items.POLISHER,
+                EPTags.Items.DAGGER
+        );
 
         this.tag(EPTags.Items.POLISHER).add(
                 EPItems.SILVER_POLISHER.get(),
@@ -583,29 +454,251 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                 EPItems.ALUMINUM_BLUE_GOLDEN_DAGGER.get(),
                 EPItems.ALUMINUM_DIAMOND_DAGGER.get()
         );
-
-        this.tag(ItemTags.BEACON_PAYMENT_ITEMS).add(
-                EPItems.RUBY.get(),
-                EPItems.SAPPHIRE.get(),
-                EPItems.GARNET.get(),
-                EPItems.SILVER_INGOT.get(),
-                EPItems.ALUMINUM_INGOT.get(),
-                EPItems.TIN_INGOT.get(),
-                EPItems.ZINC_INGOT.get(),
-                EPItems.BRASS_INGOT.get(),
-                EPItems.BRONZE_INGOT.get(),
-                EPItems.ROSE_GOLD_INGOT.get(),
-                EPItems.BRONZIUM_INGOT.get(),
-                EPItems.STEEL_INGOT.get(),
-                EPItems.GREEN_GOLD_INGOT.get(),
-                EPItems.BLUE_GOLD_INGOT.get()
-        );
-
-        this.tag(ItemTags.PIGLIN_LOVED).add(
-                EPItems.ROSE_GOLD_INGOT.get(),
-                EPItems.GREEN_GOLD_INGOT.get(),
-                EPItems.BLUE_GOLD_INGOT.get()
-        );
     }
 
+    private void addIngredientTags(){
+        this.tag(EPTags.Items.INGREDIENTS).addTags(
+                EPTags.Items.BASIC_SMELT_INGREDIENT,
+                EPTags.Items.MASONRY_INGREDIENT,
+                EPTags.Items.ALLOY_INGREDIENT,
+                EPTags.Items.BLAST_ALLOY_INGREDIENT,
+                EPTags.Items.PRIMAL_GRIND_INGREDIENT,
+                EPTags.Items.MECHANICAL_GRIND_INGREDIENT
+        );
+
+        this.tag(EPTags.Items.BASIC_SMELT_INGREDIENT).add(
+                Items.RAW_COPPER,
+                Blocks.COPPER_ORE.asItem(),
+                EPItems.RAW_ZINC.get(),
+                EPBlocks.ZINC_ORE.get().asItem(),
+                EPItems.RAW_TIN.get(),
+                EPBlocks.TIN_ORE.get().asItem(),
+                Items.BEEF,
+                Items.CHICKEN,
+                Items.PORKCHOP,
+                Items.MUTTON,
+                Items.RABBIT,
+                Items.KELP,
+                Items.SALMON,
+                Items.COD,
+                Items.POTATO,
+                Items.CLAY_BALL,
+                EPItems.ZAPALLO.get(),
+                EPItems.CORN.get(),
+                EPItems.EGGPLANT.get()
+        );
+
+        this.tag(EPTags.Items.MASONRY_INGREDIENT).add(
+                Items.CLAY_BALL,
+                Items.BRICK,
+                Blocks.CLAY.asItem(),
+                Blocks.WHITE_TERRACOTTA.asItem(),
+                Blocks.BLACK_TERRACOTTA.asItem(),
+                Blocks.YELLOW_TERRACOTTA.asItem(),
+                Blocks.RED_TERRACOTTA.asItem(),
+                Blocks.BLUE_TERRACOTTA.asItem(),
+                Blocks.GREEN_TERRACOTTA.asItem(),
+                Blocks.BROWN_TERRACOTTA.asItem(),
+                Blocks.PURPLE_TERRACOTTA.asItem(),
+                Blocks.PINK_TERRACOTTA.asItem(),
+                Blocks.MAGENTA_TERRACOTTA.asItem(),
+                Blocks.CYAN_TERRACOTTA.asItem(),
+                Blocks.LIGHT_BLUE_TERRACOTTA.asItem(),
+                Blocks.GRAY_TERRACOTTA.asItem(),
+                Blocks.LIGHT_GRAY_TERRACOTTA.asItem(),
+                Blocks.ORANGE_TERRACOTTA.asItem(),
+                Blocks.LIME_TERRACOTTA.asItem(),
+                Blocks.NETHERRACK.asItem(),
+                Blocks.COBBLESTONE.asItem(),
+                Blocks.STONE.asItem(),
+                Blocks.STONE_BRICKS.asItem(),
+                Blocks.COBBLED_DEEPSLATE.asItem(),
+                Blocks.DEEPSLATE.asItem(),
+                Blocks.DEEPSLATE_BRICKS.asItem(),
+                Blocks.DEEPSLATE_TILES.asItem(),
+                Blocks.SAND.asItem(),
+                Blocks.RED_SAND.asItem(),
+                Blocks.SANDSTONE.asItem(),
+                Blocks.RED_SANDSTONE.asItem()
+        );
+
+        this.tag(EPTags.Items.ALLOY_INGREDIENT).add(
+                Items.RAW_COPPER,
+                Items.RAW_IRON,
+                Items.COAL,
+                EPItems.RAW_TIN.get(),
+                EPItems.RAW_ZINC.get()
+        );
+
+        this.tag(EPTags.Items.BLAST_ALLOY_INGREDIENT).addTags(
+                EPTags.Items.ALLOY_INGREDIENT).add(
+                Items.CLAY_BALL,
+                Items.RAW_GOLD,
+                Items.COPPER_INGOT,
+                Items.IRON_INGOT,
+                Items.GOLD_INGOT,
+                EPItems.RAW_ALUMINUM.get(),
+                EPItems.TIN_INGOT.get(),
+                EPItems.ZINC_INGOT.get(),
+                EPItems.SILVER_INGOT.get(),
+                EPItems.ALUMINUM_INGOT.get(),
+                EPItems.COBALT.get()
+        );
+
+        this.tag(EPTags.Items.PRIMAL_GRIND_INGREDIENT)
+                .addTags(ItemTags.WOOL,
+                        EPTags.Items.ZINC_MANUFACTURABLE,
+                        EPTags.Items.TIN_MANUFACTURABLE,
+                        EPTags.Items.COPPER_MANUFACTURABLE,
+                        EPTags.Items.BRASS_MANUFACTURABLE,
+                        EPTags.Items.BRONZE_MANUFACTURABLE
+                ).add(
+                        EPBlocks.COBBLED_LIMESTONE.get().asItem(),
+                        Blocks.COBBLESTONE.asItem(),
+                        Blocks.COBBLED_DEEPSLATE.asItem(),
+                        EPBlocks.SMALL_REEDS.get().asItem(),
+                        EPBlocks.REEDS.get().asItem(),
+                        EPBlocks.TALL_REEDS.get().asItem(),
+                        EPItems.YERBA_MATE.get(),
+                        Items.WHEAT,
+                        Items.PUMPKIN,
+                        Items.SUGAR_CANE,
+                        Items.BONE,
+                        Items.BONE_MEAL,
+                        Items.LILY_OF_THE_VALLEY,
+                        Items.AZURE_BLUET,
+                        Items.OXEYE_DAISY,
+                        Items.WHITE_TULIP,
+                        Items.COCOA_BEANS,
+                        Items.POPPY,
+                        Items.RED_TULIP,
+                        Items.BEETROOT,
+                        Items.TORCHFLOWER,
+                        Items.ORANGE_TULIP,
+                        EPItems.ORANGE.get(),
+                        EPItems.LEMON.get(),
+                        Items.DANDELION,
+                        Items.BLUE_ORCHID,
+                        Items.CORNFLOWER,
+                        EPItems.LIME.get(),
+                        Items.ALLIUM,
+                        Items.PINK_TULIP,
+                        Items.PINK_PETALS
+                );
+
+        this.tag(EPTags.Items.MECHANICAL_GRIND_INGREDIENT)
+                .addTags(EPTags.Items.PRIMAL_GRIND_INGREDIENT,
+                        EPTags.Items.SILVER_MANUFACTURABLE,
+                        EPTags.Items.GOLD_MANUFACTURABLE,
+                        EPTags.Items.ROSE_GOLD_MANUFACTURABLE,
+                        EPTags.Items.IRON_MANUFACTURABLE,
+                        EPTags.Items.BRONZIUM_MANUFACTURABLE,
+                        EPTags.Items.GREEN_GOLD_MANUFACTURABLE,
+                        EPTags.Items.STEEL_MANUFACTURABLE,
+                        EPTags.Items.BLUE_GOLD_MANUFACTURABLE
+                ).add(
+                        Items.WITHER_ROSE,
+                        Items.ROSE_BUSH,
+                        Items.SUNFLOWER,
+                        Items.LAPIS_LAZULI,
+                        Items.PEONY
+                );
+    }
+
+    private void addManufacturableTags(){
+        this.tag(EPTags.Items.MANUFACTURABLE).addTags(
+                EPTags.Items.GOLD_MANUFACTURABLE,
+                EPTags.Items.SILVER_MANUFACTURABLE,
+                EPTags.Items.COPPER_MANUFACTURABLE,
+                EPTags.Items.TIN_MANUFACTURABLE,
+                EPTags.Items.ZINC_MANUFACTURABLE,
+                EPTags.Items.BRASS_MANUFACTURABLE,
+                EPTags.Items.BRONZE_MANUFACTURABLE,
+                EPTags.Items.ROSE_GOLD_MANUFACTURABLE,
+                EPTags.Items.IRON_MANUFACTURABLE,
+                EPTags.Items.GREEN_GOLD_MANUFACTURABLE,
+                EPTags.Items.STEEL_MANUFACTURABLE,
+                EPTags.Items.BLUE_GOLD_MANUFACTURABLE
+        );
+
+        this.tag(EPTags.Items.GOLD_MANUFACTURABLE).add(
+                Items.GOLDEN_AXE, Items.GOLDEN_PICKAXE, Items.GOLDEN_SHOVEL, EPItems.GOLDEN_POLISHER.get(), Items.GOLDEN_HOE, Items.GOLDEN_SWORD,
+                EPItems.GOLDEN_DAGGER.get(), EPItems.ALUMINUM_GOLDEN_AXE.get(), EPItems.ALUMINUM_GOLDEN_PICKAXE.get(),
+                EPItems.ALUMINUM_GOLDEN_SWORD.get(), EPItems.ALUMINUM_GOLDEN_DAGGER.get(), EPItems.ALUMINUM_GOLDEN_SHOVEL.get(),
+                EPItems.ALUMINUM_GOLDEN_HOE.get(), EPItems.ALUMINUM_GOLDEN_POLISHER.get(), Items.GOLDEN_HELMET, Items.GOLDEN_CHESTPLATE, Items.GOLDEN_LEGGINGS, Items.GOLDEN_BOOTS);
+
+        this.tag(EPTags.Items.SILVER_MANUFACTURABLE).add(
+                EPItems.SILVER_AXE.get(), EPItems.SILVER_HOE.get(), EPItems.SILVER_PICKAXE.get(),
+                EPItems.SILVER_POLISHER.get(), EPItems.SILVER_SHOVEL.get(), EPItems.SILVER_SWORD.get(), EPItems.SILVER_DAGGER.get(),
+                EPItems.ALUMINUM_SILVER_AXE.get(), EPItems.ALUMINUM_SILVER_PICKAXE.get(),
+                EPItems.ALUMINUM_SILVER_SWORD.get(), EPItems.ALUMINUM_SILVER_DAGGER.get(), EPItems.ALUMINUM_SILVER_SHOVEL.get(),
+                EPItems.ALUMINUM_SILVER_HOE.get(), EPItems.ALUMINUM_SILVER_POLISHER.get(),
+                EPItems.SILVER_HELMET.get(), EPItems.SILVER_CHESTPLATE.get(), EPItems.SILVER_LEGGINGS.get(), EPItems.SILVER_BOOTS.get());
+
+        this.tag(EPTags.Items.ALUMINUM_MANUFACTURABLE).add(EPItems.RAW_ALUMINUM.get(), EPItems.ALUMINUM_INGOT.get());
+
+        this.tag(EPTags.Items.ZINC_MANUFACTURABLE).add(EPItems.RAW_ZINC.get(), EPItems.ZINC_INGOT.get());
+
+        this.tag(EPTags.Items.TIN_MANUFACTURABLE).add(EPItems.RAW_TIN.get(), EPItems.TIN_INGOT.get());
+
+        this.tag(EPTags.Items.COPPER_MANUFACTURABLE).add(Items.COPPER_INGOT, Items.RAW_COPPER);
+
+        this.tag(EPTags.Items.BRASS_MANUFACTURABLE).add(
+                EPItems.BRASS_AXE.get(), EPItems.BRASS_HOE.get(), EPItems.BRASS_PICKAXE.get(),
+                EPItems.BRASS_POLISHER.get(), EPItems.BRASS_SHOVEL.get(), EPItems.BRASS_SWORD.get(), EPItems.BRASS_DAGGER.get(),
+                EPItems.ALUMINUM_BRASS_AXE.get(), EPItems.ALUMINUM_BRASS_PICKAXE.get(),
+                EPItems.ALUMINUM_BRASS_SWORD.get(), EPItems.ALUMINUM_BRASS_DAGGER.get(), EPItems.ALUMINUM_BRASS_SHOVEL.get(),
+                EPItems.ALUMINUM_BRASS_HOE.get(), EPItems.ALUMINUM_BRASS_POLISHER.get(),
+                EPItems.BRASS_HELMET.get(), EPItems.BRASS_CHESTPLATE.get(), EPItems.BRASS_LEGGINGS.get(), EPItems.BRASS_BOOTS.get());
+
+        this.tag(EPTags.Items.BRONZE_MANUFACTURABLE).add(
+                EPItems.BRONZE_AXE.get(), EPItems.BRONZE_HOE.get(), EPItems.BRONZE_PICKAXE.get(),
+                EPItems.BRONZE_POLISHER.get(), EPItems.BRONZE_SHOVEL.get(), EPItems.BRONZE_SWORD.get(), EPItems.BRONZE_DAGGER.get(),
+                EPItems.ALUMINUM_BRONZE_AXE.get(), EPItems.ALUMINUM_BRONZE_PICKAXE.get(),
+                EPItems.ALUMINUM_BRONZE_SWORD.get(), EPItems.ALUMINUM_BRONZE_DAGGER.get(), EPItems.ALUMINUM_BRONZE_SHOVEL.get(),
+                EPItems.ALUMINUM_BRONZE_HOE.get(), EPItems.ALUMINUM_BRONZE_POLISHER.get(),
+                EPItems.BRONZE_HELMET.get(), EPItems.BRONZE_CHESTPLATE.get(), EPItems.BRONZE_LEGGINGS.get(), EPItems.BRONZE_BOOTS.get());
+
+        this.tag(EPTags.Items.ROSE_GOLD_MANUFACTURABLE).add(
+                EPItems.ROSE_GOLDEN_AXE.get(), EPItems.ROSE_GOLDEN_HOE.get(), EPItems.ROSE_GOLDEN_PICKAXE.get(),
+                EPItems.ROSE_GOLDEN_POLISHER.get(), EPItems.ROSE_GOLDEN_SHOVEL.get(), EPItems.ROSE_GOLDEN_SWORD.get(), EPItems.ROSE_GOLDEN_DAGGER.get(),
+                EPItems.ALUMINUM_ROSE_GOLDEN_AXE.get(), EPItems.ALUMINUM_ROSE_GOLDEN_PICKAXE.get(),
+                EPItems.ALUMINUM_ROSE_GOLDEN_SWORD.get(), EPItems.ALUMINUM_ROSE_GOLDEN_DAGGER.get(), EPItems.ALUMINUM_ROSE_GOLDEN_SHOVEL.get(),
+                EPItems.ALUMINUM_ROSE_GOLDEN_HOE.get(), EPItems.ALUMINUM_ROSE_GOLDEN_POLISHER.get(),
+                EPItems.ROSE_GOLDEN_HELMET.get(), EPItems.ROSE_GOLDEN_CHESTPLATE.get(), EPItems.ROSE_GOLDEN_LEGGINGS.get(), EPItems.ROSE_GOLDEN_BOOTS.get());
+
+        this.tag(EPTags.Items.IRON_MANUFACTURABLE).add(
+                Items.IRON_AXE, Items.IRON_PICKAXE, Items.IRON_SHOVEL, EPItems.IRON_POLISHER.get(), Items.IRON_HOE, Items.IRON_SWORD,
+                EPItems.IRON_DAGGER.get(), EPItems.ALUMINUM_IRON_AXE.get(), EPItems.ALUMINUM_IRON_PICKAXE.get(),
+                EPItems.ALUMINUM_IRON_SWORD.get(), EPItems.ALUMINUM_IRON_DAGGER.get(), EPItems.ALUMINUM_IRON_SHOVEL.get(),
+                EPItems.ALUMINUM_IRON_HOE.get(), EPItems.ALUMINUM_IRON_POLISHER.get(), Items.IRON_HELMET, Items.IRON_CHESTPLATE, Items.IRON_LEGGINGS, Items.IRON_BOOTS);
+
+        this.tag(EPTags.Items.BRONZIUM_MANUFACTURABLE).add(
+                EPItems.BRONZIUM_AXE.get(), EPItems.BRONZIUM_HOE.get(), EPItems.BRONZIUM_POLISHER.get(), EPItems.BRONZIUM_PICKAXE.get(), EPItems.BRONZIUM_SHOVEL.get(), EPItems.BRONZIUM_SWORD.get(),
+                EPItems.BRONZIUM_DAGGER.get(), EPItems.BRONZIUM_HELMET.get(), EPItems.BRONZIUM_CHESTPLATE.get(), EPItems.BRONZIUM_LEGGINGS.get(), EPItems.BRONZIUM_BOOTS.get());
+
+        this.tag(EPTags.Items.GREEN_GOLD_MANUFACTURABLE).add(
+                EPItems.GREEN_GOLDEN_AXE.get(), EPItems.GREEN_GOLDEN_HOE.get(), EPItems.GREEN_GOLDEN_PICKAXE.get(),
+                EPItems.GREEN_GOLDEN_POLISHER.get(), EPItems.GREEN_GOLDEN_SHOVEL.get(), EPItems.GREEN_GOLDEN_SWORD.get(), EPItems.GREEN_GOLDEN_DAGGER.get(),
+                EPItems.ALUMINUM_GREEN_GOLDEN_AXE.get(), EPItems.ALUMINUM_GREEN_GOLDEN_PICKAXE.get(),
+                EPItems.ALUMINUM_GREEN_GOLDEN_SWORD.get(), EPItems.ALUMINUM_GREEN_GOLDEN_DAGGER.get(), EPItems.ALUMINUM_GREEN_GOLDEN_SHOVEL.get(),
+                EPItems.ALUMINUM_GREEN_GOLDEN_HOE.get(), EPItems.ALUMINUM_GREEN_GOLDEN_POLISHER.get(),
+                EPItems.GREEN_GOLDEN_HELMET.get(), EPItems.GREEN_GOLDEN_CHESTPLATE.get(), EPItems.GREEN_GOLDEN_LEGGINGS.get(), EPItems.GREEN_GOLDEN_BOOTS.get());
+
+        this.tag(EPTags.Items.STEEL_MANUFACTURABLE).add(
+                EPItems.STEEL_AXE.get(), EPItems.STEEL_HOE.get(), EPItems.STEEL_POLISHER.get(),
+                EPItems.STEEL_PICKAXE.get(), EPItems.STEEL_SHOVEL.get(), EPItems.STEEL_SWORD.get(), EPItems.STEEL_DAGGER.get(),
+                EPItems.ALUMINUM_STEEL_AXE.get(), EPItems.ALUMINUM_STEEL_PICKAXE.get(),
+                EPItems.ALUMINUM_STEEL_SWORD.get(), EPItems.ALUMINUM_STEEL_DAGGER.get(), EPItems.ALUMINUM_STEEL_SHOVEL.get(),
+                EPItems.ALUMINUM_STEEL_HOE.get(), EPItems.ALUMINUM_STEEL_POLISHER.get(),
+                EPItems.STEEL_HELMET.get(), EPItems.STEEL_CHESTPLATE.get(), EPItems.STEEL_LEGGINGS.get(), EPItems.STEEL_BOOTS.get());
+
+        this.tag(EPTags.Items.BLUE_GOLD_MANUFACTURABLE).add(
+                EPItems.BLUE_GOLDEN_AXE.get(), EPItems.BLUE_GOLDEN_HOE.get(), EPItems.BLUE_GOLDEN_PICKAXE.get(),
+                EPItems.BLUE_GOLDEN_POLISHER.get(), EPItems.BLUE_GOLDEN_SHOVEL.get(), EPItems.BLUE_GOLDEN_SWORD.get(), EPItems.BLUE_GOLDEN_DAGGER.get(),
+                EPItems.ALUMINUM_BLUE_GOLDEN_AXE.get(), EPItems.ALUMINUM_BLUE_GOLDEN_PICKAXE.get(),
+                EPItems.ALUMINUM_BLUE_GOLDEN_SWORD.get(), EPItems.ALUMINUM_BLUE_GOLDEN_DAGGER.get(), EPItems.ALUMINUM_BLUE_GOLDEN_SHOVEL.get(),
+                EPItems.ALUMINUM_BLUE_GOLDEN_HOE.get(), EPItems.ALUMINUM_BLUE_GOLDEN_POLISHER.get(),
+                EPItems.BLUE_GOLDEN_HELMET.get(), EPItems.BLUE_GOLDEN_CHESTPLATE.get(), EPItems.BLUE_GOLDEN_LEGGINGS.get(), EPItems.BLUE_GOLDEN_BOOTS.get());
+    }
 }

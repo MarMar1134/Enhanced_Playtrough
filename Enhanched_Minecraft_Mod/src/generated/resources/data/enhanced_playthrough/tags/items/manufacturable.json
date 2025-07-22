@@ -1,0 +1,16 @@
+{
+  "values": [
+    "#enhanced_playthrough:manufacturable/gold",
+    "#enhanced_playthrough:manufacturable/silver",
+    "#enhanced_playthrough:manufacturable/copper",
+    "#enhanced_playthrough:manufacturable/tin",
+    "#enhanced_playthrough:manufacturable/zinc",
+    "#enhanced_playthrough:manufacturable/brass",
+    "#enhanced_playthrough:manufacturable/bronze",
+    "#enhanced_playthrough:manufacturable/rose_gold",
+    "#enhanced_playthrough:manufacturable/iron",
+    "#enhanced_playthrough:manufacturable/green_gold",
+    "#enhanced_playthrough:manufacturable/steel",
+    "#enhanced_playthrough:manufacturable/blue_gold"
+  ]
+}
