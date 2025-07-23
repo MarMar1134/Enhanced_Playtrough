@@ -1,0 +1,90 @@
+{
+  "parent": "enhanced_playthrough:abrassive_heat",
+  "criteria": {
+    "has_boots": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:brass_boots"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_chestplate": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:brass_chestplate"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_helmet": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:brass_helmet"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_leggings": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:brass_leggings"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "enhanced_playthrough:textures/block/bronze_block.png",
+    "description": {
+      "translate": "advancement.enhanced_playthrough.desc.survival.abrass_your_soul"
+    },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "item": "enhanced_playthrough:brass_chestplate",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.enhanced_playthrough.title.survival.abrass_your_soul"
+    }
+  },
+  "requirements": [
+    [
+      "has_helmet"
+    ],
+    [
+      "has_chestplate"
+    ],
+    [
+      "has_leggings"
+    ],
+    [
+      "has_boots"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "enhanced_playthrough:advancements/abrass_your_soul"
+    ]
+  },
+  "sends_telemetry_event": true
+}

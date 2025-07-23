@@ -1,0 +1,267 @@
+{
+  "parent": "enhanced_playthrough:first_flower",
+  "criteria": {
+    "has_allium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:allium"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_azure_bluet": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:azure_bluet"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_blue_orchid": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:blue_orchid"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_cold_lyrium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:cold_lyrium"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_cornflower": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:cornflower"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_dandelion": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:dandelion"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_lily_of_the_valley": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:lily_of_the_valley"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_orange_tulip": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:orange_tulip"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_oxeye_daisy": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:oxeye_daisy"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_pink_tulip": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:pink_tulip"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_poppy": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:poppy"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_red_tulip": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:red_tulip"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_succulent": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:succulent"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_torchflower": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:torchflower"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_white_tulip": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:white_tulip"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_wither_rose": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:wither_rose"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/block/emerald_block.png",
+    "description": {
+      "translate": "advancement.enhanced_playthrough.desc.gems.all_small_flowers"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "minecraft:dandelion"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.enhanced_playthrough.title.gems.all_small_flowers"
+    }
+  },
+  "requirements": [
+    [
+      "has_dandelion"
+    ],
+    [
+      "has_poppy"
+    ],
+    [
+      "has_blue_orchid"
+    ],
+    [
+      "has_allium"
+    ],
+    [
+      "has_azure_bluet"
+    ],
+    [
+      "has_red_tulip"
+    ],
+    [
+      "has_orange_tulip"
+    ],
+    [
+      "has_white_tulip"
+    ],
+    [
+      "has_pink_tulip"
+    ],
+    [
+      "has_oxeye_daisy"
+    ],
+    [
+      "has_cornflower"
+    ],
+    [
+      "has_lily_of_the_valley"
+    ],
+    [
+      "has_wither_rose"
+    ],
+    [
+      "has_torchflower"
+    ],
+    [
+      "has_cold_lyrium"
+    ],
+    [
+      "has_succulent"
+    ]
+  ],
+  "rewards": {
+    "experience": 200
+  },
+  "sends_telemetry_event": true
+}

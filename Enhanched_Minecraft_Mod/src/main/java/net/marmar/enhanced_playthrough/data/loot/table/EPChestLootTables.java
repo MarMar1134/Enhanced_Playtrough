@@ -1,4 +1,4 @@
-package net.marmar.enhanced_playthrough.data.loot;
+package net.marmar.enhanced_playthrough.data.loot.table;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.item.EPItems;

@@ -1,0 +1,102 @@
+{
+  "parent": "enhanced_playthrough:first_flower",
+  "criteria": {
+    "has_lilac": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:lilac"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_peony": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:peony"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_pitcher_plant": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:pitcher_plant"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_rose_bush": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:rose_bush"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_sunflower": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:sunflower"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/block/emerald_block.png",
+    "description": {
+      "translate": "advancement.enhanced_playthrough.desc.gems.all_tall_flowers"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "minecraft:rose_bush"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.enhanced_playthrough.title.gems.all_tall_flowers"
+    }
+  },
+  "requirements": [
+    [
+      "has_sunflower"
+    ],
+    [
+      "has_lilac"
+    ],
+    [
+      "has_peony"
+    ],
+    [
+      "has_rose_bush"
+    ],
+    [
+      "has_pitcher_plant"
+    ]
+  ],
+  "rewards": {
+    "experience": 140
+  },
+  "sends_telemetry_event": true
+}

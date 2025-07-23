@@ -91,18 +91,23 @@ public class SpanishLangProvider extends AbstractLangProvider {
                     "Funde oro y cobalto para obtener oro azul");
             addSurvivalAdvancement("the_goldenpuff_girls", "Las chicas súper-doradas",
                     "Consigue las tres aleaciones de oro");
+
             addSurvivalAdvancement("thats_new", "Eso... es nuevo",
                     "Obtén un lingote de bronce");
             addSurvivalAdvancement( "abrassive_heat", "Platón, el herrero",
                     "Obtén un lingote de latón");
+            addSurvivalAdvancement("abrass_your_soul", "Amor platónico",
+                    "Obtén una armadura de latón");
             addSurvivalAdvancement( "mighty_bronze", "Bronceado divino",
                     "Obtén un pico de bronce");
             addSurvivalAdvancement("steel_isnt_enough", "No tiende a-cero",
                     "Utiliza tu horno de aleación para fundir algo de acero");
+            addSurvivalAdvancement("the_aluminated", "El aluminado",
+                    "Obtén un lingote de aluminio");
 
             //Gems
             addGemAdvancement("root", "Los colores del mundo",
-                    "Nuestro mundo reluce en colores, y las gemas representan bien eso");
+                    "Nuestro mundo reluce en colores, ¿que tal si vas a descubrirlos todos?");
             addGemAdvancement("polish_emerald", "Intento de grinch",
                     "Consigue algunas esmeraldas y cuidalas de los, ¿quienes?");
             addGemAdvancement("polish_sapphire", "Horizonte azulado",
@@ -115,6 +120,16 @@ public class SpanishLangProvider extends AbstractLangProvider {
                     "Consigue algunos diamantes para poder ver mejor el cielo");
             addGemAdvancement("get_all_gems", "Caos por doquier",
                     "Consigue todas las gemas y conviertete en el señor del caos");
+
+            //Flowers
+            addGemAdvancement("first_flower", "La raiz de todo",
+                    "Obtén tu primer flor");
+            addGemAdvancement("all_small_flowers", "David",
+                    "Obtén todas las flores pequeñas");
+            addGemAdvancement("all_tall_flowers", "Goliat",
+                    "Obtén todas las flores altas");
+            addGemAdvancement("all_flowers", "El diario de la botecaria",
+                    "Obtén todas las flores");
 
         //Entities
         addBoatEntity("Barco");

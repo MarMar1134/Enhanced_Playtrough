@@ -6,7 +6,7 @@
         "items": [
           {
             "items": [
-              "minecraft:emerald"
+              "minecraft:diamond"
             ]
           }
         ]
@@ -97,7 +97,9 @@
     ]
   ],
   "rewards": {
-    "experience": 100
+    "loot": [
+      "enhanced_playthrough:advancements/get_all_gems"
+    ]
   },
   "sends_telemetry_event": true
 }

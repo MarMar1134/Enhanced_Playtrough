@@ -1,0 +1,74 @@
+{
+  "parent": "enhanced_playthrough:gem_root",
+  "criteria": {
+    "has_cold_lyrium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:cold_lyrium"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_small_flower": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "minecraft:small_flowers"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_succulent": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:succulent"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_tall_flower": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "minecraft:tall_flowers"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/block/emerald_block.png",
+    "description": {
+      "translate": "advancement.enhanced_playthrough.desc.gems.first_flower"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "minecraft:poppy"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.enhanced_playthrough.title.gems.first_flower"
+    }
+  },
+  "requirements": [
+    [
+      "has_small_flower",
+      "has_tall_flower",
+      "has_cold_lyrium",
+      "has_succulent"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

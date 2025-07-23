@@ -67,7 +67,9 @@
     ]
   ],
   "rewards": {
-    "experience": 100
+    "loot": [
+      "enhanced_playthrough:advancements/the_goldenpuff_girls"
+    ]
   },
   "sends_telemetry_event": true
 }

@@ -1,5 +1,5 @@
 {
-  "parent": "enhanced_playthrough:abrassive_heat",
+  "parent": "enhanced_playthrough:thats_new",
   "criteria": {
     "has_item": {
       "conditions": {

@@ -1,6 +1,7 @@
-package net.marmar.enhanced_playthrough.data.loot;
+package net.marmar.enhanced_playthrough.data.loot.table;
 
 import net.marmar.enhanced_playthrough.block.EPBlocks;
+import net.marmar.enhanced_playthrough.data.loot.BlockLootTableBuilders;
 import net.marmar.enhanced_playthrough.item.EPItems;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;

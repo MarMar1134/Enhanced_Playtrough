@@ -1,8 +1,14 @@
 {
   "criteria": {
-    "spawn": {
-      "conditions": {},
-      "trigger": "minecraft:tick"
+    "has_polisher": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "enhanced_playthrough:tools/polishers"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
     }
   },
   "display": {
@@ -23,7 +29,7 @@
   },
   "requirements": [
     [
-      "spawn"
+      "has_polisher"
     ]
   ],
   "sends_telemetry_event": true

@@ -46,8 +46,19 @@ public class SurvivalAdvancementGenerator implements ForgeAdvancementProvider.Ad
                 .addCriterion("has_item", hasItems(EPItems.BRASS_INGOT.get()))
                 .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "abrassive_heat"), existingFileHelper);
 
-        Advancement mighty_bronze = Advancement.Builder.advancement()
+        Advancement abrass_your_soul = Advancement.Builder.advancement()
                 .parent(abrassive_heat)
+                .display(challengeDisplayInfo(EPItems.BRASS_CHESTPLATE.get(), "abrass_your_soul"))
+                .addCriterion("has_helmet", hasItems(EPItems.BRASS_HELMET.get()))
+                .addCriterion("has_chestplate", hasItems(EPItems.BRASS_CHESTPLATE.get()))
+                .addCriterion("has_leggings", hasItems(EPItems.BRASS_LEGGINGS.get()))
+                .addCriterion("has_boots", hasItems(EPItems.BRASS_BOOTS.get()))
+                .rewards(AdvancementRewards.Builder.loot(advancementReward("abrass_your_soul")))
+                .requirements(RequirementsStrategy.AND)
+                .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "abrass_your_soul"), existingFileHelper);
+
+        Advancement mighty_bronze = Advancement.Builder.advancement()
+                .parent(thats_new)
                 .display(taskDisplayInfo(EPItems.BRONZE_PICKAXE.get(), "mighty_bronze"))
                 .addCriterion("has_item", hasItems(EPItems.BRONZE_PICKAXE.get()))
                 .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "mighty_bronze"), existingFileHelper);
@@ -57,6 +68,12 @@ public class SurvivalAdvancementGenerator implements ForgeAdvancementProvider.Ad
                 .display(taskDisplayInfo(EPItems.STEEL_INGOT.get(), "steel_isnt_enough"))
                 .addCriterion("has_item", hasItems(EPItems.STEEL_INGOT.get()))
                 .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "steel_isnt_enough"), existingFileHelper);
+
+        Advancement the_aluminated = Advancement.Builder.advancement()
+                .parent(steel_isnt_enough)
+                .display(taskDisplayInfo(EPItems.ALUMINUM_INGOT.get(), "the_aluminated"))
+                .addCriterion("has_aluminum_ingot", hasItems(EPItems.ALUMINUM_INGOT.get()))
+                .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "the_aluminated"), existingFileHelper);
 
         //Gold path
         Advancement blossom = Advancement.Builder.advancement()
@@ -84,6 +101,7 @@ public class SurvivalAdvancementGenerator implements ForgeAdvancementProvider.Ad
                 .addCriterion("has_green_gold_ingot", InventoryChangeTrigger.TriggerInstance.hasItems(EPItems.GREEN_GOLD_INGOT.get()))
                 .addCriterion("has_blue_gold_ingot", InventoryChangeTrigger.TriggerInstance.hasItems(EPItems.BLUE_GOLD_INGOT.get()))
                 .rewards(AdvancementRewards.Builder.experience(100))
+                .rewards(AdvancementRewards.Builder.loot(advancementReward("the_goldenpuff_girls")))
                 .requirements(RequirementsStrategy.AND)
                 .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "the_goldenpuff_girls"), existingFileHelper);
     }

@@ -39,6 +39,10 @@ public interface ICustomAdvancementDisplays {
         return baseDisplayInfo(pIcon, advancementTitle(advancementName), advancementDesc(advancementName), FrameType.TASK);
     }
 
+    default ResourceLocation advancementReward(String pAdvancementName){
+        return new ResourceLocation(EnhancedPlaythrough.MOD_ID, "advancements/" + pAdvancementName);
+    }
+
     default InventoryChangeTrigger.TriggerInstance hasItems(ItemLike... pItems){
         return InventoryChangeTrigger.TriggerInstance.hasItems(pItems);
     }

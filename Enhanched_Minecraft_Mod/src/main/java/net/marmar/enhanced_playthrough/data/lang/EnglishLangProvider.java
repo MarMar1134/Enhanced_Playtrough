@@ -91,18 +91,23 @@ public class EnglishLangProvider extends AbstractLangProvider {
                     "Alloy some gold with cobalt to get blue gold");
             addSurvivalAdvancement( "the_goldenpuff_girls", "The Goldenpuff Girls",
                     "Get the three gold alloys");
+
             addSurvivalAdvancement( "thats_new", "That´s... new",
                     "Get a bronze ingot");
             addSurvivalAdvancement( "abrassive_heat", "Plato, the blacksmith",
                     "Get a brass ingot");
+            addSurvivalAdvancement("abrass_your_soul", "Abrass your soul",
+                    "Get a full brass armor");
             addSurvivalAdvancement("mighty_bronze", "Mighty bronze",
                     "Craft a bronze pickaxe");
             addSurvivalAdvancement( "steel_isnt_enough", "Steel isn´t enough",
                     "Use your alloy furnace to get some steel");
+            addSurvivalAdvancement("the_aluminated", "The aluminated",
+                    "Get an aluminum ingot");
 
             //Gems
             addGemAdvancement("root", "The colors of the world",
-                    "The world is full of colors, and the gems are a great representation of that");
+                    "The world is full of colors, do you want to discover all of them?");
             addGemAdvancement("polish_emerald", "Greedy green",
                     "Get some emeralds and take care of hers");
             addGemAdvancement("polish_sapphire", "Blue storm",
@@ -115,6 +120,16 @@ public class EnglishLangProvider extends AbstractLangProvider {
                     "Get some diamonds and look to the sky");
             addGemAdvancement("get_all_gems", "Chaos everywhere",
                     "Collect all the gems and become the lord of chaos");
+
+            //Flowers
+            addGemAdvancement("first_flower", "The root of all",
+                    "Get your first flower");
+            addGemAdvancement("all_small_flowers", "David",
+                    "Get all the small flowers");
+            addGemAdvancement("all_tall_flowers", "Goliat",
+                    "Get all the tall flowers");
+            addGemAdvancement("all_flowers", "The apothecary diaries",
+                    "Get all the flowers");
 
         //Entities
         addBoatEntity("Boat");
