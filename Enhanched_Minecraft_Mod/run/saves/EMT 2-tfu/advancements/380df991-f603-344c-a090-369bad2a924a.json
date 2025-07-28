@@ -5,12 +5,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:gem_root": {
-    "criteria": {
-      "spawn": "2025-04-23 19:52:20 -0300"
-    },
-    "done": true
-  },
   "minecraft:adventure/adventuring_time": {
     "criteria": {
       "minecraft:taiga": "2025-07-04 16:05:55 -0300",
@@ -177,12 +171,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:polish_emerald": {
-    "criteria": {
-      "has_material": "2025-04-23 23:00:49 -0300"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/coal_block": {
     "criteria": {
       "has_coal": "2025-04-23 23:00:52 -0300"
@@ -213,12 +201,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:polish_sapphire": {
-    "criteria": {
-      "has_material": "2025-04-24 13:49:34 -0300"
-    },
-    "done": true
-  },
   "minecraft:story/obtain_armor": {
     "criteria": {
       "iron_chestplate": "2025-04-24 13:49:41 -0300"
@@ -234,12 +216,6 @@
   "minecraft:recipes/misc/iron_nugget_from_blasting": {
     "criteria": {
       "has_iron_chestplate": "2025-04-24 13:49:41 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:polish_ruby": {
-    "criteria": {
-      "has_material": "2025-04-24 13:52:25 -0300"
     },
     "done": true
   },
@@ -1002,12 +978,6 @@
   "enhanced_playthrough:recipes/tools/diamond_polisher": {
     "criteria": {
       "has_diamond": "2025-04-24 23:23:55 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:polish_diamond": {
-    "criteria": {
-      "has_material": "2025-04-24 23:23:55 -0300"
     },
     "done": true
   },
@@ -2653,12 +2623,6 @@
   "minecraft:adventure/kill_a_mob": {
     "criteria": {
       "minecraft:pillager": "2025-05-17 01:39:30 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:polish_garnet": {
-    "criteria": {
-      "has_material": "2025-05-17 01:40:33 -0300"
     },
     "done": true
   },
@@ -4546,27 +4510,57 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/tin_dust_from_mechanical_grinding": {
-    "criteria": {
-      "TagKey[minecraft:item / enhanced_playthrough:manufacturable/tin]": "2025-07-22 18:11:27 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/tools/green_golden_hoe": {
-    "criteria": {
-      "has_green_gold_ingot": "2025-07-22 18:19:51 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:recipes/misc/copper_nugget_from_campfire_raw_copper": {
     "criteria": {
       "has_raw_copper": "2025-07-22 18:11:21 -0300"
     },
     "done": true
   },
+  "enhanced_playthrough:recipes/tin_dust_from_mechanical_grinding": {
+    "criteria": {
+      "TagKey[minecraft:item / enhanced_playthrough:manufacturable/tin]": "2025-07-22 18:11:27 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/tin_nugget_from_campfire_raw_tin": {
+    "criteria": {
+      "has_raw_tin": "2025-07-22 18:11:27 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tin_dust_from_primal_grinding": {
+    "criteria": {
+      "TagKey[minecraft:item / enhanced_playthrough:manufacturable/tin]": "2025-07-22 18:11:27 -0300"
+    },
+    "done": true
+  },
   "enhanced_playthrough:recipes/lime_dye_from_primal_grinding_succulent": {
     "criteria": {
       "has_succulent": "2025-07-22 18:13:58 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/lime_dye_from_mechanical_grinding_succulent": {
+    "criteria": {
+      "has_succulent": "2025-07-22 18:13:58 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/cyan_dye_from_mechanical_grinding_cold_lyrium": {
+    "criteria": {
+      "has_cold_lyrium": "2025-07-22 18:14:39 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/cyan_dye_from_primal_grinding_cold_lyrium": {
+    "criteria": {
+      "has_cold_lyrium": "2025-07-22 18:14:39 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/tools/green_golden_hoe": {
+    "criteria": {
+      "has_green_gold_ingot": "2025-07-22 18:19:51 -0300"
     },
     "done": true
   },
@@ -4578,9 +4572,9 @@
   },
   "enhanced_playthrough:the_goldenpuff_girls": {
     "criteria": {
-      "has_items": "2025-07-22 18:19:51 -0300"
+      "has_green_gold_ingot": "2025-07-23 14:52:23 -0300"
     },
-    "done": true
+    "done": false
   },
   "enhanced_playthrough:recipes/misc/green_gold_block": {
     "criteria": {
@@ -4600,27 +4594,9 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/misc/tin_nugget_from_campfire_raw_tin": {
-    "criteria": {
-      "has_raw_tin": "2025-07-22 18:11:27 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/cyan_dye_from_mechanical_grinding_cold_lyrium": {
-    "criteria": {
-      "has_cold_lyrium": "2025-07-22 18:14:39 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:recipes/tools/green_golden_polisher": {
     "criteria": {
       "has_green_gold_ingot": "2025-07-22 18:19:51 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/tin_dust_from_primal_grinding": {
-    "criteria": {
-      "TagKey[minecraft:item / enhanced_playthrough:manufacturable/tin]": "2025-07-22 18:11:27 -0300"
     },
     "done": true
   },
@@ -4648,12 +4624,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/lime_dye_from_mechanical_grinding_succulent": {
-    "criteria": {
-      "has_succulent": "2025-07-22 18:13:58 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:recipes/misc/green_gold_ingot_from_block": {
     "criteria": {
       "has_green_gold_ingot": "2025-07-22 18:19:51 -0300"
@@ -4669,12 +4639,6 @@
   "enhanced_playthrough:recipes/misc/green_gold_ingot_from_nuggets": {
     "criteria": {
       "has_green_gold_ingot": "2025-07-22 18:19:51 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/cyan_dye_from_primal_grinding_cold_lyrium": {
-    "criteria": {
-      "has_cold_lyrium": "2025-07-22 18:14:39 -0300"
     },
     "done": true
   },

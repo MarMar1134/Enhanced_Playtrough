@@ -1,4 +1,4 @@
-package net.marmar.enhanced_playthrough.entity.model;
+package net.marmar.enhanced_playthrough.entity;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.minecraft.client.model.geom.ModelLayerLocation;
@@ -34,4 +34,10 @@ public class EPModelLayers {
         //Bandit
         public static final ModelLayerLocation BANDIT_LAYER = new ModelLayerLocation(
                 new ResourceLocation(EnhancedPlaythrough.MOD_ID, "bandit_layer"), "main");
+
+        //Zombie knight
+        public static final ModelLayerLocation ZOMBIE_KNIGHT_LAYER = new ModelLayerLocation(
+                new ResourceLocation(EnhancedPlaythrough.MOD_ID, "zombie_knight_layer"), "main");
+        public static final ModelLayerLocation ZOMBIE_KNIGHT_OUTER_LAYER = new ModelLayerLocation(
+                new ResourceLocation(EnhancedPlaythrough.MOD_ID, "zombie_knight_outer_layer"), "main");
 }

@@ -218,6 +218,9 @@ public class EPItems {
     public static final RegistryObject<Item> BANDIT_SPAWN_EGG = ITEMS.register(
             "bandit_spawn_egg", ()-> new ForgeSpawnEggItem(EPEntityTypes.BANDIT, 1973532,
                     9343891, new Item.Properties()));
+    public static final RegistryObject<Item> ZOMBIE_KNIGHT_SPAWN_EGG = ITEMS.register(
+            "zombie_knight_spawn_egg", () -> new ForgeSpawnEggItem(EPEntityTypes.ZOMBIE_KNIGHT, 0x3b622f,
+                    0xa89d67, new Item.Properties()));
 
     //Signs
         //Walnut

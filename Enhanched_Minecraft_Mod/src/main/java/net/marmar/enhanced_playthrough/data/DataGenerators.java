@@ -68,7 +68,7 @@ public class DataGenerators {
         generator.addProvider(event.includeClient(), new ArgentinianLangProvider(packOutput));
         generator.addProvider(event.includeClient(), new UruguayanLangProvider(packOutput));
         generator.addProvider(event.includeClient(), new ChileanLangProvider(packOutput));
-        generator.addProvider(event.includeClient(), new EcuatorianLangProvider(packOutput));
+        generator.addProvider(event.includeClient(), new EcuadorianLangProvider(packOutput));
         generator.addProvider(event.includeClient(), new SpanishLangProvider(packOutput));
         generator.addProvider(event.includeClient(), new MexicanLangProvider(packOutput));
         generator.addProvider(event.includeClient(), new VenezuelanLangProvider(packOutput));

@@ -93,6 +93,10 @@ public abstract class AbstractLangProvider extends LanguageProvider {
         this.add(EPEntityTypes.BANDIT.get(), name);
     }
 
+    protected void addZombieKnight(String name){
+        this.add(EPEntityTypes.ZOMBIE_KNIGHT.get(), name);
+    }
+
     protected void addThrowableCobbleEntity(String name){
         this.add(EPEntityTypes.THROWABLE_COBBLE.get(), name);
     }

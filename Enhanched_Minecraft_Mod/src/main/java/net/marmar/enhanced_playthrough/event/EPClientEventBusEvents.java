@@ -5,10 +5,12 @@ import net.marmar.enhanced_playthrough.block.EPBlocks;
 import net.marmar.enhanced_playthrough.block.EPBlockEntities;
 import net.marmar.enhanced_playthrough.block.custom.wood.EPWoodTypes;
 import net.marmar.enhanced_playthrough.entity.EPEntityTypes;
-import net.marmar.enhanced_playthrough.entity.model.BanditModel;
-import net.marmar.enhanced_playthrough.entity.model.BanditRenderer;
-import net.marmar.enhanced_playthrough.entity.model.ModBoatRenderer;
-import net.marmar.enhanced_playthrough.entity.model.EPModelLayers;
+import net.marmar.enhanced_playthrough.entity.bandit.model.BanditModel;
+import net.marmar.enhanced_playthrough.entity.bandit.model.BanditRenderer;
+import net.marmar.enhanced_playthrough.entity.boat.model.ModBoatRenderer;
+import net.marmar.enhanced_playthrough.entity.EPModelLayers;
+import net.marmar.enhanced_playthrough.entity.zombieknight.model.ZombieKnightModel;
+import net.marmar.enhanced_playthrough.entity.zombieknight.model.ZombieKnightRenderer;
 import net.marmar.enhanced_playthrough.menu.EPMenuTypes;
 import net.marmar.enhanced_playthrough.menu.screen.alloyfurnace.AdobeAlloyFurnaceScreen;
 import net.marmar.enhanced_playthrough.menu.screen.alloyfurnace.SoulAlloyScreen;
@@ -20,8 +22,7 @@ import net.marmar.enhanced_playthrough.menu.screen.grinder.MechanicalGrinderScre
 import net.marmar.enhanced_playthrough.menu.screen.grinder.PrimalGrinderScreen;
 import net.marmar.enhanced_playthrough.menu.screen.modfurnace.MasonryFurnaceScreen;
 import net.minecraft.client.gui.screens.MenuScreens;
-import net.minecraft.client.model.BoatModel;
-import net.minecraft.client.model.ChestBoatModel;
+import net.minecraft.client.model.*;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.blockentity.HangingSignRenderer;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
@@ -41,6 +42,7 @@ public class EPClientEventBusEvents {
     public static void subscribeEntityRenderers(FMLClientSetupEvent event){
         //Mobs
         EntityRenderers.register(EPEntityTypes.BANDIT.get(), BanditRenderer::new);
+        EntityRenderers.register(EPEntityTypes.ZOMBIE_KNIGHT.get(), ZombieKnightRenderer::new);
 
         //Boats
         EntityRenderers.register(EPEntityTypes.MOD_BOAT.get(), context -> new ModBoatRenderer(context, false));
@@ -58,6 +60,9 @@ public class EPClientEventBusEvents {
     public static void subscribeLayerRenderers(EntityRenderersEvent.RegisterLayerDefinitions event){
         //Mobs
         event.registerLayerDefinition(EPModelLayers.BANDIT_LAYER, BanditModel::createBodyLayer);
+
+        event.registerLayerDefinition(EPModelLayers.ZOMBIE_KNIGHT_LAYER, ZombieKnightModel::createBodyLayer);
+        event.registerLayerDefinition(EPModelLayers.ZOMBIE_KNIGHT_OUTER_LAYER, ZombieKnightModel::createBodyLayer);
 
         //Boats
             //Walnut

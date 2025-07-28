@@ -1,4 +1,4 @@
-package net.marmar.enhanced_playthrough.entity;
+package net.marmar.enhanced_playthrough.entity.villager;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.block.EPBlocks;

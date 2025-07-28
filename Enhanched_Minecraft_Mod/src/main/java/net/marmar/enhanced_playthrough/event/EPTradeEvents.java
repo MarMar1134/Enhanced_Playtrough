@@ -4,7 +4,7 @@ import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.block.EPBlocks;
 import net.marmar.enhanced_playthrough.util.enchantment.EPEnchantments;
 import net.marmar.enhanced_playthrough.item.EPItems;
-import net.marmar.enhanced_playthrough.entity.EPVillagerProfessions;
+import net.marmar.enhanced_playthrough.entity.villager.EPVillagerProfessions;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.npc.VillagerProfession;

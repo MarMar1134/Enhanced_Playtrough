@@ -1,4 +1,4 @@
-// 1.20.1	2025-07-20T22:41:36.8821563	Registries
+// 1.20.1	2025-07-24T23:02:15.0564079	Registries
 8b28ced078dc0118761e41c6c9f4b774acac6efe data/enhanced_playthrough/damage_type/bleed.json
 24b4da82c0e71ccaef67137d0439066296b1954c data/enhanced_playthrough/damage_type/cobble.json
 893ef0dc6c8580a572e986ddbcf05e3399651832 data/enhanced_playthrough/damage_type/tall_reed.json
@@ -45,6 +45,7 @@ bb9a667c14950b0e41354e3855bf5f6b58089e91 data/enhanced_playthrough/forge/biome_m
 9d918eb61a8bc6acd30824977f6c959882786212 data/enhanced_playthrough/forge/biome_modifier/add_wild_corn.json
 077963656ca8302c0ede0017fb466bfd0799b047 data/enhanced_playthrough/forge/biome_modifier/add_wild_tomato.json
 20b34ce51ff45546e7a64c500de216f1b47e31ed data/enhanced_playthrough/forge/biome_modifier/add_wild_wheat.json
+8f3d0166f7847c1111542d377959ca0a95e2d116 data/enhanced_playthrough/forge/biome_modifier/add_zombie_knight_spawns.json
 ee2cf70e6839b1e542ff1b08b72950fd9ef5f250 data/enhanced_playthrough/worldgen/configured_feature/apple_trees.json
 38a23312edf8170f97f6de46d067cba3b619b575 data/enhanced_playthrough/worldgen/configured_feature/badlands_silver_ores.json
 2b6bdfcace58568f62df497c4739f584790595ef data/enhanced_playthrough/worldgen/configured_feature/bauxite_ores.json

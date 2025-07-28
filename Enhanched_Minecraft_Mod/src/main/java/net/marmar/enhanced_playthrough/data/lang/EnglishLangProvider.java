@@ -748,5 +748,8 @@ public class EnglishLangProvider extends AbstractLangProvider {
             //Mobs
             addBandit("Bandit");
             addItem(EPItems.BANDIT_SPAWN_EGG, "Spawn bandit");
+
+            addZombieKnight("Zombie knight");
+            addItem(EPItems.ZOMBIE_KNIGHT_SPAWN_EGG, "Spawn zombie knight");
     }
 }

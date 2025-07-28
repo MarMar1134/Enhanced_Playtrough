@@ -347,6 +347,7 @@ public class EPItemModelProvider extends ItemModelProvider {
 
         //Spawn eggs
         spawnEggItem(EPItems.BANDIT_SPAWN_EGG);
+        spawnEggItem(EPItems.ZOMBIE_KNIGHT_SPAWN_EGG);
 
         //Armors and tools
             //Other tools

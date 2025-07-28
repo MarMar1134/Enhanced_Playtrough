@@ -8,13 +8,20 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-public class EPSounds {
+public class EPSoundEvents {
     public static final DeferredRegister<SoundEvent> SOUND_EVENTS = DeferredRegister.create(
             ForgeRegistries.SOUND_EVENTS, EnhancedPlaythrough.MOD_ID);
 
-    public static final RegistryObject<SoundEvent> GRIND_SOUND = registerSoundEvent("grind_sound");
+    //Blocks
+    public static final RegistryObject<SoundEvent> GRIND_SOUND = registerSoundEvents("grind_sound");
 
-    private static RegistryObject<SoundEvent> registerSoundEvent(String sound_name){
+    //Zombie knight
+    public static final RegistryObject<SoundEvent> ZOMBIE_KNIGHT_AMBIENT = registerSoundEvents("zombie_knight_ambient");
+    public static final RegistryObject<SoundEvent> ZOMBIE_KNIGHT_STEP = registerSoundEvents("zombie_knight_step");
+    public static final RegistryObject<SoundEvent> ZOMBIE_KNIGHT_HURT = registerSoundEvents("zombie_knight_hurt");
+    public static final RegistryObject<SoundEvent> ZOMBIE_KNIGHT_DEATH = registerSoundEvents("zombie_knight_death");
+
+    private static RegistryObject<SoundEvent> registerSoundEvents(String sound_name){
       return SOUND_EVENTS.register(sound_name, () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(EnhancedPlaythrough.MOD_ID, sound_name)));
     }
 

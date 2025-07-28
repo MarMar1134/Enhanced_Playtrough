@@ -1,5 +1,6 @@
-package net.marmar.enhanced_playthrough.entity;
+package net.marmar.enhanced_playthrough.entity.cobble;
 
+import net.marmar.enhanced_playthrough.entity.EPEntityTypes;
 import net.marmar.enhanced_playthrough.util.damage.EPDamageSources;
 import net.marmar.enhanced_playthrough.item.EPItems;
 import net.minecraft.core.particles.ItemParticleOption;

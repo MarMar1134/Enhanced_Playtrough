@@ -1,8 +1,9 @@
-package net.marmar.enhanced_playthrough.entity.model;
+package net.marmar.enhanced_playthrough.entity.bandit.model;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
-import net.marmar.enhanced_playthrough.entity.Bandit;
+import net.marmar.enhanced_playthrough.entity.bandit.Bandit;
+import net.marmar.enhanced_playthrough.entity.EPModelLayers;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.MobRenderer;

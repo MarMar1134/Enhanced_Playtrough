@@ -6,8 +6,8 @@ import net.marmar.enhanced_playthrough.util.enchantment.EPEnchantments;
 import net.marmar.enhanced_playthrough.item.EPItems;
 import net.minecraft.data.PackOutput;
 
-public class EcuatorianLangProvider extends AbstractLangProvider {
-    public EcuatorianLangProvider(PackOutput output) {
+public class EcuadorianLangProvider extends AbstractLangProvider {
+    public EcuadorianLangProvider(PackOutput output) {
         super(output, "es_ec");
     }
 
@@ -749,5 +749,8 @@ public class EcuatorianLangProvider extends AbstractLangProvider {
             //Mobs
             addBandit("Ladrón");
             addItem(EPItems.BANDIT_SPAWN_EGG, "Generar ladrón");
+
+            addZombieKnight("Zombi caballero");
+            addItem(EPItems.ZOMBIE_KNIGHT_SPAWN_EGG, "Generar zombi caballero");
     }
 }

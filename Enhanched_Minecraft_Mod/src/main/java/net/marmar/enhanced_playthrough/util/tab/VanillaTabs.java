@@ -46,6 +46,8 @@ public class VanillaTabs {
         if (event.getTabKey().equals(CreativeModeTabs.SPAWN_EGGS)){
             event.getEntries().putAfter(Items.PILLAGER_SPAWN_EGG.getDefaultInstance(), EPItems.BANDIT_SPAWN_EGG.get().getDefaultInstance(),
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(Items.ZOMBIE_SPAWN_EGG.getDefaultInstance(), EPItems.ZOMBIE_KNIGHT_SPAWN_EGG.get().getDefaultInstance(),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
         }
     }
 }

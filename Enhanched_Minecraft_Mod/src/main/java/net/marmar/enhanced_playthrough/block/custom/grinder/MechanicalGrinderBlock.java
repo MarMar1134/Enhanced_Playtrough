@@ -2,7 +2,7 @@ package net.marmar.enhanced_playthrough.block.custom.grinder;
 
 import net.marmar.enhanced_playthrough.block.custom.grinder.entity.MechanicalGrinderBlockEntity;
 import net.marmar.enhanced_playthrough.block.EPBlockEntities;
-import net.marmar.enhanced_playthrough.util.EPSounds;
+import net.marmar.enhanced_playthrough.util.EPSoundEvents;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
@@ -97,7 +97,7 @@ public class MechanicalGrinderBlock extends BaseEntityBlock implements EntityBlo
             double Z_position = (double)pPos.getZ() + 0.5;
 
             if (pRandom.nextDouble() < 0.1) {
-                pLevel.playLocalSound(X_position, Y_position, Z_position, EPSounds.GRIND_SOUND.get(), SoundSource.BLOCKS, 0.5F, 1.0F, false);
+                pLevel.playLocalSound(X_position, Y_position, Z_position, EPSoundEvents.GRIND_SOUND.get(), SoundSource.BLOCKS, 0.5F, 1.0F, false);
             }
 
             pLevel.addParticle(ParticleTypes.SMOKE, X_position, Y_position, Z_position, 0.0F, 0.0F, 0.0F);

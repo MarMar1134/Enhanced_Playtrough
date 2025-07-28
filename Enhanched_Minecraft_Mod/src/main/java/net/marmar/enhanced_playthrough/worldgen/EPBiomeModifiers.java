@@ -2,6 +2,7 @@ package net.marmar.enhanced_playthrough.worldgen;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.data.tag.EPTags;
+import net.marmar.enhanced_playthrough.entity.EPEntityTypes;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
@@ -9,10 +10,13 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BiomeTags;
 import net.minecraft.world.level.biome.Biomes;
+import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraftforge.common.world.BiomeModifier;
 import net.minecraftforge.common.world.ForgeBiomeModifiers;
 import net.minecraftforge.registries.ForgeRegistries;
+
+import java.util.List;
 
 public class EPBiomeModifiers {
     //Trees
@@ -81,6 +85,9 @@ public class EPBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_NETHER_GARNET_ORES = registerKey("add_nether_garnet_ores");
 
     public static final ResourceKey<BiomeModifier> ADD_COBALT_ORES = registerKey("add_cobalt_ores");
+
+    //Mobs
+    public static final ResourceKey<BiomeModifier> ADD_ZOMBIE_KNIGHT_SPAWNS = registerKey("add_zombie_knight_spawns");
 
     public static void bootstrap(BootstapContext<BiomeModifier> context) {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
@@ -309,6 +316,11 @@ public class EPBiomeModifiers {
                 biomes.getOrThrow(EPTags.Biomes.DESERT_BIOMES),
                 HolderSet.direct(placedFeatures.getOrThrow(EPPlacedFeatures.SUCCULENT_PLACED)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
+
+        //Mobs
+        context.register(ADD_ZOMBIE_KNIGHT_SPAWNS, new ForgeBiomeModifiers.AddSpawnsBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
+                List.of(new MobSpawnSettings.SpawnerData(EPEntityTypes.ZOMBIE_KNIGHT.get(), 30, 1, 4))));
     }
 
     private static ResourceKey<BiomeModifier> registerKey(String name) {

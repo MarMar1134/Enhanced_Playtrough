@@ -1,4 +1,4 @@
-package net.marmar.enhanced_playthrough.entity.animation;
+package net.marmar.enhanced_playthrough.entity.bandit.anim;
 
 import net.minecraft.client.animation.AnimationChannel;
 import net.minecraft.client.animation.AnimationDefinition;

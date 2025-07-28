@@ -748,5 +748,8 @@ public class ArgentinianLangProvider extends AbstractLangProvider {
             //Mobs
             addBandit("Chorro");
             addItem(EPItems.BANDIT_SPAWN_EGG, "Generar chorro");
+
+            addZombieKnight("Zombi caballero");
+            addItem(EPItems.ZOMBIE_KNIGHT_SPAWN_EGG, "Generar zombi caballero");
     }
 }

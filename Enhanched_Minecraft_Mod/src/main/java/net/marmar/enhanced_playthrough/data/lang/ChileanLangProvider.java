@@ -748,5 +748,8 @@ public class ChileanLangProvider extends AbstractLangProvider {
             //Mobs
             addBandit("Ladrón");
             addItem(EPItems.BANDIT_SPAWN_EGG, "Generar ladrón");
+
+            addZombieKnight("Zombi caballero");
+            addItem(EPItems.ZOMBIE_KNIGHT_SPAWN_EGG, "Generar zombi caballero");
     }
 }

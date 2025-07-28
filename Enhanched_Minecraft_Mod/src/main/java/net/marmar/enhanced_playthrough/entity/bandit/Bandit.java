@@ -1,4 +1,4 @@
-package net.marmar.enhanced_playthrough.entity;
+package net.marmar.enhanced_playthrough.entity.bandit;
 
 import com.google.common.collect.Maps;
 import net.marmar.enhanced_playthrough.util.enchantment.EPEnchantments;

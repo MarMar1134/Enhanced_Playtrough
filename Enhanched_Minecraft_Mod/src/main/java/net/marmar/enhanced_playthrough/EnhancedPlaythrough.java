@@ -11,8 +11,8 @@ import net.marmar.enhanced_playthrough.util.tab.EPTabs;
 import net.marmar.enhanced_playthrough.data.loot.EPLootModifiers;
 import net.marmar.enhanced_playthrough.recipe.EPRecipes;
 import net.marmar.enhanced_playthrough.menu.EPMenuTypes;
-import net.marmar.enhanced_playthrough.entity.EPVillagerProfessions;
-import net.marmar.enhanced_playthrough.util.EPSounds;
+import net.marmar.enhanced_playthrough.entity.villager.EPVillagerProfessions;
+import net.marmar.enhanced_playthrough.util.EPSoundEvents;
 import net.marmar.enhanced_playthrough.worldgen.feature.EPFeatures;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -36,7 +36,7 @@ public class EnhancedPlaythrough
         EPBlocks.Register(modEventBus);
         EPBlockEntities.register(modEventBus);
 
-        EPSounds.register(modEventBus);
+        EPSoundEvents.register(modEventBus);
 
         EPMenuTypes.register(modEventBus);
         EPRecipes.register(modEventBus);

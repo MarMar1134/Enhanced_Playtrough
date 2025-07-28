@@ -1,9 +1,9 @@
-package net.marmar.enhanced_playthrough.entity.model;
+package net.marmar.enhanced_playthrough.entity.bandit.model;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import net.marmar.enhanced_playthrough.entity.Bandit;
-import net.marmar.enhanced_playthrough.entity.animation.BanditAnimations;
+import net.marmar.enhanced_playthrough.entity.bandit.Bandit;
+import net.marmar.enhanced_playthrough.entity.bandit.anim.BanditAnimations;
 import net.minecraft.client.model.*;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;

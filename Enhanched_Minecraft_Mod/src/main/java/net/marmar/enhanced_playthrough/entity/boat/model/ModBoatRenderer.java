@@ -1,4 +1,4 @@
-package net.marmar.enhanced_playthrough.entity.model;
+package net.marmar.enhanced_playthrough.entity.boat.model;
 
 import com.google.common.collect.ImmutableMap;
 import com.mojang.datafixers.util.Pair;

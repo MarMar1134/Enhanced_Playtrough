@@ -39,8 +39,8 @@ java.lang.IllegalArgumentException: Failed to create model for enhanced_playthro
 Caused by: java.lang.IllegalArgumentException: No model for layer enhanced_playthrough:boat/walnut#main
 	at net.minecraft.client.model.geom.EntityModelSet.bakeLayer(EntityModelSet.java:17) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar:?] {re:classloading,pl:runtimedistcleaner:A}
 	at net.minecraft.client.renderer.entity.EntityRendererProvider$Context.bakeLayer(EntityRendererProvider.java:63) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar:?] {re:classloading,pl:runtimedistcleaner:A}
-	at net.marmar.enhanced_playthrough.entity.model.ModBoatRenderer.createBoatModel(ModBoatRenderer.java:37) ~[main/:?] {re:classloading}
-	at net.marmar.enhanced_playthrough.entity.model.ModBoatRenderer.lambda$new$1(ModBoatRenderer.java:28) ~[main/:?] {re:classloading}
+	at net.marmar.enhanced_playthrough.entity.boat.model.ModBoatRenderer.createBoatModel(ModBoatRenderer.java:37) ~[main/:?] {re:classloading}
+	at net.marmar.enhanced_playthrough.entity.boat.model.ModBoatRenderer.lambda$new$1(ModBoatRenderer.java:28) ~[main/:?] {re:classloading}
 	at com.google.common.collect.CollectCollectors.lambda$toImmutableMap$6(CollectCollectors.java:185) ~[guava-31.1-jre.jar:?] {}
 	at java.util.stream.ReduceOps$3ReducingSink.accept(ReduceOps.java:169) ~[?:?] {}
 	at java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992) ~[?:?] {}
@@ -49,7 +49,7 @@ Caused by: java.lang.IllegalArgumentException: No model for layer enhanced_playt
 	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921) ~[?:?] {}
 	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[?:?] {}
 	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682) ~[?:?] {}
-	at net.marmar.enhanced_playthrough.entity.model.ModBoatRenderer.<init>(ModBoatRenderer.java:27) ~[main/:?] {re:classloading}
+	at net.marmar.enhanced_playthrough.entity.boat.model.ModBoatRenderer.<init>(ModBoatRenderer.java:27) ~[main/:?] {re:classloading}
 	at net.marmar.enhanced_playthrough.EnhancedPlaythrough$ClientModEvents.lambda$onClientSetup$0(EnhancedPlaythrough.java:84) ~[main/:?] {re:classloading}
 	at net.minecraft.client.renderer.entity.EntityRenderers.lambda$createEntityRenderers$26(EntityRenderers.java:162) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
 	... 30 more
@@ -62,7 +62,7 @@ A detailed walkthrough of the error, its code path and all known details is as f
 Thread: Render thread
 Suspected Mod: 
 	Enhanced Playthrough (enhanced_playthrough), Version: 1.20.1-beta-0.18.0
-		at TRANSFORMER/enhanced_playthrough@1.20.1-beta-0.18.0/net.marmar.enhanced_playthrough.entity.model.ModBoatRenderer.createBoatModel(ModBoatRenderer.java:37)
+		at TRANSFORMER/enhanced_playthrough@1.20.1-beta-0.18.0/net.marmar.enhanced_playthrough.entity.boat.model.ModBoatRenderer.createBoatModel(ModBoatRenderer.java:37)
 Stacktrace:
 	at net.minecraft.client.renderer.entity.EntityRenderers.lambda$createEntityRenderers$26(EntityRenderers.java:164) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.06.26-1.20.1.jar%23191!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
 	at java.util.HashMap.forEach(HashMap.java:1421) ~[?:?] {}
