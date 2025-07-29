@@ -64,6 +64,18 @@ public class EnglishLangProvider extends AbstractLangProvider {
         //Sounds
         addSoundDescription("grind", "Active grinder");
 
+        //Zombie knight
+        addSoundDescription("zombie_knight_ambient", "Zombie knight aching");
+        addSoundDescription("zombie_knight_step", "Zombie knight walking");
+        addSoundDescription("zombie_knight_hurt", "Zombie knight being hurt");
+        addSoundDescription("zombie_knight_death", "Zombie knight dying");
+
+        //Skeleton bowmaster
+        addSoundDescription("skeleton_bowmaster_ambient", "Skeleton bowmaster squeaking his bones");
+        addSoundDescription("skeleton_bowmaster_step", "Skeleton bowmaster walking");
+        addSoundDescription("skeleton_bowmaster_hurt", "Skeleton bowmaster being hurt");
+        addSoundDescription("skeleton_bowmaster_death", "Skeleton bowmaster dying");
+
         //Death messages
         addDeathMessages("tallReed", "was poked to death by a giant reed",
                 "was poked to death by a giant reed whilst trying to escape");
@@ -135,6 +147,7 @@ public class EnglishLangProvider extends AbstractLangProvider {
         addBoatEntity("Boat");
         addChestBoatEntity("Boat with chest");
         addThrowableCobbleEntity("Cobble");
+        addAluminumArrowEntity("Aluminum arrow");
 
         //Blocks
             //Wild crops
@@ -751,5 +764,8 @@ public class EnglishLangProvider extends AbstractLangProvider {
 
             addZombieKnight("Zombie knight");
             addItem(EPItems.ZOMBIE_KNIGHT_SPAWN_EGG, "Spawn zombie knight");
+
+            addSkeletonBowmaster("Skeleton bowmaster");
+            addItem(EPItems.SKELETON_BOWMASTER_SPAWN_EGG, "Spawn skeleton bowmaster");
     }
 }

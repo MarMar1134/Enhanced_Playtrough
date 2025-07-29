@@ -4,6 +4,7 @@ import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.BiomeTagsProvider;
+import net.minecraft.tags.BiomeTags;
 import net.minecraft.world.level.biome.Biomes;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
@@ -56,6 +57,17 @@ public class EPBiomeTagGenerator extends BiomeTagsProvider {
                 Biomes.BADLANDS
         );
 
+        this.tag(EPTags.Biomes.FROZEN_BIOMES).add(
+                Biomes.FROZEN_RIVER,
+                Biomes.FROZEN_PEAKS,
+                Biomes.FROZEN_OCEAN,
+                Biomes.DEEP_FROZEN_OCEAN,
+                Biomes.SNOWY_BEACH,
+                Biomes.SNOWY_PLAINS,
+                Biomes.SNOWY_SLOPES,
+                Biomes.SNOWY_TAIGA
+        );
+
         this.tag(EPTags.Biomes.TEMPLATE_BIOMES).add(
                 Biomes.PLAINS,
                 Biomes.SUNFLOWER_PLAINS,
@@ -80,6 +92,21 @@ public class EPBiomeTagGenerator extends BiomeTagsProvider {
                 Biomes.BAMBOO_JUNGLE,
                 Biomes.SPARSE_JUNGLE,
                 Biomes.LUSH_CAVES
+        );
+
+        this.tag(EPTags.Biomes.CAN_SPAWN_ZOMBIE_KNIGHT).addTags(
+                BiomeTags.IS_FOREST, BiomeTags.IS_BEACH,
+                BiomeTags.IS_JUNGLE, BiomeTags.IS_MOUNTAIN,
+                BiomeTags.IS_TAIGA, BiomeTags.IS_SAVANNA,
+                BiomeTags.IS_OCEAN, BiomeTags.IS_RIVER
+        );
+
+        this.tag(EPTags.Biomes.CAN_SPAWN_SKELETON_BOWMASTER).addTags(
+                EPTags.Biomes.TEMPLATE_BIOMES, EPTags.Biomes.WARM_BIOMES
+        ).add(
+                Biomes.TAIGA, Biomes.OLD_GROWTH_SPRUCE_TAIGA, Biomes.OLD_GROWTH_PINE_TAIGA,
+                Biomes.JAGGED_PEAKS,Biomes.COLD_OCEAN, Biomes.DEEP_COLD_OCEAN,
+                Biomes.WINDSWEPT_GRAVELLY_HILLS, Biomes.WINDSWEPT_HILLS, Biomes.WINDSWEPT_FOREST
         );
     }
 }

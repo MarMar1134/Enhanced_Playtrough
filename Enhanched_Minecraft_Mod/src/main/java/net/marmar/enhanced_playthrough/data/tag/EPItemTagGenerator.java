@@ -32,6 +32,10 @@ public class EPItemTagGenerator extends ItemTagsProvider {
 
         addManufacturableTags();
 
+        this.tag(ItemTags.ARROWS).add(
+                EPItems.ALUMINUM_ARROW.get()
+        );
+
         this.tag(ItemTags.LOGS_THAT_BURN).add(
                 //Walnut
                 EPBlocks.WALNUT_LOG.get().asItem(),

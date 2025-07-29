@@ -1,6 +1,6 @@
 package net.marmar.enhanced_playthrough.item.custom;
 
-import net.marmar.enhanced_playthrough.entity.cobble.CobbleProjectileEntity;
+import net.marmar.enhanced_playthrough.entity.projectile.CobbleProjectileEntity;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;

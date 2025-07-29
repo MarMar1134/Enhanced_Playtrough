@@ -3,6 +3,7 @@ package net.marmar.enhanced_playthrough.data.lang;
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.data.advancement.AdvancementCategory;
 import net.marmar.enhanced_playthrough.entity.EPEntityTypes;
+import net.marmar.enhanced_playthrough.item.EPItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.common.data.LanguageProvider;
@@ -97,8 +98,17 @@ public abstract class AbstractLangProvider extends LanguageProvider {
         this.add(EPEntityTypes.ZOMBIE_KNIGHT.get(), name);
     }
 
+    protected void addSkeletonBowmaster(String name){
+        this.add(EPEntityTypes.SKELETON_BOWMASTER.get(), name);
+    }
+
     protected void addThrowableCobbleEntity(String name){
         this.add(EPEntityTypes.THROWABLE_COBBLE.get(), name);
+    }
+
+    protected void addAluminumArrowEntity(String name){
+        this.add(EPEntityTypes.ALUMINUM_ARROW.get(), name);
+        this.addItem(EPItems.ALUMINUM_ARROW, name);
     }
 
     private void addPotion(String potionName, String potionType, String translation){

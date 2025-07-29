@@ -140,12 +140,17 @@ public class EPTags {
 
         //Biomes by characteristics
         public static final TagKey<Biome> DESERT_BIOMES = biomeTag("desert_biomes");
+        public static final TagKey<Biome> FROZEN_BIOMES = biomeTag("frozen_biomes");
 
         //Biomes with structures
         public static final TagKey<Biome> JEWELER_HOUSE = structureTag("jeweler_house");
 
         //Biomes with extra ores
         public static final TagKey<Biome> HUMIDITY_BIOMES = biomeTag("humidity_biomes");
+
+        //Biomes that can hold specific mobs
+        public static final TagKey<Biome> CAN_SPAWN_ZOMBIE_KNIGHT = biomeTag("can_spawn_zombie_knight");
+        public static final TagKey<Biome> CAN_SPAWN_SKELETON_BOWMASTER = biomeTag("can_spawn_skeleton_bowmaster");
 
         private static TagKey<Biome> biomeTag(String name){
             return TagKey.create(Registries.BIOME, new ResourceLocation(EnhancedPlaythrough.MOD_ID, name));

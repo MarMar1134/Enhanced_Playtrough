@@ -1,6 +1,9 @@
-// 1.20.1	2025-07-17T17:06:08.2494248	Tags for minecraft:worldgen/biome mod id enhanced_playthrough
+// 1.20.1	2025-07-29T18:21:24.6592807	Tags for minecraft:worldgen/biome mod id enhanced_playthrough
+2d03ca1191e1f646785be6da2666700e3bfcca1b data/enhanced_playthrough/tags/worldgen/biome/can_spawn_skeleton_bowmaster.json
+3708354e916fcfcec7aed0886bf63c8298346016 data/enhanced_playthrough/tags/worldgen/biome/can_spawn_zombie_knight.json
 293983aa9a5aa32dd31798ea5c064e439f1f1f32 data/enhanced_playthrough/tags/worldgen/biome/cold_biomes.json
 a2b8745c0579c4820562492e5b82e2663ec85cc0 data/enhanced_playthrough/tags/worldgen/biome/desert_biomes.json
+69cb9ad1aeca52db7b0c2c50f3f4f664810b4806 data/enhanced_playthrough/tags/worldgen/biome/frozen_biomes.json
 becbb3e6d736ab8feb41683bc5afacce936c4825 data/enhanced_playthrough/tags/worldgen/biome/has_structure/jeweler_house.json
 e6b0bc517a6f95b80c6f2d7cc49633cf91e7bcdd data/enhanced_playthrough/tags/worldgen/biome/humidity_biomes.json
 10d9324a744bfe48826603f6cf875621e03a2744 data/enhanced_playthrough/tags/worldgen/biome/template_biomes.json

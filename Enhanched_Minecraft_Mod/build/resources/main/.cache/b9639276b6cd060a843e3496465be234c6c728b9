@@ -1,4 +1,4 @@
-// 1.20.1	2025-07-21T16:00:47.9748452	Tags for minecraft:item mod id enhanced_playthrough
+// 1.20.1	2025-07-28T00:13:30.4828637	Tags for minecraft:item mod id enhanced_playthrough
 0ff3092eb36a0159ae287d2f429e5f5eb6fb0c0a data/enhanced_playthrough/tags/items/aluminum.json
 b3b284c126879d981b4f706eb8ea0e63bd17ae12 data/enhanced_playthrough/tags/items/apple_logs.json
 1d609255995a77ead62a005cb2b75886514bb25a data/enhanced_playthrough/tags/items/blue_gold.json
@@ -68,6 +68,7 @@ c7753e2ff6292ba0090b6648ec7f9503bfbd5a4d data/forge/tags/items/ores.json
 03adcf9e1c5624d36188b8f3deb8bd459cb9b98f data/forge/tags/items/raw_materials.json
 876c6e51b4f82186254c20d7fcf5864802e41088 data/forge/tags/items/string.json
 d91bb3390af97661bbeffb2f4850295e19f0f696 data/forge/tags/items/tools.json
+2f479e166c79560e8ab005e7afe3affd36466fb3 data/minecraft/tags/items/arrows.json
 846fafa1105aad614b66576fb00816ef553538e2 data/minecraft/tags/items/beacon_payment_items.json
 83157d251b625cdc1bbf3ccc7134043e5f6f924d data/minecraft/tags/items/hanging_signs.json
 cc7f01de72464bfac0275de5c6aaeeb445bc06d0 data/minecraft/tags/items/logs_that_burn.json

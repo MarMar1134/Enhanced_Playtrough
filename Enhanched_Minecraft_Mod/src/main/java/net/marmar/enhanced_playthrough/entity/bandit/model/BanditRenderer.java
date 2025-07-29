@@ -12,7 +12,7 @@ import net.minecraft.resources.ResourceLocation;
 
 public class BanditRenderer extends MobRenderer<Bandit, BanditModel<Bandit>> {
     public BanditRenderer(EntityRendererProvider.Context pContext) {
-        super(pContext, new BanditModel<>(pContext.bakeLayer(EPModelLayers.BANDIT_LAYER)), 0.5f);
+        super(pContext, new BanditModel<>(pContext.bakeLayer(EPModelLayers.BANDIT)), 0.5f);
         this.addLayer(new ItemInHandLayer<>(this, pContext.getItemInHandRenderer()) {
             public void render(PoseStack poseStack, MultiBufferSource pBuffer, int pPackedLight, Bandit pBandit, float pLimbSwing, float pLimbSwingAmount, float pPartialTicks, float pAgeInTicks, float pHeadJaw, float pHeadPitch) {
                 if (pBandit.isAggressive()) {
@@ -24,7 +24,7 @@ public class BanditRenderer extends MobRenderer<Bandit, BanditModel<Bandit>> {
 
     @Override
     public ResourceLocation getTextureLocation(Bandit bandit) {
-        return new ResourceLocation(EnhancedPlaythrough.MOD_ID, "textures/entity/bandit.png");
+        return new ResourceLocation(EnhancedPlaythrough.MOD_ID, "textures/entity/bandit/bandit.png");
     }
 
     protected void scale(Bandit pBandit, PoseStack pMatrixStack, float pPartialTickTime) {

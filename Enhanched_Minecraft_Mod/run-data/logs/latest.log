@@ -1,57 +1,57 @@
-[27jul.2025 14:53:24.780] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 5, --assetsDir, C:\Users\marma\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.3.0, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mod, enhanced_playthrough, --all, --output, D:\Repositorios GitHub\Enhanced_Playtrough\Enhanched_Minecraft_Mod\src\generated\resources, --existing, D:\Repositorios GitHub\Enhanced_Playtrough\Enhanched_Minecraft_Mod\src\main\resources]
-[27jul.2025 14:53:24.805] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.15 by Eclipse Adoptium; OS Windows 11 arch amd64 version 10.0
-[27jul.2025 14:53:25.042] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
-[27jul.2025 14:53:25.262] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/marma/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
-[27jul.2025 14:53:26.086] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\marma\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.3.0\d7ebc62120f202109e300e084ca1a31a7b946a62\javafmllanguage-1.20.1-47.3.0.jar is missing mods.toml file
-[27jul.2025 14:53:26.100] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\marma\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.3.0\1bf3e845ea0ce750096da8c71c8364b188ab74d4\lowcodelanguage-1.20.1-47.3.0.jar is missing mods.toml file
-[27jul.2025 14:53:26.114] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\marma\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.3.0\6093682e943ddccbabf70539319d7f2fe64db2e7\mclanguage-1.20.1-47.3.0.jar is missing mods.toml file
-[27jul.2025 14:53:26.129] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\marma\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.3.0\3b6be96aba3e323f3c918e8ef6a96312d82d76ad\fmlcore-1.20.1-47.3.0.jar is missing mods.toml file
-[27jul.2025 14:53:26.416] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
-[27jul.2025 14:53:34.720] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, C:\Users\marma\.gradle\caches\forge_gradle\assets, --assetIndex, 5, --mod, enhanced_playthrough, --all, --output, D:\Repositorios GitHub\Enhanced_Playtrough\Enhanched_Minecraft_Mod\src\generated\resources, --existing, D:\Repositorios GitHub\Enhanced_Playtrough\Enhanched_Minecraft_Mod\src\main\resources]
-[27jul.2025 14:53:35.884] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [enhanced_playthrough]
-[27jul.2025 14:53:48.429] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.3.0, for MC 1.20.1 with MCP 20230612.114412
-[27jul.2025 14:53:48.460] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.3.0 Initialized
-[27jul.2025 14:53:50.057] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager...
-[27jul.2025 14:53:50.083] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager took 22.57 ms
-[27jul.2025 14:53:53.852] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/marma/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/assets/.mcassetsroot' uses unexpected schema
-[27jul.2025 14:53:53.852] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/marma/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/data/.mcassetsroot' uses unexpected schema
-[27jul.2025 14:53:54.546] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries
-[27jul.2025 14:53:55.322] [main/INFO] [net.minecraft.data.DataGenerator/]: Registries finished after 774 ms
-[27jul.2025 14:53:55.322] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Advancements
-[27jul.2025 14:53:55.409] [main/INFO] [net.minecraft.data.DataGenerator/]: Advancements finished after 87 ms
-[27jul.2025 14:53:55.409] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
-[27jul.2025 14:53:55.972] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 562 ms
-[27jul.2025 14:53:55.972] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
-[27jul.2025 14:53:56.251] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 278 ms
-[27jul.2025 14:53:56.251] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Global Loot Modifiers : enhanced_playthrough
-[27jul.2025 14:53:56.274] [main/INFO] [net.minecraft.data.DataGenerator/]: Global Loot Modifiers : enhanced_playthrough finished after 22 ms
-[27jul.2025 14:53:56.274] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: enhanced_playthrough
-[27jul.2025 14:53:57.975] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: enhanced_playthrough finished after 1700 ms
-[27jul.2025 14:53:57.977] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: enhanced_playthrough
-[27jul.2025 14:53:59.340] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: enhanced_playthrough finished after 1361 ms
-[27jul.2025 14:53:59.342] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:point_of_interest_type mod id enhanced_playthrough
-[27jul.2025 14:53:59.374] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:point_of_interest_type mod id enhanced_playthrough finished after 30 ms
-[27jul.2025 14:53:59.374] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id enhanced_playthrough
-[27jul.2025 14:53:59.411] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id enhanced_playthrough finished after 36 ms
-[27jul.2025 14:53:59.411] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id enhanced_playthrough
-[27jul.2025 14:53:59.519] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id enhanced_playthrough finished after 108 ms
-[27jul.2025 14:53:59.519] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:worldgen/biome mod id enhanced_playthrough
-[27jul.2025 14:53:59.529] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:worldgen/biome mod id enhanced_playthrough finished after 8 ms
-[27jul.2025 14:53:59.529] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: en_us
-[27jul.2025 14:53:59.557] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: en_us finished after 27 ms
-[27jul.2025 14:53:59.559] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: es_ar
-[27jul.2025 14:53:59.570] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: es_ar finished after 10 ms
-[27jul.2025 14:53:59.570] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: es_uy
-[27jul.2025 14:53:59.586] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: es_uy finished after 15 ms
-[27jul.2025 14:53:59.588] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: es_cl
-[27jul.2025 14:53:59.720] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: es_cl finished after 132 ms
-[27jul.2025 14:53:59.720] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: es_ec
-[27jul.2025 14:53:59.726] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: es_ec finished after 6 ms
-[27jul.2025 14:53:59.726] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: es_es
-[27jul.2025 14:53:59.734] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: es_es finished after 6 ms
-[27jul.2025 14:53:59.734] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: es_mx
-[27jul.2025 14:53:59.740] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: es_mx finished after 5 ms
-[27jul.2025 14:53:59.740] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: es_ve
-[27jul.2025 14:53:59.746] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: es_ve finished after 4 ms
-[27jul.2025 14:53:59.746] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 5200 ms
-[27jul.2025 14:54:00.357] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 3392, old count: 3393, new count: 3393, removed stale: 0, written: 8
+[29jul.2025 20:15:44.450] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 5, --assetsDir, C:\Users\marma\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.3.0, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mod, enhanced_playthrough, --all, --output, D:\Repositorios GitHub\Enhanced_Playtrough\Enhanched_Minecraft_Mod\src\generated\resources, --existing, D:\Repositorios GitHub\Enhanced_Playtrough\Enhanched_Minecraft_Mod\src\main\resources]
+[29jul.2025 20:15:44.497] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.15 by Eclipse Adoptium; OS Windows 11 arch amd64 version 10.0
+[29jul.2025 20:15:44.847] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
+[29jul.2025 20:15:45.049] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/marma/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
+[29jul.2025 20:15:45.777] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\marma\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.3.0\d7ebc62120f202109e300e084ca1a31a7b946a62\javafmllanguage-1.20.1-47.3.0.jar is missing mods.toml file
+[29jul.2025 20:15:45.793] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\marma\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.3.0\1bf3e845ea0ce750096da8c71c8364b188ab74d4\lowcodelanguage-1.20.1-47.3.0.jar is missing mods.toml file
+[29jul.2025 20:15:45.805] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\marma\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.3.0\6093682e943ddccbabf70539319d7f2fe64db2e7\mclanguage-1.20.1-47.3.0.jar is missing mods.toml file
+[29jul.2025 20:15:45.818] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\marma\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.3.0\3b6be96aba3e323f3c918e8ef6a96312d82d76ad\fmlcore-1.20.1-47.3.0.jar is missing mods.toml file
+[29jul.2025 20:15:46.277] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[29jul.2025 20:16:00.278] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, C:\Users\marma\.gradle\caches\forge_gradle\assets, --assetIndex, 5, --mod, enhanced_playthrough, --all, --output, D:\Repositorios GitHub\Enhanced_Playtrough\Enhanched_Minecraft_Mod\src\generated\resources, --existing, D:\Repositorios GitHub\Enhanced_Playtrough\Enhanched_Minecraft_Mod\src\main\resources]
+[29jul.2025 20:16:01.375] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [enhanced_playthrough]
+[29jul.2025 20:16:13.095] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.3.0, for MC 1.20.1 with MCP 20230612.114412
+[29jul.2025 20:16:13.104] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.3.0 Initialized
+[29jul.2025 20:16:14.419] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager...
+[29jul.2025 20:16:14.456] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager took 33.74 ms
+[29jul.2025 20:16:16.046] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/marma/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/assets/.mcassetsroot' uses unexpected schema
+[29jul.2025 20:16:16.046] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/marma/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/data/.mcassetsroot' uses unexpected schema
+[29jul.2025 20:16:16.977] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries
+[29jul.2025 20:16:17.269] [main/INFO] [net.minecraft.data.DataGenerator/]: Registries finished after 291 ms
+[29jul.2025 20:16:17.270] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Advancements
+[29jul.2025 20:16:17.354] [main/INFO] [net.minecraft.data.DataGenerator/]: Advancements finished after 84 ms
+[29jul.2025 20:16:17.355] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
+[29jul.2025 20:16:17.895] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 539 ms
+[29jul.2025 20:16:17.895] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
+[29jul.2025 20:16:18.389] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 494 ms
+[29jul.2025 20:16:18.390] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Global Loot Modifiers : enhanced_playthrough
+[29jul.2025 20:16:18.415] [main/INFO] [net.minecraft.data.DataGenerator/]: Global Loot Modifiers : enhanced_playthrough finished after 25 ms
+[29jul.2025 20:16:18.416] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: enhanced_playthrough
+[29jul.2025 20:16:20.125] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: enhanced_playthrough finished after 1708 ms
+[29jul.2025 20:16:20.125] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: enhanced_playthrough
+[29jul.2025 20:16:21.081] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: enhanced_playthrough finished after 956 ms
+[29jul.2025 20:16:21.081] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:point_of_interest_type mod id enhanced_playthrough
+[29jul.2025 20:16:21.103] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:point_of_interest_type mod id enhanced_playthrough finished after 20 ms
+[29jul.2025 20:16:21.103] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id enhanced_playthrough
+[29jul.2025 20:16:21.131] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id enhanced_playthrough finished after 27 ms
+[29jul.2025 20:16:21.133] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id enhanced_playthrough
+[29jul.2025 20:16:21.182] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id enhanced_playthrough finished after 49 ms
+[29jul.2025 20:16:21.182] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:worldgen/biome mod id enhanced_playthrough
+[29jul.2025 20:16:21.190] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:worldgen/biome mod id enhanced_playthrough finished after 7 ms
+[29jul.2025 20:16:21.191] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: en_us
+[29jul.2025 20:16:21.213] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: en_us finished after 22 ms
+[29jul.2025 20:16:21.213] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: es_ar
+[29jul.2025 20:16:21.221] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: es_ar finished after 8 ms
+[29jul.2025 20:16:21.222] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: es_uy
+[29jul.2025 20:16:21.228] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: es_uy finished after 6 ms
+[29jul.2025 20:16:21.229] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: es_cl
+[29jul.2025 20:16:21.235] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: es_cl finished after 5 ms
+[29jul.2025 20:16:21.236] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: es_ec
+[29jul.2025 20:16:21.240] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: es_ec finished after 4 ms
+[29jul.2025 20:16:21.241] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: es_es
+[29jul.2025 20:16:21.245] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: es_es finished after 4 ms
+[29jul.2025 20:16:21.245] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: es_mx
+[29jul.2025 20:16:21.270] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: es_mx finished after 24 ms
+[29jul.2025 20:16:21.270] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: es_ve
+[29jul.2025 20:16:21.275] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: es_ve finished after 4 ms
+[29jul.2025 20:16:21.275] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 4299 ms
+[29jul.2025 20:16:22.084] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 3405, old count: 3406, new count: 3406, removed stale: 0, written: 4

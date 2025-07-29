@@ -1,4 +1,4 @@
-// 1.20.1	2025-07-23T13:31:59.4231978	Loot Tables
+// 1.20.1	2025-07-29T20:10:42.3371389	Loot Tables
 2876cbc680a836d5ddee2832692d949fb4ef4a08 data/enhanced_playthrough/loot_tables/advancements/abrass_your_soul.json
 6fe69585b6fdef5fe87c9206529ab3f067bd7faf data/enhanced_playthrough/loot_tables/advancements/all_flowers.json
 1eeafbc68a3d12b314210c1a8b6a594e785fda3f data/enhanced_playthrough/loot_tables/advancements/get_all_gems.json
@@ -178,6 +178,8 @@ ddf491056f6d4e8e9b8a1822b6baabc7d14239d8 data/enhanced_playthrough/loot_tables/b
 e570ae25479b2a7561eadfc0a7a596357ce176ae data/enhanced_playthrough/loot_tables/blocks/zinc_block.json
 122180b19996923b1b0aa0d591f037fc10d86130 data/enhanced_playthrough/loot_tables/blocks/zinc_ore.json
 646d93756d9b52b57b5a99d9a9f82b0c9c4723b7 data/enhanced_playthrough/loot_tables/chests/bandit_camp.json
+a9d453282447e434ee5298049e81bfab80c621e1 data/enhanced_playthrough/loot_tables/entities/skeleton_bowmaster.json
+060db65d333a7060a59bad3400cca93b529f8d3c data/enhanced_playthrough/loot_tables/entities/zombie_knight.json
 73f40f8d8b3d4144b1080d57bf5da85adb92aeb1 data/minecraft/loot_tables/blocks/blackstone.json
 1c389726b0e0ba2cc4a10d24a1eeb82439bb3afa data/minecraft/loot_tables/blocks/black_terracotta.json
 234912465135f0d3642009b012fb52ea9d36997c data/minecraft/loot_tables/blocks/blue_terracotta.json

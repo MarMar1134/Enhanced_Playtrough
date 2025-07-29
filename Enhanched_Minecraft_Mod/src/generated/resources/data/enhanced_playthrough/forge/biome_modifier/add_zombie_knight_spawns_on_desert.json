@@ -1,0 +1,10 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#enhanced_playthrough:desert_biomes",
+  "spawners": {
+    "type": "enhanced_playthrough:zombie_knight",
+    "maxCount": 4,
+    "minCount": 2,
+    "weight": 30
+  }
+}

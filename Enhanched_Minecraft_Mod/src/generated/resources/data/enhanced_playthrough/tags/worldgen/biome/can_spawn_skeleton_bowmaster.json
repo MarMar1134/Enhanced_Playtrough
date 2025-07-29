@@ -1,0 +1,15 @@
+{
+  "values": [
+    "#enhanced_playthrough:template_biomes",
+    "#enhanced_playthrough:warm_biomes",
+    "minecraft:taiga",
+    "minecraft:old_growth_spruce_taiga",
+    "minecraft:old_growth_pine_taiga",
+    "minecraft:jagged_peaks",
+    "minecraft:cold_ocean",
+    "minecraft:deep_cold_ocean",
+    "minecraft:windswept_gravelly_hills",
+    "minecraft:windswept_hills",
+    "minecraft:windswept_forest"
+  ]
+}

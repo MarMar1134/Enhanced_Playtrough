@@ -88,6 +88,10 @@ public class EPBiomeModifiers {
 
     //Mobs
     public static final ResourceKey<BiomeModifier> ADD_ZOMBIE_KNIGHT_SPAWNS = registerKey("add_zombie_knight_spawns");
+    public static final ResourceKey<BiomeModifier> ADD_ZOMBIE_KNIGHT_SPAWNS_ON_DESERT = registerKey("add_zombie_knight_spawns_on_desert");
+
+    public static final ResourceKey<BiomeModifier> ADD_SKELETON_BOWMASTER_SPAWNS = registerKey("add_skeleton_bowmaster_spawns");
+    public static final ResourceKey<BiomeModifier> ADD_SKELETON_BOWMASTER_SPAWNS_ON_SNOW = registerKey("add_skeleton_bowmaster_spawns_on_snow");
 
     public static void bootstrap(BootstapContext<BiomeModifier> context) {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
@@ -317,10 +321,23 @@ public class EPBiomeModifiers {
                 HolderSet.direct(placedFeatures.getOrThrow(EPPlacedFeatures.SUCCULENT_PLACED)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
-        //Mobs
+        //Zombie knight
         context.register(ADD_ZOMBIE_KNIGHT_SPAWNS, new ForgeBiomeModifiers.AddSpawnsBiomeModifier(
-                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
-                List.of(new MobSpawnSettings.SpawnerData(EPEntityTypes.ZOMBIE_KNIGHT.get(), 30, 1, 4))));
+                biomes.getOrThrow(EPTags.Biomes.CAN_SPAWN_ZOMBIE_KNIGHT),
+                List.of(new MobSpawnSettings.SpawnerData(EPEntityTypes.ZOMBIE_KNIGHT.get(), 80, 2, 4))));
+
+        context.register(ADD_ZOMBIE_KNIGHT_SPAWNS_ON_DESERT, new ForgeBiomeModifiers.AddSpawnsBiomeModifier(
+                biomes.getOrThrow(EPTags.Biomes.DESERT_BIOMES),
+                List.of(new MobSpawnSettings.SpawnerData(EPEntityTypes.ZOMBIE_KNIGHT.get(), 30, 2, 4))));
+
+        //Skeleton bowmaster
+        context.register(ADD_SKELETON_BOWMASTER_SPAWNS, new ForgeBiomeModifiers.AddSpawnsBiomeModifier(
+                biomes.getOrThrow(EPTags.Biomes.CAN_SPAWN_SKELETON_BOWMASTER),
+                List.of(new MobSpawnSettings.SpawnerData(EPEntityTypes.SKELETON_BOWMASTER.get(), 70, 2, 4))));
+
+        context.register(ADD_SKELETON_BOWMASTER_SPAWNS_ON_SNOW, new ForgeBiomeModifiers.AddSpawnsBiomeModifier(
+                biomes.getOrThrow(EPTags.Biomes.FROZEN_BIOMES),
+                List.of(new MobSpawnSettings.SpawnerData(EPEntityTypes.SKELETON_BOWMASTER.get(), 30, 2, 4))));
     }
 
     private static ResourceKey<BiomeModifier> registerKey(String name) {

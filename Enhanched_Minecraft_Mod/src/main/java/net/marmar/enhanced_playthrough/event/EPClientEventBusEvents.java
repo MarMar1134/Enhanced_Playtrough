@@ -9,7 +9,8 @@ import net.marmar.enhanced_playthrough.entity.bandit.model.BanditModel;
 import net.marmar.enhanced_playthrough.entity.bandit.model.BanditRenderer;
 import net.marmar.enhanced_playthrough.entity.boat.model.ModBoatRenderer;
 import net.marmar.enhanced_playthrough.entity.EPModelLayers;
-import net.marmar.enhanced_playthrough.entity.zombieknight.model.ZombieKnightModel;
+import net.marmar.enhanced_playthrough.entity.projectile.model.AluminumArrowRenderer;
+import net.marmar.enhanced_playthrough.entity.skeletonbowmaster.model.SkeletonBowmasterRenderer;
 import net.marmar.enhanced_playthrough.entity.zombieknight.model.ZombieKnightRenderer;
 import net.marmar.enhanced_playthrough.menu.EPMenuTypes;
 import net.marmar.enhanced_playthrough.menu.screen.alloyfurnace.AdobeAlloyFurnaceScreen;
@@ -23,6 +24,8 @@ import net.marmar.enhanced_playthrough.menu.screen.grinder.PrimalGrinderScreen;
 import net.marmar.enhanced_playthrough.menu.screen.modfurnace.MasonryFurnaceScreen;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.model.*;
+import net.minecraft.client.model.geom.builders.CubeDeformation;
+import net.minecraft.client.model.geom.builders.LayerDefinition;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.blockentity.HangingSignRenderer;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
@@ -38,11 +41,15 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 
 @Mod.EventBusSubscriber(modid = EnhancedPlaythrough.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class EPClientEventBusEvents {
+    public static final CubeDeformation OUTER_ARMOR_DEFORMATION = new CubeDeformation(1.0F);
+    public static final CubeDeformation INNER_ARMOR_DEFORMATION = new CubeDeformation(0.5F);
+
     @SubscribeEvent
     public static void subscribeEntityRenderers(FMLClientSetupEvent event){
         //Mobs
         EntityRenderers.register(EPEntityTypes.BANDIT.get(), BanditRenderer::new);
         EntityRenderers.register(EPEntityTypes.ZOMBIE_KNIGHT.get(), ZombieKnightRenderer::new);
+        EntityRenderers.register(EPEntityTypes.SKELETON_BOWMASTER.get(), SkeletonBowmasterRenderer::new);
 
         //Boats
         EntityRenderers.register(EPEntityTypes.MOD_BOAT.get(), context -> new ModBoatRenderer(context, false));
@@ -51,18 +58,37 @@ public class EPClientEventBusEvents {
         //Cobble
         EntityRenderers.register(EPEntityTypes.THROWABLE_COBBLE.get(), ThrownItemRenderer::new);
 
+        //Aluminum arrow
+        EntityRenderers.register(EPEntityTypes.ALUMINUM_ARROW.get(), AluminumArrowRenderer::new);
+
         //Flower pots
         event.enqueueWork(() -> ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(EPBlocks.COLD_LYRIUM.getId(), EPBlocks.POTTED_COLD_LYRIUM));
         event.enqueueWork(() -> ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(EPBlocks.SUCCULENT.getId(), EPBlocks.POTTED_SUCCULENT));
     }
 
     @SubscribeEvent
-    public static void subscribeLayerRenderers(EntityRenderersEvent.RegisterLayerDefinitions event){
-        //Mobs
-        event.registerLayerDefinition(EPModelLayers.BANDIT_LAYER, BanditModel::createBodyLayer);
+    public static void registerEntityLayerRenderers(EntityRenderersEvent.RegisterLayerDefinitions event){
+        //Bandit
+        event.registerLayerDefinition(EPModelLayers.BANDIT, BanditModel::createBodyLayer);
 
-        event.registerLayerDefinition(EPModelLayers.ZOMBIE_KNIGHT_LAYER, ZombieKnightModel::createBodyLayer);
-        event.registerLayerDefinition(EPModelLayers.ZOMBIE_KNIGHT_OUTER_LAYER, ZombieKnightModel::createBodyLayer);
+        //Zombie knight
+        event.registerLayerDefinition(EPModelLayers.ZOMBIE_KNIGHT, () ->
+                LayerDefinition.create(HumanoidModel.createMesh(CubeDeformation.NONE, 0.0f), 64, 64));
+        event.registerLayerDefinition(EPModelLayers.ZOMBIE_KNIGHT_INNER_ARMOR, () ->
+                LayerDefinition.create(HumanoidArmorModel.createBodyLayer(INNER_ARMOR_DEFORMATION), 64, 32));
+        event.registerLayerDefinition(EPModelLayers.ZOMBIE_KNIGHT_OUTER_ARMOR, () ->
+                LayerDefinition.create(HumanoidArmorModel.createBodyLayer(OUTER_ARMOR_DEFORMATION), 64, 32));
+        event.registerLayerDefinition(EPModelLayers.ZOMBIE_KNIGHT_OUTER, () ->
+                LayerDefinition.create(HumanoidModel.createMesh(new CubeDeformation(0.25f), 0.0f), 64, 64));
+
+        //Skeleton bowmaster
+        event.registerLayerDefinition(EPModelLayers.SKELETON_BOWMASTER, SkeletonModel::createBodyLayer);
+        event.registerLayerDefinition(EPModelLayers.SKELETON_BOWMASTER_INNER_ARMOR, () ->
+                LayerDefinition.create(HumanoidArmorModel.createBodyLayer(INNER_ARMOR_DEFORMATION), 64, 32));
+        event.registerLayerDefinition(EPModelLayers.SKELETON_BOWMASTER_OUTER_ARMOR, () ->
+                LayerDefinition.create(HumanoidArmorModel.createBodyLayer(OUTER_ARMOR_DEFORMATION), 64, 32));
+        event.registerLayerDefinition(EPModelLayers.SKELETON_BOWMASTER_OUTER, () ->
+                LayerDefinition.create(HumanoidModel.createMesh(new CubeDeformation(0.2f), 0.0f), 64, 32));
 
         //Boats
             //Walnut

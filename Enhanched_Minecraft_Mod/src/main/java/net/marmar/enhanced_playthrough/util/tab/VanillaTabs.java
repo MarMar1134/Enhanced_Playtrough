@@ -48,6 +48,8 @@ public class VanillaTabs {
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(Items.ZOMBIE_SPAWN_EGG.getDefaultInstance(), EPItems.ZOMBIE_KNIGHT_SPAWN_EGG.get().getDefaultInstance(),
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(Items.SKELETON_SPAWN_EGG.getDefaultInstance(), EPItems.SKELETON_BOWMASTER_SPAWN_EGG.get().getDefaultInstance(),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
         }
     }
 }

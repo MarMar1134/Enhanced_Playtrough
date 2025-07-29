@@ -1,6 +1,7 @@
-// 1.20.1	2025-07-24T14:53:17.2926071	Item Models: enhanced_playthrough
+// 1.20.1	2025-07-29T18:21:24.6592807	Item Models: enhanced_playthrough
 b2df27b0d68c4c96244f2f344cb1fc54663e392f assets/enhanced_playthrough/models/item/adobe_alloy_furnace.json
 9731043a19f6a4326f19981cca25ade3d23cd23d assets/enhanced_playthrough/models/item/adobe_furnace.json
+6138cf518c63dfa682a698d0d38c0ff3315a5fd5 assets/enhanced_playthrough/models/item/aluminum_arrow.json
 69b87023c4572f465b207519fdb24da84c63747a assets/enhanced_playthrough/models/item/aluminum_blue_golden_axe.json
 42abd45757faf841fe4bcceddf28cd4b2214a253 assets/enhanced_playthrough/models/item/aluminum_blue_golden_dagger.json
 1c95996977a3f9ada077d8d16270882180769982 assets/enhanced_playthrough/models/item/aluminum_blue_golden_hoe.json
@@ -608,6 +609,7 @@ fc46ba869247b7b962dada335bb6ec07fb87e58f assets/enhanced_playthrough/models/item
 e5021efdacfecd1623a76ed425a09277da66fb40 assets/enhanced_playthrough/models/item/silver_polisher.json
 beff0223071423fc5378e5c05c83d070f024c945 assets/enhanced_playthrough/models/item/silver_shovel.json
 53fca95b4fbfbba462e0c906424b3631f9e45f8c assets/enhanced_playthrough/models/item/silver_sword.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/enhanced_playthrough/models/item/skeleton_bowmaster_spawn_egg.json
 806db4d4cc4b4214c40f8d947912b7a2b7c4ba4a assets/enhanced_playthrough/models/item/small_reeds.json
 11533f274cd6c1f290085784ce3f0149b57efc99 assets/enhanced_playthrough/models/item/soul_alloy_furnace.json
 fc6bb57cb0043cea885a2c0d8c54ee8b228d02dc assets/enhanced_playthrough/models/item/soul_furnace.json

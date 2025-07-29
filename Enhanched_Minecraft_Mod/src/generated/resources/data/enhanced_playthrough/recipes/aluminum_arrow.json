@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "minecraft:feather"
+    },
+    "F": {
+      "item": "minecraft:flint"
+    },
+    "R": {
+      "item": "enhanced_playthrough:aluminum_rod"
+    }
+  },
+  "pattern": [
+    "F",
+    "R",
+    "A"
+  ],
+  "result": {
+    "count": 4,
+    "item": "enhanced_playthrough:aluminum_arrow"
+  },
+  "show_notification": true
+}

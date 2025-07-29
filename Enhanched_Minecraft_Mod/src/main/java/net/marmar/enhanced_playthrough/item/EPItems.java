@@ -6,6 +6,7 @@ import net.marmar.enhanced_playthrough.entity.EPEntityTypes;
 import net.marmar.enhanced_playthrough.item.custom.food.MateItem;
 import net.marmar.enhanced_playthrough.item.custom.food.EPFoodProperties;
 import net.marmar.enhanced_playthrough.item.custom.tool.*;
+import net.marmar.enhanced_playthrough.item.custom.weapon.AluminumArrowItem;
 import net.marmar.enhanced_playthrough.item.custom.weapon.EPTiers;
 import net.marmar.enhanced_playthrough.entity.boat.EPBoatEntity;
 import net.marmar.enhanced_playthrough.item.custom.armor.EPArmorItem;
@@ -221,6 +222,9 @@ public class EPItems {
     public static final RegistryObject<Item> ZOMBIE_KNIGHT_SPAWN_EGG = ITEMS.register(
             "zombie_knight_spawn_egg", () -> new ForgeSpawnEggItem(EPEntityTypes.ZOMBIE_KNIGHT, 0x3b622f,
                     0xa89d67, new Item.Properties()));
+    public static final RegistryObject<Item> SKELETON_BOWMASTER_SPAWN_EGG = ITEMS.register(
+            "skeleton_bowmaster_spawn_egg", () -> new ForgeSpawnEggItem(EPEntityTypes.SKELETON_BOWMASTER, 0x979797,
+                    0x615b39, new Item.Properties()));
 
     //Signs
         //Walnut
@@ -281,6 +285,10 @@ public class EPItems {
                 () -> new ModBoatItem(true, EPBoatEntity.Type.LEMON, new Item.Properties()));
 
     //Weapons, tools and armors
+        //Arrows
+        public static final RegistryObject<Item> ALUMINUM_ARROW = ITEMS.register(
+                "aluminum_arrow", () -> new AluminumArrowItem(new Item.Properties()));
+
         //Tools
         public static final RegistryObject<Item> FLINT_AND_COBBLE = ITEMS.register(
                 "flint_and_cobble", ()-> new FlintAndSteelItem(new Item.Properties().defaultDurability(16)));

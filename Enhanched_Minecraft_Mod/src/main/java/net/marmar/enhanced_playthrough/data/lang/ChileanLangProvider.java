@@ -63,6 +63,18 @@ public class ChileanLangProvider extends AbstractLangProvider {
         //Sounds
         addSoundDescription("grind", "Molienda activada");
 
+        //Zombie knight
+        addSoundDescription("zombie_knight_ambient", "Zombi caballero quejándose");
+        addSoundDescription("zombie_knight_step", "Zombi caballero caminando");
+        addSoundDescription("zombie_knight_hurt", "Zombi caballero siendo herido");
+        addSoundDescription("zombie_knight_death", "Zombi caballero muriendo");
+
+        //Skeleton bowmaster
+        addSoundDescription("skeleton_bowmaster_ambient", "Maestre esqueleto chirriando sus huesos");
+        addSoundDescription("skeleton_bowmaster_step", "Maestre esqueleto caminando");
+        addSoundDescription("skeleton_bowmaster_hurt", "Maestre esqueleto siendo herido");
+        addSoundDescription("skeleton_bowmaster_death", "Maestre esqueleto muriendo");
+
         //Death messages
         addDeathMessages("tallReed", "ha muerto pinchado por un carrizo",
                 "ha muerto pinchado por un carrizo mientras escapaba de");
@@ -134,6 +146,7 @@ public class ChileanLangProvider extends AbstractLangProvider {
         addBoatEntity("Barco");
         addChestBoatEntity("Barco con cofre");
         addThrowableCobbleEntity("Adoquín");
+        addAluminumArrowEntity("Flecha de aluminio");
 
         //Blocks
             //Wild crops
@@ -751,5 +764,8 @@ public class ChileanLangProvider extends AbstractLangProvider {
 
             addZombieKnight("Zombi caballero");
             addItem(EPItems.ZOMBIE_KNIGHT_SPAWN_EGG, "Generar zombi caballero");
+
+            addSkeletonBowmaster("Maestre esqueleto");
+            addItem(EPItems.SKELETON_BOWMASTER_SPAWN_EGG, "Generar maestre esqueleto");
     }
 }

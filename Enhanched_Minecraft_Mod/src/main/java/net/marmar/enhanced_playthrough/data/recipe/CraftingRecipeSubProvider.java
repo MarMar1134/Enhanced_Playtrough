@@ -6,6 +6,7 @@ import net.marmar.enhanced_playthrough.data.tag.EPTags;
 import net.marmar.enhanced_playthrough.item.EPItems;
 import net.minecraft.advancements.critereon.EnterBlockTrigger;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
+import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
@@ -101,6 +102,17 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .pattern("A")
                 .define('A', EPItems.ALUMINUM_INGOT.get())
                 .unlockedBy(getHasName(EPItems.ALUMINUM_INGOT.get()), has(EPItems.ALUMINUM_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, EPItems.ALUMINUM_ARROW.get(), 4)
+                .pattern("F")
+                .pattern("R")
+                .pattern("A")
+                .define('F', Items.FLINT)
+                .define('R', EPItems.ALUMINUM_ROD.get())
+                .define('A', Items.FEATHER)
+                .unlockedBy("has_arrow_material", HAS_ARROW_MATERIALS())
+                .unlockedBy(getHasName(EPItems.ALUMINUM_ARROW.get()), has(EPItems.ALUMINUM_ARROW.get()))
                 .save(consumer);
 
         //Vegetable fibber
@@ -741,6 +753,13 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
 
     protected static InventoryChangeTrigger.TriggerInstance HAS_ALUMINUM_ROD(){
         return InventoryChangeTrigger.TriggerInstance.hasItems(EPItems.ALUMINUM_ROD.get());
+    }
+
+    protected static ItemPredicate IS_ARROW_MATERIAL = ItemPredicate.Builder.item().of(EPItems.ALUMINUM_ROD.get(),
+            Items.FLINT, Items.FEATHER).build();
+
+    protected static InventoryChangeTrigger.TriggerInstance HAS_ARROW_MATERIALS(){
+        return InventoryChangeTrigger.TriggerInstance.hasItems(IS_ARROW_MATERIAL);
     }
 
     protected static void materialRecipes(ItemLike pIngot, Block pBlock, Consumer<FinishedRecipe> pConsumer){
