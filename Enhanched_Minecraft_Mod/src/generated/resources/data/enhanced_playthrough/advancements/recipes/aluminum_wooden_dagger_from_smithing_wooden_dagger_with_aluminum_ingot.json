@@ -1,6 +1,18 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
+    "has_aluminum_wooden_dagger": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:aluminum_wooden_dagger"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "has_the_recipe": {
       "conditions": {
         "recipe": "enhanced_playthrough:aluminum_wooden_dagger_from_smithing_wooden_dagger_with_aluminum_ingot"
@@ -23,6 +35,7 @@
   "requirements": [
     [
       "has_wooden_dagger",
+      "has_aluminum_wooden_dagger",
       "has_the_recipe"
     ]
   ],

@@ -5,20 +5,17 @@
     "A": {
       "item": "enhanced_playthrough:bronzium_upgrade_smithing_template"
     },
-    "C": {
-      "item": "enhanced_playthrough:tin_ingot"
-    },
-    "D": {
-      "item": "enhanced_playthrough:zinc_ingot"
+    "B": {
+      "item": "minecraft:nether_brick"
     },
     "V": {
       "item": "enhanced_playthrough:bronzium_ingot"
     }
   },
   "pattern": [
-    "DAD",
-    "DVD",
-    "CCC"
+    "BAB",
+    "BVB",
+    "BBB"
   ],
   "result": {
     "count": 2,

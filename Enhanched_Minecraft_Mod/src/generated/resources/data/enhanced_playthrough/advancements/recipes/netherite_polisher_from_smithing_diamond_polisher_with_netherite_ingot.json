@@ -13,6 +13,18 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
+    "has_netherite_polisher": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:netherite_polisher"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "has_the_recipe": {
       "conditions": {
         "recipe": "enhanced_playthrough:netherite_polisher_from_smithing_diamond_polisher_with_netherite_ingot"
@@ -23,6 +35,7 @@
   "requirements": [
     [
       "has_diamond_polisher",
+      "has_netherite_polisher",
       "has_the_recipe"
     ]
   ],

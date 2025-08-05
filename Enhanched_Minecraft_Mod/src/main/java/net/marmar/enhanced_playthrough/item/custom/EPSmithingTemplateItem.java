@@ -55,6 +55,15 @@ public class EPSmithingTemplateItem extends SmithingTemplateItem {
         return new EPSmithingTemplateItem(APPLIES_TO, INGREDIENTS, SMITHING_UPGRADE, BASE_SLOT_DESCRIPTION, ADDITIONS_SLOT_DESCRIPTION, createSmithingUpgradeIconList(), createSmithingUpgradeMaterialList());
     }
 
+    public static EPSmithingTemplateItem createGoldenSmithingUpgrade(){
+        Component SMITHING_UPGRADE = Component.translatable("smithing." + EnhancedPlaythrough.MOD_ID + ".golden.title").withStyle(TITLES);
+        Component APPLIES_TO = Component.translatable("smithing." + EnhancedPlaythrough.MOD_ID + ".golden.applies_to").withStyle(DESCS);
+        Component INGREDIENTS = Component.translatable("smithing." + EnhancedPlaythrough.MOD_ID + ".golden.ingredients").withStyle(DESCS);
+        Component BASE_SLOT_DESCRIPTION = Component.translatable("smithing." + EnhancedPlaythrough.MOD_ID + ".golden.base_slot_description");
+        Component ADDITIONS_SLOT_DESCRIPTION = Component.translatable("smithing." + EnhancedPlaythrough.MOD_ID + ".golden.additions_slot_description");
+        return new EPSmithingTemplateItem(APPLIES_TO, INGREDIENTS, SMITHING_UPGRADE, BASE_SLOT_DESCRIPTION, ADDITIONS_SLOT_DESCRIPTION, createSmithingUpgradeIconList(), createSmithingUpgradeMaterialList());
+    }
+
     static {
         TITLES = ChatFormatting.GRAY;
         DESCS = ChatFormatting.BLUE;

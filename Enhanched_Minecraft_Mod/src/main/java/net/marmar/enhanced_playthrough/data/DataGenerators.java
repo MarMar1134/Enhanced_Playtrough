@@ -51,8 +51,6 @@ public class DataGenerators {
         generator.addProvider(event.includeClient(), new EPBlockStateProvider(packOutput, existingFileHelper));
         generator.addProvider(event.includeClient(), new EPItemModelProvider(packOutput, existingFileHelper));
 
-
-
         //POI types
         generator.addProvider(event.includeServer(), new EPPoiTypesTagProvider(packOutput, LookupProvider, existingFileHelper));
 
@@ -72,6 +70,5 @@ public class DataGenerators {
         generator.addProvider(event.includeClient(), new SpanishLangProvider(packOutput));
         generator.addProvider(event.includeClient(), new MexicanLangProvider(packOutput));
         generator.addProvider(event.includeClient(), new VenezuelanLangProvider(packOutput));
-
     }
 }

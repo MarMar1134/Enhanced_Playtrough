@@ -309,6 +309,7 @@ public class EPItemModelProvider extends ItemModelProvider {
         //templates
         simpleItem(EPItems.BRONZIUM_SMITHING_UPGRADE_TEMPLATE);
         simpleItem(EPItems.ALUMINUM_SMITHING_UPGRADE_TEMPLATE);
+        simpleItem(EPItems.GOLDEN_SMITHING_UPGRADE_TEMPLATE);
 
         //Cobble
         simpleItem(EPItems.COBBLE);

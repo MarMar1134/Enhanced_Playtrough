@@ -13,6 +13,18 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
+    "has_bronzium_chestplate": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:bronzium_chestplate"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "has_the_recipe": {
       "conditions": {
         "recipe": "enhanced_playthrough:bronzium_chestplate_from_smithing_bronze_chestplate_with_bronzium_ingot"
@@ -23,6 +35,7 @@
   "requirements": [
     [
       "has_bronze_chestplate",
+      "has_bronzium_chestplate",
       "has_the_recipe"
     ]
   ],

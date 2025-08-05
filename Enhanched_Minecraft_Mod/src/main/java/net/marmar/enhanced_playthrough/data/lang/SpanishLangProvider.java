@@ -741,6 +741,10 @@ public class SpanishLangProvider extends AbstractLangProvider {
         addSmithingTranslations("aluminum", "Mejora de aluminio", "Equipación con mango de madera",
                 "Lingote de aluminio", "Coloque cualquier equipo con un mango de madera", "Coloque un lingote de aluminio");
 
+        addSmithingTranslations("golden", "Mejora áurea", "Equipación de oro",
+                "Lingote de oro rosa, Lingote de oro verde, Lingote de oro azul", "Coloque cualquier equipo de oro",
+                "Coloque un lingote de oro rosa, verde o azul");
+
         //Enchantments
         addEnchantment(EPEnchantments.FINE_MINING, "Minado fino");
         addEnchantmentDesc("fine_mining", "Al ser aplicado, permite obtener el mineral puro al picar una mena");

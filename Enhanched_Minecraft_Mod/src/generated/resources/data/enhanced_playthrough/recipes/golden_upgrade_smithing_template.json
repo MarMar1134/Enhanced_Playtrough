@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "enhanced_playthrough:golden_upgrade_smithing_template"
+    },
+    "S": {
+      "item": "enhanced_playthrough:cobble"
+    },
+    "V": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "pattern": [
+    "SAS",
+    "SVS",
+    "SSS"
+  ],
+  "result": {
+    "count": 2,
+    "item": "enhanced_playthrough:golden_upgrade_smithing_template"
+  },
+  "show_notification": true
+}

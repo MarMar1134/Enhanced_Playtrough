@@ -23,7 +23,7 @@ public class DaggerItem extends WeaponItem {
         this.baseBleedProbability = pBaseBleedProbability;
     }
 
-    public boolean hasIncompatibleEnchantment(ItemStack pStack){
+    public boolean hasBloodyBladeEnchantment(ItemStack pStack){
         AtomicBoolean hasBleedingEnchant = new AtomicBoolean(false);
 
         pStack.getAllEnchantments().forEach((enchantment, integer) ->
@@ -36,7 +36,7 @@ public class DaggerItem extends WeaponItem {
     public boolean hurtEnemy(ItemStack pStack, LivingEntity pTarget, LivingEntity pAttacker) {
         float bleedProbability = this.baseBleedProbability * pAttacker.getRandom().nextFloat();
 
-        if (bleedProbability < 0.025f && !hasIncompatibleEnchantment(pStack)){
+        if (bleedProbability < 0.025f && !hasBloodyBladeEnchantment(pStack)){
             pTarget.addEffect(new MobEffectInstance(EPMobEffects.BLEEDING.get(), 200, 0, true, true));
         }
         return super.hurtEnemy(pStack, pTarget, pAttacker);

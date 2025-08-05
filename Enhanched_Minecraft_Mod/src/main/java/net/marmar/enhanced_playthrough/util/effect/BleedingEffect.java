@@ -32,19 +32,13 @@ public class BleedingEffect extends MobEffect {
     }
 
     private void applyEffectAccordingToAmplifier(LivingEntity pEntity, int pAmplifier){
-        switch (pAmplifier){
-            case 1:
-                pEntity.hurt(new EPDamageSources(pEntity.level().registryAccess()).bleed(), 2F);
-                break;
-            case 2:
-                pEntity.hurt(new EPDamageSources(pEntity.level().registryAccess()).bleed(), 3F);
-                break;
-            default:
-                pEntity.hurt(new EPDamageSources(pEntity.level().registryAccess()).bleed(), 1.5F * pAmplifier);
-        }
+        float damage = switch (pAmplifier){
+            case 0, 1 -> 1.5f;
+            default -> 1.5f * pAmplifier;
+        };
+
+        pEntity.hurt(new EPDamageSources(pEntity.level().registryAccess()).bleed(), damage);
     }
-
-
 
     //Credit goes to iron431 for this method.
     // Source: https://github.com/iron431/irons-spells-n-spellbooks/blob/1.20.1/src/main/java/io/redspace/ironsspellbooks/effect/AbyssalShroudEffect.java#L89

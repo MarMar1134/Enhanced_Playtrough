@@ -156,6 +156,65 @@ public class GeneralRecipeSubProvider extends RecipeProvider {
             aluminumSmithingTemplate(consumer, EPItems.DIAMOND_POLISHER.get(), EPItems.ALUMINUM_DIAMOND_POLISHER.get());
             aluminumSmithingTemplate(consumer, EPItems.DIAMOND_DAGGER.get(), EPItems.ALUMINUM_DIAMOND_DAGGER.get());
 
+        //Rose gold upgrade
+        roseGoldenSmithingUpgrade(consumer, Items.GOLDEN_HELMET, EPItems.ROSE_GOLDEN_HELMET.get());
+        roseGoldenSmithingUpgrade(consumer, Items.GOLDEN_CHESTPLATE, EPItems.ROSE_GOLDEN_CHESTPLATE.get());
+        roseGoldenSmithingUpgrade(consumer, Items.GOLDEN_LEGGINGS, EPItems.ROSE_GOLDEN_LEGGINGS.get());
+        roseGoldenSmithingUpgrade(consumer, Items.GOLDEN_BOOTS, EPItems.ROSE_GOLDEN_BOOTS.get());
+        roseGoldenSmithingUpgrade(consumer, Items.GOLDEN_PICKAXE, EPItems.ROSE_GOLDEN_PICKAXE.get());
+        roseGoldenSmithingUpgrade(consumer, Items.GOLDEN_AXE, EPItems.ROSE_GOLDEN_AXE.get());
+        roseGoldenSmithingUpgrade(consumer, Items.GOLDEN_SWORD, EPItems.ROSE_GOLDEN_SWORD.get());
+        roseGoldenSmithingUpgrade(consumer, Items.GOLDEN_SHOVEL, EPItems.ROSE_GOLDEN_SHOVEL.get());
+        roseGoldenSmithingUpgrade(consumer, Items.GOLDEN_HOE, EPItems.ROSE_GOLDEN_HOE.get());
+        roseGoldenSmithingUpgrade(consumer, EPItems.GOLDEN_POLISHER.get(), EPItems.ALUMINUM_ROSE_GOLDEN_POLISHER.get());
+        roseGoldenSmithingUpgrade(consumer, EPItems.GOLDEN_DAGGER.get(), EPItems.ALUMINUM_ROSE_GOLDEN_DAGGER.get());
+        roseGoldenSmithingUpgrade(consumer, EPItems.ALUMINUM_GOLDEN_PICKAXE.get(), EPItems.ALUMINUM_ROSE_GOLDEN_PICKAXE.get());
+        roseGoldenSmithingUpgrade(consumer, EPItems.ALUMINUM_GOLDEN_AXE.get(), EPItems.ALUMINUM_ROSE_GOLDEN_AXE.get());
+        roseGoldenSmithingUpgrade(consumer, EPItems.ALUMINUM_GOLDEN_SWORD.get(), EPItems.ALUMINUM_ROSE_GOLDEN_SWORD.get());
+        roseGoldenSmithingUpgrade(consumer, EPItems.ALUMINUM_GOLDEN_SHOVEL.get(), EPItems.ALUMINUM_ROSE_GOLDEN_SHOVEL.get());
+        roseGoldenSmithingUpgrade(consumer, EPItems.ALUMINUM_GOLDEN_HOE.get(), EPItems.ALUMINUM_ROSE_GOLDEN_HOE.get());
+        roseGoldenSmithingUpgrade(consumer, EPItems.ALUMINUM_GOLDEN_POLISHER.get(), EPItems.ALUMINUM_ROSE_GOLDEN_POLISHER.get());
+        roseGoldenSmithingUpgrade(consumer, EPItems.ALUMINUM_GOLDEN_DAGGER.get(), EPItems.ALUMINUM_ROSE_GOLDEN_DAGGER.get());
+
+        //Green gold upgrade
+        greenGoldenSmithingUpgrade(consumer, Items.GOLDEN_HELMET, EPItems.GREEN_GOLDEN_HELMET.get());
+        greenGoldenSmithingUpgrade(consumer, Items.GOLDEN_CHESTPLATE, EPItems.GREEN_GOLDEN_CHESTPLATE.get());
+        greenGoldenSmithingUpgrade(consumer, Items.GOLDEN_LEGGINGS, EPItems.GREEN_GOLDEN_LEGGINGS.get());
+        greenGoldenSmithingUpgrade(consumer, Items.GOLDEN_BOOTS, EPItems.GREEN_GOLDEN_BOOTS.get());
+        greenGoldenSmithingUpgrade(consumer, Items.GOLDEN_PICKAXE, EPItems.GREEN_GOLDEN_PICKAXE.get());
+        greenGoldenSmithingUpgrade(consumer, Items.GOLDEN_AXE, EPItems.GREEN_GOLDEN_AXE.get());
+        greenGoldenSmithingUpgrade(consumer, Items.GOLDEN_SWORD, EPItems.GREEN_GOLDEN_SWORD.get());
+        greenGoldenSmithingUpgrade(consumer, Items.GOLDEN_SHOVEL, EPItems.GREEN_GOLDEN_SHOVEL.get());
+        greenGoldenSmithingUpgrade(consumer, Items.GOLDEN_HOE, EPItems.GREEN_GOLDEN_HOE.get());
+        greenGoldenSmithingUpgrade(consumer, EPItems.GOLDEN_POLISHER.get(), EPItems.ALUMINUM_GREEN_GOLDEN_POLISHER.get());
+        greenGoldenSmithingUpgrade(consumer, EPItems.GOLDEN_DAGGER.get(), EPItems.ALUMINUM_GREEN_GOLDEN_DAGGER.get());
+        greenGoldenSmithingUpgrade(consumer, EPItems.ALUMINUM_GOLDEN_PICKAXE.get(), EPItems.ALUMINUM_GREEN_GOLDEN_PICKAXE.get());
+        greenGoldenSmithingUpgrade(consumer, EPItems.ALUMINUM_GOLDEN_AXE.get(), EPItems.ALUMINUM_GREEN_GOLDEN_AXE.get());
+        greenGoldenSmithingUpgrade(consumer, EPItems.ALUMINUM_GOLDEN_SWORD.get(), EPItems.ALUMINUM_GREEN_GOLDEN_SWORD.get());
+        greenGoldenSmithingUpgrade(consumer, EPItems.ALUMINUM_GOLDEN_SHOVEL.get(), EPItems.ALUMINUM_GREEN_GOLDEN_SHOVEL.get());
+        greenGoldenSmithingUpgrade(consumer, EPItems.ALUMINUM_GOLDEN_HOE.get(), EPItems.ALUMINUM_GREEN_GOLDEN_HOE.get());
+        greenGoldenSmithingUpgrade(consumer, EPItems.ALUMINUM_GOLDEN_POLISHER.get(), EPItems.ALUMINUM_GREEN_GOLDEN_POLISHER.get());
+        greenGoldenSmithingUpgrade(consumer, EPItems.ALUMINUM_GOLDEN_DAGGER.get(), EPItems.ALUMINUM_GREEN_GOLDEN_DAGGER.get());
+
+        //Blue gold upgrade
+        blueGoldenSmithingUpgrade(consumer, Items.GOLDEN_HELMET, EPItems.BLUE_GOLDEN_HELMET.get());
+        blueGoldenSmithingUpgrade(consumer, Items.GOLDEN_CHESTPLATE, EPItems.BLUE_GOLDEN_CHESTPLATE.get());
+        blueGoldenSmithingUpgrade(consumer, Items.GOLDEN_LEGGINGS, EPItems.BLUE_GOLDEN_LEGGINGS.get());
+        blueGoldenSmithingUpgrade(consumer, Items.GOLDEN_BOOTS, EPItems.BLUE_GOLDEN_BOOTS.get());
+        blueGoldenSmithingUpgrade(consumer, Items.GOLDEN_PICKAXE, EPItems.BLUE_GOLDEN_PICKAXE.get());
+        blueGoldenSmithingUpgrade(consumer, Items.GOLDEN_AXE, EPItems.BLUE_GOLDEN_AXE.get());
+        blueGoldenSmithingUpgrade(consumer, Items.GOLDEN_SWORD, EPItems.BLUE_GOLDEN_SWORD.get());
+        blueGoldenSmithingUpgrade(consumer, Items.GOLDEN_SHOVEL, EPItems.BLUE_GOLDEN_SHOVEL.get());
+        blueGoldenSmithingUpgrade(consumer, Items.GOLDEN_HOE, EPItems.BLUE_GOLDEN_HOE.get());
+        blueGoldenSmithingUpgrade(consumer, EPItems.GOLDEN_POLISHER.get(), EPItems.ALUMINUM_BLUE_GOLDEN_POLISHER.get());
+        blueGoldenSmithingUpgrade(consumer, EPItems.GOLDEN_DAGGER.get(), EPItems.ALUMINUM_BLUE_GOLDEN_DAGGER.get());
+        blueGoldenSmithingUpgrade(consumer, EPItems.ALUMINUM_GOLDEN_PICKAXE.get(), EPItems.ALUMINUM_BLUE_GOLDEN_PICKAXE.get());
+        blueGoldenSmithingUpgrade(consumer, EPItems.ALUMINUM_GOLDEN_AXE.get(), EPItems.ALUMINUM_BLUE_GOLDEN_AXE.get());
+        blueGoldenSmithingUpgrade(consumer, EPItems.ALUMINUM_GOLDEN_SWORD.get(), EPItems.ALUMINUM_BLUE_GOLDEN_SWORD.get());
+        blueGoldenSmithingUpgrade(consumer, EPItems.ALUMINUM_GOLDEN_SHOVEL.get(), EPItems.ALUMINUM_BLUE_GOLDEN_SHOVEL.get());
+        blueGoldenSmithingUpgrade(consumer, EPItems.ALUMINUM_GOLDEN_HOE.get(), EPItems.ALUMINUM_BLUE_GOLDEN_HOE.get());
+        blueGoldenSmithingUpgrade(consumer, EPItems.ALUMINUM_GOLDEN_POLISHER.get(), EPItems.ALUMINUM_BLUE_GOLDEN_POLISHER.get());
+        blueGoldenSmithingUpgrade(consumer, EPItems.ALUMINUM_GOLDEN_DAGGER.get(), EPItems.ALUMINUM_BLUE_GOLDEN_DAGGER.get());
 
         //Netherite
         smithingUpgrade(consumer, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, EPItems.DIAMOND_POLISHER.get(),
@@ -417,6 +476,22 @@ public class GeneralRecipeSubProvider extends RecipeProvider {
         smithingUpgrade(consumer, EPItems.ALUMINUM_SMITHING_UPGRADE_TEMPLATE.get(), baseItem, EPItems.ALUMINUM_INGOT.get(), aluminizedItem);
     }
 
+    protected static void goldenSmithingUpgrade(Consumer<FinishedRecipe> consumer, ItemLike baseItem, ItemLike pIngot, ItemLike resultItem){
+        smithingUpgrade(consumer, EPItems.GOLDEN_SMITHING_UPGRADE_TEMPLATE.get(), baseItem, pIngot, resultItem);
+    }
+
+    protected static void roseGoldenSmithingUpgrade(Consumer<FinishedRecipe> consumer, ItemLike baseItem, ItemLike resultItem){
+        goldenSmithingUpgrade(consumer, baseItem, EPItems.ROSE_GOLD_INGOT.get(), resultItem);
+    }
+
+    protected static void greenGoldenSmithingUpgrade(Consumer<FinishedRecipe> consumer, ItemLike baseItem, ItemLike resultItem){
+        goldenSmithingUpgrade(consumer, baseItem, EPItems.GREEN_GOLD_INGOT.get(), resultItem);
+    }
+
+    protected static void blueGoldenSmithingUpgrade(Consumer<FinishedRecipe> consumer, ItemLike baseItem, ItemLike resultItem){
+        goldenSmithingUpgrade(consumer, baseItem, EPItems.BLUE_GOLD_INGOT.get(), resultItem);
+    }
+
         //Grind
             //Primal
             protected static void primalItemGrinding(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike ingredient, String group, ItemLike result, int count){
@@ -443,6 +518,7 @@ public class GeneralRecipeSubProvider extends RecipeProvider {
     protected static void smithingTransformSerialize(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike template, ItemLike base, ItemLike addition, ItemLike result){
         ModSmithingTransformRecipeBuilder.SmithingTransform(template, base, addition, result)
                 .unlockedBy(getHasName(base), has(base))
+                .unlockedBy(getHasName(result), has(result))
                 .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(result) + "_from_smithing_" + getItemName(base) + "_with_" + getItemName(addition));
     }
 

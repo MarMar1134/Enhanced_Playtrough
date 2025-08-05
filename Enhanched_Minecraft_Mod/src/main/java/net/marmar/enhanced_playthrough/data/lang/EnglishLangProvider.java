@@ -740,6 +740,10 @@ public class EnglishLangProvider extends AbstractLangProvider {
             addSmithingTranslations("aluminum", "Aluminum upgrade", "Tools with wooden handle", "Aluminum ingot",
                     "Add any tool with a wooden handle", "Add an aluminum ingot");
 
+            addSmithingTranslations("golden", "Golden upgrade", "Gold equipment",
+                    "Rose gold ingot, Green gold ingot, Blue gold ingot", "Add a golden armor, weapon or tool",
+                    "Add a Rose gold, Green gold or Blue gold ingot");
+
             //Enchantments
             addEnchantment(EPEnchantments.FINE_MINING, "Fine mining");
             addEnchantmentDesc("fine_mining", "When is applied, only the ore will be dropped from the block extraction");

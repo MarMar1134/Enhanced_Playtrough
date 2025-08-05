@@ -10,6 +10,8 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
+import net.minecraft.world.level.storage.loot.predicates.LootItemConditions;
+import net.minecraft.world.level.storage.loot.predicates.LootItemKilledByPlayerCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCondition;
 import net.minecraftforge.common.data.GlobalLootModifierProvider;
 import net.minecraftforge.common.loot.LootTableIdCondition;
@@ -85,61 +87,66 @@ public class EPGlobalLootModifiersProvider extends GlobalLootModifierProvider {
         //Woodland mansions
         add("totems_off_undying_from_mansions", new AddItemModifier(new LootItemCondition[]{
                 new LootTableIdCondition.Builder(new ResourceLocation("chests/woodland_mansion")).build(),
-                LootItemRandomChanceCondition.randomChance(0.1f).build() }, Items.TOTEM_OF_UNDYING));
+                LootItemRandomChanceCondition.randomChance(0.3f).build() }, Items.TOTEM_OF_UNDYING));
         add("rubies_from_mansions", new AddItemModifier(new LootItemCondition[]{
                 new LootTableIdCondition.Builder(new ResourceLocation("chests/woodland_mansion")).build(),
-                LootItemRandomChanceCondition.randomChance(0.3f).build() }, EPItems.RUBY.get()));
+                LootItemRandomChanceCondition.randomChance(0.5f).build() }, EPItems.RUBY.get()));
         add("sapphires_from_mansions", new AddItemModifier(new LootItemCondition[]{
                 new LootTableIdCondition.Builder(new ResourceLocation("chests/woodland_mansion")).build(),
-                LootItemRandomChanceCondition.randomChance(0.5f).build() }, EPItems.SAPPHIRE.get()));
+                LootItemRandomChanceCondition.randomChance(0.7f).build() }, EPItems.SAPPHIRE.get()));
 
         //Mineshafts
             //Bronze
             add("bronze_pickaxe_from_mineshaft", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(new ResourceLocation("chests/abandoned_mineshaft")).build(),
-                LootItemRandomChanceCondition.randomChance(0.1f).build()}, EPItems.BRONZE_PICKAXE.get()));
+                LootItemRandomChanceCondition.randomChance(0.5f).build()}, EPItems.BRONZE_PICKAXE.get()));
             add("bronze_ingot_from_mineshaft", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(new ResourceLocation("chests/abandoned_mineshaft")).build(),
-                LootItemRandomChanceCondition.randomChance(0.45f).build()}, EPItems.BRONZE_INGOT.get()));
+                LootItemRandomChanceCondition.randomChance(0.7f).build()}, EPItems.BRONZE_INGOT.get()));
             add("bronze_nugget_from_mineshaft", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(new ResourceLocation("chests/abandoned_mineshaft")).build(),
-                LootItemRandomChanceCondition.randomChance(0.6f).build()}, EPItems.BRONZE_NUGGET.get()));
+                LootItemRandomChanceCondition.randomChance(0.9f).build()}, EPItems.BRONZE_NUGGET.get()));
 
             //Tin
             add("tin_ingot_from_mineshaft", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(new ResourceLocation("chests/abandoned_mineshaft")).build(),
-                LootItemRandomChanceCondition.randomChance(0.6f).build()}, EPItems.TIN_INGOT.get()));
+                LootItemRandomChanceCondition.randomChance(0.7f).build()}, EPItems.TIN_INGOT.get()));
 
             //Zinc
             add("zinc_ingot_from_mineshaft", new AddItemModifier(new LootItemCondition[] {
                     new LootTableIdCondition.Builder(new ResourceLocation("chests/abandoned_mineshaft")).build(),
-                    LootItemRandomChanceCondition.randomChance(0.6f).build()}, EPItems.ZINC_INGOT.get()));
+                    LootItemRandomChanceCondition.randomChance(0.7f).build()}, EPItems.ZINC_INGOT.get()));
 
             //Rose gold
             add("rose_gold_ingot_from_mineshaft", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(new ResourceLocation("chests/abandoned_mineshaft")).build(),
-                LootItemRandomChanceCondition.randomChance(0.05f).build()}, EPItems.ROSE_GOLD_INGOT.get()));
+                LootItemRandomChanceCondition.randomChance(0.5f).build()}, EPItems.ROSE_GOLD_INGOT.get()));
+
+            //Golden upgrade
+            add("golden_smithing_upgrade_template_from_mineshaft", new AddItemModifier(new LootItemCondition[] {
+                    new LootTableIdCondition.Builder(new ResourceLocation("chests/abandoned_mineshaft")).build(),
+                    LootItemRandomChanceCondition.randomChance(0.45f).build()}, EPItems.GOLDEN_SMITHING_UPGRADE_TEMPLATE.get()));
 
         //Villages
         add("zapallo_seeds_from_villages", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(new ResourceLocation("chests/village/village_plains_house")).build(),
-                LootItemRandomChanceCondition.randomChance(0.4f).build()}, EPItems.ZAPALLO_SEEDS.get()));
+                LootItemRandomChanceCondition.randomChance(0.7f).build()}, EPItems.ZAPALLO_SEEDS.get()));
         add("eggplant_seeds_from_villages", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(new ResourceLocation("chests/village/village_plains_house")).build(),
-                LootItemRandomChanceCondition.randomChance(0.4f).build()}, EPItems.EGGPLANT_SEEDS.get()));
+                LootItemRandomChanceCondition.randomChance(0.7f).build()}, EPItems.EGGPLANT_SEEDS.get()));
         add("corn_seeds_from_villages", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(new ResourceLocation("chests/village/village_plains_house")).build(),
-                LootItemRandomChanceCondition.randomChance(0.4f).build()}, EPItems.CORN_SEEDS.get()));
+                LootItemRandomChanceCondition.randomChance(0.7f).build()}, EPItems.CORN_SEEDS.get()));
         add("tomato_seeds_from_villages", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(new ResourceLocation("chests/village/village_plains_house")).build(),
-                LootItemRandomChanceCondition.randomChance(0.4f).build()}, EPItems.TOMATO_SEEDS.get()));
+                LootItemRandomChanceCondition.randomChance(0.7f).build()}, EPItems.TOMATO_SEEDS.get()));
         add("yerba_mate_seeds_from_villages", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(new ResourceLocation("chests/village/village_plains_house")).build(),
-                LootItemRandomChanceCondition.randomChance(0.4f).build()}, EPItems.YERBA_MATE_SEEDS.get()));
+                LootItemRandomChanceCondition.randomChance(0.7f).build()}, EPItems.YERBA_MATE_SEEDS.get()));
 
         add("bronze_pickaxe_from_villages", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(new ResourceLocation("chests/village/village_toolsmith")).build(),
-                LootItemRandomChanceCondition.randomChance(0.05f).build()}, EPItems.BRONZE_PICKAXE.get()));
+                LootItemRandomChanceCondition.randomChance(0.1f).build()}, EPItems.BRONZE_PICKAXE.get()));
         add("bronze_ingot_from_village_toolsmith", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(new ResourceLocation("chests/village/village_toolsmith")).build(),
                 LootItemRandomChanceCondition.randomChance(0.2f).build()}, EPItems.BRONZE_INGOT.get()));

@@ -93,6 +93,7 @@ public class EPTabs {
                         output.accept(EPItems.ALUMINUM_ROD.get());
                         output.accept(EPItems.BRONZIUM_SMITHING_UPGRADE_TEMPLATE.get());
                         output.accept(EPItems.ALUMINUM_SMITHING_UPGRADE_TEMPLATE.get());
+                        output.accept(EPItems.GOLDEN_SMITHING_UPGRADE_TEMPLATE.get());
 
                         //Raw
                         output.accept(EPItems.RAW_SILVER.get());

@@ -6,7 +6,7 @@
       "loot_table_id": "minecraft:chests/village/village_plains_house"
     },
     {
-      "chance": 0.4,
+      "chance": 0.7,
       "condition": "minecraft:random_chance"
     }
   ],

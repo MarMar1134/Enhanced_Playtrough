@@ -150,6 +150,8 @@ public class EPItems {
             "bronzium_upgrade_smithing_template", EPSmithingTemplateItem::createBronziumSmithingTemplate);
     public static final RegistryObject<Item> ALUMINUM_SMITHING_UPGRADE_TEMPLATE = ITEMS.register(
             "aluminum_upgrade_smithing_template", EPSmithingTemplateItem::createAluminumSmithingUpgrade);
+    public static final RegistryObject<Item> GOLDEN_SMITHING_UPGRADE_TEMPLATE = ITEMS.register(
+            "golden_upgrade_smithing_template", EPSmithingTemplateItem::createGoldenSmithingUpgrade);
 
     //Cobble
     public static final RegistryObject<Item> COBBLE = ITEMS.register(

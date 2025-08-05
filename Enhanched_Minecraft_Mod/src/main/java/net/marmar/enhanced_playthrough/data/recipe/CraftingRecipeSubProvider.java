@@ -139,13 +139,12 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
 
         //Smithing templates
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, EPItems.BRONZIUM_SMITHING_UPGRADE_TEMPLATE.get(), 2)
-                .pattern("DAD")
-                .pattern("DVD")
-                .pattern("CCC")
+                .pattern("BAB")
+                .pattern("BVB")
+                .pattern("BBB")
                 .define('A', EPItems.BRONZIUM_SMITHING_UPGRADE_TEMPLATE.get())
                 .define('V', EPItems.BRONZIUM_INGOT.get())
-                .define('D', EPItems.ZINC_INGOT.get())
-                .define('C', EPItems.TIN_INGOT.get())
+                .define('B', Items.NETHER_BRICK)
                 .unlockedBy(getHasName(EPItems.BRONZIUM_SMITHING_UPGRADE_TEMPLATE.get()), has(EPItems.BRONZIUM_SMITHING_UPGRADE_TEMPLATE.get()))
                 .save(consumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, EPItems.ALUMINUM_SMITHING_UPGRADE_TEMPLATE.get(), 2)
@@ -156,6 +155,15 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .define('V', EPItems.ALUMINUM_INGOT.get())
                 .define('S', EPTags.Items.TERRACOTTA_SHARD)
                 .unlockedBy(getHasName(EPItems.ALUMINUM_SMITHING_UPGRADE_TEMPLATE.get()), has(EPItems.ALUMINUM_SMITHING_UPGRADE_TEMPLATE.get()))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, EPItems.GOLDEN_SMITHING_UPGRADE_TEMPLATE.get(), 2)
+                .pattern("SAS")
+                .pattern("SVS")
+                .pattern("SSS")
+                .define('A', EPItems.GOLDEN_SMITHING_UPGRADE_TEMPLATE.get())
+                .define('V', Items.GOLD_INGOT)
+                .define('S', EPItems.COBBLE.get())
+                .unlockedBy(getHasName(EPItems.GOLDEN_SMITHING_UPGRADE_TEMPLATE.get()), has(EPItems.GOLDEN_SMITHING_UPGRADE_TEMPLATE.get()))
                 .save(consumer);
 
         //Block recipes
@@ -453,15 +461,6 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
             //Rose gold
             materialRecipes(EPItems.ROSE_GOLD_INGOT.get(), EPItems.ROSE_GOLD_NUGGET.get(), EPBlocks.ROSE_GOLD_BLOCK.get(), consumer);
 
-            addGear(EPItems.ROSE_GOLD_INGOT.get(), EPItems.ROSE_GOLDEN_AXE.get(), EPItems.ROSE_GOLDEN_PICKAXE.get(), EPItems.ROSE_GOLDEN_SWORD.get(),
-                    EPItems.ROSE_GOLDEN_DAGGER.get(), EPItems.ROSE_GOLDEN_SHOVEL.get(), EPItems.ROSE_GOLDEN_HOE.get(), EPItems.ROSE_GOLDEN_POLISHER.get(),
-                    EPItems.ROSE_GOLDEN_HELMET.get(), EPItems.ROSE_GOLDEN_CHESTPLATE.get(), EPItems.ROSE_GOLDEN_LEGGINGS.get(), EPItems.ROSE_GOLDEN_BOOTS.get(),
-                    consumer);
-
-            addAluminumGear(EPItems.ROSE_GOLD_INGOT.get(), EPItems.ALUMINUM_ROSE_GOLDEN_AXE.get(), EPItems.ALUMINUM_ROSE_GOLDEN_PICKAXE.get(),
-                    EPItems.ALUMINUM_ROSE_GOLDEN_SWORD.get(), EPItems.ALUMINUM_ROSE_GOLDEN_DAGGER.get(), EPItems.ALUMINUM_ROSE_GOLDEN_SHOVEL.get(),
-                    EPItems.ALUMINUM_ROSE_GOLDEN_HOE.get(), EPItems.ALUMINUM_ROSE_GOLDEN_POLISHER.get(), consumer);
-
             //Iron
             ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, EPItems.IRON_POLISHER.get())
                     .pattern(" I")
@@ -486,15 +485,6 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
             //Green gold
             materialRecipes(EPItems.GREEN_GOLD_INGOT.get(), EPItems.GREEN_GOLD_NUGGET.get(), EPBlocks.GREEN_GOLD_BLOCK.get(), consumer);
 
-            addGear(EPItems.GREEN_GOLD_INGOT.get(), EPItems.GREEN_GOLDEN_AXE.get(), EPItems.GREEN_GOLDEN_PICKAXE.get(), EPItems.GREEN_GOLDEN_SWORD.get(),
-                    EPItems.GREEN_GOLDEN_DAGGER.get(), EPItems.GREEN_GOLDEN_SHOVEL.get(), EPItems.GREEN_GOLDEN_HOE.get(), EPItems.GREEN_GOLDEN_POLISHER.get(),
-                    EPItems.GREEN_GOLDEN_HELMET.get(), EPItems.GREEN_GOLDEN_CHESTPLATE.get(), EPItems.GREEN_GOLDEN_LEGGINGS.get(), EPItems.GREEN_GOLDEN_BOOTS.get(),
-                    consumer);
-
-            addAluminumGear(EPItems.GREEN_GOLD_INGOT.get(), EPItems.ALUMINUM_GREEN_GOLDEN_AXE.get(), EPItems.ALUMINUM_GREEN_GOLDEN_PICKAXE.get(),
-                    EPItems.ALUMINUM_GREEN_GOLDEN_SWORD.get(), EPItems.ALUMINUM_GREEN_GOLDEN_DAGGER.get(), EPItems.ALUMINUM_GREEN_GOLDEN_SHOVEL.get(),
-                    EPItems.ALUMINUM_GREEN_GOLDEN_HOE.get(), EPItems.ALUMINUM_GREEN_GOLDEN_POLISHER.get(), consumer);
-
             //Steel
             materialRecipes(EPItems.STEEL_INGOT.get(), EPItems.STEEL_NUGGET.get(), EPBlocks.STEEL_BLOCK.get(), consumer);
 
@@ -509,15 +499,6 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
 
             //Blue gold
             materialRecipes(EPItems.BLUE_GOLD_INGOT.get(), EPItems.BLUE_GOLD_NUGGET.get(), EPBlocks.BLUE_GOLD_BLOCK.get(), consumer);
-
-            addGear(EPItems.BLUE_GOLD_INGOT.get(), EPItems.BLUE_GOLDEN_AXE.get(), EPItems.BLUE_GOLDEN_PICKAXE.get(), EPItems.BLUE_GOLDEN_SWORD.get(),
-                    EPItems.BLUE_GOLDEN_DAGGER.get(), EPItems.BLUE_GOLDEN_SHOVEL.get(), EPItems.BLUE_GOLDEN_HOE.get(), EPItems.BLUE_GOLDEN_POLISHER.get(),
-                    EPItems.BLUE_GOLDEN_HELMET.get(), EPItems.BLUE_GOLDEN_CHESTPLATE.get(), EPItems.BLUE_GOLDEN_LEGGINGS.get(), EPItems.BLUE_GOLDEN_BOOTS.get(),
-                    consumer);
-
-            addAluminumGear(EPItems.BLUE_GOLD_INGOT.get(), EPItems.ALUMINUM_BLUE_GOLDEN_AXE.get(), EPItems.ALUMINUM_BLUE_GOLDEN_PICKAXE.get(),
-                    EPItems.ALUMINUM_BLUE_GOLDEN_SWORD.get(), EPItems.ALUMINUM_BLUE_GOLDEN_DAGGER.get(), EPItems.ALUMINUM_BLUE_GOLDEN_SHOVEL.get(),
-                    EPItems.ALUMINUM_BLUE_GOLDEN_HOE.get(), EPItems.ALUMINUM_BLUE_GOLDEN_POLISHER.get(), consumer);
 
             //Diamond
             ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, EPItems.DIAMOND_POLISHER.get())
