@@ -15,6 +15,7 @@ import net.marmar.enhanced_playthrough.block.custom.gempolisher.GemPolisherBlock
 import net.marmar.enhanced_playthrough.block.custom.grinder.MechanicalGrinderBlock;
 import net.marmar.enhanced_playthrough.block.custom.grinder.PrimalGrinderBlock;
 import net.marmar.enhanced_playthrough.block.custom.epfurnace.MasonryFurnaceBlock;
+import net.marmar.enhanced_playthrough.block.custom.growthdetector.GrowthDetectorBlock;
 import net.marmar.enhanced_playthrough.block.custom.wood.EPLeavesBlock;
 import net.marmar.enhanced_playthrough.block.custom.wood.EPLogsBlock;
 import net.marmar.enhanced_playthrough.block.custom.wood.EPPlanksBlock;
@@ -431,6 +432,10 @@ public class EPBlocks {
                 () -> new PrimalGrinderBlock(BlockBehaviour.Properties.copy(Blocks.MUD_BRICKS).noOcclusion()));
         public static final RegistryObject<Block> MECHANICAL_GRINDER = registerBlockWithItem("mechanical_grinder",
                 () -> new MechanicalGrinderBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE).noOcclusion()));
+
+        //Growth detector
+        public static final RegistryObject<Block> GROWTH_DETECTOR = registerBlockWithItem("growth_detector",
+                () -> new GrowthDetectorBlock(BlockBehaviour.Properties.copy(Blocks.COMPARATOR).noOcclusion()));
 
     //Crops
     public static final RegistryObject<Block> YERBA_MATE_CROP = BLOCKS.register("yerba_mate_crop",

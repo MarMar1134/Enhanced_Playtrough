@@ -1,4 +1,4 @@
-// 1.20.1	2025-08-03T20:57:38.471202	Item Models: enhanced_playthrough
+// 1.20.1	2025-08-12T20:08:50.5817245	Item Models: enhanced_playthrough
 b2df27b0d68c4c96244f2f344cb1fc54663e392f assets/enhanced_playthrough/models/item/adobe_alloy_furnace.json
 9731043a19f6a4326f19981cca25ade3d23cd23d assets/enhanced_playthrough/models/item/adobe_furnace.json
 6138cf518c63dfa682a698d0d38c0ff3315a5fd5 assets/enhanced_playthrough/models/item/aluminum_arrow.json
@@ -423,6 +423,7 @@ fe04f8d231074a4d959ce23022daa1ed7ff699cd assets/enhanced_playthrough/models/item
 62a58ff030f38a15d112d010c28f609b2d1873db assets/enhanced_playthrough/models/item/green_gold_nugget.json
 40580585815dd2cf37a4253869933de46843f0d2 assets/enhanced_playthrough/models/item/green_terracotta_shard.json
 faff95becb44a6cbc465c7d08986fc441ebfd19c assets/enhanced_playthrough/models/item/grounded_yerba_mate.json
+e5baf05a2db7bcf8b1f96e9c9b87bfc59b15dc5a assets/enhanced_playthrough/models/item/growth_detector.json
 7898112a58a2e4ee2c9f1c59cae351b7a37b37b8 assets/enhanced_playthrough/models/item/iron_dagger.json
 b47c4bfd2cb833d9e4b6aa4fd27314006a0c0102 assets/enhanced_playthrough/models/item/iron_dust.json
 bb94f4c8acf9f8bb81c005698f2895fb5e751e93 assets/enhanced_playthrough/models/item/iron_polisher.json

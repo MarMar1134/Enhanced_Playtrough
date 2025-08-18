@@ -355,6 +355,7 @@ public class ArgentinianLangProvider extends AbstractLangProvider {
         addBlock(EPBlocks.GEM_POLISHER, "Mesa de pulido");
         addBlock(EPBlocks.PRIMAL_GRINDER, "Moledora");
         addBlock(EPBlocks.MECHANICAL_GRINDER, "Moledora mecánizada");
+        addBlock(EPBlocks.GROWTH_DETECTOR, "Detector de crecimiento");
 
         //Items
         //Raw ores

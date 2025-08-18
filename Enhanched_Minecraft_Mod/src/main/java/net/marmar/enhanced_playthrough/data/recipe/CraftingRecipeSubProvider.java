@@ -344,6 +344,18 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .unlockedBy(getHasName(Items.REDSTONE), has(Items.REDSTONE))
                 .save(consumer);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, EPBlocks.GROWTH_DETECTOR.get())
+                .pattern(" T ")
+                .pattern("RLR")
+                .pattern("SSS")
+                .define('T', Items.REDSTONE_TORCH)
+                .define('R', Items.REDSTONE)
+                .define('L', EPItems.TIN_INGOT.get())
+                .define('S', Items.STONE)
+                .unlockedBy(getHasName(Items.REDSTONE), has(Items.REDSTONE))
+                .unlockedBy(getHasName(EPBlocks.GROWTH_DETECTOR.get()), has(EPBlocks.GROWTH_DETECTOR.get()))
+                .save(consumer);
+
         //Equipment recipes
             //Other tools
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, EPItems.FLINT_AND_COBBLE.get())

@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=east,powered=false": {
+      "model": "enhanced_playthrough:block/growth_detector",
+      "y": 270
+    },
+    "facing=east,powered=true": {
+      "model": "enhanced_playthrough:block/growth_detector_on",
+      "y": 270
+    },
+    "facing=north,powered=false": {
+      "model": "enhanced_playthrough:block/growth_detector",
+      "y": 180
+    },
+    "facing=north,powered=true": {
+      "model": "enhanced_playthrough:block/growth_detector_on",
+      "y": 180
+    },
+    "facing=south,powered=false": {
+      "model": "enhanced_playthrough:block/growth_detector"
+    },
+    "facing=south,powered=true": {
+      "model": "enhanced_playthrough:block/growth_detector_on"
+    },
+    "facing=west,powered=false": {
+      "model": "enhanced_playthrough:block/growth_detector",
+      "y": 90
+    },
+    "facing=west,powered=true": {
+      "model": "enhanced_playthrough:block/growth_detector_on",
+      "y": 90
+    }
+  }
+}

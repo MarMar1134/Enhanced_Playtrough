@@ -12,6 +12,7 @@ import net.minecraft.world.level.block.state.properties.IntegerProperty;
 public class YerbaMateCropBlock extends CropBlock {
 public static final int MAX_AGE = 4;
 public static final IntegerProperty AGE = BlockStateProperties.AGE_4;
+
     public YerbaMateCropBlock(Properties pProperties) {
         super(pProperties);
     }

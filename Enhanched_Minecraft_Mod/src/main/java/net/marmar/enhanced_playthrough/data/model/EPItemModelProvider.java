@@ -187,6 +187,8 @@ public class EPItemModelProvider extends ItemModelProvider {
         blockWithItem(EPBlocks.PRIMAL_GRINDER);
         blockWithItem(EPBlocks.MECHANICAL_GRINDER);
 
+        simpleBlockItem(EPBlocks.GROWTH_DETECTOR);
+
         //Food
         simpleItem(EPItems.RICE_GRAINS);
         simpleItem(EPItems.RICE_BOWL);

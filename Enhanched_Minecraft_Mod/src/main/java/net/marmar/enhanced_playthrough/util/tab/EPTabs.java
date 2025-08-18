@@ -37,6 +37,8 @@ public class EPTabs {
                         output.accept(EPBlocks.PRIMAL_GRINDER.get());
                         output.accept(EPBlocks.MECHANICAL_GRINDER.get());
 
+                        output.accept(EPBlocks.GROWTH_DETECTOR.get());
+
                         output.accept(EPItems.WALNUT_SIGN.get());
                         output.accept(EPItems.WALNUT_HANGING_SIGN.get());
 

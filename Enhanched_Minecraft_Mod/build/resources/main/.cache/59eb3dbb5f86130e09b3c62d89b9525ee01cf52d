@@ -1,4 +1,4 @@
-// 1.20.1	2025-08-05T14:04:23.2421486	Loot Tables
+// 1.20.1	2025-08-08T15:11:47.943892	Loot Tables
 2876cbc680a836d5ddee2832692d949fb4ef4a08 data/enhanced_playthrough/loot_tables/advancements/abrass_your_soul.json
 6fe69585b6fdef5fe87c9206529ab3f067bd7faf data/enhanced_playthrough/loot_tables/advancements/all_flowers.json
 1eeafbc68a3d12b314210c1a8b6a594e785fda3f data/enhanced_playthrough/loot_tables/advancements/get_all_gems.json
@@ -52,6 +52,7 @@ a8f0c54ed5f3b07519868f2c5980787392f94236 data/enhanced_playthrough/loot_tables/b
 96611b277b91a738c1dfecae8bda4aabc25ef8e6 data/enhanced_playthrough/loot_tables/blocks/green_apple_leaves.json
 1d728d5c49cbc3e404cb94b9f0c5a6b3cb3beccc data/enhanced_playthrough/loot_tables/blocks/green_apple_sapling.json
 33864aa63bcfa26b9535e4b1b3712126e095798e data/enhanced_playthrough/loot_tables/blocks/green_gold_block.json
+76b21646c1d6248a467c86d2d5ba8ae96a3de969 data/enhanced_playthrough/loot_tables/blocks/growth_detector.json
 c3eb2dbdb1812af266e7ec7eddb727634647c9d1 data/enhanced_playthrough/loot_tables/blocks/lemon_button.json
 fc626b6fd8b05ace0272fdba3077bb4483de86ee data/enhanced_playthrough/loot_tables/blocks/lemon_door.json
 5b35455493bc88d7e41d17810dd1f57ca18b976f data/enhanced_playthrough/loot_tables/blocks/lemon_fence.json

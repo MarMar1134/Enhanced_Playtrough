@@ -10,6 +10,7 @@ import net.marmar.enhanced_playthrough.block.custom.gempolisher.GemPolisherBlock
 import net.marmar.enhanced_playthrough.block.custom.grinder.entity.MechanicalGrinderBlockEntity;
 import net.marmar.enhanced_playthrough.block.custom.grinder.entity.PrimalGrinderBlockEntity;
 import net.marmar.enhanced_playthrough.block.custom.epfurnace.entity.MasonryFurnaceBlockEntity;
+import net.marmar.enhanced_playthrough.block.custom.growthdetector.GrowthDetectorBlockEntity;
 import net.marmar.enhanced_playthrough.block.custom.wood.sign.entity.EPHangingSignBlockEntity;
 import net.marmar.enhanced_playthrough.block.custom.wood.sign.entity.EPSignBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -73,6 +74,11 @@ public class EPBlockEntities {
                             EPBlocks.ORANGE_HANGING_SIGN.get(), EPBlocks.ORANGE_WALL_HANGING_SIGN.get(),
                             EPBlocks.LEMON_HANGING_SIGN.get(), EPBlocks.LEMON_WALL_HANGING_SIGN.get())
                     .build(null));
+
+    //Growth detector
+    public static final RegistryObject<BlockEntityType<GrowthDetectorBlockEntity>> GROWTH_DETECTOR_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("growth_detector_block", () -> BlockEntityType
+                    .Builder.of(GrowthDetectorBlockEntity::new, EPBlocks.GROWTH_DETECTOR.get()).build(null));
 
     public static void register(IEventBus eventBus){
         BLOCK_ENTITIES.register(eventBus);

@@ -350,7 +350,7 @@ public class EPBlockLootTables extends BlockLootSubProvider implements BlockLoot
         this.add(EPBlocks.SUCCULENT.get(), block -> createFlowerDrops(block, 2));
         this.add(EPBlocks.POTTED_SUCCULENT.get(), createPotFlowerItemTable(EPBlocks.SUCCULENT.get()));
 
-         //Entity blocks
+        //Entity blocks
         this.dropSelf(EPBlocks.ADOBE_FURNACE.get());
         this.dropSelf(EPBlocks.SOUL_FURNACE.get());
 
@@ -364,6 +364,8 @@ public class EPBlockLootTables extends BlockLootSubProvider implements BlockLoot
 
         this.dropSelf(EPBlocks.PRIMAL_GRINDER.get());
         this.dropSelf(EPBlocks.MECHANICAL_GRINDER.get());
+
+        this.dropSelf(EPBlocks.GROWTH_DETECTOR.get());
     }
 
     @Override

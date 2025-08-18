@@ -1,0 +1,76 @@
+{
+	"format_version": "1.9.0",
+	"credit": "Made with Blockbench",
+	"ambientocclusion": false,
+	"textures": {
+		"1": "block/redstone_torch_off",
+		"6": "enhanced_playthrough:block/growth_detector_bottom",
+		"7": "enhanced_playthrough:block/growth_detector_base",
+		"particle": "block/smooth_stone"
+	},
+	"elements": [
+		{
+			"name": "base",
+			"from": [0, 0, 0],
+			"to": [16, 2, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7, 0, 7]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 2], "texture": "#6"},
+				"east": {"uv": [0, 0, 16, 2], "texture": "#6"},
+				"south": {"uv": [0, 0, 16, 2], "texture": "#6"},
+				"west": {"uv": [0, 0, 16, 2], "texture": "#6"},
+				"up": {"uv": [0, 0, 16, 16], "rotation": 180, "texture": "#7"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#6"}
+			}
+		},
+		{
+			"name": "base_torch",
+			"from": [7, 2, 1],
+			"to": [9, 5, 3],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 1, 0]},
+			"faces": {
+				"north": {"uv": [7, 8, 9, 11], "texture": "#1"},
+				"east": {"uv": [7, 8, 9, 11], "texture": "#1"},
+				"south": {"uv": [7, 8, 9, 11], "texture": "#1"},
+				"west": {"uv": [7, 8, 9, 11], "texture": "#1"},
+				"up": {"uv": [7, 14, 9, 16], "texture": "#1"},
+				"down": {"uv": [7, 14, 9, 16], "texture": "#1"}
+			}
+		},
+		{
+			"name": "torch_head",
+			"from": [7, 5, 1],
+			"to": [9, 7, 3],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 5, 1]},
+			"faces": {
+				"north": {"uv": [7, 6, 9, 8], "texture": "#1"},
+				"east": {"uv": [7, 6, 9, 8], "texture": "#1"},
+				"south": {"uv": [7, 6, 9, 8], "texture": "#1"},
+				"west": {"uv": [7, 6, 9, 8], "texture": "#1"},
+				"up": {"uv": [7, 6, 9, 8], "texture": "#1"},
+				"down": {"uv": [7, 6, 9, 8], "texture": "#1"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "block",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [
+				{
+					"name": "base",
+					"origin": [8, 8, 8],
+					"color": 0,
+					"children": [0]
+				},
+				{
+					"name": "torch",
+					"origin": [8, 8, 8],
+					"color": 0,
+					"children": [1, 2]
+				}
+			]
+		}
+	]
+}

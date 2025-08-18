@@ -30,6 +30,7 @@ import static net.minecraft.world.level.block.state.properties.BlockStatePropert
 
 public class GemPolisherBlock extends BaseEntityBlock implements EntityBlock {
     public static final VoxelShape SHAPE = Block.box(0,0,0, 16,16, 16);
+
     public GemPolisherBlock(Properties pProperties) {
         super(pProperties);
         registerDefaultState(defaultBlockState().setValue(FACING, Direction.SOUTH));
@@ -83,9 +84,7 @@ public class GemPolisherBlock extends BaseEntityBlock implements EntityBlock {
     }
 
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level pLevel, BlockState pState, BlockEntityType<T> pBlockEntityType) {
-        if(pLevel.isClientSide()) {
-            return null;
-        }
+        if(pLevel.isClientSide()) return null;
 
         return createTickerHelper(pBlockEntityType, EPBlockEntities.GEM_POLISHER_BLOCK_ENTITY.get(),
                 (pLevel1, pPos, pState1, pBlockEntity) -> pBlockEntity.tick(pLevel1, pPos, pState1));

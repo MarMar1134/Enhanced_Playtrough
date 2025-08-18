@@ -38,6 +38,7 @@ public abstract class AbstractAlloyFurnaceBlock extends BaseEntityBlock implemen
         super(pProperties);
         registerDefaultState(defaultBlockState().setValue(FACING, Direction.SOUTH).setValue(BURNING, false));
     }
+
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
         super.createBlockStateDefinition(pBuilder);
