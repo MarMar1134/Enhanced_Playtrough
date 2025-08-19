@@ -160,6 +160,8 @@ public class EPTabs {
                         output.accept(EPItems.BLUE_GOLD_INGOT.get());
                         output.accept(EPItems.BLUE_GOLD_DUST.get());
                         output.accept(EPItems.BLUE_GOLD_NUGGET.get());
+
+                        output.accept(EPItems.CALIBRATED_QUARTZ.get());
                     }).build());
 
     public static final RegistryObject<CreativeModeTab> TOOLS = TABS.register(
@@ -742,6 +744,12 @@ public class EPTabs {
                         output.accept(EPBlocks.GREEN_GOLD_BLOCK.get());
                         output.accept(EPBlocks.STEEL_BLOCK.get());
                         output.accept(EPBlocks.BLUE_GOLD_BLOCK.get());
+
+                        output.accept(EPBlocks.CALIBRATED_QUARTZ_BLOCK.get());
+                        output.accept(EPBlocks.SMOOTH_CALIBRATED_QUARTZ_BLOCK.get());
+                        output.accept(EPBlocks.CHISELED_CALIBRATED_QUARTZ_BLOCK.get());
+                        output.accept(EPBlocks.CALIBRATED_QUARTZ_PILLAR.get());
+                        output.accept(EPBlocks.CALIBRATED_QUARTZ_BRICKS.get());
                     }).build());
 
     public static void register(IEventBus eventBus){

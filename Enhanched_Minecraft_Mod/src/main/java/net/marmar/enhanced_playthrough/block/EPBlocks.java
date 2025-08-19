@@ -404,6 +404,18 @@ public class EPBlocks {
         public static final RegistryObject<Block> BLUE_GOLD_BLOCK = registerBlockWithItem("blue_gold_block",
                 () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(6, 8)));
 
+        //Calibrated quartz
+        public static final RegistryObject<Block> CALIBRATED_QUARTZ_BLOCK = registerBlockWithItem("calibrated_quartz_block",
+                () -> new Block(BlockBehaviour.Properties.copy(Blocks.QUARTZ_BLOCK)));
+        public static final RegistryObject<Block> SMOOTH_CALIBRATED_QUARTZ_BLOCK = registerBlockWithItem("smooth_calibrated_quartz_block",
+                () -> new Block(BlockBehaviour.Properties.copy(Blocks.QUARTZ_BLOCK)));
+        public static final RegistryObject<Block> CHISELED_CALIBRATED_QUARTZ_BLOCK = registerBlockWithItem("chiseled_calibrated_quartz_block",
+                () -> new Block(BlockBehaviour.Properties.copy(Blocks.QUARTZ_BLOCK)));
+        public static final RegistryObject<Block> CALIBRATED_QUARTZ_PILLAR = registerBlockWithItem("calibrated_quartz_pillar",
+                () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.QUARTZ_BLOCK)));
+        public static final RegistryObject<Block> CALIBRATED_QUARTZ_BRICKS = registerBlockWithItem("calibrated_quartz_bricks",
+                () -> new Block(BlockBehaviour.Properties.copy(Blocks.QUARTZ_BLOCK)));
+
     //Entity blocks
         //Basic furnaces
         public static final RegistryObject<Block> ADOBE_FURNACE = registerBlockWithItem("adobe_furnace",

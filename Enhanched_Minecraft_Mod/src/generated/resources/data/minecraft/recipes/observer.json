@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "C": {
+      "item": "minecraft:cobblestone"
+    },
+    "Q": {
+      "item": "enhanced_playthrough:calibrated_quartz"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "pattern": [
+    "CCC",
+    "RRQ",
+    "CCC"
+  ],
+  "result": {
+    "item": "minecraft:observer"
+  },
+  "show_notification": true
+}

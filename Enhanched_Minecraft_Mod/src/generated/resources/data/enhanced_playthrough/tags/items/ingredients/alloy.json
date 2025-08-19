@@ -4,6 +4,7 @@
     "minecraft:raw_iron",
     "minecraft:coal",
     "enhanced_playthrough:raw_tin",
-    "enhanced_playthrough:raw_zinc"
+    "enhanced_playthrough:raw_zinc",
+    "minecraft:quartz"
   ]
 }

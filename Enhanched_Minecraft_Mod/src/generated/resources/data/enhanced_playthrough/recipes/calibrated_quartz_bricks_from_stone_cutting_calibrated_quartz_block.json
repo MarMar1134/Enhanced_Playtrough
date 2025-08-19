@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "enhanced_playthrough:calibrated_quartz_block"
+  },
+  "result": "enhanced_playthrough:calibrated_quartz_bricks"
+}

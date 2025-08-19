@@ -15,6 +15,7 @@ import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
+import net.minecraftforge.client.model.generators.ModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -133,6 +134,12 @@ public class EPBlockStateProvider extends BlockStateProvider {
         blockWithItem(EPBlocks.GREEN_GOLD_BLOCK);
         blockWithItem(EPBlocks.BLUE_GOLD_BLOCK);
 
+        //Calibrated quartz
+        orientableBlockWithSide(EPBlocks.CALIBRATED_QUARTZ_BLOCK.get());
+        smoothCalibratedQuartz(EPBlocks.SMOOTH_CALIBRATED_QUARTZ_BLOCK.get());
+        orientableBlock(EPBlocks.CHISELED_CALIBRATED_QUARTZ_BLOCK.get());
+        logBlock((RotatedPillarBlock) EPBlocks.CALIBRATED_QUARTZ_PILLAR.get());
+        blockWithItem(EPBlocks.CALIBRATED_QUARTZ_BRICKS);
 
         //Crops
         makeYerbaMateCrop((CropBlock) EPBlocks.YERBA_MATE_CROP.get(), "yerba_mate_stage","yerba_mate_stage");
@@ -462,9 +469,7 @@ public class EPBlockStateProvider extends BlockStateProvider {
                 new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/" + path + "_top")
         );
 
-        return ConfiguredModel.builder().modelFile(blockModels)
-                .rotationY((int) state.getValue(FACING).toYRot())
-                .build();
+        return ConfiguredModel.builder().modelFile(blockModels).rotationY((int) state.getValue(FACING).toYRot()).build();
     }
 
     protected ConfiguredModel[] masonryFurnaceModel(BlockState state, RegistryObject<Block> pBlock){
@@ -480,9 +485,7 @@ public class EPBlockStateProvider extends BlockStateProvider {
                         : new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/" + path + "_top")
         );
 
-        return ConfiguredModel.builder().modelFile(blockModels)
-                .rotationY((int) state.getValue(FACING).toYRot())
-                .build();
+        return ConfiguredModel.builder().modelFile(blockModels).rotationY((int) state.getValue(FACING).toYRot()).build();
     }
 
     protected ConfiguredModel[] alloyFurnaceModel(BlockState state, RegistryObject<Block> pBlock){
@@ -497,9 +500,7 @@ public class EPBlockStateProvider extends BlockStateProvider {
                 new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/" + path + "_top")
         );
 
-        return ConfiguredModel.builder().modelFile(blockModels)
-                .rotationY((int) state.getValue(FACING).toYRot())
-                .build();
+        return ConfiguredModel.builder().modelFile(blockModels).rotationY((int) state.getValue(FACING).toYRot()).build();
     }
 
     public void furnaceBlock(RegistryObject<Block> pBlock){
@@ -578,9 +579,34 @@ public class EPBlockStateProvider extends BlockStateProvider {
         simpleBlock(wallSignBlock, sign);
     }
 
+    public void orientableBlockWithSide(Block pBlock){
+        ModelFile blockModel = models().cubeBottomTop(blockName(pBlock), blockTextureWithExtra(pBlock, "side"),
+                blockTextureWithExtra(pBlock, "bottom"), blockTextureWithExtra(pBlock, "top"));
+
+        simpleBlock(pBlock, blockModel);
+    }
+
+    public void orientableBlock(Block pBlock){
+        ModelFile blockModel = models().cubeTop(blockName(pBlock),blockTextureWithExtra(pBlock, "side"),
+                blockTextureWithExtra(pBlock, "top"));
+
+        simpleBlock(pBlock, blockModel);
+    }
+
+    public void smoothCalibratedQuartz(Block pBlock){
+        ModelFile blockModel = models().cubeAll(blockName(pBlock),modLoc("block/calibrated_quartz_block_side"));
+
+        simpleBlock(pBlock, blockModel);
+    }
+
     //Helpers
     public String blockName(Block block) {
         return blockKey(block).getPath();
+    }
+
+    public ResourceLocation blockTextureWithExtra(Block block, String orientation) {
+        ResourceLocation name = blockKey(block);
+        return new ResourceLocation(name.getNamespace(), ModelProvider.BLOCK_FOLDER + "/" + name.getPath() + "_" + orientation);
     }
 
     public ResourceLocation blockKey(Block block) {

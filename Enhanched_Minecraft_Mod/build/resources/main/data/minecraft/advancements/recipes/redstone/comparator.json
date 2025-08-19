@@ -1,6 +1,18 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
+    "has_comparator": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:comparator"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "has_redstone": {
       "conditions": {
         "items": [
@@ -18,23 +30,11 @@
         "recipe": "minecraft:comparator"
       },
       "trigger": "minecraft:recipe_unlocked"
-    },
-    "has_tin_ingot": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "enhanced_playthrough:tin_ingot"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
     }
   },
   "requirements": [
     [
-      "has_tin_ingot",
+      "has_comparator",
       "has_redstone",
       "has_the_recipe"
     ]

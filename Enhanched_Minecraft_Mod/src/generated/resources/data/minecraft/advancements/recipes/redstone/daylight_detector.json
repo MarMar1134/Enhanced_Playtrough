@@ -1,0 +1,61 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_calibrated_quartz": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:calibrated_quartz"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_daylight_detector": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:daylight_detector"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_redstone": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:redstone"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:daylight_detector"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_redstone",
+      "has_calibrated_quartz",
+      "has_daylight_detector",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:daylight_detector"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -159,6 +159,12 @@ public class EPItemModelProvider extends ItemModelProvider {
                 //Lime
                 saplingAndCropItem(EPBlocks.LIME_SAPLING);
 
+        //Calibrated quartz
+        blockWithItem(EPBlocks.CALIBRATED_QUARTZ_BLOCK);
+        blockWithItem(EPBlocks.SMOOTH_CALIBRATED_QUARTZ_BLOCK);
+        blockWithItem(EPBlocks.CHISELED_CALIBRATED_QUARTZ_BLOCK);
+        blockWithItem(EPBlocks.CALIBRATED_QUARTZ_PILLAR);
+
         //Wild crops
         doubleBlockItem(EPBlocks.WILD_CORN_CROP);
         saplingAndCropItem(EPBlocks.WILD_WHEAT_CROP);
@@ -307,6 +313,9 @@ public class EPItemModelProvider extends ItemModelProvider {
         simpleItem(EPItems.GREEN_GOLD_DUST);
         simpleItem(EPItems.STEEL_DUST);
         simpleItem(EPItems.BLUE_GOLD_DUST);
+
+        //Manufactured
+        simpleItem(EPItems.CALIBRATED_QUARTZ);
 
         //templates
         simpleItem(EPItems.BRONZIUM_SMITHING_UPGRADE_TEMPLATE);

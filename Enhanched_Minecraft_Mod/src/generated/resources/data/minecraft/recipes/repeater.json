@@ -3,17 +3,21 @@
   "category": "redstone",
   "key": {
     "#": {
-      "item": "enhanced_playthrough:tin_ingot"
+      "item": "enhanced_playthrough:calibrated_quartz"
     },
     "I": {
       "item": "minecraft:stone"
+    },
+    "R": {
+      "item": "minecraft:redstone"
     },
     "W": {
       "item": "minecraft:redstone_torch"
     }
   },
   "pattern": [
-    "W#W",
+    "W W",
+    "R#R",
     "III"
   ],
   "result": {

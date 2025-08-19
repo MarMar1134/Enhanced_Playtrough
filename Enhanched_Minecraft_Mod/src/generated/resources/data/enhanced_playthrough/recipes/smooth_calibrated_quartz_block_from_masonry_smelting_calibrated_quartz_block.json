@@ -1,0 +1,12 @@
+{
+  "type": "enhanced_playthrough:masonry_smelting",
+  "category": "masonry_smelt",
+  "cooktime": 100,
+  "group": "smooth_calibrated_quartz_block",
+  "ingredient": {
+    "item": "enhanced_playthrough:calibrated_quartz_block"
+  },
+  "output": {
+    "item": "enhanced_playthrough:smooth_calibrated_quartz_block"
+  }
+}

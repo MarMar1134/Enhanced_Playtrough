@@ -229,6 +229,10 @@ public class SmeltingRecipeSubProvider extends RecipeProvider {
         masonrySmelting(consumer, Blocks.POLISHED_BLACKSTONE_BRICKS, Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS, "cracked_polished_blackstone_bricks");
 
         masonrySmelting(consumer, Blocks.QUARTZ_BLOCK, Blocks.SMOOTH_QUARTZ, "smooth_quartz");
+
+        oreSmelting(consumer, EPBlocks.CALIBRATED_QUARTZ_BLOCK.get(), RecipeCategory.BUILDING_BLOCKS, EPBlocks.SMOOTH_CALIBRATED_QUARTZ_BLOCK.get(),
+                0.1f,"smooth_calibrated_quartz_block");
+        masonrySmelting(consumer, EPBlocks.CALIBRATED_QUARTZ_BLOCK.get(), EPBlocks.SMOOTH_CALIBRATED_QUARTZ_BLOCK.get(), "smooth_calibrated_quartz_block");
     }
 
     public static void addTerracottaRecipes(Consumer<FinishedRecipe> pConsumer){

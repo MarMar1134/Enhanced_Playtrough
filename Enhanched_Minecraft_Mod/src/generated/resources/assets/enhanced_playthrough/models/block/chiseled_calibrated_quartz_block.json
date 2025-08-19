@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_top",
+  "textures": {
+    "side": "enhanced_playthrough:block/chiseled_calibrated_quartz_block_side",
+    "top": "enhanced_playthrough:block/chiseled_calibrated_quartz_block_top"
+  }
+}

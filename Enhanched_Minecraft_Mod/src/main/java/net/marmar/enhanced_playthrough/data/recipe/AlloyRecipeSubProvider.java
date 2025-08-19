@@ -71,6 +71,11 @@ public class AlloyRecipeSubProvider extends RecipeProvider {
                 AlloyRecipeCategory.SIMPLE_ALLOY, "blue_gold_ingot");
         goldenAlloy(consumer, Items.GOLD_INGOT, EPItems.COBALT.get(), EPItems.BLUE_GOLD_INGOT.get(), 2,
                 AlloyRecipeCategory.COMPLEX_ALLOY, "blue_gold_ingot");
+
+        //Calibrated quartz
+        oreAlloying(consumer, Items.QUARTZ, EPItems.RAW_TIN.get(), EPItems.CALIBRATED_QUARTZ.get(), "calibrated_quartz");
+        superOreAlloying(consumer, Items.QUARTZ, EPItems.RAW_TIN.get(), EPItems.CALIBRATED_QUARTZ.get(),
+                AlloyRecipeCategory.SIMPLE_ALLOY, "calibrated_quartz");
     }
 
     //Unlockment triggers

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "C": {
+      "item": "enhanced_playthrough:calibrated_quartz_block"
+    }
+  },
+  "pattern": [
+    "CC",
+    "CC"
+  ],
+  "result": {
+    "item": "enhanced_playthrough:calibrated_quartz_bricks"
+  },
+  "show_notification": true
+}

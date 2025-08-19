@@ -248,6 +248,33 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
             blockWithoutPolishedVersionRecipes(EPBlocks.FIREBRICKS.get(), EPBlocks.FIREBRICK_WALL.get(), EPBlocks.FIREBRICK_STAIRS.get(),
                     EPBlocks.FIREBRICK_SLAB.get(), consumer);
 
+            //Calibrated quartz
+            ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EPBlocks.CALIBRATED_QUARTZ_BLOCK.get())
+                    .pattern("CC")
+                    .pattern("CC")
+                    .define('C', EPItems.CALIBRATED_QUARTZ.get())
+                    .unlockedBy(getHasName(EPBlocks.CALIBRATED_QUARTZ_BLOCK.get()), has(EPBlocks.CALIBRATED_QUARTZ_BLOCK.get()))
+                    .unlockedBy(getHasName(EPItems.CALIBRATED_QUARTZ.get()), has(EPItems.CALIBRATED_QUARTZ.get()))
+                    .save(consumer);
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EPItems.CALIBRATED_QUARTZ.get(), 4)
+                    .requires(EPBlocks.CALIBRATED_QUARTZ_BLOCK.get())
+                    .unlockedBy(getHasName(EPItems.CALIBRATED_QUARTZ.get()), has(EPItems.CALIBRATED_QUARTZ.get()))
+                    .save(consumer);
+            ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EPBlocks.CALIBRATED_QUARTZ_PILLAR.get())
+                    .pattern("C")
+                    .pattern("C")
+                    .define('C', EPBlocks.CALIBRATED_QUARTZ_BLOCK.get())
+                    .unlockedBy(getHasName(EPBlocks.CALIBRATED_QUARTZ_BLOCK.get()), has(EPBlocks.CALIBRATED_QUARTZ_BLOCK.get()))
+                    .unlockedBy(getHasName(EPBlocks.CALIBRATED_QUARTZ_PILLAR.get()), has(EPBlocks.CALIBRATED_QUARTZ_PILLAR.get()))
+                    .save(consumer);
+            ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EPBlocks.CALIBRATED_QUARTZ_BRICKS.get())
+                    .pattern("CC")
+                    .pattern("CC")
+                    .define('C', EPBlocks.CALIBRATED_QUARTZ_BLOCK.get())
+                    .unlockedBy(getHasName(EPBlocks.CALIBRATED_QUARTZ_BLOCK.get()), has(EPBlocks.CALIBRATED_QUARTZ_BLOCK.get()))
+                    .unlockedBy(getHasName(EPBlocks.CALIBRATED_QUARTZ_BRICKS.get()), has(EPBlocks.CALIBRATED_QUARTZ_BRICKS.get()))
+                    .save(consumer);
+
         //Entities
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, EPBlocks.ADOBE_FURNACE.get())
                 .pattern("###")
@@ -350,7 +377,7 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .pattern("SSS")
                 .define('T', Items.REDSTONE_TORCH)
                 .define('R', Items.REDSTONE)
-                .define('L', EPItems.TIN_INGOT.get())
+                .define('L', EPItems.CALIBRATED_QUARTZ.get())
                 .define('S', Items.STONE)
                 .unlockedBy(getHasName(Items.REDSTONE), has(Items.REDSTONE))
                 .unlockedBy(getHasName(EPBlocks.GROWTH_DETECTOR.get()), has(EPBlocks.GROWTH_DETECTOR.get()))
@@ -559,23 +586,47 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
 
             //Redstone
             ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, Items.REPEATER)
-                    .pattern("W#W")
+                    .pattern("W W")
+                    .pattern("R#R")
                     .pattern("III")
                     .define('W', Items.REDSTONE_TORCH)
-                    .define('#', EPItems.TIN_INGOT.get())
+                    .define('R', Items.REDSTONE)
+                    .define('#', EPItems.CALIBRATED_QUARTZ.get())
                     .define('I', Blocks.STONE)
-                    .unlockedBy(getHasName(EPItems.TIN_INGOT.get()), has(EPItems.TIN_INGOT.get()))
+                    .unlockedBy(getHasName(Items.REDSTONE), has(Items.REDSTONE))
+                    .unlockedBy(getHasName(Items.REPEATER), has(Items.REPEATER))
                     .save(consumer);
             ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, Items.COMPARATOR)
                     .pattern("WWW")
                     .pattern("AFA")
                     .pattern("III")
                     .define('W', Items.REDSTONE_TORCH)
-                    .define('F', EPItems.TIN_INGOT.get())
+                    .define('F', EPItems.CALIBRATED_QUARTZ.get())
                     .define('A', Items.REDSTONE)
                     .define('I', Blocks.STONE)
-                    .unlockedBy(getHasName(EPItems.TIN_INGOT.get()), has(EPItems.TIN_INGOT.get()))
+                    .unlockedBy(getHasName(Items.COMPARATOR), has(Items.COMPARATOR))
                     .unlockedBy(getHasName(Items.REDSTONE), has(Items.REDSTONE))
+                    .save(consumer);
+            ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, Blocks.OBSERVER)
+                    .pattern("CCC")
+                    .pattern("RRQ")
+                    .pattern("CCC")
+                    .define('C', Blocks.COBBLESTONE)
+                    .define('R', Items.REDSTONE)
+                    .define('Q', EPItems.CALIBRATED_QUARTZ.get())
+                    .unlockedBy(getHasName(Items.REDSTONE), has(Items.REDSTONE))
+                    .unlockedBy(getHasName(Blocks.OBSERVER), has(Blocks.OBSERVER))
+                    .save(consumer);
+            ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, Blocks.DAYLIGHT_DETECTOR)
+                    .pattern("GGG")
+                    .pattern("QQQ")
+                    .pattern("SSS")
+                    .define('G', Blocks.GLASS)
+                    .define('Q', EPItems.CALIBRATED_QUARTZ.get())
+                    .define('S', ItemTags.WOODEN_SLABS)
+                    .unlockedBy(getHasName(Items.REDSTONE), has(Items.REDSTONE))
+                    .unlockedBy(getHasName(EPItems.CALIBRATED_QUARTZ.get()), has(EPItems.CALIBRATED_QUARTZ.get()))
+                    .unlockedBy(getHasName(Blocks.DAYLIGHT_DETECTOR), has(Blocks.DAYLIGHT_DETECTOR))
                     .save(consumer);
 
             //Items

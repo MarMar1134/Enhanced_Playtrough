@@ -269,6 +269,11 @@ public class GeneralRecipeSubProvider extends RecipeProvider {
         stoneCutting(consumer, EPBlocks.SOUL_MUD_BRICKS.get(), EPBlocks.SOUL_MUD_BRICK_SLAB.get(), 2);
         stoneCutting(consumer, EPBlocks.SOUL_MUD_BRICKS.get(), EPBlocks.SOUL_MUD_BRICK_STAIRS.get(), 1);
         stoneCutting(consumer, EPBlocks.SOUL_MUD_BRICKS.get(), EPBlocks.SOUL_MUD_BRICK_WALL.get(), 1);
+
+        //Calibrated quartz
+        stoneCutting(consumer, EPBlocks.CALIBRATED_QUARTZ_BLOCK.get(), EPBlocks.CHISELED_CALIBRATED_QUARTZ_BLOCK.get(), 1);
+        stoneCutting(consumer, EPBlocks.CALIBRATED_QUARTZ_BLOCK.get(), EPBlocks.CALIBRATED_QUARTZ_PILLAR.get(), 1);
+        stoneCutting(consumer, EPBlocks.CALIBRATED_QUARTZ_BLOCK.get(), EPBlocks.CALIBRATED_QUARTZ_BRICKS.get(), 1);
     }
 
     private static void gemPolishingRecipes(Consumer<FinishedRecipe> consumer){

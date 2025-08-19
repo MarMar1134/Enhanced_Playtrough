@@ -531,7 +531,8 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                 Items.RAW_IRON,
                 Items.COAL,
                 EPItems.RAW_TIN.get(),
-                EPItems.RAW_ZINC.get()
+                EPItems.RAW_ZINC.get(),
+                Items.QUARTZ
         );
 
         this.tag(EPTags.Items.BLAST_ALLOY_INGREDIENT).addTags(

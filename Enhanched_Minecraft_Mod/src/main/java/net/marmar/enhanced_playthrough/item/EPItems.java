@@ -145,6 +145,10 @@ public class EPItems {
         public static final RegistryObject<Item> BLUE_GOLD_DUST = ITEMS.register(
                 "blue_gold_dust", ()-> new Item(new Item.Properties()));
 
+        //Manufactured
+        public static final RegistryObject<Item> CALIBRATED_QUARTZ = ITEMS.register(
+                "calibrated_quartz", ()-> new Item(new Item.Properties()));
+
     //Templates
     public static final RegistryObject<Item> BRONZIUM_SMITHING_UPGRADE_TEMPLATE = ITEMS.register(
             "bronzium_upgrade_smithing_template", EPSmithingTemplateItem::createBronziumSmithingTemplate);

@@ -3,7 +3,7 @@
   "category": "redstone",
   "key": {
     "L": {
-      "item": "enhanced_playthrough:tin_ingot"
+      "item": "enhanced_playthrough:calibrated_quartz"
     },
     "R": {
       "item": "minecraft:redstone"

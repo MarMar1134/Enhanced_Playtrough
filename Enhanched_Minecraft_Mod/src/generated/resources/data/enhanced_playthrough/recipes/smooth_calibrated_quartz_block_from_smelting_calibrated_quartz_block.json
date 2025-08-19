@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "blocks",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "group": "smooth_calibrated_quartz_block",
+  "ingredient": {
+    "item": "enhanced_playthrough:calibrated_quartz_block"
+  },
+  "result": "enhanced_playthrough:smooth_calibrated_quartz_block"
+}

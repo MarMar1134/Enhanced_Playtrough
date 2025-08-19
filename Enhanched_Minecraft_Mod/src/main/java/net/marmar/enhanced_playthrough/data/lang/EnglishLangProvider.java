@@ -345,6 +345,13 @@ public class EnglishLangProvider extends AbstractLangProvider {
             addBlock(EPBlocks.STEEL_BLOCK, "Block of steel");
             addBlock(EPBlocks.BLUE_GOLD_BLOCK, "Block of blue gold");
 
+        //Calibrated quartz
+        addBlock(EPBlocks.CALIBRATED_QUARTZ_BLOCK, "Block of calibrated quartz");
+        addBlock(EPBlocks.SMOOTH_CALIBRATED_QUARTZ_BLOCK, "Smooth calibrated quartz block");
+        addBlock(EPBlocks.CHISELED_CALIBRATED_QUARTZ_BLOCK, "Chiseled calibrated quartz block");
+        addBlock(EPBlocks.CALIBRATED_QUARTZ_PILLAR, "Calibrated quartz pillar");
+        addBlock(EPBlocks.CALIBRATED_QUARTZ_BRICKS, "Calibrated quartz bricks");
+
             //Block entities
             addBlock(EPBlocks.ADOBE_FURNACE, "Mud furnace");
             addBlock(EPBlocks.SOUL_FURNACE, "Soul mud furnace");
@@ -449,6 +456,9 @@ public class EnglishLangProvider extends AbstractLangProvider {
             addItem(EPItems.GREEN_GOLD_DUST, "Green gold dust");
             addItem(EPItems.STEEL_DUST, "Steel dust");
             addItem(EPItems.BLUE_GOLD_DUST, "Blue gold dust");
+
+            //Manufactured
+            addItem(EPItems.CALIBRATED_QUARTZ, "Calibrated quartz");
 
             //Acids and potions
             addAcid("sulfuric_acid", "Sulfuric acid");

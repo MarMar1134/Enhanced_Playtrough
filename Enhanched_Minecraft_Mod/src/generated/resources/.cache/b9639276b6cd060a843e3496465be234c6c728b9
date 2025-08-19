@@ -1,4 +1,4 @@
-// 1.20.1	2025-07-28T00:13:30.4828637	Tags for minecraft:item mod id enhanced_playthrough
+// 1.20.1	2025-08-19T14:05:53.1779689	Tags for minecraft:item mod id enhanced_playthrough
 0ff3092eb36a0159ae287d2f429e5f5eb6fb0c0a data/enhanced_playthrough/tags/items/aluminum.json
 b3b284c126879d981b4f706eb8ea0e63bd17ae12 data/enhanced_playthrough/tags/items/apple_logs.json
 1d609255995a77ead62a005cb2b75886514bb25a data/enhanced_playthrough/tags/items/blue_gold.json
@@ -20,7 +20,7 @@ d4c382fd80e3db9371b76d593e7c4c9ded30562b data/enhanced_playthrough/tags/items/in
 70da1cccd82688eb30c7d90cbbf9ab1407efa373 data/enhanced_playthrough/tags/items/ingots/tin.json
 8d992f8bbc2edd3ea62a304b5e336bbaf6c116ec data/enhanced_playthrough/tags/items/ingots/zinc.json
 8090e688d13dbcc604b6dd1cb62800d75273eeea data/enhanced_playthrough/tags/items/ingredients.json
-2ddd5b0739572968da601d14fbf131d78e8e673b data/enhanced_playthrough/tags/items/ingredients/alloy.json
+3a2d837af1fc40911a9d0290e0060d3e745b89ff data/enhanced_playthrough/tags/items/ingredients/alloy.json
 7b224db4176e22e364423c251f906262bd8f8200 data/enhanced_playthrough/tags/items/ingredients/basic_smelt.json
 0438ec837938c5ea71c67674b2bae7638fe7a7b8 data/enhanced_playthrough/tags/items/ingredients/blast_alloy.json
 5e721bdc414693a14c4480e190f068f275b27533 data/enhanced_playthrough/tags/items/ingredients/masonry.json

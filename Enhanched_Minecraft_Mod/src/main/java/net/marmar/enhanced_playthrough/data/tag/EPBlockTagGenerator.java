@@ -376,7 +376,14 @@ public class EPBlockTagGenerator extends BlockTagsProvider {
                 EPBlocks.ROSE_GOLD_BLOCK.get(),
                 EPBlocks.STEEL_BLOCK.get(),
                 EPBlocks.GREEN_GOLD_BLOCK.get(),
-                EPBlocks.BLUE_GOLD_BLOCK.get()
+                EPBlocks.BLUE_GOLD_BLOCK.get(),
+
+                //Calibrated quartz
+                EPBlocks.CALIBRATED_QUARTZ_BLOCK.get(),
+                EPBlocks.SMOOTH_CALIBRATED_QUARTZ_BLOCK.get(),
+                EPBlocks.CHISELED_CALIBRATED_QUARTZ_BLOCK.get(),
+                EPBlocks.CALIBRATED_QUARTZ_PILLAR.get(),
+                EPBlocks.CALIBRATED_QUARTZ_BRICKS.get()
         );
 
         this.tag(Tags.Blocks.NEEDS_WOOD_TOOL).add(
@@ -401,6 +408,13 @@ public class EPBlockTagGenerator extends BlockTagsProvider {
                 EPBlocks.POLISHED_LIMESTONE_SLAB.get(),
                 EPBlocks.POLISHED_LIMESTONE_STAIRS.get(),
                 EPBlocks.POLISHED_LIMESTONE_WALL.get(),
+
+                //Calibrated quartz
+                EPBlocks.CALIBRATED_QUARTZ_BLOCK.get(),
+                EPBlocks.SMOOTH_CALIBRATED_QUARTZ_BLOCK.get(),
+                EPBlocks.CHISELED_CALIBRATED_QUARTZ_BLOCK.get(),
+                EPBlocks.CALIBRATED_QUARTZ_PILLAR.get(),
+                EPBlocks.CALIBRATED_QUARTZ_BRICKS.get(),
 
                 //Entities
                 EPBlocks.ADOBE_FURNACE.get(),

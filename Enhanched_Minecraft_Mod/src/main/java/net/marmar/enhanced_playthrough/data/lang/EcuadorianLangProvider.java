@@ -345,6 +345,13 @@ public class EcuadorianLangProvider extends AbstractLangProvider {
         addBlock(EPBlocks.STEEL_BLOCK, "Bloque de acero");
         addBlock(EPBlocks.BLUE_GOLD_BLOCK, "Bloque de oro azul");
 
+        //Calibrated quartz
+        addBlock(EPBlocks.CALIBRATED_QUARTZ_BLOCK, "Bloque de cuarzo calibrado");
+        addBlock(EPBlocks.SMOOTH_CALIBRATED_QUARTZ_BLOCK, "Bloque de cuarzo calibrado liso");
+        addBlock(EPBlocks.CHISELED_CALIBRATED_QUARTZ_BLOCK, "Bloque de cuarzo calibrado cincelado");
+        addBlock(EPBlocks.CALIBRATED_QUARTZ_PILLAR, "Pilar de cuarzo calibrado");
+        addBlock(EPBlocks.CALIBRATED_QUARTZ_BRICKS, "Ladrillos de cuarzo calibrado");
+
         //Block entities
         addBlock(EPBlocks.ADOBE_FURNACE, "Horno de barro");
         addBlock(EPBlocks.SOUL_FURNACE, "Horno de barro de almas");
@@ -449,6 +456,9 @@ public class EcuadorianLangProvider extends AbstractLangProvider {
         addItem(EPItems.GREEN_GOLD_DUST, "Pólvo de oro verde");
         addItem(EPItems.STEEL_DUST, "Pólvo de acero");
         addItem(EPItems.BLUE_GOLD_DUST, "Pólvo de oro azul");
+
+        //Manufactured
+        addItem(EPItems.CALIBRATED_QUARTZ, "Cuarzo calibrado");
 
         //Acids and potions
         addAcid("sulfuric_acid", "Ácido sulfurico");

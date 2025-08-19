@@ -150,6 +150,13 @@ public class EPBlockLootTables extends BlockLootSubProvider implements BlockLoot
         this.dropSelf(EPBlocks.GREEN_GOLD_BLOCK.get());
         this.dropSelf(EPBlocks.BLUE_GOLD_BLOCK.get());
 
+        //Calibrated quartz
+        this.dropSelf(EPBlocks.CALIBRATED_QUARTZ_BLOCK.get());
+        this.dropSelf(EPBlocks.SMOOTH_CALIBRATED_QUARTZ_BLOCK.get());
+        this.dropSelf(EPBlocks.CHISELED_CALIBRATED_QUARTZ_BLOCK.get());
+        this.dropSelf(EPBlocks.CALIBRATED_QUARTZ_PILLAR.get());
+        this.dropSelf(EPBlocks.CALIBRATED_QUARTZ_BRICKS.get());
+
         //Tree drops
             //walnut
             this.dropSelf(EPBlocks.WALNUT_SAPLING.get());
