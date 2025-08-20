@@ -594,7 +594,7 @@ public class EPBlockStateProvider extends BlockStateProvider {
     }
 
     public void smoothCalibratedQuartz(Block pBlock){
-        ModelFile blockModel = models().cubeAll(blockName(pBlock),modLoc("block/calibrated_quartz_block_side"));
+        ModelFile blockModel = models().cubeAll(blockName(pBlock),modLoc("block/calibrated_quartz_block_bottom"));
 
         simpleBlock(pBlock, blockModel);
     }

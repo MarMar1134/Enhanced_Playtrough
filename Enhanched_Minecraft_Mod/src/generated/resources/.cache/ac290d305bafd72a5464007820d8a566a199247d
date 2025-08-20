@@ -1,4 +1,4 @@
-// 1.20.1	2025-08-19T13:37:02.4920438	Block States: enhanced_playthrough
+// 1.20.1	2025-08-20T15:48:03.5828283	Block States: enhanced_playthrough
 e36ac47666ebcb23b8794624c8ca30ea90df2900 assets/enhanced_playthrough/blockstates/adobe_alloy_furnace.json
 191e330df8a94a82844c4569f06587df0f088ed0 assets/enhanced_playthrough/blockstates/adobe_furnace.json
 7028b98f18a35d138073f0a6b0e0d421e2e34ed6 assets/enhanced_playthrough/blockstates/aluminum_block.json
@@ -410,7 +410,7 @@ a54208f85110a54a50e3ded4ffe920ba328b5670 assets/enhanced_playthrough/models/bloc
 b26acaeb725a867d4b260e2cc5f3c06cb93a2c31 assets/enhanced_playthrough/models/block/silver_block.json
 5fc7cef347f9ea3bea4efc4e19837764fabf1655 assets/enhanced_playthrough/models/block/silver_ore.json
 24c1ccd0abeb4b309cc9ff23485b780254b19cbb assets/enhanced_playthrough/models/block/small_reeds.json
-ee0bc13f4abc06753e751e1b307e4075fe97333e assets/enhanced_playthrough/models/block/smooth_calibrated_quartz_block.json
+76f50dc3909077b15fef21937575830aef6068d6 assets/enhanced_playthrough/models/block/smooth_calibrated_quartz_block.json
 11e7ee3c73fdc12fe2340392d1f091a52312a569 assets/enhanced_playthrough/models/block/soul_alloy_furnace.json
 9c16f9a7a33cd284b986d02a4750db2cc80ad505 assets/enhanced_playthrough/models/block/soul_alloy_furnace_on.json
 f1c66eadf69416fb28c6c117e3b6669c40f0a456 assets/enhanced_playthrough/models/block/soul_furnace.json

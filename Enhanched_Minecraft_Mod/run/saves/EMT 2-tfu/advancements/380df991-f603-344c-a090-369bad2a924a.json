@@ -83,12 +83,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/tools/aluminum_blue_golden_pickaxe": {
-    "criteria": {
-      "has_rod": "2025-07-28 00:35:27 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:recipes/combat/aluminum_golden_sword": {
     "criteria": {
       "has_rod": "2025-07-28 00:35:27 -0300"
@@ -101,19 +95,7 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/tools/aluminum_green_golden_pickaxe": {
-    "criteria": {
-      "has_rod": "2025-07-28 00:35:27 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:recipes/tools/aluminum_brass_pickaxe": {
-    "criteria": {
-      "has_rod": "2025-07-28 00:35:27 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/tools/aluminum_green_golden_axe": {
     "criteria": {
       "has_rod": "2025-07-28 00:35:27 -0300"
     },
@@ -131,18 +113,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/combat/aluminum_blue_golden_dagger": {
-    "criteria": {
-      "has_rod": "2025-07-28 00:35:27 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/tools/aluminum_green_golden_shovel": {
-    "criteria": {
-      "has_rod": "2025-07-28 00:35:27 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:recipes/tools/aluminum_iron_axe": {
     "criteria": {
       "has_rod": "2025-07-28 00:35:27 -0300"
@@ -155,18 +125,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/tools/aluminum_rose_golden_polisher": {
-    "criteria": {
-      "has_rod": "2025-07-28 00:35:27 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/tools/aluminum_rose_golden_axe": {
-    "criteria": {
-      "has_rod": "2025-07-28 00:35:27 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:recipes/combat/aluminum_bronze_dagger": {
     "criteria": {
       "has_rod": "2025-07-28 00:35:27 -0300"
@@ -174,12 +132,6 @@
     "done": true
   },
   "enhanced_playthrough:recipes/tools/aluminum_golden_polisher": {
-    "criteria": {
-      "has_rod": "2025-07-28 00:35:27 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/combat/aluminum_green_golden_dagger": {
     "criteria": {
       "has_rod": "2025-07-28 00:35:27 -0300"
     },
@@ -209,12 +161,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/tools/aluminum_blue_golden_axe": {
-    "criteria": {
-      "has_rod": "2025-07-28 00:35:27 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:recipes/combat/aluminum_iron_dagger": {
     "criteria": {
       "has_rod": "2025-07-28 00:35:27 -0300"
@@ -239,12 +185,6 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/combat/aluminum_rose_golden_sword": {
-    "criteria": {
-      "has_rod": "2025-07-28 00:35:27 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:recipes/tools/aluminum_iron_pickaxe": {
     "criteria": {
       "has_rod": "2025-07-28 00:35:27 -0300"
@@ -257,25 +197,7 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/tools/aluminum_rose_golden_shovel": {
-    "criteria": {
-      "has_rod": "2025-07-28 00:35:27 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/tools/aluminum_green_golden_polisher": {
-    "criteria": {
-      "has_rod": "2025-07-28 00:35:27 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:recipes/combat/aluminum_golden_dagger": {
-    "criteria": {
-      "has_rod": "2025-07-28 00:35:27 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/combat/aluminum_blue_golden_sword": {
     "criteria": {
       "has_rod": "2025-07-28 00:35:27 -0300"
     },
@@ -300,12 +222,6 @@
     "done": true
   },
   "enhanced_playthrough:recipes/tools/aluminum_steel_shovel": {
-    "criteria": {
-      "has_rod": "2025-07-28 00:35:27 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/combat/aluminum_green_golden_sword": {
     "criteria": {
       "has_rod": "2025-07-28 00:35:27 -0300"
     },
@@ -353,31 +269,7 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/tools/aluminum_rose_golden_hoe": {
-    "criteria": {
-      "has_rod": "2025-07-28 00:35:27 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/combat/aluminum_rose_golden_dagger": {
-    "criteria": {
-      "has_rod": "2025-07-28 00:35:27 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:recipes/tools/aluminum_diamond_polisher": {
-    "criteria": {
-      "has_rod": "2025-07-28 00:35:27 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/tools/aluminum_rose_golden_pickaxe": {
-    "criteria": {
-      "has_rod": "2025-07-28 00:35:27 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/tools/aluminum_green_golden_hoe": {
     "criteria": {
       "has_rod": "2025-07-28 00:35:27 -0300"
     },
@@ -431,19 +323,7 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/tools/aluminum_blue_golden_polisher": {
-    "criteria": {
-      "has_rod": "2025-07-28 00:35:27 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:recipes/combat/aluminum_steel_sword": {
-    "criteria": {
-      "has_rod": "2025-07-28 00:35:27 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/tools/aluminum_blue_golden_hoe": {
     "criteria": {
       "has_rod": "2025-07-28 00:35:27 -0300"
     },
@@ -468,12 +348,6 @@
     "done": true
   },
   "enhanced_playthrough:recipes/tools/aluminum_bronze_hoe": {
-    "criteria": {
-      "has_rod": "2025-07-28 00:35:27 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/tools/aluminum_blue_golden_shovel": {
     "criteria": {
       "has_rod": "2025-07-28 00:35:27 -0300"
     },
@@ -1295,15 +1169,95 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/tools/green_golden_pickaxe": {
+  "enhanced_playthrough:recipes/combat/golden_upgrade_smithing_template": {
+    "criteria": {
+      "has_golden_upgrade_smithing_template": "2025-08-03 21:04:09 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/blue_golden_helmet_from_smithing_golden_helmet_with_blue_gold_ingot": {
+    "criteria": {
+      "has_golden_helmet": "2025-08-03 21:04:21 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/rose_golden_helmet_from_smithing_golden_helmet_with_rose_gold_ingot": {
+    "criteria": {
+      "has_golden_helmet": "2025-08-03 21:04:21 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/green_golden_helmet_from_smithing_golden_helmet_with_green_gold_ingot": {
+    "criteria": {
+      "has_golden_helmet": "2025-08-03 21:04:21 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/rose_gold_block": {
+    "criteria": {
+      "has_rose_gold_ingot": "2025-08-03 21:04:26 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:blossom": {
+    "criteria": {
+      "has_item": "2025-08-03 21:04:26 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:the_goldenpuff_girls": {
+    "criteria": {
+      "has_green_gold_ingot": "2025-08-03 21:04:29 -0300",
+      "has_blue_gold_ingot": "2025-08-03 21:04:30 -0300",
+      "has_rose_gold_ingot": "2025-08-03 21:04:26 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/rose_gold_ingot_from_nuggets": {
+    "criteria": {
+      "has_rose_gold_ingot": "2025-08-03 21:04:26 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/rose_gold_ingot_from_block": {
+    "criteria": {
+      "has_rose_gold_ingot": "2025-08-03 21:04:26 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/rose_gold_nugget": {
+    "criteria": {
+      "has_rose_gold_ingot": "2025-08-03 21:04:26 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/green_gold_nugget": {
     "criteria": {
       "has_green_gold_ingot": "2025-08-03 21:04:29 -0300"
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/green_gold_dust_from_mechanical_grinding": {
+  "enhanced_playthrough:recipes/misc/green_gold_block": {
     "criteria": {
-      "TagKey[minecraft:item / enhanced_playthrough:manufacturable/green_gold]": "2025-08-03 21:05:20 -0300"
+      "has_green_gold_ingot": "2025-08-03 21:04:29 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/green_gold_ingot_from_block": {
+    "criteria": {
+      "has_green_gold_ingot": "2025-08-03 21:04:29 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/misc/green_gold_ingot_from_nuggets": {
+    "criteria": {
+      "has_green_gold_ingot": "2025-08-03 21:04:29 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:buttercup": {
+    "criteria": {
+      "has_item": "2025-08-03 21:04:29 -0300"
     },
     "done": true
   },
@@ -1319,51 +1273,9 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/tools/blue_golden_pickaxe": {
-    "criteria": {
-      "has_blue_gold_ingot": "2025-08-03 21:04:30 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/combat/blue_golden_dagger": {
-    "criteria": {
-      "has_blue_gold_ingot": "2025-08-03 21:04:30 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/rose_gold_block": {
-    "criteria": {
-      "has_rose_gold_ingot": "2025-08-03 21:04:26 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/tools/green_golden_hoe": {
-    "criteria": {
-      "has_green_gold_ingot": "2025-08-03 21:04:29 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/tools/blue_golden_shovel": {
-    "criteria": {
-      "has_blue_gold_ingot": "2025-08-03 21:04:30 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/tools/blue_golden_axe": {
-    "criteria": {
-      "has_blue_gold_ingot": "2025-08-03 21:04:30 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:recipes/misc/blue_gold_ingot_from_nuggets": {
     "criteria": {
       "has_blue_gold_ingot": "2025-08-03 21:04:30 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/tools/rose_golden_hoe": {
-    "criteria": {
-      "has_rose_gold_ingot": "2025-08-03 21:04:26 -0300"
     },
     "done": true
   },
@@ -1373,131 +1285,21 @@
     },
     "done": true
   },
-  "enhanced_playthrough:blossom": {
-    "criteria": {
-      "has_item": "2025-08-03 21:04:26 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/combat/rose_golden_boots": {
-    "criteria": {
-      "has_rose_gold_ingot": "2025-08-03 21:04:26 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/blue_golden_helmet_from_smithing_golden_helmet_with_blue_gold_ingot": {
-    "criteria": {
-      "has_golden_helmet": "2025-08-03 21:04:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/combat/blue_golden_chestplate": {
+  "enhanced_playthrough:recipes/misc/blue_gold_ingot_from_block": {
     "criteria": {
       "has_blue_gold_ingot": "2025-08-03 21:04:30 -0300"
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/misc/green_gold_nugget": {
+  "enhanced_playthrough:bubbles": {
     "criteria": {
-      "has_green_gold_ingot": "2025-08-03 21:04:29 -0300"
+      "has_item": "2025-08-03 21:04:30 -0300"
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/combat/rose_golden_sword": {
+  "enhanced_playthrough:recipes/green_gold_dust_from_mechanical_grinding": {
     "criteria": {
-      "has_rose_gold_ingot": "2025-08-03 21:04:26 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/tools/rose_golden_polisher": {
-    "criteria": {
-      "has_rose_gold_ingot": "2025-08-03 21:04:26 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/combat/rose_golden_helmet": {
-    "criteria": {
-      "has_rose_gold_ingot": "2025-08-03 21:04:26 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/tools/rose_golden_pickaxe": {
-    "criteria": {
-      "has_rose_gold_ingot": "2025-08-03 21:04:26 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:the_goldenpuff_girls": {
-    "criteria": {
-      "has_green_gold_ingot": "2025-08-03 21:04:29 -0300",
-      "has_blue_gold_ingot": "2025-08-03 21:04:30 -0300",
-      "has_rose_gold_ingot": "2025-08-03 21:04:26 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/green_gold_block": {
-    "criteria": {
-      "has_green_gold_ingot": "2025-08-03 21:04:29 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/combat/green_golden_boots": {
-    "criteria": {
-      "has_green_gold_ingot": "2025-08-03 21:04:29 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/combat/green_golden_helmet": {
-    "criteria": {
-      "has_green_gold_ingot": "2025-08-03 21:04:29 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/tools/blue_golden_polisher": {
-    "criteria": {
-      "has_blue_gold_ingot": "2025-08-03 21:04:30 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/combat/blue_golden_sword": {
-    "criteria": {
-      "has_blue_gold_ingot": "2025-08-03 21:04:30 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/combat/rose_golden_leggings": {
-    "criteria": {
-      "has_rose_gold_ingot": "2025-08-03 21:04:26 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/tools/green_golden_polisher": {
-    "criteria": {
-      "has_green_gold_ingot": "2025-08-03 21:04:29 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/green_golden_chestplate_from_smithing_golden_chestplate_with_green_gold_ingot": {
-    "criteria": {
-      "has_green_golden_chestplate": "2025-08-03 21:05:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/rose_gold_ingot_from_nuggets": {
-    "criteria": {
-      "has_rose_gold_ingot": "2025-08-03 21:04:26 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/combat/golden_upgrade_smithing_template": {
-    "criteria": {
-      "has_golden_upgrade_smithing_template": "2025-08-03 21:04:09 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/combat/green_golden_sword": {
-    "criteria": {
-      "has_green_gold_ingot": "2025-08-03 21:04:29 -0300"
+      "TagKey[minecraft:item / enhanced_playthrough:manufacturable/green_gold]": "2025-08-03 21:05:20 -0300"
     },
     "done": true
   },
@@ -1513,135 +1315,9 @@
     },
     "done": true
   },
-  "enhanced_playthrough:recipes/combat/blue_golden_boots": {
-    "criteria": {
-      "has_blue_gold_ingot": "2025-08-03 21:04:30 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/combat/rose_golden_dagger": {
-    "criteria": {
-      "has_rose_gold_ingot": "2025-08-03 21:04:26 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/combat/green_golden_dagger": {
-    "criteria": {
-      "has_green_gold_ingot": "2025-08-03 21:04:29 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/tools/rose_golden_shovel": {
-    "criteria": {
-      "has_rose_gold_ingot": "2025-08-03 21:04:26 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/combat/green_golden_chestplate": {
-    "criteria": {
-      "has_green_gold_ingot": "2025-08-03 21:04:29 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/rose_golden_helmet_from_smithing_golden_helmet_with_rose_gold_ingot": {
-    "criteria": {
-      "has_golden_helmet": "2025-08-03 21:04:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/tools/green_golden_axe": {
-    "criteria": {
-      "has_green_gold_ingot": "2025-08-03 21:04:29 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/combat/blue_golden_leggings": {
-    "criteria": {
-      "has_blue_gold_ingot": "2025-08-03 21:04:30 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/green_golden_helmet_from_smithing_golden_helmet_with_green_gold_ingot": {
-    "criteria": {
-      "has_golden_helmet": "2025-08-03 21:04:21 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/combat/rose_golden_chestplate": {
-    "criteria": {
-      "has_rose_gold_ingot": "2025-08-03 21:04:26 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/blue_gold_ingot_from_block": {
-    "criteria": {
-      "has_blue_gold_ingot": "2025-08-03 21:04:30 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/rose_gold_ingot_from_block": {
-    "criteria": {
-      "has_rose_gold_ingot": "2025-08-03 21:04:26 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:bubbles": {
-    "criteria": {
-      "has_item": "2025-08-03 21:04:30 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/tools/rose_golden_axe": {
-    "criteria": {
-      "has_rose_gold_ingot": "2025-08-03 21:04:26 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/green_gold_ingot_from_block": {
-    "criteria": {
-      "has_green_gold_ingot": "2025-08-03 21:04:29 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/rose_gold_nugget": {
-    "criteria": {
-      "has_rose_gold_ingot": "2025-08-03 21:04:26 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/tools/blue_golden_hoe": {
-    "criteria": {
-      "has_blue_gold_ingot": "2025-08-03 21:04:30 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/tools/green_golden_shovel": {
-    "criteria": {
-      "has_green_gold_ingot": "2025-08-03 21:04:29 -0300"
-    },
-    "done": true
-  },
   "enhanced_playthrough:recipes/misc/green_gold_nugget_from_blasting": {
     "criteria": {
       "TagKey[minecraft:item / enhanced_playthrough:manufacturable/green_gold]": "2025-08-03 21:05:20 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/misc/green_gold_ingot_from_nuggets": {
-    "criteria": {
-      "has_green_gold_ingot": "2025-08-03 21:04:29 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/combat/blue_golden_helmet": {
-    "criteria": {
-      "has_blue_gold_ingot": "2025-08-03 21:04:30 -0300"
-    },
-    "done": true
-  },
-  "enhanced_playthrough:recipes/combat/green_golden_leggings": {
-    "criteria": {
-      "has_green_gold_ingot": "2025-08-03 21:04:29 -0300"
     },
     "done": true
   },
@@ -1651,9 +1327,75 @@
     },
     "done": true
   },
-  "enhanced_playthrough:buttercup": {
+  "enhanced_playthrough:recipes/green_golden_chestplate_from_smithing_golden_chestplate_with_green_gold_ingot": {
     "criteria": {
-      "has_item": "2025-08-03 21:04:29 -0300"
+      "has_green_golden_chestplate": "2025-08-03 21:05:21 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/aluminum_wooden_hoe_from_smithing_wooden_hoe_with_aluminum_ingot": {
+    "criteria": {
+      "has_aluminum_wooden_hoe": "2025-08-20 15:59:36 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/white_dye": {
+    "criteria": {
+      "has_bone_meal": "2025-08-20 16:00:01 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/redstone/growth_detector": {
+    "criteria": {
+      "has_growth_detector": "2025-08-20 15:59:15 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/repeater": {
+    "criteria": {
+      "has_redstone": "2025-08-20 16:00:04 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/daylight_detector": {
+    "criteria": {
+      "has_redstone": "2025-08-20 16:00:04 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/observer": {
+    "criteria": {
+      "has_redstone": "2025-08-20 16:00:04 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/brewing/cauldron": {
+    "criteria": {
+      "has_water_bucket": "2025-08-20 16:00:33 -0300"
+    },
+    "done": true
+  },
+  "minecraft:husbandry/plant_seed": {
+    "criteria": {
+      "wheat": "2025-08-20 16:01:27 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/white_dye_from_mechanical_grinding_bone_meal": {
+    "criteria": {
+      "has_bone_meal": "2025-08-20 16:00:01 -0300"
+    },
+    "done": true
+  },
+  "enhanced_playthrough:recipes/white_dye_from_primal_grinding_bone_meal": {
+    "criteria": {
+      "has_bone_meal": "2025-08-20 16:00:01 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/bone_block": {
+    "criteria": {
+      "has_bone_meal": "2025-08-20 16:00:01 -0300"
     },
     "done": true
   },

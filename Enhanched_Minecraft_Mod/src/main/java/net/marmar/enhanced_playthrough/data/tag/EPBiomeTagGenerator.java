@@ -99,6 +99,8 @@ public class EPBiomeTagGenerator extends BiomeTagsProvider {
                 BiomeTags.IS_JUNGLE, BiomeTags.IS_MOUNTAIN,
                 BiomeTags.IS_TAIGA, BiomeTags.IS_SAVANNA,
                 BiomeTags.IS_OCEAN, BiomeTags.IS_RIVER
+        ).add(
+                Biomes.PLAINS, Biomes.SUNFLOWER_PLAINS, Biomes.SNOWY_PLAINS
         );
 
         this.tag(EPTags.Biomes.CAN_SPAWN_SKELETON_BOWMASTER).addTags(
