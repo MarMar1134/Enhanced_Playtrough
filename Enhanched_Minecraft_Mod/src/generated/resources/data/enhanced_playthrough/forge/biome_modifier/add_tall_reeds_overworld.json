@@ -1,6 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": "#enhanced_playthrough:template_biomes",
-  "features": "enhanced_playthrough:tall_reeds_overworld_placed",
-  "step": "vegetal_decoration"
-}

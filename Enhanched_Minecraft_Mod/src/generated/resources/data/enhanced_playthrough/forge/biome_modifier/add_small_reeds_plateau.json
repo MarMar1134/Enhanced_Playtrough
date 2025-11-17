@@ -1,9 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": [
-    "minecraft:windswept_hills",
-    "minecraft:windswept_forest"
-  ],
-  "features": "enhanced_playthrough:small_reeds_plateau_placed",
-  "step": "vegetal_decoration"
-}

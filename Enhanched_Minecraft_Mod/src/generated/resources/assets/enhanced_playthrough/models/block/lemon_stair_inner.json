@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "enhanced_playthrough:block/lemon_planks",
-    "side": "enhanced_playthrough:block/lemon_planks",
-    "top": "enhanced_playthrough:block/lemon_planks"
-  }
-}

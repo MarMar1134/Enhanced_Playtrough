@@ -1,6 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": "minecraft:forest",
-  "features": "enhanced_playthrough:apple_trees_placed",
-  "step": "vegetal_decoration"
-}

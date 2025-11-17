@@ -1,6 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": "minecraft:swamp",
-  "features": "enhanced_playthrough:tall_reeds_swamp_placed",
-  "step": "vegetal_decoration"
-}

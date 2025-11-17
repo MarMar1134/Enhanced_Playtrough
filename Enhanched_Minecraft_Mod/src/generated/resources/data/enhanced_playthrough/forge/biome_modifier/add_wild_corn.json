@@ -1,9 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": [
-    "minecraft:jungle",
-    "minecraft:sparse_jungle"
-  ],
-  "features": "enhanced_playthrough:wild_corn_placed",
-  "step": "vegetal_decoration"
-}

@@ -1,6 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": "minecraft:flower_forest",
-  "features": "enhanced_playthrough:orange_trees_placed",
-  "step": "vegetal_decoration"
-}

@@ -1,6 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": "minecraft:lush_caves",
-  "features": "enhanced_playthrough:water_reeds_lush_caves_placed",
-  "step": "vegetal_decoration"
-}
