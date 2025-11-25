@@ -39,27 +39,31 @@ public class EPModelLayers {
         public static final ModelLayerLocation SKELETON_BOWMASTER_OUTER = registerOuterLayer("skeleton_bowmaster_outer");
 
    //Helper methods
+    private static ResourceLocation modLoc(String pPath){
+        return ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, pPath);
+    }
+
    public static ModelLayerLocation registerBoatLayer(String pLayer){
-       return new ModelLayerLocation(new ResourceLocation(EnhancedPlaythrough.MOD_ID, "boat/" + pLayer), "main");
+       return new ModelLayerLocation(modLoc("boat/" + pLayer), "main");
    }
 
     public static ModelLayerLocation registerChestBoatLayer(String pLayer){
-        return new ModelLayerLocation(new ResourceLocation(EnhancedPlaythrough.MOD_ID, "chest_boat/" + pLayer), "main");
+        return new ModelLayerLocation(modLoc("chest_boat/" + pLayer), "main");
     }
 
     public static ModelLayerLocation registerMainLayer(String pLayer){
-        return new ModelLayerLocation(new ResourceLocation(EnhancedPlaythrough.MOD_ID, pLayer), "main");
+        return new ModelLayerLocation(modLoc(pLayer), "main");
     }
 
     public static ModelLayerLocation registerInnerArmorLayer(String pLayer){
-        return new ModelLayerLocation(new ResourceLocation(EnhancedPlaythrough.MOD_ID, pLayer), "inner_armor");
+        return new ModelLayerLocation(modLoc(pLayer), "inner_armor");
     }
 
     public static ModelLayerLocation registerOuterArmorLayer(String pLayer){
-        return new ModelLayerLocation(new ResourceLocation(EnhancedPlaythrough.MOD_ID, pLayer), "outer_armor");
+        return new ModelLayerLocation(modLoc(pLayer), "outer_armor");
     }
 
     public static ModelLayerLocation registerOuterLayer(String pLayer){
-        return new ModelLayerLocation(new ResourceLocation(EnhancedPlaythrough.MOD_ID, pLayer), "outer");
+        return new ModelLayerLocation(modLoc(pLayer), "outer");
     }
 }

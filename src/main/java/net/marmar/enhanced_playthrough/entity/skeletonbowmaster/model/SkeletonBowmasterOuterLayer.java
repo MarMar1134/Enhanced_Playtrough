@@ -14,7 +14,7 @@ import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.monster.RangedAttackMob;
 
 public class SkeletonBowmasterOuterLayer<T extends Mob & RangedAttackMob, M extends EntityModel<T>> extends RenderLayer<T, M> {
-    private static final ResourceLocation SKELETON_BOWMASTER_OUTER_LOCATION = new ResourceLocation(EnhancedPlaythrough.MOD_ID,
+    private static final ResourceLocation SKELETON_BOWMASTER_OUTER_LOCATION = ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID,
             "textures/entity/skeleton_bowmaster/skeleton_bowmaster_outer.png");
     private final SkeletonModel<T> layerModel;
 

@@ -20,7 +20,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 import java.util.LinkedHashMap;
 
-@SuppressWarnings({"all"})
+@SuppressWarnings("unchecked")
 public class EPItemModelProvider extends ItemModelProvider {
     public EPItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
         super(output, EnhancedPlaythrough.MOD_ID, existingFileHelper);
@@ -631,9 +631,9 @@ public class EPItemModelProvider extends ItemModelProvider {
                 String armorItemPath = "item/" + armorItem;
                 String trimPath = "trims/items/" + armorType + "_trim_" + trimMaterial.location().getPath();
                 String currentTrimName = armorItemPath + "_" + trimMaterial.location().getPath() + "_trim";
-                ResourceLocation armorItemResLoc = new ResourceLocation(MOD_ID, armorItemPath);
-                ResourceLocation trimResLoc = new ResourceLocation(trimPath); // minecraft namespace
-                ResourceLocation trimNameResLoc = new ResourceLocation(MOD_ID, currentTrimName);
+                ResourceLocation armorItemResLoc = modLoc(armorItemPath);
+                ResourceLocation trimResLoc = mcLoc(trimPath); // minecraft namespace
+                ResourceLocation trimNameResLoc = modLoc(currentTrimName);
 
                 // This is used for making the ExistingFileHelper acknowledge that this texture exist, so this will
                 // avoid an IllegalArgumentException
@@ -652,8 +652,7 @@ public class EPItemModelProvider extends ItemModelProvider {
                         .model(new ModelFile.UncheckedModelFile(trimNameResLoc))
                         .predicate(mcLoc("trim_type"), trimValue).end()
                         .texture("layer0",
-                                new ResourceLocation(MOD_ID,
-                                        "item/" + pArmor.getId().getPath()));
+                                modLoc("item/" + pArmor.getId().getPath()));
             });
         }
     }
@@ -673,15 +672,14 @@ public class EPItemModelProvider extends ItemModelProvider {
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item){
         return withExistingParent(item.getId().getPath(),
-                new ResourceLocation("item/generated")).texture ("layer0",
-                new ResourceLocation(EnhancedPlaythrough.MOD_ID,
-                        "item/" + item.getId().getPath()));
+                mcLoc("item/generated")).texture ("layer0",
+                modLoc("item/" + item.getId().getPath()));
     }
 
     private ItemModelBuilder handheldItem(RegistryObject<Item> item){
         return withExistingParent(item.getId().getPath(),
-                new ResourceLocation("item/handheld")).texture("layer0",
-                new ResourceLocation(EnhancedPlaythrough.MOD_ID, "item/" + item.getId().getPath()));
+                mcLoc("item/handheld")).texture("layer0",
+                modLoc("item/" + item.getId().getPath()));
     }
 
     private ItemModelBuilder spawnEggItem(RegistryObject<Item> pItem){
@@ -695,30 +693,28 @@ public class EPItemModelProvider extends ItemModelProvider {
 
     private ItemModelBuilder doubleBlockItem(RegistryObject<Block> item){
         return withExistingParent(item.getId().getPath(),
-                new ResourceLocation("item/generated")).texture ("layer0",
-                new ResourceLocation(EnhancedPlaythrough.MOD_ID,
-                        "block/" + item.getId().getPath() + "_upper"));
+                mcLoc("item/generated")).texture ("layer0",
+                modLoc("block/" + item.getId().getPath() + "_upper"));
     }
 
     private ItemModelBuilder doubleBlockWithAgeItem(RegistryObject<Block> item){
         return withExistingParent(item.getId().getPath(),
-                new ResourceLocation("item/generated")).texture ("layer0",
-                new ResourceLocation(EnhancedPlaythrough.MOD_ID,
-                        "block/" + item.getId().getPath() + "_upper_1"));
+                mcLoc("item/generated")).texture ("layer0",
+                modLoc("block/" + item.getId().getPath() + "_upper_1"));
     }
 
     private ItemModelBuilder saplingAndCropItem(RegistryObject<Block> item) {
         return withExistingParent(item.getId().getPath(),
-                new ResourceLocation("item/generated")).texture("layer0",
-                new ResourceLocation(EnhancedPlaythrough.MOD_ID,"block/" + item.getId().getPath()));
+                mcLoc("item/generated")).texture("layer0",
+                modLoc("block/" + item.getId().getPath()));
     }
     public void wallItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/wall_inventory"))
-                .texture("wall",  new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+                .texture("wall",   modLoc("block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
     }
     public void wallItem(RegistryObject<Block> block, Block baseBlock) {
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/wall_inventory"))
-                .texture("wall",  new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock).getPath()));
+                .texture("wall",   modLoc("block/" + ForgeRegistries.BLOCKS.getKey(baseBlock).getPath()));
     }
     public void trapdoorItem(RegistryObject<Block> block) {
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(),
@@ -727,17 +723,17 @@ public class EPItemModelProvider extends ItemModelProvider {
 
     public void fenceItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/fence_inventory"))
-                .texture("texture",  new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+                .texture("texture",   modLoc("block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
     }
 
     public void buttonItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/button_inventory"))
-                .texture("texture",  new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+                .texture("texture",   modLoc("block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
     }
 
     private ItemModelBuilder simpleBlockItem(RegistryObject<Block> item) {
         return withExistingParent(item.getId().getPath(),
-                new ResourceLocation("item/generated")).texture("layer0",
-                new ResourceLocation(EnhancedPlaythrough.MOD_ID,"item/" + item.getId().getPath()));
+                mcLoc("item/generated")).texture("layer0",
+                modLoc("item/" + item.getId().getPath()));
     }
 }

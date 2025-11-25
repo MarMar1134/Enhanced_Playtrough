@@ -13,7 +13,7 @@ import net.minecraft.world.entity.player.Inventory;
 
 public class PrimalGrinderScreen extends AbstractContainerScreen<PrimalGrinderMenu> {
     private static final ResourceLocation Texture =
-            new ResourceLocation(EnhancedPlaythrough.MOD_ID, "textures/gui/primal_grinder_gui.png");
+            ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, "textures/gui/primal_grinder_gui.png");
 
     public PrimalGrinderScreen(PrimalGrinderMenu pMenu, Inventory pPlayerInventory, Component pTitle) {
         super(pMenu, pPlayerInventory, pTitle);

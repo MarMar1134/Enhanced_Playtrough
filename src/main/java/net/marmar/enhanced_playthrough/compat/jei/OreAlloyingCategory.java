@@ -15,9 +15,10 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 
+@SuppressWarnings("removal")
 public class OreAlloyingCategory implements IRecipeCategory<AlloyRecipe> {
-    public static final ResourceLocation UID = new ResourceLocation(EnhancedPlaythrough.MOD_ID, "ore_alloying");
-    public static final ResourceLocation TEXTURE = new ResourceLocation(EnhancedPlaythrough.MOD_ID,
+    public static final ResourceLocation UID = ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, "ore_alloying");
+    public static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID,
             "textures/gui/alloy_furnace_gui.png");
 
     public static final RecipeType<AlloyRecipe> ALLOYING_FURNACE_RECIPE_RECIPE_TYPE =

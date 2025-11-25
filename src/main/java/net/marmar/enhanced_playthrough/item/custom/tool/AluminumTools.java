@@ -23,6 +23,7 @@ public class AluminumTools {
             super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
         }
     }
+
     public static class Dagger extends DaggerItem {
         public Dagger(Tier pTier, int pAttackDamageModifier, float pBaseBleedProbability, Properties pProperties) {
             super(pTier, pAttackDamageModifier, pBaseBleedProbability, pProperties.defaultDurability((int) (pTier.getUses() * 1.2f)));

@@ -71,6 +71,6 @@ public class EPChestLootTables implements LootTableSubProvider {
     }
 
     private static ResourceLocation register(String pName){
-        return new ResourceLocation(EnhancedPlaythrough.MOD_ID, "chests/" + pName);
+        return ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, "chests/" + pName);
     }
 }

@@ -12,7 +12,8 @@ import net.minecraft.client.renderer.entity.layers.RenderLayer;
 import net.minecraft.resources.ResourceLocation;
 
 public class ZombieKnightOuterLayer<T extends ZombieKnight> extends RenderLayer<T, ZombieModel<T>> {
-    private static final ResourceLocation ZOMBIE_KNIGHT_OUTER_LOCATION = new ResourceLocation(EnhancedPlaythrough.MOD_ID, "textures/entity/zombie_knight/zombie_knight_outer_layer.png");
+    private static final ResourceLocation ZOMBIE_KNIGHT_OUTER_LOCATION = ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID,
+            "textures/entity/zombie_knight/zombie_knight_outer_layer.png");
     private final ZombieModel<T> model;
 
     public ZombieKnightOuterLayer(RenderLayerParent<T, ZombieModel<T>> pRenderer, EntityModelSet pModelSet) {

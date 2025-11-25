@@ -27,38 +27,38 @@ public class GemAdvancementGenerator implements ForgeAdvancementProvider.Advance
         Advancement gems_root = Advancement.Builder.advancement()
                 .display(rootDisplayInfo(EPBlocks.GEM_POLISHER.get(), "root"))
                 .addCriterion("has_polisher", hasItems(HAS_POLISHER))
-                .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "gem_root"), existingFileHelper);
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, "gem_root"), existingFileHelper);
 
         //Gems path
         Advancement get_emerald = Advancement.Builder.advancement()
                 .parent(gems_root)
                 .display(taskDisplayInfo(Items.EMERALD, "polish_emerald"))
                 .addCriterion("has_emerald", hasItems(Items.EMERALD))
-                .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "polish_emerald"), existingFileHelper);
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, "polish_emerald"), existingFileHelper);
 
         Advancement get_sapphire = Advancement.Builder.advancement()
                 .parent(get_emerald)
                 .display(taskDisplayInfo(EPItems.SAPPHIRE.get(), "polish_sapphire"))
                 .addCriterion("has_sapphire", hasItems(EPItems.SAPPHIRE.get()))
-                .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "polish_sapphire"), existingFileHelper);
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, "polish_sapphire"), existingFileHelper);
 
         Advancement get_ruby = Advancement.Builder.advancement()
                 .parent(get_sapphire)
                 .display(taskDisplayInfo(EPItems.RUBY.get(), "polish_ruby"))
                 .addCriterion("has_ruby", hasItems(EPItems.RUBY.get()))
-                .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "polish_ruby"), existingFileHelper);
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, "polish_ruby"), existingFileHelper);
 
         Advancement get_garnet = Advancement.Builder.advancement()
                 .parent(gems_root)
                 .display(taskDisplayInfo(EPItems.GARNET.get(), "polish_garnet"))
                 .addCriterion("has_garnet", hasItems(EPItems.GARNET.get()))
-                .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "polish_garnet"), existingFileHelper);
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, "polish_garnet"), existingFileHelper);
 
         Advancement get_diamond = Advancement.Builder.advancement()
                 .parent(get_garnet)
                 .display(taskDisplayInfo(Items.DIAMOND, "polish_diamond"))
                 .addCriterion("has_diamond", hasItems(Items.DIAMOND))
-                .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "polish_diamond"), existingFileHelper);
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, "polish_diamond"), existingFileHelper);
 
         Advancement get_all_gems = Advancement.Builder.advancement()
                 .parent(gems_root)
@@ -71,7 +71,7 @@ public class GemAdvancementGenerator implements ForgeAdvancementProvider.Advance
                 .rewards(AdvancementRewards.Builder.experience(100))
                 .rewards(AdvancementRewards.Builder.loot(advancementReward("get_all_gems")))
                 .requirements(RequirementsStrategy.AND)
-                .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "get_all_gems"), existingFileHelper);
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, "get_all_gems"), existingFileHelper);
 
         //Flowers path
         Advancement first_flower = Advancement.Builder.advancement()
@@ -81,7 +81,7 @@ public class GemAdvancementGenerator implements ForgeAdvancementProvider.Advance
                 .addCriterion("has_tall_flower", hasItems(HAS_TALL_FLOWER))
                 .addCriterion("has_cold_lyrium", hasItems(EPBlocks.COLD_LYRIUM.get())).addCriterion("has_succulent", hasItems(EPBlocks.SUCCULENT.get()))
                 .requirements(RequirementsStrategy.OR)
-                .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "first_flower"), existingFileHelper);
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, "first_flower"), existingFileHelper);
 
         Advancement all_small_flowers = Advancement.Builder.advancement()
                 .parent(first_flower)
@@ -96,7 +96,7 @@ public class GemAdvancementGenerator implements ForgeAdvancementProvider.Advance
                 .addCriterion("has_cold_lyrium", hasItems(EPBlocks.COLD_LYRIUM.get())).addCriterion("has_succulent", hasItems(EPBlocks.SUCCULENT.get()))
                 .rewards(AdvancementRewards.Builder.experience(200))
                 .requirements(RequirementsStrategy.AND)
-                .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "all_small_flowers"), existingFileHelper);
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, "all_small_flowers"), existingFileHelper);
 
         Advancement all_tall_flowers = Advancement.Builder.advancement()
                 .parent(first_flower)
@@ -106,7 +106,7 @@ public class GemAdvancementGenerator implements ForgeAdvancementProvider.Advance
                 .addCriterion("has_pitcher_plant", hasItems(Items.PITCHER_PLANT))
                 .rewards(AdvancementRewards.Builder.experience(140))
                 .requirements(RequirementsStrategy.AND)
-                .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "all_tall_flowers"), existingFileHelper);
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, "all_tall_flowers"), existingFileHelper);
 
         Advancement all_flowers = Advancement.Builder.advancement()
                 .parent(first_flower)
@@ -125,12 +125,12 @@ public class GemAdvancementGenerator implements ForgeAdvancementProvider.Advance
                 .rewards(AdvancementRewards.Builder.experience(400))
                 .rewards(AdvancementRewards.Builder.loot(advancementReward("all_flowers")))
                 .requirements(RequirementsStrategy.AND)
-                .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "all_flowers"), existingFileHelper);
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, "all_flowers"), existingFileHelper);
     }
 
     @Override
     public ResourceLocation categoryBackGround() {
-        return new ResourceLocation("textures/block/emerald_block.png");
+        return ResourceLocation.fromNamespaceAndPath("minecraft","textures/block/emerald_block.png");
     }
 
     @Override

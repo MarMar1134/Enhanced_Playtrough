@@ -33,7 +33,7 @@ import java.util.List;
 public class EnhancedPlaythroughJEIPlugin implements IModPlugin {
     @Override
     public ResourceLocation getPluginUid() {
-        return new ResourceLocation(EnhancedPlaythrough.MOD_ID, "jei_plugin");
+        return ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, "jei_plugin");
     }
     @Override
     public void registerCategories(IRecipeCategoryRegistration registration) {

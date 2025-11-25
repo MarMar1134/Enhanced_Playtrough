@@ -53,6 +53,6 @@ public class EPAdvancementLootTables implements LootTableSubProvider {
     }
 
     private static ResourceLocation register(String pName){
-        return new ResourceLocation(EnhancedPlaythrough.MOD_ID, "advancements/" + pName);
+        return ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, "advancements/" + pName);
     }
 }

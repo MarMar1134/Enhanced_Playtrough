@@ -16,9 +16,10 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import org.jetbrains.annotations.Nullable;
 
+@SuppressWarnings("removal")
 public class MasonrySmeltingCategory implements IRecipeCategory<MasonrySmeltingRecipe> {
-    public static final ResourceLocation UID = new ResourceLocation(EnhancedPlaythrough.MOD_ID, "masonry_smelting");
-    public static final ResourceLocation TEXTURE = new ResourceLocation(EnhancedPlaythrough.MOD_ID,
+    public static final ResourceLocation UID = ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, "masonry_smelting");
+    public static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID,
             "textures/gui/basic_furnace_gui.png");
 
     public static final RecipeType<MasonrySmeltingRecipe> MASONRY_SMELTING_TYPE =

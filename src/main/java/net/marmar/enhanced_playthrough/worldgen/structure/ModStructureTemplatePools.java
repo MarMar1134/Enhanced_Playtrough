@@ -44,7 +44,7 @@ public class ModStructureTemplatePools {
     }
 
     public static Function<StructureTemplatePool.Projection, ModSinglePoolElement> singlePoolElement(String pName, Holder<StructureProcessorList> pProcessor){
-        return (projection) -> new ModSinglePoolElement(structureNBTLocation(pName), Either.left(new ResourceLocation(EnhancedPlaythrough.MOD_ID, pName)), pProcessor, projection);
+        return (projection) -> new ModSinglePoolElement(structureNBTLocation(pName), Either.left(ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, pName)), pProcessor, projection);
     }
 
     private static Optional<String> structureNBTLocation(String pName){
@@ -52,6 +52,6 @@ public class ModStructureTemplatePools {
     }
 
     public static ResourceKey<StructureTemplatePool> registryKey(String name){
-        return ResourceKey.create(Registries.TEMPLATE_POOL, new ResourceLocation(EnhancedPlaythrough.MOD_ID, name));
+        return ResourceKey.create(Registries.TEMPLATE_POOL, ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, name));
     }
 }

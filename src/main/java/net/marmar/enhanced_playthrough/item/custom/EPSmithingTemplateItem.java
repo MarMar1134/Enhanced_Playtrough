@@ -21,6 +21,10 @@ public class EPSmithingTemplateItem extends SmithingTemplateItem {
     private static final ResourceLocation EMPTY_SLOT_PICKAXE;
     private static final ResourceLocation EMPTY_SLOT_INGOT;
 
+    private static ResourceLocation mcLoc(String pPath){
+        return ResourceLocation.fromNamespaceAndPath("minecraft", pPath);
+    }
+
     //Styles
     private static final ChatFormatting TITLES;
     private static final ChatFormatting DESCS;
@@ -69,15 +73,15 @@ public class EPSmithingTemplateItem extends SmithingTemplateItem {
         DESCS = ChatFormatting.BLUE;
 
         //Vanilla features
-        EMPTY_SLOT_HELMET = new ResourceLocation("item/empty_armor_slot_helmet");
-        EMPTY_SLOT_CHESTPLATE = new ResourceLocation("item/empty_armor_slot_chestplate");
-        EMPTY_SLOT_LEGGINGS = new ResourceLocation("item/empty_armor_slot_leggings");
-        EMPTY_SLOT_BOOTS = new ResourceLocation("item/empty_armor_slot_boots");
-        EMPTY_SLOT_HOE = new ResourceLocation("item/empty_slot_hoe");
-        EMPTY_SLOT_AXE = new ResourceLocation("item/empty_slot_axe");
-        EMPTY_SLOT_SWORD = new ResourceLocation("item/empty_slot_sword");
-        EMPTY_SLOT_SHOVEL = new ResourceLocation("item/empty_slot_shovel");
-        EMPTY_SLOT_PICKAXE = new ResourceLocation("item/empty_slot_pickaxe");
-        EMPTY_SLOT_INGOT = new ResourceLocation("item/empty_slot_ingot");
+        EMPTY_SLOT_HELMET = mcLoc("item/empty_armor_slot_helmet");
+        EMPTY_SLOT_CHESTPLATE = mcLoc("item/empty_armor_slot_chestplate");
+        EMPTY_SLOT_LEGGINGS = mcLoc("item/empty_armor_slot_leggings");
+        EMPTY_SLOT_BOOTS = mcLoc("item/empty_armor_slot_boots");
+        EMPTY_SLOT_HOE = mcLoc("item/empty_slot_hoe");
+        EMPTY_SLOT_AXE = mcLoc("item/empty_slot_axe");
+        EMPTY_SLOT_SWORD = mcLoc("item/empty_slot_sword");
+        EMPTY_SLOT_SHOVEL = mcLoc("item/empty_slot_shovel");
+        EMPTY_SLOT_PICKAXE = mcLoc("item/empty_slot_pickaxe");
+        EMPTY_SLOT_INGOT = mcLoc("item/empty_slot_ingot");
     }
 }

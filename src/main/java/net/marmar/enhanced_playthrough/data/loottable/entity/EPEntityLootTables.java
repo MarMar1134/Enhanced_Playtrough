@@ -66,6 +66,6 @@ public class EPEntityLootTables implements LootTableSubProvider {
     }
 
     private static ResourceLocation register(String pName){
-        return new ResourceLocation(EnhancedPlaythrough.MOD_ID, "entities/" + pName);
+        return ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, "entities/" + pName);
     }
 }

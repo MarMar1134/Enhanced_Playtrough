@@ -20,6 +20,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 @Mod(EnhancedPlaythrough.MOD_ID)
+@SuppressWarnings("removal")
 public class EnhancedPlaythrough
 {
     public static final String MOD_ID = "enhanced_playthrough";

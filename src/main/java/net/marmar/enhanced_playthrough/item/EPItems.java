@@ -27,27 +27,27 @@ public class EPItems {
     //Ores
         //raw
         public static final RegistryObject<Item> SULFUR = ITEMS.register(
-                "sulfur",() -> new Item(new Item.Properties()));
+                "sulfur",()-> new Item(new Item.Properties()));
         public static final RegistryObject<Item> RAW_TIN = ITEMS.register(
-                "raw_tin",() -> new Item(new Item.Properties()));
+                "raw_tin",()-> new Item(new Item.Properties()));
         public static final RegistryObject<Item> RAW_ZINC = ITEMS.register(
-                "raw_zinc",() -> new Item(new Item.Properties()));
+                "raw_zinc",()-> new Item(new Item.Properties()));
         public static final RegistryObject<Item> RAW_SILVER = ITEMS.register(
-                "raw_silver", () -> new Item(new Item.Properties()));
+                "raw_silver", ()-> new Item(new Item.Properties()));
         public static final RegistryObject<Item> RAW_ALUMINUM = ITEMS.register(
-                "raw_aluminum",() -> new Item(new Item.Properties()));
+                "raw_aluminum",()-> new Item(new Item.Properties()));
         public static final RegistryObject<Item> RAW_RUBY = ITEMS.register(
-                "raw_ruby", () -> new Item(new Item.Properties()));
+                "raw_ruby", ()-> new Item(new Item.Properties()));
         public static final RegistryObject<Item> RAW_SAPPHIRE = ITEMS.register(
-                "raw_sapphire", () -> new Item(new Item.Properties()));
+                "raw_sapphire", ()-> new Item(new Item.Properties()));
         public static final RegistryObject<Item> RAW_GARNET = ITEMS.register(
-                "raw_garnet", () -> new Item(new Item.Properties()));
+                "raw_garnet", ()-> new Item(new Item.Properties()));
         public static final RegistryObject<Item> RAW_EMERALD = ITEMS.register(
-                "raw_emerald", () -> new Item(new Item.Properties()));
+                "raw_emerald", ()-> new Item(new Item.Properties()));
         public static final RegistryObject<Item> RAW_DIAMOND = ITEMS.register(
-                "raw_diamond", () -> new Item(new Item.Properties()));
+                "raw_diamond", ()-> new Item(new Item.Properties()));
         public static final RegistryObject<Item> COBALT = ITEMS.register(
-                "cobalt", () -> new Item(new Item.Properties()));
+                "cobalt", ()-> new Item(new Item.Properties()));
 
         //melted
         public static final RegistryObject<Item> COPPER_NUGGET = ITEMS.register(

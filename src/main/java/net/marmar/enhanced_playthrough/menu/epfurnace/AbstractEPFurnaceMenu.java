@@ -15,7 +15,6 @@ import org.jetbrains.annotations.NotNull;
 
 public abstract class AbstractEPFurnaceMenu extends AbstractContainerMenu {
     public final AbstractEPFurnaceBlockEntity blockEntity;
-    private final Level level;
     private final ContainerData data;
 
     public AbstractEPFurnaceMenu(MenuType<? extends AbstractEPFurnaceMenu> menuType, int containerID, Inventory inv, FriendlyByteBuf extraData){
@@ -25,7 +24,6 @@ public abstract class AbstractEPFurnaceMenu extends AbstractContainerMenu {
     public AbstractEPFurnaceMenu(MenuType<? extends AbstractEPFurnaceMenu> menuType, int containerID, Inventory inv, BlockEntity entity, ContainerData data){
         super(menuType, containerID);
         blockEntity = ((AbstractEPFurnaceBlockEntity) entity);
-        this.level = inv.player.level();
         this.data = data;
 
         createSlots(blockEntity);

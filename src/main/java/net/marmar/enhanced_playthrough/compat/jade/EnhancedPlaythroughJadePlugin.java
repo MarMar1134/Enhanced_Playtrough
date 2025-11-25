@@ -19,10 +19,14 @@ import snownee.jade.api.WailaPlugin;
 
 @WailaPlugin
 public class EnhancedPlaythroughJadePlugin implements IWailaPlugin {
-    public static final ResourceLocation MOD_FURNACE = new ResourceLocation(EnhancedPlaythrough.MOD_ID, "basic_furnace");
-    public static final ResourceLocation ALLOY_FURNACE = new ResourceLocation(EnhancedPlaythrough.MOD_ID, "alloy_furnace");
-    public static final ResourceLocation GEM_POLISHER = new ResourceLocation(EnhancedPlaythrough.MOD_ID, "gem_polisher");
-    public static final ResourceLocation GRINDER = new ResourceLocation(EnhancedPlaythrough.MOD_ID, "grinder");
+    private static ResourceLocation modLoc(String pPath){
+        return ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, pPath);
+    }
+
+    public static final ResourceLocation MOD_FURNACE = modLoc("basic_furnace");
+    public static final ResourceLocation ALLOY_FURNACE = modLoc("alloy_furnace");
+    public static final ResourceLocation GEM_POLISHER = modLoc("gem_polisher");
+    public static final ResourceLocation GRINDER = modLoc("grinder");
 
     @Override
     public void register(IWailaCommonRegistration registration) {

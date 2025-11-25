@@ -30,6 +30,6 @@ public class ModStructureSets {
     }
 
     private static ResourceKey<StructureSet> registryKey(String name){
-        return ResourceKey.create(Registries.STRUCTURE_SET, new ResourceLocation(EnhancedPlaythrough.MOD_ID, name));
+        return ResourceKey.create(Registries.STRUCTURE_SET, ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, name));
     }
 }

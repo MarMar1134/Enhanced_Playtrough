@@ -24,7 +24,7 @@ public class BanditRenderer extends MobRenderer<Bandit, BanditModel<Bandit>> {
 
     @Override
     public ResourceLocation getTextureLocation(Bandit bandit) {
-        return new ResourceLocation(EnhancedPlaythrough.MOD_ID, "textures/entity/bandit/bandit.png");
+        return ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, "textures/entity/bandit/bandit.png");
     }
 
     protected void scale(Bandit pBandit, PoseStack pMatrixStack, float pPartialTickTime) {

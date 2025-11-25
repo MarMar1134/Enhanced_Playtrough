@@ -15,7 +15,6 @@ import org.jetbrains.annotations.NotNull;
 
 public abstract class AbstractAlloyFurnaceMenu extends AbstractContainerMenu {
     public final AbstractAlloyFurnaceBlockEntity blockEntity;
-    private final Level level;
     private final ContainerData data;
 
     public AbstractAlloyFurnaceMenu(MenuType<? extends AbstractAlloyFurnaceMenu> menuType, int containerID, Inventory inv, FriendlyByteBuf extraData){
@@ -25,7 +24,6 @@ public abstract class AbstractAlloyFurnaceMenu extends AbstractContainerMenu {
     public AbstractAlloyFurnaceMenu(MenuType<? extends AbstractAlloyFurnaceMenu> menuType, int containerID, Inventory inv, BlockEntity entity, ContainerData data){
         super(menuType, containerID);
         blockEntity = ((AbstractAlloyFurnaceBlockEntity) entity);
-        this.level = inv.player.level();
         this.data = data;
 
         createSlots(blockEntity);

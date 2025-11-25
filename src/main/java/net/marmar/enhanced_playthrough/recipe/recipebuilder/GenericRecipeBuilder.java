@@ -23,7 +23,6 @@ import javax.annotation.Nullable;
 import java.util.function.Consumer;
 
 public class GenericRecipeBuilder implements RecipeBuilder {
-
     private final Item result;
     private final ModRecipeCategory category;
     private String group;

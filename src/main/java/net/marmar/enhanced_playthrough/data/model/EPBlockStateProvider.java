@@ -187,7 +187,7 @@ public class EPBlockStateProvider extends BlockStateProvider {
             blockItem(EPBlocks.WALNUT_LOG);
 
             axisBlock((RotatedPillarBlock) EPBlocks.STRIPPED_WALNUT_LOG.get(), blockTexture(EPBlocks.STRIPPED_WALNUT_LOG.get()),
-                    new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/stripped_walnut_log_top"));
+                    modLoc("block/stripped_walnut_log_top"));
             blockItem(EPBlocks.STRIPPED_WALNUT_LOG);
 
             axisBlock((RotatedPillarBlock) EPBlocks.WALNUT_WOOD.get(), blockTexture(EPBlocks.WALNUT_LOG.get()), blockTexture(EPBlocks.WALNUT_LOG.get()));
@@ -227,7 +227,7 @@ public class EPBlockStateProvider extends BlockStateProvider {
             blockItem(EPBlocks.APPLE_LOG);
 
             axisBlock((RotatedPillarBlock) EPBlocks.STRIPPED_APPLE_LOG.get(), blockTexture(EPBlocks.STRIPPED_APPLE_LOG.get()),
-                    new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/stripped_apple_log_top"));
+                    modLoc("block/stripped_apple_log_top"));
             blockItem(EPBlocks.STRIPPED_APPLE_LOG);
 
             axisBlock((RotatedPillarBlock) EPBlocks.APPLE_WOOD.get(), blockTexture(EPBlocks.APPLE_LOG.get()), blockTexture(EPBlocks.APPLE_LOG.get()));
@@ -268,7 +268,7 @@ public class EPBlockStateProvider extends BlockStateProvider {
             blockItem(EPBlocks.ORANGE_LOG);
 
             axisBlock((RotatedPillarBlock) EPBlocks.STRIPPED_ORANGE_LOG.get(), blockTexture(EPBlocks.STRIPPED_ORANGE_LOG.get()),
-                    new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/stripped_orange_log_top"));
+                    modLoc("block/stripped_orange_log_top"));
             blockItem(EPBlocks.STRIPPED_ORANGE_LOG);
 
             axisBlock((RotatedPillarBlock) EPBlocks.ORANGE_WOOD.get(), blockTexture(EPBlocks.ORANGE_LOG.get()), blockTexture(EPBlocks.ORANGE_LOG.get()));
@@ -308,7 +308,7 @@ public class EPBlockStateProvider extends BlockStateProvider {
             blockItem(EPBlocks.LEMON_LOG);
 
             axisBlock((RotatedPillarBlock) EPBlocks.STRIPPED_LEMON_LOG.get(), blockTexture(EPBlocks.STRIPPED_LEMON_LOG.get()),
-                    new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/stripped_lemon_log_top"));
+                    modLoc( "block/stripped_lemon_log_top"));
             blockItem(EPBlocks.STRIPPED_LEMON_LOG);
 
             axisBlock((RotatedPillarBlock) EPBlocks.LEMON_WOOD.get(), blockTexture(EPBlocks.LEMON_LOG.get()), blockTexture(EPBlocks.LEMON_LOG.get()));
@@ -356,7 +356,7 @@ public class EPBlockStateProvider extends BlockStateProvider {
         private ConfiguredModel[] yerbaMateStates(BlockState state, CropBlock block, String modelName, String textureName) {
             ConfiguredModel[] models = new ConfiguredModel[1];
             models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((YerbaMateCropBlock) block).getAgeProperty()),
-                    new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/" + textureName + state.getValue(((YerbaMateCropBlock) block).getAgeProperty()))).renderType("cutout"));
+                    modLoc( "block/" + textureName + state.getValue(((YerbaMateCropBlock) block).getAgeProperty()))).renderType("cutout"));
 
             return models;
         }
@@ -370,7 +370,7 @@ public class EPBlockStateProvider extends BlockStateProvider {
         private ConfiguredModel[] zapalloStates(BlockState state, CropBlock block, String modelName, String textureName) {
             ConfiguredModel[] models = new ConfiguredModel[1];
             models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((ZapalloCropBlock) block).getAgeProperty()),
-                    new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/" + textureName + state.getValue(((ZapalloCropBlock) block).getAgeProperty()))).renderType("cutout"));
+                    modLoc( "block/" + textureName + state.getValue(((ZapalloCropBlock) block).getAgeProperty()))).renderType("cutout"));
 
             return models;
         }
@@ -384,7 +384,7 @@ public class EPBlockStateProvider extends BlockStateProvider {
         private ConfiguredModel[] eggplantStates(BlockState state, CropBlock block, String modelName, String textureName) {
             ConfiguredModel[] models = new ConfiguredModel[1];
             models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((EggplantCropBlock) block).getAgeProperty()),
-                    new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/" + textureName + state.getValue(((EggplantCropBlock) block).getAgeProperty()))).renderType("cutout"));
+                    modLoc( "block/" + textureName + state.getValue(((EggplantCropBlock) block).getAgeProperty()))).renderType("cutout"));
 
             return models;
         }
@@ -398,7 +398,7 @@ public class EPBlockStateProvider extends BlockStateProvider {
         private ConfiguredModel[] tomatoStates(BlockState state, CropBlock block, String modelName, String textureName) {
             ConfiguredModel[] models = new ConfiguredModel[1];
             models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((TomatoCropBlock) block).getAgeProperty()),
-                    new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/" + textureName + state.getValue(((TomatoCropBlock) block).getAgeProperty()))).renderType("cutout"));
+                    modLoc( "block/" + textureName + state.getValue(((TomatoCropBlock) block).getAgeProperty()))).renderType("cutout"));
 
             return models;
         }
@@ -412,7 +412,7 @@ public class EPBlockStateProvider extends BlockStateProvider {
         private ConfiguredModel[] cornStates(BlockState state, CropBlock block, String modelName, String textureName) {
             ConfiguredModel[] models = new ConfiguredModel[1];
             models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((CornCropBlock) block).getAgeProperty()),
-                    new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/" + textureName + state.getValue(((CornCropBlock) block).getAgeProperty()))).renderType("cutout"));
+                    modLoc( "block/" + textureName + state.getValue(((CornCropBlock) block).getAgeProperty()))).renderType("cutout"));
 
             return models;
         }
@@ -429,7 +429,7 @@ public class EPBlockStateProvider extends BlockStateProvider {
 
     public void leavesBlock(RegistryObject<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(),
-                models().singleTexture(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), new ResourceLocation("minecraft:block/leaves"),
+                models().singleTexture(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), mcLoc("block/leaves"),
                         "all", blockTexture(blockRegistryObject.get())).renderType("cutout"));
     }
 
@@ -447,7 +447,7 @@ public class EPBlockStateProvider extends BlockStateProvider {
         ConfiguredModel[] plantModel = new ConfiguredModel[1];
 
         plantModel[0] = new ConfiguredModel(models().cross(path + state.getValue(HALF),
-                new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/" + path + state.getValue(HALF))).renderType("cutout"));
+                modLoc("block/" + path + state.getValue(HALF))).renderType("cutout"));
 
         return plantModel;
     }
@@ -463,10 +463,10 @@ public class EPBlockStateProvider extends BlockStateProvider {
 
         ModelFile blockModels = models().orientable(
                 state.getValue(BURNING) ? path + "_on" : path,
-                new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/" + path + "_side"),
-                state.getValue(BURNING) ? new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/" + path + "_front_on") :
-                        new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/" + path + "_front"),
-                new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/" + path + "_top")
+                modLoc("block/" + path + "_side"),
+                state.getValue(BURNING) ?modLoc("block/" + path + "_front_on") :
+                        modLoc("block/" + path + "_front"),
+                modLoc("block/" + path + "_top")
         );
 
         return ConfiguredModel.builder().modelFile(blockModels).rotationY((int) state.getValue(FACING).toYRot()).build();
@@ -477,12 +477,12 @@ public class EPBlockStateProvider extends BlockStateProvider {
 
         ModelFile blockModels = models().orientableWithBottom(
                 state.getValue(BURNING) ? path + "_on" : path,
-                new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/" + path + "_side"),
-                state.getValue(BURNING) ? new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/" + path + "_front_on") :
-                        new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/" + path + "_front"),
-                new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/" + path + "_bottom"),
-                state.getValue(BURNING) ? new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/" + path + "_top_on")
-                        : new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/" + path + "_top")
+                modLoc("block/" + path + "_side"),
+                state.getValue(BURNING) ? modLoc("block/" + path + "_front_on") :
+                        modLoc("block/" + path + "_front"),
+                modLoc("block/" + path + "_bottom"),
+                state.getValue(BURNING) ? modLoc("block/" + path + "_top_on")
+                        : modLoc("block/" + path + "_top")
         );
 
         return ConfiguredModel.builder().modelFile(blockModels).rotationY((int) state.getValue(FACING).toYRot()).build();
@@ -493,11 +493,11 @@ public class EPBlockStateProvider extends BlockStateProvider {
 
         ModelFile blockModels = models().orientableWithBottom(
                 state.getValue(BURNING) ? path + "_on" : path,
-                new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/" + path + "_side"),
-                state.getValue(BURNING) ? new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/" + path + "_front_on") :
-                        new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/" + path + "_front"),
-                new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/" + path + "_bottom"),
-                new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/" + path + "_top")
+                modLoc("block/" + path + "_side"),
+                state.getValue(BURNING) ? modLoc("block/" + path + "_front_on") :
+                        modLoc("block/" + path + "_front"),
+                modLoc("block/" + path + "_bottom"),
+                modLoc("block/" + path + "_top")
         );
 
         return ConfiguredModel.builder().modelFile(blockModels).rotationY((int) state.getValue(FACING).toYRot()).build();
@@ -518,11 +518,11 @@ public class EPBlockStateProvider extends BlockStateProvider {
 
         ModelFile blockModels = models().orientableWithBottom(
                 state.getValue(PrimalGrinderBlock.ON) ? path + "_on" : path,
-                new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/" + path + "_side"),
-                state.getValue(PrimalGrinderBlock.ON) ? new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/" + path + "_front_on") :
-                        new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/" + path + "_front"),
-                new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/" + path + "_bottom"),
-                new ResourceLocation(EnhancedPlaythrough.MOD_ID, "block/" + path + "_top")
+                modLoc("block/" + path + "_side"),
+                state.getValue(PrimalGrinderBlock.ON) ? modLoc("block/" + path + "_front_on") :
+                        modLoc("block/" + path + "_front"),
+                modLoc("block/" + path + "_bottom"),
+                modLoc("block/" + path + "_top")
         );
 
         return ConfiguredModel.builder().modelFile(blockModels)
@@ -542,10 +542,10 @@ public class EPBlockStateProvider extends BlockStateProvider {
         ConfiguredModel[] plantModel = new ConfiguredModel[1];
 
         plantModel[0] = new ConfiguredModel(models().cross(path + state.getValue(HALF) + "_" + pBlock.getCurrentAge(state),
-                new ResourceLocation(EnhancedPlaythrough.MOD_ID, state.getValue(HALF) == DoubleBlockHalf.LOWER
+                        modLoc(state.getValue(HALF) == DoubleBlockHalf.LOWER
                         ? "block/" + path + state.getValue(HALF)
                         : "block/" + path + state.getValue(HALF) + "_" + pBlock.getCurrentAge(state)))
-                .renderType("cutout"));
+                        .renderType("cutout"));
 
         return plantModel;
     }
@@ -560,7 +560,7 @@ public class EPBlockStateProvider extends BlockStateProvider {
     public void flowerWithPotBlock(RegistryObject<Block> pFlower, RegistryObject<Block> pPottedFlower){
         plantBlock(pFlower, true);
 
-        simpleBlockWithItem(pPottedFlower.get(), models().singleTexture("potted_" + blockName(pFlower.get()), new ResourceLocation("flower_pot_cross"), "plant",
+        simpleBlockWithItem(pPottedFlower.get(), models().singleTexture("potted_" + blockName(pFlower.get()), mcLoc("flower_pot_cross"), "plant",
                 blockTexture(pFlower.get())).renderType("cutout"));
     }
 
@@ -606,7 +606,7 @@ public class EPBlockStateProvider extends BlockStateProvider {
 
     public ResourceLocation blockTextureWithExtra(Block block, String orientation) {
         ResourceLocation name = blockKey(block);
-        return new ResourceLocation(name.getNamespace(), ModelProvider.BLOCK_FOLDER + "/" + name.getPath() + "_" + orientation);
+        return ResourceLocation.fromNamespaceAndPath(name.getNamespace(), ModelProvider.BLOCK_FOLDER + "/" + name.getPath() + "_" + orientation);
     }
 
     public ResourceLocation blockKey(Block block) {

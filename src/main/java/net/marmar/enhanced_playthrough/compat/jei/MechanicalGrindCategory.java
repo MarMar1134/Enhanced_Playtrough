@@ -16,9 +16,10 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import org.jetbrains.annotations.Nullable;
 
+@SuppressWarnings("removal")
 public class MechanicalGrindCategory implements IRecipeCategory<MechanicalGrindRecipe> {
-    public static final ResourceLocation UID = new ResourceLocation(EnhancedPlaythrough.MOD_ID, "mechanical_grinding");
-    public static final ResourceLocation TEXTURE = new ResourceLocation(EnhancedPlaythrough.MOD_ID,
+    public static final ResourceLocation UID = ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, "mechanical_grinding");
+    public static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID,
             "textures/gui/mechanical_grinder_gui.png");
 
     public static final RecipeType<MechanicalGrindRecipe> GRINDING_RECIPE_RECIPE_TYPE =

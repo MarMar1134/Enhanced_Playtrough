@@ -759,7 +759,7 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
 
     //Helper methods
     protected static ResourceLocation recipeName(ItemLike output, String from){
-        return new ResourceLocation(EnhancedPlaythrough.MOD_ID, getItemName(output) + "_" + from);
+        return ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, getItemName(output) + "_" + from);
     }
 
     protected static void materialRecipes(ItemLike pIngot, @Nullable ItemLike pNugget, Block pBlock, Consumer<FinishedRecipe> pConsumer){

@@ -71,6 +71,6 @@ public class ModStructures {
     }
 
     public static ResourceKey<Structure> registryKey(String name){
-        return ResourceKey.create(Registries.STRUCTURE, new ResourceLocation(EnhancedPlaythrough.MOD_ID, name));
+        return ResourceKey.create(Registries.STRUCTURE, ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, name));
     }
 }

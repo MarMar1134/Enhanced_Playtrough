@@ -11,6 +11,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
 
+@SuppressWarnings("unchecked")
 public class EPBiomeTagGenerator extends BiomeTagsProvider {
     public EPBiomeTagGenerator(PackOutput packOutput, CompletableFuture<HolderLookup.Provider> lookupProvider, @Nullable ExistingFileHelper existingFileHelper) {
         super(packOutput, lookupProvider, EnhancedPlaythrough.MOD_ID, existingFileHelper);

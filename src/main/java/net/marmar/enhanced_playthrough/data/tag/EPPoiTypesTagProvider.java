@@ -18,6 +18,6 @@ public class EPPoiTypesTagProvider extends PoiTypeTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
-        tag(PoiTypeTags.ACQUIRABLE_JOB_SITE).addOptional(new ResourceLocation(EnhancedPlaythrough.MOD_ID, "jeweler_poi"));
+        tag(PoiTypeTags.ACQUIRABLE_JOB_SITE).addOptional(ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, "jeweler_poi"));
     }
 }

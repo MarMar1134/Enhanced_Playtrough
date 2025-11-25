@@ -15,6 +15,6 @@ public class SkeletonBowmasterRenderer extends SkeletonRenderer {
 
     @Override
     public ResourceLocation getTextureLocation(AbstractSkeleton pEntity) {
-        return new ResourceLocation(EnhancedPlaythrough.MOD_ID, "textures/entity/skeleton_bowmaster/skeleton_bowmaster.png");
+        return ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, "textures/entity/skeleton_bowmaster/skeleton_bowmaster.png");
     }
 }
