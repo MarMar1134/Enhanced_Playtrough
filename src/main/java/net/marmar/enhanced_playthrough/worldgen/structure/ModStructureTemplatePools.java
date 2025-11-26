@@ -43,15 +43,17 @@ public class ModStructureTemplatePools {
                 "bandit_camp/bandit_camp", mossy10Percent), 1)), StructureTemplatePool.Projection.RIGID));
     }
 
+    @SuppressWarnings("removal")
     public static Function<StructureTemplatePool.Projection, ModSinglePoolElement> singlePoolElement(String pName, Holder<StructureProcessorList> pProcessor){
-        return (projection) -> new ModSinglePoolElement(structureNBTLocation(pName), Either.left(ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, pName)), pProcessor, projection);
+        return (projection) -> new ModSinglePoolElement(structureNBTLocation(pName), Either.left(new ResourceLocation(EnhancedPlaythrough.MOD_ID, pName)), pProcessor, projection);
     }
 
     private static Optional<String> structureNBTLocation(String pName){
         return Optional.of(EnhancedPlaythrough.MOD_ID + ":" + pName);
     }
 
+    @SuppressWarnings("removal")
     public static ResourceKey<StructureTemplatePool> registryKey(String name){
-        return ResourceKey.create(Registries.TEMPLATE_POOL, ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, name));
+        return ResourceKey.create(Registries.TEMPLATE_POOL, new ResourceLocation(EnhancedPlaythrough.MOD_ID, name));
     }
 }

@@ -11,9 +11,10 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 
+@SuppressWarnings("removal")
 public class MechanicalGrinderScreen extends AbstractContainerScreen<MechanicalGrinderMenu> {
     private static final ResourceLocation Texture =
-            ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, "textures/gui/mechanical_grinder_gui.png");
+            new ResourceLocation(EnhancedPlaythrough.MOD_ID, "textures/gui/mechanical_grinder_gui.png");
 
     public MechanicalGrinderScreen(MechanicalGrinderMenu pMenu, Inventory pPlayerInventory, Component pTitle) {
         super(pMenu, pPlayerInventory, pTitle);

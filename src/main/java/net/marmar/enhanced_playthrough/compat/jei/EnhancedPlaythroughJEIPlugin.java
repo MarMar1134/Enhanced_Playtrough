@@ -30,11 +30,13 @@ import net.minecraft.world.item.crafting.RecipeManager;
 import java.util.List;
 
 @JeiPlugin
+@SuppressWarnings("removal")
 public class EnhancedPlaythroughJEIPlugin implements IModPlugin {
     @Override
     public ResourceLocation getPluginUid() {
-        return ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, "jei_plugin");
+        return new ResourceLocation(EnhancedPlaythrough.MOD_ID,"jei_plugin");
     }
+
     @Override
     public void registerCategories(IRecipeCategoryRegistration registration) {
         //Basic smelt recipes

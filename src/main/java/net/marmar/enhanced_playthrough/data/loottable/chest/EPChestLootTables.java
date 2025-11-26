@@ -70,7 +70,8 @@ public class EPChestLootTables implements LootTableSubProvider {
                         .add(EmptyLootItem.emptyItem().setWeight(4)));
     }
 
+    @SuppressWarnings("removal")
     private static ResourceLocation register(String pName){
-        return ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, "chests/" + pName);
+        return new ResourceLocation(EnhancedPlaythrough.MOD_ID, "chests/" + pName);
     }
 }

@@ -604,9 +604,10 @@ public class EPBlockStateProvider extends BlockStateProvider {
         return blockKey(block).getPath();
     }
 
+    @SuppressWarnings("removal")
     public ResourceLocation blockTextureWithExtra(Block block, String orientation) {
         ResourceLocation name = blockKey(block);
-        return ResourceLocation.fromNamespaceAndPath(name.getNamespace(), ModelProvider.BLOCK_FOLDER + "/" + name.getPath() + "_" + orientation);
+        return new ResourceLocation(name.getNamespace(), ModelProvider.BLOCK_FOLDER + "/" + name.getPath() + "_" + orientation);
     }
 
     public ResourceLocation blockKey(Block block) {

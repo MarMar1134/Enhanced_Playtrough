@@ -10,6 +10,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ItemLike;
 
+@SuppressWarnings("removal")
 public interface ICustomAdvancementDisplays {
     ResourceLocation categoryBackGround();
 
@@ -40,7 +41,7 @@ public interface ICustomAdvancementDisplays {
     }
 
     default ResourceLocation advancementReward(String pAdvancementName){
-        return ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, "advancements/" + pAdvancementName);
+        return new ResourceLocation(EnhancedPlaythrough.MOD_ID, "advancements/" + pAdvancementName);
     }
 
     default InventoryChangeTrigger.TriggerInstance hasItems(ItemLike... pItems){

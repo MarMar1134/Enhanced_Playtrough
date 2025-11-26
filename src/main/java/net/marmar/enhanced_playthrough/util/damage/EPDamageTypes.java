@@ -20,7 +20,8 @@ public interface EPDamageTypes {
         pContext.register(BLEED, new DamageType("bleed", DamageScaling.ALWAYS,0.1f));
     }
 
+    @SuppressWarnings("removal")
     private static ResourceKey<DamageType> registryKey(String name){
-        return ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, name));
+        return ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation(EnhancedPlaythrough.MOD_ID, name));
     }
 }

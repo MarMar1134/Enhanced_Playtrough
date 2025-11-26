@@ -29,7 +29,8 @@ public class ModStructureSets {
                 new RandomSpreadStructurePlacement(25, 20, RandomSpreadType.LINEAR, 33121233)));
     }
 
+    @SuppressWarnings("removal")
     private static ResourceKey<StructureSet> registryKey(String name){
-        return ResourceKey.create(Registries.STRUCTURE_SET, ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, name));
+        return ResourceKey.create(Registries.STRUCTURE_SET, new ResourceLocation(EnhancedPlaythrough.MOD_ID, name));
     }
 }

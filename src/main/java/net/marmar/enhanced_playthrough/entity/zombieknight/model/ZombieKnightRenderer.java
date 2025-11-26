@@ -19,7 +19,8 @@ public class ZombieKnightRenderer extends AbstractZombieRenderer<ZombieKnight, Z
     }
 
     @Override
+    @SuppressWarnings("removal")
     public ResourceLocation getTextureLocation(Zombie pEntity) {
-        return ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, "textures/entity/zombie_knight/zombie_knight.png");
+        return new ResourceLocation(EnhancedPlaythrough.MOD_ID, "textures/entity/zombie_knight/zombie_knight.png");
     }
 }

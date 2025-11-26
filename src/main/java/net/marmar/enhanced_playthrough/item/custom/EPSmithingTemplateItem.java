@@ -21,8 +21,9 @@ public class EPSmithingTemplateItem extends SmithingTemplateItem {
     private static final ResourceLocation EMPTY_SLOT_PICKAXE;
     private static final ResourceLocation EMPTY_SLOT_INGOT;
 
+    @SuppressWarnings("removal")
     private static ResourceLocation mcLoc(String pPath){
-        return ResourceLocation.fromNamespaceAndPath("minecraft", pPath);
+        return new ResourceLocation("minecraft", pPath);
     }
 
     //Styles

@@ -17,8 +17,8 @@ import net.minecraft.world.item.ItemStack;
 
 @SuppressWarnings("removal")
 public class GemPolishingCategory implements IRecipeCategory<GemPolishingRecipe> {
-    public static final ResourceLocation UID = ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, "gem_polishing");
-    public static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID,
+    public static final ResourceLocation UID = new ResourceLocation(EnhancedPlaythrough.MOD_ID, "gem_polishing");
+    public static final ResourceLocation TEXTURE = new ResourceLocation(EnhancedPlaythrough.MOD_ID,
             "textures/gui/gem_polisher_gui.png");
 
     public static final RecipeType<GemPolishingRecipe> GEM_POLISHER_RECIPE_TYPE =

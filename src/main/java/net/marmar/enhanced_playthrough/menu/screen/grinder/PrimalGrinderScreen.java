@@ -11,9 +11,10 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 
+@SuppressWarnings("removal")
 public class PrimalGrinderScreen extends AbstractContainerScreen<PrimalGrinderMenu> {
     private static final ResourceLocation Texture =
-            ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, "textures/gui/primal_grinder_gui.png");
+            new ResourceLocation(EnhancedPlaythrough.MOD_ID, "textures/gui/primal_grinder_gui.png");
 
     public PrimalGrinderScreen(PrimalGrinderMenu pMenu, Inventory pPlayerInventory, Component pTitle) {
         super(pMenu, pPlayerInventory, pTitle);

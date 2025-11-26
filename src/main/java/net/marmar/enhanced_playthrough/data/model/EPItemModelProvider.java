@@ -20,7 +20,6 @@ import net.minecraftforge.registries.RegistryObject;
 
 import java.util.LinkedHashMap;
 
-@SuppressWarnings("unchecked")
 public class EPItemModelProvider extends ItemModelProvider {
     public EPItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
         super(output, EnhancedPlaythrough.MOD_ID, existingFileHelper);

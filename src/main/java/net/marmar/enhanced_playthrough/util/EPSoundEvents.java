@@ -27,8 +27,9 @@ public class EPSoundEvents {
     public static final RegistryObject<SoundEvent> SKELETON_BOWMASTER_HURT = registerSoundEvents("skeleton_bowmaster_hurt");
     public static final RegistryObject<SoundEvent> SKELETON_BOWMASTER_DEATH = registerSoundEvents("skeleton_bowmaster_death");
 
+    @SuppressWarnings("removal")
     private static RegistryObject<SoundEvent> registerSoundEvents(String sound_name){
-      return SOUND_EVENTS.register(sound_name, () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, sound_name)));
+      return SOUND_EVENTS.register(sound_name, () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(EnhancedPlaythrough.MOD_ID, sound_name)));
     }
 
     public static void register(IEventBus eventBus){

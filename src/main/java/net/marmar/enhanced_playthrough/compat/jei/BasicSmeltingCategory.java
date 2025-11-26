@@ -17,8 +17,8 @@ import net.minecraft.world.item.ItemStack;
 
 @SuppressWarnings("removal")
 public class BasicSmeltingCategory implements IRecipeCategory<BasicSmeltingRecipe> {
-    public static final ResourceLocation UID = ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, "basic_smelting");
-    public static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, "textures/gui/basic_furnace_gui.png");
+    public static final ResourceLocation UID = new ResourceLocation(EnhancedPlaythrough.MOD_ID, "basic_smelting");
+    public static final ResourceLocation TEXTURE = new ResourceLocation(EnhancedPlaythrough.MOD_ID, "textures/gui/basic_furnace_gui.png");
 
     public static final RecipeType<BasicSmeltingRecipe> BASIC_SMELTING_TYPE =
             new RecipeType<>(UID, BasicSmeltingRecipe.class);

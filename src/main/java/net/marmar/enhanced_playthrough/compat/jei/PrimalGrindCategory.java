@@ -18,8 +18,8 @@ import org.jetbrains.annotations.Nullable;
 
 @SuppressWarnings("removal")
 public class PrimalGrindCategory implements IRecipeCategory<PrimalGrindRecipe> {
-    public static final ResourceLocation UID = ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, "primal_grinding");
-    public static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID,
+    public static final ResourceLocation UID = new ResourceLocation(EnhancedPlaythrough.MOD_ID, "primal_grinding");
+    public static final ResourceLocation TEXTURE = new ResourceLocation(EnhancedPlaythrough.MOD_ID,
             "textures/gui/primal_grinder_gui.png");
 
     public static final RecipeType<PrimalGrindRecipe> PRIMAL_GRINDING_RECIPE_RECIPE_TYPE =

@@ -11,9 +11,10 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 
+@SuppressWarnings("removal")
 public abstract class AbstractModFurnaceScreen<T extends AbstractEPFurnaceMenu> extends AbstractContainerScreen<T> {
     private static final ResourceLocation Texture =
-            ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, "textures/gui/basic_furnace_gui.png");
+            new ResourceLocation(EnhancedPlaythrough.MOD_ID, "textures/gui/basic_furnace_gui.png");
 
     public AbstractModFurnaceScreen(T pMenu, Inventory pPlayerInventory, Component pTitle) {
         super(pMenu, pPlayerInventory, pTitle);

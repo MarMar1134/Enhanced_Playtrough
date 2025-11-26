@@ -70,7 +70,8 @@ public class ModStructures {
         return structure(pBiomes, Map.of(), GenerationStep.Decoration.SURFACE_STRUCTURES, pTerrainAdaptation);
     }
 
+    @SuppressWarnings("removal")
     public static ResourceKey<Structure> registryKey(String name){
-        return ResourceKey.create(Registries.STRUCTURE, ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, name));
+        return ResourceKey.create(Registries.STRUCTURE, new ResourceLocation(EnhancedPlaythrough.MOD_ID, name));
     }
 }

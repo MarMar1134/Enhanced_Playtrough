@@ -12,7 +12,8 @@ public class AluminumArrowRenderer extends ArrowRenderer<AluminumArrowEntity> {
     }
 
     @Override
+    @SuppressWarnings("removal")
     public ResourceLocation getTextureLocation(AluminumArrowEntity pEntity) {
-        return ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, "textures/entity/projectiles/aluminum_arrow.png");
+        return new ResourceLocation(EnhancedPlaythrough.MOD_ID, "textures/entity/projectiles/aluminum_arrow.png");
     }
 }

@@ -10,6 +10,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
 
+@SuppressWarnings("removal")
 public class EPTags {
     public static class Blocks {
         public static final TagKey<Block> BAUXITE_ORES = blockTag("bauxite_ores");
@@ -28,7 +29,7 @@ public class EPTags {
 
 
         private static TagKey<Block> blockTag(String name){
-            return BlockTags.create(ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID,name));
+            return BlockTags.create(new ResourceLocation(EnhancedPlaythrough.MOD_ID,name));
         }
     }
     public static class Items {
@@ -108,27 +109,27 @@ public class EPTags {
         public static final TagKey<Item> LEMON_LOGS = itemTag("lemon_logs");
 
         private static TagKey<Item> itemTag(String name){
-            return ItemTags.create(ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID,name));
+            return ItemTags.create(new ResourceLocation(EnhancedPlaythrough.MOD_ID,name));
         }
 
         private static TagKey<Item> oreTag(String name){
-            return ItemTags.create(ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID,"ores/" + name));
+            return ItemTags.create(new ResourceLocation(EnhancedPlaythrough.MOD_ID,"ores/" + name));
         }
 
         private static TagKey<Item> ingredientTag(String name){
-            return ItemTags.create(ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID,"ingredients/" + name));
+            return ItemTags.create(new ResourceLocation(EnhancedPlaythrough.MOD_ID,"ingredients/" + name));
         }
 
         private static TagKey<Item> ingotTag(String name){
-            return ItemTags.create(ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID,"ingots/" + name));
+            return ItemTags.create(new ResourceLocation(EnhancedPlaythrough.MOD_ID,"ingots/" + name));
         }
 
         private static TagKey<Item> toolsTag(String name){
-            return ItemTags.create(ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID,"tools/" + name));
+            return ItemTags.create(new ResourceLocation(EnhancedPlaythrough.MOD_ID,"tools/" + name));
         }
 
         private static TagKey<Item> manufacturableTag(String name){
-            return ItemTags.create(ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID,"manufacturable/" + name));
+            return ItemTags.create(new ResourceLocation(EnhancedPlaythrough.MOD_ID,"manufacturable/" + name));
         }
     }
 
@@ -153,11 +154,11 @@ public class EPTags {
         public static final TagKey<Biome> CAN_SPAWN_SKELETON_BOWMASTER = biomeTag("can_spawn_skeleton_bowmaster");
 
         private static TagKey<Biome> biomeTag(String name){
-            return TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID,name));
+            return TagKey.create(Registries.BIOME, new ResourceLocation(EnhancedPlaythrough.MOD_ID,name));
         }
 
         private static TagKey<Biome> structureTag(String name){
-            return TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID,"has_structure/" + name));
+            return TagKey.create(Registries.BIOME, new ResourceLocation(EnhancedPlaythrough.MOD_ID,"has_structure/" + name));
         }
     }
 }

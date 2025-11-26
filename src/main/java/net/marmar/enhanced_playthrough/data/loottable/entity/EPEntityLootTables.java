@@ -65,7 +65,8 @@ public class EPEntityLootTables implements LootTableSubProvider {
                         .apply(LootingEnchantFunction.lootingMultiplier(UniformGenerator.between(0, 1)))));
     }
 
+    @SuppressWarnings("removal")
     private static ResourceLocation register(String pName){
-        return ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, "entities/" + pName);
+        return new ResourceLocation(EnhancedPlaythrough.MOD_ID, "entities/" + pName);
     }
 }

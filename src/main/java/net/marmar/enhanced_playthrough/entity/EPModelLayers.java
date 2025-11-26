@@ -39,8 +39,9 @@ public class EPModelLayers {
         public static final ModelLayerLocation SKELETON_BOWMASTER_OUTER = registerOuterLayer("skeleton_bowmaster_outer");
 
    //Helper methods
+    @SuppressWarnings("removal")
     private static ResourceLocation modLoc(String pPath){
-        return ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, pPath);
+        return new ResourceLocation(EnhancedPlaythrough.MOD_ID, pPath);
     }
 
    public static ModelLayerLocation registerBoatLayer(String pLayer){

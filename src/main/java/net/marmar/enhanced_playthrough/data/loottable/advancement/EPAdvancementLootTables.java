@@ -52,7 +52,8 @@ public class EPAdvancementLootTables implements LootTableSubProvider {
                 .apply((new EnchantRandomlyFunction.Builder()).withEnchantment(Enchantments.MENDING)));
     }
 
+    @SuppressWarnings("removal")
     private static ResourceLocation register(String pName){
-        return ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, "advancements/" + pName);
+        return new ResourceLocation(EnhancedPlaythrough.MOD_ID, "advancements/" + pName);
     }
 }

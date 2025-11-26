@@ -11,9 +11,10 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 
+@SuppressWarnings("removal")
 public class GemPolisherScreen extends AbstractContainerScreen<GemPolisherMenu> {
     private static final ResourceLocation Texture =
-            ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, "textures/gui/gem_polisher_gui.png");
+            new ResourceLocation(EnhancedPlaythrough.MOD_ID, "textures/gui/gem_polisher_gui.png");
     public GemPolisherScreen(GemPolisherMenu pMenu, Inventory pPlayerInventory, Component pTitle) {
         super(pMenu, pPlayerInventory, pTitle);
     }
