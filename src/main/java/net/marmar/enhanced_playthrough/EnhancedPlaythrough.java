@@ -21,8 +21,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 @Mod(EnhancedPlaythrough.MOD_ID)
 @SuppressWarnings("removal")
-public class EnhancedPlaythrough
-{
+public class EnhancedPlaythrough {
     public static final String MOD_ID = "enhanced_playthrough";
 
     public EnhancedPlaythrough(){
@@ -51,7 +50,7 @@ public class EnhancedPlaythrough
         EPMobEffects.register(modEventBus);
         EPParticleTypes.register(modEventBus);
 
-    //Register
+        //Register
         MinecraftForge.EVENT_BUS.register(this);
     }
 }

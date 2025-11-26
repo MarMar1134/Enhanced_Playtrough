@@ -24,7 +24,6 @@ import net.minecraft.world.level.material.Fluids;
 
 import javax.annotation.Nullable;
 
-
 public class WaterReedsBlock extends DoublePlantBlock implements SimpleWaterloggedBlock {
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 

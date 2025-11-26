@@ -5,7 +5,7 @@ import net.minecraft.data.recipes.*;
 
 import java.util.function.Consumer;
 
-public class EPRecipeProvider extends RecipeProvider{
+public class EPRecipeProvider extends RecipeProvider {
     public EPRecipeProvider(PackOutput pOutput) {
         super(pOutput);
     }

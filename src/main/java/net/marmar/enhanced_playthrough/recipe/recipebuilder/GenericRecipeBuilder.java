@@ -108,6 +108,7 @@ public class GenericRecipeBuilder implements RecipeBuilder {
             this.resourceLocation = pAdvancementId;
             this.serializer = pSerializer;
         }
+
         public void serializeRecipeData(JsonObject pJson) {
             if (!this.group.isEmpty()){
                 pJson.addProperty("group", this.group);

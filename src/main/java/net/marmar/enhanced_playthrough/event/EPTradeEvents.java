@@ -56,7 +56,6 @@ public class EPTradeEvents implements ITradeOffers {
                     new ItemStack(EPItems.TOMATO.get(), 15),
                     new ItemStack(Items.EMERALD, 1),
                     16, 2, 0.02f));
-
         }
 
         //Armorer
@@ -68,7 +67,6 @@ public class EPTradeEvents implements ITradeOffers {
             trades.get(3).removeAll(trades.get(3));
             trades.get(4).removeAll(trades.get(4));
             trades.get(5).removeAll(trades.get(5));
-
 
             //Level 1
             trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
@@ -220,7 +218,6 @@ public class EPTradeEvents implements ITradeOffers {
             trades.get(5).add((pTrader, pRandom) -> ITradeOffers.EnchantedItemOffer(
                     pRandom, EPItems.RUBY.get(), 9,
                     Items.DIAMOND_CHESTPLATE, 3, 30));
-
         }
 
         //Toolsmith
@@ -598,6 +595,7 @@ public class EPTradeEvents implements ITradeOffers {
                     pRandom, EPItems.RUBY.get(), EPEnchantments.FINE_MINING.get(), 15));
         }
 
+        //Librarian
         if (event.getType() == VillagerProfession.LIBRARIAN){
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades =event.getTrades();
 
