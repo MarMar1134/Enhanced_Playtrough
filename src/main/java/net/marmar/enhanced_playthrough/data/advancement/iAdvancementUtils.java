@@ -5,13 +5,17 @@ import net.minecraft.advancements.DisplayInfo;
 import net.minecraft.advancements.FrameType;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.advancements.critereon.ItemPredicate;
+import net.minecraft.advancements.critereon.LocationPredicate;
+import net.minecraft.advancements.critereon.PlayerTrigger;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.levelgen.structure.Structure;
 
 @SuppressWarnings("removal")
-public interface ICustomAdvancementDisplays {
+public interface iAdvancementUtils {
     ResourceLocation categoryBackGround();
 
     String categoryName();
@@ -50,5 +54,9 @@ public interface ICustomAdvancementDisplays {
 
     default InventoryChangeTrigger.TriggerInstance hasItems(ItemPredicate... pItems){
         return InventoryChangeTrigger.TriggerInstance.hasItems(pItems);
+    }
+
+    default PlayerTrigger.TriggerInstance inStructure(ResourceKey<Structure> pStructure){
+        return PlayerTrigger.TriggerInstance.located(LocationPredicate.inStructure(pStructure));
     }
 }

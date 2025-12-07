@@ -83,9 +83,14 @@ public class EPBiomeTagGenerator extends BiomeTagsProvider {
                 Biomes.OCEAN
         );
 
-        this.tag(EPTags.Biomes.JEWELER_HOUSE).add(
+        this.tag(EPTags.Biomes.HAS_JEWELER_HOUSE).add(
                 Biomes.PLAINS,
                 Biomes.MEADOW
+        );
+
+        this.tag(EPTags.Biomes.HAS_ANCIENT_LORDS_DOMAIN).add(
+                Biomes.OLD_GROWTH_PINE_TAIGA,
+                Biomes.OLD_GROWTH_SPRUCE_TAIGA
         );
 
         this.tag(EPTags.Biomes.HUMIDITY_BIOMES).add(

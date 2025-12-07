@@ -33,6 +33,7 @@ public class FrostbiteEnchantment extends Enchantment {
             switch (pLevel){
                 case 1 -> entity.addEffect(new MobEffectInstance(EPMobEffects.FROSTBITE.get(), 100, 0, true, true));
                 case 2 -> entity.addEffect(new MobEffectInstance(EPMobEffects.FROSTBITE.get(), 200, 1, true, true));
+                default -> entity.addEffect(new MobEffectInstance(EPMobEffects.FROSTBITE.get(), 200, pLevel - 1, true,true));
             }
         }
         super.doPostAttack(pAttacker, pTarget, pLevel);

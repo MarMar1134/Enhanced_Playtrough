@@ -7,7 +7,7 @@ import net.marmar.enhanced_playthrough.item.EPItems;
 import net.marmar.enhanced_playthrough.recipe.EPRecipes;
 import net.marmar.enhanced_playthrough.recipe.grind.AbstractGrindRecipe;
 import net.marmar.enhanced_playthrough.recipe.recipebuilder.GenericRecipeBuilder;
-import net.marmar.enhanced_playthrough.recipe.recipebuilder.ModSmithingTransformRecipeBuilder;
+import net.marmar.enhanced_playthrough.recipe.recipebuilder.EPSmithingRecipesBuilder;
 import net.marmar.enhanced_playthrough.recipe.recipecategory.ModRecipeCategory;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.FinishedRecipe;
@@ -521,7 +521,7 @@ public class GeneralRecipeSubProvider extends RecipeProvider {
 
     //Builders
     protected static void smithingTransformSerialize(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike template, ItemLike base, ItemLike addition, ItemLike result){
-        ModSmithingTransformRecipeBuilder.SmithingTransform(template, base, addition, result)
+        EPSmithingRecipesBuilder.SmithingTransform(template, base, addition, result)
                 .unlockedBy(getHasName(base), has(base))
                 .unlockedBy(getHasName(result), has(result))
                 .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(result) + "_from_smithing_" + getItemName(base) + "_with_" + getItemName(addition));

@@ -1,0 +1,14 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 1074514779,
+    "separation": 40,
+    "spacing": 60
+  },
+  "structures": [
+    {
+      "structure": "enhanced_playthrough:ancient_lords_domain",
+      "weight": 1
+    }
+  ]
+}

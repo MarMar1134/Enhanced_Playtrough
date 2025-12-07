@@ -18,7 +18,7 @@ import net.minecraftforge.common.data.ForgeAdvancementProvider;
 import java.util.function.Consumer;
 
 @SuppressWarnings("removal")
-public class GemAdvancementGenerator implements ForgeAdvancementProvider.AdvancementGenerator, ICustomAdvancementDisplays {
+public class GemAdvancementGenerator implements ForgeAdvancementProvider.AdvancementGenerator, iAdvancementUtils {
     public ItemPredicate HAS_POLISHER = ItemPredicate.Builder.item().of(EPTags.Items.POLISHER).build();
     public ItemPredicate HAS_SMALL_FLOWER = ItemPredicate.Builder.item().of(ItemTags.SMALL_FLOWERS).build();
     public ItemPredicate HAS_TALL_FLOWER = ItemPredicate.Builder.item().of(ItemTags.TALL_FLOWERS).build();

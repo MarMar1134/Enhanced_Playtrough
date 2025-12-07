@@ -2,7 +2,7 @@ package net.marmar.enhanced_playthrough.recipe.recipecategory;
 
 import net.minecraft.util.StringRepresentable;
 
-public enum ModRecipeCategory implements StringRepresentable{
+public enum ModRecipeCategory implements StringRepresentable {
     ALLOY("ore_alloy"),
     SUPER_ALLOY("super_ore_alloy"),
     GEM_POLISH("gem_polish"),

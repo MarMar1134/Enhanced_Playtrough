@@ -94,6 +94,8 @@ public class ChileanLangProvider extends AbstractLangProvider {
                     "Obtén un pedazo de adoquín");
             addSurvivalAdvancement("unity_makes_strength", "La unión hace la fuerza",
                     "Craftea un horno de aleación");
+            addSurvivalAdvancement("ancient_knowledge", "Conocimiento antiguo",
+                    "Encuentra el Dominio del Señor Antiguo");
             addSurvivalAdvancement("blossom", "Bombón",
                     "Funde oro y cobre para obtener oro rosado");
             addSurvivalAdvancement("buttercup", "Bellota",

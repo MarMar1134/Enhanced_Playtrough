@@ -1,0 +1,104 @@
+{
+  "elements": [
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "enhanced_playthrough:ancient_lords_domain/rooms/small_center",
+        "processors": "enhanced_playthrough:ancient_lords_decay",
+        "projection": "rigid"
+      },
+      "weight": 4
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "enhanced_playthrough:ancient_lords_domain/rooms/training_room",
+        "processors": "enhanced_playthrough:ancient_lords_decay",
+        "projection": "rigid"
+      },
+      "weight": 3
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "enhanced_playthrough:ancient_lords_domain/rooms/small_library",
+        "processors": "enhanced_playthrough:populate_ancient_library",
+        "projection": "rigid"
+      },
+      "weight": 3
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "enhanced_playthrough:ancient_lords_domain/rooms/center_with_stairs",
+        "processors": "enhanced_playthrough:ancient_lords_decay",
+        "projection": "rigid"
+      },
+      "weight": 3
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "enhanced_playthrough:ancient_lords_domain/rooms/storage_room_2",
+        "processors": "enhanced_playthrough:ancient_lords_decay",
+        "projection": "rigid"
+      },
+      "weight": 3
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "enhanced_playthrough:ancient_lords_domain/rooms/bedroom_1",
+        "processors": "enhanced_playthrough:ancient_lords_decay",
+        "projection": "rigid"
+      },
+      "weight": 2
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "enhanced_playthrough:ancient_lords_domain/rooms/bedroom_2",
+        "processors": "enhanced_playthrough:ancient_lords_decay",
+        "projection": "rigid"
+      },
+      "weight": 2
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "enhanced_playthrough:ancient_lords_domain/rooms/storage_room_1",
+        "processors": "enhanced_playthrough:ancient_lords_decay",
+        "projection": "rigid"
+      },
+      "weight": 2
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "enhanced_playthrough:ancient_lords_domain/rooms/throne_room",
+        "processors": "enhanced_playthrough:ancient_lords_decay",
+        "projection": "rigid"
+      },
+      "weight": 2
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "enhanced_playthrough:ancient_lords_domain/rooms/center_with_hole",
+        "processors": "enhanced_playthrough:ancient_lords_decay",
+        "projection": "rigid"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "enhanced_playthrough:ancient_lords_domain/rooms/big_center",
+        "processors": "enhanced_playthrough:ancient_lords_decay",
+        "projection": "rigid"
+      },
+      "weight": 1
+    }
+  ],
+  "fallback": "enhanced_playthrough:ancient_lords_domain/terminator_pool"
+}

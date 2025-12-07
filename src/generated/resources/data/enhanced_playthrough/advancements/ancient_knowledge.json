@@ -1,0 +1,43 @@
+{
+  "parent": "enhanced_playthrough:survival_root",
+  "criteria": {
+    "is_in_structure": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "enhanced_playthrough:ancient_lords_domain"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "enhanced_playthrough:textures/block/bronze_block.png",
+    "description": {
+      "translate": "advancement.enhanced_playthrough.desc.survival.ancient_knowledge"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "minecraft:map"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.enhanced_playthrough.title.survival.ancient_knowledge"
+    }
+  },
+  "requirements": [
+    [
+      "is_in_structure"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

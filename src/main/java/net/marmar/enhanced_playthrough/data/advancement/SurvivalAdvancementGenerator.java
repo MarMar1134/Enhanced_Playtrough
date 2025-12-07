@@ -4,6 +4,7 @@ import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.block.EPBlocks;
 import net.marmar.enhanced_playthrough.data.tag.EPTags;
 import net.marmar.enhanced_playthrough.item.EPItems;
+import net.marmar.enhanced_playthrough.worldgen.structure.EPStructures;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.advancements.AdvancementRewards;
 import net.minecraft.advancements.RequirementsStrategy;
@@ -11,13 +12,14 @@ import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Items;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.common.data.ForgeAdvancementProvider;
 
 import java.util.function.Consumer;
 
 @SuppressWarnings("removal")
-public class SurvivalAdvancementGenerator implements ForgeAdvancementProvider.AdvancementGenerator, ICustomAdvancementDisplays {
+public class SurvivalAdvancementGenerator implements ForgeAdvancementProvider.AdvancementGenerator, iAdvancementUtils {
     @Override
     public void generate(HolderLookup.Provider provider, Consumer<Advancement> consumer, ExistingFileHelper existingFileHelper) {
         ItemPredicate hasCobble = ItemPredicate.Builder.item().of(EPTags.Items.COBBLE).build();
@@ -77,8 +79,13 @@ public class SurvivalAdvancementGenerator implements ForgeAdvancementProvider.Ad
                 .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "the_aluminated"), existingFileHelper);
 
         //Gold path
-        Advancement blossom = Advancement.Builder.advancement()
+        Advancement ancient_knowledge = Advancement.Builder.advancement()
                 .parent(survival_root)
+                .display(taskDisplayInfo(Items.MAP, "ancient_knowledge"))
+                .addCriterion("is_in_structure", inStructure(EPStructures.ANCIENT_LORDS_DOMAIN))
+                .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "ancient_knowledge"), existingFileHelper);
+        Advancement blossom = Advancement.Builder.advancement()
+                .parent(ancient_knowledge)
                 .display(taskDisplayInfo(EPItems.ROSE_GOLD_INGOT.get(), "blossom"))
                 .addCriterion("has_item", hasItems(EPItems.ROSE_GOLD_INGOT.get()))
                 .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "blossom"), existingFileHelper);

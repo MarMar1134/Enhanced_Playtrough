@@ -29,15 +29,15 @@ public class DataGenerators {
         DataGenerator generator = event.getGenerator();
         PackOutput packOutput = generator.getPackOutput();
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
-        CompletableFuture<HolderLookup.Provider> LookupProvider = event.getLookupProvider();
+        CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
 
         //Worldgen
-        generator.addProvider(event.includeServer(), new EPDataPackProvider(packOutput, LookupProvider));
+        generator.addProvider(event.includeServer(), new EPDataPackProvider(packOutput, lookupProvider));
 
         //Advancements
         GemAdvancementGenerator gem_advancements = new GemAdvancementGenerator();
         SurvivalAdvancementGenerator survival_advancements = new SurvivalAdvancementGenerator();
-        generator.addProvider(event.includeServer(), new ForgeAdvancementProvider(packOutput, LookupProvider, existingFileHelper,
+        generator.addProvider(event.includeServer(), new ForgeAdvancementProvider(packOutput, lookupProvider, existingFileHelper,
                 List.of(gem_advancements, survival_advancements)));
 
         //Recipes
@@ -52,14 +52,14 @@ public class DataGenerators {
         generator.addProvider(event.includeClient(), new EPItemModelProvider(packOutput, existingFileHelper));
 
         //POI types
-        generator.addProvider(event.includeServer(), new EPPoiTypesTagProvider(packOutput, LookupProvider, existingFileHelper));
+        generator.addProvider(event.includeServer(), new EPPoiTypesTagProvider(packOutput, lookupProvider, existingFileHelper));
 
         //Tags
         EPBlockTagGenerator blockTagGenerator = generator.addProvider(event.includeServer(),
-                new EPBlockTagGenerator(packOutput, LookupProvider, existingFileHelper));
-        generator.addProvider(event.includeServer(), new EPItemTagGenerator(packOutput, LookupProvider, blockTagGenerator.contentsGetter(),
+                new EPBlockTagGenerator(packOutput, lookupProvider, existingFileHelper));
+        generator.addProvider(event.includeServer(), new EPItemTagGenerator(packOutput, lookupProvider, blockTagGenerator.contentsGetter(),
                 existingFileHelper));
-        generator.addProvider(event.includeServer(), new EPBiomeTagGenerator(packOutput, LookupProvider, existingFileHelper));
+        generator.addProvider(event.includeServer(), new EPBiomeTagGenerator(packOutput, lookupProvider, existingFileHelper));
 
         //Languages
         generator.addProvider(event.includeClient(), new EnglishLangProvider(packOutput));

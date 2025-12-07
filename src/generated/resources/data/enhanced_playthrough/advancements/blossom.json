@@ -1,5 +1,5 @@
 {
-  "parent": "enhanced_playthrough:survival_root",
+  "parent": "enhanced_playthrough:ancient_knowledge",
   "criteria": {
     "has_item": {
       "conditions": {

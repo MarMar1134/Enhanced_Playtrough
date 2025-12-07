@@ -1,0 +1,23 @@
+{
+  "elements": [
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "enhanced_playthrough:ancient_lords_domain/end/terminator_1",
+        "processors": "enhanced_playthrough:ancient_lords_decay",
+        "projection": "rigid"
+      },
+      "weight": 2
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "enhanced_playthrough:ancient_lords_domain/end/terminator_2",
+        "processors": "enhanced_playthrough:ancient_lords_decay",
+        "projection": "rigid"
+      },
+      "weight": 1
+    }
+  ],
+  "fallback": "minecraft:empty"
+}

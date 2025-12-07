@@ -9,6 +9,7 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.levelgen.structure.Structure;
 
 @SuppressWarnings("removal")
 public class EPTags {
@@ -32,6 +33,7 @@ public class EPTags {
             return BlockTags.create(new ResourceLocation(EnhancedPlaythrough.MOD_ID,name));
         }
     }
+
     public static class Items {
         //Ores
         public static final TagKey<Item> TIN_ORES = oreTag("tin");
@@ -144,7 +146,8 @@ public class EPTags {
         public static final TagKey<Biome> FROZEN_BIOMES = biomeTag("frozen_biomes");
 
         //Biomes with structures
-        public static final TagKey<Biome> JEWELER_HOUSE = structureTag("jeweler_house");
+        public static final TagKey<Biome> HAS_JEWELER_HOUSE = structureTag("has_jeweler_house");
+        public static final TagKey<Biome> HAS_ANCIENT_LORDS_DOMAIN = structureTag("has_ancient_lords_domain");
 
         //Biomes with extra ores
         public static final TagKey<Biome> HUMIDITY_BIOMES = biomeTag("humidity_biomes");

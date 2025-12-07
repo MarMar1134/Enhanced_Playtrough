@@ -13,6 +13,7 @@ import net.marmar.enhanced_playthrough.entity.EPEntityTypes;
 import net.minecraft.Util;
 import net.minecraft.core.Position;
 import net.minecraft.core.dispenser.AbstractProjectileDispenseBehavior;
+import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.projectile.Projectile;
@@ -22,7 +23,10 @@ import net.minecraft.world.level.block.DispenserBlock;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
+import net.minecraftforge.event.entity.EntityJoinLevelEvent;
 import net.minecraftforge.event.entity.SpawnPlacementRegisterEvent;
+import net.minecraftforge.event.entity.living.MobSpawnEvent;
+import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -215,8 +219,8 @@ public class EPEventBusEvents {
     @SubscribeEvent
     public static void registerMobSpawns(SpawnPlacementRegisterEvent event){
         event.register(EPEntityTypes.ZOMBIE_KNIGHT.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-                ZombieKnight::checkZombieKnightSpawnRules, SpawnPlacementRegisterEvent.Operation.REPLACE);
+                ZombieKnight::checkZombieKnightSpawnRules, SpawnPlacementRegisterEvent.Operation.AND);
         event.register(EPEntityTypes.SKELETON_BOWMASTER.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-                SkeletonBowmaster::checkSkeletonBowmasterSpawnRules, SpawnPlacementRegisterEvent.Operation.REPLACE);
+                SkeletonBowmaster::checkSkeletonBowmasterSpawnRules, SpawnPlacementRegisterEvent.Operation.AND);
     }
 }

@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:jigsaw",
+  "biomes": "#enhanced_playthrough:has_structure/has_ancient_lords_domain",
+  "max_distance_from_center": 80,
+  "project_start_to_heightmap": "MOTION_BLOCKING",
+  "size": 7,
+  "spawn_overrides": {
+    "monster": {
+      "bounding_box": "piece",
+      "spawns": [
+        {
+          "type": "enhanced_playthrough:zombie_knight",
+          "maxCount": 3,
+          "minCount": 2,
+          "weight": 2
+        },
+        {
+          "type": "enhanced_playthrough:skeleton_bowmaster",
+          "maxCount": 3,
+          "minCount": 2,
+          "weight": 1
+        }
+      ]
+    }
+  },
+  "start_height": {
+    "absolute": 0
+  },
+  "start_pool": "enhanced_playthrough:ancient_lords_domain/start_pool",
+  "step": "underground_structures",
+  "terrain_adaptation": "beard_thin",
+  "use_expansion_hack": false
+}

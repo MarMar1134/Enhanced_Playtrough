@@ -17,28 +17,28 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.function.Consumer;
 
-public class ModSmithingTransformRecipeBuilder implements RecipeBuilder {
+public class EPSmithingRecipesBuilder implements RecipeBuilder {
     private final Item addition;
     private final Item base;
-    private final Item result;
+    private final @Nullable Item result;
     private final Item template;
     private final Advancement.Builder advancement = Advancement.Builder.recipeAdvancement();
     private final RecipeSerializer<? extends SmithingRecipe> serializer;
 
-    public ModSmithingTransformRecipeBuilder(ItemLike addition, ItemLike base, ItemLike result, ItemLike template, RecipeSerializer<? extends SmithingRecipe> serializer) {
+    public EPSmithingRecipesBuilder(ItemLike addition, ItemLike base, @Nullable ItemLike result, ItemLike template, RecipeSerializer<? extends SmithingRecipe> serializer) {
         this.addition = addition.asItem();
         this.base = base.asItem();
-        this.result = result.asItem();
+        this.result = result != null ? result.asItem() : null;
         this.template = template.asItem();
         this.serializer = serializer;
     }
 
-    public static ModSmithingTransformRecipeBuilder SmithingTransform(ItemLike template, ItemLike base, ItemLike addition, ItemLike result){
-        return new ModSmithingTransformRecipeBuilder(addition, base, result, template, RecipeSerializer.SMITHING_TRANSFORM);
+    public static EPSmithingRecipesBuilder SmithingTransform(ItemLike template, ItemLike base, ItemLike addition, ItemLike result){
+        return new EPSmithingRecipesBuilder(addition, base, result, template, RecipeSerializer.SMITHING_TRANSFORM);
     }
 
-    public static ModSmithingTransformRecipeBuilder SmithingTrim(ItemLike template, ItemLike base, ItemLike addition, ItemLike result){
-        return new ModSmithingTransformRecipeBuilder(addition, base, result, template, RecipeSerializer.SMITHING_TRIM);
+    public static EPSmithingRecipesBuilder SmithingTrim(ItemLike template, ItemLike base, ItemLike addition){
+        return new EPSmithingRecipesBuilder(addition, base, null, template, RecipeSerializer.SMITHING_TRIM);
     }
 
     @Override
@@ -70,17 +70,17 @@ public class ModSmithingTransformRecipeBuilder implements RecipeBuilder {
         }
     }
 
-    static class Result implements FinishedRecipe{
+    static class Result implements FinishedRecipe {
         private final ResourceLocation id;
         private final Item addition;
         private final Item base;
-        private final Item result;
+        private final @Nullable Item result;
         private final Item template;
         private final Advancement.Builder advancement;
         private final ResourceLocation resourceLocation;
         private final RecipeSerializer<? extends SmithingRecipe> serializer;
 
-        public Result(ResourceLocation id, Item addition, Item base, Item result, Item template, Advancement.Builder advancement, ResourceLocation resourceLocation, RecipeSerializer<? extends SmithingRecipe> serializer) {
+        public Result(ResourceLocation id, Item addition, Item base, @Nullable Item result, Item template, Advancement.Builder advancement, ResourceLocation resourceLocation, RecipeSerializer<? extends SmithingRecipe> serializer) {
             this.id = id;
             this.addition = addition;
             this.base = base;
@@ -104,9 +104,11 @@ public class ModSmithingTransformRecipeBuilder implements RecipeBuilder {
             jsonObject.add("base", base);
 
             //result
-            JsonObject result = new JsonObject();
-            result.addProperty("item", ForgeRegistries.ITEMS.getKey(this.result).toString());
-            jsonObject.add("result", result);
+            if (this.result != null){
+                JsonObject result = new JsonObject();
+                result.addProperty("item", ForgeRegistries.ITEMS.getKey(this.result).toString());
+                jsonObject.add("result", result);
+            }
 
             //template
             JsonObject template = new JsonObject();

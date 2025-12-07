@@ -1,0 +1,23 @@
+{
+  "elements": [
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "enhanced_playthrough:ancient_lords_domain/rooms/vertical_center",
+        "processors": "enhanced_playthrough:ancient_lords_decay",
+        "projection": "rigid"
+      },
+      "weight": 2
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "enhanced_playthrough:ancient_lords_domain/rooms/big_library",
+        "processors": "enhanced_playthrough:populate_ancient_library",
+        "projection": "rigid"
+      },
+      "weight": 1
+    }
+  ],
+  "fallback": "enhanced_playthrough:ancient_lords_domain/terminator_pool"
+}

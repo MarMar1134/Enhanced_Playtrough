@@ -5,9 +5,11 @@ import net.marmar.enhanced_playthrough.util.damage.EPDamageTypes;
 import net.marmar.enhanced_playthrough.worldgen.EPBiomeModifiers;
 import net.marmar.enhanced_playthrough.worldgen.EPConfiguredFeatures;
 import net.marmar.enhanced_playthrough.worldgen.EPPlacedFeatures;
-import net.marmar.enhanced_playthrough.worldgen.structure.ModStructureSets;
-import net.marmar.enhanced_playthrough.worldgen.structure.ModStructureTemplatePools;
-import net.marmar.enhanced_playthrough.worldgen.structure.ModStructures;
+import net.marmar.enhanced_playthrough.worldgen.structure.EPStructureSets;
+import net.marmar.enhanced_playthrough.worldgen.structure.pool.EPStructureTemplatePools;
+import net.marmar.enhanced_playthrough.worldgen.structure.EPStructures;
+import net.marmar.enhanced_playthrough.worldgen.structure.processor.EPStructureProcessorLists;
+import net.marmar.enhanced_playthrough.worldgen.structure.processor.EPStructureProcessors;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.registries.Registries;
@@ -20,9 +22,10 @@ import java.util.concurrent.CompletableFuture;
 
 public class EPDataPackProvider extends DatapackBuiltinEntriesProvider {
     public static final RegistrySetBuilder BUILDER = new RegistrySetBuilder()
-            .add(Registries.TEMPLATE_POOL, ModStructureTemplatePools::bootstrap)
-            .add(Registries.STRUCTURE, ModStructures::bootstrap)
-            .add(Registries.STRUCTURE_SET, ModStructureSets::bootstrap)
+            .add(Registries.PROCESSOR_LIST, EPStructureProcessorLists::bootstrap)
+            .add(Registries.TEMPLATE_POOL, EPStructureTemplatePools::bootstrap)
+            .add(Registries.STRUCTURE, EPStructures::bootstrap)
+            .add(Registries.STRUCTURE_SET, EPStructureSets::bootstrap)
             .add(Registries.CONFIGURED_FEATURE, EPConfiguredFeatures::bootstrap)
             .add(Registries.PLACED_FEATURE, EPPlacedFeatures::bootstrap)
             .add(ForgeRegistries.Keys.BIOME_MODIFIERS, EPBiomeModifiers::bootstrap)

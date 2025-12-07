@@ -95,6 +95,8 @@ public class EnglishLangProvider extends AbstractLangProvider {
                     "Get a piece of cobble");
             addSurvivalAdvancement("unity_makes_strength", "Unity makes strength",
                     "Craft an alloy furnace");
+            addSurvivalAdvancement("ancient_knowledge", "Ancient Knowledge",
+                    "Find the Ancient Lord's Domain");
             addSurvivalAdvancement("blossom", "Blossom",
                     "Alloy some gold with copper to get rose gold");
             addSurvivalAdvancement("buttercup", "Buttercup",

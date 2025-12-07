@@ -40,7 +40,7 @@ public class BloodyBladeEnchantment extends Enchantment {
             if (pLevel == 1){
                 entity.addEffect(new MobEffectInstance(EPMobEffects.BLEEDING.get(), 200, 0, false, true, true));
             } else {
-                entity.addEffect(new MobEffectInstance(MobEffects.POISON, 100, pLevel - 1, false, true, true));
+                entity.addEffect(new MobEffectInstance(EPMobEffects.BLEEDING.get(), 100, pLevel - 1, false, true, true));
             }
         }
         super.doPostAttack(pAttacker, pTarget, pLevel);

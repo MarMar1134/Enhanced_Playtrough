@@ -1,0 +1,32 @@
+{
+  "elements": [
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "enhanced_playthrough:ancient_lords_domain/hallways/hallway_1",
+        "processors": "enhanced_playthrough:ancient_lords_decay",
+        "projection": "rigid"
+      },
+      "weight": 4
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "enhanced_playthrough:ancient_lords_domain/hallways/hallway_2",
+        "processors": "enhanced_playthrough:ancient_lords_decay",
+        "projection": "rigid"
+      },
+      "weight": 4
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "enhanced_playthrough:ancient_lords_domain/hallways/hallway_3",
+        "processors": "enhanced_playthrough:ancient_lords_decay",
+        "projection": "rigid"
+      },
+      "weight": 4
+    }
+  ],
+  "fallback": "enhanced_playthrough:ancient_lords_domain/terminator_pool"
+}
