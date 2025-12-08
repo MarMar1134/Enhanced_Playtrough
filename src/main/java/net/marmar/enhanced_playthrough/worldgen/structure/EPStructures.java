@@ -61,7 +61,7 @@ public class EPStructures {
     private static JigsawStructure campStructure(HolderGetter<Biome> biomesGetter, HolderGetter<StructureTemplatePool> structureGetter, TagKey<Biome> pBiomes, ResourceKey<StructureTemplatePool> pCamp, EntityType<?> pMob){
        return new JigsawStructure(structure(biomesGetter.getOrThrow(pBiomes),
                 Map.of(MobCategory.MONSTER, new StructureSpawnOverride(StructureSpawnOverride.BoundingBoxType.STRUCTURE,
-                        WeightedRandomList.create(new MobSpawnSettings.SpawnerData(pMob, 1, 2, 5)))),
+                        WeightedRandomList.create(new MobSpawnSettings.SpawnerData(pMob, 1, 1, 1)))),
                 GenerationStep.Decoration.SURFACE_STRUCTURES, TerrainAdjustment.BEARD_THIN), structureGetter.getOrThrow(pCamp),
                 1, ConstantHeight.of(VerticalAnchor.absolute(0)), false, Heightmap.Types.WORLD_SURFACE_WG);
     }

@@ -13,6 +13,7 @@ import net.marmar.enhanced_playthrough.item.custom.armor.EPArmorItem;
 import net.marmar.enhanced_playthrough.item.custom.armor.EPArmorMaterial;
 import net.marmar.enhanced_playthrough.item.custom.*;
 import net.marmar.enhanced_playthrough.item.custom.weapon.DaggerItem;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -150,12 +151,16 @@ public class EPItems {
                 "calibrated_quartz", ()-> new Item(new Item.Properties()));
 
     //Templates
-    public static final RegistryObject<Item> BRONZIUM_SMITHING_UPGRADE_TEMPLATE = ITEMS.register(
+    public static final RegistryObject<Item> BRONZIUM_UPGRADE_SMITHING_TEMPLATE = ITEMS.register(
             "bronzium_upgrade_smithing_template", EPSmithingTemplateItem::createBronziumSmithingTemplate);
-    public static final RegistryObject<Item> ALUMINUM_SMITHING_UPGRADE_TEMPLATE = ITEMS.register(
+    public static final RegistryObject<Item> ALUMINUM_UPGRADE_SMITHING_TEMPLATE = ITEMS.register(
             "aluminum_upgrade_smithing_template", EPSmithingTemplateItem::createAluminumSmithingUpgrade);
-    public static final RegistryObject<Item> GOLDEN_SMITHING_UPGRADE_TEMPLATE = ITEMS.register(
+    public static final RegistryObject<Item> GOLDEN_UPGRADE_SMITHING_TEMPLATE = ITEMS.register(
             "golden_upgrade_smithing_template", EPSmithingTemplateItem::createGoldenSmithingUpgrade);
+
+    public static final RegistryObject<Item> ANCIENT_ARMOR_TRIM_SMITHING_TEMPLATE = ITEMS.register(
+            "ancient_armor_trim_smithing_template", () ->
+                    SmithingTemplateItem.createArmorTrimTemplate(ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, "ancient")));
 
     //Cobble
     public static final RegistryObject<Item> COBBLE = ITEMS.register(

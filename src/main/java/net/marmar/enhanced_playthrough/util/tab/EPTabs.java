@@ -93,9 +93,9 @@ public class EPTabs {
                         output.accept(EPItems.MUD_BRICK.get());
                         output.accept(EPItems.FIREBRICK.get());
                         output.accept(EPItems.ALUMINUM_ROD.get());
-                        output.accept(EPItems.BRONZIUM_SMITHING_UPGRADE_TEMPLATE.get());
-                        output.accept(EPItems.ALUMINUM_SMITHING_UPGRADE_TEMPLATE.get());
-                        output.accept(EPItems.GOLDEN_SMITHING_UPGRADE_TEMPLATE.get());
+                        output.accept(EPItems.BRONZIUM_UPGRADE_SMITHING_TEMPLATE.get());
+                        output.accept(EPItems.ALUMINUM_UPGRADE_SMITHING_TEMPLATE.get());
+                        output.accept(EPItems.GOLDEN_UPGRADE_SMITHING_TEMPLATE.get());
 
                         //Raw
                         output.accept(EPItems.RAW_SILVER.get());

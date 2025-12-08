@@ -10,10 +10,8 @@ import net.marmar.enhanced_playthrough.recipe.recipebuilder.GenericRecipeBuilder
 import net.marmar.enhanced_playthrough.recipe.recipebuilder.EPSmithingRecipesBuilder;
 import net.marmar.enhanced_playthrough.recipe.recipecategory.ModRecipeCategory;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.recipes.FinishedRecipe;
-import net.minecraft.data.recipes.RecipeCategory;
-import net.minecraft.data.recipes.RecipeProvider;
-import net.minecraft.data.recipes.SingleItemRecipeBuilder;
+import net.minecraft.data.recipes.*;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
@@ -39,6 +37,9 @@ public class GeneralRecipeSubProvider extends RecipeProvider {
     }
 
     private static void smithingRecipes(Consumer<FinishedRecipe> consumer){
+        //Smithing trims
+        smithingTrim(consumer, EPItems.ANCIENT_ARMOR_TRIM_SMITHING_TEMPLATE.get());
+
         //Bronzium
         bronziumSmithingTemplate(consumer, EPItems.BRASS_AXE.get(), EPItems.BRONZE_AXE.get(), EPItems.BRONZIUM_AXE.get());
         bronziumSmithingTemplate(consumer, EPItems.BRASS_PICKAXE.get(), EPItems.BRONZE_PICKAXE.get(), EPItems.BRONZIUM_PICKAXE.get());
@@ -471,18 +472,18 @@ public class GeneralRecipeSubProvider extends RecipeProvider {
     }
 
     protected static void bronziumSmithingTemplate(Consumer<FinishedRecipe> consumer, ItemLike bronzeItem, ItemLike brassItem, ItemLike bronziumItem){
-        smithingUpgrade(consumer, EPItems.BRONZIUM_SMITHING_UPGRADE_TEMPLATE.get(), brassItem,
+        smithingUpgrade(consumer, EPItems.BRONZIUM_UPGRADE_SMITHING_TEMPLATE.get(), brassItem,
                 EPItems.BRONZIUM_INGOT.get(), bronziumItem);
-        smithingUpgrade(consumer, EPItems.BRONZIUM_SMITHING_UPGRADE_TEMPLATE.get(), bronzeItem,
+        smithingUpgrade(consumer, EPItems.BRONZIUM_UPGRADE_SMITHING_TEMPLATE.get(), bronzeItem,
                 EPItems.BRONZIUM_INGOT.get(), bronziumItem);
     }
 
     protected static void aluminumSmithingTemplate(Consumer<FinishedRecipe> consumer, ItemLike baseItem, ItemLike aluminizedItem){
-        smithingUpgrade(consumer, EPItems.ALUMINUM_SMITHING_UPGRADE_TEMPLATE.get(), baseItem, EPItems.ALUMINUM_INGOT.get(), aluminizedItem);
+        smithingUpgrade(consumer, EPItems.ALUMINUM_UPGRADE_SMITHING_TEMPLATE.get(), baseItem, EPItems.ALUMINUM_INGOT.get(), aluminizedItem);
     }
 
     protected static void goldenSmithingUpgrade(Consumer<FinishedRecipe> consumer, ItemLike baseItem, ItemLike pIngot, ItemLike resultItem){
-        smithingUpgrade(consumer, EPItems.GOLDEN_SMITHING_UPGRADE_TEMPLATE.get(), baseItem, pIngot, resultItem);
+        smithingUpgrade(consumer, EPItems.GOLDEN_UPGRADE_SMITHING_TEMPLATE.get(), baseItem, pIngot, resultItem);
     }
 
     protected static void roseGoldenSmithingUpgrade(Consumer<FinishedRecipe> consumer, ItemLike baseItem, ItemLike resultItem){
@@ -521,10 +522,17 @@ public class GeneralRecipeSubProvider extends RecipeProvider {
 
     //Builders
     protected static void smithingTransformSerialize(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike template, ItemLike base, ItemLike addition, ItemLike result){
-        EPSmithingRecipesBuilder.SmithingTransform(template, base, addition, result)
+        EPSmithingRecipesBuilder.smithingTransform(template, Ingredient.of(base), Ingredient.of(addition), result)
                 .unlockedBy(getHasName(base), has(base))
                 .unlockedBy(getHasName(result), has(result))
                 .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(result) + "_from_smithing_" + getItemName(base) + "_with_" + getItemName(addition));
+    }
+
+    @SuppressWarnings("removal")
+    protected static void smithingTrim(Consumer<FinishedRecipe> pConsumer, ItemLike template){
+        SmithingTrimRecipeBuilder.smithingTrim(Ingredient.of(template), Ingredient.of(ItemTags.TRIMMABLE_ARMOR), Ingredient.of(ItemTags.TRIM_MATERIALS), RecipeCategory.MISC)
+                .unlocks("has_smithing_template", has(template))
+                .save(pConsumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, getItemName(template) + "_smithing_trim"));
     }
 
     protected static void stoneCuttingBuilder(Consumer<FinishedRecipe> consumer, ItemLike input, ItemLike result, int count){

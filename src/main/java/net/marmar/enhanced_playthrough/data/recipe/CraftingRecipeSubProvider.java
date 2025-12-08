@@ -138,32 +138,32 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .save(consumer, recipeName(EPItems.VEGETABLE_FIBBER.get(), "from_water_reeds_head"));
 
         //Smithing templates
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, EPItems.BRONZIUM_SMITHING_UPGRADE_TEMPLATE.get(), 2)
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, EPItems.BRONZIUM_UPGRADE_SMITHING_TEMPLATE.get(), 2)
                 .pattern("BAB")
                 .pattern("BVB")
                 .pattern("BBB")
-                .define('A', EPItems.BRONZIUM_SMITHING_UPGRADE_TEMPLATE.get())
+                .define('A', EPItems.BRONZIUM_UPGRADE_SMITHING_TEMPLATE.get())
                 .define('V', EPItems.BRONZIUM_INGOT.get())
                 .define('B', Items.NETHER_BRICK)
-                .unlockedBy(getHasName(EPItems.BRONZIUM_SMITHING_UPGRADE_TEMPLATE.get()), has(EPItems.BRONZIUM_SMITHING_UPGRADE_TEMPLATE.get()))
+                .unlockedBy(getHasName(EPItems.BRONZIUM_UPGRADE_SMITHING_TEMPLATE.get()), has(EPItems.BRONZIUM_UPGRADE_SMITHING_TEMPLATE.get()))
                 .save(consumer);
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, EPItems.ALUMINUM_SMITHING_UPGRADE_TEMPLATE.get(), 2)
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, EPItems.ALUMINUM_UPGRADE_SMITHING_TEMPLATE.get(), 2)
                 .pattern("SAS")
                 .pattern("SVS")
                 .pattern("SSS")
-                .define('A', EPItems.ALUMINUM_SMITHING_UPGRADE_TEMPLATE.get())
+                .define('A', EPItems.ALUMINUM_UPGRADE_SMITHING_TEMPLATE.get())
                 .define('V', EPItems.ALUMINUM_INGOT.get())
                 .define('S', EPTags.Items.TERRACOTTA_SHARD)
-                .unlockedBy(getHasName(EPItems.ALUMINUM_SMITHING_UPGRADE_TEMPLATE.get()), has(EPItems.ALUMINUM_SMITHING_UPGRADE_TEMPLATE.get()))
+                .unlockedBy(getHasName(EPItems.ALUMINUM_UPGRADE_SMITHING_TEMPLATE.get()), has(EPItems.ALUMINUM_UPGRADE_SMITHING_TEMPLATE.get()))
                 .save(consumer);
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, EPItems.GOLDEN_SMITHING_UPGRADE_TEMPLATE.get(), 2)
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, EPItems.GOLDEN_UPGRADE_SMITHING_TEMPLATE.get(), 2)
                 .pattern("SAS")
                 .pattern("SVS")
                 .pattern("SSS")
-                .define('A', EPItems.GOLDEN_SMITHING_UPGRADE_TEMPLATE.get())
+                .define('A', EPItems.GOLDEN_UPGRADE_SMITHING_TEMPLATE.get())
                 .define('V', Items.GOLD_INGOT)
                 .define('S', EPItems.COBBLE.get())
-                .unlockedBy(getHasName(EPItems.GOLDEN_SMITHING_UPGRADE_TEMPLATE.get()), has(EPItems.GOLDEN_SMITHING_UPGRADE_TEMPLATE.get()))
+                .unlockedBy(getHasName(EPItems.GOLDEN_UPGRADE_SMITHING_TEMPLATE.get()), has(EPItems.GOLDEN_UPGRADE_SMITHING_TEMPLATE.get()))
                 .save(consumer);
 
         //Block recipes
@@ -1130,7 +1130,7 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .define('#', EPTags.Items.ALUMINUM_ROD)
                 .unlockedBy("has_tool", has(pSword))
                 .unlockedBy("has_rod", HAS_ALUMINUM_ROD())
-                .unlockedBy("has_smithing_template", has(EPItems.ALUMINUM_SMITHING_UPGRADE_TEMPLATE.get()))
+                .unlockedBy("has_smithing_template", has(EPItems.ALUMINUM_UPGRADE_SMITHING_TEMPLATE.get()))
                 .save(pConsumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, pDagger)
                 .pattern("I")
@@ -1139,7 +1139,7 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .define('#', EPTags.Items.ALUMINUM_ROD)
                 .unlockedBy("has_tool", has(pDagger))
                 .unlockedBy("has_rod", HAS_ALUMINUM_ROD())
-                .unlockedBy("has_smithing_template", has(EPItems.ALUMINUM_SMITHING_UPGRADE_TEMPLATE.get()))
+                .unlockedBy("has_smithing_template", has(EPItems.ALUMINUM_UPGRADE_SMITHING_TEMPLATE.get()))
                 .save(pConsumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, pPickaxe)
                 .pattern("III")
@@ -1149,7 +1149,7 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .define('#', EPTags.Items.ALUMINUM_ROD)
                 .unlockedBy("has_tool", has(pPickaxe))
                 .unlockedBy("has_rod", HAS_ALUMINUM_ROD())
-                .unlockedBy("has_smithing_template", has(EPItems.ALUMINUM_SMITHING_UPGRADE_TEMPLATE.get()))
+                .unlockedBy("has_smithing_template", has(EPItems.ALUMINUM_UPGRADE_SMITHING_TEMPLATE.get()))
                 .save(pConsumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, pAxe)
                 .pattern("II")
@@ -1159,7 +1159,7 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .define('#', EPTags.Items.ALUMINUM_ROD)
                 .unlockedBy("has_tool", has(pAxe))
                 .unlockedBy("has_rod", HAS_ALUMINUM_ROD())
-                .unlockedBy("has_smithing_template", has(EPItems.ALUMINUM_SMITHING_UPGRADE_TEMPLATE.get()))
+                .unlockedBy("has_smithing_template", has(EPItems.ALUMINUM_UPGRADE_SMITHING_TEMPLATE.get()))
                 .save(pConsumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, pShovel)
                 .pattern("I")
@@ -1169,7 +1169,7 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .define('#', EPTags.Items.ALUMINUM_ROD)
                 .unlockedBy("has_tool", has(pShovel))
                 .unlockedBy("has_rod", HAS_ALUMINUM_ROD())
-                .unlockedBy("has_smithing_template", has(EPItems.ALUMINUM_SMITHING_UPGRADE_TEMPLATE.get()))
+                .unlockedBy("has_smithing_template", has(EPItems.ALUMINUM_UPGRADE_SMITHING_TEMPLATE.get()))
                 .save(pConsumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, pHoe)
                 .pattern("II")
@@ -1179,7 +1179,7 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .define('#', EPTags.Items.ALUMINUM_ROD)
                 .unlockedBy("has_tool", has(pHoe))
                 .unlockedBy("has_rod", HAS_ALUMINUM_ROD())
-                .unlockedBy("has_smithing_template", has(EPItems.ALUMINUM_SMITHING_UPGRADE_TEMPLATE.get()))
+                .unlockedBy("has_smithing_template", has(EPItems.ALUMINUM_UPGRADE_SMITHING_TEMPLATE.get()))
                 .save(pConsumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, pPolisher)
                 .pattern(" I")
@@ -1188,7 +1188,7 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .define('#', EPTags.Items.ALUMINUM_ROD)
                 .unlockedBy("has_tool", has(pPolisher))
                 .unlockedBy("has_rod", HAS_ALUMINUM_ROD())
-                .unlockedBy("has_smithing_template", has(EPItems.ALUMINUM_SMITHING_UPGRADE_TEMPLATE.get()))
+                .unlockedBy("has_smithing_template", has(EPItems.ALUMINUM_UPGRADE_SMITHING_TEMPLATE.get()))
                 .save(pConsumer);
     }
 

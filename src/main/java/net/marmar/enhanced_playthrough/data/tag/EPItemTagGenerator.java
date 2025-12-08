@@ -171,6 +171,10 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                 EPItems.BLUE_GOLD_INGOT.get()
         );
 
+        this.tag(ItemTags.TRIM_TEMPLATES).add(
+                EPItems.ANCIENT_ARMOR_TRIM_SMITHING_TEMPLATE.get()
+        );
+
         //Specific ingots
         this.tag(EPTags.Items.SILVER_INGOT).add(EPItems.SILVER_INGOT.get());
         this.tag(EPTags.Items.ALUMINUM_INGOT).add(EPItems.ALUMINUM_INGOT.get());
@@ -399,6 +403,131 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                 EPTags.Items.DAGGER
         );
 
+        this.tag(ItemTags.SHOVELS).add(
+                EPItems.SILVER_SHOVEL.get(),
+                EPItems.BRONZE_SHOVEL.get(),
+                EPItems.BRASS_SHOVEL.get(),
+                EPItems.ROSE_GOLDEN_SHOVEL.get(),
+                EPItems.BRONZIUM_SHOVEL.get(),
+                EPItems.STEEL_SHOVEL.get(),
+                EPItems.GREEN_GOLDEN_SHOVEL.get(),
+                EPItems.BLUE_GOLDEN_SHOVEL.get(),
+
+                EPItems.ALUMINUM_WOODEN_SHOVEL.get(),
+                EPItems.ALUMINUM_STONE_SHOVEL.get(),
+                EPItems.ALUMINUM_GOLDEN_SHOVEL.get(),
+                EPItems.ALUMINUM_SILVER_SHOVEL.get(),
+                EPItems.ALUMINUM_BRONZE_SHOVEL.get(),
+                EPItems.ALUMINUM_BRASS_SHOVEL.get(),
+                EPItems.ALUMINUM_ROSE_GOLDEN_SHOVEL.get(),
+                EPItems.ALUMINUM_BRONZIUM_SHOVEL.get(),
+                EPItems.ALUMINUM_IRON_SHOVEL.get(),
+                EPItems.ALUMINUM_STEEL_SHOVEL.get(),
+                EPItems.ALUMINUM_GREEN_GOLDEN_SHOVEL.get(),
+                EPItems.ALUMINUM_BLUE_GOLDEN_SHOVEL.get(),
+                EPItems.ALUMINUM_DIAMOND_SHOVEL.get()
+        );
+
+        this.tag(ItemTags.AXES).add(
+                EPItems.SILVER_AXE.get(),
+                EPItems.BRONZE_AXE.get(),
+                EPItems.BRASS_AXE.get(),
+                EPItems.ROSE_GOLDEN_AXE.get(),
+                EPItems.BRONZIUM_AXE.get(),
+                EPItems.STEEL_AXE.get(),
+                EPItems.GREEN_GOLDEN_AXE.get(),
+                EPItems.BLUE_GOLDEN_AXE.get(),
+
+                EPItems.ALUMINUM_WOODEN_AXE.get(),
+                EPItems.ALUMINUM_STONE_AXE.get(),
+                EPItems.ALUMINUM_GOLDEN_AXE.get(),
+                EPItems.ALUMINUM_SILVER_AXE.get(),
+                EPItems.ALUMINUM_BRONZE_AXE.get(),
+                EPItems.ALUMINUM_BRASS_AXE.get(),
+                EPItems.ALUMINUM_ROSE_GOLDEN_AXE.get(),
+                EPItems.ALUMINUM_BRONZIUM_AXE.get(),
+                EPItems.ALUMINUM_IRON_AXE.get(),
+                EPItems.ALUMINUM_STEEL_AXE.get(),
+                EPItems.ALUMINUM_GREEN_GOLDEN_AXE.get(),
+                EPItems.ALUMINUM_BLUE_GOLDEN_AXE.get(),
+                EPItems.ALUMINUM_DIAMOND_AXE.get()
+        );
+
+        this.tag(ItemTags.PICKAXES).add(
+                EPItems.SILVER_PICKAXE.get(),
+                EPItems.BRONZE_PICKAXE.get(),
+                EPItems.BRASS_PICKAXE.get(),
+                EPItems.ROSE_GOLDEN_PICKAXE.get(),
+                EPItems.BRONZIUM_PICKAXE.get(),
+                EPItems.STEEL_PICKAXE.get(),
+                EPItems.GREEN_GOLDEN_PICKAXE.get(),
+                EPItems.BLUE_GOLDEN_PICKAXE.get(),
+
+                EPItems.ALUMINUM_WOODEN_PICKAXE.get(),
+                EPItems.ALUMINUM_STONE_PICKAXE.get(),
+                EPItems.ALUMINUM_GOLDEN_PICKAXE.get(),
+                EPItems.ALUMINUM_SILVER_PICKAXE.get(),
+                EPItems.ALUMINUM_BRONZE_PICKAXE.get(),
+                EPItems.ALUMINUM_BRASS_PICKAXE.get(),
+                EPItems.ALUMINUM_ROSE_GOLDEN_PICKAXE.get(),
+                EPItems.ALUMINUM_BRONZIUM_PICKAXE.get(),
+                EPItems.ALUMINUM_IRON_PICKAXE.get(),
+                EPItems.ALUMINUM_STEEL_PICKAXE.get(),
+                EPItems.ALUMINUM_GREEN_GOLDEN_PICKAXE.get(),
+                EPItems.ALUMINUM_BLUE_GOLDEN_PICKAXE.get(),
+                EPItems.ALUMINUM_DIAMOND_PICKAXE.get()
+        );
+
+        this.tag(ItemTags.SWORDS).add(
+                EPItems.SILVER_SWORD.get(),
+                EPItems.BRONZE_SWORD.get(),
+                EPItems.BRASS_SWORD.get(),
+                EPItems.ROSE_GOLDEN_SWORD.get(),
+                EPItems.BRONZIUM_SWORD.get(),
+                EPItems.STEEL_SWORD.get(),
+                EPItems.GREEN_GOLDEN_SWORD.get(),
+                EPItems.BLUE_GOLDEN_SWORD.get(),
+
+                EPItems.ALUMINUM_WOODEN_SWORD.get(),
+                EPItems.ALUMINUM_STONE_SWORD.get(),
+                EPItems.ALUMINUM_GOLDEN_SWORD.get(),
+                EPItems.ALUMINUM_SILVER_SWORD.get(),
+                EPItems.ALUMINUM_BRONZE_SWORD.get(),
+                EPItems.ALUMINUM_BRASS_SWORD.get(),
+                EPItems.ALUMINUM_ROSE_GOLDEN_SWORD.get(),
+                EPItems.ALUMINUM_BRONZIUM_SWORD.get(),
+                EPItems.ALUMINUM_IRON_SWORD.get(),
+                EPItems.ALUMINUM_STEEL_SWORD.get(),
+                EPItems.ALUMINUM_GREEN_GOLDEN_SWORD.get(),
+                EPItems.ALUMINUM_BLUE_GOLDEN_SWORD.get(),
+                EPItems.ALUMINUM_DIAMOND_SWORD.get()
+        );
+
+        this.tag(ItemTags.HOES).add(
+                EPItems.SILVER_HOE.get(),
+                EPItems.BRONZE_HOE.get(),
+                EPItems.BRASS_HOE.get(),
+                EPItems.ROSE_GOLDEN_HOE.get(),
+                EPItems.BRONZIUM_HOE.get(),
+                EPItems.STEEL_HOE.get(),
+                EPItems.GREEN_GOLDEN_HOE.get(),
+                EPItems.BLUE_GOLDEN_HOE.get(),
+
+                EPItems.ALUMINUM_WOODEN_HOE.get(),
+                EPItems.ALUMINUM_STONE_HOE.get(),
+                EPItems.ALUMINUM_GOLDEN_HOE.get(),
+                EPItems.ALUMINUM_SILVER_HOE.get(),
+                EPItems.ALUMINUM_BRONZE_HOE.get(),
+                EPItems.ALUMINUM_BRASS_HOE.get(),
+                EPItems.ALUMINUM_ROSE_GOLDEN_HOE.get(),
+                EPItems.ALUMINUM_BRONZIUM_HOE.get(),
+                EPItems.ALUMINUM_IRON_HOE.get(),
+                EPItems.ALUMINUM_STEEL_HOE.get(),
+                EPItems.ALUMINUM_GREEN_GOLDEN_HOE.get(),
+                EPItems.ALUMINUM_BLUE_GOLDEN_HOE.get(),
+                EPItems.ALUMINUM_DIAMOND_HOE.get()
+        );
+
         this.tag(EPTags.Items.POLISHER).add(
                 EPItems.SILVER_POLISHER.get(),
                 EPItems.GOLDEN_POLISHER.get(),
@@ -413,7 +542,7 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                 EPItems.BLUE_GOLDEN_POLISHER.get(),
                 EPItems.DIAMOND_POLISHER.get(),
                 EPItems.NETHERITE_POLISHER.get(),
-                //Aluminum
+
                 EPItems.ALUMINUM_STONE_POLISHER.get(),
                 EPItems.ALUMINUM_GOLDEN_POLISHER.get(),
                 EPItems.ALUMINUM_SILVER_POLISHER.get(),
@@ -443,7 +572,7 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                 EPItems.BLUE_GOLDEN_DAGGER.get(),
                 EPItems.DIAMOND_DAGGER.get(),
                 EPItems.NETHERITE_DAGGER.get(),
-                //Aluminum
+
                 EPItems.ALUMINUM_WOODEN_DAGGER.get(),
                 EPItems.ALUMINUM_STONE_DAGGER.get(),
                 EPItems.ALUMINUM_GOLDEN_DAGGER.get(),

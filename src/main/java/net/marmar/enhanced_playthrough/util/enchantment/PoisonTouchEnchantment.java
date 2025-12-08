@@ -38,9 +38,10 @@ public class PoisonTouchEnchantment extends Enchantment {
 
     @Override
     public void doPostAttack(LivingEntity pAttacker, Entity pTarget, int pLevel) {
-        if(pTarget instanceof LivingEntity entity){
+        if (pTarget instanceof LivingEntity entity){
             entity.addEffect(new MobEffectInstance(MobEffects.POISON, 100, pLevel - 1, false, true, true));
         }
+
         super.doPostAttack(pAttacker, pTarget, pLevel);
     }
     @Override

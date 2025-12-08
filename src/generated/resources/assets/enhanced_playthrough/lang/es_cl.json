@@ -617,5 +617,6 @@
   "sound.enhanced_playthrough.zombie_knight_ambient": "Zombi caballero quejándose",
   "sound.enhanced_playthrough.zombie_knight_death": "Zombi caballero muriendo",
   "sound.enhanced_playthrough.zombie_knight_hurt": "Zombi caballero siendo herido",
-  "sound.enhanced_playthrough.zombie_knight_step": "Zombi caballero caminando"
+  "sound.enhanced_playthrough.zombie_knight_step": "Zombi caballero caminando",
+  "trim_pattern.enhanced_playthrough.ancient": "Antiguo"
 }

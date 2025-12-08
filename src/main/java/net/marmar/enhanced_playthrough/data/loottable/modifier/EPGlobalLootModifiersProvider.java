@@ -10,8 +10,6 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
-import net.minecraft.world.level.storage.loot.predicates.LootItemConditions;
-import net.minecraft.world.level.storage.loot.predicates.LootItemKilledByPlayerCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCondition;
 import net.minecraftforge.common.data.GlobalLootModifierProvider;
 import net.minecraftforge.common.loot.LootTableIdCondition;
@@ -125,7 +123,7 @@ public class EPGlobalLootModifiersProvider extends GlobalLootModifierProvider {
             //Golden upgrade
             add("golden_smithing_upgrade_template_from_mineshaft", new AddItemModifier(new LootItemCondition[] {
                     new LootTableIdCondition.Builder(new ResourceLocation("chests/abandoned_mineshaft")).build(),
-                    LootItemRandomChanceCondition.randomChance(0.45f).build()}, EPItems.GOLDEN_SMITHING_UPGRADE_TEMPLATE.get()));
+                    LootItemRandomChanceCondition.randomChance(0.45f).build()}, EPItems.GOLDEN_UPGRADE_SMITHING_TEMPLATE.get()));
 
         //Villages
         add("zapallo_seeds_from_villages", new AddItemModifier(new LootItemCondition[] {
@@ -181,7 +179,7 @@ public class EPGlobalLootModifiersProvider extends GlobalLootModifierProvider {
                 LootItemRandomChanceCondition.randomChance(0.3f).build()}, EPItems.BRONZIUM_INGOT.get()));
         add("bronzium_smithing_upgrade_template_from_nether_bridge", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(new ResourceLocation("chests/nether_bridge")).build(),
-                LootItemRandomChanceCondition.randomChance(0.2f).build()}, EPItems.BRONZIUM_SMITHING_UPGRADE_TEMPLATE.get()));
+                LootItemRandomChanceCondition.randomChance(0.2f).build()}, EPItems.BRONZIUM_UPGRADE_SMITHING_TEMPLATE.get()));
         add("bronzium_sword_from_nether_bridge", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(new ResourceLocation("chests/nether_bridge")).build(),
                 LootItemRandomChanceCondition.randomChance(0.4f).build()}, EPItems.BRONZIUM_SWORD.get()));

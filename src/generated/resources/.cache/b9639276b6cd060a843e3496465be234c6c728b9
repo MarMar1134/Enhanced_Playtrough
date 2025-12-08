@@ -1,4 +1,4 @@
-// 1.20.1	2025-08-19T14:05:53.1779689	Tags for minecraft:item mod id enhanced_playthrough
+// 1.20.1	2025-12-08T19:40:59.2385669	Tags for minecraft:item mod id enhanced_playthrough
 0ff3092eb36a0159ae287d2f429e5f5eb6fb0c0a data/enhanced_playthrough/tags/items/aluminum.json
 b3b284c126879d981b4f706eb8ea0e63bd17ae12 data/enhanced_playthrough/tags/items/apple_logs.json
 1d609255995a77ead62a005cb2b75886514bb25a data/enhanced_playthrough/tags/items/blue_gold.json
@@ -69,11 +69,17 @@ c7753e2ff6292ba0090b6648ec7f9503bfbd5a4d data/forge/tags/items/ores.json
 876c6e51b4f82186254c20d7fcf5864802e41088 data/forge/tags/items/string.json
 d91bb3390af97661bbeffb2f4850295e19f0f696 data/forge/tags/items/tools.json
 2f479e166c79560e8ab005e7afe3affd36466fb3 data/minecraft/tags/items/arrows.json
+44c59ac57df8b15ad4eada2454ecd6db0f4158d8 data/minecraft/tags/items/axes.json
 846fafa1105aad614b66576fb00816ef553538e2 data/minecraft/tags/items/beacon_payment_items.json
 83157d251b625cdc1bbf3ccc7134043e5f6f924d data/minecraft/tags/items/hanging_signs.json
+a393e70b5a49f6e152fa524ba832f4efc37d4c74 data/minecraft/tags/items/hoes.json
 cc7f01de72464bfac0275de5c6aaeeb445bc06d0 data/minecraft/tags/items/logs_that_burn.json
+75cd1ddef6e2643e0b3bf166598e5c651ba9cc4e data/minecraft/tags/items/pickaxes.json
 773e01be4bd2159228e78e0aaa616a1e4f11c02a data/minecraft/tags/items/piglin_loved.json
 09c1bed1eb894a8dc53a3c61aa274cfa3f6f7197 data/minecraft/tags/items/planks.json
+18d2f3aa120edb99d6b104b12bd0b1ce3b4fe3e9 data/minecraft/tags/items/shovels.json
 eee53ecd7b65edaeef85566d7a3cb6bd7c197e5d data/minecraft/tags/items/signs.json
 98c8337310ed121b816c834fde588afce4b7c192 data/minecraft/tags/items/stone_crafting_materials.json
+e120c93439b3419178f95a671ab7d6e9dd39418c data/minecraft/tags/items/swords.json
 e0ddc9492cb6604c94cff63be5cc1b319c8bdb6a data/minecraft/tags/items/trimmable_armor.json
+5226cf300a42e50b35a335689407f2885c37edf4 data/minecraft/tags/items/trim_templates.json

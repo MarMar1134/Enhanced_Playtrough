@@ -1,0 +1,7 @@
+{
+  "asset_id": "enhanced_playthrough:ancient",
+  "description": {
+    "translate": "trim_pattern.enhanced_playthrough.ancient"
+  },
+  "template_item": "enhanced_playthrough:ancient_armor_trim_smithing_template"
+}

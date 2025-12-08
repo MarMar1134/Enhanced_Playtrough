@@ -746,17 +746,19 @@ public class SpanishLangProvider extends AbstractLangProvider {
             addItem(EPItems.RICE_BOWL, "Bowl de arroz");
 
         //Smithing templates
-        addSmithingTitles("Plantilla de herreria", "Se aplica a:", "Ingredientes:");
+        addSmithingTemplateTitle("Plantilla de herreria", "Se aplica a:", "Ingredientes:");
 
-        addSmithingTranslations("bronzium", "Mejora de broncio", "Equipo de bronze, equipo de latón",
+        addSmithingUpgrade("bronzium", "Mejora de broncio", "Equipo de bronze, equipo de latón",
                 "Lingote de broncio", "Coloque un arma, herramienta o armadora de bronce o de latón", "Coloque un Lingote de broncio");
 
-        addSmithingTranslations("aluminum", "Mejora de aluminio", "Equipación con mango de madera",
+        addSmithingUpgrade("aluminum", "Mejora de aluminio", "Equipación con mango de madera",
                 "Lingote de aluminio", "Coloque cualquier equipo con un mango de madera", "Coloque un lingote de aluminio");
 
-        addSmithingTranslations("golden", "Mejora áurea", "Equipación de oro",
+        addSmithingUpgrade("golden", "Mejora áurea", "Equipación de oro",
                 "Lingote de oro rosa, Lingote de oro verde, Lingote de oro azul", "Coloque cualquier equipo de oro",
                 "Coloque un lingote de oro rosa, verde o azul");
+
+        addTrimPattern("ancient", "Antiguo");
 
         //Enchantments
         addEnchantment(EPEnchantments.FINE_MINING, "Minado fino");

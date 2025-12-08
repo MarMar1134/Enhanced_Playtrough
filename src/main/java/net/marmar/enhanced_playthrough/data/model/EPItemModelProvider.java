@@ -317,9 +317,10 @@ public class EPItemModelProvider extends ItemModelProvider {
         simpleItem(EPItems.CALIBRATED_QUARTZ);
 
         //templates
-        simpleItem(EPItems.BRONZIUM_SMITHING_UPGRADE_TEMPLATE);
-        simpleItem(EPItems.ALUMINUM_SMITHING_UPGRADE_TEMPLATE);
-        simpleItem(EPItems.GOLDEN_SMITHING_UPGRADE_TEMPLATE);
+        simpleItem(EPItems.BRONZIUM_UPGRADE_SMITHING_TEMPLATE);
+        simpleItem(EPItems.ALUMINUM_UPGRADE_SMITHING_TEMPLATE);
+        simpleItem(EPItems.GOLDEN_UPGRADE_SMITHING_TEMPLATE);
+        simpleItem(EPItems.ANCIENT_ARMOR_TRIM_SMITHING_TEMPLATE);
 
         //Cobble
         simpleItem(EPItems.COBBLE);

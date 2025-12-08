@@ -61,13 +61,21 @@ public abstract class AbstractLangProvider extends LanguageProvider {
         this.add("creativetab." + EnhancedPlaythrough.MOD_ID + "." + tabName, translation);
     }
 
-    protected void addSmithingTitles(String pName, String pAppliesTo, String pIngredients){
+    protected void addSmithingTemplateTitle(String pName, String pAppliesTo, String pIngredients){
         this.add("smithing." + EnhancedPlaythrough.MOD_ID + ".applies_to_title", pAppliesTo);
         this.add("smithing." + EnhancedPlaythrough.MOD_ID + ".ingredients_title", pIngredients);
         this.add("item.minecraft.smithing_template", pName);
     }
 
-    protected void addSmithingTranslations(String smithingMaterial, String title, String appliesTo, String ingredients, String baseSlotDesc, String addSlotDesc){
+    protected void addTrimPattern(String pPattern, String pName){
+        this.add("trim_pattern." + EnhancedPlaythrough.MOD_ID + "." + pPattern, pName);
+    }
+
+    protected void addTrimMaterial(String pMaterial, String pName){
+        this.add("trim_material." + EnhancedPlaythrough.MOD_ID + "." + pMaterial, pName);
+    }
+
+    protected void addSmithingUpgrade(String smithingMaterial, String title, String appliesTo, String ingredients, String baseSlotDesc, String addSlotDesc){
         this.add("smithing." + EnhancedPlaythrough.MOD_ID + "." + smithingMaterial + ".title", title);
         this.add("smithing." + EnhancedPlaythrough.MOD_ID + "." + smithingMaterial + ".applies_to", appliesTo);
         this.add("smithing." + EnhancedPlaythrough.MOD_ID + "." + smithingMaterial + ".ingredients", ingredients);

@@ -9,6 +9,7 @@ import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.SmithingRecipe;
 import net.minecraft.world.level.ItemLike;
@@ -18,27 +19,23 @@ import org.jetbrains.annotations.Nullable;
 import java.util.function.Consumer;
 
 public class EPSmithingRecipesBuilder implements RecipeBuilder {
-    private final Item addition;
-    private final Item base;
-    private final @Nullable Item result;
+    private final Ingredient addition;
+    private final Ingredient base;
+    private final Item result;
     private final Item template;
     private final Advancement.Builder advancement = Advancement.Builder.recipeAdvancement();
     private final RecipeSerializer<? extends SmithingRecipe> serializer;
 
-    public EPSmithingRecipesBuilder(ItemLike addition, ItemLike base, @Nullable ItemLike result, ItemLike template, RecipeSerializer<? extends SmithingRecipe> serializer) {
-        this.addition = addition.asItem();
-        this.base = base.asItem();
-        this.result = result != null ? result.asItem() : null;
+    public EPSmithingRecipesBuilder(Ingredient addition, Ingredient base, ItemLike result, ItemLike template, RecipeSerializer<? extends SmithingRecipe> serializer) {
+        this.addition = addition;
+        this.base = base;
+        this.result = result.asItem();
         this.template = template.asItem();
         this.serializer = serializer;
     }
 
-    public static EPSmithingRecipesBuilder SmithingTransform(ItemLike template, ItemLike base, ItemLike addition, ItemLike result){
+    public static EPSmithingRecipesBuilder smithingTransform(ItemLike template, Ingredient base, Ingredient addition, ItemLike result){
         return new EPSmithingRecipesBuilder(addition, base, result, template, RecipeSerializer.SMITHING_TRANSFORM);
-    }
-
-    public static EPSmithingRecipesBuilder SmithingTrim(ItemLike template, ItemLike base, ItemLike addition){
-        return new EPSmithingRecipesBuilder(addition, base, null, template, RecipeSerializer.SMITHING_TRIM);
     }
 
     @Override
@@ -72,15 +69,15 @@ public class EPSmithingRecipesBuilder implements RecipeBuilder {
 
     static class Result implements FinishedRecipe {
         private final ResourceLocation id;
-        private final Item addition;
-        private final Item base;
-        private final @Nullable Item result;
+        private final Ingredient addition;
+        private final Ingredient base;
+        private final Item result;
         private final Item template;
         private final Advancement.Builder advancement;
         private final ResourceLocation resourceLocation;
         private final RecipeSerializer<? extends SmithingRecipe> serializer;
 
-        public Result(ResourceLocation id, Item addition, Item base, @Nullable Item result, Item template, Advancement.Builder advancement, ResourceLocation resourceLocation, RecipeSerializer<? extends SmithingRecipe> serializer) {
+        public Result(ResourceLocation id, Ingredient addition, Ingredient base, Item result, Item template, Advancement.Builder advancement, ResourceLocation resourceLocation, RecipeSerializer<? extends SmithingRecipe> serializer) {
             this.id = id;
             this.addition = addition;
             this.base = base;
@@ -94,14 +91,10 @@ public class EPSmithingRecipesBuilder implements RecipeBuilder {
         @Override
         public void serializeRecipeData(JsonObject jsonObject) {
             //addition
-            JsonObject addition = new JsonObject();
-            addition.addProperty("item", ForgeRegistries.ITEMS.getKey(this.addition).toString());
-            jsonObject.add("addition", addition);
+            jsonObject.add("addition", this.addition.toJson());
 
             //base
-            JsonObject base = new JsonObject();
-            base.addProperty("item", ForgeRegistries.ITEMS.getKey(this.base).toString());
-            jsonObject.add("base", base);
+            jsonObject.add("base", this.base.toJson());
 
             //result
             if (this.result != null){
