@@ -55,7 +55,20 @@
         "iron_darker": "trims/color_palettes/iron_darker",
         "gold_darker": "trims/color_palettes/gold_darker",
         "diamond_darker": "trims/color_palettes/diamond_darker",
-        "netherite_darker": "trims/color_palettes/netherite_darker"
+        "netherite_darker": "trims/color_palettes/netherite_darker",
+        "aluminum": "enhanced_playthrough:trims/color_palettes/aluminum",
+        "silver": "enhanced_playthrough:trims/color_palettes/silver",
+        "zinc": "enhanced_playthrough:trims/color_palettes/zinc",
+        "bronze": "enhanced_playthrough:trims/color_palettes/bronze",
+        "brass": "enhanced_playthrough:trims/color_palettes/brass",
+        "bronzium": "enhanced_playthrough:trims/color_palettes/bronzium",
+        "steel": "enhanced_playthrough:trims/color_palettes/steel",
+        "rose_gold": "enhanced_playthrough:trims/color_palettes/rose_gold",
+        "green_gold": "enhanced_playthrough:trims/color_palettes/green_gold",
+        "blue_gold": "enhanced_playthrough:trims/color_palettes/blue_gold",
+        "ruby": "enhanced_playthrough:trims/color_palettes/ruby",
+        "sapphire": "enhanced_playthrough:trims/color_palettes/sapphire",
+        "garnet": "enhanced_playthrough:trims/color_palettes/garnet"
       }
     }
   ]

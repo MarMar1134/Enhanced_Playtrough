@@ -1,0 +1,9 @@
+{
+  "asset_name": "brass",
+  "description": {
+    "color": "#110F53",
+    "translate": "trim_material.enhanced_playthrough.brass"
+  },
+  "ingredient": "enhanced_playthrough:brass_ingot",
+  "item_model_index": 0.5
+}

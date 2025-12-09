@@ -1,6 +1,7 @@
 package net.marmar.enhanced_playthrough.data;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
+import net.marmar.enhanced_playthrough.item.trim.EPTrimMaterials;
 import net.marmar.enhanced_playthrough.item.trim.EPTrimPatterns;
 import net.marmar.enhanced_playthrough.util.damage.EPDamageTypes;
 import net.marmar.enhanced_playthrough.worldgen.EPBiomeModifiers;
@@ -31,6 +32,7 @@ public class EPDataPackProvider extends DatapackBuiltinEntriesProvider {
             .add(Registries.PLACED_FEATURE, EPPlacedFeatures::bootstrap)
             .add(ForgeRegistries.Keys.BIOME_MODIFIERS, EPBiomeModifiers::bootstrap)
             .add(Registries.DAMAGE_TYPE, EPDamageTypes::bootstrap)
+            .add(Registries.TRIM_MATERIAL, EPTrimMaterials::bootstrap)
             .add(Registries.TRIM_PATTERN, EPTrimPatterns::bootstrap);
 
     public EPDataPackProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {

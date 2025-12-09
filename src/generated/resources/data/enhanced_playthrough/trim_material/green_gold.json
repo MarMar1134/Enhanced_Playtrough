@@ -1,0 +1,9 @@
+{
+  "asset_name": "green_gold",
+  "description": {
+    "color": "#42320F",
+    "translate": "trim_material.enhanced_playthrough.green_gold"
+  },
+  "ingredient": "enhanced_playthrough:green_gold_ingot",
+  "item_model_index": 0.7
+}

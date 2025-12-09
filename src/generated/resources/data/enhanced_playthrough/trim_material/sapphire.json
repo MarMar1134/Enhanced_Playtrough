@@ -1,0 +1,9 @@
+{
+  "asset_name": "sapphire",
+  "description": {
+    "color": "#000E7C",
+    "translate": "trim_material.enhanced_playthrough.sapphire"
+  },
+  "ingredient": "enhanced_playthrough:sapphire",
+  "item_model_index": 0.9
+}

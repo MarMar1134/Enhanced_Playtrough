@@ -81,7 +81,6 @@ public class EPChestLootTables implements LootTableSubProvider {
 
                 .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1))
                         .add(LootItem.lootTableItem(EPItems.ALUMINUM_UPGRADE_SMITHING_TEMPLATE.get()).setWeight(2))
-                        .add(LootItem.lootTableItem(EPItems.GOLDEN_UPGRADE_SMITHING_TEMPLATE.get()).setWeight(2))
                         .add(EmptyLootItem.emptyItem().setWeight(4)));
     }
 
@@ -114,6 +113,11 @@ public class EPChestLootTables implements LootTableSubProvider {
                                 .apply(SetItemDamageFunction.setDamage(UniformGenerator.between(30,40))))
                         .add(LootItem.lootTableItem(Items.BOOK).setWeight(1)
                                 .apply(EnchantRandomlyFunction.randomApplicableEnchantment()))
+                )
+                .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1))
+                        .add(EmptyLootItem.emptyItem().setWeight(20))
+                        .add(LootItem.lootTableItem(EPItems.ANCIENT_ARMOR_TRIM_SMITHING_TEMPLATE.get()).setWeight(2)
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1))))
                 );
     }
 
@@ -192,6 +196,11 @@ public class EPChestLootTables implements LootTableSubProvider {
                         .add(LootItem.lootTableItem(EPItems.BRONZE_SWORD.get()).setWeight(2)
                                 .apply(EnchantRandomlyFunction.randomApplicableEnchantment()))
                         .add(LootItem.lootTableItem(EPItems.GOLDEN_UPGRADE_SMITHING_TEMPLATE.get()).setWeight(1)
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1))))
+                )
+                .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1))
+                        .add(EmptyLootItem.emptyItem().setWeight(20))
+                        .add(LootItem.lootTableItem(EPItems.ANCIENT_ARMOR_TRIM_SMITHING_TEMPLATE.get()).setWeight(2)
                                 .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1))))
                 );
     }
@@ -279,6 +288,11 @@ public class EPChestLootTables implements LootTableSubProvider {
                                 .apply(SetItemCountFunction.setCount(UniformGenerator.between(2,5))))
                         .add(LootItem.lootTableItem(Items.BOOK).setWeight(3)
                                 .apply(EnchantRandomlyFunction.randomApplicableEnchantment()))
+                )
+                .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1))
+                        .add(EmptyLootItem.emptyItem().setWeight(20))
+                        .add(LootItem.lootTableItem(EPItems.ANCIENT_ARMOR_TRIM_SMITHING_TEMPLATE.get()).setWeight(2)
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1))))
                 );
     }
 
@@ -302,6 +316,11 @@ public class EPChestLootTables implements LootTableSubProvider {
                         .add(LootItem.lootTableItem(EPItems.GOLDEN_UPGRADE_SMITHING_TEMPLATE.get()).setWeight(5)
                                 .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1))))
                         .add(LootItem.lootTableItem(Items.ENCHANTED_GOLDEN_APPLE).setWeight(4)
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1))))
+                )
+                .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1))
+                        .add(EmptyLootItem.emptyItem().setWeight(20))
+                        .add(LootItem.lootTableItem(EPItems.ANCIENT_ARMOR_TRIM_SMITHING_TEMPLATE.get()).setWeight(2)
                                 .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1))))
                 );
     }

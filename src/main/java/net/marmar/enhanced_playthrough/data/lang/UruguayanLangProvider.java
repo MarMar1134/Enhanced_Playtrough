@@ -758,7 +758,22 @@ public class UruguayanLangProvider extends AbstractLangProvider {
                 "Lingote de oro rosa, Lingote de oro verde, Lingote de oro azul", "Coloque cualquier equipo de oro",
                 "Coloque un lingote de oro rosa, verde o azul");
 
-        addTrimPattern("ancient", "Antiguo");
+        addTrimPattern("ancient", "Ornamento antiguo");
+
+        //Trim materials
+        addTrimMaterial("aluminum", "Aluminio");
+        addTrimMaterial("silver", "Plata");
+        addTrimMaterial("zinc", "Zinc");
+        addTrimMaterial("bronze", "Bronce");
+        addTrimMaterial("brass", "Latón");
+        addTrimMaterial("bronzium", "Broncio");
+        addTrimMaterial("steel", "Acero");
+        addTrimMaterial("rose_gold", "Oro rosado");
+        addTrimMaterial("green_gold", "Oro verde");
+        addTrimMaterial("blue_gold", "Oro azul");
+        addTrimMaterial("ruby", "Rubí");
+        addTrimMaterial("sapphire", "Zafiro");
+        addTrimMaterial("garnet", "Granate");
 
         //Enchantments
         addEnchantment(EPEnchantments.FINE_MINING, "Minado fino");

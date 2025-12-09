@@ -2,27 +2,9 @@
   "parent": "minecraft:item/generated",
   "overrides": [
     {
-      "model": "enhanced_playthrough:item/green_golden_leggings_amethyst_trim",
+      "model": "enhanced_playthrough:item/green_golden_leggings_quartz_trim",
       "predicate": {
-        "minecraft:trim_type": 1.0
-      }
-    },
-    {
-      "model": "enhanced_playthrough:item/green_golden_leggings_copper_trim",
-      "predicate": {
-        "minecraft:trim_type": 0.5
-      }
-    },
-    {
-      "model": "enhanced_playthrough:item/green_golden_leggings_diamond_trim",
-      "predicate": {
-        "minecraft:trim_type": 0.8
-      }
-    },
-    {
-      "model": "enhanced_playthrough:item/green_golden_leggings_gold_trim",
-      "predicate": {
-        "minecraft:trim_type": 0.6
+        "minecraft:trim_type": 0.1
       }
     },
     {
@@ -32,9 +14,39 @@
       }
     },
     {
+      "model": "enhanced_playthrough:item/green_golden_leggings_netherite_trim",
+      "predicate": {
+        "minecraft:trim_type": 0.3
+      }
+    },
+    {
+      "model": "enhanced_playthrough:item/green_golden_leggings_redstone_trim",
+      "predicate": {
+        "minecraft:trim_type": 0.4
+      }
+    },
+    {
+      "model": "enhanced_playthrough:item/green_golden_leggings_copper_trim",
+      "predicate": {
+        "minecraft:trim_type": 0.5
+      }
+    },
+    {
+      "model": "enhanced_playthrough:item/green_golden_leggings_gold_trim",
+      "predicate": {
+        "minecraft:trim_type": 0.6
+      }
+    },
+    {
       "model": "enhanced_playthrough:item/green_golden_leggings_emerald_trim",
       "predicate": {
         "minecraft:trim_type": 0.7
+      }
+    },
+    {
+      "model": "enhanced_playthrough:item/green_golden_leggings_diamond_trim",
+      "predicate": {
+        "minecraft:trim_type": 0.8
       }
     },
     {
@@ -44,21 +56,9 @@
       }
     },
     {
-      "model": "enhanced_playthrough:item/green_golden_leggings_netherite_trim",
+      "model": "enhanced_playthrough:item/green_golden_leggings_amethyst_trim",
       "predicate": {
-        "minecraft:trim_type": 0.3
-      }
-    },
-    {
-      "model": "enhanced_playthrough:item/green_golden_leggings_quartz_trim",
-      "predicate": {
-        "minecraft:trim_type": 0.1
-      }
-    },
-    {
-      "model": "enhanced_playthrough:item/green_golden_leggings_redstone_trim",
-      "predicate": {
-        "minecraft:trim_type": 0.4
+        "minecraft:trim_type": 1.0
       }
     }
   ],

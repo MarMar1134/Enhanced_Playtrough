@@ -618,5 +618,18 @@
   "sound.enhanced_playthrough.zombie_knight_death": "Zombi caballero muriendo",
   "sound.enhanced_playthrough.zombie_knight_hurt": "Zombi caballero siendo herido",
   "sound.enhanced_playthrough.zombie_knight_step": "Zombi caballero caminando",
-  "trim_pattern.enhanced_playthrough.ancient": "Antiguo"
+  "trim_material.enhanced_playthrough.aluminum": "Aluminio",
+  "trim_material.enhanced_playthrough.blue_gold": "Oro azul",
+  "trim_material.enhanced_playthrough.brass": "Latón",
+  "trim_material.enhanced_playthrough.bronze": "Bronce",
+  "trim_material.enhanced_playthrough.bronzium": "Broncio",
+  "trim_material.enhanced_playthrough.garnet": "Granate",
+  "trim_material.enhanced_playthrough.green_gold": "Oro verde",
+  "trim_material.enhanced_playthrough.rose_gold": "Oro rosado",
+  "trim_material.enhanced_playthrough.ruby": "Rubí",
+  "trim_material.enhanced_playthrough.sapphire": "Zafiro",
+  "trim_material.enhanced_playthrough.silver": "Plata",
+  "trim_material.enhanced_playthrough.steel": "Acero",
+  "trim_material.enhanced_playthrough.zinc": "Zinc",
+  "trim_pattern.enhanced_playthrough.ancient": "Ornamento antiguo"
 }

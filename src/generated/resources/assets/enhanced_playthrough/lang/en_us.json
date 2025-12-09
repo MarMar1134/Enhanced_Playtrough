@@ -619,5 +619,18 @@
   "sound.enhanced_playthrough.zombie_knight_death": "Zombie knight dying",
   "sound.enhanced_playthrough.zombie_knight_hurt": "Zombie knight being hurt",
   "sound.enhanced_playthrough.zombie_knight_step": "Zombie knight walking",
-  "trim_pattern.enhanced_playthrough.ancient": "Ancient"
+  "trim_material.enhanced_playthrough.aluminum": "Aluminum",
+  "trim_material.enhanced_playthrough.blue_gold": "Blue gold",
+  "trim_material.enhanced_playthrough.brass": "Brass",
+  "trim_material.enhanced_playthrough.bronze": "Bronze",
+  "trim_material.enhanced_playthrough.bronzium": "Bronzium",
+  "trim_material.enhanced_playthrough.garnet": "Garnet",
+  "trim_material.enhanced_playthrough.green_gold": "Green gold",
+  "trim_material.enhanced_playthrough.rose_gold": "Rose gold",
+  "trim_material.enhanced_playthrough.ruby": "Ruby",
+  "trim_material.enhanced_playthrough.sapphire": "Sapphire",
+  "trim_material.enhanced_playthrough.silver": "Silver",
+  "trim_material.enhanced_playthrough.steel": "Steel",
+  "trim_material.enhanced_playthrough.zinc": "Zinc",
+  "trim_pattern.enhanced_playthrough.ancient": "Ancient trim"
 }

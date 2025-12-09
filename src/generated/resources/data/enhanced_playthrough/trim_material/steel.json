@@ -1,0 +1,9 @@
+{
+  "asset_name": "steel",
+  "description": {
+    "color": "#2A3232",
+    "translate": "trim_material.enhanced_playthrough.steel"
+  },
+  "ingredient": "enhanced_playthrough:steel_ingot",
+  "item_model_index": 0.2
+}

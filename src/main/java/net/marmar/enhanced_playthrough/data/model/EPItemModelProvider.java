@@ -657,17 +657,18 @@ public class EPItemModelProvider extends ItemModelProvider {
         }
     }
     private static final LinkedHashMap<ResourceKey<TrimMaterial>, Float> trimMaterials = new LinkedHashMap<>();
+
     static {
-        trimMaterials.put(TrimMaterials.AMETHYST, 1.0f);
-        trimMaterials.put(TrimMaterials.COPPER, 0.5f);
-        trimMaterials.put(TrimMaterials.DIAMOND, 0.8f);
-        trimMaterials.put(TrimMaterials.GOLD, 0.6f);
-        trimMaterials.put(TrimMaterials.IRON, 0.2f);
-        trimMaterials.put(TrimMaterials.EMERALD, 0.7f);
-        trimMaterials.put(TrimMaterials.LAPIS, 0.9f);
-        trimMaterials.put(TrimMaterials.NETHERITE, 0.3f);
         trimMaterials.put(TrimMaterials.QUARTZ, 0.1f);
+        trimMaterials.put(TrimMaterials.IRON, 0.2f);
+        trimMaterials.put(TrimMaterials.NETHERITE, 0.3f);
         trimMaterials.put(TrimMaterials.REDSTONE, 0.4f);
+        trimMaterials.put(TrimMaterials.COPPER, 0.5f);
+        trimMaterials.put(TrimMaterials.GOLD, 0.6f);
+        trimMaterials.put(TrimMaterials.EMERALD, 0.7f);
+        trimMaterials.put(TrimMaterials.DIAMOND, 0.8f);
+        trimMaterials.put(TrimMaterials.LAPIS, 0.9f);
+        trimMaterials.put(TrimMaterials.AMETHYST, 1.0f);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item){

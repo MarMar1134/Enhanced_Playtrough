@@ -1,4 +1,4 @@
-// 1.20.1	2025-12-08T19:40:59.2385669	Tags for minecraft:item mod id enhanced_playthrough
+// 1.20.1	2025-12-09T16:21:38.500021	Tags for minecraft:item mod id enhanced_playthrough
 0ff3092eb36a0159ae287d2f429e5f5eb6fb0c0a data/enhanced_playthrough/tags/items/aluminum.json
 b3b284c126879d981b4f706eb8ea0e63bd17ae12 data/enhanced_playthrough/tags/items/apple_logs.json
 1d609255995a77ead62a005cb2b75886514bb25a data/enhanced_playthrough/tags/items/blue_gold.json
@@ -82,4 +82,5 @@ eee53ecd7b65edaeef85566d7a3cb6bd7c197e5d data/minecraft/tags/items/signs.json
 98c8337310ed121b816c834fde588afce4b7c192 data/minecraft/tags/items/stone_crafting_materials.json
 e120c93439b3419178f95a671ab7d6e9dd39418c data/minecraft/tags/items/swords.json
 e0ddc9492cb6604c94cff63be5cc1b319c8bdb6a data/minecraft/tags/items/trimmable_armor.json
+25f6b7002353597f6a9493758d1caf87b89558e4 data/minecraft/tags/items/trim_materials.json
 5226cf300a42e50b35a335689407f2885c37edf4 data/minecraft/tags/items/trim_templates.json

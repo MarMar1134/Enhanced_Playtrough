@@ -590,6 +590,22 @@ public class EPItemTagGenerator extends ItemTagsProvider {
     }
 
     private void addIngredientTags(){
+        this.tag(ItemTags.TRIM_MATERIALS).add(
+                EPItems.ALUMINUM_INGOT.get(),
+                EPItems.SILVER_INGOT.get(),
+                EPItems.ZINC_INGOT.get(),
+                EPItems.BRONZE_INGOT.get(),
+                EPItems.BRASS_INGOT.get(),
+                EPItems.BRONZIUM_INGOT.get(),
+                EPItems.STEEL_INGOT.get(),
+                EPItems.ROSE_GOLD_INGOT.get(),
+                EPItems.GREEN_GOLD_INGOT.get(),
+                EPItems.BLUE_GOLD_INGOT.get(),
+                EPItems.RUBY.get(),
+                EPItems.SAPPHIRE.get(),
+                EPItems.GARNET.get()
+        );
+
         this.tag(EPTags.Items.INGREDIENTS).addTags(
                 EPTags.Items.BASIC_SMELT_INGREDIENT,
                 EPTags.Items.MASONRY_INGREDIENT,

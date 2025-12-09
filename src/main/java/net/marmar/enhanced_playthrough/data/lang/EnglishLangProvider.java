@@ -757,7 +757,22 @@ public class EnglishLangProvider extends AbstractLangProvider {
                     "Rose gold ingot, Green gold ingot, Blue gold ingot", "Add a golden armor, weapon or tool",
                     "Add a Rose gold, Green gold or Blue gold ingot");
 
-        addTrimPattern("ancient", "Ancient");
+        addTrimPattern("ancient", "Ancient trim");
+
+        //Trim materials
+        addTrimMaterial("aluminum", "Aluminum");
+        addTrimMaterial("silver", "Silver");
+        addTrimMaterial("zinc", "Zinc");
+        addTrimMaterial("bronze", "Bronze");
+        addTrimMaterial("brass", "Brass");
+        addTrimMaterial("bronzium", "Bronzium");
+        addTrimMaterial("steel", "Steel");
+        addTrimMaterial("rose_gold", "Rose gold");
+        addTrimMaterial("green_gold", "Green gold");
+        addTrimMaterial("blue_gold", "Blue gold");
+        addTrimMaterial("ruby", "Ruby");
+        addTrimMaterial("sapphire", "Sapphire");
+        addTrimMaterial("garnet", "Garnet");
 
             //Enchantments
             addEnchantment(EPEnchantments.FINE_MINING, "Fine mining");

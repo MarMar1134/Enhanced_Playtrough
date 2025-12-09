@@ -1,0 +1,9 @@
+{
+  "asset_name": "bronze",
+  "description": {
+    "color": "#3C230F",
+    "translate": "trim_material.enhanced_playthrough.bronze"
+  },
+  "ingredient": "enhanced_playthrough:bronze_ingot",
+  "item_model_index": 0.5
+}

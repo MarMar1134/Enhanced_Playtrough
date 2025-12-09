@@ -1,0 +1,9 @@
+{
+  "asset_name": "blue_gold",
+  "description": {
+    "color": "#110F53",
+    "translate": "trim_material.enhanced_playthrough.blue_gold"
+  },
+  "ingredient": "enhanced_playthrough:blue_gold_ingot",
+  "item_model_index": 0.9
+}

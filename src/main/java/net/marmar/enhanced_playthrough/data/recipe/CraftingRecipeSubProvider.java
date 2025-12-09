@@ -165,6 +165,15 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .define('S', EPItems.COBBLE.get())
                 .unlockedBy(getHasName(EPItems.GOLDEN_UPGRADE_SMITHING_TEMPLATE.get()), has(EPItems.GOLDEN_UPGRADE_SMITHING_TEMPLATE.get()))
                 .save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, EPItems.ANCIENT_ARMOR_TRIM_SMITHING_TEMPLATE.get(), 2)
+                .pattern("SAS")
+                .pattern("SVS")
+                .pattern("SSS")
+                .define('A', EPItems.ANCIENT_ARMOR_TRIM_SMITHING_TEMPLATE.get())
+                .define('V', Items.GOLD_INGOT)
+                .define('S', EPItems.COBBLE.get())
+                .unlockedBy(getHasName(EPItems.ANCIENT_ARMOR_TRIM_SMITHING_TEMPLATE.get()), has(EPItems.ANCIENT_ARMOR_TRIM_SMITHING_TEMPLATE.get()))
+                .save(consumer);
 
         //Block recipes
             //Wood

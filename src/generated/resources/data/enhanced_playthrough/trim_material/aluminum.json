@@ -1,0 +1,9 @@
+{
+  "asset_name": "aluminum",
+  "description": {
+    "color": "#54585A",
+    "translate": "trim_material.enhanced_playthrough.aluminum"
+  },
+  "ingredient": "enhanced_playthrough:aluminum_ingot",
+  "item_model_index": 0.2
+}
