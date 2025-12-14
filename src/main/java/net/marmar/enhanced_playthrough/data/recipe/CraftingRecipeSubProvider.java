@@ -456,11 +456,6 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                     EPItems.ALUMINUM_GOLDEN_SWORD.get(), EPItems.ALUMINUM_GOLDEN_DAGGER.get(), EPItems.ALUMINUM_GOLDEN_SHOVEL.get(),
                     EPItems.ALUMINUM_GOLDEN_HOE.get(), EPItems.ALUMINUM_GOLDEN_POLISHER.get(), consumer);
 
-            //Stone
-            addStoneGear(EPItems.ALUMINUM_STONE_AXE.get(),  EPItems.ALUMINUM_STONE_PICKAXE.get(),  EPItems.ALUMINUM_STONE_SWORD.get(),
-                    EPItems.ALUMINUM_STONE_DAGGER.get(),  EPItems.ALUMINUM_STONE_SHOVEL.get(),  EPItems.ALUMINUM_STONE_HOE.get(),
-                    EPItems.ALUMINUM_STONE_POLISHER.get(), true, consumer);
-
             addStoneGear(Items.STONE_AXE, Items.STONE_PICKAXE, Items.STONE_SWORD, EPItems.STONE_DAGGER.get(),
                     Items.STONE_SHOVEL, Items.STONE_HOE, EPItems.STONE_POLISHER.get(), false, consumer);
 

@@ -248,23 +248,6 @@ public class EPTabs {
                     .withTabsAfter(EPTabs.WEAPONS.getId())
                     .withTabsBefore(EPTabs.TOOLS.getId())
                     .displayItems((itemDisplayParameters, output) -> {
-                        //Aluminum Wooden
-                        output.accept(EPItems.ALUMINUM_WOODEN_PICKAXE.get());
-                        output.accept(EPItems.ALUMINUM_WOODEN_AXE.get());
-                        output.accept(EPItems.ALUMINUM_WOODEN_SHOVEL.get());
-                        output.accept(EPItems.ALUMINUM_WOODEN_HOE.get());
-                        output.accept(EPItems.ALUMINUM_WOODEN_SWORD.get());
-                        output.accept(EPItems.ALUMINUM_WOODEN_DAGGER.get());
-
-                        //Aluminum Stone
-                        output.accept(EPItems.ALUMINUM_STONE_PICKAXE.get());
-                        output.accept(EPItems.ALUMINUM_STONE_AXE.get());
-                        output.accept(EPItems.ALUMINUM_STONE_SHOVEL.get());
-                        output.accept(EPItems.ALUMINUM_STONE_HOE.get());
-                        output.accept(EPItems.ALUMINUM_STONE_POLISHER.get());
-                        output.accept(EPItems.ALUMINUM_STONE_SWORD.get());
-                        output.accept(EPItems.ALUMINUM_STONE_DAGGER.get());
-
                         //Aluminum Golden
                         output.accept(EPItems.ALUMINUM_GOLDEN_PICKAXE.get());
                         output.accept(EPItems.ALUMINUM_GOLDEN_AXE.get());

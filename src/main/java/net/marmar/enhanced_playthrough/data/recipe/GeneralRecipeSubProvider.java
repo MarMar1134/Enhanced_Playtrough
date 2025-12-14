@@ -53,21 +53,6 @@ public class GeneralRecipeSubProvider extends RecipeProvider {
         bronziumSmithingTemplate(consumer, EPItems.BRASS_BOOTS.get(), EPItems.BRONZE_BOOTS.get(), EPItems.BRONZIUM_BOOTS.get());
 
         //Aluminum variants
-            //Wood
-            aluminumSmithingTemplate(consumer, Items.WOODEN_AXE, EPItems.ALUMINUM_WOODEN_AXE.get());
-            aluminumSmithingTemplate(consumer, Items.WOODEN_PICKAXE, EPItems.ALUMINUM_WOODEN_PICKAXE.get());
-            aluminumSmithingTemplate(consumer, Items.WOODEN_SHOVEL, EPItems.ALUMINUM_WOODEN_SHOVEL.get());
-            aluminumSmithingTemplate(consumer, Items.WOODEN_HOE, EPItems.ALUMINUM_WOODEN_HOE.get());
-            aluminumSmithingTemplate(consumer, EPItems.WOODEN_DAGGER.get(), EPItems.ALUMINUM_WOODEN_DAGGER.get());
-
-            //Stone
-            aluminumSmithingTemplate(consumer, Items.STONE_AXE, EPItems.ALUMINUM_STONE_AXE.get());
-            aluminumSmithingTemplate(consumer, Items.STONE_PICKAXE, EPItems.ALUMINUM_STONE_PICKAXE.get());
-            aluminumSmithingTemplate(consumer, Items.STONE_SHOVEL, EPItems.ALUMINUM_STONE_SHOVEL.get());
-            aluminumSmithingTemplate(consumer, Items.STONE_HOE, EPItems.ALUMINUM_STONE_HOE.get());
-            aluminumSmithingTemplate(consumer, EPItems.STONE_POLISHER.get(), EPItems.ALUMINUM_STONE_POLISHER.get());
-            aluminumSmithingTemplate(consumer, EPItems.STONE_DAGGER.get(), EPItems.ALUMINUM_STONE_DAGGER.get());
-
             //Gold
             aluminumSmithingTemplate(consumer, Items.GOLDEN_AXE, EPItems.ALUMINUM_GOLDEN_AXE.get());
             aluminumSmithingTemplate(consumer, Items.GOLDEN_PICKAXE, EPItems.ALUMINUM_GOLDEN_PICKAXE.get());

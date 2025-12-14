@@ -309,40 +309,12 @@ public class EPItems {
         //Wood
         public static final RegistryObject<Item> WOODEN_DAGGER = ITEMS.register(
                 "wooden_dagger", () ->  new DaggerItem(Tiers.WOOD, 1, 0.1f, new Item.Properties()));
-            //Aluminum wood
-            public static final RegistryObject<Item> ALUMINUM_WOODEN_SWORD = ITEMS.register(
-                    "aluminum_wooden_sword", () -> new AluminumTools.Sword(Tiers.WOOD, new Item.Properties()));
-            public static final RegistryObject<Item> ALUMINUM_WOODEN_DAGGER = ITEMS.register(
-                    "aluminum_wooden_dagger", () -> new AluminumTools.Dagger(Tiers.WOOD, 1, 0.1f, new Item.Properties()));
-            public static final RegistryObject<Item> ALUMINUM_WOODEN_PICKAXE = ITEMS.register(
-                    "aluminum_wooden_pickaxe", () -> new AluminumTools.Pickaxe(Tiers.WOOD, new Item.Properties()));
-            public static final RegistryObject<Item> ALUMINUM_WOODEN_AXE = ITEMS.register(
-                    "aluminum_wooden_axe", () -> new AluminumTools.Axe(Tiers.WOOD, 6, -3.2f, new Item.Properties()));
-            public static final RegistryObject<Item> ALUMINUM_WOODEN_SHOVEL = ITEMS.register(
-                    "aluminum_wooden_shovel", () -> new AluminumTools.Shovel(Tiers.WOOD, new Item.Properties()));
-            public static final RegistryObject<Item> ALUMINUM_WOODEN_HOE = ITEMS.register(
-                    "aluminum_wooden_hoe", () -> new AluminumTools.Hoe(Tiers.WOOD, 0, -3.0f, new Item.Properties()));
 
         //Stone
         public static final RegistryObject<Item> STONE_POLISHER = ITEMS.register(
                 "stone_polisher",() -> new PolisherItem(Tiers.STONE, new Item.Properties()));
         public static final RegistryObject<Item> STONE_DAGGER = ITEMS.register(
                 "stone_dagger", () ->  new DaggerItem(Tiers.STONE, 1, 0.1f, new Item.Properties()));
-            // Aluminum stone
-            public static final RegistryObject<Item> ALUMINUM_STONE_SWORD = ITEMS.register(
-                    "aluminum_stone_sword", () -> new AluminumTools.Sword(Tiers.STONE, new Item.Properties()));
-            public static final RegistryObject<Item> ALUMINUM_STONE_DAGGER = ITEMS.register(
-                    "aluminum_stone_dagger", () -> new AluminumTools.Dagger(Tiers.STONE, 1, 0.1f, new Item.Properties()));
-            public static final RegistryObject<Item> ALUMINUM_STONE_PICKAXE = ITEMS.register(
-                    "aluminum_stone_pickaxe", () -> new AluminumTools.Pickaxe(Tiers.STONE, new Item.Properties()));
-            public static final RegistryObject<Item> ALUMINUM_STONE_AXE = ITEMS.register(
-                    "aluminum_stone_axe", () -> new AluminumTools.Axe(Tiers.STONE, 7, -3.2f, new Item.Properties()));
-            public static final RegistryObject<Item> ALUMINUM_STONE_SHOVEL = ITEMS.register(
-                    "aluminum_stone_shovel", () -> new AluminumTools.Shovel(Tiers.STONE, new Item.Properties()));
-            public static final RegistryObject<Item> ALUMINUM_STONE_HOE = ITEMS.register(
-                    "aluminum_stone_hoe", () -> new AluminumTools.Hoe(Tiers.STONE, 0, -3.0f, new Item.Properties()));
-            public static final RegistryObject<Item> ALUMINUM_STONE_POLISHER = ITEMS.register(
-                    "aluminum_stone_polisher", () -> new AluminumTools.Polisher(Tiers.STONE, new Item.Properties()));
 
         //Gold
         public static final RegistryObject<Item> GOLDEN_POLISHER = ITEMS.register(

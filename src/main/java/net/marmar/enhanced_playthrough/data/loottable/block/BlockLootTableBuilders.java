@@ -12,6 +12,7 @@ import net.minecraft.advancements.critereon.EnchantmentPredicate;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.advancements.critereon.MinMaxBounds;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.ItemLike;
@@ -19,6 +20,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.*;
@@ -305,6 +307,22 @@ public interface BlockLootTableBuilders {
     default LootTable.Builder createPlantDrops(Block pPlant){
         return LootTable.lootTable().withPool(LootPool.lootPool().when(CUSTOM_HAS_SHEARS)
                 .add(LootItem.lootTableItem(pPlant)));
+    }
+
+    default LootTable.Builder createCropWithRotDrops(Item pGrownCropItem, Item pRottenCropItem, Item pSeedsItem, LootItemCondition.Builder pDropGrownCropCondition){
+        return LootTable.lootTable().withPool(LootPool.lootPool()
+                .add((LootItem.lootTableItem(pGrownCropItem)
+                        .when(pDropGrownCropCondition))
+                        .otherwise(LootItem.lootTableItem(pSeedsItem))))
+                .withPool(LootPool.lootPool().when(pDropGrownCropCondition)
+                        .add(LootItem.lootTableItem(pSeedsItem)
+                                .apply(ApplyBonusCount.addBonusBinomialDistributionCount(Enchantments.BLOCK_FORTUNE, 0.5714286F, 3)))
+                )
+                .withPool(LootPool.lootPool().when(pDropGrownCropCondition)
+                        .add(LootItem.lootTableItem(pRottenCropItem)
+                                .when(LootItemRandomChanceCondition.randomChance(0.02F))
+                                .otherwise(LootItem.lootTableItem(pSeedsItem)))
+                );
     }
 
     default LootTable.Builder createLeavesWithExternalFruitDrops(Block pBlock, Block pSapling, float[] pSaplingChances, ItemLike pFruit, int pMaxFruitQuantity, float[] pFruitChances) {

@@ -476,8 +476,6 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                 EPItems.GREEN_GOLDEN_SHOVEL.get(),
                 EPItems.BLUE_GOLDEN_SHOVEL.get(),
 
-                EPItems.ALUMINUM_WOODEN_SHOVEL.get(),
-                EPItems.ALUMINUM_STONE_SHOVEL.get(),
                 EPItems.ALUMINUM_GOLDEN_SHOVEL.get(),
                 EPItems.ALUMINUM_SILVER_SHOVEL.get(),
                 EPItems.ALUMINUM_BRONZE_SHOVEL.get(),
@@ -501,8 +499,6 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                 EPItems.GREEN_GOLDEN_AXE.get(),
                 EPItems.BLUE_GOLDEN_AXE.get(),
 
-                EPItems.ALUMINUM_WOODEN_AXE.get(),
-                EPItems.ALUMINUM_STONE_AXE.get(),
                 EPItems.ALUMINUM_GOLDEN_AXE.get(),
                 EPItems.ALUMINUM_SILVER_AXE.get(),
                 EPItems.ALUMINUM_BRONZE_AXE.get(),
@@ -526,8 +522,6 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                 EPItems.GREEN_GOLDEN_PICKAXE.get(),
                 EPItems.BLUE_GOLDEN_PICKAXE.get(),
 
-                EPItems.ALUMINUM_WOODEN_PICKAXE.get(),
-                EPItems.ALUMINUM_STONE_PICKAXE.get(),
                 EPItems.ALUMINUM_GOLDEN_PICKAXE.get(),
                 EPItems.ALUMINUM_SILVER_PICKAXE.get(),
                 EPItems.ALUMINUM_BRONZE_PICKAXE.get(),
@@ -551,8 +545,6 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                 EPItems.GREEN_GOLDEN_SWORD.get(),
                 EPItems.BLUE_GOLDEN_SWORD.get(),
 
-                EPItems.ALUMINUM_WOODEN_SWORD.get(),
-                EPItems.ALUMINUM_STONE_SWORD.get(),
                 EPItems.ALUMINUM_GOLDEN_SWORD.get(),
                 EPItems.ALUMINUM_SILVER_SWORD.get(),
                 EPItems.ALUMINUM_BRONZE_SWORD.get(),
@@ -576,8 +568,6 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                 EPItems.GREEN_GOLDEN_HOE.get(),
                 EPItems.BLUE_GOLDEN_HOE.get(),
 
-                EPItems.ALUMINUM_WOODEN_HOE.get(),
-                EPItems.ALUMINUM_STONE_HOE.get(),
                 EPItems.ALUMINUM_GOLDEN_HOE.get(),
                 EPItems.ALUMINUM_SILVER_HOE.get(),
                 EPItems.ALUMINUM_BRONZE_HOE.get(),
@@ -606,7 +596,6 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                 EPItems.DIAMOND_POLISHER.get(),
                 EPItems.NETHERITE_POLISHER.get(),
 
-                EPItems.ALUMINUM_STONE_POLISHER.get(),
                 EPItems.ALUMINUM_GOLDEN_POLISHER.get(),
                 EPItems.ALUMINUM_SILVER_POLISHER.get(),
                 EPItems.ALUMINUM_BRONZE_POLISHER.get(),
@@ -636,8 +625,6 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                 EPItems.DIAMOND_DAGGER.get(),
                 EPItems.NETHERITE_DAGGER.get(),
 
-                EPItems.ALUMINUM_WOODEN_DAGGER.get(),
-                EPItems.ALUMINUM_STONE_DAGGER.get(),
                 EPItems.ALUMINUM_GOLDEN_DAGGER.get(),
                 EPItems.ALUMINUM_SILVER_DAGGER.get(),
                 EPItems.ALUMINUM_BRONZE_DAGGER.get(),

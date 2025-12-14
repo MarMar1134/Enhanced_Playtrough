@@ -525,24 +525,9 @@ public class EnglishLangProvider extends AbstractLangProvider {
             //Wood equipment
             addItem(EPItems.WOODEN_DAGGER, "Wooden dagger");
 
-            addItem(EPItems.ALUMINUM_WOODEN_SWORD, "Wooden Sword");
-            addItem(EPItems.ALUMINUM_WOODEN_DAGGER, "Wooden Dagger");
-            addItem(EPItems.ALUMINUM_WOODEN_PICKAXE, "Wooden Pickaxe");
-            addItem(EPItems.ALUMINUM_WOODEN_AXE, "Wooden Axe");
-            addItem(EPItems.ALUMINUM_WOODEN_SHOVEL, "Wooden Shovel");
-            addItem(EPItems.ALUMINUM_WOODEN_HOE, "Wooden Hoe");
-
             //Stone equipment
             addItem(EPItems.STONE_POLISHER, "Stone polisher");
             addItem(EPItems.STONE_DAGGER, "Stone dagger");
-
-            addItem(EPItems.ALUMINUM_STONE_SWORD, "Stone Sword");
-            addItem(EPItems.ALUMINUM_STONE_DAGGER, "Stone Dagger");
-            addItem(EPItems.ALUMINUM_STONE_PICKAXE, "Stone Pickaxe");
-            addItem(EPItems.ALUMINUM_STONE_AXE, "Stone Axe");
-            addItem(EPItems.ALUMINUM_STONE_SHOVEL, "Stone Shovel");
-            addItem(EPItems.ALUMINUM_STONE_HOE, "Stone Hoe");
-            addItem(EPItems.ALUMINUM_STONE_POLISHER, "Stone Polisher");
 
             //Brass equipment
             addItem(EPItems.BRASS_SWORD, "Brass sword");

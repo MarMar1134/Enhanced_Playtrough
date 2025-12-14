@@ -379,13 +379,6 @@ public class EPItemModelProvider extends ItemModelProvider {
 
             //Wood
             handheldItem(EPItems.WOODEN_DAGGER);
-                //Aluminum wood
-                handheldItem(EPItems.ALUMINUM_WOODEN_SWORD);
-                handheldItem(EPItems.ALUMINUM_WOODEN_DAGGER);
-                handheldItem(EPItems.ALUMINUM_WOODEN_PICKAXE);
-                handheldItem(EPItems.ALUMINUM_WOODEN_AXE);
-                handheldItem(EPItems.ALUMINUM_WOODEN_SHOVEL);
-                handheldItem(EPItems.ALUMINUM_WOODEN_HOE);
 
             //Gold
             handheldItem(EPItems.GOLDEN_POLISHER);
@@ -424,14 +417,6 @@ public class EPItemModelProvider extends ItemModelProvider {
             //Stone
             handheldItem(EPItems.STONE_POLISHER);
             handheldItem(EPItems.STONE_DAGGER);
-                //Aluminum stone
-                handheldItem(EPItems.ALUMINUM_STONE_SWORD);
-                handheldItem(EPItems.ALUMINUM_STONE_DAGGER);
-                handheldItem(EPItems.ALUMINUM_STONE_PICKAXE);
-                handheldItem(EPItems.ALUMINUM_STONE_AXE);
-                handheldItem(EPItems.ALUMINUM_STONE_SHOVEL);
-                handheldItem(EPItems.ALUMINUM_STONE_HOE);
-                handheldItem(EPItems.ALUMINUM_STONE_POLISHER);
 
             //Bronze
             handheldItem(EPItems.BRONZE_SWORD);

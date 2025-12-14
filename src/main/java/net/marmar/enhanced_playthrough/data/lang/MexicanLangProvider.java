@@ -526,24 +526,9 @@ public class MexicanLangProvider extends AbstractLangProvider {
         //Wood equipment
         addItem(EPItems.WOODEN_DAGGER, "Daga de madera");
 
-        addItem(EPItems.ALUMINUM_WOODEN_SWORD, "Espada de madera");
-        addItem(EPItems.ALUMINUM_WOODEN_DAGGER, "Daga de madera");
-        addItem(EPItems.ALUMINUM_WOODEN_PICKAXE, "Pico de madera");
-        addItem(EPItems.ALUMINUM_WOODEN_AXE, "Hacha de madera");
-        addItem(EPItems.ALUMINUM_WOODEN_SHOVEL, "Pala de madera");
-        addItem(EPItems.ALUMINUM_WOODEN_HOE, "Azadón de madera");
-
         //Stone equipment
         addItem(EPItems.STONE_POLISHER, "Pulidora de piedra");
         addItem(EPItems.STONE_DAGGER, "Daga de piedra");
-
-        addItem(EPItems.ALUMINUM_STONE_SWORD, "Espada de piedra");
-        addItem(EPItems.ALUMINUM_STONE_DAGGER, "Daga de piedra");
-        addItem(EPItems.ALUMINUM_STONE_PICKAXE, "Pico de piedra");
-        addItem(EPItems.ALUMINUM_STONE_AXE, "Hacha de piedra");
-        addItem(EPItems.ALUMINUM_STONE_SHOVEL, "Pala de piedra");
-        addItem(EPItems.ALUMINUM_STONE_HOE, "Azadón de piedra");
-        addItem(EPItems.ALUMINUM_STONE_POLISHER, "Pulidora de piedra");
 
         //Brass equipment
         addItem(EPItems.BRASS_SWORD, "Espada de latón");
