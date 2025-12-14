@@ -160,7 +160,6 @@ public class EPItemModelProvider extends ItemModelProvider {
                 simpleItem(EPItems.LEMON_BOAT);
                 simpleItem(EPItems.LEMON_CHEST_BOAT);
 
-
                 //Lime
                 saplingAndCropItem(EPBlocks.LIME_SAPLING);
 
@@ -360,7 +359,7 @@ public class EPItemModelProvider extends ItemModelProvider {
         simpleItem(EPItems.MUD_BRICK);
         simpleItem(EPItems.FIREBRICK);
         simpleItem(EPItems.ALUMINUM_ROD);
-        simpleItem(EPItems.VEGETABLE_FIBBER);
+        simpleItem(EPItems.PLANT_FIBER);
         simpleItem(EPItems.REEDS_HEAD);
         simpleItem(EPItems.TALL_REEDS_HEAD);
         simpleItem(EPItems.WATER_REEDS_HEAD);

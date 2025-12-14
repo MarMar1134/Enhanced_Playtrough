@@ -112,7 +112,7 @@ public class EPItemTagGenerator extends ItemTagsProvider {
         );
 
         this.tag(Tags.Items.STRING).add(
-                EPItems.VEGETABLE_FIBBER.get()
+                EPItems.PLANT_FIBER.get()
         );
 
         this.tag(EPTags.Items.COBBLE).add(

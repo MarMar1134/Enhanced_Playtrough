@@ -19,6 +19,7 @@ public class EPFoliagePlacers {
             "lemon_foliage_placer", () -> new FoliagePlacerType<>(LemonFoliagePlacer.CODEC));
 
     public static void register(IEventBus eventBus){
+        EnhancedPlaythrough.LOGGER.info("Registering Enhanced Playthrough foliage placers...");
         FOLIAGE_PLACERS.register(eventBus);
     }
 }

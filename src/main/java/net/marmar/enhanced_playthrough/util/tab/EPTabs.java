@@ -89,7 +89,7 @@ public class EPTabs {
                         output.accept(EPItems.REEDS_HEAD.get());
                         output.accept(EPItems.TALL_REEDS_HEAD.get());
                         output.accept(EPItems.WATER_REEDS_HEAD.get());
-                        output.accept(EPItems.VEGETABLE_FIBBER.get());
+                        output.accept(EPItems.PLANT_FIBER.get());
                         output.accept(EPItems.MUD_BRICK.get());
                         output.accept(EPItems.FIREBRICK.get());
                         output.accept(EPItems.ALUMINUM_ROD.get());
@@ -758,6 +758,7 @@ public class EPTabs {
                     }).build());
 
     public static void register(IEventBus eventBus){
+        EnhancedPlaythrough.LOGGER.info("Registering Enhanced Playthrough tabs...");
         TABS.register(eventBus);
     }
 }

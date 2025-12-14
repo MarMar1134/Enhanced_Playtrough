@@ -81,6 +81,7 @@ public class EPBlockEntities {
                     .Builder.of(GrowthDetectorBlockEntity::new, EPBlocks.GROWTH_DETECTOR.get()).build(null));
 
     public static void register(IEventBus eventBus){
+        EnhancedPlaythrough.LOGGER.info("Registering Enhanced Playthrough block entities...");
         BLOCK_ENTITIES.register(eventBus);
     }
 }

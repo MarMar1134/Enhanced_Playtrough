@@ -52,6 +52,7 @@ public class EPMenuTypes {
     }
 
     public static void register(IEventBus eventBus){
+        EnhancedPlaythrough.LOGGER.info("Registering Enhanced Playthrough menus...");
         MENUS.register(eventBus);
     }
 }

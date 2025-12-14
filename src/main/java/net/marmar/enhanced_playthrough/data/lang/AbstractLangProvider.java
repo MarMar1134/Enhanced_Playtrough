@@ -53,6 +53,10 @@ public abstract class AbstractLangProvider extends LanguageProvider {
         this.add("jei." + EnhancedPlaythrough.MOD_ID + "." + category, translation);
     }
 
+    protected void addJeiItemDesc(String pItemKey, String translation){
+        this.add("jei." + EnhancedPlaythrough.MOD_ID + "." + pItemKey + ".desc", translation);
+    }
+
     protected void addJadeConfigTranslation(String block, String translation){
         this.add("config.jade.plugin_" + EnhancedPlaythrough.MOD_ID + "." + block, translation);
     }

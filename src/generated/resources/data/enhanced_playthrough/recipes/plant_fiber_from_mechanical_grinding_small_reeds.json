@@ -3,10 +3,10 @@
   "category": "mechanical_grind",
   "group": "vegetable_fiber",
   "ingredient": {
-    "item": "enhanced_playthrough:reeds"
+    "item": "enhanced_playthrough:small_reeds"
   },
   "output": {
-    "count": 4,
-    "item": "enhanced_playthrough:vegetable_fibber"
+    "count": 2,
+    "item": "enhanced_playthrough:plant_fiber"
   }
 }

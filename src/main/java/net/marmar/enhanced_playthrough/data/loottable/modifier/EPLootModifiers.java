@@ -16,6 +16,7 @@ public class EPLootModifiers {
             LOOT_MODIFIER_SERIALIZERS.register("add_item", AddItemModifier.CODEC);
 
     public static void register(IEventBus eventBus) {
+        EnhancedPlaythrough.LOGGER.info("Registering loot modifiers...");
         LOOT_MODIFIER_SERIALIZERS.register(eventBus);
     }
 }

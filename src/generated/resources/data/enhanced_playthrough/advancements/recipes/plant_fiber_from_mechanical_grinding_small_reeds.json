@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_reeds": {
+    "has_small_reeds": {
       "conditions": {
         "items": [
           {
             "items": [
-              "enhanced_playthrough:reeds"
+              "enhanced_playthrough:small_reeds"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "enhanced_playthrough:vegetable_fibber_from_mechanical_grinding_reeds"
+        "recipe": "enhanced_playthrough:plant_fiber_from_mechanical_grinding_small_reeds"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_reeds",
+      "has_small_reeds",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "enhanced_playthrough:vegetable_fibber_from_mechanical_grinding_reeds"
+      "enhanced_playthrough:plant_fiber_from_mechanical_grinding_small_reeds"
     ]
   },
   "sends_telemetry_event": false

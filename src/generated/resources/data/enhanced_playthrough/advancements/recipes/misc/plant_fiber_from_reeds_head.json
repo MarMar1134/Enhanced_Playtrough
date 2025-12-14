@@ -1,6 +1,18 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
+    "has_plant_fiber": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:plant_fiber"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "has_reeds_head": {
       "conditions": {
         "items": [
@@ -15,33 +27,21 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "enhanced_playthrough:vegetable_fibber_from_reeds_head"
+        "recipe": "enhanced_playthrough:plant_fiber_from_reeds_head"
       },
       "trigger": "minecraft:recipe_unlocked"
-    },
-    "has_vegetable_fibber": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "enhanced_playthrough:vegetable_fibber"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
     }
   },
   "requirements": [
     [
       "has_reeds_head",
-      "has_vegetable_fibber",
+      "has_plant_fiber",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "enhanced_playthrough:vegetable_fibber_from_reeds_head"
+      "enhanced_playthrough:plant_fiber_from_reeds_head"
     ]
   },
   "sends_telemetry_event": false

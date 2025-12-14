@@ -123,26 +123,26 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .save(consumer);
 
         //Vegetable fibber
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EPItems.VEGETABLE_FIBBER.get())
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EPItems.PLANT_FIBER.get())
                 .requires(EPItems.REEDS_HEAD.get(), 2)
                 .group("vegetable_fiber")
                 .unlockedBy(getHasName(EPItems.REEDS_HEAD.get()), has(EPItems.REEDS_HEAD.get()))
-                .unlockedBy(getHasName(EPItems.VEGETABLE_FIBBER.get()), has(EPItems.VEGETABLE_FIBBER.get()))
-                .save(consumer, recipeName(EPItems.VEGETABLE_FIBBER.get(), "from_reeds_head"));
+                .unlockedBy(getHasName(EPItems.PLANT_FIBER.get()), has(EPItems.PLANT_FIBER.get()))
+                .save(consumer, recipeName(EPItems.PLANT_FIBER.get(), "from_reeds_head"));
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EPItems.VEGETABLE_FIBBER.get(), 2)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EPItems.PLANT_FIBER.get(), 2)
                 .requires(EPItems.TALL_REEDS_HEAD.get(), 2)
                 .group("vegetable_fiber")
                 .unlockedBy(getHasName(EPItems.TALL_REEDS_HEAD.get()), has(EPItems.TALL_REEDS_HEAD.get()))
-                .unlockedBy(getHasName(EPItems.VEGETABLE_FIBBER.get()), has(EPItems.VEGETABLE_FIBBER.get()))
-                .save(consumer, recipeName(EPItems.VEGETABLE_FIBBER.get(), "from_tall_reeds_head"));
+                .unlockedBy(getHasName(EPItems.PLANT_FIBER.get()), has(EPItems.PLANT_FIBER.get()))
+                .save(consumer, recipeName(EPItems.PLANT_FIBER.get(), "from_tall_reeds_head"));
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EPItems.VEGETABLE_FIBBER.get())
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EPItems.PLANT_FIBER.get())
                 .requires(EPItems.WATER_REEDS_HEAD.get(), 4)
                 .group("vegetable_fiber")
                 .unlockedBy(getHasName(EPItems.WATER_REEDS_HEAD.get()), has(EPItems.WATER_REEDS_HEAD.get()))
-                .unlockedBy(getHasName(EPItems.VEGETABLE_FIBBER.get()), has(EPItems.VEGETABLE_FIBBER.get()))
-                .save(consumer, recipeName(EPItems.VEGETABLE_FIBBER.get(), "from_water_reeds_head"));
+                .unlockedBy(getHasName(EPItems.PLANT_FIBER.get()), has(EPItems.PLANT_FIBER.get()))
+                .save(consumer, recipeName(EPItems.PLANT_FIBER.get(), "from_water_reeds_head"));
 
         //Smithing templates
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, EPItems.BRONZIUM_UPGRADE_SMITHING_TEMPLATE.get(), 2)

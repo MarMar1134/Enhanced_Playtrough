@@ -27,6 +27,7 @@ public class EPEnchantments {
             ENCHANTMENTS.register("frostbite", ()-> new FrostbiteEnchantment(Enchantment.Rarity.RARE, EnchantmentCategory.WEAPON, EquipmentSlot.MAINHAND));
 
     public static void register(IEventBus eventBus){
+        EnhancedPlaythrough.LOGGER.info("Registering Enhanced Playthrough enchantments...");
         ENCHANTMENTS.register(eventBus);
     }
 }

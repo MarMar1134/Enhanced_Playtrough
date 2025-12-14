@@ -36,6 +36,21 @@ public class EnglishLangProvider extends AbstractLangProvider {
         addJeiCategory("primal_grinder", "Basic grinding");
         addJeiCategory("mechanical_grinder", "Mechanical grinding");
 
+        addJeiItemDesc("plant_fiber", "Syntetic material, made out of heads from fibrose plants." +
+                "\nWorks as replacement of traditional String.");
+        addJeiItemDesc("reeds_head", "Material from a high-fiber plant." +
+                "\nIs used on the manufacture of Plant fiber.");
+        addJeiItemDesc("bronzium_upgrade", "Upgrade template for a mystical material: Bronzium.\n" +
+                "Transforms Bronze and Brass materials into Bronzium, which possesses fire-resistant qualities.");
+        addJeiItemDesc("aluminum_upgrade", "Upgrade template for a more modern material: Aluminum.\n" +
+                "Replace the handle of weapons and tools with an aluminum one, providing greater durability.");
+        addJeiItemDesc("golden_upgrade", "Upgrade template that transforms the properties of golden objects.\n" +
+                "It imbues armor with magic, granting Haste to the wearer. With weapons and tools, it makes them function as if they were of a higher level.");
+        addJeiItemDesc("dusts", "Material obtained from grinding a metal.\n" +
+                "It can be melted in a furnace to obtain an ingot of that metal, recovering some of the lost material.");
+        addJeiItemDesc("calibrated_quartz", "Material obtained by alloying Quartz and Tin.\n" +
+                "It is used in the manufacture of various circuits.");
+
         //Jade
         addJadeConfigTranslation("basic_furnace", "Basic furnace");
 
@@ -420,7 +435,7 @@ public class EnglishLangProvider extends AbstractLangProvider {
             addItem(EPItems.REEDS_HEAD, "Pampas grass head");
             addItem(EPItems.TALL_REEDS_HEAD, "tall reed head");
             addItem(EPItems.WATER_REEDS_HEAD, "Reed head");
-            addItem(EPItems.VEGETABLE_FIBBER, "Vegetable fiber");
+            addItem(EPItems.PLANT_FIBER, "Plant fiber");
 
             //Cobble
             addItem(EPItems.COBBLE, "Cobble");

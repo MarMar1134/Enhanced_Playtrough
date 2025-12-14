@@ -29,7 +29,10 @@ public class EPVillagerProfessions {
                     ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_TOOLSMITH));
 
     public static void register(IEventBus eventBus){
+        EnhancedPlaythrough.LOGGER.info("Registering Enhanced Playthrough POI types...");
         POI_TYPES.register(eventBus);
+
+        EnhancedPlaythrough.LOGGER.info("Registering Enhanced Playthrough villager professions...");
         VILLAGER_PROFESSIONS.register(eventBus);
     }
 }

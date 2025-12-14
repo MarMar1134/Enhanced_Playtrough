@@ -48,6 +48,7 @@ public class EPEntityTypes {
                     .build("aluminum_arrow"));
 
     public static void register(IEventBus eventBus){
+        EnhancedPlaythrough.LOGGER.info("Registering Enhanced Playthrough entities...");
         ENTITY_TYPES.register(eventBus);
     }
 }

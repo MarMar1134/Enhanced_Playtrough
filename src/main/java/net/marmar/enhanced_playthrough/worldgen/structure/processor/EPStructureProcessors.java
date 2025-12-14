@@ -15,6 +15,7 @@ public class EPStructureProcessors {
             PROCESSORS.register("populate_library", () -> () -> PopulateLibraryProcessor.CODEC);
 
     public static void register(IEventBus eventBus){
+        EnhancedPlaythrough.LOGGER.info("Registering Enhanced Playthrough structure processors...");
         PROCESSORS.register(eventBus);
     }
 }

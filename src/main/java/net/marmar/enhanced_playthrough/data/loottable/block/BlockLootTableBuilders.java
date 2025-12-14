@@ -296,7 +296,7 @@ public interface BlockLootTableBuilders {
     default LootTable.Builder createFlowerDrops(Block pPlant, int pMaxQuantity){
         return LootTable.lootTable().withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F))
                 .add(LootItem.lootTableItem(pPlant).when(CUSTOM_HAS_SHEARS)
-                        .otherwise(LootItem.lootTableItem(EPItems.VEGETABLE_FIBBER.get())
+                        .otherwise(LootItem.lootTableItem(EPItems.PLANT_FIBER.get())
                                 .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, pMaxQuantity)))
                                 .apply(ApplyBonusCount.addUniformBonusCount(Enchantments.BLOCK_FORTUNE))
                                 .when(LootItemRandomChanceCondition.randomChance(0.15f)))));

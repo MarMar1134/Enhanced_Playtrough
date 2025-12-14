@@ -16,6 +16,7 @@ public class EPFeatures {
             () -> new WaterReedsFeature(RandomPatchConfiguration.CODEC));
 
     public static void register(IEventBus eventBus){
+        EnhancedPlaythrough.LOGGER.info("Registering Enhanced Playthrough terrain features...");
         FEATURES.register(eventBus);
     }
 }

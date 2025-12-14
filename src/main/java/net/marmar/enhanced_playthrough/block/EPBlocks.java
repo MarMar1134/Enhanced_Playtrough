@@ -506,16 +506,17 @@ public class EPBlocks {
     //Block register
     private static <T extends Block> RegistryObject<T> registerBlockWithItem(String name, Supplier<T> block){
         RegistryObject<T> ToReturn = BLOCKS.register(name, block);
-        RegisterBlockItem(name, ToReturn);
+        registerBlockItem(name, ToReturn);
         return ToReturn;
     }
 
-    private static <T extends Block> void RegisterBlockItem(String name, RegistryObject<T> block){
+    private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block){
         EPItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 
     //Final register
-    public static void Register(IEventBus eventBus){
+    public static void register(IEventBus eventBus){
+        EnhancedPlaythrough.LOGGER.info("Registering Enhanced Playthrough blocks...");
         BLOCKS.register(eventBus);
     }
 }

@@ -1,5 +1,6 @@
 package net.marmar.enhanced_playthrough;
 
+import com.mojang.logging.LogUtils;
 import net.marmar.enhanced_playthrough.util.effect.EPMobEffects;
 import net.marmar.enhanced_playthrough.util.particle.EPParticleTypes;
 import net.marmar.enhanced_playthrough.block.EPBlocks;
@@ -20,11 +21,13 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import org.slf4j.Logger;
 
 @Mod(EnhancedPlaythrough.MOD_ID)
 @SuppressWarnings("removal")
 public class EnhancedPlaythrough {
     public static final String MOD_ID = "enhanced_playthrough";
+    public static final Logger LOGGER = LogUtils.getLogger();
 
     public EnhancedPlaythrough(){
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -35,7 +38,7 @@ public class EnhancedPlaythrough {
         EPItems.register(modEventBus);
         EPEnchantments.register(modEventBus);
 
-        EPBlocks.Register(modEventBus);
+        EPBlocks.register(modEventBus);
         EPBlockEntities.register(modEventBus);
 
         EPFoliagePlacers.register(modEventBus);

@@ -33,6 +33,7 @@ public class EPSoundEvents {
     }
 
     public static void register(IEventBus eventBus){
+        EnhancedPlaythrough.LOGGER.info("Registering Enhanced Playthrough sounds...");
         SOUND_EVENTS.register(eventBus);
     }
 }

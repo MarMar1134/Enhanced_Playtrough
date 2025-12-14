@@ -18,6 +18,7 @@ public class EPMobEffects {
             ()-> new FrostbiteEffect(MobEffectCategory.NEUTRAL, 9562354));
 
     public static void register(IEventBus eventBus){
+        EnhancedPlaythrough.LOGGER.info("Registering Enhanced Playthrough mob effects...");
         MOB_EFFECTS.register(eventBus);
     }
 }

@@ -217,8 +217,8 @@ public class EPItems {
             "firebrick", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> ALUMINUM_ROD = ITEMS.register(
             "aluminum_rod", ()-> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> VEGETABLE_FIBBER = ITEMS.register(
-            "vegetable_fibber", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> PLANT_FIBER = ITEMS.register(
+            "plant_fiber", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> REEDS_HEAD = ITEMS.register(
             "reeds_head", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> TALL_REEDS_HEAD = ITEMS.register(
@@ -810,6 +810,7 @@ public class EPItems {
 
     //Final register
     public static void register(IEventBus eventBus){
+        EnhancedPlaythrough.LOGGER.info("Registering Enhanced Playthrough items...");
         ITEMS.register(eventBus);
     }
 }

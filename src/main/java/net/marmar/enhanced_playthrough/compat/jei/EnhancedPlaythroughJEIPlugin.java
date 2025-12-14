@@ -2,6 +2,7 @@ package net.marmar.enhanced_playthrough.compat.jei;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.compat.jei.category.*;
+import net.marmar.enhanced_playthrough.item.EPItems;
 import net.marmar.enhanced_playthrough.menu.screen.alloyfurnace.AdobeAlloyFurnaceScreen;
 import net.marmar.enhanced_playthrough.menu.screen.alloyfurnace.SuperAlloyFurnaceScreen;
 import net.marmar.enhanced_playthrough.menu.screen.modfurnace.AdobeFurnaceScreen;
@@ -25,7 +26,9 @@ import mezz.jei.api.registration.IRecipeCategoryRegistration;
 import mezz.jei.api.registration.IRecipeRegistration;
 import net.marmar.enhanced_playthrough.recipe.grind.PrimalGrindRecipe;
 import net.minecraft.client.Minecraft;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeManager;
 
 import java.util.List;
@@ -36,6 +39,10 @@ public class EnhancedPlaythroughJEIPlugin implements IModPlugin {
     @Override
     public ResourceLocation getPluginUid() {
         return new ResourceLocation(EnhancedPlaythrough.MOD_ID,"jei_plugin");
+    }
+
+    private static Component itemInfo(String pItemKey){
+        return Component.translatable("jei." + EnhancedPlaythrough.MOD_ID + "." + pItemKey + ".desc");
     }
 
     @Override
@@ -59,9 +66,57 @@ public class EnhancedPlaythroughJEIPlugin implements IModPlugin {
         registration.addRecipeCategories(new MechanicalGrindCategory(registration.getJeiHelpers().getGuiHelper()));
     }
 
+    private void addIngredientsInfo(IRecipeRegistration registration){
+        List<ItemStack> reeds = List.of(
+                new ItemStack(EPItems.REEDS_HEAD.get()),
+                new ItemStack(EPItems.TALL_REEDS_HEAD.get()),
+                new ItemStack(EPItems.WATER_REEDS_HEAD.get())
+        );
+
+        List<ItemStack> dusts = List.of(
+                new ItemStack(EPItems.TIN_DUST.get()),
+                new ItemStack(EPItems.ZINC_DUST.get()),
+                new ItemStack(EPItems.COPPER_DUST.get()),
+                new ItemStack(EPItems.BRASS_DUST.get()),
+                new ItemStack(EPItems.BRONZE_DUST.get()),
+                new ItemStack(EPItems.BRONZIUM_DUST.get()),
+                new ItemStack(EPItems.IRON_DUST.get()),
+                new ItemStack(EPItems.SILVER_DUST.get()),
+                new ItemStack(EPItems.GOLD_DUST.get()),
+                new ItemStack(EPItems.STEEL_DUST.get()),
+                new ItemStack(EPItems.ROSE_GOLD_DUST.get()),
+                new ItemStack(EPItems.GREEN_GOLD_DUST.get()),
+                new ItemStack(EPItems.BLUE_GOLD_DUST.get()),
+                new ItemStack(EPItems.ALUMINUM_DUST.get())
+        );
+
+        //Nature objects
+        registration.addIngredientInfo(EPItems.PLANT_FIBER.get(),
+                Component.translatable("jei." + EnhancedPlaythrough.MOD_ID + ".plant_fiber.desc"));
+        registration.addItemStackInfo(reeds, Component.translatable("jei." + EnhancedPlaythrough.MOD_ID + ".reeds_head.desc"));
+
+        //Upgrade templates
+        registration.addIngredientInfo(EPItems.BRONZIUM_UPGRADE_SMITHING_TEMPLATE.get(),
+                Component.translatable("jei." + EnhancedPlaythrough.MOD_ID + ".bronzium_upgrade.desc"));
+        registration.addIngredientInfo(EPItems.ALUMINUM_UPGRADE_SMITHING_TEMPLATE.get(),
+                Component.translatable("jei." + EnhancedPlaythrough.MOD_ID + ".aluminum_upgrade.desc"));
+        registration.addIngredientInfo(EPItems.GOLDEN_UPGRADE_SMITHING_TEMPLATE.get(),
+                Component.translatable("jei." + EnhancedPlaythrough.MOD_ID + ".golden_upgrade.desc"));
+
+        //Dusts
+        registration.addItemStackInfo(dusts, Component.translatable("jei." + EnhancedPlaythrough.MOD_ID + ".dusts.desc"));
+
+        //Others
+        registration.addIngredientInfo(EPItems.CALIBRATED_QUARTZ.get(),
+                Component.translatable("jei." + EnhancedPlaythrough.MOD_ID + ".calibrated_quartz.desc"));
+    }
+
     @Override
     public void registerRecipes(IRecipeRegistration registration) {
         RecipeManager recipeManager = Minecraft.getInstance().level.getRecipeManager();
+
+        //Ingredients info
+        addIngredientsInfo(registration);
 
         //Basic smelting
         List<BasicSmeltingRecipe> basicSmeltingRecipes = recipeManager.getAllRecipesFor(EPRecipes.BASIC_SMELT_TYPE.get());

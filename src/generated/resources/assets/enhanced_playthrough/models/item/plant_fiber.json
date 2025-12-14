@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "enhanced_playthrough:item/vegetable_fibber"
+    "layer0": "enhanced_playthrough:item/plant_fiber"
   }
 }

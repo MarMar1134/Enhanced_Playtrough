@@ -33,7 +33,6 @@ public class GeneralRecipeSubProvider extends RecipeProvider {
         stonecuttingRecipes(consumer);
         gemPolishingRecipes(consumer);
         grindingRecipes(consumer);
-
     }
 
     private static void smithingRecipes(Consumer<FinishedRecipe> consumer){
@@ -324,14 +323,14 @@ public class GeneralRecipeSubProvider extends RecipeProvider {
         mechanicalItemGrinding(consumer, Blocks.NETHERRACK, "netherrack_rubble", EPItems.NETHERRACK_RUBBLE.get(), 4);
 
         //Reeds
-        primalItemGrinding(consumer, EPBlocks.TALL_REEDS.get(), "vegetable_fiber", EPItems.VEGETABLE_FIBBER.get(), 3);
-        mechanicalItemGrinding(consumer, EPBlocks.TALL_REEDS.get(), "vegetable_fiber", EPItems.VEGETABLE_FIBBER.get(), 6);
+        primalItemGrinding(consumer, EPBlocks.TALL_REEDS.get(), "vegetable_fiber", EPItems.PLANT_FIBER.get(), 3);
+        mechanicalItemGrinding(consumer, EPBlocks.TALL_REEDS.get(), "vegetable_fiber", EPItems.PLANT_FIBER.get(), 6);
 
-        primalItemGrinding(consumer, EPBlocks.REEDS.get(), "vegetable_fiber", EPItems.VEGETABLE_FIBBER.get(), 2);
-        mechanicalItemGrinding(consumer, EPBlocks.REEDS.get(), "vegetable_fiber", EPItems.VEGETABLE_FIBBER.get(), 4);
+        primalItemGrinding(consumer, EPBlocks.REEDS.get(), "vegetable_fiber", EPItems.PLANT_FIBER.get(), 2);
+        mechanicalItemGrinding(consumer, EPBlocks.REEDS.get(), "vegetable_fiber", EPItems.PLANT_FIBER.get(), 4);
 
-        primalItemGrinding(consumer, EPBlocks.SMALL_REEDS.get(), "vegetable_fiber", EPItems.VEGETABLE_FIBBER.get(), 1);
-        mechanicalItemGrinding(consumer, EPBlocks.SMALL_REEDS.get(), "vegetable_fiber", EPItems.VEGETABLE_FIBBER.get(), 2);
+        primalItemGrinding(consumer, EPBlocks.SMALL_REEDS.get(), "vegetable_fiber", EPItems.PLANT_FIBER.get(), 1);
+        mechanicalItemGrinding(consumer, EPBlocks.SMALL_REEDS.get(), "vegetable_fiber", EPItems.PLANT_FIBER.get(), 2);
 
         //Dyes
             //White

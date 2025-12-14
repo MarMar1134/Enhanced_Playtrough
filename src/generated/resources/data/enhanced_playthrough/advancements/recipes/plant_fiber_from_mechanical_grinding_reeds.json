@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_tall_reeds": {
+    "has_reeds": {
       "conditions": {
         "items": [
           {
             "items": [
-              "enhanced_playthrough:tall_reeds"
+              "enhanced_playthrough:reeds"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "enhanced_playthrough:vegetable_fibber_from_mechanical_grinding_tall_reeds"
+        "recipe": "enhanced_playthrough:plant_fiber_from_mechanical_grinding_reeds"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_tall_reeds",
+      "has_reeds",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "enhanced_playthrough:vegetable_fibber_from_mechanical_grinding_tall_reeds"
+      "enhanced_playthrough:plant_fiber_from_mechanical_grinding_reeds"
     ]
   },
   "sends_telemetry_event": false

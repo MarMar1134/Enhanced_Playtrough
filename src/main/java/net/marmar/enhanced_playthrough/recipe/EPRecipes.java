@@ -72,7 +72,10 @@ public class EPRecipes {
                 RECIPE_TYPE.register("mechanical_grinding", () -> MechanicalGrindRecipe.Type.INSTANCE);
 
     public static void register(IEventBus eventBus){
+        EnhancedPlaythrough.LOGGER.info("Registering Enhanced Playthrough recipe serializers...");
         RECIPE_SERIALIZER.register(eventBus);
+
+        EnhancedPlaythrough.LOGGER.info("Registering Enhanced Playthrough recipe types...");
         RECIPE_TYPE.register(eventBus);
     }
 }

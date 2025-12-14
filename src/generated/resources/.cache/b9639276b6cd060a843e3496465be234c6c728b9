@@ -1,4 +1,4 @@
-// 1.20.1	2025-12-12T16:01:25.8503748	Tags for minecraft:item mod id enhanced_playthrough
+// 1.20.1	2025-12-14T02:10:40.0637975	Tags for minecraft:item mod id enhanced_playthrough
 0ff3092eb36a0159ae287d2f429e5f5eb6fb0c0a data/enhanced_playthrough/tags/items/aluminum.json
 b3b284c126879d981b4f706eb8ea0e63bd17ae12 data/enhanced_playthrough/tags/items/apple_logs.json
 1d609255995a77ead62a005cb2b75886514bb25a data/enhanced_playthrough/tags/items/blue_gold.json
@@ -101,7 +101,7 @@ aae115d005c5fe23885c738fc2e13a317ee65c89 data/forge/tags/items/ores/silver.json
 249784e172026977ce3d5cb73991bdc2903b414c data/forge/tags/items/ores/tin.json
 6cb61d10a550aa75f3e2f1a4e3ee86f17bf6ec5f data/forge/tags/items/ores/zinc.json
 03adcf9e1c5624d36188b8f3deb8bd459cb9b98f data/forge/tags/items/raw_materials.json
-876c6e51b4f82186254c20d7fcf5864802e41088 data/forge/tags/items/string.json
+e96baf448c68ec787525c1ac66ad5d5bd7866aa3 data/forge/tags/items/string.json
 d91bb3390af97661bbeffb2f4850295e19f0f696 data/forge/tags/items/tools.json
 2f479e166c79560e8ab005e7afe3affd36466fb3 data/minecraft/tags/items/arrows.json
 44c59ac57df8b15ad4eada2454ecd6db0f4158d8 data/minecraft/tags/items/axes.json

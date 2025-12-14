@@ -36,6 +36,22 @@ public class SpanishLangProvider extends AbstractLangProvider {
         addJeiCategory("primal_grinder", "Molienda");
         addJeiCategory("mechanical_grinder", "Molienda mecánizada");
 
+        addJeiItemDesc("plant_fiber", "Material usado en la fabricación de distintos objetos." +
+                "\nSirve como reemplazo del hilo tradicional, y se fabrica con plantas altas en fibra.");
+        addJeiItemDesc("reeds_head", "Material obtenido de una planta fibrosa." +
+                "\nSe utiliza en la fabricación de Fibra vegetal.");
+        addJeiItemDesc("bronzium_upgrade", "Plantilla de mejora para un material místico: el Broncio." +
+                "\nTransforma materiales de Bronce y Latón a Broncio, el cual posee cualidades ignífugas.");
+        addJeiItemDesc("aluminum_upgrade", "Plantilla de mejora para un material más moderno: el Aluminio." +
+                "\nReemplaza el mango de armas y herramientas por uno de aluminio, otorgando mayor durabilidad.");
+        addJeiItemDesc("golden_upgrade", "Plantilla de mejora que transforma las propiedades de objetos áureos." +
+                "\nImbuye de magia las armaduras, otorgando Apuro al portador. Con armas y herramientas, les hace actuar como si fuesen de un nivel" +
+                "superior al suyo mismo.");
+        addJeiItemDesc("dusts", "Material obtenido de la molienda del metal." +
+                "\nSe puede fundir en un horno y obtener un lingote de dicho metal, recuperando parte del material perdido.");
+        addJeiItemDesc("calibrated_quartz", "Material obtenido al alear Cuarzo y Estaño." +
+                "\nSe utiliza en la fabricación de distintos circuitos.");
+
         //Jade
         addJadeConfigTranslation("basic_furnace", "Hornos primitívos");
 
@@ -420,7 +436,7 @@ public class SpanishLangProvider extends AbstractLangProvider {
         addItem(EPItems.REEDS_HEAD, "Cabeza de hierba de las pampas");
         addItem(EPItems.TALL_REEDS_HEAD, "Cabeza de Cañabera");
         addItem(EPItems.WATER_REEDS_HEAD, "Cabeza de junco");
-        addItem(EPItems.VEGETABLE_FIBBER, "Fibra vegetal");
+        addItem(EPItems.PLANT_FIBER, "Fibra vegetal");
 
         //Cobble
         addItem(EPItems.COBBLE, "Adoquín");
