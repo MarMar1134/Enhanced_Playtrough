@@ -16,10 +16,11 @@ import net.marmar.enhanced_playthrough.block.custom.grinder.MechanicalGrinderBlo
 import net.marmar.enhanced_playthrough.block.custom.grinder.PrimalGrinderBlock;
 import net.marmar.enhanced_playthrough.block.custom.epfurnace.MasonryFurnaceBlock;
 import net.marmar.enhanced_playthrough.block.custom.growthdetector.GrowthDetectorBlock;
-import net.marmar.enhanced_playthrough.block.custom.wood.EPLeavesBlock;
+import net.marmar.enhanced_playthrough.block.custom.wood.leaves.EPLeavesBlock;
 import net.marmar.enhanced_playthrough.block.custom.wood.EPLogsBlock;
 import net.marmar.enhanced_playthrough.block.custom.wood.EPPlanksBlock;
 import net.marmar.enhanced_playthrough.block.custom.wood.EPWoodTypes;
+import net.marmar.enhanced_playthrough.block.custom.wood.leaves.LeavesWithFruitBlock;
 import net.marmar.enhanced_playthrough.block.custom.wood.sign.EPHangingSignBlock;
 import net.marmar.enhanced_playthrough.block.custom.wood.sign.EPStandingSignBlock;
 import net.marmar.enhanced_playthrough.block.custom.wood.sign.EPWallHangingSignBlock;
@@ -33,6 +34,7 @@ import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
@@ -107,8 +109,12 @@ public class EPBlocks {
                     () -> new EPLogsBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
             public static final RegistryObject<Block> APPLE_LEAVES = registerBlockWithItem("apple_leaves",
                     () -> new EPLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+            public static final RegistryObject<Block> APPLE_LEAVES_WITH_FRUIT = registerBlockWithItem("apple_leaves_with_fruit",
+                    () -> new LeavesWithFruitBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES), () -> Items.APPLE));
             public static final RegistryObject<Block> GREEN_APPLE_LEAVES = registerBlockWithItem("green_apple_leaves",
                     () -> new EPLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+            public static final RegistryObject<Block> GREEN_APPLE_LEAVES_WITH_FRUIT = registerBlockWithItem("green_apple_leaves_with_fruit",
+                    () -> new LeavesWithFruitBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES), EPItems.GREEN_APPLE));
             public static final RegistryObject<Block> APPLE_PLANKS = registerBlockWithItem("apple_planks",
                     () -> new EPPlanksBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
             public static final RegistryObject<Block> APPLE_DOOR = registerBlockWithItem("apple_door",
@@ -152,6 +158,8 @@ public class EPBlocks {
                     () -> new EPLogsBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
             public static final RegistryObject<Block> ORANGE_LEAVES = registerBlockWithItem("orange_leaves",
                     () -> new EPLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+            public static final RegistryObject<Block> ORANGE_LEAVES_WITH_FRUIT = registerBlockWithItem("orange_leaves_with_fruit",
+                    () -> new LeavesWithFruitBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES), EPItems.ORANGE));
             public static final RegistryObject<Block> ORANGE_PLANKS = registerBlockWithItem("orange_planks",
                     () -> new EPPlanksBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
             public static final RegistryObject<Block> ORANGE_DOOR = registerBlockWithItem("orange_door",
@@ -195,6 +203,8 @@ public class EPBlocks {
                     () -> new EPLogsBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
             public static final RegistryObject<Block> LEMON_LEAVES = registerBlockWithItem("lemon_leaves",
                     () -> new EPLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+            public static final RegistryObject<Block> LEMON_LEAVES_WITH_FRUIT = registerBlockWithItem("lemon_leaves_with_fruit",
+                    () -> new LeavesWithFruitBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES), EPItems.LEMON));
             public static final RegistryObject<Block> LEMON_PLANKS = registerBlockWithItem("lemon_planks",
                     () -> new EPPlanksBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
             public static final RegistryObject<Block> LEMON_DOOR = registerBlockWithItem("lemon_door",
@@ -229,7 +239,9 @@ public class EPBlocks {
             public static final RegistryObject<Block> LIME_SAPLING = registerBlockWithItem("lime_sapling",
                     () -> new SaplingBlock(new LimeTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
             public static final RegistryObject<Block> LIME_LEAVES = registerBlockWithItem("lime_leaves",
-                    () -> new EPLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).requiresCorrectToolForDrops()));
+                    () -> new EPLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+        public static final RegistryObject<Block> LIME_LEAVES_WITH_FRUIT = registerBlockWithItem("lime_leaves_with_fruit",
+                () -> new LeavesWithFruitBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES), EPItems.LIME));
 
         //Polished stone
         public static final RegistryObject<Block> POLISHED_STONE = registerBlockWithItem("polished_stone",
@@ -483,7 +495,7 @@ public class EPBlocks {
             () -> new FlowerBlock(EPMobEffects.FROSTBITE, 10, BlockBehaviour.Properties.copy(Blocks.ALLIUM).noOcclusion().noCollission()));
     public static final RegistryObject<Block> POTTED_COLD_LYRIUM = registerBlockWithItem("potted_cold_lyrium",
             () -> new FlowerPotBlock(()-> (FlowerPotBlock) Blocks.FLOWER_POT, EPBlocks.COLD_LYRIUM,
-                    BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM ).noOcclusion()));
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion()));
 
     public static final RegistryObject<Block> SUCCULENT = registerBlockWithItem("succulent",
             () -> new DesertFlowerBlock(() -> MobEffects.REGENERATION, 10, BlockBehaviour.Properties.copy(Blocks.ALLIUM).noOcclusion().noCollission()));

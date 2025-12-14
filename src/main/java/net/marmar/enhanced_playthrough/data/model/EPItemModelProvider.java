@@ -90,6 +90,9 @@ public class EPItemModelProvider extends ItemModelProvider {
                 saplingAndCropItem(EPBlocks.APPLE_SAPLING);
                 saplingAndCropItem(EPBlocks.GREEN_APPLE_SAPLING);
 
+                leavesWithFruitItem(EPBlocks.APPLE_LEAVES_WITH_FRUIT);
+                leavesWithFruitItem(EPBlocks.GREEN_APPLE_LEAVES_WITH_FRUIT);
+
                 simpleBlockItem(EPBlocks.APPLE_DOOR);
                 trapdoorItem(EPBlocks.APPLE_TRAPDOOR);
 
@@ -109,9 +112,10 @@ public class EPItemModelProvider extends ItemModelProvider {
                 simpleItem(EPItems.APPLE_BOAT);
                 simpleItem(EPItems.APPLE_CHEST_BOAT);
 
-
                 //Orange
                 saplingAndCropItem(EPBlocks.ORANGE_SAPLING);
+
+                leavesWithFruitItem(EPBlocks.ORANGE_LEAVES_WITH_FRUIT);
 
                 simpleBlockItem(EPBlocks.ORANGE_DOOR);
                 trapdoorItem(EPBlocks.ORANGE_TRAPDOOR);
@@ -135,6 +139,8 @@ public class EPItemModelProvider extends ItemModelProvider {
                 //Lemon
                 saplingAndCropItem(EPBlocks.LEMON_SAPLING);
 
+                leavesWithFruitItem(EPBlocks.LEMON_LEAVES_WITH_FRUIT);
+
                 simpleBlockItem(EPBlocks.LEMON_DOOR);
                 trapdoorItem(EPBlocks.LEMON_TRAPDOOR);
 
@@ -157,6 +163,8 @@ public class EPItemModelProvider extends ItemModelProvider {
 
                 //Lime
                 saplingAndCropItem(EPBlocks.LIME_SAPLING);
+
+                leavesWithFruitItem(EPBlocks.LIME_LEAVES_WITH_FRUIT);
 
         //Calibrated quartz
         blockWithItem(EPBlocks.CALIBRATED_QUARTZ_BLOCK);
@@ -700,8 +708,13 @@ public class EPItemModelProvider extends ItemModelProvider {
 
     private ItemModelBuilder doubleBlockWithAgeItem(RegistryObject<Block> item){
         return withExistingParent(item.getId().getPath(),
-                mcLoc("item/generated")).texture ("layer0",
+                mcLoc("item/generated")).texture("layer0",
                 modLoc("block/" + item.getId().getPath() + "_upper_1"));
+    }
+
+    private ItemModelBuilder leavesWithFruitItem(RegistryObject<Block> item){
+        return withExistingParent(EnhancedPlaythrough.MOD_ID + ":" + ForgeRegistries.BLOCKS.getKey(item.get()).getPath(),
+                modLoc("block/" + ForgeRegistries.BLOCKS.getKey(item.get()).getPath() + "_1"));
     }
 
     private ItemModelBuilder saplingAndCropItem(RegistryObject<Block> item) {

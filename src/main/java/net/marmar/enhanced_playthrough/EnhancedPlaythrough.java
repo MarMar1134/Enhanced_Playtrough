@@ -15,6 +15,7 @@ import net.marmar.enhanced_playthrough.entity.villager.EPVillagerProfessions;
 import net.marmar.enhanced_playthrough.util.EPSoundEvents;
 import net.marmar.enhanced_playthrough.worldgen.feature.EPFeatures;
 import net.marmar.enhanced_playthrough.worldgen.structure.processor.EPStructureProcessors;
+import net.marmar.enhanced_playthrough.worldgen.tree.foliage.EPFoliagePlacers;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -36,6 +37,8 @@ public class EnhancedPlaythrough {
 
         EPBlocks.Register(modEventBus);
         EPBlockEntities.register(modEventBus);
+
+        EPFoliagePlacers.register(modEventBus);
 
         EPSoundEvents.register(modEventBus);
 

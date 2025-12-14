@@ -166,7 +166,7 @@ public class EPBlockLootTables extends BlockLootSubProvider implements BlockLoot
             this.dropSelf(EPBlocks.STRIPPED_WALNUT_WOOD.get());
 
             this.add(EPBlocks.WALNUT_LEAVES.get(), block ->
-                    createLeavesWithFruitDrops(block, EPBlocks.WALNUT_SAPLING.get(), EPItems.WALNUT.get(), 4));
+                    createLeavesWithExternalFruitDrops(block, EPBlocks.WALNUT_SAPLING.get(), EPItems.WALNUT.get(), 4));
 
             this.dropSelf(EPBlocks.WALNUT_PLANKS.get());
 
@@ -206,8 +206,12 @@ public class EPBlockLootTables extends BlockLootSubProvider implements BlockLoot
 
             this.add(EPBlocks.APPLE_LEAVES.get(),
                     block -> createLeavesWithFruitDrops(block, EPBlocks.APPLE_SAPLING.get(), Items.APPLE));
+            this.add(EPBlocks.APPLE_LEAVES_WITH_FRUIT.get(),
+                    block -> createLeavesWithExternalFruitDrops(block, EPBlocks.APPLE_SAPLING.get(), Items.APPLE, 2));
             this.add(EPBlocks.GREEN_APPLE_LEAVES.get(),
                     block -> createLeavesWithFruitDrops(block, EPBlocks.GREEN_APPLE_SAPLING.get(), EPItems.GREEN_APPLE.get()));
+            this.add(EPBlocks.GREEN_APPLE_LEAVES_WITH_FRUIT.get(),
+                    block -> createLeavesWithExternalFruitDrops(block, EPBlocks.GREEN_APPLE_SAPLING.get(), EPItems.GREEN_APPLE.get(), 2));
 
             this.dropSelf(EPBlocks.APPLE_PLANKS.get());
 
@@ -245,7 +249,9 @@ public class EPBlockLootTables extends BlockLootSubProvider implements BlockLoot
             this.dropSelf(EPBlocks.STRIPPED_ORANGE_WOOD.get());
 
             this.add(EPBlocks.ORANGE_LEAVES.get(),
-                    block -> createLeavesWithFruitDrops(block, EPBlocks.ORANGE_SAPLING.get(), EPItems.ORANGE.get(), 3));
+                    block -> createLeavesWithFruitDrops(block, EPBlocks.ORANGE_SAPLING.get(), EPItems.ORANGE.get()));
+            this.add(EPBlocks.ORANGE_LEAVES_WITH_FRUIT.get(),
+                    block -> createLeavesWithExternalFruitDrops(block, EPBlocks.ORANGE_SAPLING.get(), EPItems.ORANGE.get(), 3));
 
             this.dropSelf(EPBlocks.ORANGE_PLANKS.get());
 
@@ -283,7 +289,9 @@ public class EPBlockLootTables extends BlockLootSubProvider implements BlockLoot
             this.dropSelf(EPBlocks.STRIPPED_LEMON_WOOD.get());
 
             this.add(EPBlocks.LEMON_LEAVES.get(),
-                    block -> createLeavesWithFruitDrops(block, EPBlocks.LEMON_SAPLING.get(), EPItems.LEMON.get(), 2));
+                    block -> createLeavesWithFruitDrops(block, EPBlocks.LEMON_SAPLING.get(), EPItems.LEMON.get()));
+            this.add(EPBlocks.LEMON_LEAVES_WITH_FRUIT.get(),
+                    block -> createLeavesWithExternalFruitDrops(block, EPBlocks.LEMON_SAPLING.get(), EPItems.LEMON.get(), 2));
 
             this.dropSelf(EPBlocks.LEMON_PLANKS.get());
 
@@ -316,7 +324,9 @@ public class EPBlockLootTables extends BlockLootSubProvider implements BlockLoot
             //Lime
             this.dropSelf(EPBlocks.LIME_SAPLING.get());
             this.add(EPBlocks.LIME_LEAVES.get(),
-                    block -> createLeavesWithFruitDrops(block, EPBlocks.LIME_SAPLING.get(), EPItems.LIME.get(), 2));
+                    block -> createLeavesWithFruitDrops(block, EPBlocks.LIME_SAPLING.get(), EPItems.LIME.get()));
+            this.add(EPBlocks.LIME_LEAVES_WITH_FRUIT.get(),
+                    block -> createLeavesWithExternalFruitDrops(block, EPBlocks.LIME_SAPLING.get(), EPItems.LIME.get(), 2));
 
         //Crops
             //Yerba mate

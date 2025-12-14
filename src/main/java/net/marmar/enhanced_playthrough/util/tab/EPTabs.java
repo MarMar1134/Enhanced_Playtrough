@@ -560,20 +560,25 @@ public class EPTabs {
                         //Apple
                         output.accept(EPBlocks.APPLE_SAPLING.get());
                         output.accept(EPBlocks.APPLE_LEAVES.get());
+                        output.accept(EPBlocks.APPLE_LEAVES_WITH_FRUIT.get());
                         output.accept(EPBlocks.GREEN_APPLE_SAPLING.get());
                         output.accept(EPBlocks.GREEN_APPLE_LEAVES.get());
+                        output.accept(EPBlocks.GREEN_APPLE_LEAVES_WITH_FRUIT.get());
 
                         //Orange
                         output.accept(EPBlocks.ORANGE_SAPLING.get());
                         output.accept(EPBlocks.ORANGE_LEAVES.get());
+                        output.accept(EPBlocks.ORANGE_LEAVES_WITH_FRUIT.get());
 
                         //lemon
                         output.accept(EPBlocks.LEMON_SAPLING.get());
                         output.accept(EPBlocks.LEMON_LEAVES.get());
+                        output.accept(EPBlocks.LEMON_LEAVES_WITH_FRUIT.get());
 
                         //Lime
                         output.accept(EPBlocks.LIME_SAPLING.get());
                         output.accept(EPBlocks.LIME_LEAVES.get());
+                        output.accept(EPBlocks.LIME_LEAVES_WITH_FRUIT.get());
                     }).build());
 
     public static final RegistryObject<CreativeModeTab> WOODTYPES = TABS.register(

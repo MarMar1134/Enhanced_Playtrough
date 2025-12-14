@@ -171,6 +171,7 @@ public class EnglishLangProvider extends AbstractLangProvider {
                 //Apple
                 addBlock(EPBlocks.APPLE_SAPLING, "Apple sapling");
                 addBlock(EPBlocks.APPLE_LEAVES, "Apple leaves");
+                addBlock(EPBlocks.APPLE_LEAVES_WITH_FRUIT, "Apple leaves with fruit");
                 addBlock(EPBlocks.APPLE_LOG, "Apple log");
                 addBlock(EPBlocks.STRIPPED_APPLE_LOG, "Stripped apple log");
                 addBlock(EPBlocks.APPLE_WOOD, "Apple wood");
@@ -192,6 +193,7 @@ public class EnglishLangProvider extends AbstractLangProvider {
                 //Green apple
                 addBlock(EPBlocks.GREEN_APPLE_SAPLING, "Green apple sapling");
                 addBlock(EPBlocks.GREEN_APPLE_LEAVES, "Green apple leaves");
+                addBlock(EPBlocks.GREEN_APPLE_LEAVES_WITH_FRUIT, "Green apple leaves with fruit");
 
                 //Walnut
                 addBlock(EPBlocks.WALNUT_SAPLING, "Walnut sapling");
@@ -217,6 +219,7 @@ public class EnglishLangProvider extends AbstractLangProvider {
                 //Orange
                 addBlock(EPBlocks.ORANGE_SAPLING, "Orange sapling");
                 addBlock(EPBlocks.ORANGE_LEAVES, "Orange leaves");
+                addBlock(EPBlocks.ORANGE_LEAVES_WITH_FRUIT, "Orange leaves with fruit");
                 addBlock(EPBlocks.ORANGE_LOG, "Orange log");
                 addBlock(EPBlocks.STRIPPED_ORANGE_LOG, "Stripped orange log");
                 addBlock(EPBlocks.ORANGE_WOOD, "Orange wood");
@@ -238,6 +241,7 @@ public class EnglishLangProvider extends AbstractLangProvider {
                 //Lemon
                 addBlock(EPBlocks.LEMON_SAPLING, "Lemon sapling");
                 addBlock(EPBlocks.LEMON_LEAVES, "Lemon leaves");
+                addBlock(EPBlocks.LEMON_LEAVES_WITH_FRUIT, "Lemon leaves with fruit");
                 addBlock(EPBlocks.LEMON_LOG, "Lemon log");
                 addBlock(EPBlocks.STRIPPED_LEMON_LOG, "Stripped lemon log");
                 addBlock(EPBlocks.LEMON_WOOD, "Orange wood");
@@ -259,6 +263,7 @@ public class EnglishLangProvider extends AbstractLangProvider {
                 //Lime
                 addBlock(EPBlocks.LIME_SAPLING, "Lime sapling");
                 addBlock(EPBlocks.LIME_LEAVES, "Lime leaves");
+                addBlock(EPBlocks.LIME_LEAVES_WITH_FRUIT, "Lime leaves with fruit");
 
             //Polished stone
             addBlock(EPBlocks.POLISHED_STONE, "Polished stone");

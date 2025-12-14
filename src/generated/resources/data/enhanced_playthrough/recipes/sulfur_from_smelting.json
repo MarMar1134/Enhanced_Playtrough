@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.5,
+  "group": "sulfur",
+  "ingredient": {
+    "tag": "enhanced_playthrough:ores/sulfur"
+  },
+  "result": "enhanced_playthrough:sulfur"
+}

@@ -1,5 +1,13 @@
 {
   "values": [
+    "#enhanced_playthrough:sulfur_ores",
+    "#enhanced_playthrough:tin_ores",
+    "#enhanced_playthrough:zinc_ores",
+    "#enhanced_playthrough:silver_ores",
+    "#enhanced_playthrough:bauxite_ores",
+    "#enhanced_playthrough:sapphire_ores",
+    "#enhanced_playthrough:ruby_ores",
+    "#enhanced_playthrough:cobalt_ores",
     "enhanced_playthrough:nether_copper_ore",
     "enhanced_playthrough:sulfur_ore",
     "enhanced_playthrough:tin_ore",

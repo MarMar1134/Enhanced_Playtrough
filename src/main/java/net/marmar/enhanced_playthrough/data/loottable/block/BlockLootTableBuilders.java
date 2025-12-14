@@ -5,6 +5,7 @@ import net.marmar.enhanced_playthrough.block.custom.crop.CornCropBlock;
 import net.marmar.enhanced_playthrough.block.custom.crop.TomatoCropBlock;
 import net.marmar.enhanced_playthrough.block.custom.crop.YerbaMateCropBlock;
 import net.marmar.enhanced_playthrough.block.custom.crop.ZapalloCropBlock;
+import net.marmar.enhanced_playthrough.block.custom.wood.leaves.LeavesWithFruitBlock;
 import net.marmar.enhanced_playthrough.util.enchantment.EPEnchantments;
 import net.marmar.enhanced_playthrough.item.EPItems;
 import net.minecraft.advancements.critereon.EnchantmentPredicate;
@@ -80,6 +81,12 @@ public interface BlockLootTableBuilders {
                     .hasEnchantment(new EnchantmentPredicate(Enchantments.SILK_TOUCH, MinMaxBounds.Ints.atLeast(1))))).invert();
 
     //Crop builders
+    default LootItemCondition.Builder LEAVE_WITH_FRUITS_BUILDER(Block pBlock) {
+        return LootItemBlockStatePropertyCondition
+                .hasBlockStateProperties(pBlock)
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(LeavesWithFruitBlock.AGE, 1));
+    }
+
     LootItemCondition.Builder YERBA_MATE_BUILDER = LootItemBlockStatePropertyCondition
             .hasBlockStateProperties(EPBlocks.YERBA_MATE_CROP.get())
             .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(YerbaMateCropBlock.AGE, 4));
@@ -300,44 +307,68 @@ public interface BlockLootTableBuilders {
                 .add(LootItem.lootTableItem(pPlant)));
     }
 
-    default LootTable.Builder createLeavesWithFruitDrops(Block pBlock, Block pSapling, float[] pSaplingChances, ItemLike pFruit, int pMaxFruitQuantity, float[] pFruitChances){
-        return LootTable.lootTable().withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1f))
-                .add(LootItem.lootTableItem(pBlock).when(CUSTOM_HAS_SHEARS_OR_SILK_TOUCH)))
-                .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1f))
+    default LootTable.Builder createLeavesWithExternalFruitDrops(Block pBlock, Block pSapling, float[] pSaplingChances, ItemLike pFruit, int pMaxFruitQuantity, float[] pFruitChances) {
+        return LootTable.lootTable().withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1))
+                        .add(LootItem.lootTableItem(pBlock)
+                                .when(CUSTOM_HAS_SHEARS_OR_SILK_TOUCH)))
+                .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1))
+                        .add(LootItem.lootTableItem(pFruit)
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, pMaxFruitQuantity))))
+                        .when(LEAVE_WITH_FRUITS_BUILDER(pBlock)))
+                .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1))
                         .add(LootItem.lootTableItem(pFruit)
                                 .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, pMaxFruitQuantity)))
                                 .when(BonusLevelTableCondition.bonusLevelFlatChance(Enchantments.BLOCK_FORTUNE, pFruitChances)))
                         .when(CUSTOM_HAS_NO_SHEARS_OR_SILK_TOUCH))
-                .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1f))
+                .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1))
                         .add(LootItem.lootTableItem(Items.STICK)
-                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(1f, 2f)))
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 2)))
                                 .when(BonusLevelTableCondition.bonusLevelFlatChance(Enchantments.BLOCK_FORTUNE, BASE_STICK_CHANCES)))
                         .when(CUSTOM_HAS_NO_SHEARS_OR_SILK_TOUCH))
-                .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1f))
+                .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1))
                         .add(LootItem.lootTableItem(pSapling)
                                 .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1)))
                                 .when(BonusLevelTableCondition.bonusLevelFlatChance(Enchantments.BLOCK_FORTUNE, pSaplingChances)))
-                        .when(CUSTOM_HAS_NO_SHEARS_OR_SILK_TOUCH));
+                        .when(CUSTOM_HAS_NO_SHEARS_OR_SILK_TOUCH)
+                );
     }
 
-    default LootTable.Builder createLeavesWithFruitDrops(Block pBlock, Block pSapling, ItemLike pFruit, int pMaxFruitQuantity, float... pFruitChances){
-        return createLeavesWithFruitDrops(pBlock, pSapling, BASE_SAPLING_CHANCES, pFruit, pMaxFruitQuantity, pFruitChances);
+    default LootTable.Builder createLeavesWithExternalFruitDrops(Block pBlock, Block pSapling, ItemLike pFruit, int pFruits){
+        return createLeavesWithExternalFruitDrops(pBlock, pSapling, BASE_SAPLING_CHANCES, pFruit, pFruits, BASE_FRUIT_CHANCES);
+    }
+
+    default LootTable.Builder createLeavesWithExternalFruitDrops(Block pBlock, Block pSapling, ItemLike pFruit){
+        return createLeavesWithExternalFruitDrops(pBlock, pSapling, BASE_SAPLING_CHANCES, pFruit, 1, BASE_FRUIT_CHANCES);
+    }
+
+    default LootTable.Builder createLeavesWithFruitDrops(Block pBlock, Block pSapling, float[] pSaplingChances, ItemLike pFruit, int pMaxFruitQuantity, float[] pFruitChances) {
+        return LootTable.lootTable().withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1))
+                        .add(LootItem.lootTableItem(pBlock)
+                                .when(CUSTOM_HAS_SHEARS_OR_SILK_TOUCH)))
+                .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1))
+                        .add(LootItem.lootTableItem(pFruit)
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, pMaxFruitQuantity)))
+                                .when(BonusLevelTableCondition.bonusLevelFlatChance(Enchantments.BLOCK_FORTUNE, pFruitChances)))
+                        .when(CUSTOM_HAS_NO_SHEARS_OR_SILK_TOUCH))
+                .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1))
+                        .add(LootItem.lootTableItem(Items.STICK)
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 2)))
+                                .when(BonusLevelTableCondition.bonusLevelFlatChance(Enchantments.BLOCK_FORTUNE, BASE_STICK_CHANCES)))
+                        .when(CUSTOM_HAS_NO_SHEARS_OR_SILK_TOUCH))
+                .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1))
+                        .add(LootItem.lootTableItem(pSapling)
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1)))
+                                .when(BonusLevelTableCondition.bonusLevelFlatChance(Enchantments.BLOCK_FORTUNE, pSaplingChances)))
+                        .when(CUSTOM_HAS_NO_SHEARS_OR_SILK_TOUCH)
+                );
     }
 
     default LootTable.Builder createLeavesWithFruitDrops(Block pBlock, Block pSapling, ItemLike pFruit, int pFruits){
         return createLeavesWithFruitDrops(pBlock, pSapling, BASE_SAPLING_CHANCES, pFruit, pFruits, BASE_FRUIT_CHANCES);
     }
 
-    default LootTable.Builder createLeavesWithFruitDrops(Block pBlock, Block pSapling, ItemLike pFruit, float... pFruitChances){
-        return createLeavesWithFruitDrops(pBlock, pSapling, BASE_SAPLING_CHANCES, pFruit, 1, pFruitChances);
-    }
-
     default LootTable.Builder createLeavesWithFruitDrops(Block pBlock, Block pSapling, ItemLike pFruit){
         return createLeavesWithFruitDrops(pBlock, pSapling, BASE_SAPLING_CHANCES, pFruit, 1, BASE_FRUIT_CHANCES);
-    }
-
-    default LootTable.Builder createLeavesWithFruitDrops(Block pBlock, Block pSapling, float[] pSaplingChances, ItemLike pFruit, float... pFruitChances){
-        return createLeavesWithFruitDrops(pBlock, pSapling, pSaplingChances, pFruit, 1, pFruitChances);
     }
 
     default LootTable.Builder createLeavesWithoutFruitDrops(Block pBlock, Block pSapling, float... pSaplingChances){

@@ -1,7 +1,8 @@
-// 1.20.1	2025-08-19T13:42:17.3523038	Tags for minecraft:block mod id enhanced_playthrough
+// 1.20.1	2025-12-13T23:54:18.3253899	Tags for minecraft:block mod id enhanced_playthrough
 79753f202ed6cd2b07dd609dec19558e6c68c837 data/enhanced_playthrough/tags/blocks/alloy_furnace.json
 47a02117dd60bac3b440fb46f534e4d5442d0e64 data/enhanced_playthrough/tags/blocks/basic_furnace.json
-245378e75a40ed5a8e70756f73fa0c2f31a2e7df data/enhanced_playthrough/tags/blocks/bauxite_ores.json
+5d27eebe0849b352469140e33f7a751d88d36e96 data/enhanced_playthrough/tags/blocks/bauxite_ores.json
+114b85c5020f2489ec29e69f25614b7c3dec9eaf data/enhanced_playthrough/tags/blocks/cobalt_ores.json
 1f5cf10f07e099c1622d22f405556db4cd56ef09 data/enhanced_playthrough/tags/blocks/desert_flower_base.json
 023988d30dc163bbcd76c736a27aa7bc15a6b5f1 data/enhanced_playthrough/tags/blocks/needs_blue_gold_tool.json
 d3c28a03337da0044db4602dc42545d2a430a227 data/enhanced_playthrough/tags/blocks/needs_brass_tool.json
@@ -11,16 +12,22 @@ c82d67c58c8bcd5ce74f70409c804b16c84863e1 data/enhanced_playthrough/tags/blocks/n
 d9b0572e63f6e5806699ce5a20179cf3ab6cc928 data/enhanced_playthrough/tags/blocks/needs_rose_gold_tool.json
 100189b480ab435b5ba90dae9b94664ac34c1b92 data/enhanced_playthrough/tags/blocks/needs_silver_tool.json
 292188cea40885f475c65b6b004c78207aea9fc0 data/enhanced_playthrough/tags/blocks/needs_steel_tool.json
+c345152faf407ce69f8a294af98f64164880681b data/enhanced_playthrough/tags/blocks/ruby_ores.json
+9cb9f314e6c061a5a6fefadce0bb401ea2c5d22a data/enhanced_playthrough/tags/blocks/sapphire_ores.json
+aae115d005c5fe23885c738fc2e13a317ee65c89 data/enhanced_playthrough/tags/blocks/silver_ores.json
+91ea176efa45aaf51177fe9afb84629048e27ed2 data/enhanced_playthrough/tags/blocks/sulfur_ores.json
+249784e172026977ce3d5cb73991bdc2903b414c data/enhanced_playthrough/tags/blocks/tin_ores.json
+6cb61d10a550aa75f3e2f1a4e3ee86f17bf6ec5f data/enhanced_playthrough/tags/blocks/zinc_ores.json
 648156f1da74ba9a3d36d58313f67cb8b087e6b7 data/forge/tags/blocks/needs_wood_tool.json
-aa8a18e30c8413532a94b595488a30abe25b7685 data/forge/tags/blocks/ores.json
+dcda19163fa507e8427cb3c8d93dcab71bc12a7f data/forge/tags/blocks/ores.json
 98c8337310ed121b816c834fde588afce4b7c192 data/forge/tags/blocks/stone.json
 6f2688a3532795748cc8f7a7cedcc7548c53081f data/minecraft/tags/blocks/beacon_base_blocks.json
 27e60c70e70af1db39bde73645a398c6b70bec63 data/minecraft/tags/blocks/fences.json
 bfecdab9baabf8268fd1903dba73ff07fa8fd1e1 data/minecraft/tags/blocks/fence_gates.json
-e6b33c19b8f9affa593da912431dc3d087fef999 data/minecraft/tags/blocks/leaves.json
+de63434cd109289856ff5bfdcd84162a8393525b data/minecraft/tags/blocks/leaves.json
 cc7f01de72464bfac0275de5c6aaeeb445bc06d0 data/minecraft/tags/blocks/logs_that_burn.json
 e700fb1bf9137bf8cdd9b95907c50db453f3094e data/minecraft/tags/blocks/mineable/axe.json
-e6b33c19b8f9affa593da912431dc3d087fef999 data/minecraft/tags/blocks/mineable/hoe.json
+de63434cd109289856ff5bfdcd84162a8393525b data/minecraft/tags/blocks/mineable/hoe.json
 ab3b1d15769be3ef54180cb2eca549d7e66072c2 data/minecraft/tags/blocks/mineable/pickaxe.json
 114b85c5020f2489ec29e69f25614b7c3dec9eaf data/minecraft/tags/blocks/needs_diamond_tool.json
 269a9eba5d1c9bed0e7f091f54f4340dad8e3140 data/minecraft/tags/blocks/needs_iron_tool.json
@@ -32,7 +39,7 @@ eee53ecd7b65edaeef85566d7a3cb6bd7c197e5d data/minecraft/tags/blocks/signs.json
 950589640e3aa849fae3299a718f95814ef4921f data/minecraft/tags/blocks/slabs.json
 119add4a82207dd6987fe6832893d0e152099368 data/minecraft/tags/blocks/small_flowers.json
 eff9b24b7c88bad70cd4c584dcf77ee6d76fc0e8 data/minecraft/tags/blocks/stairs.json
-e6b33c19b8f9affa593da912431dc3d087fef999 data/minecraft/tags/blocks/sword_efficient.json
+de63434cd109289856ff5bfdcd84162a8393525b data/minecraft/tags/blocks/sword_efficient.json
 6bc69911cb4c2737f452ee4adaa0dc89dfd0fe0d data/minecraft/tags/blocks/walls.json
 d0657640c8fa39e9bde57e12e5cf4b44c72dc118 data/minecraft/tags/blocks/wall_hanging_signs.json
 b62f8b2a8869e5686642b3ad30dcd911900867cc data/minecraft/tags/blocks/wall_signs.json

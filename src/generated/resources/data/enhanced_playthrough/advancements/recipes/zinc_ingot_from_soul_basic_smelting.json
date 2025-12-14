@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "TagKey[minecraft:item / enhanced_playthrough:ores/basic/zinc]": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "enhanced_playthrough:ores/basic/zinc"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "enhanced_playthrough:zinc_ingot_from_soul_basic_smelting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "TagKey[minecraft:item / enhanced_playthrough:ores/basic/zinc]",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "enhanced_playthrough:zinc_ingot_from_soul_basic_smelting"
+    ]
+  },
+  "sends_telemetry_event": false
+}

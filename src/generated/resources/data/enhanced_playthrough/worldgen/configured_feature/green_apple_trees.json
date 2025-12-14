@@ -9,21 +9,39 @@
       }
     },
     "foliage_placer": {
-      "type": "minecraft:blob_foliage_placer",
-      "height": 2,
-      "offset": 1,
-      "radius": 2
+      "type": "enhanced_playthrough:apple_foliage_placer",
+      "height": 3,
+      "offset": 2,
+      "radius": 3
     },
     "foliage_provider": {
-      "type": "minecraft:simple_state_provider",
-      "state": {
-        "Name": "enhanced_playthrough:green_apple_leaves",
-        "Properties": {
-          "distance": "7",
-          "persistent": "false",
-          "waterlogged": "false"
+      "type": "minecraft:weighted_state_provider",
+      "entries": [
+        {
+          "data": {
+            "Name": "enhanced_playthrough:green_apple_leaves",
+            "Properties": {
+              "distance": "7",
+              "persistent": "false",
+              "waterlogged": "false"
+            }
+          },
+          "weight": 3
+        },
+        {
+          "data": {
+            "Name": "enhanced_playthrough:green_apple_leaves_with_fruit",
+            "Properties": {
+              "age": "1",
+              "distance": "7",
+              "grows": "true",
+              "persistent": "false",
+              "waterlogged": "false"
+            }
+          },
+          "weight": 1
         }
-      }
+      ]
     },
     "force_dirt": false,
     "ignore_vines": false,

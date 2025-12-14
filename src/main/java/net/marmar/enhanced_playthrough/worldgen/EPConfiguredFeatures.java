@@ -3,6 +3,9 @@ package net.marmar.enhanced_playthrough.worldgen;
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.block.EPBlocks;
 import net.marmar.enhanced_playthrough.worldgen.feature.EPFeatures;
+import net.marmar.enhanced_playthrough.worldgen.tree.foliage.AppleFoliagePlacer;
+import net.marmar.enhanced_playthrough.worldgen.tree.foliage.LemonFoliagePlacer;
+import net.marmar.enhanced_playthrough.worldgen.tree.foliage.OrangeFoliagePlacer;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
@@ -11,9 +14,11 @@ import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.util.random.SimpleWeightedRandomList;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
@@ -22,6 +27,7 @@ import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSi
 import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.feature.stateproviders.RuleBasedBlockStateProvider;
+import net.minecraft.world.level.levelgen.feature.stateproviders.WeightedStateProvider;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
 import net.minecraft.world.level.levelgen.placement.BlockPredicateFilter;
 import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
@@ -231,8 +237,11 @@ public class EPConfiguredFeatures {
                     BlockStateProvider.simple(EPBlocks.APPLE_LOG.get()),
                     new StraightTrunkPlacer(3, 2, 1),
 
-                    BlockStateProvider.simple(EPBlocks.APPLE_LEAVES.get()),
-                    new BlobFoliagePlacer(ConstantInt.of(3),ConstantInt.of(2),3),
+                    new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()
+                            .add(EPBlocks.APPLE_LEAVES.get().defaultBlockState(), 3)
+                            .add(EPBlocks.APPLE_LEAVES_WITH_FRUIT.get().defaultBlockState(), 1)
+                            .build()),
+                    new AppleFoliagePlacer(ConstantInt.of(3),ConstantInt.of(2),3),
 
                     new TwoLayersFeatureSize(2, 1, 2)).build());
 
@@ -241,8 +250,11 @@ public class EPConfiguredFeatures {
                     BlockStateProvider.simple(EPBlocks.APPLE_LOG.get()),
                     new StraightTrunkPlacer(3, 2, 1),
 
-                    BlockStateProvider.simple(EPBlocks.GREEN_APPLE_LEAVES.get()),
-                    new BlobFoliagePlacer(ConstantInt.of(2),ConstantInt.of(1),2),
+                    new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()
+                            .add(EPBlocks.GREEN_APPLE_LEAVES.get().defaultBlockState(), 3)
+                            .add(EPBlocks.GREEN_APPLE_LEAVES_WITH_FRUIT.get().defaultBlockState(), 1)
+                            .build()),
+                    new AppleFoliagePlacer(ConstantInt.of(3),ConstantInt.of(2),3),
 
                     new TwoLayersFeatureSize(2, 1, 2)).build());
 
@@ -251,8 +263,11 @@ public class EPConfiguredFeatures {
                     BlockStateProvider.simple(EPBlocks.ORANGE_LOG.get()),
                     new StraightTrunkPlacer(3, 1, 1),
 
-                    BlockStateProvider.simple(EPBlocks.ORANGE_LEAVES.get()),
-                    new BlobFoliagePlacer(ConstantInt.of(2),ConstantInt.of(0),2),
+                    new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()
+                            .add(EPBlocks.ORANGE_LEAVES.get().defaultBlockState(), 3)
+                            .add(EPBlocks.ORANGE_LEAVES_WITH_FRUIT.get().defaultBlockState(), 1)
+                            .build()),
+                    new OrangeFoliagePlacer(ConstantInt.of(2),ConstantInt.of(0),3),
 
                     new TwoLayersFeatureSize(1, 1, 2)).build());
 
@@ -261,8 +276,11 @@ public class EPConfiguredFeatures {
                     BlockStateProvider.simple(EPBlocks.LEMON_LOG.get()),
                     new StraightTrunkPlacer(4, 2, 1),
 
-                    BlockStateProvider.simple(EPBlocks.LEMON_LEAVES.get()),
-                    new BlobFoliagePlacer(ConstantInt.of(2),ConstantInt.of(0),2),
+                    new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()
+                            .add(EPBlocks.LEMON_LEAVES.get().defaultBlockState(), 4)
+                            .add(EPBlocks.LEMON_LEAVES_WITH_FRUIT.get().defaultBlockState(), 2)
+                            .build()),
+                    new LemonFoliagePlacer(ConstantInt.of(2),ConstantInt.of(1),4),
 
                     new TwoLayersFeatureSize(2, 1, 2)).build());
 
@@ -271,8 +289,11 @@ public class EPConfiguredFeatures {
                     BlockStateProvider.simple(EPBlocks.LEMON_LOG.get()),
                     new StraightTrunkPlacer(3, 1, 1),
 
-                    BlockStateProvider.simple(EPBlocks.LIME_LEAVES.get()),
-                    new BlobFoliagePlacer(ConstantInt.of(2),ConstantInt.of(0),2),
+                    new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()
+                            .add(EPBlocks.LIME_LEAVES.get().defaultBlockState(), 4)
+                            .add(EPBlocks.LIME_LEAVES_WITH_FRUIT.get().defaultBlockState(), 2)
+                            .build()),
+                    new LemonFoliagePlacer(ConstantInt.of(2),ConstantInt.of(1),4),
 
                     new TwoLayersFeatureSize(1, 1, 2)).build());
 

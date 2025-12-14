@@ -1,0 +1,340 @@
+{
+  "variants": {
+    "age=0,distance=1,grows=false,persistent=false,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=1,grows=false,persistent=false,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=1,grows=false,persistent=true,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=1,grows=false,persistent=true,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=1,grows=true,persistent=false,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=1,grows=true,persistent=false,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=1,grows=true,persistent=true,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=1,grows=true,persistent=true,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=2,grows=false,persistent=false,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=2,grows=false,persistent=false,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=2,grows=false,persistent=true,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=2,grows=false,persistent=true,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=2,grows=true,persistent=false,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=2,grows=true,persistent=false,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=2,grows=true,persistent=true,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=2,grows=true,persistent=true,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=3,grows=false,persistent=false,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=3,grows=false,persistent=false,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=3,grows=false,persistent=true,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=3,grows=false,persistent=true,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=3,grows=true,persistent=false,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=3,grows=true,persistent=false,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=3,grows=true,persistent=true,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=3,grows=true,persistent=true,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=4,grows=false,persistent=false,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=4,grows=false,persistent=false,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=4,grows=false,persistent=true,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=4,grows=false,persistent=true,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=4,grows=true,persistent=false,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=4,grows=true,persistent=false,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=4,grows=true,persistent=true,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=4,grows=true,persistent=true,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=5,grows=false,persistent=false,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=5,grows=false,persistent=false,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=5,grows=false,persistent=true,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=5,grows=false,persistent=true,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=5,grows=true,persistent=false,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=5,grows=true,persistent=false,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=5,grows=true,persistent=true,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=5,grows=true,persistent=true,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=6,grows=false,persistent=false,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=6,grows=false,persistent=false,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=6,grows=false,persistent=true,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=6,grows=false,persistent=true,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=6,grows=true,persistent=false,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=6,grows=true,persistent=false,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=6,grows=true,persistent=true,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=6,grows=true,persistent=true,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=7,grows=false,persistent=false,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=7,grows=false,persistent=false,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=7,grows=false,persistent=true,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=7,grows=false,persistent=true,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=7,grows=true,persistent=false,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=7,grows=true,persistent=false,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=7,grows=true,persistent=true,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=0,distance=7,grows=true,persistent=true,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_0"
+    },
+    "age=1,distance=1,grows=false,persistent=false,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=1,grows=false,persistent=false,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=1,grows=false,persistent=true,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=1,grows=false,persistent=true,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=1,grows=true,persistent=false,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=1,grows=true,persistent=false,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=1,grows=true,persistent=true,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=1,grows=true,persistent=true,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=2,grows=false,persistent=false,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=2,grows=false,persistent=false,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=2,grows=false,persistent=true,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=2,grows=false,persistent=true,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=2,grows=true,persistent=false,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=2,grows=true,persistent=false,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=2,grows=true,persistent=true,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=2,grows=true,persistent=true,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=3,grows=false,persistent=false,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=3,grows=false,persistent=false,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=3,grows=false,persistent=true,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=3,grows=false,persistent=true,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=3,grows=true,persistent=false,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=3,grows=true,persistent=false,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=3,grows=true,persistent=true,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=3,grows=true,persistent=true,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=4,grows=false,persistent=false,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=4,grows=false,persistent=false,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=4,grows=false,persistent=true,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=4,grows=false,persistent=true,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=4,grows=true,persistent=false,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=4,grows=true,persistent=false,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=4,grows=true,persistent=true,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=4,grows=true,persistent=true,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=5,grows=false,persistent=false,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=5,grows=false,persistent=false,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=5,grows=false,persistent=true,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=5,grows=false,persistent=true,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=5,grows=true,persistent=false,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=5,grows=true,persistent=false,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=5,grows=true,persistent=true,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=5,grows=true,persistent=true,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=6,grows=false,persistent=false,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=6,grows=false,persistent=false,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=6,grows=false,persistent=true,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=6,grows=false,persistent=true,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=6,grows=true,persistent=false,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=6,grows=true,persistent=false,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=6,grows=true,persistent=true,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=6,grows=true,persistent=true,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=7,grows=false,persistent=false,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=7,grows=false,persistent=false,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=7,grows=false,persistent=true,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=7,grows=false,persistent=true,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=7,grows=true,persistent=false,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=7,grows=true,persistent=false,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=7,grows=true,persistent=true,waterlogged=false": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    },
+    "age=1,distance=7,grows=true,persistent=true,waterlogged=true": {
+      "model": "enhanced_playthrough:block/lemon_leaves_with_fruit_1"
+    }
+  }
+}

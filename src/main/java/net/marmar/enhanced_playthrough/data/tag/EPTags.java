@@ -9,12 +9,18 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.levelgen.structure.Structure;
 
 @SuppressWarnings("removal")
 public class EPTags {
     public static class Blocks {
+        public static final TagKey<Block> SULFUR_ORES = blockTag("sulfur_ores");
+        public static final TagKey<Block> TIN_ORES = blockTag("tin_ores");
+        public static final TagKey<Block> ZINC_ORES = blockTag("zinc_ores");
+        public static final TagKey<Block> SILVER_ORES = blockTag("silver_ores");
         public static final TagKey<Block> BAUXITE_ORES = blockTag("bauxite_ores");
+        public static final TagKey<Block> SAPPHIRE_ORES = blockTag("sapphire_ores");
+        public static final TagKey<Block> RUBY_ORES = blockTag("ruby_ores");
+        public static final TagKey<Block> COBALT_ORES = blockTag("cobalt_ores");
         public static final TagKey<Block> NEEDS_SILVER_TOOL = blockTag("needs_silver_tool");
         public static final TagKey<Block> NEEDS_BRASS_TOOL = blockTag("needs_brass_tool");
         public static final TagKey<Block> NEEDS_BRONZE_TOOL= blockTag("needs_bronze_tool");
@@ -28,16 +34,54 @@ public class EPTags {
         public static final TagKey<Block> FURNACE = blockTag("furnace");
         public static final TagKey<Block> DESERT_FLOWER_BASE = blockTag("desert_flower_base");
 
-
         private static TagKey<Block> blockTag(String name){
             return BlockTags.create(new ResourceLocation(EnhancedPlaythrough.MOD_ID,name));
         }
     }
 
     public static class Items {
+        //Forge
+        public static final TagKey<Item> FORGE_TIN_ORES = forgeTag("ores/tin");
+        public static final TagKey<Item> FORGE_ZINC_ORES = forgeTag("ores/zinc");
+        public static final TagKey<Item> FORGE_SILVER_ORES = forgeTag("ores/silver");
+        public static final TagKey<Item> FORGE_BAUXITE_ORES = forgeTag("ores/bauxite");
+        public static final TagKey<Item> FORGE_SAPPHIRE_ORES = forgeTag("ores/sapphire");
+        public static final TagKey<Item> FORGE_RUBY_ORES = forgeTag("ores/ruby");
+        public static final TagKey<Item> FORGE_COBALT_ORES = forgeTag("ores/cobalt");
+
+        public static final TagKey<Item> FORGE_ALUMINUM_INGOT = forgeTag("ingots/aluminum");
+        public static final TagKey<Item> FORGE_TIN_INGOT = forgeTag("ingots/tin");
+        public static final TagKey<Item> FORGE_ZINC_INGOT = forgeTag("ingots/zinc");
+        public static final TagKey<Item> FORGE_SILVER_INGOT = forgeTag("ingots/silver");
+        public static final TagKey<Item> FORGE_BRASS_INGOT = forgeTag("ingots/brass");
+        public static final TagKey<Item> FORGE_BRONZE_INGOT = forgeTag("ingots/bronze");
+        public static final TagKey<Item> FORGE_BRONZIUM_INGOT = forgeTag("ingots/bronzium");
+        public static final TagKey<Item> FORGE_STEEL_INGOT = forgeTag("ingots/steel");
+        public static final TagKey<Item> FORGE_ROSE_GOLD_INGOT = forgeTag("ingots/rose_gold");
+        public static final TagKey<Item> FORGE_GREEN_GOLD_INGOT = forgeTag("ingots/green_gold");
+        public static final TagKey<Item> FORGE_BLUE_GOLD_INGOT = forgeTag("ingots/blue_gold");
+
+        public static final TagKey<Item> FORGE_ALUMINUM_NUGGET = forgeTag("nuggets/aluminum");
+        public static final TagKey<Item> FORGE_TIN_NUGGET = forgeTag("nuggets/tin");
+        public static final TagKey<Item> FORGE_ZINC_NUGGET = forgeTag("nuggets/zinc");
+        public static final TagKey<Item> FORGE_COPPER_NUGGET = forgeTag("nuggets/copper");
+        public static final TagKey<Item> FORGE_SILVER_NUGGET = forgeTag("nuggets/silver");
+        public static final TagKey<Item> FORGE_BRASS_NUGGET = forgeTag("nuggets/brass");
+        public static final TagKey<Item> FORGE_BRONZE_NUGGET = forgeTag("nuggets/bronze");
+        public static final TagKey<Item> FORGE_BRONZIUM_NUGGET = forgeTag("nuggets/bronzium");
+        public static final TagKey<Item> FORGE_STEEL_NUGGET = forgeTag("nuggets/steel");
+        public static final TagKey<Item> FORGE_ROSE_GOLD_NUGGET = forgeTag("nuggets/rose_gold");
+        public static final TagKey<Item> FORGE_GREEN_GOLD_NUGGET = forgeTag("nuggets/green_gold");
+        public static final TagKey<Item> FORGE_BLUE_GOLD_NUGGET = forgeTag("nuggets/blue_gold");
+
         //Ores
+        public static final TagKey<Item> BASIC_COPPER_ORES = oreTag("basic/copper");
+        public static final TagKey<Item> SULFUR_ORES = oreTag("sulfur");
+        public static final TagKey<Item> BASIC_SULFUR_ORES = oreTag("basic/sulfur");
         public static final TagKey<Item> TIN_ORES = oreTag("tin");
+        public static final TagKey<Item> BASIC_TIN_ORES = oreTag("basic/tin");
         public static final TagKey<Item> ZINC_ORES = oreTag("zinc");
+        public static final TagKey<Item> BASIC_ZINC_ORES = oreTag("basic/zinc");
         public static final TagKey<Item> SILVER_ORES = oreTag("silver");
         public static final TagKey<Item> BAUXITE_ORES = oreTag("bauxite");
         public static final TagKey<Item> SAPPHIRE_ORES = oreTag("sapphire");
@@ -132,6 +176,10 @@ public class EPTags {
 
         private static TagKey<Item> manufacturableTag(String name){
             return ItemTags.create(new ResourceLocation(EnhancedPlaythrough.MOD_ID,"manufacturable/" + name));
+        }
+
+        private static TagKey<Item> forgeTag(String name){
+            return ItemTags.create(new ResourceLocation("forge", name));
         }
     }
 

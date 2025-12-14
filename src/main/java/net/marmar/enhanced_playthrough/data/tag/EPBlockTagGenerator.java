@@ -22,6 +22,8 @@ public class EPBlockTagGenerator extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
+        addOreTags();
+
         this.tag(BlockTags.SAPLINGS).add(
                 EPBlocks.WALNUT_SAPLING.get(),
                 EPBlocks.APPLE_SAPLING.get(),
@@ -146,10 +148,15 @@ public class EPBlockTagGenerator extends BlockTagsProvider {
         this.tag(BlockTags.LEAVES).add(
                 EPBlocks.WALNUT_LEAVES.get(),
                 EPBlocks.APPLE_LEAVES.get(),
+                EPBlocks.APPLE_LEAVES_WITH_FRUIT.get(),
                 EPBlocks.GREEN_APPLE_LEAVES.get(),
+                EPBlocks.GREEN_APPLE_LEAVES_WITH_FRUIT.get(),
                 EPBlocks.ORANGE_LEAVES.get(),
+                EPBlocks.ORANGE_LEAVES_WITH_FRUIT.get(),
                 EPBlocks.LEMON_LEAVES.get(),
-                EPBlocks.LIME_LEAVES.get()
+                EPBlocks.LEMON_LEAVES_WITH_FRUIT.get(),
+                EPBlocks.LIME_LEAVES.get(),
+                EPBlocks.LIME_LEAVES_WITH_FRUIT.get()
         );
 
         this.tag(BlockTags.SIGNS).add(
@@ -176,19 +183,29 @@ public class EPBlockTagGenerator extends BlockTagsProvider {
         this.tag(BlockTags.SWORD_EFFICIENT).add(
                 EPBlocks.WALNUT_LEAVES.get(),
                 EPBlocks.APPLE_LEAVES.get(),
+                EPBlocks.APPLE_LEAVES_WITH_FRUIT.get(),
                 EPBlocks.GREEN_APPLE_LEAVES.get(),
+                EPBlocks.GREEN_APPLE_LEAVES_WITH_FRUIT.get(),
                 EPBlocks.ORANGE_LEAVES.get(),
+                EPBlocks.ORANGE_LEAVES_WITH_FRUIT.get(),
                 EPBlocks.LEMON_LEAVES.get(),
-                EPBlocks.LIME_LEAVES.get()
+                EPBlocks.LEMON_LEAVES_WITH_FRUIT.get(),
+                EPBlocks.LIME_LEAVES.get(),
+                EPBlocks.LIME_LEAVES_WITH_FRUIT.get()
         );
 
         this.tag(BlockTags.MINEABLE_WITH_HOE).add(
                 EPBlocks.WALNUT_LEAVES.get(),
                 EPBlocks.APPLE_LEAVES.get(),
+                EPBlocks.APPLE_LEAVES_WITH_FRUIT.get(),
                 EPBlocks.GREEN_APPLE_LEAVES.get(),
+                EPBlocks.GREEN_APPLE_LEAVES_WITH_FRUIT.get(),
                 EPBlocks.ORANGE_LEAVES.get(),
+                EPBlocks.ORANGE_LEAVES_WITH_FRUIT.get(),
                 EPBlocks.LEMON_LEAVES.get(),
-                EPBlocks.LIME_LEAVES.get()
+                EPBlocks.LEMON_LEAVES_WITH_FRUIT.get(),
+                EPBlocks.LIME_LEAVES.get(),
+                EPBlocks.LIME_LEAVES_WITH_FRUIT.get()
         );
 
         this.tag(BlockTags.PLANKS).add(
@@ -599,6 +616,65 @@ public class EPBlockTagGenerator extends BlockTagsProvider {
                 EPBlocks.STEEL_BLOCK.get(),
                 EPBlocks.GREEN_GOLD_BLOCK.get(),
                 EPBlocks.BLUE_GOLD_BLOCK.get()
+        );
+    }
+    
+    protected void addOreTags(){
+        this.tag(Tags.Blocks.ORES).addTags(
+                EPTags.Blocks.SULFUR_ORES,
+                EPTags.Blocks.TIN_ORES,
+                EPTags.Blocks.ZINC_ORES,
+                EPTags.Blocks.SILVER_ORES,
+                EPTags.Blocks.BAUXITE_ORES,
+                EPTags.Blocks.SAPPHIRE_ORES,
+                EPTags.Blocks.RUBY_ORES,
+                EPTags.Blocks.COBALT_ORES
+        );
+
+        this.tag(EPTags.Blocks.SULFUR_ORES).add(
+                EPBlocks.SULFUR_ORE.get(),
+                EPBlocks.DEEPSLATE_SULFUR_ORE.get()
+        );
+
+        this.tag(EPTags.Blocks.TIN_ORES).add(
+                EPBlocks.TIN_ORE.get(),
+                EPBlocks.DEEPSLATE_TIN_ORE.get()
+        );
+
+        this.tag(EPTags.Blocks.ZINC_ORES).add(
+                EPBlocks.ZINC_ORE.get(),
+                EPBlocks.DEEPSLATE_ZINC_ORE.get(),
+                EPBlocks.NETHER_ZINC_ORE.get()
+        );
+
+        this.tag(EPTags.Blocks.SILVER_ORES).add(
+                EPBlocks.SILVER_ORE.get(),
+                EPBlocks.DEEPSLATE_SILVER_ORE.get()
+        );
+
+        this.tag(EPTags.Blocks.BAUXITE_ORES).add(
+                EPBlocks.BAUXITE.get(),
+                EPBlocks.WHITE_BAUXITE.get(),
+                EPBlocks.LIGHT_GRAY_BAUXITE.get(),
+                EPBlocks.BROWN_BAUXITE.get(),
+                EPBlocks.RED_BAUXITE.get(),
+                EPBlocks.ORANGE_BAUXITE.get(),
+                EPBlocks.YELLOW_BAUXITE.get()
+        );
+
+        this.tag(EPTags.Blocks.SAPPHIRE_ORES).add(
+                EPBlocks.SAPPHIRE_ORE.get(),
+                EPBlocks.DEEPSLATE_SAPPHIRE_ORE.get()
+        );
+
+        this.tag(EPTags.Blocks.RUBY_ORES).add(
+                EPBlocks.RUBY_ORE.get(),
+                EPBlocks.DEEPSLATE_RUBY_ORE.get()
+        );
+
+        this.tag(EPTags.Blocks.COBALT_ORES).add(
+                EPBlocks.COBALT_ORE.get(),
+                EPBlocks.DEEPSLATE_COBALT_ORE.get()
         );
     }
 }

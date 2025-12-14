@@ -7,6 +7,7 @@ import net.marmar.enhanced_playthrough.block.custom.epfurnace.AbstractEPFurnaceB
 import net.marmar.enhanced_playthrough.block.custom.epfurnace.MasonryFurnaceBlock;
 import net.marmar.enhanced_playthrough.block.custom.grinder.PrimalGrinderBlock;
 import net.marmar.enhanced_playthrough.block.custom.plant.DoublePlantGrowingHeadBlock;
+import net.marmar.enhanced_playthrough.block.custom.wood.leaves.LeavesWithFruitBlock;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
@@ -237,7 +238,9 @@ public class EPBlockStateProvider extends BlockStateProvider {
             blockItem(EPBlocks.STRIPPED_APPLE_WOOD);
 
             leavesBlock(EPBlocks.APPLE_LEAVES);
+            leavesWithFruitBlock(EPBlocks.APPLE_LEAVES_WITH_FRUIT,"apple_leaves_with_fruit");
             leavesBlock(EPBlocks.GREEN_APPLE_LEAVES);
+            leavesWithFruitBlock(EPBlocks.GREEN_APPLE_LEAVES_WITH_FRUIT,"green_apple_leaves_with_fruit");
 
             blockWithItem(EPBlocks.APPLE_PLANKS);
 
@@ -278,6 +281,7 @@ public class EPBlockStateProvider extends BlockStateProvider {
             blockItem(EPBlocks.STRIPPED_ORANGE_WOOD);
 
             leavesBlock(EPBlocks.ORANGE_LEAVES);
+            leavesWithFruitBlock(EPBlocks.ORANGE_LEAVES_WITH_FRUIT,"orange_leaves_with_fruit");
 
             blockWithItem(EPBlocks.ORANGE_PLANKS);
 
@@ -318,6 +322,7 @@ public class EPBlockStateProvider extends BlockStateProvider {
             blockItem(EPBlocks.STRIPPED_LEMON_WOOD);
 
             leavesBlock(EPBlocks.LEMON_LEAVES);
+            leavesWithFruitBlock(EPBlocks.LEMON_LEAVES_WITH_FRUIT, "lemon_leaves_with_fruit");
 
             blockWithItem(EPBlocks.LEMON_PLANKS);
 
@@ -343,7 +348,9 @@ public class EPBlockStateProvider extends BlockStateProvider {
 
             //Lime
             saplingBlock(EPBlocks.LIME_SAPLING);
+
             leavesBlock(EPBlocks.LIME_LEAVES);
+            leavesWithFruitBlock(EPBlocks.LIME_LEAVES_WITH_FRUIT, "lime_leaves_with_fruit");
     }
 
     //Crop model builders
@@ -425,6 +432,25 @@ public class EPBlockStateProvider extends BlockStateProvider {
     public void blockItem(RegistryObject<Block> pBlock) {
         simpleBlockItem(pBlock.get(), new ModelFile.UncheckedModelFile(EnhancedPlaythrough.MOD_ID +
                 ":block/" + ForgeRegistries.BLOCKS.getKey(pBlock.get()).getPath()));
+    }
+
+    //Leaves
+    protected ConfiguredModel[] leavesWithFruitModel(BlockState state, String modelName, String textureName, LeavesWithFruitBlock leaves){
+        ConfiguredModel[] plantModel = new ConfiguredModel[1];
+        plantModel[0] = new ConfiguredModel(models().cubeAll(modelName + "_" + state.getValue(leaves.getAgeProperty()),
+                modLoc( "block/" + textureName + "_" + state.getValue(leaves.getAgeProperty()))).renderType("cutout"));
+
+        return plantModel;
+    }
+
+    public void leavesWithFruitBlock(RegistryObject<Block> pLeaves, String pTextureName){
+        leavesWithFruitBlock(pLeaves, pTextureName, pTextureName);
+    }
+
+    public void leavesWithFruitBlock(RegistryObject<Block> pLeaves, String pModelName, String pTextureName){
+        Function<BlockState, ConfiguredModel[]> model = blockState -> leavesWithFruitModel(blockState, pModelName, pTextureName, (LeavesWithFruitBlock) pLeaves.get());
+
+        getVariantBuilder(pLeaves.get()).forAllStates(model);
     }
 
     public void leavesBlock(RegistryObject<Block> blockRegistryObject) {
@@ -543,9 +569,9 @@ public class EPBlockStateProvider extends BlockStateProvider {
 
         plantModel[0] = new ConfiguredModel(models().cross(path + state.getValue(HALF) + "_" + pBlock.getCurrentAge(state),
                         modLoc(state.getValue(HALF) == DoubleBlockHalf.LOWER
-                        ? "block/" + path + state.getValue(HALF)
-                        : "block/" + path + state.getValue(HALF) + "_" + pBlock.getCurrentAge(state)))
-                        .renderType("cutout"));
+                            ? "block/" + path + state.getValue(HALF)
+                            : "block/" + path + state.getValue(HALF) + "_" + pBlock.getCurrentAge(state)
+                        )).renderType("cutout"));
 
         return plantModel;
     }

@@ -342,6 +342,7 @@ public class EPItemTagGenerator extends ItemTagsProvider {
 
     private void addOresTags(){
         this.tag(Tags.Items.ORES).addTags(
+                EPTags.Items.SULFUR_ORES,
                 EPTags.Items.TIN_ORES,
                 EPTags.Items.ZINC_ORES,
                 EPTags.Items.SILVER_ORES,
@@ -355,15 +356,36 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                 EPBlocks.NETHER_COPPER_ORE.get().asItem()
         );
 
+        this.tag(EPTags.Items.BASIC_COPPER_ORES).add(
+                Items.COPPER_ORE
+        );
+
+        this.tag(EPTags.Items.SULFUR_ORES).add(
+                EPBlocks.SULFUR_ORE.get().asItem(),
+                EPBlocks.DEEPSLATE_SULFUR_ORE.get().asItem()
+        );
+
+        this.tag(EPTags.Items.BASIC_SULFUR_ORES).add(
+                EPBlocks.SULFUR_ORE.get().asItem()
+        );
+
         this.tag(EPTags.Items.TIN_ORES).add(
                 EPBlocks.TIN_ORE.get().asItem(),
                 EPBlocks.DEEPSLATE_TIN_ORE.get().asItem()
+        );
+
+        this.tag(EPTags.Items.BASIC_TIN_ORES).add(
+                EPBlocks.TIN_ORE.get().asItem()
         );
 
         this.tag(EPTags.Items.ZINC_ORES).add(
                 EPBlocks.ZINC_ORE.get().asItem(),
                 EPBlocks.DEEPSLATE_ZINC_ORE.get().asItem(),
                 EPBlocks.NETHER_ZINC_ORE.get().asItem()
+        );
+
+        this.tag(EPTags.Items.BASIC_ZINC_ORES).add(
+                EPBlocks.ZINC_ORE.get().asItem()
         );
 
         this.tag(EPTags.Items.SILVER_ORES).add(
@@ -392,6 +414,47 @@ public class EPItemTagGenerator extends ItemTagsProvider {
         );
 
         this.tag(EPTags.Items.COBALT_ORES).add(
+                EPBlocks.COBALT_ORE.get().asItem(),
+                EPBlocks.DEEPSLATE_COBALT_ORE.get().asItem()
+        );
+
+        this.tag(EPTags.Items.FORGE_TIN_ORES).add(
+                EPBlocks.TIN_ORE.get().asItem(),
+                EPBlocks.DEEPSLATE_TIN_ORE.get().asItem()
+        );
+
+        this.tag(EPTags.Items.FORGE_ZINC_ORES).add(
+                EPBlocks.ZINC_ORE.get().asItem(),
+                EPBlocks.DEEPSLATE_ZINC_ORE.get().asItem(),
+                EPBlocks.NETHER_ZINC_ORE.get().asItem()
+        );
+
+        this.tag(EPTags.Items.FORGE_SILVER_ORES).add(
+                EPBlocks.SILVER_ORE.get().asItem(),
+                EPBlocks.DEEPSLATE_SILVER_ORE.get().asItem()
+        );
+
+        this.tag(EPTags.Items.FORGE_BAUXITE_ORES).add(
+                EPBlocks.BAUXITE.get().asItem(),
+                EPBlocks.WHITE_BAUXITE.get().asItem(),
+                EPBlocks.LIGHT_GRAY_BAUXITE.get().asItem(),
+                EPBlocks.BROWN_BAUXITE.get().asItem(),
+                EPBlocks.RED_BAUXITE.get().asItem(),
+                EPBlocks.ORANGE_BAUXITE.get().asItem(),
+                EPBlocks.YELLOW_BAUXITE.get().asItem()
+        );
+
+        this.tag(EPTags.Items.FORGE_SAPPHIRE_ORES).add(
+                EPBlocks.SAPPHIRE_ORE.get().asItem(),
+                EPBlocks.DEEPSLATE_SAPPHIRE_ORE.get().asItem()
+        );
+
+        this.tag(EPTags.Items.FORGE_RUBY_ORES).add(
+                EPBlocks.RUBY_ORE.get().asItem(),
+                EPBlocks.DEEPSLATE_RUBY_ORE.get().asItem()
+        );
+
+        this.tag(EPTags.Items.FORGE_COBALT_ORES).add(
                 EPBlocks.COBALT_ORE.get().asItem(),
                 EPBlocks.DEEPSLATE_COBALT_ORE.get().asItem()
         );
@@ -605,6 +668,31 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                 EPItems.SAPPHIRE.get(),
                 EPItems.GARNET.get()
         );
+
+        this.tag(EPTags.Items.FORGE_TIN_INGOT).add(EPItems.TIN_INGOT.get());
+        this.tag(EPTags.Items.FORGE_ZINC_INGOT).add(EPItems.ZINC_INGOT.get());
+        this.tag(EPTags.Items.FORGE_BRONZE_INGOT).add(EPItems.BRONZE_INGOT.get());
+        this.tag(EPTags.Items.FORGE_BRASS_INGOT).add(EPItems.BRASS_INGOT.get());
+        this.tag(EPTags.Items.FORGE_BRONZIUM_INGOT).add(EPItems.BRONZIUM_INGOT.get());
+        this.tag(EPTags.Items.FORGE_STEEL_INGOT).add(EPItems.STEEL_INGOT.get());
+        this.tag(EPTags.Items.FORGE_SILVER_INGOT).add(EPItems.SILVER_INGOT.get());
+        this.tag(EPTags.Items.FORGE_ALUMINUM_INGOT).add(EPItems.ALUMINUM_INGOT.get());
+        this.tag(EPTags.Items.FORGE_ROSE_GOLD_INGOT).add(EPItems.ROSE_GOLD_INGOT.get());
+        this.tag(EPTags.Items.FORGE_GREEN_GOLD_INGOT).add(EPItems.GREEN_GOLD_INGOT.get());
+        this.tag(EPTags.Items.FORGE_BLUE_GOLD_INGOT).add(EPItems.BLUE_GOLD_INGOT.get());
+
+        this.tag(EPTags.Items.FORGE_TIN_NUGGET).add(EPItems.TIN_NUGGET.get());
+        this.tag(EPTags.Items.FORGE_ZINC_NUGGET).add(EPItems.ZINC_NUGGET.get());
+        this.tag(EPTags.Items.FORGE_COPPER_NUGGET).add(EPItems.COPPER_NUGGET.get());
+        this.tag(EPTags.Items.FORGE_BRONZE_NUGGET).add(EPItems.BRONZE_NUGGET.get());
+        this.tag(EPTags.Items.FORGE_BRASS_NUGGET).add(EPItems.BRASS_NUGGET.get());
+        this.tag(EPTags.Items.FORGE_BRONZIUM_NUGGET).add(EPItems.BRONZIUM_NUGGET.get());
+        this.tag(EPTags.Items.FORGE_STEEL_NUGGET).add(EPItems.STEEL_NUGGET.get());
+        this.tag(EPTags.Items.FORGE_SILVER_NUGGET).add(EPItems.SILVER_NUGGET.get());
+        this.tag(EPTags.Items.FORGE_ALUMINUM_NUGGET).add(EPItems.ALUMINUM_NUGGET.get());
+        this.tag(EPTags.Items.FORGE_ROSE_GOLD_NUGGET).add(EPItems.ROSE_GOLD_NUGGET.get());
+        this.tag(EPTags.Items.FORGE_GREEN_GOLD_NUGGET).add(EPItems.GREEN_GOLD_NUGGET.get());
+        this.tag(EPTags.Items.FORGE_BLUE_GOLD_NUGGET).add(EPItems.BLUE_GOLD_NUGGET.get());
 
         this.tag(EPTags.Items.INGREDIENTS).addTags(
                 EPTags.Items.BASIC_SMELT_INGREDIENT,

@@ -36,6 +36,7 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .define('I', EPItems.COOKED_ZAPALLO.get())
                 .unlockedBy(getHasName(EPItems.COOKED_ZAPALLO.get()), has(EPItems.COOKED_ZAPALLO.get()))
                 .save(consumer);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, EPItems.GROUNDED_YERBA_MATE.get())
                 .pattern(" I ")
                 .pattern("I I")
@@ -43,6 +44,7 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .define('I', EPItems.YERBA_MATE.get())
                 .unlockedBy(getHasName(EPItems.YERBA_MATE.get()), has(EPItems.YERBA_MATE.get()))
                 .save(consumer);
+
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, EPItems.MATE.get())
                 .requires(EPItems.EMPTY_MATE.get())
                 .requires(EPItems.GROUNDED_YERBA_MATE.get())
@@ -89,7 +91,12 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .save(consumer);
 
         //Misc
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EPItems.MUD_BRICK.get(), 3)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.YELLOW_DYE, 2)
+                .requires(EPItems.SULFUR.get())
+                .unlockedBy(getHasName(EPItems.SULFUR.get()), has(EPItems.SULFUR.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EPItems.MUD_BRICK.get(), 4)
                 .requires(Items.DIRT)
                 .requires(Items.WHEAT)
                 .requires(Items.CLAY_BALL)
@@ -573,11 +580,11 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
             //Food
             ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, Items.BREAD, 3)
                     .requires(EPItems.WHEAT_FLOUR.get(), 2)
-                    .requires(Items.MILK_BUCKET)
                     .requires(EPItems.YEAST.get())
                     .unlockedBy(getHasName(EPItems.WHEAT_FLOUR.get()), has(EPItems.WHEAT_FLOUR.get()))
                     .unlockedBy(getHasName(Items.WHEAT), has(Items.WHEAT))
                     .save(consumer);
+
             ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, Items.COOKIE, 8)
                     .requires(EPItems.WHEAT_FLOUR.get(), 2)
                     .requires(Items.COCOA_BEANS, 2)
@@ -586,6 +593,7 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                     .unlockedBy(getHasName(Items.WHEAT), has(Items.WHEAT))
                     .unlockedBy(getHasName(Items.COCOA_BEANS), has(Items.COCOA_BEANS))
                     .save(consumer);
+
             ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, Items.PUMPKIN_PIE)
                     .requires(EPItems.PUMPKIN_FLOUR.get(), 2)
                     .requires(EPItems.YEAST.get())
@@ -605,6 +613,7 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                     .unlockedBy(getHasName(Items.REDSTONE), has(Items.REDSTONE))
                     .unlockedBy(getHasName(Items.REPEATER), has(Items.REPEATER))
                     .save(consumer);
+
             ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, Items.COMPARATOR)
                     .pattern("WWW")
                     .pattern("AFA")
@@ -616,6 +625,7 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                     .unlockedBy(getHasName(Items.COMPARATOR), has(Items.COMPARATOR))
                     .unlockedBy(getHasName(Items.REDSTONE), has(Items.REDSTONE))
                     .save(consumer);
+
             ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, Blocks.OBSERVER)
                     .pattern("CCC")
                     .pattern("RRQ")
@@ -626,6 +636,7 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                     .unlockedBy(getHasName(Items.REDSTONE), has(Items.REDSTONE))
                     .unlockedBy(getHasName(Blocks.OBSERVER), has(Blocks.OBSERVER))
                     .save(consumer);
+
             ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, Blocks.DAYLIGHT_DETECTOR)
                     .pattern("GGG")
                     .pattern("QQQ")
@@ -647,6 +658,7 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                     .unlockedBy(getHasName(EPItems.STEEL_INGOT.get()), has(EPItems.STEEL_INGOT.get()))
                     .unlockedBy(getHasName(Items.FLINT), has(Items.FLINT))
                     .save(consumer);
+
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.SADDLE)
                     .pattern(" C ")
                     .pattern("CIC")
@@ -656,12 +668,14 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                     .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
                     .unlockedBy(getHasName(Items.SADDLE), has(Items.SADDLE))
                     .save(consumer);
+
             ShapelessRecipeBuilder.shapeless(RecipeCategory.BREWING, Items.GUNPOWDER)
                     .requires(EPItems.SULFUR.get())
                     .requires(Items.CHARCOAL)
                     .unlockedBy(getHasName(EPItems.SULFUR.get()), has(EPItems.SULFUR.get()))
                     .unlockedBy(getHasName(Items.CHARCOAL), has(Items.CHARCOAL))
                     .save(consumer);
+
             ShapelessRecipeBuilder.shapeless(RecipeCategory.BREWING, Items.BONE_MEAL, 3)
                     .requires(Items.BONE, 3)
                     .unlockedBy(getHasName(Items.BONE), has(Items.BONE))
@@ -706,18 +720,21 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                     .define('C', EPItems.COBBLE.get())
                     .unlockedBy(getHasName(EPItems.COBBLE.get()), has(EPItems.COBBLE.get()))
                     .save(consumer);
+
             ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, Blocks.NETHERRACK)
                     .pattern("NN")
                     .pattern("NN")
                     .define('N', EPItems.NETHERRACK_RUBBLE.get())
                     .unlockedBy(getHasName(EPItems.NETHERRACK_RUBBLE.get()), has(EPItems.NETHERRACK_RUBBLE.get()))
                     .save(consumer);
+
             ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, Blocks.BLACKSTONE)
                     .pattern("CC")
                     .pattern("CC")
                     .define('C', EPItems.BLACKSTONE_COBBLE.get())
                     .unlockedBy(getHasName(EPItems.BLACKSTONE_COBBLE.get()), has(EPItems.BLACKSTONE_COBBLE.get()))
                     .save(consumer);
+
             ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, Blocks.COBBLED_DEEPSLATE)
                     .pattern("CC")
                     .pattern("CC")
@@ -731,6 +748,7 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                     .define('A', EPBlocks.POLISHED_STONE.get())
                     .unlockedBy(getHasName(EPBlocks.POLISHED_STONE.get()), has(EPBlocks.POLISHED_STONE.get()))
                     .save(consumer);
+
             ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, Blocks.MUD, 2)
                     .pattern("#A")
                     .pattern("A#")
@@ -739,6 +757,7 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                     .unlockedBy(getHasName(Blocks.DIRT), has(Blocks.DIRT))
                     .unlockedBy(getHasName(Items.CLAY_BALL), has(Items.CLAY_BALL))
                     .save(consumer);
+
             ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, Blocks.MUD_BRICKS, 1)
                     .pattern("BB")
                     .pattern("BB")
@@ -746,6 +765,7 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                     .unlockedBy(getHasName(Items.PACKED_MUD), has(Items.PACKED_MUD))
                     .unlockedBy(getHasName(EPItems.MUD_BRICK.get()), has(EPItems.MUD_BRICK.get()))
                     .save(consumer);
+
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Blocks.BLAST_FURNACE)
                     .pattern("III")
                     .pattern("IFI")
@@ -755,6 +775,7 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                     .define('#', Blocks.SMOOTH_STONE)
                     .unlockedBy(getHasName(Blocks.FURNACE), has(Blocks.FURNACE))
                     .save(consumer);
+
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Blocks.FURNACE)
                     .pattern("III")
                     .pattern("#F#")

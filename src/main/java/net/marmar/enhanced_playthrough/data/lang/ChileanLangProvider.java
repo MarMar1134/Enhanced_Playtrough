@@ -170,6 +170,7 @@ public class ChileanLangProvider extends AbstractLangProvider {
                 //Apple
                 addBlock(EPBlocks.APPLE_SAPLING, "Brote de manzano");
                 addBlock(EPBlocks.APPLE_LEAVES, "Hojas de manzano");
+                addBlock(EPBlocks.APPLE_LEAVES_WITH_FRUIT, "Hojas de manzano con fruta");
                 addBlock(EPBlocks.APPLE_LOG, "Tronco de manzano");
                 addBlock(EPBlocks.STRIPPED_APPLE_LOG, "Tronco de manzano pelado");
                 addBlock(EPBlocks.APPLE_WOOD, "Leño de manzana");
@@ -191,6 +192,7 @@ public class ChileanLangProvider extends AbstractLangProvider {
                 //Green apple
                 addBlock(EPBlocks.GREEN_APPLE_SAPLING, "Brote de manzano verde");
                 addBlock(EPBlocks.GREEN_APPLE_LEAVES, "Hojas de manzano verde");
+                addBlock(EPBlocks.GREEN_APPLE_LEAVES_WITH_FRUIT, "Hojas de manzano verde con fruta");
 
                 //Walnut
                 addBlock(EPBlocks.WALNUT_SAPLING, "Brote de nogal");
@@ -216,6 +218,7 @@ public class ChileanLangProvider extends AbstractLangProvider {
                 //Orange
                 addBlock(EPBlocks.ORANGE_SAPLING, "Brote de naranjo");
                 addBlock(EPBlocks.ORANGE_LEAVES, "Hojas de naranjo");
+                addBlock(EPBlocks.ORANGE_LEAVES_WITH_FRUIT, "Hojas de naranjo con fruta");
                 addBlock(EPBlocks.ORANGE_LOG, "Tronco de naranjo");
                 addBlock(EPBlocks.STRIPPED_ORANGE_LOG, "Tronco de naranjo pelado");
                 addBlock(EPBlocks.ORANGE_WOOD, "Leño de naranjo");
@@ -237,6 +240,7 @@ public class ChileanLangProvider extends AbstractLangProvider {
                 //Lemon
                 addBlock(EPBlocks.LEMON_SAPLING, "Brote de limonero");
                 addBlock(EPBlocks.LEMON_LEAVES, "Hojas de limonero");
+                addBlock(EPBlocks.LEMON_LEAVES_WITH_FRUIT, "Hojas de limonero con fruta");
                 addBlock(EPBlocks.LEMON_LOG, "Tronco de limonero");
                 addBlock(EPBlocks.STRIPPED_LEMON_LOG, "Tronco de limonero pelado");
                 addBlock(EPBlocks.LEMON_WOOD, "Leño de limonero");
@@ -258,6 +262,7 @@ public class ChileanLangProvider extends AbstractLangProvider {
                 //Lime
                 addBlock(EPBlocks.LIME_SAPLING, "Brote de limera");
                 addBlock(EPBlocks.LIME_LEAVES, "Hojas de limera");
+                addBlock(EPBlocks.LIME_LEAVES_WITH_FRUIT, "Hojas de limera con fruta");
 
         //Polished stone
         addBlock(EPBlocks.POLISHED_STONE, "Piedra pulida");

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "all": "enhanced_playthrough:block/orange_leaves_with_fruit_0"
+  }
+}
