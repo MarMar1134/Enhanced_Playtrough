@@ -104,7 +104,7 @@ public class EnglishLangProvider extends AbstractLangProvider {
 
         //Advancements
             //Survival
-            addSurvivalAdvancement("root", "Enhanced Playthrough",
+            addSurvivalAdvancement("survival_root", "Enhanced Playthrough",
                     "You started a new journey on this fantastic world, welcome!");
             addSurvivalAdvancement("stone_age", "A cobbled business",
                     "Get a piece of cobble");
@@ -135,8 +135,11 @@ public class EnglishLangProvider extends AbstractLangProvider {
                     "Get an aluminum ingot");
 
             //Gems
-            addGemAdvancement("root", "The colors of the world",
+            addGemAdvancement("colours_root", "The colors of the world",
                     "The world is full of colors, do you want to discover all of them?");
+
+            addGemAdvancement("has_any_polisher", "Fine business",
+                    "Craft a polisher tool");
             addGemAdvancement("polish_emerald", "Greedy green",
                     "Get some emeralds and take care of hers");
             addGemAdvancement("polish_sapphire", "Blue storm",
@@ -159,6 +162,12 @@ public class EnglishLangProvider extends AbstractLangProvider {
                     "Get all the tall flowers");
             addGemAdvancement("all_flowers", "The apothecary diaries",
                     "Get all the flowers");
+
+            //Rotten crops
+            addGemAdvancement("any_rotten_crop", "... It sucks",
+                    "Get any rotten/poisonous crop");
+            addGemAdvancement("rotten_stew", "Fire purifies",
+                    "Combine your rotten crops and make a stew. Then... cook it on an oven");
 
         //Entities
         addBoatEntity("Boat");
@@ -739,6 +748,13 @@ public class EnglishLangProvider extends AbstractLangProvider {
                 addItem(EPItems.EGGPLANT, "Eggplant");
                 addItem(EPItems.RICE_GRAINS, "Rice grains");
 
+                //Rotten
+                addItem(EPItems.ROTTEN_CARROT, "Rotten carrot");
+                addItem(EPItems.ROTTEN_CORN, "Rotten corn");
+                addItem(EPItems.ROTTEN_ZAPALLO, "Rotten anco pumpkin");
+                addItem(EPItems.ROTTEN_EGGPLANT, "Rotten eggplant");
+                addItem(EPItems.ROTTEN_TOMATO, "Rotten tomato");
+
                 //Cooked
                 addItem(EPItems.COOKED_CORN, "Cooked corn");
                 addItem(EPItems.COOKED_ZAPALLO, "Cooked anco pumpkin");
@@ -747,6 +763,10 @@ public class EnglishLangProvider extends AbstractLangProvider {
                 //Others
                 addItem(EPItems.EMPTY_MATE, "Empty mate");
                 addItem(EPItems.MATE, "Mate");
+
+                addItem(EPItems.RAW_ROTTEN_STEW, "Raw rotten stew");
+                addItem(EPItems.ROTTEN_STEW, "Rotten stew");
+
                 addItem(EPItems.YEAST, "Yeast");
                 addItem(EPItems.RICE_BOWL, "Rice bowl");
 

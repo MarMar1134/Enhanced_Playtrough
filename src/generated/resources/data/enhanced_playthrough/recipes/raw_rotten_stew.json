@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "enhanced_playthrough:rotten_tomato"
+    },
+    {
+      "item": "enhanced_playthrough:rotten_carrot"
+    },
+    {
+      "item": "enhanced_playthrough:rotten_corn"
+    },
+    {
+      "item": "enhanced_playthrough:rotten_zapallo"
+    },
+    {
+      "item": "enhanced_playthrough:rotten_eggplant"
+    },
+    {
+      "item": "minecraft:poisonous_potato"
+    },
+    {
+      "item": "minecraft:bowl"
+    }
+  ],
+  "result": {
+    "item": "enhanced_playthrough:raw_rotten_stew"
+  }
+}

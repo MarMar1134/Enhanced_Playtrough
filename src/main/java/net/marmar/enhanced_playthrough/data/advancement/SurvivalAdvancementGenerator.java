@@ -10,6 +10,7 @@ import net.minecraft.advancements.AdvancementRewards;
 import net.minecraft.advancements.RequirementsStrategy;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.advancements.critereon.ItemPredicate;
+import net.minecraft.advancements.critereon.PlayerTrigger;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
@@ -25,20 +26,26 @@ public class SurvivalAdvancementGenerator implements ForgeAdvancementProvider.Ad
         ItemPredicate hasCobble = ItemPredicate.Builder.item().of(EPTags.Items.COBBLE).build();
 
         //Root
-        Advancement survival_root = Advancement.Builder.advancement()
-                .display(rootDisplayInfo(EPBlocks.ADOBE_ALLOY_FURNACE.get(), "unity_makes_strength"))
-                .addCriterion("has_block", hasItems(EPBlocks.ADOBE_ALLOY_FURNACE.get()))
-                .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "survival_root"), existingFileHelper);
+        Advancement root = Advancement.Builder.advancement()
+                .display(rootDisplayInfo(EPItems.STEEL_SWORD.get(), "survival_root"))
+                .addCriterion("is_alive", PlayerTrigger.TriggerInstance.tick())
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, "survival_root"), existingFileHelper);
 
         Advancement stone_age = Advancement.Builder.advancement()
-                .parent(survival_root)
+                .parent(root)
                 .display(taskDisplayInfo(EPItems.COBBLE.get(), "stone_age"))
                 .addCriterion("has_any_of", hasItems(hasCobble))
                 .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "stone_age"), existingFileHelper);
 
+        Advancement unity_makes_strength = Advancement.Builder.advancement()
+                .parent(stone_age)
+                .display(taskDisplayInfo(EPBlocks.ADOBE_ALLOY_FURNACE.get(), "unity_makes_strength"))
+                .addCriterion("has_block", hasItems(EPBlocks.ADOBE_ALLOY_FURNACE.get()))
+                .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "unity_makes_strength"), existingFileHelper);
+
         //Bronze path
         Advancement thats_new = Advancement.Builder.advancement()
-                .parent(stone_age)
+                .parent(unity_makes_strength)
                 .display(taskDisplayInfo(EPItems.BRONZE_INGOT.get(), "thats_new"))
                 .addCriterion("has_item", hasItems(EPItems.BRONZE_INGOT.get()))
                 .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "thats_new"), existingFileHelper);
@@ -80,7 +87,7 @@ public class SurvivalAdvancementGenerator implements ForgeAdvancementProvider.Ad
 
         //Gold path
         Advancement ancient_knowledge = Advancement.Builder.advancement()
-                .parent(survival_root)
+                .parent(unity_makes_strength)
                 .display(taskDisplayInfo(Items.MAP, "ancient_knowledge"))
                 .addCriterion("is_in_structure", inStructure(EPStructures.ANCIENT_LORDS_DOMAIN))
                 .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "ancient_knowledge"), existingFileHelper);
@@ -103,7 +110,7 @@ public class SurvivalAdvancementGenerator implements ForgeAdvancementProvider.Ad
                 .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "bubbles"), existingFileHelper);
 
         Advancement the_goldenpuff_girls = Advancement.Builder.advancement()
-                .parent(survival_root)
+                .parent(unity_makes_strength)
                 .display(challengeDisplayInfo(EPItems.BLUE_GOLDEN_SWORD.get(), "the_goldenpuff_girls"))
                 .addCriterion("has_rose_gold_ingot", InventoryChangeTrigger.TriggerInstance.hasItems(EPItems.ROSE_GOLD_INGOT.get()))
                 .addCriterion("has_green_gold_ingot", InventoryChangeTrigger.TriggerInstance.hasItems(EPItems.GREEN_GOLD_INGOT.get()))

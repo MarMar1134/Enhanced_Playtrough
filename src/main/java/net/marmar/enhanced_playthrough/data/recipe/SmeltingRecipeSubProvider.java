@@ -74,6 +74,11 @@ public class SmeltingRecipeSubProvider extends RecipeProvider {
             soulBasicSmelting(consumer, EPItems.EGGPLANT.get(), EPItems.COOKED_EGGPLANT.get(), "eggplant");
             soulBasicSmelting(consumer, EPItems.CORN.get(), EPItems.COOKED_CORN.get(), "corn");
 
+            smeltingByCampfire(consumer, EPItems.RAW_ROTTEN_STEW.get(), RecipeCategory.FOOD, EPItems.ROTTEN_STEW.get(), 0.5f, "rotten_stew");
+            oreSmelting(consumer, EPItems.RAW_ROTTEN_STEW.get(), RecipeCategory.FOOD, EPItems.ROTTEN_STEW.get(), 0.5f, "rotten_stew");
+            basicSmelting(consumer, EPItems.RAW_ROTTEN_STEW.get(), EPItems.ROTTEN_STEW.get(), "rotten_stew");
+            soulBasicSmelting(consumer, EPItems.RAW_ROTTEN_STEW.get(), EPItems.ROTTEN_STEW.get(), "rotten_stew");
+
             oreSmelting(consumer, EPItems.ZAPALLO.get(), RecipeCategory.FOOD, EPItems.COOKED_ZAPALLO.get(), 0.35f, "zapallo");
             oreSmelting(consumer, EPItems.EGGPLANT.get(), RecipeCategory.FOOD, EPItems.COOKED_EGGPLANT.get(), 0.35f, "eggplant");
             oreSmelting(consumer, EPItems.CORN.get(), RecipeCategory.FOOD, EPItems.COOKED_CORN.get(), 0.35f, "corn");

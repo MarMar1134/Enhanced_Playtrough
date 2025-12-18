@@ -202,26 +202,35 @@ public class EPItemModelProvider extends ItemModelProvider {
         simpleBlockItem(EPBlocks.GROWTH_DETECTOR);
 
         //Food
+        simpleItem(EPItems.ROTTEN_CARROT);
+
         simpleItem(EPItems.RICE_GRAINS);
         simpleItem(EPItems.RICE_BOWL);
-        simpleItem(EPItems.YERBA_MATE);
 
+        simpleItem(EPItems.YERBA_MATE);
         simpleItem(EPItems.GROUNDED_YERBA_MATE);
         simpleItem(EPItems.MATE);
         simpleItem(EPItems.EMPTY_MATE);
 
         simpleItem(EPItems.ZAPALLO);
+        simpleItem(EPItems.ROTTEN_ZAPALLO);
         simpleItem(EPItems.COOKED_ZAPALLO);
 
         simpleItem(EPItems.EGGPLANT);
+        simpleItem(EPItems.ROTTEN_EGGPLANT);
         simpleItem(EPItems.COOKED_EGGPLANT);
 
         simpleItem(EPItems.WILD_TOMATO);
         simpleItem(EPItems.TOMATO);
+        simpleItem(EPItems.ROTTEN_TOMATO);
 
         simpleItem(EPItems.WILD_CORN);
         simpleItem(EPItems.CORN);
+        simpleItem(EPItems.ROTTEN_CORN);
         simpleItem(EPItems.COOKED_CORN);
+
+        simpleItem(EPItems.RAW_ROTTEN_STEW);
+        simpleItem(EPItems.ROTTEN_STEW);
 
         simpleItem(EPItems.WHEAT_FLOUR);
 

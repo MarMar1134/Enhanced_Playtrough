@@ -105,7 +105,7 @@ public class VenezuelanLangProvider extends AbstractLangProvider {
 
         //Advancements
             //Survival
-            addSurvivalAdvancement("root", "Enhanced Playthrough",
+            addSurvivalAdvancement("survival_root", "Enhanced Playthrough",
                     "Iniciaste una nueva aventura en este mundo fantástico, ¡bienvenido!");
             addSurvivalAdvancement("stone_age", "Un asunto adoquinado",
                     "Obtén un pedazo de adoquín");
@@ -136,8 +136,11 @@ public class VenezuelanLangProvider extends AbstractLangProvider {
                     "Obtén un lingote de aluminio");
 
             //Gems
-            addGemAdvancement("root", "Los colores del mundo",
+            addGemAdvancement("colours_root", "Los colores del mundo",
                     "Nuestro mundo reluce en colores, ¿que tal si vas a descubrirlos todos?");
+
+            addGemAdvancement("has_any_polisher", "Tarea fina",
+                    "Craftéa una herramienta de pulido");
             addGemAdvancement("polish_emerald", "Intento de grinch",
                     "Consigue algunas esmeraldas y cuidalas de los, ¿quienes?");
             addGemAdvancement("polish_sapphire", "Horizonte azulado",
@@ -160,6 +163,12 @@ public class VenezuelanLangProvider extends AbstractLangProvider {
                     "Obtén todas las flores altas");
             addGemAdvancement("all_flowers", "El diario de la botecaria",
                     "Obtén todas las flores");
+
+            //Rotten crops
+            addGemAdvancement("any_rotten_crop", "... Está horrible",
+                    "Obtén un cultivo podrido/venenoso");
+            addGemAdvancement("rotten_stew", "El fuego purifica",
+                    "Recolecta tus cultivos podridos y prepara un guiso para luego... cocinarlo");
 
         //Entities
         addBoatEntity("Barco");
@@ -740,6 +749,13 @@ public class VenezuelanLangProvider extends AbstractLangProvider {
             addItem(EPItems.EGGPLANT, "Berenjena");
             addItem(EPItems.RICE_GRAINS, "Granos de arroz");
 
+            //Rotten
+            addItem(EPItems.ROTTEN_CARROT, "Zanahoria podrida");
+            addItem(EPItems.ROTTEN_CORN, "Maíz podrido");
+            addItem(EPItems.ROTTEN_ZAPALLO, "Zapallo podrido");
+            addItem(EPItems.ROTTEN_EGGPLANT, "Berenjena podrida");
+            addItem(EPItems.ROTTEN_TOMATO, "Tomate podrido");
+
             //Cooked
             addItem(EPItems.COOKED_CORN, "Maiz cocido");
             addItem(EPItems.COOKED_ZAPALLO, "Zapallo cocido");
@@ -748,6 +764,10 @@ public class VenezuelanLangProvider extends AbstractLangProvider {
             //Others
             addItem(EPItems.EMPTY_MATE, "Mate vacio");
             addItem(EPItems.MATE, "Mate");
+
+            addItem(EPItems.RAW_ROTTEN_STEW, "Guiso podrido crudo");
+            addItem(EPItems.ROTTEN_STEW, "Guiso podrido");
+
             addItem(EPItems.YEAST, "Levadura");
             addItem(EPItems.RICE_BOWL, "Bowl de arroz");
 

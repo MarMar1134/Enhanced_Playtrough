@@ -1,0 +1,44 @@
+{
+  "parent": "enhanced_playthrough:colours_root",
+  "criteria": {
+    "has_any_rotten_crop": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:poisonous_potato",
+              "enhanced_playthrough:rotten_carrot",
+              "enhanced_playthrough:rotten_tomato",
+              "enhanced_playthrough:rotten_corn",
+              "enhanced_playthrough:rotten_zapallo",
+              "enhanced_playthrough:rotten_eggplant"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/block/emerald_block.png",
+    "description": {
+      "translate": "advancement.enhanced_playthrough.desc.gems.any_rotten_crop"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "minecraft:poisonous_potato"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.enhanced_playthrough.title.gems.any_rotten_crop"
+    }
+  },
+  "requirements": [
+    [
+      "has_any_rotten_crop"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

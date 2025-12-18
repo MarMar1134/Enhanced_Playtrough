@@ -12,7 +12,7 @@
     }
   ],
   "output": {
-    "count": 2,
     "item": "enhanced_playthrough:steel_ingot"
-  }
+  },
+  "xp": 2.0
 }

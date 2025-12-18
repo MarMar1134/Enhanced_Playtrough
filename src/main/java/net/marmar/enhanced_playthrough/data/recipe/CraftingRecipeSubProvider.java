@@ -51,6 +51,15 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .unlockedBy(getHasName(EPItems.YERBA_MATE.get()), has(EPItems.YERBA_MATE.get()))
                 .save(consumer);
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, EPItems.RAW_ROTTEN_STEW.get())
+                .requires(EPItems.ROTTEN_TOMATO.get()).requires(EPItems.ROTTEN_CARROT.get())
+                .requires(EPItems.ROTTEN_CORN.get()).requires(EPItems.ROTTEN_ZAPALLO.get())
+                .requires(EPItems.ROTTEN_EGGPLANT.get()).requires(Items.POISONOUS_POTATO)
+                .requires(Items.BOWL)
+                .unlockedBy("has_rotten_food", HAS_ROTTEN_FOOD())
+                .unlockedBy(getHasName(Items.BOWL), has(Items.BOWL))
+                .save(consumer);
+
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, EPItems.PEELED_WALNUT.get())
                 .requires(EPItems.WALNUT.get())
                 .unlockedBy(getHasName(EPItems.WALNUT.get()), has(EPItems.WALNUT.get()))
@@ -832,6 +841,12 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
         return InventoryChangeTrigger.TriggerInstance.hasItems(IS_ARROW_MATERIAL);
     }
 
+    protected static InventoryChangeTrigger.TriggerInstance HAS_ROTTEN_FOOD(){
+        return InventoryChangeTrigger.TriggerInstance.hasItems(EPItems.ROTTEN_TOMATO.get(),
+                EPItems.ROTTEN_ZAPALLO.get(), EPItems.ROTTEN_EGGPLANT.get(), EPItems.ROTTEN_CORN.get(),
+                EPItems.ROTTEN_CARROT.get(), Items.POISONOUS_POTATO);
+    }
+
     protected static void materialRecipes(ItemLike pIngot, Block pBlock, Consumer<FinishedRecipe> pConsumer){
         materialRecipes(pIngot, null, pBlock, pConsumer);
     }
@@ -1219,145 +1234,74 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
 
     protected static void addStoneGear(ItemLike pAxe, ItemLike pPickaxe, ItemLike pSword, ItemLike pDagger, ItemLike pShovel,
                                        ItemLike pHoe, ItemLike pPolisher, boolean isAluminum, Consumer<FinishedRecipe> pConsumer){
-        if (isAluminum){
-            ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, pSword)
-                    .pattern(" I ")
-                    .pattern(" IS")
-                    .pattern(" # ")
-                    .define('I', EPTags.Items.COBBLE)
-                    .define('S', Tags.Items.STRING)
-                    .define('#', EPTags.Items.ALUMINUM_ROD)
-                    .unlockedBy("has_aluminum_rod", has(EPTags.Items.ALUMINUM_ROD))
-                    .unlockedBy(getHasName(pSword), has(pSword))
-                    .save(pConsumer);
-            ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, pPickaxe)
-                    .pattern("III")
-                    .pattern(" #S")
-                    .pattern(" # ")
-                    .define('I', EPTags.Items.COBBLE)
-                    .define('S', Tags.Items.STRING)
-                    .define('#', EPTags.Items.ALUMINUM_ROD)
-                    .unlockedBy("has_aluminum_rod", has(EPTags.Items.ALUMINUM_ROD))
-                    .unlockedBy(getHasName(pPickaxe), has(pPickaxe))
-                    .save(pConsumer);
-            ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, pAxe)
-                    .pattern("IIS")
-                    .pattern("I# ")
-                    .pattern(" # ")
-                    .define('I', EPTags.Items.COBBLE)
-                    .define('S', Tags.Items.STRING)
-                    .define('#', EPTags.Items.ALUMINUM_ROD)
-                    .unlockedBy("has_aluminum_rod", has(EPTags.Items.ALUMINUM_ROD))
-                    .unlockedBy(getHasName(pAxe), has(pAxe))
-                    .save(pConsumer);
-            ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, pShovel)
-                    .pattern(" I ")
-                    .pattern(" #S")
-                    .pattern(" # ")
-                    .define('I', EPTags.Items.COBBLE)
-                    .define('S', Tags.Items.STRING)
-                    .define('#', EPTags.Items.ALUMINUM_ROD)
-                    .unlockedBy("has_aluminum_rod", has(EPTags.Items.ALUMINUM_ROD))
-                    .unlockedBy(getHasName(pShovel), has(pShovel))
-                    .save(pConsumer);
-            ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, pHoe)
-                    .pattern("IIS")
-                    .pattern(" # ")
-                    .pattern(" # ")
-                    .define('I', EPTags.Items.COBBLE)
-                    .define('S', Tags.Items.STRING)
-                    .define('#', EPTags.Items.ALUMINUM_ROD)
-                    .unlockedBy("has_aluminum_rod", has(EPTags.Items.ALUMINUM_ROD))
-                    .unlockedBy(getHasName(pHoe), has(pHoe))
-                    .save(pConsumer);
-            ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, pPolisher)
-                    .pattern("SI")
-                    .pattern("# ")
-                    .define('I', EPTags.Items.COBBLE)
-                    .define('S', Tags.Items.STRING)
-                    .define('#', EPTags.Items.ALUMINUM_ROD)
-                    .unlockedBy("has_aluminum_rod", has(EPTags.Items.ALUMINUM_ROD))
-                    .unlockedBy(getHasName(pPolisher), has(pPolisher))
-                    .save(pConsumer);
-            ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, pDagger)
-                    .pattern("I ")
-                    .pattern("#S")
-                    .define('I', EPTags.Items.COBBLE)
-                    .define('S', Tags.Items.STRING)
-                    .define('#', EPTags.Items.ALUMINUM_ROD)
-                    .unlockedBy("has_aluminum_rod", has(EPTags.Items.ALUMINUM_ROD))
-                    .unlockedBy(getHasName(pDagger), has(pDagger))
-                    .save(pConsumer);
-        } else {
-            ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, pSword)
-                    .pattern(" I ")
-                    .pattern(" IS")
-                    .pattern(" # ")
-                    .define('I', EPTags.Items.COBBLE)
-                    .define('S', Tags.Items.STRING)
-                    .define('#', Tags.Items.RODS_WOODEN)
-                    .unlockedBy("has_cobble", has(EPTags.Items.COBBLE))
-                    .unlockedBy(getHasName(pSword), has(pSword))
-                    .save(pConsumer);
-            ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, pPickaxe)
-                    .pattern("III")
-                    .pattern(" #S")
-                    .pattern(" # ")
-                    .define('I', EPTags.Items.COBBLE)
-                    .define('S', Tags.Items.STRING)
-                    .define('#', Tags.Items.RODS_WOODEN)
-                    .unlockedBy("has_cobble", has(EPTags.Items.COBBLE))
-                    .unlockedBy(getHasName(pPickaxe), has(pPickaxe))
-                    .save(pConsumer);
-            ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, pAxe)
-                    .pattern("IIS")
-                    .pattern("I# ")
-                    .pattern(" # ")
-                    .define('I', EPTags.Items.COBBLE)
-                    .define('S', Tags.Items.STRING)
-                    .define('#', Tags.Items.RODS_WOODEN)
-                    .unlockedBy("has_cobble", has(EPTags.Items.COBBLE))
-                    .unlockedBy(getHasName(pAxe), has(pAxe))
-                    .save(pConsumer);
-            ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, pShovel)
-                    .pattern(" I ")
-                    .pattern(" #S")
-                    .pattern(" # ")
-                    .define('I', EPTags.Items.COBBLE)
-                    .define('S', Tags.Items.STRING)
-                    .define('#', Tags.Items.RODS_WOODEN)
-                    .unlockedBy("has_cobble", has(EPTags.Items.COBBLE))
-                    .unlockedBy(getHasName(pShovel), has(pShovel))
-                    .save(pConsumer);
-            ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, pHoe)
-                    .pattern("IIS")
-                    .pattern(" # ")
-                    .pattern(" # ")
-                    .define('I', EPTags.Items.COBBLE)
-                    .define('S', Tags.Items.STRING)
-                    .define('#', Tags.Items.RODS_WOODEN)
-                    .unlockedBy("has_cobble", has(EPTags.Items.COBBLE))
-                    .unlockedBy(getHasName(pHoe), has(pHoe))
-                    .save(pConsumer);
-            ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, pPolisher)
-                    .pattern("SI")
-                    .pattern("# ")
-                    .define('I', EPTags.Items.COBBLE)
-                    .define('S', Tags.Items.STRING)
-                    .define('#', Tags.Items.RODS_WOODEN)
-                    .unlockedBy("has_cobble", has(EPTags.Items.COBBLE))
-                    .unlockedBy(getHasName(pPolisher), has(pPolisher))
-                    .save(pConsumer);
-            ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, pDagger)
-                    .pattern("I ")
-                    .pattern("#S")
-                    .define('I', EPTags.Items.COBBLE)
-                    .define('S', Tags.Items.STRING)
-                    .define('#', Tags.Items.RODS_WOODEN)
-                    .unlockedBy("has_cobble", has(EPTags.Items.COBBLE))
-                    .unlockedBy(getHasName(pDagger), has(pDagger))
-                    .save(pConsumer);
-        }
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, pSword)
+                .pattern(" I ")
+                .pattern(" IS")
+                .pattern(" # ")
+                .define('I', EPTags.Items.COBBLE)
+                .define('S', Tags.Items.STRING)
+                .define('#', Tags.Items.RODS_WOODEN)
+                .unlockedBy("has_cobble", has(EPTags.Items.COBBLE))
+                .unlockedBy(getHasName(pSword), has(pSword))
+                .save(pConsumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, pPickaxe)
+                .pattern("III")
+                .pattern(" #S")
+                .pattern(" # ")
+                .define('I', EPTags.Items.COBBLE)
+                .define('S', Tags.Items.STRING)
+                .define('#', Tags.Items.RODS_WOODEN)
+                .unlockedBy("has_cobble", has(EPTags.Items.COBBLE))
+                .unlockedBy(getHasName(pPickaxe), has(pPickaxe))
+                .save(pConsumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, pAxe)
+                .pattern("IIS")
+                .pattern("I# ")
+                .pattern(" # ")
+                .define('I', EPTags.Items.COBBLE)
+                .define('S', Tags.Items.STRING)
+                .define('#', Tags.Items.RODS_WOODEN)
+                .unlockedBy("has_cobble", has(EPTags.Items.COBBLE))
+                .unlockedBy(getHasName(pAxe), has(pAxe))
+                .save(pConsumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, pShovel)
+                .pattern(" I ")
+                .pattern(" #S")
+                .pattern(" # ")
+                .define('I', EPTags.Items.COBBLE)
+                .define('S', Tags.Items.STRING)
+                .define('#', Tags.Items.RODS_WOODEN)
+                .unlockedBy("has_cobble", has(EPTags.Items.COBBLE))
+                .unlockedBy(getHasName(pShovel), has(pShovel))
+                .save(pConsumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, pHoe)
+                .pattern("IIS")
+                .pattern(" # ")
+                .pattern(" # ")
+                .define('I', EPTags.Items.COBBLE)
+                .define('S', Tags.Items.STRING)
+                .define('#', Tags.Items.RODS_WOODEN)
+                .unlockedBy("has_cobble", has(EPTags.Items.COBBLE))
+                .unlockedBy(getHasName(pHoe), has(pHoe))
+                .save(pConsumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, pPolisher)
+                .pattern("SI")
+                .pattern("# ")
+                .define('I', EPTags.Items.COBBLE)
+                .define('S', Tags.Items.STRING)
+                .define('#', Tags.Items.RODS_WOODEN)
+                .unlockedBy("has_cobble", has(EPTags.Items.COBBLE))
+                .unlockedBy(getHasName(pPolisher), has(pPolisher))
+                .save(pConsumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, pDagger)
+                .pattern("I ")
+                .pattern("#S")
+                .define('I', EPTags.Items.COBBLE)
+                .define('S', Tags.Items.STRING)
+                .define('#', Tags.Items.RODS_WOODEN)
+                .unlockedBy("has_cobble", has(EPTags.Items.COBBLE))
+                .unlockedBy(getHasName(pDagger), has(pDagger))
+                .save(pConsumer);
     }
 
     @Override

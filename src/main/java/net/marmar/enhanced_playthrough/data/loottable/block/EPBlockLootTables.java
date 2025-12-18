@@ -334,19 +334,19 @@ public class EPBlockLootTables extends BlockLootSubProvider implements BlockLoot
                 EPItems.YERBA_MATE_SEEDS.get(), YERBA_MATE_BUILDER));
 
             //Zapallo
-            this.add(EPBlocks.ZAPALLO_CROP.get(), createCropDrops(EPBlocks.ZAPALLO_CROP.get(), EPItems.ZAPALLO.get(),
+            this.add(EPBlocks.ZAPALLO_CROP.get(), createCropWithRotDrops(EPItems.ZAPALLO.get(), EPItems.ROTTEN_ZAPALLO.get(),
                 EPItems.ZAPALLO_SEEDS.get(), ZAPALLO_BUILDER));
 
             //Eggplant
-            this.add(EPBlocks.EGGPLANT_CROP.get(), createCropDrops(EPBlocks.EGGPLANT_CROP.get(), EPItems.EGGPLANT.get(),
+            this.add(EPBlocks.EGGPLANT_CROP.get(), createCropWithRotDrops(EPItems.EGGPLANT.get(), EPItems.ROTTEN_EGGPLANT.get(),
                 EPItems.EGGPLANT_SEEDS.get(), EGGPLANT_BUILDER));
 
             //Tomato
-            this.add(EPBlocks.TOMATO_CROP.get(), createCropDrops(EPBlocks.TOMATO_CROP.get(), EPItems.TOMATO.get(),
+            this.add(EPBlocks.TOMATO_CROP.get(), createCropWithRotDrops(EPItems.TOMATO.get(), EPItems.ROTTEN_TOMATO.get(),
                 EPItems.TOMATO_SEEDS.get(), TOMATO_BUILDER));
 
             //Corn
-            this.add(EPBlocks.CORN_CROP.get(), createCropDrops(EPBlocks.CORN_CROP.get(), EPItems.CORN.get(),
+            this.add(EPBlocks.CORN_CROP.get(), createCropWithRotDrops(EPItems.CORN.get(), EPItems.ROTTEN_CORN.get(),
                  EPItems.CORN_SEEDS.get(), CORN_BUILDER));
 
         //Wild crops

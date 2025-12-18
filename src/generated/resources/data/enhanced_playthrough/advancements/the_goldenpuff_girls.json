@@ -1,5 +1,5 @@
 {
-  "parent": "enhanced_playthrough:survival_root",
+  "parent": "enhanced_playthrough:unity_makes_strength",
   "criteria": {
     "has_blue_gold_ingot": {
       "conditions": {

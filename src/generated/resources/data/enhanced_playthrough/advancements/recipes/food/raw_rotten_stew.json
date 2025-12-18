@@ -1,0 +1,73 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bowl": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:bowl"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_rotten_food": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:rotten_tomato"
+            ]
+          },
+          {
+            "items": [
+              "enhanced_playthrough:rotten_zapallo"
+            ]
+          },
+          {
+            "items": [
+              "enhanced_playthrough:rotten_eggplant"
+            ]
+          },
+          {
+            "items": [
+              "enhanced_playthrough:rotten_corn"
+            ]
+          },
+          {
+            "items": [
+              "enhanced_playthrough:rotten_carrot"
+            ]
+          },
+          {
+            "items": [
+              "minecraft:poisonous_potato"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "enhanced_playthrough:raw_rotten_stew"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_rotten_food",
+      "has_bowl",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "enhanced_playthrough:raw_rotten_stew"
+    ]
+  },
+  "sends_telemetry_event": false
+}

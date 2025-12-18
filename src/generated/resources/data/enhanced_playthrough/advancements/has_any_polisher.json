@@ -1,4 +1,5 @@
 {
+  "parent": "enhanced_playthrough:colours_root",
   "criteria": {
     "has_polisher": {
       "conditions": {
@@ -15,7 +16,7 @@
     "announce_to_chat": false,
     "background": "minecraft:textures/block/emerald_block.png",
     "description": {
-      "translate": "advancement.enhanced_playthrough.desc.gems.root"
+      "translate": "advancement.enhanced_playthrough.desc.gems.has_any_polisher"
     },
     "frame": "task",
     "hidden": false,
@@ -24,7 +25,7 @@
     },
     "show_toast": false,
     "title": {
-      "translate": "advancement.enhanced_playthrough.title.gems.root"
+      "translate": "advancement.enhanced_playthrough.title.gems.has_any_polisher"
     }
   },
   "requirements": [

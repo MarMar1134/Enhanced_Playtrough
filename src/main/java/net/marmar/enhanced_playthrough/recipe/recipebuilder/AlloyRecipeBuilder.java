@@ -32,17 +32,19 @@ public class AlloyRecipeBuilder implements RecipeBuilder {
     private final Item result;
     private final int count;
     private final int alloyTime;
+    private final float xpAmount;
     private final AlloyRecipeCategory category;
     private String group;
     private final Advancement.Builder advancement = Advancement.Builder.recipeAdvancement();
     private final RecipeSerializer<?> serializer;
 
-    private AlloyRecipeBuilder(AlloyRecipeCategory pRecipeCategory, String pGroup, int pAlloyTime, ItemLike pResult, int pCount, Ingredient firstIngredient, Ingredient secondIngredient, RecipeSerializer<?> pSerializer) {
+    private AlloyRecipeBuilder(AlloyRecipeCategory pRecipeCategory, String pGroup, int pAlloyTime, ItemLike pResult, int pCount, float pXp, Ingredient firstIngredient, Ingredient secondIngredient, RecipeSerializer<?> pSerializer) {
         this.firstIngredient = firstIngredient;
         this.secondIngredient = secondIngredient;
         this.result = pResult.asItem();
         this.count = pCount;
         this.alloyTime = pAlloyTime;
+        this.xpAmount = pXp;
         this.category = pRecipeCategory;
         this.group = pGroup;
         this.serializer = pSerializer;
@@ -59,16 +61,16 @@ public class AlloyRecipeBuilder implements RecipeBuilder {
      * @param pGroup the group with the alloy belongs
      * @param pSerializer the custom serializer
      */
-    public static AlloyRecipeBuilder genericAlloy(Ingredient firstIngredient, Ingredient secondIngredient, int pAlloyTime, AlloyRecipeCategory recipeCategory, ItemLike pResult, int pCount, String pGroup, RecipeSerializer<? extends AbstractAlloyRecipe> pSerializer){
-        return new AlloyRecipeBuilder(recipeCategory, pGroup, pAlloyTime, pResult, pCount, firstIngredient, secondIngredient, pSerializer);
+    public static AlloyRecipeBuilder genericAlloy(Ingredient firstIngredient, Ingredient secondIngredient, int pAlloyTime, AlloyRecipeCategory recipeCategory, ItemLike pResult, int pCount, float pXp, String pGroup, RecipeSerializer<? extends AbstractAlloyRecipe> pSerializer){
+        return new AlloyRecipeBuilder(recipeCategory, pGroup, pAlloyTime, pResult, pCount, pXp, firstIngredient, secondIngredient, pSerializer);
     }
 
-    public static AlloyRecipeBuilder oreAlloying(Ingredient firstIngredient, Ingredient secondIngredient, AlloyRecipeCategory recipeCategory, ItemLike pResult, String pGroup) {
-        return genericAlloy(firstIngredient, secondIngredient, 200, recipeCategory, pResult, 1, pGroup, EPRecipes.ALLOY_SERIALIZER.get());
+    public static AlloyRecipeBuilder oreAlloying(Ingredient firstIngredient, Ingredient secondIngredient, AlloyRecipeCategory recipeCategory, ItemLike pResult, float pXp, String pGroup) {
+        return genericAlloy(firstIngredient, secondIngredient, 200, recipeCategory, pResult, 1, pXp, pGroup, EPRecipes.ALLOY_SERIALIZER.get());
     }
 
-    public static AlloyRecipeBuilder superOreAlloying(Ingredient firstIngredient, Ingredient secondIngredient, AlloyRecipeCategory recipeCategory, ItemLike pResult, String pGroup, int pCount) {
-        return genericAlloy(firstIngredient, secondIngredient, 100, recipeCategory, pResult, pCount, pGroup, EPRecipes.SUPER_ALLOY_SERIALIZER.get());
+    public static AlloyRecipeBuilder superOreAlloying(Ingredient firstIngredient, Ingredient secondIngredient, AlloyRecipeCategory recipeCategory, ItemLike pResult, float pXp, String pGroup, int pCount) {
+        return genericAlloy(firstIngredient, secondIngredient, 100, recipeCategory, pResult, pCount, pXp, pGroup, EPRecipes.SUPER_ALLOY_SERIALIZER.get());
     }
 
     @Override
@@ -95,7 +97,7 @@ public class AlloyRecipeBuilder implements RecipeBuilder {
         this.advancement.parent(ROOT_RECIPE_ADVANCEMENT).addCriterion("has_the_recipe", RecipeUnlockedTrigger.unlocked(resourceLocation))
                 .rewards(AdvancementRewards.Builder.recipe(resourceLocation)).requirements(RequirementsStrategy.OR);
 
-        consumer.accept(new AlloyRecipeBuilder.Result(resourceLocation, this.firstIngredient, this.secondIngredient, this.result, this.count,
+        consumer.accept(new AlloyRecipeBuilder.Result(resourceLocation, this.firstIngredient, this.secondIngredient, this.result, this.count, this.xpAmount,
                 this.alloyTime, this.category, this.group, this.advancement, resourceLocation.withPrefix("recipes/"), this.serializer));
     }
 
@@ -112,19 +114,21 @@ public class AlloyRecipeBuilder implements RecipeBuilder {
         private final Item result;
         private final int count;
         private final int alloyTime;
+        private final float xpAmount;
         private final AlloyRecipeCategory category;
         private final String group;
         private final Advancement.Builder advancement;
         private final ResourceLocation advancementId;
         private final RecipeSerializer<?> serializer;
 
-        public Result(ResourceLocation pRecipeId, Ingredient firstIngredient, Ingredient secondIngredient, Item pResult, int pCount, int alloyingTime, AlloyRecipeCategory recipeCategory, String pGroup, Advancement.Builder pAdvancement, ResourceLocation pAdvancementId, RecipeSerializer<?> pSerializer) {
+        public Result(ResourceLocation pRecipeId, Ingredient firstIngredient, Ingredient secondIngredient, Item pResult, int pCount, float pXp, int alloyingTime, AlloyRecipeCategory recipeCategory, String pGroup, Advancement.Builder pAdvancement, ResourceLocation pAdvancementId, RecipeSerializer<?> pSerializer) {
             this.recipeId = pRecipeId;
             this.firstIngredient = firstIngredient;
             this.secondIngredient = secondIngredient;
             this.result = pResult;
             this.count = pCount;
             this.alloyTime = alloyingTime;
+            this.xpAmount = pXp;
             this.category = recipeCategory;
             this.group = pGroup;
             this.advancement = pAdvancement;
@@ -139,6 +143,8 @@ public class AlloyRecipeBuilder implements RecipeBuilder {
             pJson.addProperty("category", this.category.getSerializedName());
 
             pJson.addProperty("alloytime", this.alloyTime);
+
+            pJson.addProperty("xp", this.xpAmount);
 
             //Inputs
             JsonArray inputArray = new JsonArray();

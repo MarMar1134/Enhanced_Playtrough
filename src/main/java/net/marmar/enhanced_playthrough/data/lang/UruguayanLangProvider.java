@@ -105,7 +105,7 @@ public class UruguayanLangProvider extends AbstractLangProvider {
 
         //Advancements
             //Survival
-            addSurvivalAdvancement("root", "Enhanced Playthrough",
+            addSurvivalAdvancement("survival_root", "Enhanced Playthrough",
                     "Iniciaste una nueva aventura en este mundo fantástico, ¡bienvenido!");
             addSurvivalAdvancement("stone_age", "Un asunto adoquinado",
                     "Obtené un pedazo de adoquín");
@@ -136,8 +136,11 @@ public class UruguayanLangProvider extends AbstractLangProvider {
                     "Obtené un lingote de aluminio");
 
             //Gems
-            addGemAdvancement("root", "Los colores del mundo",
+            addGemAdvancement("colours_root", "Los colores del mundo",
                     "Nuestro mundo reluce en colores, ¿que tal si vas a descubrirlos todos?");
+
+            addGemAdvancement("has_any_polisher", "Tarea fina",
+                    "Crafteá una herramienta de pulido");
             addGemAdvancement("polish_emerald", "Intento de grinch",
                     "Consegui algunas esmeraldas y cuidalas de los, ¿quienes?");
             addGemAdvancement("polish_sapphire", "Horizonte azulado",
@@ -160,6 +163,12 @@ public class UruguayanLangProvider extends AbstractLangProvider {
                     "Obtené todas las flores altas");
             addGemAdvancement("all_flowers", "El diario de la botecaria",
                     "Obtené todas las flores");
+
+            //Rotten crops
+            addGemAdvancement("any_rotten_crop", "... Está horrible",
+                    "Obtené un cultivo podrido/venenoso");
+            addGemAdvancement("rotten_stew", "El fuego purifica",
+                    "Juntá tus cultivos podridos y hacé un guiso para luego... cocinarlo");
 
         //Entities
         addBoatEntity("Barco");
@@ -740,6 +749,13 @@ public class UruguayanLangProvider extends AbstractLangProvider {
             addItem(EPItems.EGGPLANT, "Berenjena");
             addItem(EPItems.RICE_GRAINS, "Granos de arroz");
 
+            //Rotten
+            addItem(EPItems.ROTTEN_CARROT, "Zanahoria podrida");
+            addItem(EPItems.ROTTEN_CORN, "Choclo podrido");
+            addItem(EPItems.ROTTEN_ZAPALLO, "Calabaza podrida");
+            addItem(EPItems.ROTTEN_EGGPLANT, "Berenjena podrida");
+            addItem(EPItems.ROTTEN_TOMATO, "Tomate podrido");
+
             //Cooked
             addItem(EPItems.COOKED_CORN, "Choclo cocido");
             addItem(EPItems.COOKED_ZAPALLO, "Calabaza cocida");
@@ -748,6 +764,10 @@ public class UruguayanLangProvider extends AbstractLangProvider {
             //Others
             addItem(EPItems.EMPTY_MATE, "Mate vacio");
             addItem(EPItems.MATE, "Mate");
+
+            addItem(EPItems.RAW_ROTTEN_STEW, "Guiso podrido crudo");
+            addItem(EPItems.ROTTEN_STEW, "Guiso podrido");
+
             addItem(EPItems.YEAST, "Levadura");
             addItem(EPItems.RICE_BOWL, "Bowl de arroz");
 

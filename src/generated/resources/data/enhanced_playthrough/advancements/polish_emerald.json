@@ -1,5 +1,5 @@
 {
-  "parent": "enhanced_playthrough:gem_root",
+  "parent": "enhanced_playthrough:has_any_polisher",
   "criteria": {
     "has_emerald": {
       "conditions": {

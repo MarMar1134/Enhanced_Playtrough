@@ -17,6 +17,8 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.CarrotBlock;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
@@ -88,6 +90,10 @@ public interface BlockLootTableBuilders {
                 .hasBlockStateProperties(pBlock)
                 .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(LeavesWithFruitBlock.AGE, 1));
     }
+
+    LootItemCondition.Builder CARROT_BUILDER = LootItemBlockStatePropertyCondition
+            .hasBlockStateProperties(Blocks.CARROTS)
+            .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CarrotBlock.AGE, 7));
 
     LootItemCondition.Builder YERBA_MATE_BUILDER = LootItemBlockStatePropertyCondition
             .hasBlockStateProperties(EPBlocks.YERBA_MATE_CROP.get())
@@ -311,17 +317,19 @@ public interface BlockLootTableBuilders {
 
     default LootTable.Builder createCropWithRotDrops(Item pGrownCropItem, Item pRottenCropItem, Item pSeedsItem, LootItemCondition.Builder pDropGrownCropCondition){
         return LootTable.lootTable().withPool(LootPool.lootPool()
-                .add((LootItem.lootTableItem(pGrownCropItem)
-                        .when(pDropGrownCropCondition))
+                .add(LootItem.lootTableItem(pRottenCropItem)
+                        .when(pDropGrownCropCondition)
+                        .when(LootItemRandomChanceCondition.randomChance(0.2f))
+                            .apply(SetItemCountFunction.setCount(UniformGenerator.between(1,2)))
+
+                        .otherwise(LootItem.lootTableItem(pGrownCropItem)
+                        .when(pDropGrownCropCondition)
+                            .apply(SetItemCountFunction.setCount(UniformGenerator.between(1,3))))
                         .otherwise(LootItem.lootTableItem(pSeedsItem))))
-                .withPool(LootPool.lootPool().when(pDropGrownCropCondition)
+                .withPool(LootPool.lootPool()
                         .add(LootItem.lootTableItem(pSeedsItem)
-                                .apply(ApplyBonusCount.addBonusBinomialDistributionCount(Enchantments.BLOCK_FORTUNE, 0.5714286F, 3)))
-                )
-                .withPool(LootPool.lootPool().when(pDropGrownCropCondition)
-                        .add(LootItem.lootTableItem(pRottenCropItem)
-                                .when(LootItemRandomChanceCondition.randomChance(0.02F))
-                                .otherwise(LootItem.lootTableItem(pSeedsItem)))
+                                .when(pDropGrownCropCondition)
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(2,4))))
                 );
     }
 

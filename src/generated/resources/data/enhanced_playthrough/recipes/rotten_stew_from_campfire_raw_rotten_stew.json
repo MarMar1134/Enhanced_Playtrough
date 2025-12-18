@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "food",
+  "cookingtime": 600,
+  "experience": 0.5,
+  "group": "rotten_stew",
+  "ingredient": {
+    "item": "enhanced_playthrough:raw_rotten_stew"
+  },
+  "result": "enhanced_playthrough:rotten_stew"
+}

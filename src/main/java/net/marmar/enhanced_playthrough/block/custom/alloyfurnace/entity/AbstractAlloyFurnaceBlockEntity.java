@@ -5,8 +5,11 @@ import net.marmar.enhanced_playthrough.recipe.alloy.AbstractAlloyRecipe;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.Mth;
 import net.minecraft.world.Containers;
 import net.minecraft.world.SimpleContainer;
+import net.minecraft.world.entity.ExperienceOrb;
 import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -16,6 +19,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.common.ForgeHooks;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
@@ -294,7 +298,8 @@ public abstract class AbstractAlloyFurnaceBlockEntity extends BlockEntity {
     }
 
     //takes the items from the Input Slots, puts them on a Container and then calls the selected recipe to check if the ingredients match
-    protected Optional<? extends AbstractAlloyRecipe> getCurrentRecipe() {
+    protected Optional<? extends AbstractAlloyRecipe>
+    getCurrentRecipe() {
         SimpleContainer inventory = new SimpleContainer(2);
 
         inventory.setItem(0, firstInputHandler.getStackInSlot(0));
@@ -327,8 +332,7 @@ public abstract class AbstractAlloyFurnaceBlockEntity extends BlockEntity {
     }
 
     //checks if the current alloy has finished
-    private boolean hasProcessFinished (){
-
+    private boolean hasProcessFinished(){
         return progress >= maxProgress;
     }
 

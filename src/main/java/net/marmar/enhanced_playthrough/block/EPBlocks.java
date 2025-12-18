@@ -431,7 +431,7 @@ public class EPBlocks {
     //Entity blocks
         //Basic furnaces
         public static final RegistryObject<Block> ADOBE_FURNACE = registerBlockWithItem("adobe_furnace",
-                () -> new AdobeFurnaceBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.COBBLESTONE).noOcclusion()));
+                () -> new AdobeFurnaceBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE).noOcclusion()));
         public static final RegistryObject<Block> SOUL_FURNACE = registerBlockWithItem("soul_furnace",
                 () -> new SoulFurnaceBlock(BlockBehaviour.Properties.copy(EPBlocks.SOUL_MUD.get()).noOcclusion()));
 
@@ -463,9 +463,9 @@ public class EPBlocks {
 
     //Crops
     public static final RegistryObject<Block> YERBA_MATE_CROP = BLOCKS.register("yerba_mate_crop",
-            () -> new YerbaMateCropBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.CARROTS).noOcclusion().noCollission()));
+            () -> new YerbaMateCropBlock(BlockBehaviour.Properties.copy(Blocks.CARROTS).noOcclusion().noCollission()));
     public static final RegistryObject<Block> ZAPALLO_CROP = BLOCKS.register("zapallo_crop",
-            () -> new ZapalloCropBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.WHEAT).noOcclusion().noCollission()));
+            () -> new ZapalloCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
     public static final RegistryObject<Block> EGGPLANT_CROP = BLOCKS.register("eggplant_crop",
             () -> new EggplantCropBlock(BlockBehaviour.Properties.copy(EPBlocks.YERBA_MATE_CROP.get()).noOcclusion().noCollission()));
     public static final RegistryObject<Block> TOMATO_CROP = BLOCKS.register("tomato_crop",
@@ -505,9 +505,9 @@ public class EPBlocks {
 
     //Block register
     private static <T extends Block> RegistryObject<T> registerBlockWithItem(String name, Supplier<T> block){
-        RegistryObject<T> ToReturn = BLOCKS.register(name, block);
-        registerBlockItem(name, ToReturn);
-        return ToReturn;
+        RegistryObject<T> blockWithItem = BLOCKS.register(name, block);
+        registerBlockItem(name, blockWithItem);
+        return blockWithItem;
     }
 
     private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block){

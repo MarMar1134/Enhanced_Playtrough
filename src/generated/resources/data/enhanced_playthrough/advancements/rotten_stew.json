@@ -1,0 +1,43 @@
+{
+  "parent": "enhanced_playthrough:any_rotten_crop",
+  "criteria": {
+    "has_rotten_stew": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:rotten_stew"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/block/emerald_block.png",
+    "description": {
+      "translate": "advancement.enhanced_playthrough.desc.gems.rotten_stew"
+    },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "item": "enhanced_playthrough:rotten_stew",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.enhanced_playthrough.title.gems.rotten_stew"
+    }
+  },
+  "requirements": [
+    [
+      "has_rotten_stew"
+    ]
+  ],
+  "rewards": {
+    "experience": 116
+  },
+  "sends_telemetry_event": true
+}

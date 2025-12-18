@@ -5,6 +5,7 @@ import net.marmar.enhanced_playthrough.block.EPBlocks;
 import net.marmar.enhanced_playthrough.entity.EPEntityTypes;
 import net.marmar.enhanced_playthrough.item.custom.food.MateItem;
 import net.marmar.enhanced_playthrough.item.custom.food.EPFoodProperties;
+import net.marmar.enhanced_playthrough.item.custom.food.StewItem;
 import net.marmar.enhanced_playthrough.item.custom.tool.*;
 import net.marmar.enhanced_playthrough.item.custom.weapon.AluminumArrowItem;
 import net.marmar.enhanced_playthrough.item.custom.weapon.EPTiers;
@@ -745,16 +746,16 @@ public class EPItems {
                 "lime",() -> new Item(new Item.Properties().food(EPFoodProperties.LIME)));
         public static final RegistryObject<Item> GREEN_APPLE = ITEMS.register(
                 "green_apple",() -> new Item(new Item.Properties().food(EPFoodProperties.GREEN_APPLE)));
-        public static final RegistryObject<Item> TOMATO = ITEMS.register(
-                "tomato",() -> new Item(new Item.Properties().food(EPFoodProperties.TOMATO)));
         public static final RegistryObject<Item> WALNUT = ITEMS.register(
                 "walnut",() -> new Item(new Item.Properties()));
         public static final RegistryObject<Item> PEELED_WALNUT = ITEMS.register(
                 "peeled_walnut",() -> new Item(new Item.Properties().food(EPFoodProperties.PEELED_WALNUT)));
 
-        //Vegetables
+        //crops
         public static final RegistryObject<Item> RICE_GRAINS = ITEMS.register(
                 "rice_grains", () -> new Item((new Item.Properties().food(EPFoodProperties.RICE))));
+        public static final RegistryObject<Item> TOMATO = ITEMS.register(
+                "tomato",() -> new Item(new Item.Properties().food(EPFoodProperties.TOMATO)));
         public static final RegistryObject<Item> ZAPALLO = ITEMS.register(
                 "zapallo", () -> new Item((new Item.Properties().food(EPFoodProperties.ZAPALLO))));
         public static final RegistryObject<Item> EGGPLANT = ITEMS.register(
@@ -762,9 +763,24 @@ public class EPItems {
         public static final RegistryObject<Item> CORN = ITEMS.register(
                 "corn", () -> new Item((new Item.Properties().food(EPFoodProperties.CORN))));
 
-        //Fungi
+        public static final RegistryObject<Item> ROTTEN_CARROT = ITEMS.register(
+                "rotten_carrot",() -> new Item(new Item.Properties().food(EPFoodProperties.ROTTEN_CARROT)));
+        public static final RegistryObject<Item> ROTTEN_TOMATO = ITEMS.register(
+                "rotten_tomato",() -> new Item(new Item.Properties().food(EPFoodProperties.ROTTEN_TOMATO)));
+        public static final RegistryObject<Item> ROTTEN_ZAPALLO = ITEMS.register(
+                "rotten_zapallo", () -> new Item((new Item.Properties().food(EPFoodProperties.ROTTEN_ZAPALLO))));
+        public static final RegistryObject<Item> ROTTEN_EGGPLANT = ITEMS.register(
+                "rotten_eggplant", () -> new Item((new Item.Properties().food(EPFoodProperties.ROTTEN_EGGPLANT))));
+        public static final RegistryObject<Item> ROTTEN_CORN = ITEMS.register(
+                "rotten_corn", () -> new Item((new Item.Properties().food(EPFoodProperties.ROTTEN_CORN))));
+
+        //others
         public static final RegistryObject<Item> YEAST = ITEMS.register(
                 "yeast",() -> new Item(new Item.Properties()));
+        public static final RegistryObject<Item> RAW_ROTTEN_STEW = ITEMS.register(
+                "raw_rotten_stew", () -> new StewItem(new Item.Properties().food(EPFoodProperties.RAW_ROTTEN_STEW)));
+        public static final RegistryObject<Item> ROTTEN_STEW = ITEMS.register(
+                "rotten_stew", () -> new StewItem(new Item.Properties().food(EPFoodProperties.ROTTEN_STEW)));
 
         //Cooked food
         public static final RegistryObject<Item> RICE_BOWL = ITEMS.register(

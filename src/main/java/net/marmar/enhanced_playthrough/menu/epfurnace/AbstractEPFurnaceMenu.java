@@ -64,6 +64,7 @@ public abstract class AbstractEPFurnaceMenu extends AbstractContainerMenu {
     public boolean isCrafting() {
         return data.get(0) > 0;
     }
+    
     public boolean isBurning(){
         return data.get(2) > 0;
     }

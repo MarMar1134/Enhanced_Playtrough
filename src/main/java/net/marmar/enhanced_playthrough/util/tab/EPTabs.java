@@ -474,18 +474,26 @@ public class EPTabs {
                     .withTabsAfter(EPTabs.SAPLINGS.getId())
                     .withTabsBefore(EPTabs.JEWELERY.getId())
                     .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(EPItems.ROTTEN_CARROT.get());
+
                         output.accept(EPItems.YERBA_MATE.get());
                         output.accept(EPItems.GROUNDED_YERBA_MATE.get());
 
                         output.accept(EPItems.ZAPALLO.get());
+                        output.accept(EPItems.ROTTEN_ZAPALLO.get());
                         output.accept(EPItems.COOKED_ZAPALLO.get());
 
                         output.accept(EPItems.EGGPLANT.get());
+                        output.accept(EPItems.ROTTEN_EGGPLANT.get());
                         output.accept(EPItems.COOKED_EGGPLANT.get());
 
+                        output.accept(EPItems.WILD_TOMATO.get());
                         output.accept(EPItems.TOMATO.get());
+                        output.accept(EPItems.ROTTEN_TOMATO.get());
 
+                        output.accept(EPItems.WILD_CORN.get());
                         output.accept(EPItems.CORN.get());
+                        output.accept(EPItems.ROTTEN_CORN.get());
                         output.accept(EPItems.COOKED_CORN.get());
 
                         output.accept(EPItems.WALNUT.get());
@@ -502,6 +510,9 @@ public class EPTabs {
                         output.accept(EPItems.WHEAT_FLOUR.get());
 
                         output.accept(EPItems.PUMPKIN_FLOUR.get());
+
+                        output.accept(EPItems.RAW_ROTTEN_STEW.get());
+                        output.accept(EPItems.ROTTEN_STEW.get());
 
                         output.accept(EPItems.YEAST.get());
 

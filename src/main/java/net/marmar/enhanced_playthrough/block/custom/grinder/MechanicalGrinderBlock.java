@@ -33,6 +33,7 @@ import static net.minecraft.world.level.block.state.properties.BlockStatePropert
 
 public class MechanicalGrinderBlock extends BaseEntityBlock implements EntityBlock {
     public static final BooleanProperty ON;
+
     public MechanicalGrinderBlock(Properties pProperties) {
         super(pProperties);
         registerDefaultState(defaultBlockState().setValue(FACING, Direction.SOUTH).setValue(ON, false));
@@ -68,9 +69,11 @@ public class MechanicalGrinderBlock extends BaseEntityBlock implements EntityBlo
     public void onRemove(BlockState pState, Level pLevel, BlockPos pPos, BlockState pNewState, boolean pIsMoving) {
         if (pState.getBlock() != pNewState.getBlock()) {
             BlockEntity blockEntity = pLevel.getBlockEntity(pPos);
-            if (blockEntity instanceof MechanicalGrinderBlockEntity) {
-                ((MechanicalGrinderBlockEntity) blockEntity).drops();
+
+            if (blockEntity instanceof MechanicalGrinderBlockEntity mechanicalGrinder) {
+                mechanicalGrinder.drops();
             }
+
             super.onRemove(pState, pLevel, pPos, pNewState, pIsMoving);
         }
     }
@@ -79,8 +82,9 @@ public class MechanicalGrinderBlock extends BaseEntityBlock implements EntityBlo
     public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
         if (!pLevel.isClientSide()) {
             BlockEntity entity = pLevel.getBlockEntity(pPos);
-            if(entity instanceof MechanicalGrinderBlockEntity) {
-                NetworkHooks.openScreen(((ServerPlayer)pPlayer), (MechanicalGrinderBlockEntity)entity, pPos);
+
+            if(entity instanceof MechanicalGrinderBlockEntity mechanicalGrinder) {
+                NetworkHooks.openScreen(((ServerPlayer)pPlayer), mechanicalGrinder, pPos);
             } else {
                 throw new IllegalStateException("Our Container provider is missing!");
             }
@@ -92,15 +96,15 @@ public class MechanicalGrinderBlock extends BaseEntityBlock implements EntityBlo
     @Override
     public void animateTick(BlockState pState, Level pLevel, BlockPos pPos, RandomSource pRandom) {
         if (pState.getValue(ON)){
-            double X_position = (double)pPos.getX() + 0.5;
-            double Y_position = pPos.getY();
-            double Z_position = (double)pPos.getZ() + 0.5;
+            double X = (double)pPos.getX() + 0.5;
+            double Y = pPos.getY();
+            double Z = (double)pPos.getZ() + 0.5;
 
             if (pRandom.nextDouble() < 0.1) {
-                pLevel.playLocalSound(X_position, Y_position, Z_position, EPSoundEvents.GRIND_SOUND.get(), SoundSource.BLOCKS, 0.5F, 1.0F, false);
+                pLevel.playLocalSound(X, Y, Z, EPSoundEvents.GRIND_SOUND.get(), SoundSource.BLOCKS, 0.5F, 1.0F, false);
             }
 
-            pLevel.addParticle(ParticleTypes.SMOKE, X_position, Y_position, Z_position, 0.0F, 0.0F, 0.0F);
+            pLevel.addParticle(ParticleTypes.SMOKE, X, Y, Z, 0.0F, 0.0F, 0.0F);
         }
     }
 

@@ -1,5 +1,5 @@
 {
-  "parent": "enhanced_playthrough:gem_root",
+  "parent": "enhanced_playthrough:colours_root",
   "criteria": {
     "has_cold_lyrium": {
       "conditions": {

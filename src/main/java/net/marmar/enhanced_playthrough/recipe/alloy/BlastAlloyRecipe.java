@@ -17,13 +17,15 @@ import org.jetbrains.annotations.Nullable;
 public class BlastAlloyRecipe extends AbstractAlloyRecipe implements Recipe<SimpleContainer> {
     private final NonNullList<Ingredient> inputs;
     private final int alloyTime;
+    private final float xpAmount;
     private final AlloyRecipeCategory category;
     private final String group;
 
-    public BlastAlloyRecipe(NonNullList<Ingredient> pInputs, ItemStack pOutput, int pAlloyTime, ResourceLocation pRecipeId, AlloyRecipeCategory pCategory, String pGroup) {
-        super(pInputs, pOutput, pAlloyTime, pRecipeId, EPRecipes.SUPER_ALLOY_TYPE.get(), pCategory, pGroup);
+    public BlastAlloyRecipe(NonNullList<Ingredient> pInputs, ItemStack pOutput, int pAlloyTime, float pXpAmount, ResourceLocation pRecipeId, AlloyRecipeCategory pCategory, String pGroup) {
+        super(pInputs, pOutput, pAlloyTime, pXpAmount, pRecipeId, EPRecipes.SUPER_ALLOY_TYPE.get(), pCategory, pGroup);
         this.inputs = pInputs;
         this.alloyTime = pAlloyTime;
+        this.xpAmount = pXpAmount;
         this.category = pCategory;
         this.group = pGroup;
     }
@@ -63,6 +65,8 @@ public class BlastAlloyRecipe extends AbstractAlloyRecipe implements Recipe<Simp
 
             int alloyTime = GsonHelper.getAsInt(jsonObject, "alloytime", defaultAlloyTime);
 
+            float xpAmount = GsonHelper.getAsFloat(jsonObject, "xp");
+
             ItemStack output = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(jsonObject, "output"));
 
             JsonArray ingredients = GsonHelper.getAsJsonArray(jsonObject, "ingredients");
@@ -72,7 +76,7 @@ public class BlastAlloyRecipe extends AbstractAlloyRecipe implements Recipe<Simp
                 inputs.set(i, Ingredient.fromJson(ingredients.get(i)));
             }
 
-            return new BlastAlloyRecipe(inputs, output, alloyTime, resourceLocation, recipeCategory, group);
+            return new BlastAlloyRecipe(inputs, output, alloyTime, xpAmount, resourceLocation, recipeCategory, group);
         }
 
         @Override
@@ -83,12 +87,14 @@ public class BlastAlloyRecipe extends AbstractAlloyRecipe implements Recipe<Simp
 
             int alloyTime = friendlyByteBuf.readVarInt();
 
+            float xpAmount = friendlyByteBuf.readFloat();
+
             NonNullList<Ingredient> inputs = NonNullList.withSize(friendlyByteBuf.readInt(), Ingredient.EMPTY);
 
             inputs.replaceAll(ignored -> Ingredient.fromNetwork(friendlyByteBuf));
 
             ItemStack output = friendlyByteBuf.readItem();
-            return new BlastAlloyRecipe(inputs, output, alloyTime, resourceLocation, recipeCategory, group);
+            return new BlastAlloyRecipe(inputs, output, alloyTime, xpAmount, resourceLocation, recipeCategory, group);
         }
 
         @Override
@@ -98,6 +104,8 @@ public class BlastAlloyRecipe extends AbstractAlloyRecipe implements Recipe<Simp
             friendlyByteBuf.writeUtf(recipes.group);
 
             friendlyByteBuf.writeVarInt(recipes.alloyTime);
+
+            friendlyByteBuf.writeFloat(recipes.xpAmount);
 
             friendlyByteBuf.writeInt(recipes.inputs.size());
 

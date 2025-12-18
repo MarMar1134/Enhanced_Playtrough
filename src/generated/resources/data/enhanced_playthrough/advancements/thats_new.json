@@ -1,5 +1,5 @@
 {
-  "parent": "enhanced_playthrough:stone_age",
+  "parent": "enhanced_playthrough:unity_makes_strength",
   "criteria": {
     "has_item": {
       "conditions": {

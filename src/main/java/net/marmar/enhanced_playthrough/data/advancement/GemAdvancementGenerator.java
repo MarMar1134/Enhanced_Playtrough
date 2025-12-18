@@ -8,6 +8,7 @@ import net.minecraft.advancements.Advancement;
 import net.minecraft.advancements.AdvancementRewards;
 import net.minecraft.advancements.RequirementsStrategy;
 import net.minecraft.advancements.critereon.ItemPredicate;
+import net.minecraft.advancements.critereon.PlayerTrigger;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
@@ -22,17 +23,27 @@ public class GemAdvancementGenerator implements ForgeAdvancementProvider.Advance
     public ItemPredicate HAS_POLISHER = ItemPredicate.Builder.item().of(EPTags.Items.POLISHER).build();
     public ItemPredicate HAS_SMALL_FLOWER = ItemPredicate.Builder.item().of(ItemTags.SMALL_FLOWERS).build();
     public ItemPredicate HAS_TALL_FLOWER = ItemPredicate.Builder.item().of(ItemTags.TALL_FLOWERS).build();
+    public ItemPredicate HAS_ANY_ROTTEN_CROP = ItemPredicate.Builder.item()
+            .of(Items.POISONOUS_POTATO, EPItems.ROTTEN_CARROT.get(), EPItems.ROTTEN_TOMATO.get(),
+                    EPItems.ROTTEN_CORN.get(), EPItems.ROTTEN_ZAPALLO.get(), EPItems.ROTTEN_EGGPLANT.get())
+            .build();
 
     @Override
     public void generate(HolderLookup.Provider provider, Consumer<Advancement> consumer, ExistingFileHelper existingFileHelper) {
-        Advancement gems_root = Advancement.Builder.advancement()
-                .display(rootDisplayInfo(EPBlocks.GEM_POLISHER.get(), "root"))
-                .addCriterion("has_polisher", hasItems(HAS_POLISHER))
-                .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "gem_root"), existingFileHelper);
+        Advancement root = Advancement.Builder.advancement()
+                .display(taskDisplayInfo(Items.YELLOW_DYE, "colours_root"))
+                .addCriterion("is_alive", PlayerTrigger.TriggerInstance.tick())
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, "colours_root"), existingFileHelper);
 
         //Gems path
+        Advancement has_any_polisher = Advancement.Builder.advancement()
+                .parent(root)
+                .display(rootDisplayInfo(EPBlocks.GEM_POLISHER.get(), "has_any_polisher"))
+                .addCriterion("has_polisher", hasItems(HAS_POLISHER))
+                .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "has_any_polisher"), existingFileHelper);
+
         Advancement get_emerald = Advancement.Builder.advancement()
-                .parent(gems_root)
+                .parent(has_any_polisher)
                 .display(taskDisplayInfo(Items.EMERALD, "polish_emerald"))
                 .addCriterion("has_emerald", hasItems(Items.EMERALD))
                 .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "polish_emerald"), existingFileHelper);
@@ -50,7 +61,7 @@ public class GemAdvancementGenerator implements ForgeAdvancementProvider.Advance
                 .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "polish_ruby"), existingFileHelper);
 
         Advancement get_garnet = Advancement.Builder.advancement()
-                .parent(gems_root)
+                .parent(has_any_polisher)
                 .display(taskDisplayInfo(EPItems.GARNET.get(), "polish_garnet"))
                 .addCriterion("has_garnet", hasItems(EPItems.GARNET.get()))
                 .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "polish_garnet"), existingFileHelper);
@@ -62,21 +73,21 @@ public class GemAdvancementGenerator implements ForgeAdvancementProvider.Advance
                 .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "polish_diamond"), existingFileHelper);
 
         Advancement get_all_gems = Advancement.Builder.advancement()
-                .parent(gems_root)
+                .parent(has_any_polisher)
                 .display(challengeDisplayInfo(EPItems.NETHERITE_POLISHER.get(), "get_all_gems"))
                 .addCriterion("has_emerald", hasItems(Items.EMERALD))
                 .addCriterion("has_sapphire", hasItems(EPItems.SAPPHIRE.get()))
                 .addCriterion("has_ruby", hasItems(EPItems.RUBY.get()))
                 .addCriterion("has_diamond", hasItems(Items.DIAMOND))
                 .addCriterion("has_garnet", hasItems(EPItems.GARNET.get()))
-                .rewards(AdvancementRewards.Builder.experience(100))
+                .rewards(AdvancementRewards.Builder.experience(130))
                 .rewards(AdvancementRewards.Builder.loot(advancementReward("get_all_gems")))
                 .requirements(RequirementsStrategy.AND)
                 .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "get_all_gems"), existingFileHelper);
 
         //Flowers path
         Advancement first_flower = Advancement.Builder.advancement()
-                .parent(gems_root)
+                .parent(root)
                 .display(taskDisplayInfo(Items.POPPY, "first_flower"))
                 .addCriterion("has_small_flower", hasItems(HAS_SMALL_FLOWER))
                 .addCriterion("has_tall_flower", hasItems(HAS_TALL_FLOWER))
@@ -95,7 +106,7 @@ public class GemAdvancementGenerator implements ForgeAdvancementProvider.Advance
                 .addCriterion("has_cornflower", hasItems(Items.CORNFLOWER)).addCriterion("has_lily_of_the_valley", hasItems(Items.LILY_OF_THE_VALLEY))
                 .addCriterion("has_wither_rose", hasItems(Items.WITHER_ROSE)).addCriterion("has_torchflower", hasItems(Items.TORCHFLOWER))
                 .addCriterion("has_cold_lyrium", hasItems(EPBlocks.COLD_LYRIUM.get())).addCriterion("has_succulent", hasItems(EPBlocks.SUCCULENT.get()))
-                .rewards(AdvancementRewards.Builder.experience(200))
+                .rewards(AdvancementRewards.Builder.experience(100))
                 .requirements(RequirementsStrategy.AND)
                 .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "all_small_flowers"), existingFileHelper);
 
@@ -123,10 +134,24 @@ public class GemAdvancementGenerator implements ForgeAdvancementProvider.Advance
                 .addCriterion("has_sunflower", hasItems(Items.SUNFLOWER)).addCriterion("has_lilac", hasItems(Items.LILAC))
                 .addCriterion("has_peony", hasItems(Items.PEONY)).addCriterion("has_rose_bush", hasItems(Items.ROSE_BUSH))
                 .addCriterion("has_pitcher_plant", hasItems(Items.PITCHER_PLANT))
-                .rewards(AdvancementRewards.Builder.experience(400))
+                .rewards(AdvancementRewards.Builder.experience(200))
                 .rewards(AdvancementRewards.Builder.loot(advancementReward("all_flowers")))
                 .requirements(RequirementsStrategy.AND)
                 .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "all_flowers"), existingFileHelper);
+
+        //Rotten path
+        Advancement any_rotten_crop = Advancement.Builder.advancement()
+                .parent(root)
+                .display(taskDisplayInfo(Items.POISONOUS_POTATO, "any_rotten_crop"))
+                .addCriterion("has_any_rotten_crop", hasItems(HAS_ANY_ROTTEN_CROP))
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, "any_rotten_crop"), existingFileHelper);
+
+        Advancement rotten_stew = Advancement.Builder.advancement()
+                .parent(any_rotten_crop)
+                .display(challengeDisplayInfo(EPItems.ROTTEN_STEW.get(), "rotten_stew"))
+                .addCriterion("has_rotten_stew", hasItems(EPItems.ROTTEN_STEW.get()))
+                .rewards(AdvancementRewards.Builder.experience(116))
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, "rotten_stew"), existingFileHelper);
     }
 
     @Override

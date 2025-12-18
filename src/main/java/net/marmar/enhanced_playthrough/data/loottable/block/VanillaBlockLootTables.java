@@ -29,6 +29,9 @@ public class VanillaBlockLootTables extends BlockLootSubProvider implements Bloc
         this.add(Blocks.FERN, block -> createPlantDrops(Blocks.FERN));
         this.add(Blocks.LARGE_FERN, block -> createPlantDrops(Blocks.LARGE_FERN));
 
+        this.add(Blocks.CARROTS, block -> createCropWithRotDrops(Items.CARROT, EPItems.ROTTEN_CARROT.get(),
+                Items.CARROT, CARROT_BUILDER));
+
         //Terracotta
         this.add(Blocks.TERRACOTTA, block -> createTerracottaDrops(Blocks.TERRACOTTA, EPItems.TERRACOTTA_SHARD.get()));
         this.add(Blocks.WHITE_TERRACOTTA, block -> createTerracottaDrops(Blocks.WHITE_TERRACOTTA, EPItems.WHITE_TERRACOTTA_SHARD.get()));
@@ -122,6 +125,8 @@ public class VanillaBlockLootTables extends BlockLootSubProvider implements Bloc
         block == Blocks.OAK_LEAVES ||
         block == Blocks.GRASS || block == Blocks.TALL_GRASS ||
         block == Blocks.FERN || block == Blocks.LARGE_FERN ||
+
+        block == Blocks.CARROTS ||
 
         block == Blocks.STONE || block == Blocks.COBBLESTONE ||
         block == Blocks.DEEPSLATE || block == Blocks.COBBLED_DEEPSLATE ||
