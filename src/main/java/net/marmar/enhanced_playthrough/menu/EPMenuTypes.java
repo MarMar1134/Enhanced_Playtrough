@@ -1,6 +1,7 @@
 package net.marmar.enhanced_playthrough.menu;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
+import net.marmar.enhanced_playthrough.menu.alchemicalduplicator.AlchemicalDuplicatorMenu;
 import net.marmar.enhanced_playthrough.menu.alloyfurnace.AdobeAlloyFurnaceMenu;
 import net.marmar.enhanced_playthrough.menu.alloyfurnace.SoulAlloyFurnaceMenu;
 import net.marmar.enhanced_playthrough.menu.alloyfurnace.SuperAlloyFurnaceMenu;
@@ -45,6 +46,9 @@ public class EPMenuTypes {
             registerMenuType("primal_grinder_menu", PrimalGrinderMenu::new);
     public static final RegistryObject<MenuType<MechanicalGrinderMenu>> MECHANICAL_GRINDER_MENU =
             registerMenuType("mechanical_grinder_menu", MechanicalGrinderMenu::new);
+
+    public static final RegistryObject<MenuType<AlchemicalDuplicatorMenu>> ALCHEMICAL_DUPLICATOR_MENU =
+            registerMenuType("alchemical_duplicator_menu", AlchemicalDuplicatorMenu::new);
 
     //Register methods
     private static <T extends AbstractContainerMenu> RegistryObject<MenuType<T>> registerMenuType(String name, IContainerFactory<T> factory) {

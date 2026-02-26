@@ -1,0 +1,10 @@
+{
+  "type": "enhanced_playthrough:alchemical_duplicating",
+  "input": {
+    "item": "enhanced_playthrough:raw_tin"
+  },
+  "output": {
+    "item": "enhanced_playthrough:tin_ingot"
+  },
+  "xp": 0.3
+}

@@ -1,0 +1,10 @@
+{
+  "type": "enhanced_playthrough:alchemical_duplicating",
+  "input": {
+    "item": "minecraft:raw_copper"
+  },
+  "output": {
+    "item": "minecraft:copper_ingot"
+  },
+  "xp": 0.3
+}

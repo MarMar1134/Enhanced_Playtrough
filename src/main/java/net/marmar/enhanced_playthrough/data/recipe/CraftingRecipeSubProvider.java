@@ -134,21 +134,21 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
         //Vegetable fibber
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EPItems.PLANT_FIBER.get())
                 .requires(EPItems.REEDS_HEAD.get(), 2)
-                .group("vegetable_fiber")
+                .group("plant_fiber")
                 .unlockedBy(getHasName(EPItems.REEDS_HEAD.get()), has(EPItems.REEDS_HEAD.get()))
                 .unlockedBy(getHasName(EPItems.PLANT_FIBER.get()), has(EPItems.PLANT_FIBER.get()))
                 .save(consumer, recipeName(EPItems.PLANT_FIBER.get(), "from_reeds_head"));
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EPItems.PLANT_FIBER.get(), 2)
                 .requires(EPItems.TALL_REEDS_HEAD.get(), 2)
-                .group("vegetable_fiber")
+                .group("plant_fiber")
                 .unlockedBy(getHasName(EPItems.TALL_REEDS_HEAD.get()), has(EPItems.TALL_REEDS_HEAD.get()))
                 .unlockedBy(getHasName(EPItems.PLANT_FIBER.get()), has(EPItems.PLANT_FIBER.get()))
                 .save(consumer, recipeName(EPItems.PLANT_FIBER.get(), "from_tall_reeds_head"));
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EPItems.PLANT_FIBER.get())
                 .requires(EPItems.WATER_REEDS_HEAD.get(), 4)
-                .group("vegetable_fiber")
+                .group("plant_fiber")
                 .unlockedBy(getHasName(EPItems.WATER_REEDS_HEAD.get()), has(EPItems.WATER_REEDS_HEAD.get()))
                 .unlockedBy(getHasName(EPItems.PLANT_FIBER.get()), has(EPItems.PLANT_FIBER.get()))
                 .save(consumer, recipeName(EPItems.PLANT_FIBER.get(), "from_water_reeds_head"));
@@ -406,6 +406,16 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .define('S', Items.STONE)
                 .unlockedBy(getHasName(Items.REDSTONE), has(Items.REDSTONE))
                 .unlockedBy(getHasName(EPBlocks.GROWTH_DETECTOR.get()), has(EPBlocks.GROWTH_DETECTOR.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, EPBlocks.ALCHEMICAL_DUPLICATOR.get())
+                .pattern("BBB")
+                .pattern("L L")
+                .pattern("BBB")
+                .define('B', EPItems.BRONZIUM_INGOT.get())
+                .define('L', Items.BLAZE_ROD)
+                .unlockedBy("has_alchemical_duplicator", has(EPBlocks.ALCHEMICAL_DUPLICATOR.get()))
+                .unlockedBy("has_materials", HAS_MATERIALS_FOR_DUPLICATOR())
                 .save(consumer);
 
         //Equipment recipes
@@ -845,6 +855,10 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
         return InventoryChangeTrigger.TriggerInstance.hasItems(EPItems.ROTTEN_TOMATO.get(),
                 EPItems.ROTTEN_ZAPALLO.get(), EPItems.ROTTEN_EGGPLANT.get(), EPItems.ROTTEN_CORN.get(),
                 EPItems.ROTTEN_CARROT.get(), Items.POISONOUS_POTATO);
+    }
+
+    protected static InventoryChangeTrigger.TriggerInstance HAS_MATERIALS_FOR_DUPLICATOR(){
+        return InventoryChangeTrigger.TriggerInstance.hasItems(EPItems.BRONZIUM_INGOT.get(), Items.BLAZE_ROD);
     }
 
     protected static void materialRecipes(ItemLike pIngot, Block pBlock, Consumer<FinishedRecipe> pConsumer){

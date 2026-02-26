@@ -687,7 +687,8 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                 EPTags.Items.ALLOY_INGREDIENT,
                 EPTags.Items.BLAST_ALLOY_INGREDIENT,
                 EPTags.Items.PRIMAL_GRIND_INGREDIENT,
-                EPTags.Items.MECHANICAL_GRIND_INGREDIENT
+                EPTags.Items.MECHANICAL_GRIND_INGREDIENT,
+                EPTags.Items.ALCHEMICAL_DUPLICATING_INGREDIENT
         );
 
         this.tag(EPTags.Items.BASIC_SMELT_INGREDIENT).add(
@@ -828,6 +829,16 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                         Items.LAPIS_LAZULI,
                         Items.PEONY
                 );
+
+        this.tag(EPTags.Items.ALCHEMICAL_DUPLICATING_INGREDIENT).add(
+                Items.RAW_COPPER,
+                EPItems.RAW_ZINC.get(),
+                EPItems.RAW_TIN.get(),
+                Items.RAW_IRON,
+                EPItems.RAW_SILVER.get(),
+                Items.RAW_GOLD,
+                EPItems.RAW_ALUMINUM.get()
+        );
     }
 
     private void addManufacturableTags(){

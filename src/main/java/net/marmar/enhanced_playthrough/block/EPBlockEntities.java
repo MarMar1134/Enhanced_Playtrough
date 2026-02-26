@@ -1,6 +1,7 @@
 package net.marmar.enhanced_playthrough.block;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
+import net.marmar.enhanced_playthrough.block.custom.alchemicalduplicator.AlchemicalDuplicatorBlockEntity;
 import net.marmar.enhanced_playthrough.block.custom.alloyfurnace.entity.AdobeAlloyFurnaceBlockEntity;
 import net.marmar.enhanced_playthrough.block.custom.alloyfurnace.entity.SoulAlloyFurnaceBlockEntity;
 import net.marmar.enhanced_playthrough.block.custom.alloyfurnace.entity.SuperAlloyFurnaceBlockEntity;
@@ -54,6 +55,10 @@ public class EPBlockEntities {
     public static final RegistryObject<BlockEntityType<MechanicalGrinderBlockEntity>> MECHANICAL_GRINDER_BLOCK_ENTITY =
             BLOCK_ENTITIES.register("mechanical_grinder_block", () -> BlockEntityType
                     .Builder.of(MechanicalGrinderBlockEntity::new, EPBlocks.MECHANICAL_GRINDER.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<AlchemicalDuplicatorBlockEntity>> ALCHEMICAL_DUPLICATOR_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("alchemical_duplicator_block", () -> BlockEntityType
+                    .Builder.of(AlchemicalDuplicatorBlockEntity::new, EPBlocks.ALCHEMICAL_DUPLICATOR.get()).build(null));
 
     //Signs
     public static final RegistryObject<BlockEntityType<EPSignBlockEntity>> SIGN_BLOCK_ENTITY =

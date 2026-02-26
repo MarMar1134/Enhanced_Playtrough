@@ -14,7 +14,7 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraftforge.items.SlotItemHandler;
 import org.jetbrains.annotations.NotNull;
 
-public class PrimalGrinderMenu extends AbstractContainerMenu{
+public class PrimalGrinderMenu extends AbstractContainerMenu {
     public final PrimalGrinderBlockEntity blockEntity;
     private final Level level;
     private final ContainerData data;
@@ -23,6 +23,7 @@ public class PrimalGrinderMenu extends AbstractContainerMenu{
         this(containerID, inv, inv.player.level().getBlockEntity(extraData.readBlockPos()),
                 new SimpleContainerData(4));
     }
+
     public PrimalGrinderMenu(int containerID, Inventory inv, BlockEntity entity, ContainerData data){
         super(EPMenuTypes.PRIMAL_GRINDER_MENU.get(), containerID);
         blockEntity = ((PrimalGrinderBlockEntity) entity);

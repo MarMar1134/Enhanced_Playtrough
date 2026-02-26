@@ -23,5 +23,8 @@ public class EPRecipeProvider extends RecipeProvider {
 
         //Shaped and shapeless recipes
         CraftingRecipeSubProvider.addCraftingRecipes(consumer);
+
+        //Item duplication via alchemy and magic
+        AlchemicalDuplicatingSubProvider.addAlchemicalDuplicatingRecipes(consumer);
     }
 }

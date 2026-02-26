@@ -71,6 +71,12 @@ public class EPRecipes {
         public static final RegistryObject<RecipeType<MechanicalGrindRecipe>> MECHANICAL_GRIND_TYPE =
                 RECIPE_TYPE.register("mechanical_grinding", () -> MechanicalGrindRecipe.Type.INSTANCE);
 
+        //Alchemical dupping
+        public static final RegistryObject<RecipeSerializer<AlchemicalDuplicatingRecipe>> ALCHEMICAL_DUPLICATING_SERIALIZER =
+                RECIPE_SERIALIZER.register("alchemical_duplicating", () -> AlchemicalDuplicatingRecipe.Serializer.INSTANCE);
+        public static final RegistryObject<RecipeType<AlchemicalDuplicatingRecipe>> ALCHEMICAL_DUPLICATING_TYPE =
+                RECIPE_TYPE.register("alchemical_duplicating", () -> AlchemicalDuplicatingRecipe.Type.INSTANCE);
+
     public static void register(IEventBus eventBus){
         EnhancedPlaythrough.LOGGER.info("Registering Enhanced Playthrough recipe serializers...");
         RECIPE_SERIALIZER.register(eventBus);

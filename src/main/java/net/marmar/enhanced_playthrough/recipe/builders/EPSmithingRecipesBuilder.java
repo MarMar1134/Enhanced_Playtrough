@@ -1,4 +1,4 @@
-package net.marmar.enhanced_playthrough.recipe.recipebuilder;
+package net.marmar.enhanced_playthrough.recipe.builders;
 
 import com.google.gson.JsonObject;
 import net.minecraft.advancements.Advancement;

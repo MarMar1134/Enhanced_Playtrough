@@ -130,6 +130,7 @@ public class EPTags {
         public static final TagKey<Item> BLAST_ALLOY_INGREDIENT = ingredientTag("blast_alloy");
         public static final TagKey<Item> PRIMAL_GRIND_INGREDIENT = ingredientTag("primal_grind");
         public static final TagKey<Item> MECHANICAL_GRIND_INGREDIENT = ingredientTag("mechanical_grind");
+        public static final TagKey<Item> ALCHEMICAL_DUPLICATING_INGREDIENT = ingredientTag("alchemical_duplicating");
 
         //Manufacturable goods (for dusts and nuggets)
         public static final TagKey<Item> MANUFACTURABLE = itemTag("manufacturable");

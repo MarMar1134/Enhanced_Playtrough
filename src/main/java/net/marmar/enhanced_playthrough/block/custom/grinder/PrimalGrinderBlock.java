@@ -80,9 +80,9 @@ public class PrimalGrinderBlock extends BaseEntityBlock implements EntityBlock {
     @Override
     public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
         if (!pLevel.isClientSide()) {
-            BlockEntity entity = pLevel.getBlockEntity(pPos);
-            if(entity instanceof PrimalGrinderBlockEntity) {
-                NetworkHooks.openScreen(((ServerPlayer)pPlayer), (PrimalGrinderBlockEntity)entity, pPos);
+            BlockEntity blockEntity = pLevel.getBlockEntity(pPos);
+            if(blockEntity instanceof PrimalGrinderBlockEntity primalGrinder) {
+                NetworkHooks.openScreen(((ServerPlayer)pPlayer), primalGrinder, pPos);
             } else {
                 throw new IllegalStateException("Our Container provider is missing!");
             }

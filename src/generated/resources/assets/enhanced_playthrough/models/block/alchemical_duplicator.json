@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "bottom": "enhanced_playthrough:block/alchemical_duplicator_bottom",
+    "front": "enhanced_playthrough:block/alchemical_duplicator_front",
+    "side": "enhanced_playthrough:block/alchemical_duplicator_side",
+    "top": "enhanced_playthrough:block/alchemical_duplicator_back"
+  }
+}

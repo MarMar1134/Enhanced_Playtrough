@@ -393,6 +393,7 @@ public class EnglishLangProvider extends AbstractLangProvider {
             addBlock(EPBlocks.GEM_POLISHER, "Gem polisher");
             addBlock(EPBlocks.PRIMAL_GRINDER, "Grinder");
             addBlock(EPBlocks.MECHANICAL_GRINDER, "Mechanical grinder");
+            addBlock(EPBlocks.ALCHEMICAL_DUPLICATOR, "Alchemical duplicator");
             addBlock(EPBlocks.GROWTH_DETECTOR, "Crops growth detector");
 
         //Items

@@ -2,7 +2,7 @@ package net.marmar.enhanced_playthrough.data.recipe;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.item.EPItems;
-import net.marmar.enhanced_playthrough.recipe.recipebuilder.AlloyRecipeBuilder;
+import net.marmar.enhanced_playthrough.recipe.builders.AlloyRecipeBuilder;
 import net.marmar.enhanced_playthrough.recipe.recipecategory.AlloyRecipeCategory;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.data.PackOutput;

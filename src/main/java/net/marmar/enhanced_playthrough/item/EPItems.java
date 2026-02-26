@@ -303,9 +303,9 @@ public class EPItems {
 
         //Tools
         public static final RegistryObject<Item> FLINT_AND_COBBLE = ITEMS.register(
-                "flint_and_cobble", ()-> new FlintAndSteelItem(new Item.Properties().defaultDurability(16)));
+                "flint_and_cobble", ()-> new FlintAndSteelItem(new Item.Properties().defaultDurability(1)));
         public static final RegistryObject<Item> FLINT_AND_BRONZE = ITEMS.register(
-                "flint_and_bronze", ()-> new FlintAndSteelItem(new Item.Properties().defaultDurability(32)));
+                "flint_and_bronze", ()-> new FlintAndSteelItem(new Item.Properties().defaultDurability(16)));
 
         //Wood
         public static final RegistryObject<Item> WOODEN_DAGGER = ITEMS.register(

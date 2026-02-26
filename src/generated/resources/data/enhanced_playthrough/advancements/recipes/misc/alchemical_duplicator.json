@@ -1,0 +1,53 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_alchemical_duplicator": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:alchemical_duplicator"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_materials": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:bronzium_ingot"
+            ]
+          },
+          {
+            "items": [
+              "minecraft:blaze_rod"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "enhanced_playthrough:alchemical_duplicator"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_alchemical_duplicator",
+      "has_materials",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "enhanced_playthrough:alchemical_duplicator"
+    ]
+  },
+  "sends_telemetry_event": false
+}

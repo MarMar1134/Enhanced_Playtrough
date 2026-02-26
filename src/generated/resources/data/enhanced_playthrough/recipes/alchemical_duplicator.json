@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "enhanced_playthrough:bronzium_ingot"
+    },
+    "L": {
+      "item": "minecraft:blaze_rod"
+    }
+  },
+  "pattern": [
+    "BBB",
+    "L L",
+    "BBB"
+  ],
+  "result": {
+    "item": "enhanced_playthrough:alchemical_duplicator"
+  },
+  "show_notification": true
+}

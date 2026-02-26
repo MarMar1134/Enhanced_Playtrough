@@ -1,0 +1,50 @@
+{
+  "variants": {
+    "facing=down,lit=false": {
+      "model": "enhanced_playthrough:block/alchemical_duplicator",
+      "y": 270
+    },
+    "facing=down,lit=true": {
+      "model": "enhanced_playthrough:block/alchemical_duplicator_lit",
+      "y": 270
+    },
+    "facing=east,lit=false": {
+      "model": "enhanced_playthrough:block/alchemical_duplicator",
+      "y": 270
+    },
+    "facing=east,lit=true": {
+      "model": "enhanced_playthrough:block/alchemical_duplicator_lit",
+      "y": 270
+    },
+    "facing=north,lit=false": {
+      "model": "enhanced_playthrough:block/alchemical_duplicator",
+      "y": 180
+    },
+    "facing=north,lit=true": {
+      "model": "enhanced_playthrough:block/alchemical_duplicator_lit",
+      "y": 180
+    },
+    "facing=south,lit=false": {
+      "model": "enhanced_playthrough:block/alchemical_duplicator"
+    },
+    "facing=south,lit=true": {
+      "model": "enhanced_playthrough:block/alchemical_duplicator_lit"
+    },
+    "facing=up,lit=false": {
+      "model": "enhanced_playthrough:block/alchemical_duplicator",
+      "y": 270
+    },
+    "facing=up,lit=true": {
+      "model": "enhanced_playthrough:block/alchemical_duplicator_lit",
+      "y": 270
+    },
+    "facing=west,lit=false": {
+      "model": "enhanced_playthrough:block/alchemical_duplicator",
+      "y": 90
+    },
+    "facing=west,lit=true": {
+      "model": "enhanced_playthrough:block/alchemical_duplicator_lit",
+      "y": 90
+    }
+  }
+}

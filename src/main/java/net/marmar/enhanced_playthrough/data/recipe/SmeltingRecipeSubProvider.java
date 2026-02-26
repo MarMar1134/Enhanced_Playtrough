@@ -4,7 +4,7 @@ import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.block.EPBlocks;
 import net.marmar.enhanced_playthrough.data.tag.EPTags;
 import net.marmar.enhanced_playthrough.item.EPItems;
-import net.marmar.enhanced_playthrough.recipe.recipebuilder.EPSmeltingRecipeBuilder;
+import net.marmar.enhanced_playthrough.recipe.builders.EPSmeltingRecipeBuilder;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeCategory;
@@ -20,7 +20,6 @@ import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
 
-import java.util.List;
 import java.util.function.Consumer;
 
 public class SmeltingRecipeSubProvider extends RecipeProvider {

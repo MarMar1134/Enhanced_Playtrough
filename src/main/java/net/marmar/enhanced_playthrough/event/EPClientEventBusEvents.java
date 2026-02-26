@@ -13,6 +13,7 @@ import net.marmar.enhanced_playthrough.entity.projectile.model.AluminumArrowRend
 import net.marmar.enhanced_playthrough.entity.skeletonbowmaster.model.SkeletonBowmasterRenderer;
 import net.marmar.enhanced_playthrough.entity.zombieknight.model.ZombieKnightRenderer;
 import net.marmar.enhanced_playthrough.menu.EPMenuTypes;
+import net.marmar.enhanced_playthrough.menu.screen.alchemicalduplicator.AlchemicalDuplicatorScreen;
 import net.marmar.enhanced_playthrough.menu.screen.alloyfurnace.AdobeAlloyFurnaceScreen;
 import net.marmar.enhanced_playthrough.menu.screen.alloyfurnace.SoulAlloyScreen;
 import net.marmar.enhanced_playthrough.menu.screen.alloyfurnace.SuperAlloyFurnaceScreen;
@@ -129,6 +130,8 @@ public class EPClientEventBusEvents {
 
         MenuScreens.register(EPMenuTypes.PRIMAL_GRINDER_MENU.get(), PrimalGrinderScreen::new);
         MenuScreens.register(EPMenuTypes.MECHANICAL_GRINDER_MENU.get(), MechanicalGrinderScreen::new);
+
+        MenuScreens.register(EPMenuTypes.ALCHEMICAL_DUPLICATOR_MENU.get(), AlchemicalDuplicatorScreen::new);
     }
 
     @SubscribeEvent

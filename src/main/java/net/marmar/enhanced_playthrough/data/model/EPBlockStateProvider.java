@@ -2,6 +2,7 @@ package net.marmar.enhanced_playthrough.data.model;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.block.EPBlocks;
+import net.marmar.enhanced_playthrough.block.custom.alchemicalduplicator.AlchemicalDuplicatorBlock;
 import net.marmar.enhanced_playthrough.block.custom.crop.*;
 import net.marmar.enhanced_playthrough.block.custom.epfurnace.AbstractEPFurnaceBlock;
 import net.marmar.enhanced_playthrough.block.custom.epfurnace.MasonryFurnaceBlock;
@@ -175,10 +176,12 @@ public class EPBlockStateProvider extends BlockStateProvider {
         furnaceBlock(EPBlocks.SUPER_ALLOY_FURNACE);
         furnaceBlock(EPBlocks.SOUL_ALLOY_FURNACE);
 
-        simpleBlockWithItem(EPBlocks.GEM_POLISHER.get(), new ModelFile.UncheckedModelFile(modLoc("block/gem_polisher")));
+       // simpleBlockWithItem(EPBlocks.GEM_POLISHER.get(), new ModelFile.UncheckedModelFile(modLoc("block/gem_polisher")));
 
         grinderBlock(EPBlocks.PRIMAL_GRINDER);
         grinderBlock(EPBlocks.MECHANICAL_GRINDER);
+
+        alchemicalDuplicatorBlock(EPBlocks.ALCHEMICAL_DUPLICATOR);
 
         //Wood
             //walnut
@@ -560,6 +563,29 @@ public class EPBlockStateProvider extends BlockStateProvider {
         Function<BlockState, ConfiguredModel[]> model = blockState -> grinderModel(blockState, pBlock);
 
         getVariantBuilder(pBlock.get()).forAllStates(model);
+    }
+
+    protected ConfiguredModel[] alchemicalDuplicatorModel(BlockState state, RegistryObject<Block> alchemicalDuplicator){
+        String path = ForgeRegistries.BLOCKS.getKey(alchemicalDuplicator.get()).getPath();
+
+        ModelFile blockModels = models().orientableWithBottom(
+                state.getValue(AlchemicalDuplicatorBlock.LIT) ? path + "_lit" : path,
+                modLoc("block/" + path + "_side"),
+                state.getValue(AlchemicalDuplicatorBlock.LIT) ? modLoc("block/" + path + "_front_lit") :
+                        modLoc("block/" + path + "_front"),
+                modLoc("block/" + path + "_bottom"),
+                modLoc("block/" + path + "_back")
+        );
+
+        return ConfiguredModel.builder().modelFile(blockModels)
+                .rotationY((int) state.getValue(FACING).toYRot())
+                .build();
+    }
+
+    public void alchemicalDuplicatorBlock(RegistryObject<Block> alchemicalDuplicator){
+        Function<BlockState, ConfiguredModel[]> model = blockState -> alchemicalDuplicatorModel(blockState, alchemicalDuplicator);
+
+        getVariantBuilder(alchemicalDuplicator.get()).forAllStates(model);
     }
 
     protected ConfiguredModel[] doublePlantWithAgeModel(BlockState state, DoublePlantGrowingHeadBlock pBlock){

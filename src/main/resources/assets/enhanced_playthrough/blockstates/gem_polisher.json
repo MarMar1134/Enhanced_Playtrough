@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "enhanced_playthrough:block/gem_polisher",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "enhanced_playthrough:block/gem_polisher",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "enhanced_playthrough:block/gem_polisher"
+    },
+    "facing=west": {
+      "model": "enhanced_playthrough:block/gem_polisher",
+      "y": 90
+    }
+  }
+}

@@ -61,15 +61,15 @@ public class GrowthDetectorBlockEntity extends BlockEntity {
     }
 
     public void tick(Level pLevel, BlockPos pPos, BlockState pState){
-        int i = calculateOutputSignal(pLevel, pPos, pState);
+        int currentPower = calculateOutputSignal(pLevel, pPos, pState);
 
-        pState = pState.setValue(POWER, i);
+        pState = pState.setValue(POWER, currentPower);
 
-        setOutputSignal(i);
+        setOutputSignal(currentPower);
         pLevel.setBlock(pPos, pState, 1);
         sendUpdate();
 
-        if (i != 0){
+        if (currentPower != 0){
             pState = pState.setValue(POWERED, true);
         } else {
             pState = pState.setValue(POWERED, false);

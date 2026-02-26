@@ -196,10 +196,14 @@ public class EPItemModelProvider extends ItemModelProvider {
         blockWithItem(EPBlocks.SUPER_ALLOY_FURNACE);
         blockWithItem(EPBlocks.SOUL_ALLOY_FURNACE);
 
+        simpleBlockItem(EPBlocks.GEM_POLISHER);
+
         blockWithItem(EPBlocks.PRIMAL_GRINDER);
         blockWithItem(EPBlocks.MECHANICAL_GRINDER);
 
         simpleBlockItem(EPBlocks.GROWTH_DETECTOR);
+
+        blockWithItem(EPBlocks.ALCHEMICAL_DUPLICATOR);
 
         //Food
         simpleItem(EPItems.ROTTEN_CARROT);

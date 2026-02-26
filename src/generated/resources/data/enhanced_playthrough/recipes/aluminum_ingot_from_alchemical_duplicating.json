@@ -1,0 +1,10 @@
+{
+  "type": "enhanced_playthrough:alchemical_duplicating",
+  "input": {
+    "item": "enhanced_playthrough:raw_aluminum"
+  },
+  "output": {
+    "item": "enhanced_playthrough:aluminum_ingot"
+  },
+  "xp": 0.6
+}

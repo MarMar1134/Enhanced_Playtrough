@@ -1,6 +1,7 @@
 package net.marmar.enhanced_playthrough.block;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
+import net.marmar.enhanced_playthrough.block.custom.alchemicalduplicator.AlchemicalDuplicatorBlock;
 import net.marmar.enhanced_playthrough.block.custom.plant.DesertFlowerBlock;
 import net.marmar.enhanced_playthrough.block.custom.plant.DoublePlantGrowingHeadBlock;
 import net.marmar.enhanced_playthrough.block.custom.plant.TallReedsBlock;
@@ -460,6 +461,10 @@ public class EPBlocks {
         //Growth detector
         public static final RegistryObject<Block> GROWTH_DETECTOR = registerBlockWithItem("growth_detector",
                 () -> new GrowthDetectorBlock(BlockBehaviour.Properties.copy(Blocks.COMPARATOR).noOcclusion()));
+
+        //Alchemical duplicator
+        public static final RegistryObject<Block> ALCHEMICAL_DUPLICATOR = registerBlockWithItem("alchemical_duplicator",
+                () -> new AlchemicalDuplicatorBlock(BlockBehaviour.Properties.copy(Blocks.NETHER_BRICKS)));
 
     //Crops
     public static final RegistryObject<Block> YERBA_MATE_CROP = BLOCKS.register("yerba_mate_crop",

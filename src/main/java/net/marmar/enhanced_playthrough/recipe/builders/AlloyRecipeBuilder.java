@@ -1,4 +1,4 @@
-package net.marmar.enhanced_playthrough.recipe.recipebuilder;
+package net.marmar.enhanced_playthrough.recipe.builders;
 
 import net.marmar.enhanced_playthrough.recipe.EPRecipes;
 import com.google.gson.JsonArray;

@@ -382,6 +382,8 @@ public class EPBlockLootTables extends BlockLootSubProvider implements BlockLoot
         this.dropSelf(EPBlocks.PRIMAL_GRINDER.get());
         this.dropSelf(EPBlocks.MECHANICAL_GRINDER.get());
 
+        this.dropSelf(EPBlocks.ALCHEMICAL_DUPLICATOR.get());
+
         this.dropSelf(EPBlocks.GROWTH_DETECTOR.get());
     }
 
