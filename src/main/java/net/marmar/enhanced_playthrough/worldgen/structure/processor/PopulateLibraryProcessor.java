@@ -29,7 +29,8 @@ public class PopulateLibraryProcessor extends StructureProcessor {
 
     public StructureTemplate.StructureBlockInfo processChiseledBookshelf(StructureTemplate.StructureBlockInfo pOriginal, StructureTemplate.StructureBlockInfo pProcessed, StructurePlaceSettings pPlaceSettings) {
         NonNullList<ItemStack> items = NonNullList.withSize(6, ItemStack.EMPTY); //Inventory of the Chiseled Bookshelf
-        RandomSource random = pPlaceSettings.getRandom(pOriginal.pos());
+
+        RandomSource random = RandomSource.create(pProcessed.pos().asLong() ^ pPlaceSettings.getRandom(pProcessed.pos()).nextLong());
 
         int rolls = 1 + random.nextInt(5); //Number of tries made to insert a book on the block's inventory.
 

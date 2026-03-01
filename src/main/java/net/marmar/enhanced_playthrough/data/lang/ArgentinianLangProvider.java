@@ -35,6 +35,7 @@ public class ArgentinianLangProvider extends AbstractLangProvider {
         addJeiCategory("gem_polisher", "Pulido de gemas");
         addJeiCategory("primal_grinder", "Molienda");
         addJeiCategory("mechanical_grinder", "Molienda mecánizada");
+        addJeiCategory("alchemical_duplicator", "Duplicación alquimica");
 
         addJeiItemDesc("plant_fiber", "Material usado en la fabricación de distintos objetos." +
                 "\nSirve como reemplazo del hilo tradicional, y se fabrica con plantas altas en fibra.");
@@ -63,6 +64,8 @@ public class ArgentinianLangProvider extends AbstractLangProvider {
         this.add("jade." + EnhancedPlaythrough.MOD_ID + ".gem_polisher_uses", "Usos restantes: %d");
 
         addJadeConfigTranslation("grinder", "Molienda");
+
+        addJadeConfigTranslation("alchemical_duplicator", "Duplicación alquimica");
 
         //GUI elements
         addGuiElements("gem_polisher_screen", "Usos");

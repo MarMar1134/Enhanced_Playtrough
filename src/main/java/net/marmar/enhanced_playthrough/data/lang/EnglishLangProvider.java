@@ -35,6 +35,7 @@ public class EnglishLangProvider extends AbstractLangProvider {
         addJeiCategory("gem_polisher", "Gem polishing");
         addJeiCategory("primal_grinder", "Basic grinding");
         addJeiCategory("mechanical_grinder", "Mechanical grinding");
+        addJeiCategory("alchemical_duplicator", "Alchemical duplication");
 
         addJeiItemDesc("plant_fiber", "Syntetic material, made out of heads from fibrose plants." +
                 "\nWorks as replacement of traditional String.");
@@ -62,6 +63,8 @@ public class EnglishLangProvider extends AbstractLangProvider {
         this.add("jade." + EnhancedPlaythrough.MOD_ID + ".gem_polisher_uses", "Uses left: %d");
 
         addJadeConfigTranslation("grinder", "Grinder");
+
+        addJadeConfigTranslation("alchemical_duplicator", "Alchemical duplication");
 
         //GUI elements
         addGuiElements("gem_polisher_screen", "Uses");

@@ -163,6 +163,14 @@ public class AlchemicalDuplicatorBlockEntity extends BlockEntity implements Menu
         return super.getCapability(cap, side);
     }
 
+    public int getProgress(){
+        return this.progress;
+    }
+
+    public int getMaxProgress(){
+        return this.maxProgress;
+    }
+
     public void drops(){
         SimpleContainer inv = new SimpleContainer(7);
 

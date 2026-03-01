@@ -1,6 +1,8 @@
 package net.marmar.enhanced_playthrough.compat.jade;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
+import net.marmar.enhanced_playthrough.block.custom.alchemicalduplicator.AlchemicalDuplicatorBlock;
+import net.marmar.enhanced_playthrough.block.custom.alchemicalduplicator.AlchemicalDuplicatorBlockEntity;
 import net.marmar.enhanced_playthrough.block.custom.alloyfurnace.AbstractAlloyFurnaceBlock;
 import net.marmar.enhanced_playthrough.block.custom.alloyfurnace.entity.AbstractAlloyFurnaceBlockEntity;
 import net.marmar.enhanced_playthrough.block.custom.epfurnace.AbstractEPFurnaceBlock;
@@ -24,6 +26,7 @@ public class EnhancedPlaythroughJadePlugin implements IWailaPlugin {
     public static final ResourceLocation ALLOY_FURNACE = new ResourceLocation(EnhancedPlaythrough.MOD_ID,"alloy_furnace");
     public static final ResourceLocation GEM_POLISHER = new ResourceLocation(EnhancedPlaythrough.MOD_ID,"gem_polisher");
     public static final ResourceLocation GRINDER = new ResourceLocation(EnhancedPlaythrough.MOD_ID,"grinder");
+    public static final ResourceLocation ALCHEMICAL_DUPLICATOR = new ResourceLocation(EnhancedPlaythrough.MOD_ID, "alchemical_duplicator");
 
     @Override
     public void register(IWailaCommonRegistration registration) {
@@ -32,6 +35,7 @@ public class EnhancedPlaythroughJadePlugin implements IWailaPlugin {
         registration.registerBlockDataProvider(GemPolisherComponentProvider.INSTANCE, GemPolisherBlockEntity.class);
         registration.registerBlockDataProvider(GrinderComponentProvider.INSTANCE, PrimalGrinderBlockEntity.class);
         registration.registerBlockDataProvider(MechanicalGrinderComponentProvider.INSTANCE, MechanicalGrinderBlockEntity.class);
+        registration.registerBlockDataProvider(AlchemicalDuplicatorComponentProvider.INSTANCE, AlchemicalDuplicatorBlockEntity.class);
     }
 
     @Override
@@ -41,5 +45,6 @@ public class EnhancedPlaythroughJadePlugin implements IWailaPlugin {
         registration.registerBlockComponent(GemPolisherComponentProvider.INSTANCE, GemPolisherBlock.class);
         registration.registerBlockComponent(GrinderComponentProvider.INSTANCE, PrimalGrinderBlock.class);
         registration.registerBlockComponent(MechanicalGrinderComponentProvider.INSTANCE, MechanicalGrinderBlock.class);
+        registration.registerBlockComponent(AlchemicalDuplicatorComponentProvider.INSTANCE, AlchemicalDuplicatorBlock.class);
     }
 }

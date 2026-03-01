@@ -30,7 +30,7 @@ import static net.minecraft.world.level.block.state.properties.BlockStatePropert
 
 public class AlchemicalDuplicatorBlock extends BaseEntityBlock implements EntityBlock {
     public static BooleanProperty LIT;
-    protected static final VoxelShape SHAPE = Block.box(0,0,0,32,16,16);
+    protected static final VoxelShape SHAPE = Block.box(0,0,0,16,16,16);
 
     public AlchemicalDuplicatorBlock(Properties pProperties) {
         super(pProperties);

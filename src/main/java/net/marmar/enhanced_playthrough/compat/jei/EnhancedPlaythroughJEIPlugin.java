@@ -3,6 +3,7 @@ package net.marmar.enhanced_playthrough.compat.jei;
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.compat.jei.category.*;
 import net.marmar.enhanced_playthrough.item.EPItems;
+import net.marmar.enhanced_playthrough.menu.screen.alchemicalduplicator.AlchemicalDuplicatorScreen;
 import net.marmar.enhanced_playthrough.menu.screen.alloyfurnace.AdobeAlloyFurnaceScreen;
 import net.marmar.enhanced_playthrough.menu.screen.alloyfurnace.SuperAlloyFurnaceScreen;
 import net.marmar.enhanced_playthrough.menu.screen.modfurnace.AdobeFurnaceScreen;
@@ -11,6 +12,7 @@ import net.marmar.enhanced_playthrough.menu.screen.gempolisher.GemPolisherScreen
 import net.marmar.enhanced_playthrough.menu.screen.grinder.MechanicalGrinderScreen;
 import net.marmar.enhanced_playthrough.menu.screen.grinder.PrimalGrinderScreen;
 import net.marmar.enhanced_playthrough.menu.screen.modfurnace.MasonryFurnaceScreen;
+import net.marmar.enhanced_playthrough.recipe.AlchemicalDuplicatingRecipe;
 import net.marmar.enhanced_playthrough.recipe.GemPolishingRecipe;
 import net.marmar.enhanced_playthrough.recipe.epsmelting.MasonrySmeltingRecipe;
 import net.marmar.enhanced_playthrough.recipe.grind.MechanicalGrindRecipe;
@@ -129,6 +131,7 @@ public class EnhancedPlaythroughJEIPlugin implements IModPlugin {
         List<MasonrySmeltingRecipe> masonrySmeltingRecipes = recipeManager.getAllRecipesFor(EPRecipes.MASONRY_SMELT_TYPE.get());
         registration.addRecipes(MasonrySmeltingCategory.MASONRY_SMELTING_TYPE, masonrySmeltingRecipes);
 
+
         //Alloying
         List<AlloyRecipe> alloyingRecipes = recipeManager.getAllRecipesFor(EPRecipes.ALLOY_TYPE.get());
         registration.addRecipes(OreAlloyingCategory.ALLOYING_FURNACE_RECIPE_RECIPE_TYPE, alloyingRecipes);
@@ -146,6 +149,10 @@ public class EnhancedPlaythroughJEIPlugin implements IModPlugin {
 
         List<MechanicalGrindRecipe> mechanicalGrindRecipes = recipeManager.getAllRecipesFor(EPRecipes.MECHANICAL_GRIND_TYPE.get());
         registration.addRecipes(MechanicalGrindCategory.GRINDING_RECIPE_RECIPE_TYPE, mechanicalGrindRecipes);
+
+        //Alchemical duplicating
+        List<AlchemicalDuplicatingRecipe> alchemicalDuplicatingRecipes = recipeManager.getAllRecipesFor(EPRecipes.ALCHEMICAL_DUPLICATING_TYPE.get());
+        registration.addRecipes(AlchemicalDuplicatingCategory.ALCHEMICAL_DUPLICATING_RECIPE_RECIPE_TYPE, alchemicalDuplicatingRecipes);
     }
 
     @Override
@@ -178,5 +185,9 @@ public class EnhancedPlaythroughJEIPlugin implements IModPlugin {
 
         registration.addRecipeClickArea(MechanicalGrinderScreen.class, 82, 24, 20, 30,
                 MechanicalGrindCategory.GRINDING_RECIPE_RECIPE_TYPE);
+
+        //Alchemical duplicating
+//        registration.addRecipeClickArea(AlchemicalDuplicatorScreen.class, 86, 40, 4, 5,
+//                AlchemicalDuplicatingCategory.ALCHEMICAL_DUPLICATING_RECIPE_RECIPE_TYPE);
     }
 }
