@@ -1,6 +1,6 @@
-package net.marmar.enhanced_playthrough.recipe.epsmelting;
+package net.marmar.enhanced_playthrough.recipe.epsmelt;
 
-import net.marmar.enhanced_playthrough.recipe.recipecategory.ModRecipeCategory;
+import net.marmar.enhanced_playthrough.recipe.category.ModRecipeCategory;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.SimpleContainer;

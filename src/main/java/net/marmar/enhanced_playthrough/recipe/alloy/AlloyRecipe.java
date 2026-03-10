@@ -4,7 +4,7 @@ import net.marmar.enhanced_playthrough.block.EPBlocks;
 import net.marmar.enhanced_playthrough.recipe.EPRecipes;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
-import net.marmar.enhanced_playthrough.recipe.recipecategory.AlloyRecipeCategory;
+import net.marmar.enhanced_playthrough.recipe.category.AlloyRecipeCategory;
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;

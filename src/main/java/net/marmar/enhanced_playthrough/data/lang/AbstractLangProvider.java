@@ -114,6 +114,10 @@ public abstract class AbstractLangProvider extends LanguageProvider {
         this.add(EPEntityTypes.SKELETON_BOWMASTER.get(), name);
     }
 
+    protected void addWerellager(String name){
+        this.add(EPEntityTypes.WERELLAGER.get(),name);
+    }
+
     protected void addThrowableCobbleEntity(String name){
         this.add(EPEntityTypes.THROWABLE_COBBLE.get(), name);
     }

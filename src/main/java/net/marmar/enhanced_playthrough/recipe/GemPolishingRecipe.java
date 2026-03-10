@@ -2,7 +2,7 @@ package net.marmar.enhanced_playthrough.recipe;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import net.marmar.enhanced_playthrough.recipe.recipecategory.ModRecipeCategory;
+import net.marmar.enhanced_playthrough.recipe.category.ModRecipeCategory;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;

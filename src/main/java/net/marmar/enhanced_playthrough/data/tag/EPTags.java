@@ -121,6 +121,7 @@ public class EPTags {
         //Tools
         public static final TagKey<Item> POLISHER = toolsTag("polishers");
         public static final TagKey<Item> DAGGER = toolsTag("daggers");
+        public static final TagKey<Item> HURTS_LYCAN = toolsTag("hurts_lycan");
 
         //Ingredients
         public static final TagKey<Item> INGREDIENTS = itemTag("ingredients");

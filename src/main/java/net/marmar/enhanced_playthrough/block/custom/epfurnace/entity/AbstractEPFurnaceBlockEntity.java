@@ -1,7 +1,7 @@
 package net.marmar.enhanced_playthrough.block.custom.epfurnace.entity;
 
 import net.marmar.enhanced_playthrough.block.custom.epfurnace.AbstractEPFurnaceBlock;
-import net.marmar.enhanced_playthrough.recipe.epsmelting.AbstractEPSmeltingRecipe;
+import net.marmar.enhanced_playthrough.recipe.epsmelt.AbstractEPSmeltingRecipe;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;

@@ -9,6 +9,9 @@ import net.marmar.enhanced_playthrough.entity.bandit.model.BanditModel;
 import net.marmar.enhanced_playthrough.entity.bandit.model.BanditRenderer;
 import net.marmar.enhanced_playthrough.entity.boat.model.ModBoatRenderer;
 import net.marmar.enhanced_playthrough.entity.EPModelLayers;
+import net.marmar.enhanced_playthrough.entity.lycan.werellager.model.WerellagerHumanModel;
+import net.marmar.enhanced_playthrough.entity.lycan.werellager.model.WerellagerLycanModel;
+import net.marmar.enhanced_playthrough.entity.lycan.werellager.model.WerellagerRenderer;
 import net.marmar.enhanced_playthrough.entity.projectile.model.AluminumArrowRenderer;
 import net.marmar.enhanced_playthrough.entity.skeletonbowmaster.model.SkeletonBowmasterRenderer;
 import net.marmar.enhanced_playthrough.entity.zombieknight.model.ZombieKnightRenderer;
@@ -51,6 +54,7 @@ public class EPClientEventBusEvents {
         EntityRenderers.register(EPEntityTypes.BANDIT.get(), BanditRenderer::new);
         EntityRenderers.register(EPEntityTypes.ZOMBIE_KNIGHT.get(), ZombieKnightRenderer::new);
         EntityRenderers.register(EPEntityTypes.SKELETON_BOWMASTER.get(), SkeletonBowmasterRenderer::new);
+        EntityRenderers.register(EPEntityTypes.WERELLAGER.get(), WerellagerRenderer::new);
 
         //Boats
         EntityRenderers.register(EPEntityTypes.MOD_BOAT.get(), context -> new ModBoatRenderer(context, false));
@@ -90,6 +94,10 @@ public class EPClientEventBusEvents {
                 LayerDefinition.create(HumanoidArmorModel.createBodyLayer(OUTER_ARMOR_DEFORMATION), 64, 32));
         event.registerLayerDefinition(EPModelLayers.SKELETON_BOWMASTER_OUTER, () ->
                 LayerDefinition.create(HumanoidModel.createMesh(new CubeDeformation(0.2f), 0.0f), 64, 32));
+
+        //Werellager
+        event.registerLayerDefinition(EPModelLayers.WERELLAGER_HUMAN, WerellagerHumanModel::createBodyLayer);
+        event.registerLayerDefinition(EPModelLayers.WERELLAGER_LYCAN, WerellagerLycanModel::createBodyLayer);
 
         //Boats
             //Walnut

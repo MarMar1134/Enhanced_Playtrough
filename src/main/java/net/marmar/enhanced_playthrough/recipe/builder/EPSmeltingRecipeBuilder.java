@@ -1,9 +1,9 @@
-package net.marmar.enhanced_playthrough.recipe.builders;
+package net.marmar.enhanced_playthrough.recipe.builder;
 
 import com.google.gson.JsonObject;
 import net.marmar.enhanced_playthrough.recipe.EPRecipes;
-import net.marmar.enhanced_playthrough.recipe.epsmelting.AbstractEPSmeltingRecipe;
-import net.marmar.enhanced_playthrough.recipe.recipecategory.ModRecipeCategory;
+import net.marmar.enhanced_playthrough.recipe.epsmelt.AbstractEPSmeltingRecipe;
+import net.marmar.enhanced_playthrough.recipe.category.ModRecipeCategory;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.advancements.CriterionTriggerInstance;
 import net.minecraft.advancements.RequirementsStrategy;

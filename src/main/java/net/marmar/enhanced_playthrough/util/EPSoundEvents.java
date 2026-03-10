@@ -27,6 +27,12 @@ public class EPSoundEvents {
     public static final RegistryObject<SoundEvent> SKELETON_BOWMASTER_HURT = registerSoundEvents("skeleton_bowmaster_hurt");
     public static final RegistryObject<SoundEvent> SKELETON_BOWMASTER_DEATH = registerSoundEvents("skeleton_bowmaster_death");
 
+    //Werellager
+    public static final RegistryObject<SoundEvent> WERELLAGER_AMBIENT = registerSoundEvents("werellager_ambient");
+    public static final RegistryObject<SoundEvent> WERELLAGER_STEP = registerSoundEvents("werellager_step");
+    public static final RegistryObject<SoundEvent> WERELLAGER_HURT = registerSoundEvents("werellager_hurt");
+    public static final RegistryObject<SoundEvent> WERELLAGER_DEATH = registerSoundEvents("werellager_death");
+
     @SuppressWarnings("removal")
     private static RegistryObject<SoundEvent> registerSoundEvents(String sound_name){
       return SOUND_EVENTS.register(sound_name, () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(EnhancedPlaythrough.MOD_ID, sound_name)));

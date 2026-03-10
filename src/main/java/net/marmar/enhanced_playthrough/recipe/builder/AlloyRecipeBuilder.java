@@ -1,10 +1,10 @@
-package net.marmar.enhanced_playthrough.recipe.builders;
+package net.marmar.enhanced_playthrough.recipe.builder;
 
 import net.marmar.enhanced_playthrough.recipe.EPRecipes;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import net.marmar.enhanced_playthrough.recipe.alloy.AbstractAlloyRecipe;
-import net.marmar.enhanced_playthrough.recipe.recipecategory.AlloyRecipeCategory;
+import net.marmar.enhanced_playthrough.recipe.category.AlloyRecipeCategory;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.advancements.AdvancementRewards;
 import net.minecraft.advancements.CriterionTriggerInstance;

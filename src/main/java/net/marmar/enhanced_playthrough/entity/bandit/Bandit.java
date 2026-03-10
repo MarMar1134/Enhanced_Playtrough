@@ -74,15 +74,15 @@ public class Bandit extends AbstractIllager {
     }
 
     private void setupAnimationStates() {
-        if(this.isAttacking() && attackAnimationTimeout <= 0) {
-            attackAnimationTimeout = 10; // Length in ticks of your animation
-            attackAnimationState.start(this.tickCount);
-        } else {
+        if(this.isAttacking()) {
+            if(attackAnimationTimeout <= 0) {
+                attackAnimationTimeout = 10;
+                attackAnimationState.start(this.tickCount);
+            }
             --this.attackAnimationTimeout;
-        }
-
-        if(!this.isAttacking()) {
+        } else {
             attackAnimationState.stop();
+            attackAnimationTimeout = 0;
         }
     }
 
@@ -111,15 +111,16 @@ public class Bandit extends AbstractIllager {
         this.goalSelector.addGoal(3, new Raider.HoldGroundAttackGoal(this, 10.0F));
         this.goalSelector.addGoal(3, new AvoidEntityGoal<>(this, IronGolem.class, 4f, 1f, 1.2f));
         this.goalSelector.addGoal(4, new BanditMeleeAttackGoal(this));
-        this.targetSelector.addGoal(1, (new HurtByTargetGoal(this, Raider.class)).setAlertOthers(Raider.class));
-        this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Player.class, true));
-        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, AbstractVillager.class, true));
         this.goalSelector.addGoal(8, new RandomStrollGoal(this, 0.6));
         this.goalSelector.addGoal(9, new LookAtPlayerGoal(this, Player.class, 3.0F, 1.0F));
         this.goalSelector.addGoal(10, new LookAtPlayerGoal(this, Mob.class, 8.0F));
+
+        this.targetSelector.addGoal(1, (new HurtByTargetGoal(this, Raider.class)).setAlertOthers(Raider.class));
+        this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Player.class, true));
+        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, AbstractVillager.class, true));
     }
 
-    public static AttributeSupplier.Builder addAttributes(){
+    public static AttributeSupplier.Builder createAttributes(){
        return Monster.createMonsterAttributes()
                .add(Attributes.MAX_HEALTH, 24f)
                .add(Attributes.MOVEMENT_SPEED, 0.35f)
@@ -215,7 +216,7 @@ public class Bandit extends AbstractIllager {
         return SoundEvents.PILLAGER_CELEBRATE;
     }
 
-    public static class BanditMeleeAttackGoal extends MeleeAttackGoal{
+    public static class BanditMeleeAttackGoal extends MeleeAttackGoal {
         private final Bandit bandit;
         private int attackDelay = 5;
         private int ticksUntilNextAttack = 5;
@@ -235,35 +236,23 @@ public class Bandit extends AbstractIllager {
 
         @Override
         protected void checkAndPerformAttack(LivingEntity pEnemy, double pDistToEnemySqr) {
-            if (isEnemyWithinAttackDistance(pEnemy, pDistToEnemySqr)) {
-                if (ticksUntilNextAttack <= 0) {
-                    bandit.setAttacking(true);
-                    this.mob.getLookControl().setLookAt(pEnemy.getX(), pEnemy.getEyeY(), pEnemy.getZ());
-                    performAttack(pEnemy);
-                    ticksUntilNextAttack = this.adjustedTickDelay(attackDelay); // Reinicia el cooldown después de atacar
-                } else {
-                    bandit.setAttacking(false);
-                }
-            } else {
-                ticksUntilNextAttack = 0;
+            double attackReachSqr = this.getAttackReachSqr(pEnemy);
+
+            if (pDistToEnemySqr > attackReachSqr) {
+                // Enemigo fuera de rango
+                this.ticksUntilNextAttack = 0;
                 bandit.setAttacking(false);
+            } else if (this.ticksUntilNextAttack <= 0) {
+                // Enemigo en rango y es tiempo de atacar
+                bandit.setAttacking(true);
+                this.mob.getLookControl().setLookAt(pEnemy.getX(), pEnemy.getEyeY(), pEnemy.getZ());
+                performAttack(pEnemy);
+                this.ticksUntilNextAttack = this.adjustedTickDelay(this.attackDelay);
             }
         }
 
-        private boolean isEnemyWithinAttackDistance(LivingEntity pEnemy, double pDistToEnemySqr) {
-            return pDistToEnemySqr <= this.getAttackReachSqr(pEnemy);
-        }
-
         protected void resetAttackCooldown() {
-            this.ticksUntilNextAttack = this.adjustedTickDelay(attackDelay * 2);
-        }
-
-        protected boolean isTimeToAttack() {
-            return this.ticksUntilNextAttack <= 0;
-        }
-
-        protected int getTicksUntilNextAttack() {
-            return this.ticksUntilNextAttack;
+            this.ticksUntilNextAttack = this.adjustedTickDelay(this.attackDelay * 2);
         }
 
 

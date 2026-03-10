@@ -1,6 +1,7 @@
 package net.marmar.enhanced_playthrough.event;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
+import net.marmar.enhanced_playthrough.entity.lycan.werellager.Werellager;
 import net.marmar.enhanced_playthrough.entity.projectile.AluminumArrowEntity;
 import net.marmar.enhanced_playthrough.entity.projectile.CobbleProjectileEntity;
 import net.marmar.enhanced_playthrough.entity.skeletonbowmaster.SkeletonBowmaster;
@@ -13,7 +14,6 @@ import net.marmar.enhanced_playthrough.entity.EPEntityTypes;
 import net.minecraft.Util;
 import net.minecraft.core.Position;
 import net.minecraft.core.dispenser.AbstractProjectileDispenseBehavior;
-import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.projectile.Projectile;
@@ -23,10 +23,7 @@ import net.minecraft.world.level.block.DispenserBlock;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
-import net.minecraftforge.event.entity.EntityJoinLevelEvent;
 import net.minecraftforge.event.entity.SpawnPlacementRegisterEvent;
-import net.minecraftforge.event.entity.living.MobSpawnEvent;
-import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -211,9 +208,10 @@ public class EPEventBusEvents {
 
     @SubscribeEvent
     public static void registerAttributes(EntityAttributeCreationEvent event){
-        event.put(EPEntityTypes.BANDIT.get(), Bandit.addAttributes().build());
+        event.put(EPEntityTypes.BANDIT.get(), Bandit.createAttributes().build());
         event.put(EPEntityTypes.ZOMBIE_KNIGHT.get(), ZombieKnight.createAttributes().build());
         event.put(EPEntityTypes.SKELETON_BOWMASTER.get(), SkeletonBowmaster.createAttributes().build());
+        event.put(EPEntityTypes.WERELLAGER.get(), Werellager.createAttributes().build());
     }
 
     @SubscribeEvent
@@ -222,5 +220,7 @@ public class EPEventBusEvents {
                 ZombieKnight::checkZombieKnightSpawnRules, SpawnPlacementRegisterEvent.Operation.AND);
         event.register(EPEntityTypes.SKELETON_BOWMASTER.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
                 SkeletonBowmaster::checkSkeletonBowmasterSpawnRules, SpawnPlacementRegisterEvent.Operation.AND);
+        event.register(EPEntityTypes.WERELLAGER.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                Werellager::checkWerellagerSpawnRules, SpawnPlacementRegisterEvent.Operation.AND);
     }
 }

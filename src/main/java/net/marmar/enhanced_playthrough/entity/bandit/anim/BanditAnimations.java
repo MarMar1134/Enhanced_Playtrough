@@ -65,7 +65,7 @@ public class BanditAnimations {
 		))
 		.build();
 
-	public static final AnimationDefinition ATTACK = AnimationDefinition.Builder.withLength(0.5F).looping()
+	public static final AnimationDefinition ATTACK = AnimationDefinition.Builder.withLength(0.5F)
 		.addAnimation("right_arm", new AnimationChannel(AnimationChannel.Targets.ROTATION, 
 			new Keyframe(0.0F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
 			new Keyframe(0.125F, KeyframeAnimations.degreeVec(-30.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),

@@ -237,6 +237,9 @@ public class EPItems {
     public static final RegistryObject<Item> SKELETON_BOWMASTER_SPAWN_EGG = ITEMS.register(
             "skeleton_bowmaster_spawn_egg", () -> new ForgeSpawnEggItem(EPEntityTypes.SKELETON_BOWMASTER, 0x979797,
                     0x615b39, new Item.Properties()));
+    public static final RegistryObject<Item> WERELLAGER_SPAWN_EGG = ITEMS.register(
+            "werellager_spawn_egg", () -> new ForgeSpawnEggItem(EPEntityTypes.WERELLAGER, 0x332218,
+                    0x827d76, new Item.Properties()));
 
     //Signs
         //Walnut

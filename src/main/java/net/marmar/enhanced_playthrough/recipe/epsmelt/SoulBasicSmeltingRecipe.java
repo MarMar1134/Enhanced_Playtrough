@@ -1,7 +1,7 @@
-package net.marmar.enhanced_playthrough.recipe.epsmelting;
+package net.marmar.enhanced_playthrough.recipe.epsmelt;
 
 import net.marmar.enhanced_playthrough.block.EPBlocks;
-import net.marmar.enhanced_playthrough.recipe.recipecategory.ModRecipeCategory;
+import net.marmar.enhanced_playthrough.recipe.category.ModRecipeCategory;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import net.minecraft.network.FriendlyByteBuf;
@@ -13,14 +13,14 @@ import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 
-public class BasicSmeltingRecipe extends AbstractEPSmeltingRecipe implements Recipe<SimpleContainer> {
+public class SoulBasicSmeltingRecipe extends AbstractEPSmeltingRecipe implements Recipe<SimpleContainer> {
     private final Ingredient input;
     private final int cookTime;
     private final ModRecipeCategory category;
     private final String group;
 
-    public BasicSmeltingRecipe(Ingredient pInput, ItemStack pOutput, ResourceLocation recipeId, int pCookTime, ModRecipeCategory pCategory, String pGroup) {
-        super(pInput, pOutput, recipeId, pCookTime, pCategory, pGroup);
+    public SoulBasicSmeltingRecipe(Ingredient pInput, ItemStack pOutput, ResourceLocation pRecipeId, int pCookTime, ModRecipeCategory pCategory, String pGroup) {
+        super(pInput, pOutput, pRecipeId, pCookTime, pCategory, pGroup);
         this.input = pInput;
         cookTime = pCookTime;
         this.category = pCategory;
@@ -47,18 +47,18 @@ public class BasicSmeltingRecipe extends AbstractEPSmeltingRecipe implements Rec
 
     @Override
     public ItemStack getToastSymbol() {
-        return new ItemStack(EPBlocks.ADOBE_FURNACE.get());
+        return new ItemStack(EPBlocks.SOUL_FURNACE.get());
     }
 
-    public static class Type implements RecipeType<BasicSmeltingRecipe>{
+    public static class Type implements RecipeType<SoulBasicSmeltingRecipe>{
         public static final Type INSTANCE = new Type();
     }
-    public static class Serializer implements RecipeSerializer<BasicSmeltingRecipe>{
+    public static class Serializer implements RecipeSerializer<SoulBasicSmeltingRecipe>{
         public static final Serializer INSTANCE = new Serializer();
 
         public final int defaultCookTime = 0;
         @Override
-        public BasicSmeltingRecipe fromJson(ResourceLocation resourceLocation, JsonObject jsonObject) {
+        public SoulBasicSmeltingRecipe fromJson(ResourceLocation resourceLocation, JsonObject jsonObject) {
             ModRecipeCategory recipeCategory = ModRecipeCategory.CODEC.byName(GsonHelper.getAsString(jsonObject, "category"));
 
             String group = GsonHelper.getAsString(jsonObject, "group");
@@ -70,26 +70,26 @@ public class BasicSmeltingRecipe extends AbstractEPSmeltingRecipe implements Rec
             JsonElement ingredientElement = GsonHelper.isArrayNode(jsonObject, "ingredient") ? GsonHelper.getAsJsonArray(jsonObject, "ingredient") : GsonHelper.getAsJsonObject(jsonObject, "ingredient");
             Ingredient input = Ingredient.fromJson(ingredientElement, false);
 
-            return new BasicSmeltingRecipe(input, output, resourceLocation, cookTime, recipeCategory, group);
+            return new SoulBasicSmeltingRecipe(input, output, resourceLocation, cookTime, recipeCategory, group);
         }
 
         @Override
-        public @Nullable BasicSmeltingRecipe fromNetwork(ResourceLocation resourceLocation, FriendlyByteBuf friendlyByteBuf) {
+        public @Nullable SoulBasicSmeltingRecipe fromNetwork(ResourceLocation resourceLocation, FriendlyByteBuf friendlyByteBuf) {
             ModRecipeCategory recipeCategory = friendlyByteBuf.readEnum(ModRecipeCategory.class);
 
             String group = friendlyByteBuf.readUtf();
 
-            int alloyTime = friendlyByteBuf.readVarInt();
+            int cookTime = friendlyByteBuf.readVarInt();
 
             Ingredient input = Ingredient.fromNetwork(friendlyByteBuf);
 
             ItemStack output = friendlyByteBuf.readItem();
 
-            return new BasicSmeltingRecipe(input, output, resourceLocation, alloyTime, recipeCategory, group);
+            return new SoulBasicSmeltingRecipe(input, output, resourceLocation, cookTime, recipeCategory, group);
         }
 
         @Override
-        public void toNetwork(FriendlyByteBuf friendlyByteBuf, BasicSmeltingRecipe recipe) {
+        public void toNetwork(FriendlyByteBuf friendlyByteBuf, SoulBasicSmeltingRecipe recipe) {
             friendlyByteBuf.writeEnum(recipe.category);
 
             friendlyByteBuf.writeUtf(recipe.group);

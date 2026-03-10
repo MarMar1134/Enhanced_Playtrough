@@ -1,4 +1,4 @@
-// 1.20.1	2026-02-26T10:33:31.4888308	Item Models: enhanced_playthrough
+// 1.20.1	2026-03-10T11:41:40.5894694	Item Models: enhanced_playthrough
 b2df27b0d68c4c96244f2f344cb1fc54663e392f assets/enhanced_playthrough/models/item/adobe_alloy_furnace.json
 9731043a19f6a4326f19981cca25ade3d23cd23d assets/enhanced_playthrough/models/item/adobe_furnace.json
 c56c6fdc1e91add0abd02c8c7acc92cdb3044eb1 assets/enhanced_playthrough/models/item/alchemical_duplicator.json
@@ -709,6 +709,7 @@ dba4c08eed6c58db8623b48a8154fb71fb2f3845 assets/enhanced_playthrough/models/item
 40fabc370b5d0b7eea6d68d865df9f4dea5ba829 assets/enhanced_playthrough/models/item/walnut_trapdoor.json
 f77c0b33f2b2d34efd98ce42999956d19fb74df3 assets/enhanced_playthrough/models/item/water_reeds.json
 dea766df7d082ec4abb10391ab5c922be071f46e assets/enhanced_playthrough/models/item/water_reeds_head.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/enhanced_playthrough/models/item/werellager_spawn_egg.json
 a3a1dd6b5e983f51bfcada2343c3e2ffee241c60 assets/enhanced_playthrough/models/item/wheat_flour.json
 84d7acc752b4368322c00f5d1a6024842b580bae assets/enhanced_playthrough/models/item/white_terracotta_shard.json
 c9d5fb517f2c122ae3c732421c4e14567762bc33 assets/enhanced_playthrough/models/item/wild_corn.json

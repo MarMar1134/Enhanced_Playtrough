@@ -26,6 +26,9 @@ public class EPEnchantments {
     public static final RegistryObject<Enchantment> FROSTBITE =
             ENCHANTMENTS.register("frostbite", ()-> new FrostbiteEnchantment(Enchantment.Rarity.RARE, EnchantmentCategory.WEAPON, EquipmentSlot.MAINHAND));
 
+    public static final RegistryObject<Enchantment> SILVER_BLESSING =
+            ENCHANTMENTS.register("silver_blessing", () -> new SilverBlessingEnchantment(Enchantment.Rarity.UNCOMMON, EnchantmentCategory.WEAPON, EquipmentSlot.MAINHAND));
+
     public static void register(IEventBus eventBus){
         EnhancedPlaythrough.LOGGER.info("Registering Enhanced Playthrough enchantments...");
         ENCHANTMENTS.register(eventBus);

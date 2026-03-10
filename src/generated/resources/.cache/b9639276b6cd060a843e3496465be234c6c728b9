@@ -1,4 +1,4 @@
-// 1.20.1	2026-02-26T11:26:45.2954166	Tags for minecraft:item mod id enhanced_playthrough
+// 1.20.1	2026-03-10T11:41:40.6271574	Tags for minecraft:item mod id enhanced_playthrough
 0ff3092eb36a0159ae287d2f429e5f5eb6fb0c0a data/enhanced_playthrough/tags/items/aluminum.json
 b3b284c126879d981b4f706eb8ea0e63bd17ae12 data/enhanced_playthrough/tags/items/apple_logs.json
 1d609255995a77ead62a005cb2b75886514bb25a data/enhanced_playthrough/tags/items/blue_gold.json
@@ -64,6 +64,7 @@ f14df081c9b538e608510816b586011248049554 data/enhanced_playthrough/tags/items/si
 1ab5119f232160a3aac4d89154ae45506f878431 data/enhanced_playthrough/tags/items/steel.json
 a2809eefeb5127ce6cbb247c4ac406b07ce833a8 data/enhanced_playthrough/tags/items/terracotta_shard.json
 e486e622d64aa97dd9f514737bd73898804dc944 data/enhanced_playthrough/tags/items/tools/daggers.json
+06b04f42c8b8659c0cd7e5252643010728c62883 data/enhanced_playthrough/tags/items/tools/hurts_lycan.json
 0f470e87118a9d30965b48eb909f049e1737fe24 data/enhanced_playthrough/tags/items/tools/polishers.json
 dd45b2fedd17b120ce07c3e9345d41c34387316a data/enhanced_playthrough/tags/items/walnut_logs.json
 3892794950b545d7a5e0aa50938deed6cb26924b data/forge/tags/items/dusts.json

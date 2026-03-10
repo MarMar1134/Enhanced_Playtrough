@@ -50,6 +50,8 @@ public class VanillaTabs {
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(Items.SKELETON_SPAWN_EGG.getDefaultInstance(), EPItems.SKELETON_BOWMASTER_SPAWN_EGG.get().getDefaultInstance(),
                     CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(Items.WOLF_SPAWN_EGG.getDefaultInstance(), EPItems.WERELLAGER_SPAWN_EGG.get().getDefaultInstance(),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
         }
         if (event.getTabKey().equals(CreativeModeTabs.INGREDIENTS)){
             event.getEntries().putAfter(Items.SPIRE_ARMOR_TRIM_SMITHING_TEMPLATE.getDefaultInstance(), EPItems.ANCIENT_ARMOR_TRIM_SMITHING_TEMPLATE.get().getDefaultInstance(),

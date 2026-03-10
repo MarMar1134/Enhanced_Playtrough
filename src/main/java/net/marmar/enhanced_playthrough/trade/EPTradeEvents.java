@@ -48,11 +48,11 @@ public class EPTradeEvents implements ITradeOffers {
                     16, 2, 0.02f));
 
             //Level 5
-            trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
+            trades.get(5).add((pTrader, pRandom) -> new MerchantOffer(
                     new ItemStack(EPItems.RUBY.get(), 15),
                     new ItemStack(Items.EMERALD, 1),
                     16, 2, 0.02f));
-            trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
+            trades.get(5).add((pTrader, pRandom) -> new MerchantOffer(
                     new ItemStack(EPItems.TOMATO.get(), 15),
                     new ItemStack(Items.EMERALD, 1),
                     16, 2, 0.02f));
@@ -166,10 +166,10 @@ public class EPTradeEvents implements ITradeOffers {
                         new ItemStack(Items.CHAINMAIL_BOOTS, 1),
                         6, 10, 0.2f));
                 //Steel
-                trades.get(3).add((pTrader, pRandom) -> ITradeOffers.EnchantedItemOffer(
+                trades.get(3).add((pTrader, pRandom) -> ITradeOffers.enchantedItemOffer(
                         pRandom, EPItems.SAPPHIRE.get(), 7,
                         EPItems.STEEL_LEGGINGS.get(), 6, 10));
-                trades.get(3).add((pTrader, pRandom) -> ITradeOffers.EnchantedItemOffer(
+                trades.get(3).add((pTrader, pRandom) -> ITradeOffers.enchantedItemOffer(
                         pRandom, EPItems.SAPPHIRE.get(), 4,
                         EPItems.STEEL_BOOTS.get(), 6, 10));
 
@@ -197,25 +197,25 @@ public class EPTradeEvents implements ITradeOffers {
                         new ItemStack(Items.CHAINMAIL_HELMET, 1),
                         6, 15, 0.2f));
                 //Steel
-                trades.get(4).add((pTrader, pRandom) -> ITradeOffers.EnchantedItemOffer(
+                trades.get(4).add((pTrader, pRandom) -> ITradeOffers.enchantedItemOffer(
                         pRandom, EPItems.SAPPHIRE.get(), 4,
                         EPItems.RUBY.get(), 1,
                         EPItems.STEEL_CHESTPLATE.get(), 6, 15));
-                trades.get(4).add((pTrader, pRandom) -> ITradeOffers.EnchantedItemOffer(
+                trades.get(4).add((pTrader, pRandom) -> ITradeOffers.enchantedItemOffer(
                         pRandom, EPItems.SAPPHIRE.get(), 5,
                         EPItems.STEEL_HELMET.get(), 6, 15));
 
             //Level 5
-            trades.get(5).add((pTrader, pRandom) -> ITradeOffers.EnchantedItemOffer(
+            trades.get(5).add((pTrader, pRandom) -> ITradeOffers.enchantedItemOffer(
                     pRandom, EPItems.RUBY.get(), 7,
                     Items.DIAMOND_LEGGINGS, 3, 30));
-            trades.get(5).add((pTrader, pRandom) -> ITradeOffers.EnchantedItemOffer(
+            trades.get(5).add((pTrader, pRandom) -> ITradeOffers.enchantedItemOffer(
                     pRandom, EPItems.RUBY.get(), 4,
                     Items.DIAMOND_BOOTS, 3, 30));
-            trades.get(5).add((pTrader, pRandom) -> ITradeOffers.EnchantedItemOffer(
+            trades.get(5).add((pTrader, pRandom) -> ITradeOffers.enchantedItemOffer(
                     pRandom, EPItems.RUBY.get(), 5,
                     Items.DIAMOND_HELMET, 3, 30));
-            trades.get(5).add((pTrader, pRandom) -> ITradeOffers.EnchantedItemOffer(
+            trades.get(5).add((pTrader, pRandom) -> ITradeOffers.enchantedItemOffer(
                     pRandom, EPItems.RUBY.get(), 9,
                     Items.DIAMOND_CHESTPLATE, 3, 30));
         }
@@ -319,16 +319,16 @@ public class EPTradeEvents implements ITradeOffers {
                     new ItemStack(EPItems.SAPPHIRE.get(), 1),
                     12, 20, 0.02f));
                 //Iron
-                trades.get(3).add((pTrader, pRandom) -> ITradeOffers.EnchantedItemOffer(
+                trades.get(3).add((pTrader, pRandom) -> ITradeOffers.enchantedItemOffer(
                         pRandom, EPItems.SAPPHIRE.get(), 2,
                         Items.IRON_AXE, 6, 10));
-                trades.get(3).add((pTrader, pRandom) -> ITradeOffers.EnchantedItemOffer(
+                trades.get(3).add((pTrader, pRandom) -> ITradeOffers.enchantedItemOffer(
                         pRandom, EPItems.SAPPHIRE.get(), 3,
                         Items.IRON_PICKAXE, 6, 10));
-                trades.get(3).add((pTrader, pRandom) -> ITradeOffers.EnchantedItemOffer(
+                trades.get(3).add((pTrader, pRandom) -> ITradeOffers.enchantedItemOffer(
                         pRandom, EPItems.SAPPHIRE.get(), 1,
                         Items.IRON_SHOVEL, 6, 10));
-                trades.get(3).add((pTrader, pRandom) -> ITradeOffers.EnchantedItemOffer(
+                trades.get(3).add((pTrader, pRandom) -> ITradeOffers.enchantedItemOffer(
                         pRandom, EPItems.SAPPHIRE.get(), 1,
                         Items.IRON_HOE, 6, 10));
 
@@ -347,16 +347,16 @@ public class EPTradeEvents implements ITradeOffers {
                     new ItemStack(EPItems.ALUMINUM_ROD.get(), 4),
                     12, 15, 0.02f));
                 //Steel
-                trades.get(4).add((pTrader, pRandom) -> ITradeOffers.EnchantedItemOffer(pRandom,
+                trades.get(4).add((pTrader, pRandom) -> ITradeOffers.enchantedItemOffer(pRandom,
                         EPItems.SAPPHIRE.get(), 3,
                         EPItems.STEEL_AXE.get(), 6, 10));
-                trades.get(4).add((pTrader, pRandom) -> ITradeOffers.EnchantedItemOffer(pRandom,
+                trades.get(4).add((pTrader, pRandom) -> ITradeOffers.enchantedItemOffer(pRandom,
                         EPItems.SAPPHIRE.get(), 4,
                         EPItems.STEEL_PICKAXE.get(), 6, 10));
-                trades.get(4).add((pTrader, pRandom) -> ITradeOffers.EnchantedItemOffer(pRandom,
+                trades.get(4).add((pTrader, pRandom) -> ITradeOffers.enchantedItemOffer(pRandom,
                         EPItems.SAPPHIRE.get(), 2,
                         EPItems.STEEL_SHOVEL.get(), 6, 10));
-                trades.get(4).add((pTrader, pRandom) -> ITradeOffers.EnchantedItemOffer(pRandom,
+                trades.get(4).add((pTrader, pRandom) -> ITradeOffers.enchantedItemOffer(pRandom,
                         EPItems.SAPPHIRE.get(), 2,
                         EPItems.STEEL_HOE.get(), 6, 10));
 
@@ -366,16 +366,16 @@ public class EPTradeEvents implements ITradeOffers {
                     new ItemStack(EPItems.RUBY.get(), 1),
                     12, 20, 0.05f));
                 //Diamond
-                trades.get(5).add((pTrader, pRandom) -> ITradeOffers.EnchantedItemOffer(pRandom,
+                trades.get(5).add((pTrader, pRandom) -> ITradeOffers.enchantedItemOffer(pRandom,
                         EPItems.RUBY.get(), 3,
                         Items.DIAMOND_AXE, 3, 15));
-                trades.get(5).add((pTrader, pRandom) -> ITradeOffers.EnchantedItemOffer(pRandom,
+                trades.get(5).add((pTrader, pRandom) -> ITradeOffers.enchantedItemOffer(pRandom,
                         EPItems.RUBY.get(), 4,
                         Items.DIAMOND_PICKAXE, 3, 15));
-                trades.get(5).add((pTrader, pRandom) -> ITradeOffers.EnchantedItemOffer(pRandom,
+                trades.get(5).add((pTrader, pRandom) -> ITradeOffers.enchantedItemOffer(pRandom,
                         EPItems.RUBY.get(), 2,
                         Items.DIAMOND_SHOVEL, 3, 15));
-                trades.get(5).add((pTrader, pRandom) -> ITradeOffers.EnchantedItemOffer(pRandom,
+                trades.get(5).add((pTrader, pRandom) -> ITradeOffers.enchantedItemOffer(pRandom,
                         EPItems.RUBY.get(), 2,
                         Items.DIAMOND_HOE, 3, 15));
         }
@@ -405,7 +405,7 @@ public class EPTradeEvents implements ITradeOffers {
                         new ItemStack(EPItems.COBBLE.get(), 2),
                         new ItemStack(Items.STONE_AXE, 1),
                         12, 1, 0.2f));
-                trades.get(1).add((pTrader, pRandom) -> ITradeOffers.EnchantedItemOffer(
+                trades.get(1).add((pTrader, pRandom) -> ITradeOffers.enchantedItemOffer(
                         pRandom, Items.EMERALD, 1,
                         EPItems.COBBLE.get(), 1,
                         Items.STONE_SWORD, 3, 1));
@@ -414,7 +414,7 @@ public class EPTradeEvents implements ITradeOffers {
                         new ItemStack(Items.EMERALD, 3),
                         new ItemStack(EPItems.BRASS_AXE.get(), 1),
                         12, 1, 0.2f));
-                trades.get(1).add((pTrader, pRandom) -> ITradeOffers.EnchantedItemOffer(
+                trades.get(1).add((pTrader, pRandom) -> ITradeOffers.enchantedItemOffer(
                         pRandom, Items.EMERALD, 2,
                         EPItems.BRASS_SWORD.get(), 3, 1));
 
@@ -428,7 +428,7 @@ public class EPTradeEvents implements ITradeOffers {
                         new ItemStack(Items.EMERALD, 5),
                         new ItemStack(EPItems.BRONZE_AXE.get(), 1),
                         12, 1, 0.2f));
-                trades.get(2).add((pTrader, pRandom) -> ITradeOffers.EnchantedItemOffer(
+                trades.get(2).add((pTrader, pRandom) -> ITradeOffers.enchantedItemOffer(
                         pRandom, Items.EMERALD, 3,
                         EPItems.BRONZE_SWORD.get(), 3, 1));
 
@@ -442,7 +442,7 @@ public class EPTradeEvents implements ITradeOffers {
                     new ItemStack(EPItems.SAPPHIRE.get(), 4),
                     new ItemStack(Items.IRON_AXE, 1),
                     6, 5, 0.2f));
-            trades.get(3).add((pTrader, pRandom) -> ITradeOffers.EnchantedItemOffer(
+            trades.get(3).add((pTrader, pRandom) -> ITradeOffers.enchantedItemOffer(
                     pRandom, EPItems.SAPPHIRE.get(), 1,
                     Items.IRON_SWORD, 3, 5));
 
@@ -460,7 +460,7 @@ public class EPTradeEvents implements ITradeOffers {
                         new ItemStack(EPItems.SAPPHIRE.get(), 3),
                         new ItemStack( EPItems.STEEL_AXE.get(), 1),
                         6, 10, 0.2f));
-                trades.get(4).add((pTrader, pRandom) -> ITradeOffers.EnchantedItemOffer(
+                trades.get(4).add((pTrader, pRandom) -> ITradeOffers.enchantedItemOffer(
                         pRandom, EPItems.SAPPHIRE.get(), 3,
                         EPItems.STEEL_SWORD.get(), 3, 10));
 
@@ -473,7 +473,7 @@ public class EPTradeEvents implements ITradeOffers {
                     new ItemStack(EPItems.RUBY.get(), 3),
                     new ItemStack(Items.DIAMOND_AXE, 1),
                     3, 15, 0.2f));
-            trades.get(5).add((pTrader, pRandom) -> ITradeOffers.EnchantedItemOffer(
+            trades.get(5).add((pTrader, pRandom) -> ITradeOffers.enchantedItemOffer(
                     pRandom, EPItems.RUBY.get(), 2,
                     Items.DIAMOND_SWORD, 3, 9));
         }
@@ -569,7 +569,7 @@ public class EPTradeEvents implements ITradeOffers {
                     new ItemStack(EPItems.SAPPHIRE.get(), 2),
                     new ItemStack(EPItems.STEEL_POLISHER.get(), 1),
                     6, 15, 0.2f));
-            trades.get(4).add((pTrader, pRandom) -> ITradeOffers.EnchantedBookOffer(
+            trades.get(4).add((pTrader, pRandom) -> ITradeOffers.enchantedBookOffer(
                     pRandom, EPItems.SAPPHIRE.get(), EPEnchantments.ROUGH_MINING.get(), 15));
 
             //Level 5
@@ -591,7 +591,7 @@ public class EPTradeEvents implements ITradeOffers {
                     new ItemStack(EPItems.RUBY.get(), 2),
                     new ItemStack(EPItems.DIAMOND_POLISHER.get(), 1),
                     3, 15, 0.2f));
-            trades.get(5).add((pTrader, pRandom) -> ITradeOffers.EnchantedBookOffer(
+            trades.get(5).add((pTrader, pRandom) -> ITradeOffers.enchantedBookOffer(
                     pRandom, EPItems.RUBY.get(), EPEnchantments.FINE_MINING.get(), 15));
         }
 
@@ -615,7 +615,7 @@ public class EPTradeEvents implements ITradeOffers {
                     new ItemStack(Items.BOOKSHELF, 1),
                     12, 1, 0.05f));
             trades.get(1).add((pTrader, pRandom)->
-                    ITradeOffers.EnchantedBookOffer(pRandom, 1));
+                    ITradeOffers.enchantedBookOffer(pRandom, 1));
 
             //Level 2
             trades.get(2).add((pTrader, pRandom)-> new MerchantOffer(
@@ -627,7 +627,7 @@ public class EPTradeEvents implements ITradeOffers {
                     new ItemStack(Items.LANTERN, 1),
                     12, 5, 0.05f));
             trades.get(2).add((pTrader, pRandom)->
-                    ITradeOffers.EnchantedBookOffer(pRandom, 1));
+                    ITradeOffers.enchantedBookOffer(pRandom, 1));
 
             //Level 3
             trades.get(3).add((pTrader, pRandom)-> new MerchantOffer(
@@ -639,7 +639,7 @@ public class EPTradeEvents implements ITradeOffers {
                     new ItemStack(Items.GLASS, 4),
                     12, 10, 0.05f));
             trades.get(3).add((pTrader, pRandom)->
-                    ITradeOffers.EnchantedBookOffer(pRandom, 1));
+                    ITradeOffers.enchantedBookOffer(pRandom, 1));
 
             //Level 4
             trades.get(4).add((pTrader, pRandom)-> new MerchantOffer(
@@ -656,7 +656,7 @@ public class EPTradeEvents implements ITradeOffers {
                     new ItemStack(Items.CLOCK, 1),
                     12, 15, 0.05f));
             trades.get(4).add((pTrader, pRandom)->
-                    ITradeOffers.EnchantedBookOffer(pRandom, 1));
+                    ITradeOffers.enchantedBookOffer(pRandom, 1));
 
             //Level 5
             trades.get(5).add((pTrader, pRandom)-> new MerchantOffer(

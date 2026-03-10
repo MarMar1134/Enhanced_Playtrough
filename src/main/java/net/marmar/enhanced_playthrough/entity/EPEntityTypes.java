@@ -4,6 +4,7 @@ import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.entity.bandit.Bandit;
 import net.marmar.enhanced_playthrough.entity.boat.EPBoatEntity;
 import net.marmar.enhanced_playthrough.entity.boat.EPChestBoatEntity;
+import net.marmar.enhanced_playthrough.entity.lycan.werellager.Werellager;
 import net.marmar.enhanced_playthrough.entity.projectile.AluminumArrowEntity;
 import net.marmar.enhanced_playthrough.entity.projectile.CobbleProjectileEntity;
 import net.marmar.enhanced_playthrough.entity.skeletonbowmaster.SkeletonBowmaster;
@@ -29,6 +30,9 @@ public class EPEntityTypes {
     public static final RegistryObject<EntityType<SkeletonBowmaster>> SKELETON_BOWMASTER =
             ENTITY_TYPES.register("skeleton_bowmaster", () -> EntityType.Builder.of(SkeletonBowmaster::new, MobCategory.MONSTER)
                     .sized(0.6F, 1.99F).build("skeleton_bowmaster"));
+    public static final RegistryObject<EntityType<Werellager>> WERELLAGER =
+            ENTITY_TYPES.register("werellager", () -> EntityType.Builder.of(Werellager::new, MobCategory.CREATURE)
+                    .sized(0.6f, 2f).build("werellager"));
 
     //Boats
     public static final RegistryObject<EntityType<EPBoatEntity>> MOD_BOAT =

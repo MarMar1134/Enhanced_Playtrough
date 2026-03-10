@@ -38,6 +38,10 @@ public class EPModelLayers {
         public static final ModelLayerLocation SKELETON_BOWMASTER_OUTER_ARMOR = registerOuterArmorLayer("skeleton_bowmaster_outer_armor");
         public static final ModelLayerLocation SKELETON_BOWMASTER_OUTER = registerOuterLayer("skeleton_bowmaster_outer");
 
+        //Werellager
+        public static final ModelLayerLocation WERELLAGER_HUMAN = registerMainLayer("werellager_human");
+        public static final ModelLayerLocation WERELLAGER_LYCAN = registerMainLayer("werellager_lycan");
+
    //Helper methods
     @SuppressWarnings("removal")
     private static ResourceLocation modLoc(String pPath){

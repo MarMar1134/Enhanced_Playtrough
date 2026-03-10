@@ -71,7 +71,7 @@ public class ChileanLangProvider extends AbstractLangProvider {
 
         //Descriptions
         addDescription("aluminum_tool", "Mango de aluminio: 20% mayor durabilidad");
-        addDescription("polisher_item","Utilizado en el pulidor de gemas como combustible");
+        addDescription("polisher_item", "Utilizado en el pulidor de gemas como combustible");
         addDescription("silver_armor", "Con toda la equipación: otorga Apuro al jugador");
         addDescription("rose_gold_armor", "Con toda la equipación: otorga Apuro al jugador");
         addDescription("bronzium_armor", "Con toda la equipación: otorga Resistencia al fuego al jugador");
@@ -106,71 +106,71 @@ public class ChileanLangProvider extends AbstractLangProvider {
         addMobEffect("frostbite", "Congelación");
 
         //Advancements
-            //Survival
-            addSurvivalAdvancement("survival_root", "Enhanced Playthrough",
-                    "Iniciaste una nueva aventura en este mundo fantástico, ¡bienvenido!");
-            addSurvivalAdvancement("stone_age", "Un asunto adoquinado",
-                    "Obtén un pedazo de adoquín");
-            addSurvivalAdvancement("unity_makes_strength", "La unión hace la fuerza",
-                    "Craftea un horno de aleación");
-            addSurvivalAdvancement("ancient_knowledge", "Conocimiento antiguo",
-                    "Encuentra el Dominio del Señor Antiguo");
-            addSurvivalAdvancement("blossom", "Bombón",
-                    "Funde oro y cobre para obtener oro rosado");
-            addSurvivalAdvancement("buttercup", "Bellota",
-                    "Funde oro y plata para obtener oro verde");
-            addSurvivalAdvancement("bubbles", "Búrbuja",
-                    "Funde oro y cobalto para obtener oro azul");
-            addSurvivalAdvancement("the_goldenpuff_girls", "Las chicas súper-doradas",
-                    "Consigue las tres aleaciones de oro");
+        //Survival
+        addSurvivalAdvancement("survival_root", "Enhanced Playthrough",
+                "Iniciaste una nueva aventura en este mundo fantástico, ¡bienvenido!");
+        addSurvivalAdvancement("stone_age", "Un asunto adoquinado",
+                "Obtén un pedazo de adoquín");
+        addSurvivalAdvancement("unity_makes_strength", "La unión hace la fuerza",
+                "Craftea un horno de aleación");
+        addSurvivalAdvancement("ancient_knowledge", "Conocimiento antiguo",
+                "Encuentra el Dominio del Señor Antiguo");
+        addSurvivalAdvancement("blossom", "Bombón",
+                "Funde oro y cobre para obtener oro rosado");
+        addSurvivalAdvancement("buttercup", "Bellota",
+                "Funde oro y plata para obtener oro verde");
+        addSurvivalAdvancement("bubbles", "Búrbuja",
+                "Funde oro y cobalto para obtener oro azul");
+        addSurvivalAdvancement("the_goldenpuff_girls", "Las chicas súper-doradas",
+                "Consigue las tres aleaciones de oro");
 
-            addSurvivalAdvancement("thats_new", "Eso... es nuevo",
-                    "Obtén un lingote de bronce");
-            addSurvivalAdvancement( "abrassive_heat", "Platón, el herrero",
-                    "Obtén un lingote de latón");
-            addSurvivalAdvancement("abrass_your_soul", "Amor platónico",
-                    "Obtén una armadura de latón");
-            addSurvivalAdvancement( "mighty_bronze", "Bronceado divino",
-                    "Obtén un pico de bronce");
-            addSurvivalAdvancement("steel_isnt_enough", "No tiende a-cero",
-                    "Utiliza tu horno de aleación para fundir algo de acero");
-            addSurvivalAdvancement("the_aluminated", "El aluminado",
-                    "Obtén un lingote de aluminio");
+        addSurvivalAdvancement("thats_new", "Eso... es nuevo",
+                "Obtén un lingote de bronce");
+        addSurvivalAdvancement("abrassive_heat", "Platón, el herrero",
+                "Obtén un lingote de latón");
+        addSurvivalAdvancement("abrass_your_soul", "Amor platónico",
+                "Obtén una armadura de latón");
+        addSurvivalAdvancement("mighty_bronze", "Bronceado divino",
+                "Obtén un pico de bronce");
+        addSurvivalAdvancement("steel_isnt_enough", "No tiende a-cero",
+                "Utiliza tu horno de aleación para fundir algo de acero");
+        addSurvivalAdvancement("the_aluminated", "El aluminado",
+                "Obtén un lingote de aluminio");
 
-            //Gems
-            addGemAdvancement("colours_root", "Los colores del mundo",
-                    "Nuestro mundo reluce en colores, ¿que tal si vas a descubrirlos todos?");
+        //Gems
+        addGemAdvancement("colours_root", "Los colores del mundo",
+                "Nuestro mundo reluce en colores, ¿que tal si vas a descubrirlos todos?");
 
-            addGemAdvancement("has_any_polisher", "Tarea fina",
-                    "Craftéa una herramienta de pulido");
-            addGemAdvancement("polish_emerald", "Intento de grinch",
-                    "Consigue algunas esmeraldas y cuidalas de los, ¿quienes?");
-            addGemAdvancement("polish_sapphire", "Horizonte azulado",
-                    "Consigue algunos záfiros y visita un rato el mar");
-            addGemAdvancement("polish_ruby", "Pajarito enojón",
-                    "Consigue algunos rubies y muestrale a los cerdos quién manda");
-            addGemAdvancement("polish_garnet", "El color de mi corazón",
-                    "Consigue algunos granates y demuestra tu pasión");
-            addGemAdvancement("polish_diamond", "Estás aquí, Lucy?",
-                    "Consigue algunos diamantes para poder ver mejor el cielo");
-            addGemAdvancement("get_all_gems", "Caos por doquier",
-                    "Consigue todas las gemas y conviertete en el señor del caos");
+        addGemAdvancement("has_any_polisher", "Tarea fina",
+                "Craftéa una herramienta de pulido");
+        addGemAdvancement("polish_emerald", "Intento de grinch",
+                "Consigue algunas esmeraldas y cuidalas de los, ¿quienes?");
+        addGemAdvancement("polish_sapphire", "Horizonte azulado",
+                "Consigue algunos záfiros y visita un rato el mar");
+        addGemAdvancement("polish_ruby", "Pajarito enojón",
+                "Consigue algunos rubies y muestrale a los cerdos quién manda");
+        addGemAdvancement("polish_garnet", "El color de mi corazón",
+                "Consigue algunos granates y demuestra tu pasión");
+        addGemAdvancement("polish_diamond", "Estás aquí, Lucy?",
+                "Consigue algunos diamantes para poder ver mejor el cielo");
+        addGemAdvancement("get_all_gems", "Caos por doquier",
+                "Consigue todas las gemas y conviertete en el señor del caos");
 
-            //Flowers
-            addGemAdvancement("first_flower", "La raiz de todo",
-                    "Obtén tu primer flor");
-            addGemAdvancement("all_small_flowers", "David",
-                    "Obtén todas las flores pequeñas");
-            addGemAdvancement("all_tall_flowers", "Goliat",
-                    "Obtén todas las flores altas");
-            addGemAdvancement("all_flowers", "El diario de la botecaria",
-                    "Obtén todas las flores");
+        //Flowers
+        addGemAdvancement("first_flower", "La raiz de todo",
+                "Obtén tu primer flor");
+        addGemAdvancement("all_small_flowers", "David",
+                "Obtén todas las flores pequeñas");
+        addGemAdvancement("all_tall_flowers", "Goliat",
+                "Obtén todas las flores altas");
+        addGemAdvancement("all_flowers", "El diario de la botecaria",
+                "Obtén todas las flores");
 
-            //Rotten crops
-            addGemAdvancement("any_rotten_crop", "... Está horrible",
-                    "Obtén un cultivo podrido/venenoso");
-            addGemAdvancement("rotten_stew", "El fuego purifica",
-                    "Recolecta tus cultivos podridos y prepara un guiso para luego... cocinarlo");
+        //Rotten crops
+        addGemAdvancement("any_rotten_crop", "... Está horrible",
+                "Obtén un cultivo podrido/venenoso");
+        addGemAdvancement("rotten_stew", "El fuego purifica",
+                "Recolecta tus cultivos podridos y prepara un guiso para luego... cocinarlo");
 
         //Entities
         addBoatEntity("Barco");
@@ -179,118 +179,118 @@ public class ChileanLangProvider extends AbstractLangProvider {
         addAluminumArrowEntity("Flecha de aluminio");
 
         //Blocks
-            //Wild crops
-            addBlock(EPBlocks.WILD_WHEAT_CROP, "Trigo silvestre");
-            addBlock(EPBlocks.WILD_TOMATO_CROP, "Tomate silvestre");
-            addBlock(EPBlocks.WILD_CORN_CROP, "Maiz silvestre");
+        //Wild crops
+        addBlock(EPBlocks.WILD_WHEAT_CROP, "Trigo silvestre");
+        addBlock(EPBlocks.WILD_TOMATO_CROP, "Tomate silvestre");
+        addBlock(EPBlocks.WILD_CORN_CROP, "Maiz silvestre");
 
-            //Plants
-            addBlock(EPBlocks.TALL_REEDS, "Carrizo");
-            addBlock(EPBlocks.REEDS, "Plumero");
-            addBlock(EPBlocks.SMALL_REEDS, "Plumero andino");
-            addBlock(EPBlocks.WATER_REEDS, "Junco");
+        //Plants
+        addBlock(EPBlocks.TALL_REEDS, "Carrizo");
+        addBlock(EPBlocks.REEDS, "Plumero");
+        addBlock(EPBlocks.SMALL_REEDS, "Plumero andino");
+        addBlock(EPBlocks.WATER_REEDS, "Junco");
 
-            //Flowers
-            addBlock(EPBlocks.COLD_LYRIUM, "Lirio helado");
-            addBlock(EPBlocks.SUCCULENT, "Suculenta");
+        //Flowers
+        addBlock(EPBlocks.COLD_LYRIUM, "Lirio helado");
+        addBlock(EPBlocks.SUCCULENT, "Suculenta");
 
-            //Wood
-                //Apple
-                addBlock(EPBlocks.APPLE_SAPLING, "Brote de manzano");
-                addBlock(EPBlocks.APPLE_LEAVES, "Hojas de manzano");
-                addBlock(EPBlocks.APPLE_LEAVES_WITH_FRUIT, "Hojas de manzano con fruta");
-                addBlock(EPBlocks.APPLE_LOG, "Tronco de manzano");
-                addBlock(EPBlocks.STRIPPED_APPLE_LOG, "Tronco de manzano pelado");
-                addBlock(EPBlocks.APPLE_WOOD, "Leño de manzana");
-                addBlock(EPBlocks.STRIPPED_APPLE_WOOD, "Leño de manzano pelado");
-                addBlock(EPBlocks.APPLE_PLANKS, "Tablones de manzano");
-                addBlock(EPBlocks.APPLE_SLAB, "Baldosa de manzano");
-                addBlock(EPBlocks.APPLE_STAIRS, "Escaleras de manzano");
-                addBlock(EPBlocks.APPLE_FENCE, "Varandilla de manzano");
-                addBlock(EPBlocks.APPLE_FENCEGATE, "Puerta de varandilla de manzano");
-                addBlock(EPBlocks.APPLE_DOOR, "Puerta de manzano");
-                addBlock(EPBlocks.APPLE_TRAPDOOR, "Trampilla de manzano");
-                addBlock(EPBlocks.APPLE_BUTTON, "Botón de manzano");
-                addBlock(EPBlocks.APPLE_PRESSURE_PLATE, "Placa de presión de manzano");
-                addSign(EPItems.APPLE_SIGN, "Cartel de manzano");
-                addHangingSign(EPItems.APPLE_HANGING_SIGN,"Cartel de manzano colgante");
-                addItem(EPItems.APPLE_BOAT, "Barco de manzano");
-                addItem(EPItems.APPLE_CHEST_BOAT, "Barco de manzano con cofre");
+        //Wood
+        //Apple
+        addBlock(EPBlocks.APPLE_SAPLING, "Brote de manzano");
+        addBlock(EPBlocks.APPLE_LEAVES, "Hojas de manzano");
+        addBlock(EPBlocks.APPLE_LEAVES_WITH_FRUIT, "Hojas de manzano con fruta");
+        addBlock(EPBlocks.APPLE_LOG, "Tronco de manzano");
+        addBlock(EPBlocks.STRIPPED_APPLE_LOG, "Tronco de manzano pelado");
+        addBlock(EPBlocks.APPLE_WOOD, "Leño de manzana");
+        addBlock(EPBlocks.STRIPPED_APPLE_WOOD, "Leño de manzano pelado");
+        addBlock(EPBlocks.APPLE_PLANKS, "Tablones de manzano");
+        addBlock(EPBlocks.APPLE_SLAB, "Baldosa de manzano");
+        addBlock(EPBlocks.APPLE_STAIRS, "Escaleras de manzano");
+        addBlock(EPBlocks.APPLE_FENCE, "Varandilla de manzano");
+        addBlock(EPBlocks.APPLE_FENCEGATE, "Puerta de varandilla de manzano");
+        addBlock(EPBlocks.APPLE_DOOR, "Puerta de manzano");
+        addBlock(EPBlocks.APPLE_TRAPDOOR, "Trampilla de manzano");
+        addBlock(EPBlocks.APPLE_BUTTON, "Botón de manzano");
+        addBlock(EPBlocks.APPLE_PRESSURE_PLATE, "Placa de presión de manzano");
+        addSign(EPItems.APPLE_SIGN, "Cartel de manzano");
+        addHangingSign(EPItems.APPLE_HANGING_SIGN, "Cartel de manzano colgante");
+        addItem(EPItems.APPLE_BOAT, "Barco de manzano");
+        addItem(EPItems.APPLE_CHEST_BOAT, "Barco de manzano con cofre");
 
-                //Green apple
-                addBlock(EPBlocks.GREEN_APPLE_SAPLING, "Brote de manzano verde");
-                addBlock(EPBlocks.GREEN_APPLE_LEAVES, "Hojas de manzano verde");
-                addBlock(EPBlocks.GREEN_APPLE_LEAVES_WITH_FRUIT, "Hojas de manzano verde con fruta");
+        //Green apple
+        addBlock(EPBlocks.GREEN_APPLE_SAPLING, "Brote de manzano verde");
+        addBlock(EPBlocks.GREEN_APPLE_LEAVES, "Hojas de manzano verde");
+        addBlock(EPBlocks.GREEN_APPLE_LEAVES_WITH_FRUIT, "Hojas de manzano verde con fruta");
 
-                //Walnut
-                addBlock(EPBlocks.WALNUT_SAPLING, "Brote de nogal");
-                addBlock(EPBlocks.WALNUT_LEAVES, "Hojas de nogal");
-                addBlock(EPBlocks.WALNUT_LOG, "Tronco de nogal");
-                addBlock(EPBlocks.STRIPPED_WALNUT_LOG, "Tronco de nogal pelado");
-                addBlock(EPBlocks.WALNUT_WOOD, "Leño de nogal");
-                addBlock(EPBlocks.STRIPPED_WALNUT_WOOD, "Leño de nogal pelado");
-                addBlock(EPBlocks.WALNUT_PLANKS, "Tablones de nogal");
-                addBlock(EPBlocks.WALNUT_SLAB, "Baldosa de nogal");
-                addBlock(EPBlocks.WALNUT_STAIRS, "Escaleras de nogal");
-                addBlock(EPBlocks.WALNUT_FENCE, "Varandilla de nogal");
-                addBlock(EPBlocks.WALNUT_FENCEGATE, "Puerta de varandilla de nogal");
-                addBlock(EPBlocks.WALNUT_DOOR, "Puerta de nogal");
-                addBlock(EPBlocks.WALNUT_TRAPDOOR, "Trampilla de nogal");
-                addBlock(EPBlocks.WALNUT_BUTTON, "Botón de nogal");
-                addBlock(EPBlocks.WALNUT_PRESSURE_PLATE, "Placa de presión de nogal");
-                addSign(EPItems.WALNUT_SIGN, "Cartel de nogal");
-                addHangingSign(EPItems.WALNUT_HANGING_SIGN,"Cartel de nogal colgante");
-                addItem(EPItems.WALNUT_BOAT, "Barco de nogal");
-                addItem(EPItems.WALNUT_CHEST_BOAT, "Barco de nogal con cofre");
+        //Walnut
+        addBlock(EPBlocks.WALNUT_SAPLING, "Brote de nogal");
+        addBlock(EPBlocks.WALNUT_LEAVES, "Hojas de nogal");
+        addBlock(EPBlocks.WALNUT_LOG, "Tronco de nogal");
+        addBlock(EPBlocks.STRIPPED_WALNUT_LOG, "Tronco de nogal pelado");
+        addBlock(EPBlocks.WALNUT_WOOD, "Leño de nogal");
+        addBlock(EPBlocks.STRIPPED_WALNUT_WOOD, "Leño de nogal pelado");
+        addBlock(EPBlocks.WALNUT_PLANKS, "Tablones de nogal");
+        addBlock(EPBlocks.WALNUT_SLAB, "Baldosa de nogal");
+        addBlock(EPBlocks.WALNUT_STAIRS, "Escaleras de nogal");
+        addBlock(EPBlocks.WALNUT_FENCE, "Varandilla de nogal");
+        addBlock(EPBlocks.WALNUT_FENCEGATE, "Puerta de varandilla de nogal");
+        addBlock(EPBlocks.WALNUT_DOOR, "Puerta de nogal");
+        addBlock(EPBlocks.WALNUT_TRAPDOOR, "Trampilla de nogal");
+        addBlock(EPBlocks.WALNUT_BUTTON, "Botón de nogal");
+        addBlock(EPBlocks.WALNUT_PRESSURE_PLATE, "Placa de presión de nogal");
+        addSign(EPItems.WALNUT_SIGN, "Cartel de nogal");
+        addHangingSign(EPItems.WALNUT_HANGING_SIGN, "Cartel de nogal colgante");
+        addItem(EPItems.WALNUT_BOAT, "Barco de nogal");
+        addItem(EPItems.WALNUT_CHEST_BOAT, "Barco de nogal con cofre");
 
-                //Orange
-                addBlock(EPBlocks.ORANGE_SAPLING, "Brote de naranjo");
-                addBlock(EPBlocks.ORANGE_LEAVES, "Hojas de naranjo");
-                addBlock(EPBlocks.ORANGE_LEAVES_WITH_FRUIT, "Hojas de naranjo con fruta");
-                addBlock(EPBlocks.ORANGE_LOG, "Tronco de naranjo");
-                addBlock(EPBlocks.STRIPPED_ORANGE_LOG, "Tronco de naranjo pelado");
-                addBlock(EPBlocks.ORANGE_WOOD, "Leño de naranjo");
-                addBlock(EPBlocks.STRIPPED_ORANGE_WOOD, "Leño de naranjo pelado");
-                addBlock(EPBlocks.ORANGE_PLANKS, "Tablones de naranjo");
-                addBlock(EPBlocks.ORANGE_SLAB, "Baldosa de naranjo");
-                addBlock(EPBlocks.ORANGE_STAIRS, "Escaleras de naranjo");
-                addBlock(EPBlocks.ORANGE_FENCE, "Varandilla de naranjo");
-                addBlock(EPBlocks.ORANGE_FENCEGATE, "Puerta de varandilla de naranjo");
-                addBlock(EPBlocks.ORANGE_DOOR, "Puerta de naranjo");
-                addBlock(EPBlocks.ORANGE_TRAPDOOR, "Trampilla de naranjo");
-                addBlock(EPBlocks.ORANGE_BUTTON, "Botón de naranjo");
-                addBlock(EPBlocks.ORANGE_PRESSURE_PLATE, "Placa de presión de naranjo");
-                addSign(EPItems.ORANGE_SIGN, "Cartel de naranjo");
-                addHangingSign(EPItems.ORANGE_HANGING_SIGN,"Cartel de naranjo colgante");
-                addItem(EPItems.ORANGE_BOAT, "Barco de naranjo");
-                addItem(EPItems.ORANGE_CHEST_BOAT, "Barco de naranjo con cofre");
+        //Orange
+        addBlock(EPBlocks.ORANGE_SAPLING, "Brote de naranjo");
+        addBlock(EPBlocks.ORANGE_LEAVES, "Hojas de naranjo");
+        addBlock(EPBlocks.ORANGE_LEAVES_WITH_FRUIT, "Hojas de naranjo con fruta");
+        addBlock(EPBlocks.ORANGE_LOG, "Tronco de naranjo");
+        addBlock(EPBlocks.STRIPPED_ORANGE_LOG, "Tronco de naranjo pelado");
+        addBlock(EPBlocks.ORANGE_WOOD, "Leño de naranjo");
+        addBlock(EPBlocks.STRIPPED_ORANGE_WOOD, "Leño de naranjo pelado");
+        addBlock(EPBlocks.ORANGE_PLANKS, "Tablones de naranjo");
+        addBlock(EPBlocks.ORANGE_SLAB, "Baldosa de naranjo");
+        addBlock(EPBlocks.ORANGE_STAIRS, "Escaleras de naranjo");
+        addBlock(EPBlocks.ORANGE_FENCE, "Varandilla de naranjo");
+        addBlock(EPBlocks.ORANGE_FENCEGATE, "Puerta de varandilla de naranjo");
+        addBlock(EPBlocks.ORANGE_DOOR, "Puerta de naranjo");
+        addBlock(EPBlocks.ORANGE_TRAPDOOR, "Trampilla de naranjo");
+        addBlock(EPBlocks.ORANGE_BUTTON, "Botón de naranjo");
+        addBlock(EPBlocks.ORANGE_PRESSURE_PLATE, "Placa de presión de naranjo");
+        addSign(EPItems.ORANGE_SIGN, "Cartel de naranjo");
+        addHangingSign(EPItems.ORANGE_HANGING_SIGN, "Cartel de naranjo colgante");
+        addItem(EPItems.ORANGE_BOAT, "Barco de naranjo");
+        addItem(EPItems.ORANGE_CHEST_BOAT, "Barco de naranjo con cofre");
 
-                //Lemon
-                addBlock(EPBlocks.LEMON_SAPLING, "Brote de limonero");
-                addBlock(EPBlocks.LEMON_LEAVES, "Hojas de limonero");
-                addBlock(EPBlocks.LEMON_LEAVES_WITH_FRUIT, "Hojas de limonero con fruta");
-                addBlock(EPBlocks.LEMON_LOG, "Tronco de limonero");
-                addBlock(EPBlocks.STRIPPED_LEMON_LOG, "Tronco de limonero pelado");
-                addBlock(EPBlocks.LEMON_WOOD, "Leño de limonero");
-                addBlock(EPBlocks.STRIPPED_LEMON_WOOD, "Leño de limonero pelado");
-                addBlock(EPBlocks.LEMON_PLANKS, "Tablones de limonero");
-                addBlock(EPBlocks.LEMON_SLAB, "Baldosa de limonero");
-                addBlock(EPBlocks.LEMON_STAIRS, "Escaleras de limonero");
-                addBlock(EPBlocks.LEMON_FENCE, "Varandilla de limonero");
-                addBlock(EPBlocks.LEMON_FENCEGATE, "Puerta de varandilla de limonero");
-                addBlock(EPBlocks.LEMON_DOOR, "Puerta de limonero");
-                addBlock(EPBlocks.LEMON_TRAPDOOR, "Trampilla de limonero");
-                addBlock(EPBlocks.LEMON_BUTTON, "Botón de limonero");
-                addBlock(EPBlocks.LEMON_PRESSURE_PLATE, "Placa de presión de limonero");
-                addSign(EPItems.LEMON_SIGN, "Cartel de limonero");
-                addHangingSign(EPItems.LEMON_HANGING_SIGN,"Cartel de limonero colgante");
-                addItem(EPItems.LEMON_BOAT, "Barco de limonero");
-                addItem(EPItems.LEMON_CHEST_BOAT, "Barco de limonero con cofre");
+        //Lemon
+        addBlock(EPBlocks.LEMON_SAPLING, "Brote de limonero");
+        addBlock(EPBlocks.LEMON_LEAVES, "Hojas de limonero");
+        addBlock(EPBlocks.LEMON_LEAVES_WITH_FRUIT, "Hojas de limonero con fruta");
+        addBlock(EPBlocks.LEMON_LOG, "Tronco de limonero");
+        addBlock(EPBlocks.STRIPPED_LEMON_LOG, "Tronco de limonero pelado");
+        addBlock(EPBlocks.LEMON_WOOD, "Leño de limonero");
+        addBlock(EPBlocks.STRIPPED_LEMON_WOOD, "Leño de limonero pelado");
+        addBlock(EPBlocks.LEMON_PLANKS, "Tablones de limonero");
+        addBlock(EPBlocks.LEMON_SLAB, "Baldosa de limonero");
+        addBlock(EPBlocks.LEMON_STAIRS, "Escaleras de limonero");
+        addBlock(EPBlocks.LEMON_FENCE, "Varandilla de limonero");
+        addBlock(EPBlocks.LEMON_FENCEGATE, "Puerta de varandilla de limonero");
+        addBlock(EPBlocks.LEMON_DOOR, "Puerta de limonero");
+        addBlock(EPBlocks.LEMON_TRAPDOOR, "Trampilla de limonero");
+        addBlock(EPBlocks.LEMON_BUTTON, "Botón de limonero");
+        addBlock(EPBlocks.LEMON_PRESSURE_PLATE, "Placa de presión de limonero");
+        addSign(EPItems.LEMON_SIGN, "Cartel de limonero");
+        addHangingSign(EPItems.LEMON_HANGING_SIGN, "Cartel de limonero colgante");
+        addItem(EPItems.LEMON_BOAT, "Barco de limonero");
+        addItem(EPItems.LEMON_CHEST_BOAT, "Barco de limonero con cofre");
 
-                //Lime
-                addBlock(EPBlocks.LIME_SAPLING, "Brote de limera");
-                addBlock(EPBlocks.LIME_LEAVES, "Hojas de limera");
-                addBlock(EPBlocks.LIME_LEAVES_WITH_FRUIT, "Hojas de limera con fruta");
+        //Lime
+        addBlock(EPBlocks.LIME_SAPLING, "Brote de limera");
+        addBlock(EPBlocks.LIME_LEAVES, "Hojas de limera");
+        addBlock(EPBlocks.LIME_LEAVES_WITH_FRUIT, "Hojas de limera con fruta");
 
         //Polished stone
         addBlock(EPBlocks.POLISHED_STONE, "Piedra pulida");
@@ -722,57 +722,57 @@ public class ChileanLangProvider extends AbstractLangProvider {
         addItem(EPItems.GROUNDED_YERBA_MATE, "Yerba mate molida");
 
         //Food
-            //Wild
-            addItem(EPItems.WILD_TOMATO, "Tomate silvestre");
-            addItem(EPItems.WILD_CORN, "Maiz silvestre");
+        //Wild
+        addItem(EPItems.WILD_TOMATO, "Tomate silvestre");
+        addItem(EPItems.WILD_CORN, "Maiz silvestre");
 
-            //Flour
-            addItem(EPItems.WHEAT_FLOUR, "Harina de trigo");
-            addItem(EPItems.PUMPKIN_FLOUR, "Harina de calabaza");
+        //Flour
+        addItem(EPItems.WHEAT_FLOUR, "Harina de trigo");
+        addItem(EPItems.PUMPKIN_FLOUR, "Harina de calabaza");
 
-            //Seeds
-            addItem(EPItems.YERBA_MATE_SEEDS, "Semillas de yerba mate");
-            addItem(EPItems.ZAPALLO_SEEDS, "Semillas de zapallo");
-            addItem(EPItems.TOMATO_SEEDS, "Semillas de tomate");
-            addItem(EPItems.CORN_SEEDS, "Semillas de maiz");
-            addItem(EPItems.EGGPLANT_SEEDS, "Semillas de berenjena");
+        //Seeds
+        addItem(EPItems.YERBA_MATE_SEEDS, "Semillas de yerba mate");
+        addItem(EPItems.ZAPALLO_SEEDS, "Semillas de zapallo");
+        addItem(EPItems.TOMATO_SEEDS, "Semillas de tomate");
+        addItem(EPItems.CORN_SEEDS, "Semillas de maiz");
+        addItem(EPItems.EGGPLANT_SEEDS, "Semillas de berenjena");
 
-            //Fruits
-            addItem(EPItems.TOMATO, "Tomate");
-            addItem(EPItems.LEMON, "Limón");
-            addItem(EPItems.LIME, "Lima");
-            addItem(EPItems.ORANGE, "Naranja");
-            addItem(EPItems.WALNUT, "Nuez");
-            addItem(EPItems.PEELED_WALNUT, "Nuez pelada");
-            addItem(EPItems.GREEN_APPLE, "Manzana verde");
+        //Fruits
+        addItem(EPItems.TOMATO, "Tomate");
+        addItem(EPItems.LEMON, "Limón");
+        addItem(EPItems.LIME, "Lima");
+        addItem(EPItems.ORANGE, "Naranja");
+        addItem(EPItems.WALNUT, "Nuez");
+        addItem(EPItems.PEELED_WALNUT, "Nuez pelada");
+        addItem(EPItems.GREEN_APPLE, "Manzana verde");
 
-            //Vegetables
-            addItem(EPItems.CORN, "Maiz");
-            addItem(EPItems.ZAPALLO, "Zapallo");
-            addItem(EPItems.EGGPLANT, "Berenjena");
-            addItem(EPItems.RICE_GRAINS, "Granos de arroz");
+        //Vegetables
+        addItem(EPItems.CORN, "Maiz");
+        addItem(EPItems.ZAPALLO, "Zapallo");
+        addItem(EPItems.EGGPLANT, "Berenjena");
+        addItem(EPItems.RICE_GRAINS, "Granos de arroz");
 
-            //Rotten
-            addItem(EPItems.ROTTEN_CARROT, "Zanahoria podrida");
-            addItem(EPItems.ROTTEN_CORN, "Maíz podrido");
-            addItem(EPItems.ROTTEN_ZAPALLO, "Zapallo podrido");
-            addItem(EPItems.ROTTEN_EGGPLANT, "Berenjena podrida");
-            addItem(EPItems.ROTTEN_TOMATO, "Tomate podrido");
+        //Rotten
+        addItem(EPItems.ROTTEN_CARROT, "Zanahoria podrida");
+        addItem(EPItems.ROTTEN_CORN, "Maíz podrido");
+        addItem(EPItems.ROTTEN_ZAPALLO, "Zapallo podrido");
+        addItem(EPItems.ROTTEN_EGGPLANT, "Berenjena podrida");
+        addItem(EPItems.ROTTEN_TOMATO, "Tomate podrido");
 
-            //Cooked
-            addItem(EPItems.COOKED_CORN, "Maiz cocido");
-            addItem(EPItems.COOKED_ZAPALLO, "Zapallo cocido");
-            addItem(EPItems.COOKED_EGGPLANT, "Berejena cocida");
+        //Cooked
+        addItem(EPItems.COOKED_CORN, "Maiz cocido");
+        addItem(EPItems.COOKED_ZAPALLO, "Zapallo cocido");
+        addItem(EPItems.COOKED_EGGPLANT, "Berejena cocida");
 
-            //Others
-            addItem(EPItems.EMPTY_MATE, "Mate vacio");
-            addItem(EPItems.MATE, "Mate");
+        //Others
+        addItem(EPItems.EMPTY_MATE, "Mate vacio");
+        addItem(EPItems.MATE, "Mate");
 
-            addItem(EPItems.RAW_ROTTEN_STEW, "Guiso podrido crudo");
-            addItem(EPItems.ROTTEN_STEW, "Guiso podrido");
+        addItem(EPItems.RAW_ROTTEN_STEW, "Guiso podrido crudo");
+        addItem(EPItems.ROTTEN_STEW, "Guiso podrido");
 
-            addItem(EPItems.YEAST, "Levadura");
-            addItem(EPItems.RICE_BOWL, "Bowl de arroz");
+        addItem(EPItems.YEAST, "Levadura");
+        addItem(EPItems.RICE_BOWL, "Bowl de arroz");
 
         //Smithing templates
         addSmithingTemplateTitle("Plantilla de herreria", "Se aplica a:", "Ingredientes:");
@@ -819,19 +819,24 @@ public class ChileanLangProvider extends AbstractLangProvider {
         addEnchantmentDesc("sharp_blade", "Al ser aplicado, provoca Sangrado al objetivo");
         addEnchantment(EPEnchantments.FROSTBITE, "Congelación");
         addEnchantmentDesc("frostbite", "Al ser aplicado, aplica Congelación al objetivo");
+        addEnchantment(EPEnchantments.SILVER_BLESSING, "Bendición plateada");
+        addEnchantmentDesc("silver_blessing", "Anula el escudo natural de los licántropos ante armas que no estén hechas de plata");
 
         //Entities
-            //Villagers
-            addVillagerProfession("jeweler", "Joyero");
+        //Villagers
+        addVillagerProfession("jeweler", "Joyero");
 
-            //Mobs
-            addBandit("Ladrón");
-            addItem(EPItems.BANDIT_SPAWN_EGG, "Generar ladrón");
+        //Mobs
+        addBandit("Ladrón");
+        addItem(EPItems.BANDIT_SPAWN_EGG, "Generar ladrón");
 
-            addZombieKnight("Zombi caballero");
-            addItem(EPItems.ZOMBIE_KNIGHT_SPAWN_EGG, "Generar zombi caballero");
+        addZombieKnight("Zombi caballero");
+        addItem(EPItems.ZOMBIE_KNIGHT_SPAWN_EGG, "Generar zombi caballero");
 
-            addSkeletonBowmaster("Maestre esqueleto");
-            addItem(EPItems.SKELETON_BOWMASTER_SPAWN_EGG, "Generar maestre esqueleto");
+        addSkeletonBowmaster("Maestre esqueleto");
+        addItem(EPItems.SKELETON_BOWMASTER_SPAWN_EGG, "Generar maestre esqueleto");
+
+        addWerellager("Lobillano");
+        addItem(EPItems.WERELLAGER_SPAWN_EGG, "Generar lobillano");
     }
 }

@@ -1,8 +1,8 @@
-package net.marmar.enhanced_playthrough.recipe.builders;
+package net.marmar.enhanced_playthrough.recipe.builder;
 
 import net.marmar.enhanced_playthrough.recipe.EPRecipes;
 import net.marmar.enhanced_playthrough.recipe.grind.AbstractGrindRecipe;
-import net.marmar.enhanced_playthrough.recipe.recipecategory.ModRecipeCategory;
+import net.marmar.enhanced_playthrough.recipe.category.ModRecipeCategory;
 import com.google.gson.JsonObject;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.advancements.AdvancementRewards;

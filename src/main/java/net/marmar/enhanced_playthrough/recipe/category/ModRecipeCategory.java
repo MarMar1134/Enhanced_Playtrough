@@ -1,4 +1,4 @@
-package net.marmar.enhanced_playthrough.recipe.recipecategory;
+package net.marmar.enhanced_playthrough.recipe.category;
 
 import net.minecraft.util.StringRepresentable;
 

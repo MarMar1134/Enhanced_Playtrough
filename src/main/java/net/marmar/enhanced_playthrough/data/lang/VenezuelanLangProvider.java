@@ -95,6 +95,10 @@ public class VenezuelanLangProvider extends AbstractLangProvider {
         addSoundDescription("skeleton_bowmaster_hurt", "Maestre esqueleto siendo herido");
         addSoundDescription("skeleton_bowmaster_death", "Maestre esqueleto muriendo");
 
+        //Lycans
+            //Werellager
+
+
         //Death messages
         addDeathMessages("tallReed", "ha muerto pinchado por un carrizo",
                 "ha muerto pinchado por un carrizo mientras escapaba de");
@@ -818,6 +822,8 @@ public class VenezuelanLangProvider extends AbstractLangProvider {
         addEnchantmentDesc("sharp_blade", "Al ser aplicado, provoca Sangrado al objetivo");
         addEnchantment(EPEnchantments.FROSTBITE, "Congelación");
         addEnchantmentDesc("frostbite", "Al ser aplicado, aplica Congelación al objetivo");
+        addEnchantment(EPEnchantments.SILVER_BLESSING, "Bendición plateada");
+        addEnchantmentDesc("silver_blessing", "Anula el escudo natural de los licántropos ante armas que no estén hechas de plata");
 
         //Entities
             //Villagers
@@ -832,5 +838,10 @@ public class VenezuelanLangProvider extends AbstractLangProvider {
 
             addSkeletonBowmaster("Maestre esqueleto");
             addItem(EPItems.SKELETON_BOWMASTER_SPAWN_EGG, "Generar maestre esqueleto");
+
+            addWerellager("Lobillano");
+            addItem(EPItems.WERELLAGER_SPAWN_EGG, "Generar lobillano");
+
+
     }
 }

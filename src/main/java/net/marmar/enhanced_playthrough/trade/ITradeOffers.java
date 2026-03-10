@@ -7,6 +7,7 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.EnchantedBookItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.MapItem;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.EnchantmentInstance;
@@ -28,7 +29,7 @@ public interface ITradeOffers {
      * @param pVillagerXp the amount of xp that will receive the villager
      * @return the offer
      */
-    static MerchantOffer EnchantedItemOffer(RandomSource pRandom, ItemLike pCoin, int pBaseCost, ItemLike pReward, int pMaxUses, int pVillagerXp){
+    static MerchantOffer enchantedItemOffer(RandomSource pRandom, ItemLike pCoin, int pBaseCost, ItemLike pReward, int pMaxUses, int pVillagerXp){
         int costMultiplier = 5 + pRandom.nextInt(15);
         int finalCost = Math.min(pBaseCost + costMultiplier, 64);
 
@@ -49,7 +50,7 @@ public interface ITradeOffers {
      * @param pVillagerXp the amount of xp that will receive the villager
      * @return the offer
      */
-    static MerchantOffer EnchantedItemOffer(RandomSource pRandom, ItemLike pFirstCoin, int pFirstCoinCost, ItemLike pSecondCoin, int pSecondCoinCost, ItemLike pReward, int pMaxUses, int pVillagerXp){
+    static MerchantOffer enchantedItemOffer(RandomSource pRandom, ItemLike pFirstCoin, int pFirstCoinCost, ItemLike pSecondCoin, int pSecondCoinCost, ItemLike pReward, int pMaxUses, int pVillagerXp){
         int costMultiplier = 5 + pRandom.nextInt(15);
         int firstCoinCost = Math.min(pFirstCoinCost + costMultiplier, 64);
         int secondCoinCost = Math.min(pSecondCoinCost + costMultiplier, 64);
@@ -65,7 +66,7 @@ public interface ITradeOffers {
      * @param pVillagerXp the amount of xp that will receive the villager
      * @return the offer
      */
-    static MerchantOffer EnchantedBookOffer(RandomSource pRandom, int pVillagerXp){
+    static MerchantOffer enchantedBookOffer(RandomSource pRandom, int pVillagerXp){
         //A map of all the tradeable enchantments
         List<Enchantment> enchantments =  ForgeRegistries.ENCHANTMENTS.getValues().stream().filter(Enchantment::isTradeable).toList();
 
@@ -115,7 +116,7 @@ public interface ITradeOffers {
      * @param pVillagerXp the amount of xp that will receive the villager
      * @return the offer
      */
-    static MerchantOffer EnchantedBookOffer(RandomSource pRandom, ItemLike pCoin, Enchantment pEnchantment, int pVillagerXp){
+    static MerchantOffer enchantedBookOffer(RandomSource pRandom, ItemLike pCoin, Enchantment pEnchantment, int pVillagerXp){
         int enchantmentLevel = Mth.nextInt(pRandom, pEnchantment.getMinLevel(), pEnchantment.getMaxLevel());
 
         int enchantmentPrice = 2 + pRandom.nextInt(5 + enchantmentLevel * 10) + 3 * enchantmentLevel;

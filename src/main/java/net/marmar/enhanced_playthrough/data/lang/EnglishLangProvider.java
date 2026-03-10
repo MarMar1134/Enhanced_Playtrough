@@ -816,6 +816,8 @@ public class EnglishLangProvider extends AbstractLangProvider {
             addEnchantmentDesc("sharp_blade", "Gives Bleeding to the target");
             addEnchantment(EPEnchantments.FROSTBITE, "Frostbite");
             addEnchantmentDesc("frostbite", "Gives Frostbite to the target");
+            addEnchantment(EPEnchantments.SILVER_BLESSING, "Silver blessing");
+            addEnchantmentDesc("silver_blessing", "Nullifies the natural shield of lycans against non-silver weapons");
 
         //Entities
             //Villagers
@@ -830,5 +832,8 @@ public class EnglishLangProvider extends AbstractLangProvider {
 
             addSkeletonBowmaster("Skeleton bowmaster");
             addItem(EPItems.SKELETON_BOWMASTER_SPAWN_EGG, "Spawn skeleton bowmaster");
+
+            addWerellager("Werellager");
+            addItem(EPItems.WERELLAGER_SPAWN_EGG, "Spawn werellager");
     }
 }
