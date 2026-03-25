@@ -3,11 +3,11 @@ package net.marmar.enhanced_playthrough.data.model;
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.block.EPBlocks;
 import net.marmar.enhanced_playthrough.block.custom.alchemicalduplicator.AlchemicalDuplicatorBlock;
-import net.marmar.enhanced_playthrough.block.custom.crop.*;
 import net.marmar.enhanced_playthrough.block.custom.epfurnace.AbstractEPFurnaceBlock;
 import net.marmar.enhanced_playthrough.block.custom.epfurnace.MasonryFurnaceBlock;
 import net.marmar.enhanced_playthrough.block.custom.grinder.PrimalGrinderBlock;
 import net.marmar.enhanced_playthrough.block.custom.plant.DoublePlantGrowingHeadBlock;
+import net.marmar.enhanced_playthrough.block.custom.plant.crop.*;
 import net.marmar.enhanced_playthrough.block.custom.wood.leaves.LeavesWithFruitBlock;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -124,6 +124,7 @@ public class EPBlockStateProvider extends BlockStateProvider {
         blockWithItem(EPBlocks.RAW_ZINC_BLOCK);
 
         //Ore blocks
+        blockWithItem(EPBlocks.SULFUR_BLOCK);
         blockWithItem(EPBlocks.SILVER_BLOCK);
         blockWithItem(EPBlocks.ALUMINUM_BLOCK);
         blockWithItem(EPBlocks.TIN_BLOCK);

@@ -137,7 +137,7 @@ public class EPConfiguredFeatures {
         List<OreConfiguration.TargetBlockState> netherCopperOres = List.of(
                 OreConfiguration.target(netherrackReplaceable, EPBlocks.NETHER_COPPER_ORE.get().defaultBlockState()));
 
-        register(context, NETHER_COPPER_ORES, Feature.ORE, new OreConfiguration(netherCopperOres, 8));
+        register(context, NETHER_COPPER_ORES, Feature.ORE, new OreConfiguration(netherCopperOres, 8, 0.3f));
 
         //Tin
         List<OreConfiguration.TargetBlockState> tinOres = List.of(
@@ -145,7 +145,7 @@ public class EPConfiguredFeatures {
                 OreConfiguration.target(deepslateReplaceable, EPBlocks.DEEPSLATE_TIN_ORE.get().defaultBlockState()));
 
         register(context, SMALL_TIN_ORES, Feature.ORE, new OreConfiguration(tinOres, 6, 0.2f));
-        register(context, BIG_TIN_ORES, Feature.ORE, new OreConfiguration(tinOres, 12));
+        register(context, BIG_TIN_ORES, Feature.ORE, new OreConfiguration(tinOres, 12, 0.4f));
 
         //Zinc
         List<OreConfiguration.TargetBlockState> zincOres = List.of(
@@ -156,7 +156,7 @@ public class EPConfiguredFeatures {
                 OreConfiguration.target(netherrackReplaceable, EPBlocks.NETHER_ZINC_ORE.get().defaultBlockState()));
 
         register(context, SMALL_ZINC_ORES, Feature.ORE, new OreConfiguration(zincOres, 6, 0.2f));
-        register(context, BIG_ZINC_ORES, Feature.ORE, new OreConfiguration(zincOres, 10, 0.3f));
+        register(context, BIG_ZINC_ORES, Feature.ORE, new OreConfiguration(zincOres, 10, 0.5f));
         register(context, NETHER_ZINC_ORES, Feature.ORE, new OreConfiguration(netherZincOres, 14));
 
         //Sulfur
@@ -164,7 +164,7 @@ public class EPConfiguredFeatures {
                 OreConfiguration.target(stoneReplaceable, EPBlocks.SULFUR_ORE.get().defaultBlockState()),
                 OreConfiguration.target(deepslateReplaceable, EPBlocks.DEEPSLATE_SULFUR_ORE.get().defaultBlockState()));
 
-        register(context, SMALL_SULFUR_ORES, Feature.ORE, new OreConfiguration(sulfurOres, 6, 0.2f));
+        register(context, SMALL_SULFUR_ORES, Feature.ORE, new OreConfiguration(sulfurOres, 6, 0.3f));
         register(context, BIG_SULFUR_ORES, Feature.ORE, new OreConfiguration(sulfurOres, 9, 0.4f));
 
         List<OreConfiguration.TargetBlockState> netherSulphurOres = List.of(
@@ -219,7 +219,7 @@ public class EPConfiguredFeatures {
                 OreConfiguration.target(stoneReplaceable, EPBlocks.COBALT_ORE.get().defaultBlockState()),
                 OreConfiguration.target(deepslateReplaceable, EPBlocks.DEEPSLATE_COBALT_ORE.get().defaultBlockState()));
 
-        register(context, COBALT_ORES, Feature.ORE, new OreConfiguration(cobaltOres, 5));
+        register(context, COBALT_ORES, Feature.ORE, new OreConfiguration(cobaltOres, 5, 0.4f));
 
         //trees
             //Walnut

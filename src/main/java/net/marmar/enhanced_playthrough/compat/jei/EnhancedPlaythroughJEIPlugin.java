@@ -3,6 +3,7 @@ package net.marmar.enhanced_playthrough.compat.jei;
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.compat.jei.category.*;
 import net.marmar.enhanced_playthrough.item.EPItems;
+import net.marmar.enhanced_playthrough.menu.screen.alchemicalduplicator.AlchemicalDuplicatorScreen;
 import net.marmar.enhanced_playthrough.menu.screen.alloyfurnace.AdobeAlloyFurnaceScreen;
 import net.marmar.enhanced_playthrough.menu.screen.alloyfurnace.SuperAlloyFurnaceScreen;
 import net.marmar.enhanced_playthrough.menu.screen.modfurnace.AdobeFurnaceScreen;
@@ -65,6 +66,9 @@ public class EnhancedPlaythroughJEIPlugin implements IModPlugin {
         //Grind recipes
         registration.addRecipeCategories(new PrimalGrindCategory(registration.getJeiHelpers().getGuiHelper()));
         registration.addRecipeCategories(new MechanicalGrindCategory(registration.getJeiHelpers().getGuiHelper()));
+
+        //Alchemical duplicating recipes
+        registration.addRecipeCategories(new AlchemicalDuplicatingCategory(registration.getJeiHelpers().getGuiHelper()));
     }
 
     private void addIngredientsInfo(IRecipeRegistration registration){
@@ -167,7 +171,7 @@ public class EnhancedPlaythroughJEIPlugin implements IModPlugin {
         registration.addRecipeClickArea(MasonryFurnaceScreen.class, 80, 38, 14, 9,
                 MasonrySmeltingCategory.MASONRY_SMELTING_TYPE);
 
-        //Alloying
+        //Ore alloying
         registration.addRecipeClickArea(AdobeAlloyFurnaceScreen.class, 59, 19, 13, 11,
                 OreAlloyingCategory.ALLOYING_FURNACE_RECIPE_RECIPE_TYPE);
 
@@ -186,7 +190,7 @@ public class EnhancedPlaythroughJEIPlugin implements IModPlugin {
                 MechanicalGrindCategory.GRINDING_RECIPE_RECIPE_TYPE);
 
         //Alchemical duplicating
-//        registration.addRecipeClickArea(AlchemicalDuplicatorScreen.class, 86, 40, 4, 5,
-//                AlchemicalDuplicatingCategory.ALCHEMICAL_DUPLICATING_RECIPE_RECIPE_TYPE);
+        registration.addRecipeClickArea(AlchemicalDuplicatorScreen.class, 86, 40, 4, 5,
+                AlchemicalDuplicatingCategory.ALCHEMICAL_DUPLICATING_RECIPE_RECIPE_TYPE);
     }
 }

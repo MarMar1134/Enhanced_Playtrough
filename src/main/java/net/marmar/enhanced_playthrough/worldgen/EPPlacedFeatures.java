@@ -208,7 +208,7 @@ public class EPPlacedFeatures {
 
             //Lime
             register(context, LIME_TREES_PLACED, configuredFeatures.getOrThrow(EPConfiguredFeatures.LIME_TREES),
-                    VegetationPlacements.treePlacement(PlacementUtils.countExtra(2, 0.1f, 1),
+                    VegetationPlacements.treePlacement(PlacementUtils.countExtra(1, 0.1f, 0),
                             EPBlocks.LIME_SAPLING.get()));
 
         //Wild crops

@@ -1,13 +1,13 @@
-// 1.20.1	2026-03-10T11:41:40.6271574	Tags for minecraft:item mod id enhanced_playthrough
+// 1.20.1	2026-03-11T08:57:40.7077454	Tags for minecraft:item mod id enhanced_playthrough
 0ff3092eb36a0159ae287d2f429e5f5eb6fb0c0a data/enhanced_playthrough/tags/items/aluminum.json
 b3b284c126879d981b4f706eb8ea0e63bd17ae12 data/enhanced_playthrough/tags/items/apple_logs.json
-1d609255995a77ead62a005cb2b75886514bb25a data/enhanced_playthrough/tags/items/blue_gold.json
-a8ea8b1520cb8f712ef8f35fdb2c8b4c18aec972 data/enhanced_playthrough/tags/items/brass.json
-6eb15d6bcbb91d8c0620b4f5725ccd3e40ee136d data/enhanced_playthrough/tags/items/bronze.json
-51a242b65b3b57da614336a56829bab78ed3edbf data/enhanced_playthrough/tags/items/bronzium.json
+7c7828adcbd60c80e9a7c4bd6e7d0382327527c8 data/enhanced_playthrough/tags/items/blue_gold.json
+83d6c98c8bc6b6bac08920545d222386092f1a85 data/enhanced_playthrough/tags/items/brass.json
+ac34ae703a2c2baf2be8606c12616264c07ce35e data/enhanced_playthrough/tags/items/bronze.json
+027f10b9f74c636263b73bb0e505d0e684b0cc50 data/enhanced_playthrough/tags/items/bronzium.json
 3296f05310ec1fc44e4609197e9990bf2d36e262 data/enhanced_playthrough/tags/items/cobble.json
-3866696b89e3a2af6c22803f8326f0be3c10e399 data/enhanced_playthrough/tags/items/gold.json
-4cd234ea284fc873dea734a75ab1f95edd7b67f5 data/enhanced_playthrough/tags/items/green_gold.json
+e5f2d642c9d9b020c4b93511a8cea241db8ae616 data/enhanced_playthrough/tags/items/gold.json
+8594d787d8e4fa92e3fa3d55a3593f459440d415 data/enhanced_playthrough/tags/items/green_gold.json
 5cb953245495326a2398eaee4bea383aee7977df data/enhanced_playthrough/tags/items/ingots/aluminum.json
 e0e0c5e3b09ac1077d7935e70b6703de286273e4 data/enhanced_playthrough/tags/items/ingots/blue_gold.json
 ce47231e83e04d0826e5a4a124a477a3b10117a1 data/enhanced_playthrough/tags/items/ingots/brass.json
@@ -27,7 +27,7 @@ d4c382fd80e3db9371b76d593e7c4c9ded30562b data/enhanced_playthrough/tags/items/in
 5e721bdc414693a14c4480e190f068f275b27533 data/enhanced_playthrough/tags/items/ingredients/masonry.json
 c20f22cfa3728305152d9e31f5393a9880dc68a5 data/enhanced_playthrough/tags/items/ingredients/mechanical_grind.json
 7ab1cfdb6ebde24a8fd379aab0753da1d1af9dbb data/enhanced_playthrough/tags/items/ingredients/primal_grind.json
-cfbc8dfd72a54530098e74199c3e16e9140c19fa data/enhanced_playthrough/tags/items/iron.json
+c36a7d1056644e9175362298cd1d11012493e3c8 data/enhanced_playthrough/tags/items/iron.json
 4e223721e8c3e07e295a2f81d83b27295680a31b data/enhanced_playthrough/tags/items/lemon_logs.json
 fffed4249e2e7acdd07fdff82de86ac1e41c648d data/enhanced_playthrough/tags/items/manufacturable.json
 91cf5755eef6ce5bae0c30aefa6873e817134ca3 data/enhanced_playthrough/tags/items/manufacturable/aluminum.json
@@ -59,9 +59,9 @@ aae115d005c5fe23885c738fc2e13a317ee65c89 data/enhanced_playthrough/tags/items/or
 6cb61d10a550aa75f3e2f1a4e3ee86f17bf6ec5f data/enhanced_playthrough/tags/items/ores/zinc.json
 c48734bcfcda2db12268011ee56ef74e370665d9 data/enhanced_playthrough/tags/items/raw_gems.json
 23b7f237258e89a443190cc767e97e82751d96d1 data/enhanced_playthrough/tags/items/rods/aluminum.json
-99d68f955857bb0f78d4fb749837e4652210c311 data/enhanced_playthrough/tags/items/rose_gold.json
-f14df081c9b538e608510816b586011248049554 data/enhanced_playthrough/tags/items/silver.json
-1ab5119f232160a3aac4d89154ae45506f878431 data/enhanced_playthrough/tags/items/steel.json
+97afdeb6e6eae64aafd0bfe2f3972e78a2061251 data/enhanced_playthrough/tags/items/rose_gold.json
+b8ac97085c1e2d580911d8b946fbe4ee1129b132 data/enhanced_playthrough/tags/items/silver.json
+3b3c4131f0b74b34d8813dcad81dc403c6d69c07 data/enhanced_playthrough/tags/items/steel.json
 a2809eefeb5127ce6cbb247c4ac406b07ce833a8 data/enhanced_playthrough/tags/items/terracotta_shard.json
 e486e622d64aa97dd9f514737bd73898804dc944 data/enhanced_playthrough/tags/items/tools/daggers.json
 06b04f42c8b8659c0cd7e5252643010728c62883 data/enhanced_playthrough/tags/items/tools/hurts_lycan.json

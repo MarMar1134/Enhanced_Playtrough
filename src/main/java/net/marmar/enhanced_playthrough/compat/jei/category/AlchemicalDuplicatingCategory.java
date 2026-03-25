@@ -58,8 +58,8 @@ public class AlchemicalDuplicatingCategory implements IRecipeCategory<Alchemical
         builder.addSlot(RecipeIngredientRole.INPUT, 80, 22).addIngredients(recipe.getIngredients().get(0));
 
         builder.addSlot(RecipeIngredientRole.OUTPUT, 33, 56).addItemStack(recipe.getResultItem(null));
-//        builder.addSlot(RecipeIngredientRole.OUTPUT, 65, 56).addItemStack(recipe.getResultItem(null));
-//        builder.addSlot(RecipeIngredientRole.OUTPUT, 97, 56).addItemStack(recipe.getResultItem(null));
-//        builder.addSlot(RecipeIngredientRole.OUTPUT, 129, 56).addItemStack(recipe.getResultItem(null));
+        builder.addSlot(RecipeIngredientRole.OUTPUT, 65, 56).addItemStack(recipe.getResultItem(null));
+        builder.addSlot(RecipeIngredientRole.OUTPUT, 97, 56).addItemStack(recipe.getResultItem(null));
+        builder.addSlot(RecipeIngredientRole.OUTPUT, 129, 56).addItemStack(recipe.getResultItem(null));
     }
 }

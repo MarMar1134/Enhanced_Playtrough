@@ -93,6 +93,8 @@ public class EPBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_SKELETON_BOWMASTER_SPAWNS = registerKey("add_skeleton_bowmaster_spawns");
     public static final ResourceKey<BiomeModifier> ADD_SKELETON_BOWMASTER_SPAWNS_ON_SNOW = registerKey("add_skeleton_bowmaster_spawns_on_snow");
 
+    public static final ResourceKey<BiomeModifier> ADD_WERELLAGER_SPAWNS = registerKey("add_werellager_spawns");
+
     public static void bootstrap(BootstapContext<BiomeModifier> context) {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
         var biomes = context.lookup(Registries.BIOME);
@@ -151,8 +153,8 @@ public class EPBiomeModifiers {
                 HolderSet.direct(placedFeatures.getOrThrow(EPPlacedFeatures.UPPER_SULFUR_ORES_PLACED)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
         context.register(ADD_EXTRA_SULFUR_ORES, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                HolderSet.direct(biomes.getOrThrow(Biomes.STONY_PEAKS), biomes.getOrThrow(Biomes.JAGGED_PEAKS), biomes.getOrThrow(Biomes.SNOWY_SLOPES),
-                        biomes.getOrThrow(Biomes.FROZEN_PEAKS)),
+                HolderSet.direct(biomes.getOrThrow(Biomes.STONY_PEAKS), biomes.getOrThrow(Biomes.JAGGED_PEAKS),
+                                 biomes.getOrThrow(Biomes.SNOWY_SLOPES), biomes.getOrThrow(Biomes.FROZEN_PEAKS)),
                 HolderSet.direct(placedFeatures.getOrThrow(EPPlacedFeatures.EXTRA_SULFUR_ORES_PLACED)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
         context.register(ADD_LOWER_SULFUR_ORES, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
@@ -338,6 +340,11 @@ public class EPBiomeModifiers {
         context.register(ADD_SKELETON_BOWMASTER_SPAWNS_ON_SNOW, new ForgeBiomeModifiers.AddSpawnsBiomeModifier(
                 biomes.getOrThrow(EPTags.Biomes.FROZEN_BIOMES),
                 List.of(new MobSpawnSettings.SpawnerData(EPEntityTypes.SKELETON_BOWMASTER.get(), 30, 2, 4))));
+
+        //Werellager
+        context.register(ADD_WERELLAGER_SPAWNS, new ForgeBiomeModifiers.AddSpawnsBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
+                List.of(new MobSpawnSettings.SpawnerData(EPEntityTypes.WERELLAGER.get(), 40, 1, 2))));
     }
 
     @SuppressWarnings("removal")

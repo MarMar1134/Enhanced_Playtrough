@@ -85,6 +85,12 @@ public class SurvivalAdvancementGenerator implements ForgeAdvancementProvider.Ad
                 .addCriterion("has_aluminum_ingot", hasItems(EPItems.ALUMINUM_INGOT.get()))
                 .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "the_aluminated"), existingFileHelper);
 
+        Advancement vale_4 = Advancement.Builder.advancement()
+                .parent(steel_isnt_enough)
+                .display(taskDisplayInfo(EPBlocks.ALCHEMICAL_DUPLICATOR.get(), "vale_4"))
+                .addCriterion("has_alchemical_duplicator", hasItems(EPBlocks.ALCHEMICAL_DUPLICATOR.get()))
+                .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "vale_4"), existingFileHelper);
+
         //Gold path
         Advancement ancient_knowledge = Advancement.Builder.advancement()
                 .parent(unity_makes_strength)
@@ -110,7 +116,7 @@ public class SurvivalAdvancementGenerator implements ForgeAdvancementProvider.Ad
                 .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "bubbles"), existingFileHelper);
 
         Advancement the_goldenpuff_girls = Advancement.Builder.advancement()
-                .parent(unity_makes_strength)
+                .parent(bubbles)
                 .display(challengeDisplayInfo(EPItems.BLUE_GOLDEN_SWORD.get(), "the_goldenpuff_girls"))
                 .addCriterion("has_rose_gold_ingot", InventoryChangeTrigger.TriggerInstance.hasItems(EPItems.ROSE_GOLD_INGOT.get()))
                 .addCriterion("has_green_gold_ingot", InventoryChangeTrigger.TriggerInstance.hasItems(EPItems.GREEN_GOLD_INGOT.get()))

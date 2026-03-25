@@ -5,13 +5,13 @@
     "B": {
       "item": "enhanced_playthrough:bronzium_ingot"
     },
-    "L": {
-      "item": "minecraft:blaze_rod"
+    "S": {
+      "item": "enhanced_playthrough:sulfur"
     }
   },
   "pattern": [
     "BBB",
-    "L L",
+    "BSB",
     "BBB"
   ],
   "result": {

@@ -3,6 +3,7 @@ package net.marmar.enhanced_playthrough.menu.alchemicalduplicator;
 import net.marmar.enhanced_playthrough.block.EPBlocks;
 import net.marmar.enhanced_playthrough.block.custom.alchemicalduplicator.AlchemicalDuplicatorBlockEntity;
 import net.marmar.enhanced_playthrough.data.tag.EPTags;
+import net.marmar.enhanced_playthrough.item.EPItems;
 import net.marmar.enhanced_playthrough.menu.EPMenuTypes;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
@@ -41,16 +42,16 @@ public class AlchemicalDuplicatorMenu extends AbstractContainerMenu {
 
     private void addSlots(AlchemicalDuplicatorBlockEntity alchemicalDuplicator){
         //Blaze powder
-        alchemicalDuplicator.getBlazePowderLazyHandler().ifPresent(itemStackHandler ->
+        alchemicalDuplicator.getSulfurSlotLazyHandler().ifPresent(itemStackHandler ->
                 addSlot(new SlotItemHandler(itemStackHandler, 0, 16, 22){
             @Override
             public boolean mayPlace(@NotNull ItemStack stack) {
-                return stack.is(Items.BLAZE_POWDER);
+                return stack.is(EPItems.SULFUR.get());
             }
         }));
 
         //Book
-        alchemicalDuplicator.getBookLazyHandler().ifPresent(itemStackHandler ->
+        alchemicalDuplicator.getBookSlotLazyHandler().ifPresent(itemStackHandler ->
                 addSlot(new SlotItemHandler(itemStackHandler, 0, 144, 22){
             @Override
             public boolean mayPlace(@NotNull ItemStack stack) {
@@ -59,7 +60,7 @@ public class AlchemicalDuplicatorMenu extends AbstractContainerMenu {
         }));
 
         //Input
-        alchemicalDuplicator.getInputLazyHandler().ifPresent(itemStackHandler -> {
+        alchemicalDuplicator.getInputSlotLazyHandler().ifPresent(itemStackHandler -> {
             addSlot(new SlotItemHandler(itemStackHandler, 0, 80, 22){
                 @Override
                 public boolean mayPlace(@NotNull ItemStack stack) {
@@ -69,7 +70,7 @@ public class AlchemicalDuplicatorMenu extends AbstractContainerMenu {
         });
 
         //Outputs
-        alchemicalDuplicator.getOutputsLazyHandler().ifPresent(itemStackHandler -> {
+        alchemicalDuplicator.getOutputSlotLazyHandler().ifPresent(itemStackHandler -> {
             addSlot(new SlotItemHandler(itemStackHandler, 0, 33, 56){
                 @Override
                 public boolean mayPlace(@NotNull ItemStack stack) {

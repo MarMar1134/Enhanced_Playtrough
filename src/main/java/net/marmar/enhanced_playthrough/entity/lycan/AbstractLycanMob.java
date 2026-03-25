@@ -15,16 +15,15 @@ import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 
 public abstract class AbstractLycanMob extends Monster {
     private static final EntityDataAccessor<Integer> LYCAN_STATE = SynchedEntityData.defineId(AbstractLycanMob.class, EntityDataSerializers.INT);
-
     private final SoundEvent ambientSound;
     private final SoundEvent stepSound;
     private final SoundEvent hurtSound;
     private final SoundEvent deathSound;
+    private boolean isTransformed;
 
     protected AbstractLycanMob(EntityType<? extends Monster> pEntityType, Level pLevel, SoundEvent pAmbientSound, SoundEvent pStepSound, SoundEvent pHurtSound, SoundEvent pDeathSound) {
         super(pEntityType, pLevel);
@@ -49,6 +48,8 @@ public abstract class AbstractLycanMob extends Monster {
         this.refreshDimensions();
     }
 
+    protected abstract void transform();
+
     @Override
     public boolean hurt(DamageSource pSource, float pAmount) {
         if (this.getState() == LycanState.LYCAN_FORM){
@@ -56,19 +57,18 @@ public abstract class AbstractLycanMob extends Monster {
                 ItemStack attackItem = player.getItemBySlot(EquipmentSlot.MAINHAND);
 
                 if (attackItem.is(EPTags.Items.HURTS_LYCAN)){
-                    return super.hurt(pSource, pAmount * 1.3f);
+                    return super.hurt(pSource, pAmount * 1.5f);
                 } else if (attackItem.getEnchantmentLevel(EPEnchantments.SILVER_BLESSING.get()) > 0) {
-                    return super.hurt(pSource, pAmount + (attackItem.getEnchantmentLevel(EPEnchantments.SILVER_BLESSING.get())) * 1.2f);
+                    float damageMultiplier = attackItem.getEnchantmentLevel(EPEnchantments.SILVER_BLESSING.get()) * 1.2f;
+                    return super.hurt(pSource, pAmount + damageMultiplier);
+                } else {
+                    return super.hurt(pSource, 1.0f);
                 }
             }
-
-            return super.hurt(pSource, 1.0f);
         }
 
         return super.hurt(pSource, pAmount);
     }
-
-    protected abstract void transform();
 
     @Override
     protected SoundEvent getAmbientSound() {

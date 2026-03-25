@@ -730,6 +730,7 @@ public class EPTabs {
                         output.accept(EPBlocks.FIREBRICK_STAIRS.get());
                         output.accept(EPBlocks.FIREBRICK_WALL.get());
 
+                        output.accept(EPBlocks.SULFUR_BLOCK.get());
                         output.accept(EPBlocks.RAW_SILVER_BLOCK.get());
                         output.accept(EPBlocks.SILVER_BLOCK.get());
                         output.accept(EPBlocks.RAW_ALUMINUM_BLOCK.get());

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "leather",
+  "ingredients": [
+    {
+      "item": "enhanced_playthrough:cow_hide"
+    },
+    {
+      "item": "enhanced_playthrough:cow_hide"
+    }
+  ],
+  "result": {
+    "item": "minecraft:leather"
+  }
+}

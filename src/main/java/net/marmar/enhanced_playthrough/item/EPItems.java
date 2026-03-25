@@ -211,6 +211,14 @@ public class EPItems {
     public static final RegistryObject<Item> BLACK_TERRACOTTA_SHARD = ITEMS.register(
             "black_terracotta_shard", () -> new CobbleItem(new Item.Properties(), 3));
 
+    //Hide
+    public static final RegistryObject<Item> COW_HIDE = ITEMS.register(
+            "cow_hide", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> PIG_HIDE = ITEMS.register(
+            "pig_hide", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> WERELLAGER_HIDE = ITEMS.register(
+            "werellager_hide", () -> new Item(new Item.Properties()));
+
     //Other materials
     public static final RegistryObject<Item> MUD_BRICK = ITEMS.register(
             "mud_brick", () -> new Item(new Item.Properties()));
@@ -756,7 +764,7 @@ public class EPItems {
 
         //crops
         public static final RegistryObject<Item> RICE_GRAINS = ITEMS.register(
-                "rice_grains", () -> new Item((new Item.Properties().food(EPFoodProperties.RICE))));
+                "rice_grains", () -> new Item(new Item.Properties().food(EPFoodProperties.RICE)));
         public static final RegistryObject<Item> TOMATO = ITEMS.register(
                 "tomato",() -> new Item(new Item.Properties().food(EPFoodProperties.TOMATO)));
         public static final RegistryObject<Item> ZAPALLO = ITEMS.register(

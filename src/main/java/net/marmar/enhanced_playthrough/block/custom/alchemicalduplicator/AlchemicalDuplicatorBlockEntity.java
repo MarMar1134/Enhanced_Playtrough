@@ -39,7 +39,7 @@ import java.util.Map;
 import java.util.Optional;
 
 public class AlchemicalDuplicatorBlockEntity extends BlockEntity implements MenuProvider {
-    private final ItemStackHandler inputHandler = new ItemStackHandler(1){
+    private final ItemStackHandler inputSlotHandler = new ItemStackHandler(1){
         @Override
         protected void onContentsChanged(int slot) {
             super.onContentsChanged(slot);
@@ -47,7 +47,7 @@ public class AlchemicalDuplicatorBlockEntity extends BlockEntity implements Menu
         }
     };
 
-    private final ItemStackHandler blazePowderHandler = new ItemStackHandler(1){
+    private final ItemStackHandler sulfurSlotHandler = new ItemStackHandler(1){
         @Override
         protected void onContentsChanged(int slot) {
             super.onContentsChanged(slot);
@@ -55,7 +55,7 @@ public class AlchemicalDuplicatorBlockEntity extends BlockEntity implements Menu
         }
     };
 
-    private final ItemStackHandler bookHandler = new ItemStackHandler(1){
+    private final ItemStackHandler bookSlotHandler = new ItemStackHandler(1){
         @Override
         protected void onContentsChanged(int slot) {
             super.onContentsChanged(slot);
@@ -63,7 +63,7 @@ public class AlchemicalDuplicatorBlockEntity extends BlockEntity implements Menu
         }
     };
 
-    private final ItemStackHandler outputsHandler = new ItemStackHandler(4){
+    private final ItemStackHandler outputSlotHandler = new ItemStackHandler(4){
         @Override
         protected void onContentsChanged(int slot) {
             super.onContentsChanged(slot);
@@ -71,14 +71,14 @@ public class AlchemicalDuplicatorBlockEntity extends BlockEntity implements Menu
         }
     };
 
-    private final LazyOptional<ItemStackHandler> inputLazyHandler = LazyOptional.of(() -> this.inputHandler);
-    private final LazyOptional<ItemStackHandler> blazePowderLazyHandler = LazyOptional.of(() -> this.blazePowderHandler);
-    private final LazyOptional<ItemStackHandler> bookLazyHandler = LazyOptional.of(() -> this.bookHandler);
-    private final LazyOptional<ItemStackHandler> outputsLazyHandler = LazyOptional.of(() -> this.outputsHandler);
+    private final LazyOptional<ItemStackHandler> inputSlotLazyHandler = LazyOptional.of(() -> this.inputSlotHandler);
+    private final LazyOptional<ItemStackHandler> sulfurSlotLazyHandler = LazyOptional.of(() -> this.sulfurSlotHandler);
+    private final LazyOptional<ItemStackHandler> bookSlotLazyHandler = LazyOptional.of(() -> this.bookSlotHandler);
+    private final LazyOptional<ItemStackHandler> outputSlotLazyHandler = LazyOptional.of(() -> this.outputSlotHandler);
 
     protected final ContainerData data;
 
-    private int blazePowderLeft = 0;
+    private int sulfurLeft = 0;
     private int bookUses = 0, maxBookUses = 0, bookLevel = 0;
     private int progress = 0, maxProgress = 200;
 
@@ -89,7 +89,7 @@ public class AlchemicalDuplicatorBlockEntity extends BlockEntity implements Menu
             @Override
             public int get(int i) {
                 return switch (i){
-                    case 0 ->  AlchemicalDuplicatorBlockEntity.this.blazePowderLeft;
+                    case 0 ->  AlchemicalDuplicatorBlockEntity.this.sulfurLeft;
                     case 1 -> AlchemicalDuplicatorBlockEntity.this.bookUses;
                     case 2 -> AlchemicalDuplicatorBlockEntity.this.maxBookUses;
                     case 3 -> AlchemicalDuplicatorBlockEntity.this.bookLevel;
@@ -102,7 +102,7 @@ public class AlchemicalDuplicatorBlockEntity extends BlockEntity implements Menu
             @Override
             public void set(int i, int i1) {
                 switch (i){
-                    case 0 ->  AlchemicalDuplicatorBlockEntity.this.blazePowderLeft = i1;
+                    case 0 ->  AlchemicalDuplicatorBlockEntity.this.sulfurLeft = i1;
                     case 1 -> AlchemicalDuplicatorBlockEntity.this.bookUses = i1;
                     case 2 -> AlchemicalDuplicatorBlockEntity.this.maxBookUses = i1;
                     case 3 -> AlchemicalDuplicatorBlockEntity.this.bookLevel = i1;
@@ -119,44 +119,44 @@ public class AlchemicalDuplicatorBlockEntity extends BlockEntity implements Menu
     }
 
     //Handler getters
-    public ItemStackHandler getInputHandler() {
-        return inputHandler;
+    public ItemStackHandler getInputSlotHandler() {
+        return inputSlotHandler;
     }
-    public ItemStackHandler getBlazePowderHandler() {
-        return blazePowderHandler;
+    public ItemStackHandler getSulfurSlotHandler() {
+        return sulfurSlotHandler;
     }
-    public ItemStackHandler getBookHandler() {
-        return bookHandler;
+    public ItemStackHandler getBookSlotHandler() {
+        return bookSlotHandler;
     }
-    public ItemStackHandler getOutputsHandler() {
-        return outputsHandler;
+    public ItemStackHandler getOutputSlotHandler() {
+        return outputSlotHandler;
     }
 
     //Lazy handler getters
-    public LazyOptional<ItemStackHandler> getInputLazyHandler() {
-        return inputLazyHandler;
+    public LazyOptional<ItemStackHandler> getInputSlotLazyHandler() {
+        return inputSlotLazyHandler;
     }
-    public LazyOptional<ItemStackHandler> getBlazePowderLazyHandler() {
-        return blazePowderLazyHandler;
+    public LazyOptional<ItemStackHandler> getSulfurSlotLazyHandler() {
+        return sulfurSlotLazyHandler;
     }
-    public LazyOptional<ItemStackHandler> getBookLazyHandler() {
-        return bookLazyHandler;
+    public LazyOptional<ItemStackHandler> getBookSlotLazyHandler() {
+        return bookSlotLazyHandler;
     }
-    public LazyOptional<ItemStackHandler> getOutputsLazyHandler() {
-        return outputsLazyHandler;
+    public LazyOptional<ItemStackHandler> getOutputSlotLazyHandler() {
+        return outputSlotLazyHandler;
     }
 
     @Override
     public @NotNull <T> LazyOptional<T> getCapability(@NotNull Capability<T> cap, @Nullable Direction side) {
         if (cap == ForgeCapabilities.ITEM_HANDLER){
             if (side == Direction.DOWN){
-                return outputsLazyHandler.cast();
+                return outputSlotLazyHandler.cast();
             } else if (side == Direction.WEST){
-                return blazePowderLazyHandler.cast();
+                return sulfurSlotLazyHandler.cast();
             } else if (side == Direction.EAST){
-                return bookLazyHandler.cast();
+                return bookSlotLazyHandler.cast();
             } else if (side == Direction.UP){
-                return inputLazyHandler.cast();
+                return inputSlotLazyHandler.cast();
             }
         }
 
@@ -174,12 +174,12 @@ public class AlchemicalDuplicatorBlockEntity extends BlockEntity implements Menu
     public void drops(){
         SimpleContainer inv = new SimpleContainer(7);
 
-        inv.setItem(0, this.blazePowderHandler.getStackInSlot(0));
-        inv.setItem(1, this.bookHandler.getStackInSlot(0));
-        inv.setItem(2, this.inputHandler.getStackInSlot(0));
+        inv.setItem(0, this.sulfurSlotHandler.getStackInSlot(0));
+        inv.setItem(1, this.bookSlotHandler.getStackInSlot(0));
+        inv.setItem(2, this.inputSlotHandler.getStackInSlot(0));
 
-        for (int i = 0; i < this.outputsHandler.getSlots(); i++){
-            inv.setItem(i + 3, this.outputsHandler.getStackInSlot(i));
+        for (int i = 0; i < this.outputSlotHandler.getSlots(); i++){
+            inv.setItem(i + 3, this.outputSlotHandler.getStackInSlot(i));
         }
 
         Containers.dropContents(this.level, this.worldPosition, inv);
@@ -188,20 +188,20 @@ public class AlchemicalDuplicatorBlockEntity extends BlockEntity implements Menu
     @Override
     public void invalidateCaps() {
         super.invalidateCaps();
-        this.blazePowderLazyHandler.invalidate();
-        this.bookLazyHandler.invalidate();
-        this.inputLazyHandler.invalidate();
-        this.outputsLazyHandler.invalidate();
+        this.sulfurSlotLazyHandler.invalidate();
+        this.bookSlotLazyHandler.invalidate();
+        this.inputSlotLazyHandler.invalidate();
+        this.outputSlotLazyHandler.invalidate();
     }
 
     @Override
     protected void saveAdditional(CompoundTag pTag) {
-        pTag.put("blazeSlot", this.blazePowderHandler.serializeNBT());
-        pTag.put("bookSlot", this.bookHandler.serializeNBT());
-        pTag.put("inputSlot", this.inputHandler.serializeNBT());
-        pTag.put("outputSlots", this.outputsHandler.serializeNBT());
+        pTag.put("sulfurSlot", this.sulfurSlotHandler.serializeNBT());
+        pTag.put("bookSlot", this.bookSlotHandler.serializeNBT());
+        pTag.put("inputSlot", this.inputSlotHandler.serializeNBT());
+        pTag.put("outputSlots", this.outputSlotHandler.serializeNBT());
 
-        pTag.putInt("powderLeft", this.blazePowderLeft);
+        pTag.putInt("sulfurLeft", this.sulfurLeft);
         pTag.putInt("bookUses", this.bookUses);
         pTag.putInt("bookLevel", this.bookLevel);
         pTag.putInt("progress", this.progress);
@@ -211,12 +211,12 @@ public class AlchemicalDuplicatorBlockEntity extends BlockEntity implements Menu
     @Override
     public void load(CompoundTag pTag) {
         super.load(pTag);
-        this.blazePowderHandler.deserializeNBT(pTag.getCompound("blazeSlot"));
-        this.bookHandler.deserializeNBT(pTag.getCompound("bookSlot"));
-        this.inputHandler.deserializeNBT(pTag.getCompound("inputSlot"));
-        this.outputsHandler.deserializeNBT(pTag.getCompound("outputSlots"));
+        this.sulfurSlotHandler.deserializeNBT(pTag.getCompound("sulfurSlot"));
+        this.bookSlotHandler.deserializeNBT(pTag.getCompound("bookSlot"));
+        this.inputSlotHandler.deserializeNBT(pTag.getCompound("inputSlot"));
+        this.outputSlotHandler.deserializeNBT(pTag.getCompound("outputSlots"));
 
-        this.blazePowderLeft = pTag.getInt("powderLeft");
+        this.sulfurLeft = pTag.getInt("sulfurLeft");
         this.bookUses = pTag.getInt("bookUses");
         this.bookLevel = pTag.getInt("bookLevel");
         this.progress = pTag.getInt("progress");
@@ -230,17 +230,17 @@ public class AlchemicalDuplicatorBlockEntity extends BlockEntity implements Menu
         }
     }
 
-    private boolean hasPowderLeft(){
-        return this.blazePowderLeft > 0;
+    private boolean hasSulfurLeft(){
+        return this.sulfurLeft > 0;
     }
 
-    private void decreasePowder(){
-        this.blazePowderLeft--;
+    private void consumeSulfur(){
+        this.sulfurLeft--;
     }
 
-    private void consumePowder(){
-        this.blazePowderHandler.getStackInSlot(0).shrink(1);
-        this.blazePowderLeft = 64;
+    private void restockSulfur(){
+        this.sulfurSlotHandler.getStackInSlot(0).shrink(1);
+        this.sulfurLeft = 64;
     }
 
     private boolean isFortuneBook(ItemStack bookStack){
@@ -266,8 +266,8 @@ public class AlchemicalDuplicatorBlockEntity extends BlockEntity implements Menu
     }
 
     private void tryConsumeBook(){
-        if (isFortuneBook(this.bookHandler.getStackInSlot(0))){
-            this.bookLevel = getBookLevel(this.bookHandler.getStackInSlot(0));
+        if (isFortuneBook(this.bookSlotHandler.getStackInSlot(0))){
+            this.bookLevel = getBookLevel(this.bookSlotHandler.getStackInSlot(0));
             this.bookUses = switch (this.bookLevel){
                 case 1 -> 128;
                 case 2 -> 64;
@@ -275,8 +275,8 @@ public class AlchemicalDuplicatorBlockEntity extends BlockEntity implements Menu
                 default -> 0;
             };
 
-            this.bookHandler.getStackInSlot(0).shrink(1);
-            this.bookHandler.setStackInSlot(0, new ItemStack(Items.BOOK));
+            this.bookSlotHandler.getStackInSlot(0).shrink(1);
+            this.bookSlotHandler.setStackInSlot(0, new ItemStack(Items.BOOK));
 
             this.maxBookUses = this.bookUses;
         } else {
@@ -292,7 +292,7 @@ public class AlchemicalDuplicatorBlockEntity extends BlockEntity implements Menu
     private Optional<AlchemicalDuplicatingRecipe> getCurrentRecipe(){
         SimpleContainer inv = new SimpleContainer(1);
 
-        inv.setItem(0, this.inputHandler.getStackInSlot(0));
+        inv.setItem(0, this.inputSlotHandler.getStackInSlot(0));
 
         Optional<AlchemicalDuplicatingRecipe> recipe = this.level.getRecipeManager()
                 .getRecipeFor(EPRecipes.ALCHEMICAL_DUPLICATING_TYPE.get(), inv, level);
@@ -317,8 +317,8 @@ public class AlchemicalDuplicatorBlockEntity extends BlockEntity implements Menu
     }
 
     private boolean canInsertItemIntoOutputSlot(Item item){
-        for (int i = 0; i < this.outputsHandler.getSlots(); i++){
-            if (this.outputsHandler.getStackInSlot(i).is(item) || this.outputsHandler.getStackInSlot(i).isEmpty())
+        for (int i = 0; i < this.outputSlotHandler.getSlots(); i++){
+            if (this.outputSlotHandler.getStackInSlot(i).is(item) || this.outputSlotHandler.getStackInSlot(i).isEmpty())
                 return true;
         }
 
@@ -326,8 +326,8 @@ public class AlchemicalDuplicatorBlockEntity extends BlockEntity implements Menu
     }
 
     private boolean canInsertAmountIntoOutputSlot(int amount){
-        for (int i = 0; i < this.outputsHandler.getSlots(); i++){
-            if (this.outputsHandler.getStackInSlot(i).getCount() + amount <= this.outputsHandler.getStackInSlot(i).getMaxStackSize()){
+        for (int i = 0; i < this.outputSlotHandler.getSlots(); i++){
+            if (this.outputSlotHandler.getStackInSlot(i).getCount() + amount <= this.outputSlotHandler.getStackInSlot(i).getMaxStackSize()){
                 return true;
             }
         }
@@ -351,33 +351,29 @@ public class AlchemicalDuplicatorBlockEntity extends BlockEntity implements Menu
 
         ItemStack result = recipe.get().getResultItem(getLevel().registryAccess());
 
-        EnhancedPlaythrough.LOGGER.info("Book uses:{}", this.bookUses);
-
-        EnhancedPlaythrough.LOGGER.info("Book level: {}", this.bookLevel);
-
-        this.inputHandler.extractItem(0, 1, false);
+        this.inputSlotHandler.extractItem(0, 1, false);
 
         int copies = this.bookLevel + 1;
 
         for (int i = 0; i < copies; i++){
-            this.outputsHandler.setStackInSlot(i, new ItemStack(result.getItem(),
-                    this.outputsHandler.getStackInSlot(i).getCount() + result.getCount()));
+            this.outputSlotHandler.setStackInSlot(i, new ItemStack(result.getItem(),
+                    this.outputSlotHandler.getStackInSlot(i).getCount() + result.getCount()));
         }
     }
 
     public void tick(Level pLevel, BlockPos pPos, BlockState pState){
-        if (!hasBookUses() && isFortuneBook(this.bookHandler.getStackInSlot(0))) {
+        if (!hasBookUses() && isFortuneBook(this.bookSlotHandler.getStackInSlot(0))) {
             tryConsumeBook();
             pLevel.playSound(null, pPos, SoundEvents.EXPERIENCE_ORB_PICKUP, SoundSource.BLOCKS, 1f, 0.5f);
             sendUpdate();
         }
 
-        if (hasRecipe() && hasPowderLeft()){
+        if (hasRecipe() && hasSulfurLeft()){
             increaseDuppingProgress();
 
             sendUpdate();
-        } else if (hasRecipe() && !this.blazePowderHandler.getStackInSlot(0).isEmpty()){
-            consumePowder();
+        } else if (hasRecipe() && !this.sulfurSlotHandler.getStackInSlot(0).isEmpty()){
+            restockSulfur();
 
             sendUpdate();
         } else {
@@ -387,7 +383,7 @@ public class AlchemicalDuplicatorBlockEntity extends BlockEntity implements Menu
         }
 
         if (hasFinishedDupping()){
-            decreasePowder();
+            consumeSulfur();
 
             resetProgress();
 

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "leather",
+  "ingredients": [
+    {
+      "item": "enhanced_playthrough:werellager_hide"
+    },
+    {
+      "item": "enhanced_playthrough:werellager_hide"
+    },
+    {
+      "item": "enhanced_playthrough:werellager_hide"
+    }
+  ],
+  "result": {
+    "item": "minecraft:leather"
+  }
+}

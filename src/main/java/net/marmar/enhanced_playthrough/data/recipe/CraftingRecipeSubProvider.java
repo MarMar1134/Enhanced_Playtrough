@@ -100,6 +100,19 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .save(consumer);
 
         //Misc
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, EPBlocks.SULFUR_BLOCK.get())
+                .pattern("SSS")
+                .pattern("SSS")
+                .pattern("SSS")
+                .define('S', EPItems.SULFUR.get())
+                .unlockedBy(getHasName(EPItems.SULFUR.get()), has(EPItems.SULFUR.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EPItems.SULFUR.get(), 9)
+                .requires(EPBlocks.SULFUR_BLOCK.get())
+                .unlockedBy(getHasName(EPBlocks.SULFUR_BLOCK.get()), has(EPBlocks.SULFUR_BLOCK.get()))
+                .save(consumer);
+
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.YELLOW_DYE, 2)
                 .requires(EPItems.SULFUR.get())
                 .unlockedBy(getHasName(EPItems.SULFUR.get()), has(EPItems.SULFUR.get()))
@@ -119,6 +132,24 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .define('A', EPItems.ALUMINUM_INGOT.get())
                 .unlockedBy(getHasName(EPItems.ALUMINUM_INGOT.get()), has(EPItems.ALUMINUM_INGOT.get()))
                 .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.LEATHER)
+                .requires(EPItems.COW_HIDE.get(), 2)
+                .group("leather")
+                .unlockedBy(getHasName(EPItems.COW_HIDE.get()), has(EPItems.COW_HIDE.get()))
+                .save(consumer, recipeName(Items.LEATHER, "from_cow_hide"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.LEATHER)
+                .requires(EPItems.PIG_HIDE.get(), 2)
+                .group("leather")
+                .unlockedBy(getHasName(EPItems.PIG_HIDE.get()), has(EPItems.PIG_HIDE.get()))
+                .save(consumer, recipeName(Items.LEATHER, "from_pig_hide"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.LEATHER)
+                .requires(EPItems.WERELLAGER_HIDE.get(), 3)
+                .group("leather")
+                .unlockedBy(getHasName(EPItems.WERELLAGER_HIDE.get()), has(EPItems.WERELLAGER_HIDE.get()))
+                .save(consumer, recipeName(Items.LEATHER, "from_werellager_hide"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, EPItems.ALUMINUM_ARROW.get(), 4)
                 .pattern("F")
@@ -410,12 +441,12 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, EPBlocks.ALCHEMICAL_DUPLICATOR.get())
                 .pattern("BBB")
-                .pattern("L L")
+                .pattern("BSB")
                 .pattern("BBB")
                 .define('B', EPItems.BRONZIUM_INGOT.get())
-                .define('L', Items.BLAZE_ROD)
-                .unlockedBy("has_alchemical_duplicator", has(EPBlocks.ALCHEMICAL_DUPLICATOR.get()))
-                .unlockedBy("has_materials", HAS_MATERIALS_FOR_DUPLICATOR())
+                .define('S', EPItems.SULFUR.get())
+                .unlockedBy(getHasName(EPBlocks.ALCHEMICAL_DUPLICATOR.get()), has(EPBlocks.ALCHEMICAL_DUPLICATOR.get()))
+                .unlockedBy(getHasName(EPItems.BRONZIUM_INGOT.get()),has(EPItems.BRONZIUM_INGOT.get()))
                 .save(consumer);
 
         //Equipment recipes
@@ -855,10 +886,6 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
         return InventoryChangeTrigger.TriggerInstance.hasItems(EPItems.ROTTEN_TOMATO.get(),
                 EPItems.ROTTEN_ZAPALLO.get(), EPItems.ROTTEN_EGGPLANT.get(), EPItems.ROTTEN_CORN.get(),
                 EPItems.ROTTEN_CARROT.get(), Items.POISONOUS_POTATO);
-    }
-
-    protected static InventoryChangeTrigger.TriggerInstance HAS_MATERIALS_FOR_DUPLICATOR(){
-        return InventoryChangeTrigger.TriggerInstance.hasItems(EPItems.BRONZIUM_INGOT.get(), Items.BLAZE_ROD);
     }
 
     protected static void materialRecipes(ItemLike pIngot, Block pBlock, Consumer<FinishedRecipe> pConsumer){

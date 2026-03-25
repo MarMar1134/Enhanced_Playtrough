@@ -225,37 +225,79 @@ public class EPItemTagGenerator extends ItemTagsProvider {
         );
 
         this.tag(EPTags.Items.GOLD).add(
-                Items.GOLDEN_AXE, Items.GOLDEN_PICKAXE, Items.GOLDEN_SHOVEL, Items.GOLDEN_SWORD, EPItems.GOLDEN_DAGGER.get(),
-                EPItems.GOLDEN_POLISHER.get(), Items.GOLDEN_HOE, Items.GOLDEN_HELMET, Items.GOLDEN_CHESTPLATE, Items.GOLDEN_LEGGINGS,
-                Items.GOLDEN_BOOTS
+                Items.GOLD_INGOT, Items.GOLD_NUGGET, Items.GOLD_BLOCK,
+                Items.GOLDEN_AXE, Items.GOLDEN_PICKAXE, Items.GOLDEN_SHOVEL, Items.GOLDEN_SWORD,
+                EPItems.GOLDEN_DAGGER.get(), EPItems.GOLDEN_POLISHER.get(), Items.GOLDEN_HOE,
+
+                /*-----------------ALUMINUM VARIANTS-------------------------*/
+                EPItems.ALUMINUM_GOLDEN_SWORD.get(), EPItems.ALUMINUM_GOLDEN_DAGGER.get(), EPItems.ALUMINUM_GOLDEN_PICKAXE.get(), EPItems.ALUMINUM_GOLDEN_AXE.get(),
+                EPItems.ALUMINUM_GOLDEN_SHOVEL.get(), EPItems.ALUMINUM_GOLDEN_HOE.get(), EPItems.ALUMINUM_GOLDEN_POLISHER.get(),
+                /*-----------------------------------------------------------*/
+
+                Items.GOLDEN_HELMET, Items.GOLDEN_CHESTPLATE, Items.GOLDEN_LEGGINGS, Items.GOLDEN_BOOTS
+        );
+
+        this.tag(EPTags.Items.SILVER).add(
+                EPItems.SILVER_INGOT.get(), EPItems.SILVER_NUGGET.get(), EPBlocks.SILVER_BLOCK.get().asItem(),
+                EPItems.SILVER_SWORD.get(), EPItems.SILVER_DAGGER.get(), EPItems.SILVER_PICKAXE.get(),
+                EPItems.SILVER_AXE.get(), EPItems.SILVER_SHOVEL.get(), EPItems.SILVER_HOE.get(), EPItems.SILVER_POLISHER.get(),
+
+                /*-----------------ALUMINUM VARIANTS-------------------------*/
+                EPItems.ALUMINUM_SILVER_SWORD.get(), EPItems.ALUMINUM_SILVER_DAGGER.get(), EPItems.ALUMINUM_SILVER_PICKAXE.get(), EPItems.ALUMINUM_SILVER_AXE.get(),
+                EPItems.ALUMINUM_SILVER_SHOVEL.get(), EPItems.ALUMINUM_SILVER_HOE.get(), EPItems.ALUMINUM_SILVER_POLISHER.get(),
+                /*-----------------------------------------------------------*/
+
+                EPItems.SILVER_HELMET.get(), EPItems.SILVER_CHESTPLATE.get(), EPItems.SILVER_LEGGINGS.get(), EPItems.SILVER_BOOTS.get()
         );
 
         this.tag(EPTags.Items.BRONZE).add(
                 EPItems.BRONZE_INGOT.get(), EPItems.BRONZE_NUGGET.get(), EPBlocks.BRONZE_BLOCK.get().asItem(),
-                EPItems.BRONZE_SWORD.get(), EPItems.BRONZE_DAGGER.get(),
-                EPItems.BRONZE_PICKAXE.get(), EPItems.BRONZE_AXE.get(), EPItems.BRONZE_SHOVEL.get(), EPItems.BRONZE_HOE.get(),
-                EPItems.BRONZE_POLISHER.get(),
+                EPItems.BRONZE_SWORD.get(), EPItems.BRONZE_DAGGER.get(), EPItems.BRONZE_PICKAXE.get(),
+                EPItems.BRONZE_AXE.get(), EPItems.BRONZE_SHOVEL.get(), EPItems.BRONZE_HOE.get(), EPItems.BRONZE_POLISHER.get(),
+
+                /*-----------------ALUMINUM VARIANTS-------------------------*/
+                EPItems.ALUMINUM_BRONZE_SWORD.get(), EPItems.ALUMINUM_BRONZE_DAGGER.get(), EPItems.ALUMINUM_BRONZE_PICKAXE.get(), EPItems.ALUMINUM_BRONZE_AXE.get(),
+                EPItems.ALUMINUM_BRONZE_SHOVEL.get(), EPItems.ALUMINUM_BRONZE_HOE.get(), EPItems.ALUMINUM_BRONZE_POLISHER.get(),
+                /*-----------------------------------------------------------*/
+
                 EPItems.BRONZE_HELMET.get(), EPItems.BRONZE_CHESTPLATE.get(), EPItems.BRONZE_LEGGINGS.get(), EPItems.BRONZE_BOOTS.get()
         );
 
         this.tag(EPTags.Items.BRASS).add(
                 EPItems.BRASS_INGOT.get(), EPItems.BRASS_NUGGET.get(), EPBlocks.BRASS_BLOCK.get().asItem(),
-                EPItems.BRASS_SWORD.get(), EPItems.BRASS_DAGGER.get(),
-                EPItems.BRASS_PICKAXE.get(), EPItems.BRASS_AXE.get(), EPItems.BRASS_SHOVEL.get(), EPItems.BRASS_HOE.get(),
-                EPItems.BRASS_POLISHER.get(),
+                EPItems.BRASS_SWORD.get(), EPItems.BRASS_DAGGER.get(), EPItems.BRASS_PICKAXE.get(),
+                EPItems.BRASS_AXE.get(), EPItems.BRASS_SHOVEL.get(), EPItems.BRASS_HOE.get(), EPItems.BRASS_POLISHER.get(),
+
+                /*-----------------ALUMINUM VARIANTS-------------------------*/
+                EPItems.ALUMINUM_BRASS_SWORD.get(), EPItems.ALUMINUM_BRASS_DAGGER.get(), EPItems.ALUMINUM_BRASS_PICKAXE.get(), EPItems.ALUMINUM_BRASS_AXE.get(),
+                EPItems.ALUMINUM_BRASS_SHOVEL.get(), EPItems.ALUMINUM_BRASS_HOE.get(), EPItems.ALUMINUM_BRASS_POLISHER.get(),
+                /*-----------------------------------------------------------*/
+
                 EPItems.BRASS_HELMET.get(), EPItems.BRASS_CHESTPLATE.get(), EPItems.BRASS_LEGGINGS.get(), EPItems.BRASS_BOOTS.get()
         );
 
         this.tag(EPTags.Items.ROSE_GOLD).add(
                 EPItems.ROSE_GOLD_INGOT.get(), EPItems.ROSE_GOLD_NUGGET.get(), EPBlocks.ROSE_GOLD_BLOCK.get().asItem(),
-                EPItems.ROSE_GOLDEN_SWORD.get(), EPItems.ROSE_GOLDEN_DAGGER.get(),
-                EPItems.ROSE_GOLDEN_PICKAXE.get(), EPItems.ROSE_GOLDEN_AXE.get(), EPItems.ROSE_GOLDEN_SHOVEL.get(), EPItems.ROSE_GOLDEN_HOE.get(),
-                EPItems.ROSE_GOLDEN_POLISHER.get(),
+                EPItems.ROSE_GOLDEN_SWORD.get(), EPItems.ROSE_GOLDEN_DAGGER.get(), EPItems.ROSE_GOLDEN_PICKAXE.get(),
+                EPItems.ROSE_GOLDEN_AXE.get(), EPItems.ROSE_GOLDEN_SHOVEL.get(), EPItems.ROSE_GOLDEN_HOE.get(), EPItems.ROSE_GOLDEN_POLISHER.get(),
+
+                /*-----------------ALUMINUM VARIANTS-------------------------*/
+                EPItems.ALUMINUM_ROSE_GOLDEN_SWORD.get(), EPItems.ALUMINUM_ROSE_GOLDEN_DAGGER.get(), EPItems.ALUMINUM_ROSE_GOLDEN_PICKAXE.get(), EPItems.ALUMINUM_ROSE_GOLDEN_AXE.get(),
+                EPItems.ALUMINUM_ROSE_GOLDEN_SHOVEL.get(), EPItems.ALUMINUM_ROSE_GOLDEN_HOE.get(), EPItems.ALUMINUM_ROSE_GOLDEN_POLISHER.get(),
+                /*-----------------------------------------------------------*/
+
                 EPItems.ROSE_GOLDEN_HELMET.get(), EPItems.ROSE_GOLDEN_CHESTPLATE.get(), EPItems.ROSE_GOLDEN_LEGGINGS.get(), EPItems.ROSE_GOLDEN_BOOTS.get()
         );
 
         this.tag(EPTags.Items.IRON).add(
+                Items.IRON_INGOT, Items.IRON_NUGGET, Items.IRON_BLOCK,
                 Items.IRON_AXE, Items.IRON_PICKAXE, Items.IRON_SHOVEL, Items.IRON_SWORD, EPItems.IRON_DAGGER.get(), EPItems.IRON_POLISHER.get(),
+
+                /*-----------------ALUMINUM VARIANTS-------------------------*/
+                EPItems.ALUMINUM_IRON_SWORD.get(), EPItems.ALUMINUM_IRON_DAGGER.get(), EPItems.ALUMINUM_IRON_PICKAXE.get(), EPItems.ALUMINUM_IRON_AXE.get(),
+                EPItems.ALUMINUM_IRON_SHOVEL.get(), EPItems.ALUMINUM_IRON_HOE.get(), EPItems.ALUMINUM_IRON_POLISHER.get(),
+                /*-----------------------------------------------------------*/
+
                 Items.IRON_HOE, Items.IRON_HELMET, Items.IRON_CHESTPLATE, Items.IRON_LEGGINGS, Items.IRON_BOOTS
         );
 
@@ -263,6 +305,12 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                 EPItems.BRONZIUM_INGOT.get(), EPItems.BRONZIUM_NUGGET.get(), EPBlocks.BRONZIUM_BLOCK.get().asItem(),
                 EPItems.BRONZIUM_SWORD.get(), EPItems.BRONZIUM_DAGGER.get(), EPItems.BRONZIUM_PICKAXE.get(),
                 EPItems.BRONZIUM_AXE.get(), EPItems.BRONZIUM_SHOVEL.get(), EPItems.BRONZIUM_HOE.get(), EPItems.BRONZIUM_POLISHER.get(),
+
+                /*-----------------ALUMINUM VARIANTS-------------------------*/
+                EPItems.ALUMINUM_BRONZIUM_SWORD.get(), EPItems.ALUMINUM_BRONZIUM_DAGGER.get(), EPItems.ALUMINUM_BRONZIUM_PICKAXE.get(), EPItems.ALUMINUM_BRONZIUM_AXE.get(),
+                EPItems.ALUMINUM_BRONZIUM_SHOVEL.get(), EPItems.ALUMINUM_BRONZIUM_HOE.get(), EPItems.ALUMINUM_BRONZIUM_POLISHER.get(),
+                /*-----------------------------------------------------------*/
+
                 EPItems.BRONZIUM_HELMET.get(), EPItems.BRONZIUM_CHESTPLATE.get(), EPItems.BRONZIUM_LEGGINGS.get(), EPItems.BRONZIUM_BOOTS.get()
         );
 
@@ -270,6 +318,12 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                 EPItems.STEEL_INGOT.get(), EPItems.STEEL_NUGGET.get(), EPBlocks.STEEL_BLOCK.get().asItem(),
                 EPItems.STEEL_SWORD.get(), EPItems.STEEL_DAGGER.get(), EPItems.STEEL_PICKAXE.get(),
                 EPItems.STEEL_AXE.get(), EPItems.STEEL_SHOVEL.get(), EPItems.STEEL_HOE.get(), EPItems.STEEL_POLISHER.get(),
+
+                /*-----------------ALUMINUM VARIANTS-------------------------*/
+                EPItems.ALUMINUM_STEEL_SWORD.get(), EPItems.ALUMINUM_STEEL_DAGGER.get(), EPItems.ALUMINUM_STEEL_PICKAXE.get(), EPItems.ALUMINUM_STEEL_AXE.get(),
+                EPItems.ALUMINUM_STEEL_SHOVEL.get(), EPItems.ALUMINUM_STEEL_HOE.get(), EPItems.ALUMINUM_STEEL_POLISHER.get(),
+                /*-----------------------------------------------------------*/
+
                 EPItems.STEEL_HELMET.get(), EPItems.STEEL_CHESTPLATE.get(), EPItems.STEEL_LEGGINGS.get(), EPItems.STEEL_BOOTS.get()
                 );
 
@@ -277,6 +331,11 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                 EPItems.GREEN_GOLD_INGOT.get(), EPItems.GREEN_GOLD_NUGGET.get(), EPBlocks.GREEN_GOLD_BLOCK.get().asItem(),
                 EPItems.GREEN_GOLDEN_SWORD.get(), EPItems.GREEN_GOLDEN_DAGGER.get(), EPItems.GREEN_GOLDEN_PICKAXE.get(),
                 EPItems.GREEN_GOLDEN_AXE.get(), EPItems.GREEN_GOLDEN_SHOVEL.get(), EPItems.GREEN_GOLDEN_HOE.get(), EPItems.GREEN_GOLDEN_POLISHER.get(),
+
+                /*-----------------ALUMINUM VARIANTS-------------------------*/
+                EPItems.ALUMINUM_GREEN_GOLDEN_SWORD.get(), EPItems.ALUMINUM_GREEN_GOLDEN_DAGGER.get(), EPItems.ALUMINUM_GREEN_GOLDEN_PICKAXE.get(), EPItems.ALUMINUM_GREEN_GOLDEN_AXE.get(),
+                EPItems.ALUMINUM_GREEN_GOLDEN_SHOVEL.get(), EPItems.ALUMINUM_GREEN_GOLDEN_HOE.get(), EPItems.ALUMINUM_GREEN_GOLDEN_POLISHER.get(),
+                /*-----------------------------------------------------------*/
                 EPItems.GREEN_GOLDEN_HELMET.get(), EPItems.GREEN_GOLDEN_CHESTPLATE.get(), EPItems.GREEN_GOLDEN_LEGGINGS.get(), EPItems.GREEN_GOLDEN_BOOTS.get()
         );
 
@@ -284,16 +343,13 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                 EPItems.BLUE_GOLD_INGOT.get(), EPItems.BLUE_GOLD_NUGGET.get(), EPBlocks.BLUE_GOLD_BLOCK.get().asItem(),
                 EPItems.BLUE_GOLDEN_SWORD.get(), EPItems.BLUE_GOLDEN_DAGGER.get(), EPItems.BLUE_GOLDEN_PICKAXE.get(),
                 EPItems.BLUE_GOLDEN_AXE.get(), EPItems.BLUE_GOLDEN_SHOVEL.get(), EPItems.BLUE_GOLDEN_HOE.get(), EPItems.BLUE_GOLDEN_POLISHER.get(),
+
+                /*-----------------ALUMINUM VARIANTS-------------------------*/
+                EPItems.ALUMINUM_BLUE_GOLDEN_SWORD.get(), EPItems.ALUMINUM_BLUE_GOLDEN_DAGGER.get(), EPItems.ALUMINUM_BLUE_GOLDEN_PICKAXE.get(), EPItems.ALUMINUM_BLUE_GOLDEN_AXE.get(),
+                EPItems.ALUMINUM_BLUE_GOLDEN_SHOVEL.get(), EPItems.ALUMINUM_BLUE_GOLDEN_HOE.get(), EPItems.ALUMINUM_BLUE_GOLDEN_POLISHER.get(),
+                /*-----------------------------------------------------------*/
                 EPItems.BLUE_GOLDEN_HELMET.get(), EPItems.BLUE_GOLDEN_CHESTPLATE.get(), EPItems.BLUE_GOLDEN_LEGGINGS.get(), EPItems.BLUE_GOLDEN_BOOTS.get()
         );
-
-        this.tag(EPTags.Items.SILVER).add(
-                EPItems.SILVER_INGOT.get(), EPItems.SILVER_NUGGET.get(), EPBlocks.SILVER_BLOCK.get().asItem(),
-                EPItems.SILVER_SWORD.get(), EPItems.SILVER_DAGGER.get(),
-                EPItems.SILVER_PICKAXE.get(), EPItems.SILVER_AXE.get(), EPItems.SILVER_SHOVEL.get(), EPItems.SILVER_HOE.get(),
-                EPItems.SILVER_POLISHER.get(),
-                EPItems.SILVER_HELMET.get(), EPItems.SILVER_CHESTPLATE.get(), EPItems.SILVER_LEGGINGS.get(), EPItems.SILVER_BOOTS.get()
-                );
 
         this.tag(EPTags.Items.ALUMINUM).add(EPItems.ALUMINUM_INGOT.get(), EPItems.ALUMINUM_NUGGET.get(), EPItems.ALUMINUM_ROD.get());
 
@@ -306,7 +362,7 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                 EPItems.GREEN_GOLDEN_HELMET.get(), EPItems.GREEN_GOLDEN_CHESTPLATE.get(), EPItems.GREEN_GOLDEN_LEGGINGS.get(), EPItems.GREEN_GOLDEN_BOOTS.get(), /*Green gold*/
                 EPItems.STEEL_HELMET.get(), EPItems.STEEL_CHESTPLATE.get(), EPItems.STEEL_LEGGINGS.get(), EPItems.STEEL_BOOTS.get(),                             /*Steel*/
                 EPItems.BLUE_GOLDEN_HELMET.get(), EPItems.BLUE_GOLDEN_CHESTPLATE.get(), EPItems.BLUE_GOLDEN_LEGGINGS.get(), EPItems.BLUE_GOLDEN_BOOTS.get()      /*Blue gold*/
-                );
+        );
 
         this.tag(EPTags.Items.RAW_GEMS).add(
                 EPItems.RAW_RUBY.get(),
@@ -314,7 +370,7 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                 EPItems.RAW_GARNET.get(),
                 EPItems.RAW_EMERALD.get(),
                 EPItems.RAW_DIAMOND.get()
-                );
+        );
 
         this.tag(ItemTags.BEACON_PAYMENT_ITEMS).add(
                 EPItems.RUBY.get(),

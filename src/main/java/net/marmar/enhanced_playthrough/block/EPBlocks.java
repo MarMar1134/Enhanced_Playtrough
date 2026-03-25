@@ -9,7 +9,6 @@ import net.marmar.enhanced_playthrough.block.custom.plant.WaterReedsBlock;
 import net.marmar.enhanced_playthrough.block.custom.alloyfurnace.AdobeAlloyFurnaceBlock;
 import net.marmar.enhanced_playthrough.block.custom.alloyfurnace.SoulAlloyFurnaceBlock;
 import net.marmar.enhanced_playthrough.block.custom.alloyfurnace.SuperAlloyFurnaceBlock;
-import net.marmar.enhanced_playthrough.block.custom.crop.*;
 import net.marmar.enhanced_playthrough.block.custom.epfurnace.AdobeFurnaceBlock;
 import net.marmar.enhanced_playthrough.block.custom.epfurnace.SoulFurnaceBlock;
 import net.marmar.enhanced_playthrough.block.custom.gempolisher.GemPolisherBlock;
@@ -17,6 +16,7 @@ import net.marmar.enhanced_playthrough.block.custom.grinder.MechanicalGrinderBlo
 import net.marmar.enhanced_playthrough.block.custom.grinder.PrimalGrinderBlock;
 import net.marmar.enhanced_playthrough.block.custom.epfurnace.MasonryFurnaceBlock;
 import net.marmar.enhanced_playthrough.block.custom.growthdetector.GrowthDetectorBlock;
+import net.marmar.enhanced_playthrough.block.custom.plant.crop.*;
 import net.marmar.enhanced_playthrough.block.custom.wood.leaves.EPLeavesBlock;
 import net.marmar.enhanced_playthrough.block.custom.wood.EPLogsBlock;
 import net.marmar.enhanced_playthrough.block.custom.wood.EPPlanksBlock;
@@ -394,6 +394,8 @@ public class EPBlocks {
                 ()-> new Block(BlockBehaviour.Properties.copy(Blocks.RAW_IRON_BLOCK).strength(2, 3)));
 
         //Ores blocks
+        public static final RegistryObject<Block> SULFUR_BLOCK = registerBlockWithItem("sulfur_block",
+                () -> new Block(BlockBehaviour.Properties.copy(Blocks.LAPIS_BLOCK)));
         public static final RegistryObject<Block> SILVER_BLOCK = registerBlockWithItem("silver_block",
                 () -> new Block(BlockBehaviour.Properties.copy(Blocks.GOLD_BLOCK)));
         public static final RegistryObject<Block> ALUMINUM_BLOCK = registerBlockWithItem("aluminum_block",

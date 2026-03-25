@@ -1,5 +1,5 @@
 {
-  "parent": "enhanced_playthrough:unity_makes_strength",
+  "parent": "enhanced_playthrough:bubbles",
   "criteria": {
     "has_blue_gold_ingot": {
       "conditions": {

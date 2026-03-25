@@ -52,14 +52,14 @@ public enum AlchemicalDuplicatorComponentProvider implements IBlockComponentProv
         AlchemicalDuplicatorBlockEntity alchemicalDuplicator = (AlchemicalDuplicatorBlockEntity) blockAccessor.getBlockEntity();
         ListTag blockData = new ListTag();
 
-        blockData.add(alchemicalDuplicator.getBlazePowderHandler().getStackInSlot(0).serializeNBT());
-        blockData.add(alchemicalDuplicator.getBookHandler().getStackInSlot(0).serializeNBT());
-        blockData.add(alchemicalDuplicator.getInputHandler().getStackInSlot(0).serializeNBT());
+        blockData.add(alchemicalDuplicator.getSulfurSlotHandler().getStackInSlot(0).serializeNBT());
+        blockData.add(alchemicalDuplicator.getBookSlotHandler().getStackInSlot(0).serializeNBT());
+        blockData.add(alchemicalDuplicator.getInputSlotHandler().getStackInSlot(0).serializeNBT());
 
-        blockData.add(alchemicalDuplicator.getOutputsHandler().getStackInSlot(0).serializeNBT());
-        blockData.add(alchemicalDuplicator.getOutputsHandler().getStackInSlot(1).serializeNBT());
-        blockData.add(alchemicalDuplicator.getOutputsHandler().getStackInSlot(2).serializeNBT());
-        blockData.add(alchemicalDuplicator.getOutputsHandler().getStackInSlot(3).serializeNBT());
+        blockData.add(alchemicalDuplicator.getOutputSlotHandler().getStackInSlot(0).serializeNBT());
+        blockData.add(alchemicalDuplicator.getOutputSlotHandler().getStackInSlot(1).serializeNBT());
+        blockData.add(alchemicalDuplicator.getOutputSlotHandler().getStackInSlot(2).serializeNBT());
+        blockData.add(alchemicalDuplicator.getOutputSlotHandler().getStackInSlot(3).serializeNBT());
 
         compoundTag.put("alchemical_duplicator_contents", blockData);
         compoundTag.putInt("alchemical_duplicator.progress", alchemicalDuplicator.getProgress());

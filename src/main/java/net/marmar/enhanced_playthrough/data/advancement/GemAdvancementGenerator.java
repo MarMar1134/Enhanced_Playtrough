@@ -31,7 +31,7 @@ public class GemAdvancementGenerator implements ForgeAdvancementProvider.Advance
     @Override
     public void generate(HolderLookup.Provider provider, Consumer<Advancement> consumer, ExistingFileHelper existingFileHelper) {
         Advancement root = Advancement.Builder.advancement()
-                .display(taskDisplayInfo(Items.YELLOW_DYE, "colours_root"))
+                .display(rootDisplayInfo(Items.YELLOW_DYE, "colours_root"))
                 .addCriterion("is_alive", PlayerTrigger.TriggerInstance.tick())
                 .save(consumer, ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, "colours_root"), existingFileHelper);
 

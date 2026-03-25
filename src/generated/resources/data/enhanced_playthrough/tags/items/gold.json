@@ -1,5 +1,8 @@
 {
   "values": [
+    "minecraft:gold_ingot",
+    "minecraft:gold_nugget",
+    "minecraft:gold_block",
     "minecraft:golden_axe",
     "minecraft:golden_pickaxe",
     "minecraft:golden_shovel",
@@ -7,6 +10,13 @@
     "enhanced_playthrough:golden_dagger",
     "enhanced_playthrough:gold_polisher",
     "minecraft:golden_hoe",
+    "enhanced_playthrough:aluminum_golden_sword",
+    "enhanced_playthrough:aluminum_golden_dagger",
+    "enhanced_playthrough:aluminum_golden_pickaxe",
+    "enhanced_playthrough:aluminum_golden_axe",
+    "enhanced_playthrough:aluminum_golden_shovel",
+    "enhanced_playthrough:aluminum_golden_hoe",
+    "enhanced_playthrough:aluminum_golden_polisher",
     "minecraft:golden_helmet",
     "minecraft:golden_chestplate",
     "minecraft:golden_leggings",

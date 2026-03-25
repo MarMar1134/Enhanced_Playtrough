@@ -292,6 +292,9 @@ public class GeneralRecipeSubProvider extends RecipeProvider {
         primalItemGrinding(consumer, ItemTags.WOOL, "string", Items.STRING, 2);
         mechanicalItemGrinding(consumer, ItemTags.WOOL, "string", Items.STRING, 4);
 
+        //Sulfur from Blazes
+        mechanicalItemGrinding(consumer, Items.BLAZE_ROD, "sulfur", EPItems.SULFUR.get(), 3);
+
         //Cobble
         primalItemGrinding(consumer, Blocks.COBBLESTONE, "cobble", EPItems.COBBLE.get(), 2);
         mechanicalItemGrinding(consumer, Blocks.COBBLESTONE, "cobble", EPItems.COBBLE.get(), 4);

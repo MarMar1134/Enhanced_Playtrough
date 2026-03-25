@@ -94,6 +94,13 @@ public class ChileanLangProvider extends AbstractLangProvider {
         addSoundDescription("skeleton_bowmaster_hurt", "Maestre esqueleto siendo herido");
         addSoundDescription("skeleton_bowmaster_death", "Maestre esqueleto muriendo");
 
+        //Lycans
+            //Werellager
+            addSoundDescription("werellager_ambient", "Lobillano aullando");
+            addSoundDescription("werellager_step", "Lobillano caminando");
+            addSoundDescription("werellager_hurt", "Lobillano quejándose de dolor");
+            addSoundDescription("werellager_death", "Lobillano muriendo");
+
         //Death messages
         addDeathMessages("tallReed", "ha muerto pinchado por un carrizo",
                 "ha muerto pinchado por un carrizo mientras escapaba de");
@@ -136,6 +143,8 @@ public class ChileanLangProvider extends AbstractLangProvider {
                 "Utiliza tu horno de aleación para fundir algo de acero");
         addSurvivalAdvancement("the_aluminated", "El aluminado",
                 "Obtén un lingote de aluminio");
+        addSurvivalAdvancement("vale_4", "Quiero vale 4",
+                "Crafteá un duplicador alquímico");
 
         //Gems
         addGemAdvancement("colours_root", "Los colores del mundo",
@@ -367,6 +376,7 @@ public class ChileanLangProvider extends AbstractLangProvider {
         addBlock(EPBlocks.TIN_BLOCK, "Bloque de estaño");
         addBlock(EPBlocks.RAW_ZINC_BLOCK, "Bloque de zinc en bruto");
         addBlock(EPBlocks.ZINC_BLOCK, "Bloque de zinc");
+        addBlock(EPBlocks.SULFUR_BLOCK, "Bloque de azufre");
         addBlock(EPBlocks.RAW_SILVER_BLOCK, "Bloque de plata en bruto");
         addBlock(EPBlocks.SILVER_BLOCK, "Bloque de plata");
         addBlock(EPBlocks.RAW_ALUMINUM_BLOCK, "Bloque de aluminio en bruto");
@@ -449,6 +459,12 @@ public class ChileanLangProvider extends AbstractLangProvider {
         addItem(EPItems.TALL_REEDS_HEAD, "Cabeza de carrizo");
         addItem(EPItems.WATER_REEDS_HEAD, "Cabeza de junco");
         addItem(EPItems.PLANT_FIBER, "Fibra vegetal");
+
+
+        //Hide
+        addItem(EPItems.COW_HIDE, "Piel de vaca");
+        addItem(EPItems.PIG_HIDE, "Piel de cerdo");
+        addItem(EPItems.WERELLAGER_HIDE, "Piel de lobillano");
 
         //Cobble
         addItem(EPItems.COBBLE, "Adoquín");

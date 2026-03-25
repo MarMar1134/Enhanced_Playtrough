@@ -377,6 +377,11 @@ public class EPItemModelProvider extends ItemModelProvider {
         simpleItem(EPItems.TALL_REEDS_HEAD);
         simpleItem(EPItems.WATER_REEDS_HEAD);
 
+        //Hide
+        simpleItem(EPItems.COW_HIDE);
+        simpleItem(EPItems.PIG_HIDE);
+        simpleItem(EPItems.WERELLAGER_HIDE);
+
         //Spawn eggs
         spawnEggItem(EPItems.BANDIT_SPAWN_EGG);
         spawnEggItem(EPItems.ZOMBIE_KNIGHT_SPAWN_EGG);

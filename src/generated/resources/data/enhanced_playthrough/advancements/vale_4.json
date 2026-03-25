@@ -1,0 +1,39 @@
+{
+  "parent": "enhanced_playthrough:steel_isnt_enough",
+  "criteria": {
+    "has_alchemical_duplicator": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:alchemical_duplicator"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "enhanced_playthrough:textures/block/bronze_block.png",
+    "description": {
+      "translate": "advancement.enhanced_playthrough.desc.survival.vale_4"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "enhanced_playthrough:alchemical_duplicator"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.enhanced_playthrough.title.survival.vale_4"
+    }
+  },
+  "requirements": [
+    [
+      "has_alchemical_duplicator"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

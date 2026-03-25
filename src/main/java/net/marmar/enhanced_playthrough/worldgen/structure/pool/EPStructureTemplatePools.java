@@ -41,7 +41,7 @@ public class EPStructureTemplatePools {
         pContext.register(BANDIT_CAMP_START_POOL, new StructureTemplatePool(emptyFallback, ImmutableList.of(Pair.of(singlePoolElement(
                 "bandit_camp/bandit_camp", mossy10Percent), 1)), StructureTemplatePool.Projection.RIGID));
 
-        AncientLordsDomainPools.bootstrap(pContext); //TODO is not finished yet!
+        AncientLordsDomainPools.bootstrap(pContext);
     }
 
     @SuppressWarnings("removal")

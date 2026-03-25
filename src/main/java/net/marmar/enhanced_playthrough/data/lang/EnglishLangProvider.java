@@ -94,6 +94,13 @@ public class EnglishLangProvider extends AbstractLangProvider {
         addSoundDescription("skeleton_bowmaster_hurt", "Skeleton bowmaster being hurt");
         addSoundDescription("skeleton_bowmaster_death", "Skeleton bowmaster dying");
 
+        //Lycans
+            //Werellager
+            addSoundDescription("werellager_ambient", "Howling werellager");
+            addSoundDescription("werellager_step", "Werellager walking");
+            addSoundDescription("werellager_hurt", "Werellager aching");
+            addSoundDescription("werellager_death", "Werellager dying");
+
         //Death messages
         addDeathMessages("tallReed", "was poked to death by a giant reed",
                 "was poked to death by a giant reed whilst trying to escape");
@@ -136,6 +143,8 @@ public class EnglishLangProvider extends AbstractLangProvider {
                     "Use your alloy furnace to get some steel");
             addSurvivalAdvancement("the_aluminated", "The aluminated",
                     "Get an aluminum ingot");
+            addSurvivalAdvancement("vale_4", "Give me a \"vale 4\"",
+                    "Craft an alchemical duplicator");
 
             //Gems
             addGemAdvancement("colours_root", "The colors of the world",
@@ -367,6 +376,7 @@ public class EnglishLangProvider extends AbstractLangProvider {
             addBlock(EPBlocks.TIN_BLOCK, "Block of tin");
             addBlock(EPBlocks.RAW_ZINC_BLOCK, "Block of raw zinc");
             addBlock(EPBlocks.ZINC_BLOCK, "Block of zinc");
+            addBlock(EPBlocks.SULFUR_BLOCK, "Block of sulfur");
             addBlock(EPBlocks.RAW_SILVER_BLOCK, "block of raw silver");
             addBlock(EPBlocks.SILVER_BLOCK, "Block of silver");
             addBlock(EPBlocks.RAW_ALUMINUM_BLOCK, "Block of raw aluminum");
@@ -449,6 +459,12 @@ public class EnglishLangProvider extends AbstractLangProvider {
             addItem(EPItems.TALL_REEDS_HEAD, "tall reed head");
             addItem(EPItems.WATER_REEDS_HEAD, "Reed head");
             addItem(EPItems.PLANT_FIBER, "Plant fiber");
+
+
+            //Hide
+            addItem(EPItems.COW_HIDE, "Cow hide");
+            addItem(EPItems.PIG_HIDE, "Pig hide");
+            addItem(EPItems.WERELLAGER_HIDE, "Werellager hide");
 
             //Cobble
             addItem(EPItems.COBBLE, "Cobble");

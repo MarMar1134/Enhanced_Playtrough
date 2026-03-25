@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_pig_hide": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:pig_hide"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "enhanced_playthrough:leather_from_pig_hide"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_pig_hide",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "enhanced_playthrough:leather_from_pig_hide"
+    ]
+  },
+  "sends_telemetry_event": false
+}
