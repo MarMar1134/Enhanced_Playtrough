@@ -116,5 +116,9 @@ public class EPBiomeTagGenerator extends BiomeTagsProvider {
                 Biomes.JAGGED_PEAKS,Biomes.COLD_OCEAN, Biomes.DEEP_COLD_OCEAN,
                 Biomes.WINDSWEPT_GRAVELLY_HILLS, Biomes.WINDSWEPT_HILLS, Biomes.WINDSWEPT_FOREST
         );
+
+        this.tag(EPTags.Biomes.CAN_SPAWN_WERELLAGER).addTags(
+                BiomeTags.IS_FOREST, BiomeTags.IS_JUNGLE, BiomeTags.IS_TAIGA
+        );
     }
 }

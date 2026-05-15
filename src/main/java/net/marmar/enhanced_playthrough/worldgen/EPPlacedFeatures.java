@@ -44,6 +44,8 @@ public class EPPlacedFeatures {
     public static final ResourceKey<PlacedFeature> TALL_REEDS_OVERWORLD_PLACED = registerKey("tall_reeds_overworld_placed");
     public static final ResourceKey<PlacedFeature> TALL_REEDS_SWAMP_PLACED = registerKey("tall_reeds_swamp_placed");
 
+    public static final ResourceKey<PlacedFeature> KENAF_PLACED = registerKey("kenaf_placed");
+
     public static final ResourceKey<PlacedFeature> WATER_REEDS_OVERWORLD_PLACED = registerKey("water_reeds_overworld_placed");
     public static final ResourceKey<PlacedFeature> WATER_REEDS_SWAMP_PLACED = registerKey("water_reeds_swamp_placed");
     public static final ResourceKey<PlacedFeature> WATER_REEDS_LUSH_CAVES_PLACED = registerKey("water_reeds_lush_caves_placed");
@@ -236,6 +238,9 @@ public class EPPlacedFeatures {
                 List.of(new PlacementModifier[]{RarityFilter.onAverageOnceEvery(20), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()}));
         register(context, TALL_REEDS_SWAMP_PLACED, configuredFeatures.getOrThrow(EPConfiguredFeatures.TALL_REEDS),
                 List.of(new PlacementModifier[]{RarityFilter.onAverageOnceEvery(3), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()}));
+
+        register(context, KENAF_PLACED, configuredFeatures.getOrThrow(EPConfiguredFeatures.KENAF),
+                List.of(new PlacementModifier[]{RarityFilter.onAverageOnceEvery(30), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()}));
 
         register(context, WATER_REEDS_OVERWORLD_PLACED, configuredFeatures.getOrThrow(EPConfiguredFeatures.WATER_REEDS_OVERWORLD),
                 List.of(new PlacementModifier[]{RarityFilter.onAverageOnceEvery(10), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()}));

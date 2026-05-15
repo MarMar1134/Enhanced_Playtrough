@@ -202,9 +202,10 @@ public class EPTags {
         //Biomes with extra ores
         public static final TagKey<Biome> HUMIDITY_BIOMES = biomeTag("humidity_biomes");
 
-        //Biomes that can hold specific mobs
+        //Biomes where modded entities can spawn
         public static final TagKey<Biome> CAN_SPAWN_ZOMBIE_KNIGHT = biomeTag("can_spawn_zombie_knight");
         public static final TagKey<Biome> CAN_SPAWN_SKELETON_BOWMASTER = biomeTag("can_spawn_skeleton_bowmaster");
+        public static final TagKey<Biome> CAN_SPAWN_WERELLAGER = biomeTag("can_spawn_werellager");
 
         private static TagKey<Biome> biomeTag(String name){
             return TagKey.create(Registries.BIOME, new ResourceLocation(EnhancedPlaythrough.MOD_ID,name));

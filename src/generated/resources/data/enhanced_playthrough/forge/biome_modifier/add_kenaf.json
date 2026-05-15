@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#minecraft:is_savanna",
+  "features": "enhanced_playthrough:kenaf_placed",
+  "step": "vegetal_decoration"
+}

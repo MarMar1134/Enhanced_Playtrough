@@ -216,10 +216,15 @@ public class EPEventBusEvents {
 
     @SubscribeEvent
     public static void registerMobSpawns(SpawnPlacementRegisterEvent event){
+        event.register(EPEntityTypes.BANDIT.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                Bandit::checkBanditSpawnRules, SpawnPlacementRegisterEvent.Operation.AND);
+
         event.register(EPEntityTypes.ZOMBIE_KNIGHT.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
                 ZombieKnight::checkZombieKnightSpawnRules, SpawnPlacementRegisterEvent.Operation.AND);
+
         event.register(EPEntityTypes.SKELETON_BOWMASTER.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
                 SkeletonBowmaster::checkSkeletonBowmasterSpawnRules, SpawnPlacementRegisterEvent.Operation.AND);
+
         event.register(EPEntityTypes.WERELLAGER.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
                 Werellager::checkWerellagerSpawnRules, SpawnPlacementRegisterEvent.Operation.AND);
     }

@@ -2,6 +2,7 @@ package net.marmar.enhanced_playthrough.worldgen;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.block.EPBlocks;
+import net.marmar.enhanced_playthrough.block.custom.plant.DoublePlantGrowingHeadBlock;
 import net.marmar.enhanced_playthrough.worldgen.feature.EPFeatures;
 import net.marmar.enhanced_playthrough.worldgen.tree.foliage.AppleFoliagePlacer;
 import net.marmar.enhanced_playthrough.worldgen.tree.foliage.LemonFoliagePlacer;
@@ -62,6 +63,8 @@ public class EPConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> REEDS = registerKey("reeds");
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> TALL_REEDS = registerKey("tall_reeds");
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> KENAF = registerKey("kenaf");
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> WATER_REEDS_OVERWORLD = registerKey("water_reeds_overworld");
     public static final ResourceKey<ConfiguredFeature<?, ?>> WATER_REEDS_SWAMP = registerKey("water_reeds_swamp");
@@ -319,13 +322,17 @@ public class EPConfiguredFeatures {
 
         register(context, REEDS, Feature.RANDOM_PATCH,
                 new RandomPatchConfiguration(80, 10, 0, PlacementUtils.inlinePlaced(
-                        Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(EPBlocks.REEDS.get()))
-                        , BlockPredicateFilter.forPredicate(BlockPredicate.allOf(BlockPredicate.ONLY_IN_AIR_PREDICATE, isCloseToWater)))));
+                        Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(EPBlocks.REEDS.get().defaultBlockState().setValue(DoublePlantGrowingHeadBlock.AGE, 1))),
+                        BlockPredicateFilter.forPredicate(BlockPredicate.allOf(BlockPredicate.ONLY_IN_AIR_PREDICATE, isCloseToWater)))));
 
         register(context, TALL_REEDS, Feature.RANDOM_PATCH,
                 new RandomPatchConfiguration(50, 5, 0, PlacementUtils.inlinePlaced(
-                        Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(EPBlocks.TALL_REEDS.get()))
-                        , BlockPredicateFilter.forPredicate(BlockPredicate.allOf(BlockPredicate.ONLY_IN_AIR_PREDICATE, isCloseToWater)))));
+                        Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(EPBlocks.TALL_REEDS.get().defaultBlockState().setValue(DoublePlantGrowingHeadBlock.AGE, 1))),
+                        BlockPredicateFilter.forPredicate(BlockPredicate.allOf(BlockPredicate.ONLY_IN_AIR_PREDICATE, isCloseToWater)))));
+
+        register(context, KENAF, Feature.RANDOM_PATCH,
+                new RandomPatchConfiguration(32, 4, 0, PlacementUtils.inlinePlaced(
+                        Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(EPBlocks.KENAF.get().defaultBlockState().setValue(DoublePlantGrowingHeadBlock.AGE, 1))))));
 
         register(context, WATER_REEDS_OVERWORLD, EPFeatures.WATER_REEDS.get(),
                 new RandomPatchConfiguration(120, 3, 0, PlacementUtils.inlinePlaced(

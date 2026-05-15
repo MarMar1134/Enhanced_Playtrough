@@ -3,6 +3,9 @@ package net.marmar.enhanced_playthrough.entity.bandit;
 import com.google.common.collect.Maps;
 import net.marmar.enhanced_playthrough.util.enchantment.EPEnchantments;
 import net.marmar.enhanced_playthrough.item.EPItems;
+import net.marmar.enhanced_playthrough.worldgen.structure.EPStructureUtils;
+import net.marmar.enhanced_playthrough.worldgen.structure.EPStructures;
+import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
@@ -45,6 +48,10 @@ public class Bandit extends AbstractIllager {
 
     public Bandit(EntityType<? extends AbstractIllager> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
+    }
+
+    public static boolean checkBanditSpawnRules(EntityType<? extends Bandit> pBandit, ServerLevelAccessor pLevel, MobSpawnType pSpawnType, BlockPos pPos, RandomSource pRandom){
+        return checkMobSpawnRules(pBandit, pLevel, pSpawnType, pPos, pRandom) && EPStructureUtils.isInsideStructure(pLevel, pPos, EPStructures.BANDIT_CAMP);
     }
 
     @Override

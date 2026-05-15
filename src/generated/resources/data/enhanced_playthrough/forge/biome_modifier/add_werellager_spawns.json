@@ -1,10 +1,10 @@
 {
   "type": "forge:add_spawns",
-  "biomes": "#minecraft:is_overworld",
+  "biomes": "#enhanced_playthrough:can_spawn_werellager",
   "spawners": {
     "type": "enhanced_playthrough:werellager",
-    "maxCount": 2,
-    "minCount": 1,
-    "weight": 40
+    "maxCount": 4,
+    "minCount": 2,
+    "weight": 90
   }
 }

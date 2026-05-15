@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "plant_fiber",
+  "ingredients": [
+    {
+      "item": "enhanced_playthrough:kenaf_branch"
+    },
+    {
+      "item": "enhanced_playthrough:kenaf_branch"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "enhanced_playthrough:plant_fiber"
+  }
+}

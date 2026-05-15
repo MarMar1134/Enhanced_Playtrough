@@ -97,7 +97,10 @@ public class SmeltingRecipeSubProvider extends RecipeProvider {
 
             //Silver
             oreSmelting(consumer, EPTags.Items.SILVER_ORES, EPItems.SILVER_INGOT.get(), 0.7f, "silver_ingot");
+            oreSmelting(consumer, EPItems.RAW_SILVER.get(), RecipeCategory.MISC, EPItems.SILVER_INGOT.get(), 0.7f, "silver_ingot");
+
             oreBlasting(consumer, EPTags.Items.SILVER_ORES, EPItems.SILVER_INGOT.get(), 0.7f,  "silver_ingot");
+            oreBlasting(consumer, EPItems.RAW_SILVER.get(), EPItems.SILVER_INGOT.get(), 0.7f, "silver_ingot");
 
             oreSmelting(consumer, EPTags.Items.SILVER_MANUFACTURABLE, EPItems.SILVER_NUGGET.get(), 0.1f, "silver_nugget");
             oreBlasting(consumer, EPTags.Items.SILVER_MANUFACTURABLE, EPItems.SILVER_NUGGET.get(), 0.1f, "silver_nugget");
@@ -113,11 +116,15 @@ public class SmeltingRecipeSubProvider extends RecipeProvider {
 
             basicSmelting(consumer, EPTags.Items.BASIC_ZINC_ORES, EPItems.ZINC_INGOT.get(), "zinc_ingot");
             basicSmelting(consumer, EPItems.RAW_ZINC.get(), EPItems.ZINC_INGOT.get(), "zinc_ingot");
+
             soulBasicSmelting(consumer, EPTags.Items.BASIC_ZINC_ORES, EPItems.ZINC_INGOT.get(), "zinc_ingot");
             soulBasicSmelting(consumer, EPItems.RAW_ZINC.get(), EPItems.ZINC_INGOT.get(), "zinc_ingot");
 
             oreSmelting(consumer, EPTags.Items.ZINC_ORES, EPItems.ZINC_INGOT.get(), 0.5f, "zinc_ingot");
+            oreSmelting(consumer, EPItems.RAW_ZINC.get(), RecipeCategory.MISC, EPItems.ZINC_INGOT.get(), 0.5f, "zinc_ingot");
+
             oreBlasting(consumer, EPTags.Items.ZINC_ORES, EPItems.ZINC_INGOT.get(), 0.5f, "zinc_ingot");
+            oreBlasting(consumer, EPItems.RAW_ZINC.get(), EPItems.ZINC_INGOT.get(), 0.5f, "zinc_ingot");
 
             oreBlasting(consumer, EPItems.ZINC_DUST.get(), EPItems.ZINC_INGOT.get(), 0.5f, "zinc_ingot");
 
@@ -126,11 +133,15 @@ public class SmeltingRecipeSubProvider extends RecipeProvider {
 
             basicSmelting(consumer, EPTags.Items.BASIC_TIN_ORES, EPItems.TIN_INGOT.get(), "tin_ingot");
             basicSmelting(consumer, EPItems.RAW_TIN.get(), EPItems.TIN_INGOT.get(), "tin_ingot");
+
             soulBasicSmelting(consumer, EPTags.Items.BASIC_TIN_ORES, EPItems.TIN_INGOT.get(), "tin_ingot");
             soulBasicSmelting(consumer, EPItems.RAW_TIN.get(), EPItems.TIN_INGOT.get(), "tin_ingot");
 
             oreSmelting(consumer, EPTags.Items.TIN_ORES, EPItems.TIN_INGOT.get(), 0.5f, "tin_ingot");
+            oreSmelting(consumer, EPItems.RAW_TIN.get(), RecipeCategory.MISC, EPItems.TIN_INGOT.get(), 0.5f, "tin_ingot");
+
             oreBlasting(consumer, EPTags.Items.TIN_ORES, EPItems.TIN_INGOT.get(), 0.5f, "tin_ingot");
+            oreBlasting(consumer, EPItems.RAW_TIN.get(), EPItems.TIN_INGOT.get(), 0.5f, "tin_ingot");
 
             oreBlasting(consumer, EPItems.TIN_DUST.get(), EPItems.TIN_INGOT.get(), 0.5f, "tin_ingot");
 
@@ -139,6 +150,7 @@ public class SmeltingRecipeSubProvider extends RecipeProvider {
 
             basicSmelting(consumer, EPTags.Items.BASIC_COPPER_ORES, Items.COPPER_INGOT, "copper_ingot");
             basicSmelting(consumer, Items.RAW_COPPER, Items.COPPER_INGOT, "copper_ingot");
+
             soulBasicSmelting(consumer, EPTags.Items.BASIC_COPPER_ORES, Items.COPPER_INGOT, "copper_ingot");
             soulBasicSmelting(consumer, Items.RAW_COPPER, Items.COPPER_INGOT, "copper_ingot");
 

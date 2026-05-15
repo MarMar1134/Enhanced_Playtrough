@@ -22,6 +22,7 @@ import net.minecraft.world.item.*;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+@SuppressWarnings("removal")
 public class EPItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(
             ForgeRegistries.ITEMS, EnhancedPlaythrough.MOD_ID);
@@ -161,7 +162,7 @@ public class EPItems {
 
     public static final RegistryObject<Item> ANCIENT_ARMOR_TRIM_SMITHING_TEMPLATE = ITEMS.register(
             "ancient_armor_trim_smithing_template", () ->
-                    SmithingTemplateItem.createArmorTrimTemplate(ResourceLocation.fromNamespaceAndPath(EnhancedPlaythrough.MOD_ID, "ancient")));
+                    SmithingTemplateItem.createArmorTrimTemplate(new ResourceLocation(EnhancedPlaythrough.MOD_ID, "ancient")));
 
     //Cobble
     public static final RegistryObject<Item> COBBLE = ITEMS.register(
@@ -234,6 +235,8 @@ public class EPItems {
             "tall_reeds_head", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> WATER_REEDS_HEAD = ITEMS.register(
             "water_reeds_head", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> KENAF_BRANCH = ITEMS.register(
+            "kenaf_branch", () -> new Item(new Item.Properties()));
 
     //Spawn eggs
     public static final RegistryObject<Item> BANDIT_SPAWN_EGG = ITEMS.register(

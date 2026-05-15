@@ -1,6 +1,7 @@
 package net.marmar.enhanced_playthrough.entity.lycan;
 
 import net.marmar.enhanced_playthrough.data.tag.EPTags;
+import net.marmar.enhanced_playthrough.entity.EPMobType;
 import net.marmar.enhanced_playthrough.util.enchantment.EPEnchantments;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.syncher.EntityDataAccessor;
@@ -11,6 +12,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -41,6 +43,11 @@ public abstract class AbstractLycanMob extends Monster {
 
     public LycanState getState() {
         return LycanState.values()[this.entityData.get(LYCAN_STATE)];
+    }
+
+    @Override
+    public MobType getMobType() {
+        return EPMobType.LYCAN;
     }
 
     public void setState(LycanState state) {

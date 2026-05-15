@@ -2,10 +2,7 @@ package net.marmar.enhanced_playthrough.block;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.block.custom.alchemicalduplicator.AlchemicalDuplicatorBlock;
-import net.marmar.enhanced_playthrough.block.custom.plant.DesertFlowerBlock;
-import net.marmar.enhanced_playthrough.block.custom.plant.DoublePlantGrowingHeadBlock;
-import net.marmar.enhanced_playthrough.block.custom.plant.TallReedsBlock;
-import net.marmar.enhanced_playthrough.block.custom.plant.WaterReedsBlock;
+import net.marmar.enhanced_playthrough.block.custom.plant.*;
 import net.marmar.enhanced_playthrough.block.custom.alloyfurnace.AdobeAlloyFurnaceBlock;
 import net.marmar.enhanced_playthrough.block.custom.alloyfurnace.SoulAlloyFurnaceBlock;
 import net.marmar.enhanced_playthrough.block.custom.alloyfurnace.SuperAlloyFurnaceBlock;
@@ -509,6 +506,9 @@ public class EPBlocks {
     public static final RegistryObject<Block> POTTED_SUCCULENT = registerBlockWithItem("potted_succulent",
             () -> new FlowerPotBlock(()-> (FlowerPotBlock) Blocks.FLOWER_POT, EPBlocks.SUCCULENT,
                     BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM ).noOcclusion()));
+
+    public static final RegistryObject<Block> KENAF = registerBlockWithItem("kenaf",
+            () -> new KenafBlock(BlockBehaviour.Properties.copy(Blocks.TALL_GRASS).noOcclusion().noCollission()));
 
     //Block register
     private static <T extends Block> RegistryObject<T> registerBlockWithItem(String name, Supplier<T> block){

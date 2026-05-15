@@ -197,6 +197,7 @@ public class SpanishLangProvider extends AbstractLangProvider {
             //Plants
             addBlock(EPBlocks.TALL_REEDS, "Cañabera");
             addBlock(EPBlocks.REEDS, "Hierba de las pampas");
+            addBlock(EPBlocks.KENAF, "Kenaf");
             addBlock(EPBlocks.SMALL_REEDS, "Hierba de las pampas andina");
             addBlock(EPBlocks.WATER_REEDS, "Junco");
 
@@ -457,6 +458,7 @@ public class SpanishLangProvider extends AbstractLangProvider {
         addItem(EPItems.ALUMINUM_ROD, "Vara de aluminio");
         addItem(EPItems.COBALT, "Cobalto");
         addItem(EPItems.REEDS_HEAD, "Cabeza de hierba de las pampas");
+        addItem(EPItems.KENAF_BRANCH, "Rama de kenaf");
         addItem(EPItems.TALL_REEDS_HEAD, "Cabeza de Cañabera");
         addItem(EPItems.WATER_REEDS_HEAD, "Cabeza de junco");
         addItem(EPItems.PLANT_FIBER, "Fibra vegetal");

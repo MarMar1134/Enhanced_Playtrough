@@ -197,6 +197,7 @@ public class MexicanLangProvider extends AbstractLangProvider {
             //Plants
             addBlock(EPBlocks.TALL_REEDS, "Carrizo");
             addBlock(EPBlocks.REEDS, "Plumero");
+            addBlock(EPBlocks.KENAF, "Kenaf");
             addBlock(EPBlocks.SMALL_REEDS, "Plumero andino");
             addBlock(EPBlocks.WATER_REEDS, "Junco");
 
@@ -457,6 +458,7 @@ public class MexicanLangProvider extends AbstractLangProvider {
         addItem(EPItems.ALUMINUM_ROD, "Vara de aluminio");
         addItem(EPItems.COBALT, "Cobalto");
         addItem(EPItems.REEDS_HEAD, "Cabeza de plumero");
+        addItem(EPItems.KENAF_BRANCH, "Rama de kenaf");
         addItem(EPItems.TALL_REEDS_HEAD, "Cabeza de carrizo");
         addItem(EPItems.WATER_REEDS_HEAD, "Cabeza de junco");
         addItem(EPItems.PLANT_FIBER, "Fibra vegetal");

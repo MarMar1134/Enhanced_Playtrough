@@ -43,6 +43,8 @@ public class EPBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_REEDS_OVERWORLD = registerKey("add_reeds_overworld");
     public static final ResourceKey<BiomeModifier> ADD_REEDS_SWAMP = registerKey("add_reeds_swamp");
 
+    public static final ResourceKey<BiomeModifier> ADD_KENAF = registerKey("add_kenaf");
+
     public static final ResourceKey<BiomeModifier> ADD_TALL_REEDS_OVERWORLD = registerKey("add_tall_reeds_overworld");
     public static final ResourceKey<BiomeModifier> ADD_TALL_REEDS_SWAMP = registerKey("add_tall_reeds_swamp");
 
@@ -291,6 +293,11 @@ public class EPBiomeModifiers {
                 HolderSet.direct(placedFeatures.getOrThrow(EPPlacedFeatures.REEDS_SWAMP_PLACED)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
+        context.register(ADD_KENAF, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_SAVANNA),
+                HolderSet.direct(placedFeatures.getOrThrow(EPPlacedFeatures.KENAF_PLACED)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+
         context.register(ADD_TALL_REEDS_OVERWORLD, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(EPTags.Biomes.TEMPLATE_BIOMES),
                 HolderSet.direct(placedFeatures.getOrThrow(EPPlacedFeatures.TALL_REEDS_OVERWORLD_PLACED)),
@@ -343,8 +350,8 @@ public class EPBiomeModifiers {
 
         //Werellager
         context.register(ADD_WERELLAGER_SPAWNS, new ForgeBiomeModifiers.AddSpawnsBiomeModifier(
-                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
-                List.of(new MobSpawnSettings.SpawnerData(EPEntityTypes.WERELLAGER.get(), 40, 1, 2))));
+                biomes.getOrThrow(EPTags.Biomes.CAN_SPAWN_WERELLAGER),
+                List.of(new MobSpawnSettings.SpawnerData(EPEntityTypes.WERELLAGER.get(), 90, 2, 4))));
     }
 
     @SuppressWarnings("removal")

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "age=0,half=lower": {
+      "model": "enhanced_playthrough:block/kenaf_lower_0"
+    },
+    "age=0,half=upper": {
+      "model": "enhanced_playthrough:block/kenaf_upper_0"
+    },
+    "age=1,half=lower": {
+      "model": "enhanced_playthrough:block/kenaf_lower_1"
+    },
+    "age=1,half=upper": {
+      "model": "enhanced_playthrough:block/kenaf_upper_1"
+    }
+  }
+}

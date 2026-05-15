@@ -158,6 +158,7 @@ public class EPBlockStateProvider extends BlockStateProvider {
 
         //Plants
         doublePlantWithAgeBlock(EPBlocks.REEDS);
+        doublePlantWithAgeBlock(EPBlocks.KENAF);
         plantBlock(EPBlocks.SMALL_REEDS, true);
         doublePlantWithAgeBlock(EPBlocks.TALL_REEDS);
         doublePlantBlock(EPBlocks.WATER_REEDS);

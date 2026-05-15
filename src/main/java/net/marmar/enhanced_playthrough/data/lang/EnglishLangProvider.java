@@ -196,6 +196,7 @@ public class EnglishLangProvider extends AbstractLangProvider {
             //Plants
             addBlock(EPBlocks.TALL_REEDS, "Gigant reed");
             addBlock(EPBlocks.REEDS, "Pampas grass");
+            addBlock(EPBlocks.KENAF, "Kenaf");
             addBlock(EPBlocks.SMALL_REEDS, "Andean pampas grass");
             addBlock(EPBlocks.WATER_REEDS, "Reed");
 
@@ -456,6 +457,7 @@ public class EnglishLangProvider extends AbstractLangProvider {
             addItem(EPItems.ALUMINUM_ROD, "Aluminum rod");
             addItem(EPItems.COBALT, "Cobalt");
             addItem(EPItems.REEDS_HEAD, "Pampas grass head");
+            addItem(EPItems.KENAF_BRANCH, "Kenaf branch");
             addItem(EPItems.TALL_REEDS_HEAD, "tall reed head");
             addItem(EPItems.WATER_REEDS_HEAD, "Reed head");
             addItem(EPItems.PLANT_FIBER, "Plant fiber");

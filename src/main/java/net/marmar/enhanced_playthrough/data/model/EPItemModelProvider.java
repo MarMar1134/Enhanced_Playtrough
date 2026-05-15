@@ -179,6 +179,7 @@ public class EPItemModelProvider extends ItemModelProvider {
         //Plants
         saplingAndCropItem(EPBlocks.SMALL_REEDS);
         doubleBlockWithAgeItem(EPBlocks.REEDS);
+        doubleBlockWithAgeItem(EPBlocks.KENAF);
         doubleBlockWithAgeItem(EPBlocks.TALL_REEDS);
         doubleBlockItem(EPBlocks.WATER_REEDS);
 
@@ -374,6 +375,7 @@ public class EPItemModelProvider extends ItemModelProvider {
         simpleItem(EPItems.ALUMINUM_ROD);
         simpleItem(EPItems.PLANT_FIBER);
         simpleItem(EPItems.REEDS_HEAD);
+        simpleItem(EPItems.KENAF_BRANCH);
         simpleItem(EPItems.TALL_REEDS_HEAD);
         simpleItem(EPItems.WATER_REEDS_HEAD);
 

@@ -42,7 +42,7 @@ public class Werellager extends AbstractLycanMob {
     }
 
     public static boolean checkWerellagerSpawnRules(EntityType<? extends Werellager> pWerellager, ServerLevelAccessor pLevel, MobSpawnType pSpawnType, BlockPos pPos, RandomSource pRandom){
-        return checkMonsterSpawnRules(pWerellager, pLevel, pSpawnType, pPos, pRandom) && (isDayOfSpawn(pLevel) && pPos.getY() >= 63);
+        return checkMobSpawnRules(pWerellager, pLevel, pSpawnType, pPos, pRandom) && (isDayOfSpawn(pLevel) && pPos.getY() >= 63);
     }
 
     @Override
@@ -127,9 +127,9 @@ public class Werellager extends AbstractLycanMob {
 
     protected void transform() {
         if (this.level() instanceof ServerLevel serverLevel) {
-            long currentTime = serverLevel.getDayTime();
+            long currentTime = serverLevel.getDayTime() % 24000;
 
-            if (currentTime >= 13000 && currentTime <= 24000) {
+            if (currentTime >= 13000) {
                 setState(LycanState.LYCAN_FORM);
             } else {
                 setState(LycanState.HUMAN_FORM);

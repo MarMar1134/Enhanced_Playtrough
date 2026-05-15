@@ -31,7 +31,7 @@ public class EPEntityTypes {
             ENTITY_TYPES.register("skeleton_bowmaster", () -> EntityType.Builder.of(SkeletonBowmaster::new, MobCategory.MONSTER)
                     .sized(0.6F, 1.99F).build("skeleton_bowmaster"));
     public static final RegistryObject<EntityType<Werellager>> WERELLAGER =
-            ENTITY_TYPES.register("werellager", () -> EntityType.Builder.of(Werellager::new, MobCategory.CREATURE)
+            ENTITY_TYPES.register("werellager", () -> EntityType.Builder.of(Werellager::new, MobCategory.MONSTER)
                     .sized(0.6f, 2f).build("werellager"));
 
     //Boats

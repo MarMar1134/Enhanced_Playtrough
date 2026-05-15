@@ -358,6 +358,7 @@ public class EPBlockLootTables extends BlockLootSubProvider implements BlockLoot
         //Plants
         this.add(EPBlocks.SMALL_REEDS.get(), createPlantWithSeedsDrops(EPBlocks.SMALL_REEDS.get(), EPItems.REEDS_HEAD.get(), 2, 0.25f));
         this.add(EPBlocks.REEDS.get(), createPlantWithSeedsDrops(EPBlocks.REEDS.get(), EPItems.REEDS_HEAD.get(), 2, 0.25f));
+        this.add(EPBlocks.KENAF.get(), createPlantWithSeedsDrops(EPBlocks.KENAF.get(), EPItems.KENAF_BRANCH.get(), 3, 0.25f));
         this.add(EPBlocks.TALL_REEDS.get(), createPlantWithSeedsDrops(EPBlocks.TALL_REEDS.get(), EPItems.TALL_REEDS_HEAD.get(), 3, 0.25f));
         this.add(EPBlocks.WATER_REEDS.get(), createPlantWithSeedsDrops(EPBlocks.WATER_REEDS.get(), EPItems.WATER_REEDS_HEAD.get(), 4, 0.125f));
 

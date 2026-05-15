@@ -37,6 +37,16 @@ public class DoublePlantGrowingHeadBlock extends DoublePlantBlock implements Bon
         this.registerDefaultState(this.defaultBlockState().setValue(AGE, 0).setValue(HALF, DoubleBlockHalf.LOWER));
     }
 
+    @Nullable
+    @Override
+    public BlockState getStateForPlacement(BlockPlaceContext pContext) {
+        BlockState state = super.getStateForPlacement(pContext);
+        if (state != null) {
+            state = state.setValue(AGE, 0);
+        }
+        return state;
+    }
+
     @Override
     public boolean isRandomlyTicking(BlockState pState) {
         return pState.getValue(AGE) < MAX_AGE;

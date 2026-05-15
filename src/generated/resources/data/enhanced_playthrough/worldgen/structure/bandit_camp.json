@@ -10,7 +10,7 @@
       "spawns": [
         {
           "type": "enhanced_playthrough:bandit",
-          "maxCount": 1,
+          "maxCount": 3,
           "minCount": 1,
           "weight": 1
         }

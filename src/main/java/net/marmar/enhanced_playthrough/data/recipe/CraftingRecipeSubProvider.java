@@ -184,6 +184,13 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .unlockedBy(getHasName(EPItems.PLANT_FIBER.get()), has(EPItems.PLANT_FIBER.get()))
                 .save(consumer, recipeName(EPItems.PLANT_FIBER.get(), "from_water_reeds_head"));
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EPItems.PLANT_FIBER.get(), 2)
+                .requires(EPItems.KENAF_BRANCH.get(), 2)
+                .group("plant_fiber")
+                .unlockedBy(getHasName(EPItems.KENAF_BRANCH.get()), has(EPItems.KENAF_BRANCH.get()))
+                .unlockedBy(getHasName(EPItems.PLANT_FIBER.get()), has(EPItems.PLANT_FIBER.get()))
+                .save(consumer, recipeName(EPItems.PLANT_FIBER.get(), "from_kenaf_branch"));
+
         //Smithing templates
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, EPItems.BRONZIUM_UPGRADE_SMITHING_TEMPLATE.get(), 2)
                 .pattern("BAB")
