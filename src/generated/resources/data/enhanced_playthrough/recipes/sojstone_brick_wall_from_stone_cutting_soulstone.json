@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "enhanced_playthrough:soulstone"
+  },
+  "result": "enhanced_playthrough:sojstone_brick_wall"
+}

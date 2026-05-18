@@ -54,13 +54,28 @@ public class EPBlockLootTables extends BlockLootSubProvider implements BlockLoot
         this.dropSelf(EPBlocks.LIMESTONE_BRICK_STAIRS.get());
         this.dropSelf(EPBlocks.LIMESTONE_BRICK_WALL.get());
 
-        //Soul
-        this.dropSelf(EPBlocks.SOUL_MUD.get());
-        this.dropSelf(EPBlocks.SOUL_MUD_BRICKS.get());
-        this.add(EPBlocks.SOUL_MUD_BRICK_SLAB.get(), block ->
-                createSlabItemTable(EPBlocks.SOUL_MUD_BRICK_SLAB.get()));
-        this.dropSelf(EPBlocks.SOUL_MUD_BRICK_STAIRS.get());
-        this.dropSelf(EPBlocks.SOUL_MUD_BRICK_WALL.get());
+        //Cobbled soulstone
+        this.add(EPBlocks.COBBLED_SOULSTONE.get(), block ->
+                createRockDrops(EPBlocks.COBBLED_SOULSTONE.get(), EPBlocks.COBBLED_SOULSTONE.get(), EPItems.SOULSTONE_COBBLE.get()));
+        this.add(EPBlocks.COBBLED_SOULSTONE_SLAB.get(),
+                block -> createSlabItemTable(EPBlocks.COBBLED_SOULSTONE_SLAB.get()));
+        this.dropSelf(EPBlocks.COBBLED_SOULSTONE_STAIRS.get());
+        this.dropSelf(EPBlocks.COBBLED_SOULSTONE_WALL.get());
+
+        //Soulstone
+        this.add(EPBlocks.SOULSTONE.get(), block ->
+                createRockDrops(EPBlocks.SOULSTONE.get(), EPBlocks.COBBLED_SOULSTONE.get(), EPItems.SOULSTONE_COBBLE.get()));
+        this.add(EPBlocks.SOULSTONE_SLAB.get(), block ->
+                createSlabItemTable(EPBlocks.SOULSTONE_SLAB.get()));
+        this.dropSelf(EPBlocks.SOULSTONE_STAIRS.get());
+        this.dropSelf(EPBlocks.SOULSTONE_WALL.get());
+
+        //soulstone bricks
+        this.dropSelf(EPBlocks.SOULSTONE_BRICKS.get());
+        this.add(EPBlocks.SOULSTONE_BRICK_SLAB.get(), block ->
+                createSlabItemTable(EPBlocks.SOULSTONE_BRICK_SLAB.get()));
+        this.dropSelf(EPBlocks.SOULSTONE_BRICK_STAIRS.get());
+        this.dropSelf(EPBlocks.SOULSTONE_BRICK_WALL.get());
 
         //Firebricks
         this.dropSelf(EPBlocks.FIREBRICKS.get());

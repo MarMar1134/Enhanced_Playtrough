@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_soul_mud": {
+    "has_cobbled_soulstone": {
       "conditions": {
         "items": [
           {
             "items": [
-              "enhanced_playthrough:soul_mud"
+              "enhanced_playthrough:cobbled_soulstone"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_soul_mud",
+      "has_cobbled_soulstone",
       "has_the_recipe"
     ]
   ],

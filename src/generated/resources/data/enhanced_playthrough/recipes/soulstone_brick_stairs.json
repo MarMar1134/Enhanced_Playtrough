@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "soulstone_brick_stairs",
+  "key": {
+    "#": {
+      "item": "enhanced_playthrough:soulstone_bricks"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "item": "enhanced_playthrough:soulstone_brick_stairs"
+  },
+  "show_notification": true
+}

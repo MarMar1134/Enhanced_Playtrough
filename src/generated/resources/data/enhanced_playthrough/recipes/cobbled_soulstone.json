@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "S": {
+      "item": "enhanced_playthrough:soulstone_cobble"
+    }
+  },
+  "pattern": [
+    "SS",
+    "SS"
+  ],
+  "result": {
+    "item": "enhanced_playthrough:cobbled_soulstone"
+  },
+  "show_notification": true
+}

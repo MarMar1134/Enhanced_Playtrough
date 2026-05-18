@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "L": {
+      "item": "enhanced_playthrough:limestone_cobble"
+    }
+  },
+  "pattern": [
+    "LL",
+    "LL"
+  ],
+  "result": {
+    "item": "enhanced_playthrough:cobbled_limestone"
+  },
+  "show_notification": true
+}

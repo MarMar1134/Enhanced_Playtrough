@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_orange_planks": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:orange_planks"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_orange_stairs": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:orange_stairs"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "enhanced_playthrough:orange_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_orange_planks",
+      "has_orange_stairs",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "enhanced_playthrough:orange_stairs"
+    ]
+  },
+  "sends_telemetry_event": false
+}

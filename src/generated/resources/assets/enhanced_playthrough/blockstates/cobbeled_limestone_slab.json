@@ -4,7 +4,7 @@
       "model": "enhanced_playthrough:block/cobbeled_limestone_slab"
     },
     "type=double": {
-      "model": "enhanced_playthrough:block/cobbeled_limestone"
+      "model": "enhanced_playthrough:block/cobbled_limestone"
     },
     "type=top": {
       "model": "enhanced_playthrough:block/cobbeled_limestone_slab_top"

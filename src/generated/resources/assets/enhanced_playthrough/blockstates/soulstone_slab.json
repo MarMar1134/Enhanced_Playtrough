@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "enhanced_playthrough:block/soulstone_slab"
+    },
+    "type=double": {
+      "model": "enhanced_playthrough:block/soulstone"
+    },
+    "type=top": {
+      "model": "enhanced_playthrough:block/soulstone_slab_top"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "sojstone_brick_wall",
+  "key": {
+    "#": {
+      "item": "enhanced_playthrough:soulstone_bricks"
+    }
+  },
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "item": "enhanced_playthrough:sojstone_brick_wall"
+  },
+  "show_notification": true
+}

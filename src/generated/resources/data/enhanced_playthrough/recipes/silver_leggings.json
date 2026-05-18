@@ -4,11 +4,14 @@
   "key": {
     "#": {
       "item": "enhanced_playthrough:silver_ingot"
+    },
+    "L": {
+      "item": "minecraft:leather_leggings"
     }
   },
   "pattern": [
     "###",
-    "# #",
+    "#L#",
     "# #"
   ],
   "result": {

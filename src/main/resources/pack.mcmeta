@@ -54,6 +54,54 @@
       },
       {
         "namespace": "minecraft",
+        "path": "recipes/golden_helmet.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "recipes/golden_chestplate.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "recipes/golden_leggings.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "recipes/golden_boots.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "recipes/iron_helmet.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "recipes/iron_chestplate.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "recipes/iron_leggings.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "recipes/iron_boots.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "recipes/diamond_helmet.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "recipes/diamond_chestplate.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "recipes/diamond_leggings.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "recipes/diamond_boots.json"
+      },
+      {
+        "namespace": "minecraft",
         "path": "recipes/cookie.json"
       },
       {

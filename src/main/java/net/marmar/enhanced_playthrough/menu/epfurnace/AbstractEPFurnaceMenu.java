@@ -40,6 +40,11 @@ public abstract class AbstractEPFurnaceMenu extends AbstractContainerMenu {
                     public boolean mayPlace(@NotNull ItemStack stack) {
                         return blockEntity instanceof MasonryFurnaceBlockEntity ? stack.is(EPTags.Items.MASONRY_INGREDIENT) : stack.is(EPTags.Items.BASIC_SMELT_INGREDIENT);
                     }
+
+                    @Override
+                    public boolean mayPickup(Player playerIn) {
+                        return true;
+                    }
                 }));
 
         //Fuel
@@ -48,6 +53,11 @@ public abstract class AbstractEPFurnaceMenu extends AbstractContainerMenu {
                     @Override
                     public boolean mayPlace(@NotNull ItemStack stack) {
                         return blockEntity.canBurn(stack);
+                    }
+
+                    @Override
+                    public boolean mayPickup(Player playerIn) {
+                        return true;
                     }
                 }));
 

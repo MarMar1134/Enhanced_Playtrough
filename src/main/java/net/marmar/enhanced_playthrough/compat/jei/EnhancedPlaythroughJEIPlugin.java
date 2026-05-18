@@ -1,8 +1,13 @@
 package net.marmar.enhanced_playthrough.compat.jei;
 
+import mezz.jei.api.registration.*;
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
+import net.marmar.enhanced_playthrough.block.EPBlocks;
 import net.marmar.enhanced_playthrough.compat.jei.category.*;
+import net.marmar.enhanced_playthrough.compat.jei.itemtransfer.*;
 import net.marmar.enhanced_playthrough.item.EPItems;
+import net.marmar.enhanced_playthrough.menu.EPMenuTypes;
+import net.marmar.enhanced_playthrough.menu.epfurnace.AdobeFurnaceMenu;
 import net.marmar.enhanced_playthrough.menu.screen.alchemicalduplicator.AlchemicalDuplicatorScreen;
 import net.marmar.enhanced_playthrough.menu.screen.alloyfurnace.AdobeAlloyFurnaceScreen;
 import net.marmar.enhanced_playthrough.menu.screen.alloyfurnace.SuperAlloyFurnaceScreen;
@@ -23,9 +28,6 @@ import net.marmar.enhanced_playthrough.recipe.epsmelt.BasicSmeltingRecipe;
 import net.marmar.enhanced_playthrough.recipe.epsmelt.SoulBasicSmeltingRecipe;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
-import mezz.jei.api.registration.IGuiHandlerRegistration;
-import mezz.jei.api.registration.IRecipeCategoryRegistration;
-import mezz.jei.api.registration.IRecipeRegistration;
 import net.marmar.enhanced_playthrough.recipe.grind.PrimalGrindRecipe;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
@@ -41,34 +43,6 @@ public class EnhancedPlaythroughJEIPlugin implements IModPlugin {
     @Override
     public ResourceLocation getPluginUid() {
         return new ResourceLocation(EnhancedPlaythrough.MOD_ID,"jei_plugin");
-    }
-
-    private static Component itemInfo(String pItemKey){
-        return Component.translatable("jei." + EnhancedPlaythrough.MOD_ID + "." + pItemKey + ".desc");
-    }
-
-    @Override
-    public void registerCategories(IRecipeCategoryRegistration registration) {
-        //Basic smelt recipes
-        registration.addRecipeCategories(new BasicSmeltingCategory(registration.getJeiHelpers().getGuiHelper()));
-        registration.addRecipeCategories(new SoulBasicSmeltingCategory(registration.getJeiHelpers().getGuiHelper()));
-
-        //Masonry furnace
-        registration.addRecipeCategories(new MasonrySmeltingCategory(registration.getJeiHelpers().getGuiHelper()));
-
-        //Alloy furnaces
-        registration.addRecipeCategories(new OreAlloyingCategory(registration.getJeiHelpers().getGuiHelper()));
-        registration.addRecipeCategories(new SuperAlloyingCategory(registration.getJeiHelpers().getGuiHelper()));
-
-        //Gem polish recipes
-        registration.addRecipeCategories(new GemPolishingCategory(registration.getJeiHelpers().getGuiHelper()));
-
-        //Grind recipes
-        registration.addRecipeCategories(new PrimalGrindCategory(registration.getJeiHelpers().getGuiHelper()));
-        registration.addRecipeCategories(new MechanicalGrindCategory(registration.getJeiHelpers().getGuiHelper()));
-
-        //Alchemical duplicating recipes
-        registration.addRecipeCategories(new AlchemicalDuplicatingCategory(registration.getJeiHelpers().getGuiHelper()));
     }
 
     private void addIngredientsInfo(IRecipeRegistration registration){
@@ -117,6 +91,54 @@ public class EnhancedPlaythroughJEIPlugin implements IModPlugin {
     }
 
     @Override
+    public void registerRecipeCatalysts(IRecipeCatalystRegistration registration) {
+        //Basic furnaces
+        registration.addRecipeCatalyst(new ItemStack(EPBlocks.ADOBE_FURNACE.get()), BasicSmeltingCategory.BASIC_SMELTING_TYPE);
+        registration.addRecipeCatalyst(new ItemStack(EPBlocks.SOUL_FURNACE.get()), SoulBasicSmeltingCategory.SOUL_BASIC_SMELTING_TYPE);
+
+        //Masonry furnace
+        registration.addRecipeCatalyst(new ItemStack(EPBlocks.MASONRY_FURNACE.get()), MasonrySmeltingCategory.MASONRY_SMELTING_TYPE);
+
+        //Alloy furnaces
+        registration.addRecipeCatalyst(new ItemStack(EPBlocks.ADOBE_ALLOY_FURNACE.get()), OreAlloyingCategory.ALLOYING_FURNACE_RECIPE_RECIPE_TYPE);
+        registration.addRecipeCatalyst(new ItemStack(EPBlocks.SUPER_ALLOY_FURNACE.get()), SuperAlloyingCategory.SUPER_ALLOYING_RECIPE_TYPE);
+
+        //Gem polishing
+        registration.addRecipeCatalyst(new ItemStack(EPBlocks.GEM_POLISHER.get()), GemPolishingCategory.GEM_POLISHER_RECIPE_TYPE);
+
+        //Item grinding
+        registration.addRecipeCatalyst(new ItemStack(EPBlocks.PRIMAL_GRINDER.get()), PrimalGrindCategory.PRIMAL_GRINDING_RECIPE_RECIPE_TYPE);
+        registration.addRecipeCatalyst(new ItemStack(EPBlocks.MECHANICAL_GRINDER.get()), MechanicalGrindCategory.GRINDING_RECIPE_RECIPE_TYPE);
+
+        //Alchemical duplication
+        registration.addRecipeCatalyst(new ItemStack(EPBlocks.ALCHEMICAL_DUPLICATOR.get()), AlchemicalDuplicatingCategory.ALCHEMICAL_DUPLICATING_RECIPE_RECIPE_TYPE);
+    }
+
+    @Override
+    public void registerCategories(IRecipeCategoryRegistration registration) {
+        //Basic smelt recipes
+        registration.addRecipeCategories(new BasicSmeltingCategory(registration.getJeiHelpers().getGuiHelper()));
+        registration.addRecipeCategories(new SoulBasicSmeltingCategory(registration.getJeiHelpers().getGuiHelper()));
+
+        //Masonry furnace
+        registration.addRecipeCategories(new MasonrySmeltingCategory(registration.getJeiHelpers().getGuiHelper()));
+
+        //Alloy furnaces
+        registration.addRecipeCategories(new OreAlloyingCategory(registration.getJeiHelpers().getGuiHelper()));
+        registration.addRecipeCategories(new SuperAlloyingCategory(registration.getJeiHelpers().getGuiHelper()));
+
+        //Gem polish recipes
+        registration.addRecipeCategories(new GemPolishingCategory(registration.getJeiHelpers().getGuiHelper()));
+
+        //Grind recipes
+        registration.addRecipeCategories(new PrimalGrindCategory(registration.getJeiHelpers().getGuiHelper()));
+        registration.addRecipeCategories(new MechanicalGrindCategory(registration.getJeiHelpers().getGuiHelper()));
+
+        //Alchemical duplicating recipes
+        registration.addRecipeCategories(new AlchemicalDuplicatingCategory(registration.getJeiHelpers().getGuiHelper()));
+    }
+
+    @Override
     public void registerRecipes(IRecipeRegistration registration) {
         RecipeManager recipeManager = Minecraft.getInstance().level.getRecipeManager();
 
@@ -133,7 +155,6 @@ public class EnhancedPlaythroughJEIPlugin implements IModPlugin {
         //Masonry smelting
         List<MasonrySmeltingRecipe> masonrySmeltingRecipes = recipeManager.getAllRecipesFor(EPRecipes.MASONRY_SMELT_TYPE.get());
         registration.addRecipes(MasonrySmeltingCategory.MASONRY_SMELTING_TYPE, masonrySmeltingRecipes);
-
 
         //Alloying
         List<AlloyRecipe> alloyingRecipes = recipeManager.getAllRecipesFor(EPRecipes.ALLOY_TYPE.get());
@@ -156,6 +177,27 @@ public class EnhancedPlaythroughJEIPlugin implements IModPlugin {
         //Alchemical duplicating
         List<AlchemicalDuplicatingRecipe> alchemicalDuplicatingRecipes = recipeManager.getAllRecipesFor(EPRecipes.ALCHEMICAL_DUPLICATING_TYPE.get());
         registration.addRecipes(AlchemicalDuplicatingCategory.ALCHEMICAL_DUPLICATING_RECIPE_RECIPE_TYPE, alchemicalDuplicatingRecipes);
+    }
+
+    @Override
+    public void registerRecipeTransferHandlers(IRecipeTransferRegistration registration) {
+        //Basic smelting
+        registration.addRecipeTransferHandler(new AdobeFurnaceTransferInfo());
+        registration.addRecipeTransferHandler(new SoulFurnaceTransferInfo());
+
+        //Masonry smelting
+        registration.addRecipeTransferHandler(new MasonryFurnaceTransferInfo());
+
+        //Ore alloying
+        registration.addRecipeTransferHandler(new AlloyFurnaceTransferInfo());
+        registration.addRecipeTransferHandler(new SuperAlloyFurnaceTransferInfo());
+
+        //Gem polishing
+        registration.addRecipeTransferHandler(new GemPolisherTransferInfo());
+
+        //Grinding
+        registration.addRecipeTransferHandler(new PrimalGrinderTransferInfo());
+        registration.addRecipeTransferHandler(new MechanicalGrinderTransferInfo());
     }
 
     @Override

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "soulstone_wall",
+  "key": {
+    "#": {
+      "item": "enhanced_playthrough:soulstone"
+    }
+  },
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "item": "enhanced_playthrough:soulstone_wall"
+  },
+  "show_notification": true
+}

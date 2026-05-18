@@ -66,6 +66,7 @@ public class EPTabs {
                         output.accept(EPItems.LIMESTONE_COBBLE.get());
                         output.accept(EPItems.DEEPSLATE_COBBLE.get());
                         output.accept(EPItems.NETHERRACK_RUBBLE.get());
+                        output.accept(EPItems.SOULSTONE_COBBLE.get());
                         output.accept(EPItems.BLACKSTONE_COBBLE.get());
 
                         //Terracotta shards
@@ -91,9 +92,16 @@ public class EPTabs {
                         output.accept(EPItems.REEDS_HEAD.get());
                         output.accept(EPItems.TALL_REEDS_HEAD.get());
                         output.accept(EPItems.WATER_REEDS_HEAD.get());
+                        output.accept(EPItems.KENAF_BRANCH.get());
                         output.accept(EPItems.PLANT_FIBER.get());
+
+                        output.accept(EPItems.COW_HIDE.get());
+                        output.accept(EPItems.PIG_HIDE.get());
+                        output.accept(EPItems.WERELLAGER_HIDE.get());
+
                         output.accept(EPItems.MUD_BRICK.get());
                         output.accept(EPItems.FIREBRICK.get());
+
                         output.accept(EPItems.ALUMINUM_ROD.get());
                         output.accept(EPItems.BRONZIUM_UPGRADE_SMITHING_TEMPLATE.get());
                         output.accept(EPItems.ALUMINUM_UPGRADE_SMITHING_TEMPLATE.get());
@@ -541,6 +549,7 @@ public class EPTabs {
                         output.accept(EPBlocks.SMALL_REEDS.get());
                         output.accept(EPBlocks.TALL_REEDS.get());
                         output.accept(EPBlocks.WATER_REEDS.get());
+                        output.accept(EPBlocks.KENAF.get());
 
                         output.accept(EPBlocks.WILD_WHEAT_CROP.get());
                         output.accept(EPBlocks.WILD_TOMATO_CROP.get());
@@ -719,11 +728,20 @@ public class EPTabs {
                         output.accept(EPBlocks.LIMESTONE_BRICK_STAIRS.get());
                         output.accept(EPBlocks.LIMESTONE_BRICK_WALL.get());
 
-                        output.accept(EPBlocks.SOUL_MUD.get());
-                        output.accept(EPBlocks.SOUL_MUD_BRICKS.get());
-                        output.accept(EPBlocks.SOUL_MUD_BRICK_SLAB.get());
-                        output.accept(EPBlocks.SOUL_MUD_BRICK_STAIRS.get());
-                        output.accept(EPBlocks.SOUL_MUD_BRICK_WALL.get());
+                        output.accept(EPBlocks.COBBLED_SOULSTONE.get());
+                        output.accept(EPBlocks.COBBLED_SOULSTONE_SLAB.get());
+                        output.accept(EPBlocks.COBBLED_SOULSTONE_STAIRS.get());
+                        output.accept(EPBlocks.COBBLED_SOULSTONE_WALL.get());
+
+                        output.accept(EPBlocks.SOULSTONE.get());
+                        output.accept(EPBlocks.SOULSTONE_SLAB.get());
+                        output.accept(EPBlocks.SOULSTONE_STAIRS.get());
+                        output.accept(EPBlocks.SOULSTONE_WALL.get());
+
+                        output.accept(EPBlocks.SOULSTONE_BRICKS.get());
+                        output.accept(EPBlocks.SOULSTONE_BRICK_SLAB.get());
+                        output.accept(EPBlocks.SOULSTONE_BRICK_STAIRS.get());
+                        output.accept(EPBlocks.SOULSTONE_BRICK_WALL.get());
 
                         output.accept(EPBlocks.FIREBRICKS.get());
                         output.accept(EPBlocks.FIREBRICK_SLAB.get());

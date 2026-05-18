@@ -32,15 +32,13 @@ public class AlchemicalDuplicatorMenu extends AbstractContainerMenu {
         this.level = inv.player.level();
         this.data = data;
 
+        createSlots((AlchemicalDuplicatorBlockEntity) entity);
         addPlayerInventory(inv);
         addPlayerHotbar(inv);
-
-        addSlots((AlchemicalDuplicatorBlockEntity) entity);
-
         addDataSlots(data);
     }
 
-    private void addSlots(AlchemicalDuplicatorBlockEntity alchemicalDuplicator){
+    private void createSlots(AlchemicalDuplicatorBlockEntity alchemicalDuplicator){
         //Blaze powder
         alchemicalDuplicator.getSulfurSlotLazyHandler().ifPresent(itemStackHandler ->
                 addSlot(new SlotItemHandler(itemStackHandler, 0, 16, 22){

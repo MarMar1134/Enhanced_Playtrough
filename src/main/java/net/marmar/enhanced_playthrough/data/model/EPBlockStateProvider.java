@@ -67,12 +67,24 @@ public class EPBlockStateProvider extends BlockStateProvider {
             stairsBlock((StairBlock) EPBlocks.LIMESTONE_BRICK_STAIRS.get(), blockTexture(EPBlocks.LIMESTONE_BRICKS.get()));
             wallBlock((WallBlock) EPBlocks.LIMESTONE_BRICK_WALL.get(), blockTexture(EPBlocks.LIMESTONE_BRICKS.get()));
 
-        //Soul
-        blockWithItem(EPBlocks.SOUL_MUD);
-        blockWithItem(EPBlocks.SOUL_MUD_BRICKS);
-        slabBlock((SlabBlock) EPBlocks.SOUL_MUD_BRICK_SLAB.get(), blockTexture(EPBlocks.SOUL_MUD_BRICKS.get()), blockTexture(EPBlocks.SOUL_MUD_BRICKS.get()));
-        stairsBlock((StairBlock) EPBlocks.SOUL_MUD_BRICK_STAIRS.get(), blockTexture(EPBlocks.SOUL_MUD_BRICKS.get()));
-        wallBlock((WallBlock) EPBlocks.SOUL_MUD_BRICK_WALL.get(), blockTexture(EPBlocks.SOUL_MUD_BRICKS.get()));
+        //Soulstone
+            //cobbled
+            blockWithItem(EPBlocks.COBBLED_SOULSTONE);
+            slabBlock((SlabBlock) EPBlocks.COBBLED_SOULSTONE_SLAB.get(), blockTexture(EPBlocks.COBBLED_SOULSTONE.get()), blockTexture(EPBlocks.COBBLED_SOULSTONE.get()));
+            stairsBlock((StairBlock) EPBlocks.COBBLED_SOULSTONE_STAIRS.get(), blockTexture(EPBlocks.COBBLED_SOULSTONE.get()));
+            wallBlock((WallBlock) EPBlocks.COBBLED_SOULSTONE_WALL.get(), blockTexture(EPBlocks.COBBLED_SOULSTONE.get()));
+
+            //natural
+            blockWithItem(EPBlocks.SOULSTONE);
+            slabBlock((SlabBlock) EPBlocks.SOULSTONE_SLAB.get(), blockTexture(EPBlocks.SOULSTONE.get()), blockTexture(EPBlocks.SOULSTONE.get()));
+            stairsBlock((StairBlock) EPBlocks.SOULSTONE_STAIRS.get(), blockTexture(EPBlocks.SOULSTONE.get()));
+            wallBlock((WallBlock) EPBlocks.SOULSTONE_WALL.get(), blockTexture(EPBlocks.SOULSTONE.get()));
+
+            //bricks
+            blockWithItem(EPBlocks.SOULSTONE_BRICKS);
+            slabBlock((SlabBlock) EPBlocks.SOULSTONE_BRICK_SLAB.get(), blockTexture(EPBlocks.SOULSTONE_BRICKS.get()), blockTexture(EPBlocks.SOULSTONE_BRICKS.get()));
+            stairsBlock((StairBlock) EPBlocks.SOULSTONE_BRICK_STAIRS.get(), blockTexture(EPBlocks.SOULSTONE_BRICKS.get()));
+            wallBlock((WallBlock) EPBlocks.SOULSTONE_BRICK_WALL.get(), blockTexture(EPBlocks.SOULSTONE_BRICKS.get()));
 
         //Firebrick
         blockWithItem(EPBlocks.FIREBRICKS);

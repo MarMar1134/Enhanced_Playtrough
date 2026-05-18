@@ -56,6 +56,7 @@ public class EPPlacedFeatures {
 
     //Ores
     public static final ResourceKey<PlacedFeature> NETHER_COPPER_ORE_PLACED = registerKey("nether_copper_ores_placed");
+    public static final ResourceKey<PlacedFeature> SOULSTONE_PATCH_PLACED = registerKey("soulstone_patch_placed");
 
     public static final ResourceKey<PlacedFeature> SMALL_TIN_ORES_PLACED = registerKey("small_tin_ores_placed");
     public static final ResourceKey<PlacedFeature> BIG_TIN_ORES_PLACED = registerKey("big_tin_ores_placed");
@@ -103,6 +104,11 @@ public class EPPlacedFeatures {
         register(context, NETHER_COPPER_ORE_PLACED, configuredFeatures.getOrThrow(EPConfiguredFeatures.NETHER_COPPER_ORES),
                 EPOrePlacement.commonOrePlacement(12,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(128))));
+
+        //Soulstone
+        register(context, SOULSTONE_PATCH_PLACED, configuredFeatures.getOrThrow(EPConfiguredFeatures.SOULSTONE_PATCH),
+                EPOrePlacement.commonOrePlacement(5,
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-10), VerticalAnchor.absolute(128))));
 
         //Tin
         register(context, SMALL_TIN_ORES_PLACED, configuredFeatures.getOrThrow(EPConfiguredFeatures.SMALL_TIN_ORES),

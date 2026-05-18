@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cobbled_soulstone": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:cobbled_soulstone"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "enhanced_playthrough:cobbeled_soulstone_stairs_from_stone_cutting_cobbled_soulstone"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_cobbled_soulstone",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "enhanced_playthrough:cobbeled_soulstone_stairs_from_stone_cutting_cobbled_soulstone"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -62,4 +62,6 @@ public class AlchemicalDuplicatingCategory implements IRecipeCategory<Alchemical
         builder.addSlot(RecipeIngredientRole.OUTPUT, 97, 56).addItemStack(recipe.getResultItem(null));
         builder.addSlot(RecipeIngredientRole.OUTPUT, 129, 56).addItemStack(recipe.getResultItem(null));
     }
+
+
 }

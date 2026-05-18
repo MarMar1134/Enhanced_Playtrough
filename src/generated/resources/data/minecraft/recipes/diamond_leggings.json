@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:diamond"
+    },
+    "L": {
+      "item": "minecraft:leather_leggings"
+    }
+  },
+  "pattern": [
+    "###",
+    "#L#",
+    "# #"
+  ],
+  "result": {
+    "item": "minecraft:diamond_leggings"
+  },
+  "show_notification": true
+}

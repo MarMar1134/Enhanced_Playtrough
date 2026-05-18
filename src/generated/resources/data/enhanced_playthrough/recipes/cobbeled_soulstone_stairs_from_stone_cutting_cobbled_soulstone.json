@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "enhanced_playthrough:cobbled_soulstone"
+  },
+  "result": "enhanced_playthrough:cobbeled_soulstone_stairs"
+}

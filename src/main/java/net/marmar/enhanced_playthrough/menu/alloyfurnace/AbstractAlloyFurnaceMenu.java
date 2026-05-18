@@ -4,12 +4,10 @@ import net.marmar.enhanced_playthrough.data.tag.EPTags;
 import net.marmar.enhanced_playthrough.block.custom.alloyfurnace.entity.AbstractAlloyFurnaceBlockEntity;
 import net.marmar.enhanced_playthrough.block.custom.alloyfurnace.entity.SuperAlloyFurnaceBlockEntity;
 import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.*;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraftforge.items.SlotItemHandler;
 import org.jetbrains.annotations.NotNull;
@@ -32,9 +30,11 @@ public abstract class AbstractAlloyFurnaceMenu extends AbstractContainerMenu {
         addPlayerHotbar(inv);
         addDataSlots(data);
     }
+
     public boolean isCrafting() {
         return data.get(0) > 0;
     }
+
     public boolean isBurning(){
         return data.get(2) > 0;
     }
@@ -123,6 +123,11 @@ public abstract class AbstractAlloyFurnaceMenu extends AbstractContainerMenu {
                         }
                         return stack.is(EPTags.Items.ALLOY_INGREDIENT);
                     }
+
+                    @Override
+                    public boolean mayPickup(Player playerIn) {
+                        return true;
+                    }
                 }));
 
         //Second input
@@ -135,6 +140,11 @@ public abstract class AbstractAlloyFurnaceMenu extends AbstractContainerMenu {
                         }
                         return stack.is(EPTags.Items.ALLOY_INGREDIENT);
                     }
+
+                    @Override
+                    public boolean mayPickup(Player playerIn) {
+                        return true;
+                    }
                 }));
 
         //Fuel
@@ -143,6 +153,11 @@ public abstract class AbstractAlloyFurnaceMenu extends AbstractContainerMenu {
                     @Override
                     public boolean mayPlace(@NotNull ItemStack stack) {
                         return isFuel(stack);
+                    }
+
+                    @Override
+                    public boolean mayPickup(Player playerIn) {
+                        return true;
                     }
                 }));
 

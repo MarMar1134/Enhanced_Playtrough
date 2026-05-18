@@ -1,24 +1,24 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_limestone_brick": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "enhanced_playthrough:limestone_brick"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
     "has_limestone_brick_slab": {
       "conditions": {
         "items": [
           {
             "items": [
               "enhanced_playthrough:limestone_brick_slab"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_limestone_bricks": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:limestone_bricks"
             ]
           }
         ]
@@ -34,7 +34,7 @@
   },
   "requirements": [
     [
-      "has_limestone_brick",
+      "has_limestone_bricks",
       "has_limestone_brick_slab",
       "has_the_recipe"
     ]

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "limestone_bricks",
+  "key": {
+    "#": {
+      "item": "enhanced_playthrough:polished_limestone"
+    }
+  },
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "result": {
+    "count": 4,
+    "item": "enhanced_playthrough:limestone_bricks"
+  },
+  "show_notification": true
+}

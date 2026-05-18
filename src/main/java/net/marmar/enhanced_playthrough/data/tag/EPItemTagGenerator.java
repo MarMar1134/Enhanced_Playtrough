@@ -119,7 +119,8 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                 EPItems.COBBLE.get(),
                 EPItems.LIMESTONE_COBBLE.get(),
                 EPItems.DEEPSLATE_COBBLE.get(),
-                EPItems.BLACKSTONE_COBBLE.get()
+                EPItems.BLACKSTONE_COBBLE.get(),
+                EPItems.SOULSTONE_COBBLE.get()
         );
 
         this.tag(EPTags.Items.TERRACOTTA_SHARD).add(
@@ -221,7 +222,8 @@ public class EPItemTagGenerator extends ItemTagsProvider {
         );
 
         this.tag(ItemTags.STONE_CRAFTING_MATERIALS).add(
-                EPBlocks.COBBLED_LIMESTONE.get().asItem()
+                EPBlocks.COBBLED_LIMESTONE.get().asItem(),
+                EPBlocks.COBBLED_SOULSTONE.get().asItem()
         );
 
         this.tag(EPTags.Items.GOLD).add(
@@ -840,6 +842,7 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                         EPBlocks.COBBLED_LIMESTONE.get().asItem(),
                         Blocks.COBBLESTONE.asItem(),
                         Blocks.COBBLED_DEEPSLATE.asItem(),
+                        EPBlocks.COBBLED_SOULSTONE.get().asItem(),
                         EPBlocks.SMALL_REEDS.get().asItem(),
                         EPBlocks.REEDS.get().asItem(),
                         EPBlocks.TALL_REEDS.get().asItem(),

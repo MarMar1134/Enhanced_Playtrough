@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:gold_ingot"
+    },
+    "L": {
+      "item": "minecraft:leather_chestplate"
+    }
+  },
+  "pattern": [
+    "# #",
+    "#L#",
+    " # "
+  ],
+  "result": {
+    "item": "minecraft:golden_chestplate"
+  },
+  "show_notification": true
+}

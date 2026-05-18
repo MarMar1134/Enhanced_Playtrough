@@ -46,14 +46,10 @@ public class PrimalGrinderMenu extends AbstractContainerMenu {
                     public boolean mayPlace(@NotNull ItemStack stack) {
                         return stack.is(EPTags.Items.PRIMAL_GRIND_INGREDIENT);
                     }
-                }));
 
-        //Output
-        entity.getOutputLazyHandler().ifPresent(itemStackHandler ->
-                addSlot(new SlotItemHandler(itemStackHandler, 0, 129, 37){
                     @Override
-                    public boolean mayPlace(@NotNull ItemStack stack) {
-                        return false;
+                    public boolean mayPickup(Player playerIn) {
+                        return true;
                     }
                 }));
 
@@ -63,6 +59,20 @@ public class PrimalGrinderMenu extends AbstractContainerMenu {
                     @Override
                     public boolean mayPlace(@NotNull ItemStack stack) {
                         return isFuel(stack);
+                    }
+
+                    @Override
+                    public boolean mayPickup(Player playerIn) {
+                        return true;
+                    }
+                }));
+
+        //Output
+        entity.getOutputLazyHandler().ifPresent(itemStackHandler ->
+                addSlot(new SlotItemHandler(itemStackHandler, 0, 129, 37){
+                    @Override
+                    public boolean mayPlace(@NotNull ItemStack stack) {
+                        return false;
                     }
                 }));
     }

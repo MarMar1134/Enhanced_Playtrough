@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:diamond"
+    },
+    "L": {
+      "item": "minecraft:leather_chestplate"
+    }
+  },
+  "pattern": [
+    "# #",
+    "#L#",
+    " # "
+  ],
+  "result": {
+    "item": "minecraft:diamond_chestplate"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "polished_limestone_stairs",
+  "key": {
+    "#": {
+      "item": "enhanced_playthrough:polished_limestone"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "item": "enhanced_playthrough:polished_limestone_stairs"
+  },
+  "show_notification": true
+}

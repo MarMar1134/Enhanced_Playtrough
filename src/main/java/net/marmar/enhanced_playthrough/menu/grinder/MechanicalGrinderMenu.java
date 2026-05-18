@@ -48,6 +48,11 @@ public class MechanicalGrinderMenu extends AbstractContainerMenu {
                     public boolean mayPlace(@NotNull ItemStack stack) {
                         return stack.is(EPTags.Items.MECHANICAL_GRIND_INGREDIENT);
                     }
+
+                    @Override
+                    public boolean mayPickup(Player playerIn) {
+                        return true;
+                    }
                 }));
 
         //Output

@@ -51,7 +51,9 @@ public class EPBlockTagGenerator extends BlockTagsProvider {
                 EPBlocks.LIMESTONE_SLAB.get(),
                 EPBlocks.POLISHED_LIMESTONE_SLAB.get(),
                 EPBlocks.LIMESTONE_BRICK_SLAB.get(),
-                EPBlocks.SOUL_MUD_BRICK_SLAB.get(),
+                EPBlocks.COBBLED_SOULSTONE_SLAB.get(),
+                EPBlocks.SOULSTONE_SLAB.get(),
+                EPBlocks.SOULSTONE_BRICK_SLAB.get(),
                 EPBlocks.FIREBRICK_SLAB.get(),
                 EPBlocks.WALNUT_SLAB.get(),
                 EPBlocks.APPLE_SLAB.get(),
@@ -66,7 +68,9 @@ public class EPBlockTagGenerator extends BlockTagsProvider {
                 EPBlocks.LIMESTONE_STAIRS.get(),
                 EPBlocks.POLISHED_LIMESTONE_STAIRS.get(),
                 EPBlocks.LIMESTONE_BRICK_STAIRS.get(),
-                EPBlocks.SOUL_MUD_BRICK_STAIRS.get(),
+                EPBlocks.COBBLED_SOULSTONE_STAIRS.get(),
+                EPBlocks.SOULSTONE_STAIRS.get(),
+                EPBlocks.SOULSTONE_BRICK_STAIRS.get(),
                 EPBlocks.FIREBRICK_STAIRS.get(),
                 EPBlocks.WALNUT_STAIRS.get(),
                 EPBlocks.APPLE_STAIRS.get(),
@@ -80,7 +84,9 @@ public class EPBlockTagGenerator extends BlockTagsProvider {
                 EPBlocks.COBBLED_LIMESTONE_WALL.get(),
                 EPBlocks.POLISHED_LIMESTONE_WALL.get(),
                 EPBlocks.LIMESTONE_BRICK_WALL.get(),
-                EPBlocks.SOUL_MUD_BRICK_WALL.get(),
+                EPBlocks.COBBLED_SOULSTONE_WALL.get(),
+                EPBlocks.SOULSTONE_WALL.get(),
+                EPBlocks.SOULSTONE_BRICK_WALL.get(),
                 EPBlocks.FIREBRICK_WALL.get()
         );
 
@@ -301,7 +307,8 @@ public class EPBlockTagGenerator extends BlockTagsProvider {
         );
 
         this.tag(Tags.Blocks.STONE).add(
-                EPBlocks.COBBLED_LIMESTONE.get()
+                EPBlocks.COBBLED_LIMESTONE.get(),
+                EPBlocks.COBBLED_SOULSTONE.get()
         );
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(
@@ -332,12 +339,21 @@ public class EPBlockTagGenerator extends BlockTagsProvider {
                 EPBlocks.LIMESTONE_BRICK_STAIRS.get(),
                 EPBlocks.LIMESTONE_BRICK_WALL.get(),
 
-                //soul
-                EPBlocks.SOUL_MUD.get(),
-                EPBlocks.SOUL_MUD_BRICKS.get(),
-                EPBlocks.SOUL_MUD_BRICK_SLAB.get(),
-                EPBlocks.SOUL_MUD_BRICK_STAIRS.get(),
-                EPBlocks.SOUL_MUD_BRICK_WALL.get(),
+                //Soulstone
+                EPBlocks.SOULSTONE.get(),
+                EPBlocks.SOULSTONE_SLAB.get(),
+                EPBlocks.SOULSTONE_STAIRS.get(),
+                EPBlocks.SOULSTONE_WALL.get(),
+
+                EPBlocks.COBBLED_SOULSTONE.get(),
+                EPBlocks.COBBLED_SOULSTONE_SLAB.get(),
+                EPBlocks.COBBLED_SOULSTONE_STAIRS.get(),
+                EPBlocks.COBBLED_SOULSTONE_WALL.get(),
+
+                EPBlocks.SOULSTONE_BRICKS.get(),
+                EPBlocks.SOULSTONE_BRICK_SLAB.get(),
+                EPBlocks.SOULSTONE_BRICK_STAIRS.get(),
+                EPBlocks.SOULSTONE_BRICK_WALL.get(),
 
                 //Firebricks
                 EPBlocks.FIREBRICKS.get(),
@@ -427,6 +443,17 @@ public class EPBlockTagGenerator extends BlockTagsProvider {
                 EPBlocks.POLISHED_LIMESTONE_STAIRS.get(),
                 EPBlocks.POLISHED_LIMESTONE_WALL.get(),
 
+                //Soulstone
+                EPBlocks.SOULSTONE.get(),
+                EPBlocks.SOULSTONE_SLAB.get(),
+                EPBlocks.SOULSTONE_STAIRS.get(),
+                EPBlocks.SOULSTONE_WALL.get(),
+
+                EPBlocks.COBBLED_SOULSTONE.get(),
+                EPBlocks.COBBLED_SOULSTONE_SLAB.get(),
+                EPBlocks.COBBLED_SOULSTONE_STAIRS.get(),
+                EPBlocks.COBBLED_SOULSTONE_WALL.get(),
+
                 //Calibrated quartz
                 EPBlocks.CALIBRATED_QUARTZ_BLOCK.get(),
                 EPBlocks.SMOOTH_CALIBRATED_QUARTZ_BLOCK.get(),
@@ -462,6 +489,12 @@ public class EPBlockTagGenerator extends BlockTagsProvider {
                 EPBlocks.LIMESTONE_BRICK_SLAB.get(),
                 EPBlocks.LIMESTONE_BRICK_STAIRS.get(),
                 EPBlocks.LIMESTONE_BRICK_WALL.get(),
+
+                //Soulstone bricks
+                EPBlocks.SOULSTONE_BRICKS.get(),
+                EPBlocks.SOULSTONE_BRICK_SLAB.get(),
+                EPBlocks.SOULSTONE_BRICK_STAIRS.get(),
+                EPBlocks.SOULSTONE_BRICK_WALL.get(),
 
                 //Entities
                 EPBlocks.MECHANICAL_GRINDER.get(),

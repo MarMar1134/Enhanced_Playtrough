@@ -250,10 +250,25 @@ public class GeneralRecipeSubProvider extends RecipeProvider {
         stoneCutting(consumer, EPBlocks.LIMESTONE_BRICKS.get(), EPBlocks.LIMESTONE_BRICK_STAIRS.get(), 1);
         stoneCutting(consumer, EPBlocks.LIMESTONE_BRICKS.get(), EPBlocks.LIMESTONE_BRICK_WALL.get(), 1);
 
-        //Soul
-        stoneCutting(consumer, EPBlocks.SOUL_MUD_BRICKS.get(), EPBlocks.SOUL_MUD_BRICK_SLAB.get(), 2);
-        stoneCutting(consumer, EPBlocks.SOUL_MUD_BRICKS.get(), EPBlocks.SOUL_MUD_BRICK_STAIRS.get(), 1);
-        stoneCutting(consumer, EPBlocks.SOUL_MUD_BRICKS.get(), EPBlocks.SOUL_MUD_BRICK_WALL.get(), 1);
+        //Cobbled soulstone
+        stoneCutting(consumer, EPBlocks.COBBLED_SOULSTONE.get(), EPBlocks.COBBLED_SOULSTONE_SLAB.get(), 2);
+        stoneCutting(consumer, EPBlocks.COBBLED_SOULSTONE.get(), EPBlocks.COBBLED_SOULSTONE_STAIRS.get(), 1);
+        stoneCutting(consumer, EPBlocks.COBBLED_SOULSTONE.get(), EPBlocks.COBBLED_SOULSTONE_WALL.get(), 1);
+
+        //Soulstone
+        stoneCutting(consumer, EPBlocks.SOULSTONE.get(), EPBlocks.SOULSTONE_SLAB.get(), 2);
+        stoneCutting(consumer, EPBlocks.SOULSTONE.get(), EPBlocks.SOULSTONE_STAIRS.get(), 1);
+        stoneCutting(consumer, EPBlocks.SOULSTONE.get(), EPBlocks.SOULSTONE_WALL.get(), 1);
+
+        stoneCutting(consumer, EPBlocks.SOULSTONE.get(), EPBlocks.SOULSTONE_BRICKS.get(), 1);
+        stoneCutting(consumer, EPBlocks.SOULSTONE.get(), EPBlocks.SOULSTONE_BRICK_SLAB.get(), 2);
+        stoneCutting(consumer, EPBlocks.SOULSTONE.get(), EPBlocks.SOULSTONE_BRICK_STAIRS.get(), 1);
+        stoneCutting(consumer, EPBlocks.SOULSTONE.get(), EPBlocks.SOULSTONE_BRICK_WALL.get(), 1);
+
+        //Soulstone bricks
+        stoneCutting(consumer, EPBlocks.SOULSTONE_BRICKS.get(), EPBlocks.SOULSTONE_BRICK_SLAB.get(), 2);
+        stoneCutting(consumer, EPBlocks.SOULSTONE_BRICKS.get(), EPBlocks.SOULSTONE_BRICK_STAIRS.get(), 1);
+        stoneCutting(consumer, EPBlocks.SOULSTONE_BRICKS.get(), EPBlocks.SOULSTONE_BRICK_WALL.get(), 1);
 
         //Calibrated quartz
         stoneCutting(consumer, EPBlocks.CALIBRATED_QUARTZ_BLOCK.get(), EPBlocks.CHISELED_CALIBRATED_QUARTZ_BLOCK.get(), 1);

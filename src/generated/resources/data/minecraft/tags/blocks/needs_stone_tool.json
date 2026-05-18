@@ -1,9 +1,13 @@
 {
   "values": [
-    "enhanced_playthrough:limestone_brick",
+    "enhanced_playthrough:limestone_bricks",
     "enhanced_playthrough:limestone_brick_slab",
-    "enhanced_playthrough:limestone_brick_stair",
+    "enhanced_playthrough:limestone_brick_stairs",
     "enhanced_playthrough:limestone_brick_wall",
+    "enhanced_playthrough:soulstone_bricks",
+    "enhanced_playthrough:soulstone_brick_slab",
+    "enhanced_playthrough:soulstone_brick_stairs",
+    "enhanced_playthrough:sojstone_brick_wall",
     "enhanced_playthrough:mechanical_grinder",
     "enhanced_playthrough:gem_polisher",
     "enhanced_playthrough:bauxite",

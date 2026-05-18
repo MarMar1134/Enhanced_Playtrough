@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "enhanced_playthrough:walnut_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_walnut_planks": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:walnut_planks"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_walnut_stairs": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:walnut_stairs"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_walnut_planks",
+      "has_walnut_stairs",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "enhanced_playthrough:walnut_stairs"
+    ]
+  },
+  "sends_telemetry_event": false
+}

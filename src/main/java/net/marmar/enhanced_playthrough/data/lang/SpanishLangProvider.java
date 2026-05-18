@@ -333,12 +333,23 @@ public class SpanishLangProvider extends AbstractLangProvider {
         addBlock(EPBlocks.LIMESTONE_BRICK_STAIRS, "Escaleras de ladrillos de piedra caliza");
         addBlock(EPBlocks.LIMESTONE_BRICK_WALL, "Pared de ladrillos de piedra caliza");
 
-        //Soul
-        addBlock(EPBlocks.SOUL_MUD, "Barro de almas");
-        addBlock(EPBlocks.SOUL_MUD_BRICKS, "Ladrillos de adobe de almas");
-        addBlock(EPBlocks.SOUL_MUD_BRICK_SLAB, "Baldosa de ladrillos de adobe de almas");
-        addBlock(EPBlocks.SOUL_MUD_BRICK_STAIRS, "Escaleras de ladrillos de adobe de almas");
-        addBlock(EPBlocks.SOUL_MUD_BRICK_WALL, "Pared de ladrillos de adobe de almas");
+        //Cobbled soulstone
+        addBlock(EPBlocks.COBBLED_SOULSTONE, "Adoquin de piedra de almas");
+        addBlock(EPBlocks.COBBLED_SOULSTONE_SLAB, "Baldosa de adoquines de piedra de almas");
+        addBlock(EPBlocks.COBBLED_SOULSTONE_STAIRS, "Escaleras de adoquines de piedra de almas");
+        addBlock(EPBlocks.COBBLED_SOULSTONE_WALL, "Pared de adoquines de piedra de almas");
+
+        //Soulstone
+        addBlock(EPBlocks.SOULSTONE, "Piedra de almas");
+        addBlock(EPBlocks.SOULSTONE_SLAB, "Baldosa de piedra de almas");
+        addBlock(EPBlocks.SOULSTONE_STAIRS, "Escaleras de piedra de almas");
+        addBlock(EPBlocks.SOULSTONE_WALL, "Pared de piedra de almas");
+
+        //Soulstone bricks
+        addBlock(EPBlocks.SOULSTONE_BRICKS, "Ladrillos de piedra de almas");
+        addBlock(EPBlocks.SOULSTONE_BRICK_SLAB, "Baldosa de ladrillos de piedra de almas");
+        addBlock(EPBlocks.SOULSTONE_BRICK_STAIRS, "Escaleras de ladrillos de piedra de almas");
+        addBlock(EPBlocks.SOULSTONE_BRICK_WALL, "Pared de ladrillos de piedra de almas");
 
         //Firebricks
         addBlock(EPBlocks.FIREBRICKS, "Ladrillos refractarios");
@@ -474,6 +485,7 @@ public class SpanishLangProvider extends AbstractLangProvider {
         addItem(EPItems.LIMESTONE_COBBLE, "Adoquín de piedra caliza");
         addItem(EPItems.DEEPSLATE_COBBLE, "Adoquín de pizarra profunda");
         addItem(EPItems.NETHERRACK_RUBBLE, "Restos de netherrack");
+        addItem(EPItems.SOULSTONE_COBBLE, "Adoquín de piedra de almas");
         addItem(EPItems.BLACKSTONE_COBBLE, "Adoquín de piedra negra");
 
         //Terracotta shards

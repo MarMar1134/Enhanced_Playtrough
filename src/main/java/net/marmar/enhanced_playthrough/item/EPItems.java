@@ -173,6 +173,8 @@ public class EPItems {
             "deepslate_cobble", () -> new CobbleItem(new Item.Properties(), 4));
     public static final RegistryObject<Item> NETHERRACK_RUBBLE = ITEMS.register(
             "netherrack_rubble", () -> new CobbleItem(new Item.Properties(), 1));
+    public static final RegistryObject<Item> SOULSTONE_COBBLE = ITEMS.register(
+            "soulstone_cobble", () -> new CobbleItem(new Item.Properties(), 2));
     public static final RegistryObject<Item> BLACKSTONE_COBBLE = ITEMS.register(
             "black_cobble", () -> new CobbleItem(new Item.Properties(), 2));
 

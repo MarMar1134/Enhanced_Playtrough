@@ -58,6 +58,7 @@ public class EPBiomeModifiers {
 
     //Ores
     public static final ResourceKey<BiomeModifier> ADD_NETHER_COPPER_ORES = registerKey("add_nether_copper_ores");
+    public static final ResourceKey<BiomeModifier> ADD_SOULSTONE_PATCH = registerKey("add_soulstone_patch");
 
     public static final ResourceKey<BiomeModifier> ADD_SMALL_TIN_ORES = registerKey("add_small_tin_ores");
     public static final ResourceKey<BiomeModifier> ADD_BIG_TIN_ORES = registerKey("add_big_tin_ores");
@@ -118,6 +119,12 @@ public class EPBiomeModifiers {
                 biomes.getOrThrow(BiomeTags.IS_NETHER),
                 HolderSet.direct(placedFeatures.getOrThrow(EPPlacedFeatures.NETHER_COPPER_ORE_PLACED)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
+
+        //Soulstone
+        context.register(ADD_SOULSTONE_PATCH, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_NETHER),
+                HolderSet.direct(placedFeatures.getOrThrow(EPPlacedFeatures.SOULSTONE_PATCH_PLACED)),
+                GenerationStep.Decoration.UNDERGROUND_DECORATION));
 
         //Tin
         context.register(ADD_SMALL_TIN_ORES, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(

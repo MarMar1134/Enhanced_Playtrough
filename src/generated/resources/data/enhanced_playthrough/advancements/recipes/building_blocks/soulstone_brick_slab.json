@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_soulstone_brick_slab": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:soulstone_brick_slab"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_soulstone_bricks": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:soulstone_bricks"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "enhanced_playthrough:soulstone_brick_slab"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_soulstone_bricks",
+      "has_soulstone_brick_slab",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "enhanced_playthrough:soulstone_brick_slab"
+    ]
+  },
+  "sends_telemetry_event": false
+}

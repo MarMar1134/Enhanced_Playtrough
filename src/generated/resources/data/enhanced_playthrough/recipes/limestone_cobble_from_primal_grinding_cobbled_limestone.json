@@ -1,0 +1,12 @@
+{
+  "type": "enhanced_playthrough:primal_grinding",
+  "category": "grind",
+  "group": "limestone_cobble",
+  "ingredient": {
+    "item": "enhanced_playthrough:cobbled_limestone"
+  },
+  "output": {
+    "count": 2,
+    "item": "enhanced_playthrough:limestone_cobble"
+  }
+}

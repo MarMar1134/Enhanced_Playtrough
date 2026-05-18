@@ -5,7 +5,9 @@
     "enhanced_playthrough:cobbeled_limestone_wall",
     "enhanced_playthrough:polished_limestone_wall",
     "enhanced_playthrough:limestone_brick_wall",
-    "enhanced_playthrough:soul_mud_brick_wall",
+    "enhanced_playthrough:cobbeled_soulstone_wall",
+    "enhanced_playthrough:soulstone_wall",
+    "enhanced_playthrough:sojstone_brick_wall",
     "enhanced_playthrough:firebrick_wall"
   ]
 }

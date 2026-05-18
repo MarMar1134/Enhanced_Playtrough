@@ -332,12 +332,23 @@ public class EnglishLangProvider extends AbstractLangProvider {
             addBlock(EPBlocks.LIMESTONE_BRICK_STAIRS, "Limestone bricks stairs");
             addBlock(EPBlocks.LIMESTONE_BRICK_WALL, "Limestone bricks wall");
 
-            //Soul
-            addBlock(EPBlocks.SOUL_MUD, "Soul mud");
-            addBlock(EPBlocks.SOUL_MUD_BRICKS, "Soul mud bricks");
-            addBlock(EPBlocks.SOUL_MUD_BRICK_SLAB, "Soul mud brick slab");
-            addBlock(EPBlocks.SOUL_MUD_BRICK_STAIRS, "Soul mud brick stairs");
-            addBlock(EPBlocks.SOUL_MUD_BRICK_WALL, "Soul mud brick wall");
+        //Cobbled soulstone
+        addBlock(EPBlocks.COBBLED_SOULSTONE, "Cobbled soulstone");
+        addBlock(EPBlocks.COBBLED_SOULSTONE_SLAB, "Cobbled soulstone slab");
+        addBlock(EPBlocks.COBBLED_SOULSTONE_STAIRS, "Cobbled soulstone stairs");
+        addBlock(EPBlocks.COBBLED_SOULSTONE_WALL, "Cobbled soulstone wall");
+
+        //Soulstone
+        addBlock(EPBlocks.SOULSTONE, "Soulstone");
+        addBlock(EPBlocks.SOULSTONE_SLAB, "Soulstone slab");
+        addBlock(EPBlocks.SOULSTONE_STAIRS, "Soulstone stairs");
+        addBlock(EPBlocks.SOULSTONE_WALL, "Soulstone wall");
+
+        //Soulstone bricks
+        addBlock(EPBlocks.SOULSTONE_BRICKS, "Soulstone bricks");
+        addBlock(EPBlocks.SOULSTONE_BRICK_SLAB, "Soulstone brick slab");
+        addBlock(EPBlocks.SOULSTONE_BRICK_STAIRS, "Soulstone brick stairs");
+        addBlock(EPBlocks.SOULSTONE_BRICK_WALL, "Soulstone brick wall");
 
         //Firebricks
         addBlock(EPBlocks.FIREBRICKS, "Firebricks");
@@ -473,6 +484,7 @@ public class EnglishLangProvider extends AbstractLangProvider {
             addItem(EPItems.LIMESTONE_COBBLE, "Limestone cobble");
             addItem(EPItems.DEEPSLATE_COBBLE, "Deepslate cobble");
             addItem(EPItems.NETHERRACK_RUBBLE, "Netherrack rubble");
+            addItem(EPItems.SOULSTONE_COBBLE, "Soulstone cobble");
             addItem(EPItems.BLACKSTONE_COBBLE, "Blackstone cobble");
 
             //Terracotta shards

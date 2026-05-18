@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/wall_inventory",
   "textures": {
-    "wall": "enhanced_playthrough:block/cobbeled_limestone"
+    "wall": "enhanced_playthrough:block/cobbled_limestone"
   }
 }

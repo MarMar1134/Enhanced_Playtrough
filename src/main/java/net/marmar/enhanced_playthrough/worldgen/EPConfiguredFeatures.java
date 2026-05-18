@@ -76,6 +76,7 @@ public class EPConfiguredFeatures {
 
     //Ores
     public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_COPPER_ORES = registerKey("nether_copper_ores");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SOULSTONE_PATCH = registerKey("soulstone_patch");
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> SMALL_TIN_ORES = registerKey("small_tin_ores");
     public static final ResourceKey<ConfiguredFeature<?, ?>> BIG_TIN_ORES = registerKey("big_tin_ores");
@@ -141,6 +142,11 @@ public class EPConfiguredFeatures {
                 OreConfiguration.target(netherrackReplaceable, EPBlocks.NETHER_COPPER_ORE.get().defaultBlockState()));
 
         register(context, NETHER_COPPER_ORES, Feature.ORE, new OreConfiguration(netherCopperOres, 8, 0.3f));
+
+        //Soulstone
+        register(context, SOULSTONE_PATCH, Feature.DISK, new DiskConfiguration(
+                RuleBasedBlockStateProvider.simple(EPBlocks.SOULSTONE.get()), BlockPredicate.matchesBlocks(Blocks.NETHERRACK),
+                UniformInt.of(2, 6), 4));
 
         //Tin
         List<OreConfiguration.TargetBlockState> tinOres = List.of(

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:gold_ingot"
+    },
+    "L": {
+      "item": "minecraft:leather_helmet"
+    }
+  },
+  "pattern": [
+    "###",
+    "#L#"
+  ],
+  "result": {
+    "item": "minecraft:golden_helmet"
+  },
+  "show_notification": true
+}

@@ -118,13 +118,22 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .unlockedBy(getHasName(EPItems.SULFUR.get()), has(EPItems.SULFUR.get()))
                 .save(consumer);
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EPItems.MUD_BRICK.get(), 2)
+                .requires(Items.DIRT)
+                .requires(EPItems.PLANT_FIBER.get())
+                .requires(Items.CLAY_BALL)
+                .unlockedBy(getHasName(EPItems.PLANT_FIBER.get()), has(EPItems.PLANT_FIBER.get()))
+                .unlockedBy(getHasName(Items.CLAY_BALL), has(Items.CLAY_BALL))
+                .save(consumer, recipeName(EPItems.MUD_BRICK.get(), "from_plant_fiber"));
+
+
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EPItems.MUD_BRICK.get(), 4)
                 .requires(Items.DIRT)
                 .requires(Items.WHEAT)
                 .requires(Items.CLAY_BALL)
                 .unlockedBy(getHasName(Items.WHEAT), has(Items.WHEAT))
                 .unlockedBy(getHasName(Items.CLAY_BALL), has(Items.CLAY_BALL))
-                .save(consumer);
+                .save(consumer, recipeName(EPItems.MUD_BRICK.get(), "from_wheat"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, EPItems.ALUMINUM_ROD.get(), 4)
                 .pattern("A")
@@ -287,17 +296,25 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
             blockWithPolishedVersionRecipes(EPBlocks.POLISHED_LIMESTONE.get(), EPBlocks.LIMESTONE_BRICKS.get(), EPBlocks.LIMESTONE_BRICK_WALL.get(),
                     EPBlocks.LIMESTONE_BRICK_STAIRS.get(), EPBlocks.LIMESTONE_BRICK_SLAB.get(), consumer);
 
-            //Soul
-            ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EPBlocks.SOUL_MUD.get(), 4)
-                    .pattern("MG")
-                    .pattern("GM")
-                    .define('M', Items.GRAVEL)
-                    .define('G', Items.SOUL_SOIL)
-                    .unlockedBy(getHasName(Items.SOUL_SOIL), has(Items.SOUL_SOIL))
+            //Cobbled SOULstone
+            ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EPBlocks.COBBLED_SOULSTONE.get())
+                    .pattern("SS")
+                    .pattern("SS")
+                    .define('S', EPItems.SOULSTONE_COBBLE.get())
+                    .unlockedBy(getHasName(EPItems.SOULSTONE_COBBLE.get()), has(EPItems.SOULSTONE_COBBLE.get()))
+                    .unlockedBy(getHasName(EPBlocks.COBBLED_SOULSTONE.get()), has(EPBlocks.COBBLED_SOULSTONE.get()))
                     .save(consumer);
 
-            blockWithPolishedVersionRecipes(EPBlocks.SOUL_MUD.get(), EPBlocks.SOUL_MUD_BRICKS.get(), EPBlocks.SOUL_MUD_BRICK_WALL.get(),
-                    EPBlocks.SOUL_MUD_BRICK_STAIRS.get(), EPBlocks.SOUL_MUD_BRICK_SLAB.get(), consumer);
+            blockWithoutPolishedVersionRecipes(EPBlocks.COBBLED_SOULSTONE.get(), EPBlocks.COBBLED_SOULSTONE_WALL.get(), EPBlocks.COBBLED_SOULSTONE_STAIRS.get(),
+                    EPBlocks.COBBLED_SOULSTONE_SLAB.get(), consumer);
+
+            //SOULstone
+            blockWithoutPolishedVersionRecipes(EPBlocks.SOULSTONE.get(), EPBlocks.SOULSTONE_WALL.get(), EPBlocks.SOULSTONE_STAIRS.get(),
+                    EPBlocks.SOULSTONE_SLAB.get(), consumer);
+
+            //SOULstone bricks
+            blockWithPolishedVersionRecipes(EPBlocks.SOULSTONE.get(), EPBlocks.SOULSTONE_BRICKS.get(), EPBlocks.SOULSTONE_BRICK_WALL.get(),
+                    EPBlocks.SOULSTONE_BRICK_STAIRS.get(), EPBlocks.SOULSTONE_BRICK_SLAB.get(), consumer);
 
             //Firebricks
             ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EPBlocks.FIREBRICKS.get())
@@ -343,18 +360,18 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .pattern("###")
                 .pattern("# #")
                 .pattern("III")
-                .define('#', Blocks.PACKED_MUD)
+                .define('#', EPItems.MUD_BRICK.get())
                 .define('I', ItemTags.STONE_CRAFTING_MATERIALS)
                 .unlockedBy(getHasName(Blocks.COBBLESTONE), has(Blocks.COBBLESTONE))
-                .unlockedBy(getHasName(Blocks.PACKED_MUD), has(Blocks.PACKED_MUD))
+                .unlockedBy(getHasName(EPItems.MUD_BRICK.get()), has(EPItems.MUD_BRICK.get()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, EPBlocks.SOUL_FURNACE.get())
                 .pattern("###")
                 .pattern("# #")
                 .pattern("###")
-                .define('#', EPBlocks.SOUL_MUD.get())
-                .unlockedBy(getHasName(EPBlocks.SOUL_MUD.get()), has(EPBlocks.SOUL_MUD.get()))
+                .define('#', EPBlocks.COBBLED_SOULSTONE.get())
+                .unlockedBy(getHasName(EPBlocks.COBBLED_SOULSTONE.get()), has(EPBlocks.COBBLED_SOULSTONE.get()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, EPBlocks.MASONRY_FURNACE.get())
@@ -395,7 +412,7 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .pattern("###")
                 .pattern("#A#")
                 .pattern("III")
-                .define('#', EPBlocks.SOUL_MUD_BRICKS.get())
+                .define('#', EPBlocks.SOULSTONE_BRICKS.get())
                 .define('A', EPBlocks.SOUL_FURNACE.get())
                 .define('I', Blocks.BLACKSTONE)
                 .unlockedBy(getHasName(EPBlocks.SOUL_FURNACE.get()), has(EPBlocks.SOUL_FURNACE.get()))
@@ -509,10 +526,13 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                     .unlockedBy(getHasName(EPItems.GOLDEN_DAGGER.get()), has(EPItems.GOLDEN_DAGGER.get()))
                     .save(consumer);
 
+            addArmor(Items.GOLD_INGOT, Items.GOLDEN_HELMET, Items.GOLDEN_CHESTPLATE, Items.GOLDEN_LEGGINGS, Items.GOLDEN_BOOTS, consumer);
+
             addAluminumGear(Items.GOLD_INGOT, EPItems.ALUMINUM_GOLDEN_AXE.get(), EPItems.ALUMINUM_GOLDEN_PICKAXE.get(),
                     EPItems.ALUMINUM_GOLDEN_SWORD.get(), EPItems.ALUMINUM_GOLDEN_DAGGER.get(), EPItems.ALUMINUM_GOLDEN_SHOVEL.get(),
                     EPItems.ALUMINUM_GOLDEN_HOE.get(), EPItems.ALUMINUM_GOLDEN_POLISHER.get(), consumer);
 
+            //Stone
             addStoneGear(Items.STONE_AXE, Items.STONE_PICKAXE, Items.STONE_SWORD, EPItems.STONE_DAGGER.get(),
                     Items.STONE_SHOVEL, Items.STONE_HOE, EPItems.STONE_POLISHER.get(), false, consumer);
 
@@ -585,6 +605,8 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                     .unlockedBy(getHasName(EPItems.IRON_DAGGER.get()), has(EPItems.IRON_DAGGER.get()))
                     .save(consumer);
 
+            addArmor(Items.IRON_INGOT, Items.IRON_HELMET, Items.IRON_CHESTPLATE, Items.IRON_LEGGINGS, Items.IRON_BOOTS, consumer);
+
             addAluminumGear(Items.IRON_INGOT, EPItems.ALUMINUM_IRON_AXE.get(), EPItems.ALUMINUM_IRON_PICKAXE.get(),
                     EPItems.ALUMINUM_IRON_SWORD.get(), EPItems.ALUMINUM_IRON_DAGGER.get(), EPItems.ALUMINUM_IRON_SHOVEL.get(),
                     EPItems.ALUMINUM_IRON_HOE.get(), EPItems.ALUMINUM_IRON_POLISHER.get(), consumer);
@@ -623,6 +645,8 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                     .unlockedBy(getHasName(Items.DIAMOND), has(Items.DIAMOND))
                     .unlockedBy(getHasName(EPItems.DIAMOND_DAGGER.get()), has(EPItems.DIAMOND_DAGGER.get()))
                     .save(consumer);
+
+            addArmor(Items.DIAMOND, Items.DIAMOND_HELMET, Items.DIAMOND_CHESTPLATE, Items.DIAMOND_LEGGINGS, Items.DIAMOND_BOOTS, consumer);
 
             addAluminumGear(Items.DIAMOND, EPItems.ALUMINUM_DIAMOND_AXE.get(), EPItems.ALUMINUM_DIAMOND_PICKAXE.get(),
                     EPItems.ALUMINUM_DIAMOND_SWORD.get(), EPItems.ALUMINUM_DIAMOND_DAGGER.get(), EPItems.ALUMINUM_DIAMOND_SHOVEL.get(),
@@ -1067,7 +1091,9 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
     }
 
     protected static void blockWithoutPolishedVersionRecipes(Block baseBlock, Block wallBlock, Block stairBlock, Block slabBlock, Consumer<FinishedRecipe> consumer){
-        baseAddRock(baseBlock, null, wallBlock, stairBlock, slabBlock, consumer);
+        wallBlockRecipe(baseBlock, wallBlock, consumer);
+        stairBlockRecipe(baseBlock, stairBlock, consumer);
+        slabBlockRecipe(baseBlock, slabBlock, consumer);
     }
 
     private static void wallBlockRecipe(Block baseBlock, Block wallBlock, Consumer<FinishedRecipe> consumer){
@@ -1103,42 +1129,57 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .save(consumer);
     }
 
+    protected static void addArmor(ItemLike pMaterial, ItemLike pHelmet, ItemLike pChestplate, ItemLike pLeggings, ItemLike pBoots, Consumer<FinishedRecipe> pConsumer){
+        if (pMaterial == Items.LEATHER){
+            throw new RuntimeException("Leather can't be used to reinforce leather armor");
+        }
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, pHelmet)
+                .pattern("###")
+                .pattern("#L#")
+                .define('#', pMaterial)
+                .define('L', Items.LEATHER_HELMET)
+                .unlockedBy(getHasName(pMaterial), has(pMaterial))
+                .unlockedBy(getHasName(pHelmet), has(pHelmet))
+                .save(pConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, pChestplate)
+                .pattern("# #")
+                .pattern("#L#")
+                .pattern(" # ")
+                .define('#', pMaterial)
+                .define('L', Items.LEATHER_CHESTPLATE)
+                .unlockedBy(getHasName(pMaterial), has(pMaterial))
+                .unlockedBy(getHasName(pChestplate), has(pChestplate))
+                .save(pConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, pLeggings)
+                .pattern("###")
+                .pattern("#L#")
+                .pattern("# #")
+                .define('#', pMaterial)
+                .define('L', Items.LEATHER_LEGGINGS)
+                .unlockedBy(getHasName(pMaterial), has(pMaterial))
+                .unlockedBy(getHasName(pLeggings), has(pLeggings))
+                .save(pConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, pBoots)
+                .pattern("# #")
+                .pattern("#L#")
+                .define('#', pMaterial)
+                .define('L', Items.LEATHER_BOOTS)
+                .unlockedBy(getHasName(pMaterial), has(pMaterial))
+                .unlockedBy(getHasName(pBoots), has(pBoots))
+                .save(pConsumer);
+    }
+
     protected static void addGear(ItemLike pIngot, ItemLike pAxe, ItemLike pPickaxe, ItemLike pSword, ItemLike pDagger, ItemLike pShovel,
                                   ItemLike pHoe, ItemLike pPolisher,
                                   @Nullable ItemLike pHelmet, @Nullable ItemLike pChestplate, @Nullable ItemLike pLeggings, @Nullable ItemLike pBoots,
                                   Consumer<FinishedRecipe> pConsumer){
         //Armor
         if (pHelmet != null && pChestplate != null && pLeggings != null && pBoots != null){
-            ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, pHelmet)
-                    .pattern("###")
-                    .pattern("# #")
-                    .define('#', pIngot)
-                    .unlockedBy(getHasName(pIngot), has(pIngot))
-                    .unlockedBy(getHasName(pHelmet), has(pHelmet))
-                    .save(pConsumer);
-            ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, pChestplate)
-                    .pattern("# #")
-                    .pattern("###")
-                    .pattern("###")
-                    .define('#', pIngot)
-                    .unlockedBy(getHasName(pIngot), has(pIngot))
-                    .unlockedBy(getHasName(pChestplate), has(pChestplate))
-                    .save(pConsumer);
-            ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, pLeggings)
-                    .pattern("###")
-                    .pattern("# #")
-                    .pattern("# #")
-                    .define('#', pIngot)
-                    .unlockedBy(getHasName(pIngot), has(pIngot))
-                    .unlockedBy(getHasName(pLeggings), has(pLeggings))
-                    .save(pConsumer);
-            ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, pBoots)
-                    .pattern("# #")
-                    .pattern("# #")
-                    .define('#', pIngot)
-                    .unlockedBy(getHasName(pIngot), has(pIngot))
-                    .unlockedBy(getHasName(pBoots), has(pBoots))
-                    .save(pConsumer);
+            addArmor(pIngot, pHelmet, pChestplate, pLeggings, pBoots, pConsumer);
         } else if (pHelmet != null || pChestplate != null || pLeggings != null){
             throw new RuntimeException("The four armour pieces have to be null at the same time!");
         }

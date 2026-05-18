@@ -53,10 +53,20 @@ public class EPItemModelProvider extends ItemModelProvider {
             blockWithItem(EPBlocks.LIMESTONE_BRICK_STAIRS);
             wallItem(EPBlocks.LIMESTONE_BRICK_WALL, EPBlocks.LIMESTONE_BRICKS);
 
-            //Soul
-            blockWithItem(EPBlocks.SOUL_MUD_BRICK_SLAB);
-            blockWithItem(EPBlocks.SOUL_MUD_BRICK_STAIRS);
-            wallItem(EPBlocks.SOUL_MUD_BRICK_WALL, EPBlocks.SOUL_MUD_BRICKS);
+            //Cobbled soulstone
+            blockWithItem(EPBlocks.COBBLED_SOULSTONE_SLAB);
+            blockWithItem(EPBlocks.COBBLED_SOULSTONE_STAIRS);
+            wallItem(EPBlocks.COBBLED_SOULSTONE_WALL, EPBlocks.COBBLED_SOULSTONE);
+
+            //soulstone
+            blockWithItem(EPBlocks.SOULSTONE_SLAB);
+            blockWithItem(EPBlocks.SOULSTONE_STAIRS);
+            wallItem(EPBlocks.SOULSTONE_WALL, EPBlocks.SOULSTONE);
+
+            //soulstone bricks
+            blockWithItem(EPBlocks.SOULSTONE_BRICK_SLAB);
+            blockWithItem(EPBlocks.SOULSTONE_BRICK_STAIRS);
+            wallItem(EPBlocks.SOULSTONE_BRICK_WALL, EPBlocks.SOULSTONE_BRICKS);
 
             //Firebrick
             blockWithItem(EPBlocks.FIREBRICKS);
@@ -349,6 +359,7 @@ public class EPItemModelProvider extends ItemModelProvider {
         simpleItem(EPItems.DEEPSLATE_COBBLE);
         simpleItem(EPItems.NETHERRACK_RUBBLE);
         simpleItem(EPItems.BLACKSTONE_COBBLE);
+        simpleItem(EPItems.SOULSTONE_COBBLE);
 
         //Terracotta Shards
         simpleItem(EPItems.TERRACOTTA_SHARD);

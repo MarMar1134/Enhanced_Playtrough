@@ -4,7 +4,7 @@
       "model": "enhanced_playthrough:block/limestone_brick_slab"
     },
     "type=double": {
-      "model": "enhanced_playthrough:block/limestone_brick"
+      "model": "enhanced_playthrough:block/limestone_bricks"
     },
     "type=top": {
       "model": "enhanced_playthrough:block/limestone_brick_slab_top"

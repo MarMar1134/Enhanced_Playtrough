@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "enhanced_playthrough:block/cobbeled_soulstone_slab"
+    },
+    "type=double": {
+      "model": "enhanced_playthrough:block/cobbled_soulstone"
+    },
+    "type=top": {
+      "model": "enhanced_playthrough:block/cobbeled_soulstone_slab_top"
+    }
+  }
+}

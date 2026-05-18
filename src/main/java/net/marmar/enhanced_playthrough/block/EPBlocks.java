@@ -74,7 +74,7 @@ public class EPBlocks {
                     () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.OAK_PRESSURE_PLATE), BlockSetType.OAK));
             public static final RegistryObject<Block> WALNUT_SLAB = registerBlockWithItem("walnut_slab",
                     () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)));
-            public static final RegistryObject<Block> WALNUT_STAIRS = registerBlockWithItem("walnut_stair",
+            public static final RegistryObject<Block> WALNUT_STAIRS = registerBlockWithItem("walnut_stairs",
                     () -> new StairBlock(() -> WALNUT_PLANKS.get().defaultBlockState(),BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)));
 
             public static final RegistryObject<Block> WALNUT_FENCE = registerBlockWithItem("walnut_fence",
@@ -125,7 +125,7 @@ public class EPBlocks {
                     () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.OAK_PRESSURE_PLATE), BlockSetType.OAK));
             public static final RegistryObject<Block> APPLE_SLAB = registerBlockWithItem("apple_slab",
                     () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)));
-            public static final RegistryObject<Block> APPLE_STAIRS = registerBlockWithItem("apple_stair",
+            public static final RegistryObject<Block> APPLE_STAIRS = registerBlockWithItem("apple_stairs",
                     () -> new StairBlock(() -> APPLE_PLANKS.get().defaultBlockState(),BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)));
 
             public static final RegistryObject<Block> APPLE_FENCE = registerBlockWithItem("apple_fence",
@@ -170,7 +170,7 @@ public class EPBlocks {
                     () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.OAK_PRESSURE_PLATE), BlockSetType.OAK));
             public static final RegistryObject<Block> ORANGE_SLAB = registerBlockWithItem("orange_slab",
                     () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)));
-            public static final RegistryObject<Block> ORANGE_STAIRS = registerBlockWithItem("orange_stair",
+            public static final RegistryObject<Block> ORANGE_STAIRS = registerBlockWithItem("orange_stairs",
                     () -> new StairBlock(() -> ORANGE_PLANKS.get().defaultBlockState(),BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)));
 
             public static final RegistryObject<Block> ORANGE_FENCE = registerBlockWithItem("orange_fence",
@@ -215,7 +215,7 @@ public class EPBlocks {
                     () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.OAK_PRESSURE_PLATE), BlockSetType.OAK));
             public static final RegistryObject<Block> LEMON_SLAB = registerBlockWithItem("lemon_slab",
                     () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)));
-            public static final RegistryObject<Block> LEMON_STAIRS = registerBlockWithItem("lemon_stair",
+            public static final RegistryObject<Block> LEMON_STAIRS = registerBlockWithItem("lemon_stairs",
                     () -> new StairBlock(() -> LEMON_PLANKS.get().defaultBlockState(),BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)));
 
             public static final RegistryObject<Block> LEMON_FENCE = registerBlockWithItem("lemon_fence",
@@ -246,7 +246,7 @@ public class EPBlocks {
                 () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).requiresCorrectToolForDrops()));
         public static final RegistryObject<Block> POLISHED_STONE_SLAB = registerBlockWithItem("polished_stone_slab",
                 () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB).requiresCorrectToolForDrops()));
-        public static final RegistryObject<Block> POLISHED_STONE_STAIRS = registerBlockWithItem("polished_stone_stair",
+        public static final RegistryObject<Block> POLISHED_STONE_STAIRS = registerBlockWithItem("polished_stone_stairs",
                 () -> new StairBlock(() -> EPBlocks.POLISHED_STONE.get().defaultBlockState(),BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS)
                         .requiresCorrectToolForDrops()));
         public static final RegistryObject<Block> POLISHED_STONE_WALL = registerBlockWithItem("polished_stone_wall",
@@ -254,11 +254,11 @@ public class EPBlocks {
 
         //Limestone
             //cobbled
-            public static final RegistryObject<Block> COBBLED_LIMESTONE = registerBlockWithItem("cobbeled_limestone",
+            public static final RegistryObject<Block> COBBLED_LIMESTONE = registerBlockWithItem("cobbled_limestone",
                     () -> new Block(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.COBBLESTONE).requiresCorrectToolForDrops()));
             public static final RegistryObject<Block> COBBLED_LIMESTONE_SLAB = registerBlockWithItem("cobbeled_limestone_slab",
                     () -> new SlabBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.COBBLESTONE_SLAB).requiresCorrectToolForDrops()));
-            public static final RegistryObject<Block> COBBLED_LIMESTONE_STAIRS = registerBlockWithItem("cobbeled_limestone_stair",
+            public static final RegistryObject<Block> COBBLED_LIMESTONE_STAIRS = registerBlockWithItem("cobbeled_limestone_stairs",
                     () -> new StairBlock(() -> COBBLED_LIMESTONE.get().defaultBlockState(), BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.COBBLESTONE_STAIRS).requiresCorrectToolForDrops()));
             public static final RegistryObject<Block> COBBLED_LIMESTONE_WALL = registerBlockWithItem("cobbeled_limestone_wall",
                     () -> new WallBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.COBBLESTONE_WALL).requiresCorrectToolForDrops()));
@@ -268,7 +268,7 @@ public class EPBlocks {
                     () -> new Block(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.STONE).requiresCorrectToolForDrops()));
             public static final RegistryObject<Block> LIMESTONE_SLAB = registerBlockWithItem("limestone_slab",
                     () -> new SlabBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.STONE_SLAB).requiresCorrectToolForDrops()));
-            public static final RegistryObject<Block> LIMESTONE_STAIRS = registerBlockWithItem("limestone_stair",
+            public static final RegistryObject<Block> LIMESTONE_STAIRS = registerBlockWithItem("limestone_stairs",
                     () -> new StairBlock(() -> LIMESTONE.get().defaultBlockState(),BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.STONE_STAIRS).requiresCorrectToolForDrops()));
             public static final RegistryObject<Block> LIMESTONE_WALL = registerBlockWithItem("limestone_wall",
                     () -> new WallBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.STONE_BRICK_WALL).requiresCorrectToolForDrops()));
@@ -278,39 +278,58 @@ public class EPBlocks {
                     () -> new Block(BlockBehaviour.Properties.copy(EPBlocks.POLISHED_STONE.get()).requiresCorrectToolForDrops()));
             public static final RegistryObject<Block> POLISHED_LIMESTONE_SLAB = registerBlockWithItem("polished_limestone_slab",
                     () -> new SlabBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.STONE_SLAB).requiresCorrectToolForDrops()));
-            public static final RegistryObject<Block> POLISHED_LIMESTONE_STAIRS = registerBlockWithItem("polished_limestone_stair",
+            public static final RegistryObject<Block> POLISHED_LIMESTONE_STAIRS = registerBlockWithItem("polished_limestone_stairs",
                     () -> new StairBlock(() -> EPBlocks.POLISHED_LIMESTONE.get().defaultBlockState(),BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.STONE_STAIRS).requiresCorrectToolForDrops()));
             public static final RegistryObject<Block> POLISHED_LIMESTONE_WALL = registerBlockWithItem("polished_limestone_wall",
                     () -> new WallBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.STONE_BRICK_WALL).requiresCorrectToolForDrops()));
 
             //bricks
-            public static final RegistryObject<Block> LIMESTONE_BRICKS = registerBlockWithItem("limestone_brick",
+            public static final RegistryObject<Block> LIMESTONE_BRICKS = registerBlockWithItem("limestone_bricks",
                     () -> new Block(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.STONE_BRICKS).requiresCorrectToolForDrops()));
             public static final RegistryObject<Block> LIMESTONE_BRICK_SLAB = registerBlockWithItem("limestone_brick_slab",
                     () -> new SlabBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.STONE_BRICK_SLAB).requiresCorrectToolForDrops()));
-            public static final RegistryObject<Block> LIMESTONE_BRICK_STAIRS = registerBlockWithItem("limestone_brick_stair",
+            public static final RegistryObject<Block> LIMESTONE_BRICK_STAIRS = registerBlockWithItem("limestone_brick_stairs",
                     () -> new StairBlock(() -> LIMESTONE_BRICKS.get().defaultBlockState(),BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.STONE_BRICK_STAIRS).requiresCorrectToolForDrops()));
             public static final RegistryObject<Block> LIMESTONE_BRICK_WALL = registerBlockWithItem("limestone_brick_wall",
                     () -> new WallBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.STONE_BRICK_WALL).requiresCorrectToolForDrops()));
 
-        //Soul
-        public static final RegistryObject<Block> SOUL_MUD = registerBlockWithItem("soul_mud",
-                () -> new Block(BlockBehaviour.Properties.copy(Blocks.PACKED_MUD).requiresCorrectToolForDrops()));
-        public static final RegistryObject<Block> SOUL_MUD_BRICKS = registerBlockWithItem("soul_mud_brick",
-                () -> new Block(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.STONE_BRICKS).requiresCorrectToolForDrops()));
-        public static final RegistryObject<Block> SOUL_MUD_BRICK_SLAB = registerBlockWithItem("soul_mud_brick_slab",
-                () -> new SlabBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.STONE_BRICK_SLAB).requiresCorrectToolForDrops()));
-        public static final RegistryObject<Block> SOUL_MUD_BRICK_STAIRS = registerBlockWithItem("soul_mud_brick_stair",
-                () -> new StairBlock(() -> SOUL_MUD_BRICKS.get().defaultBlockState(),BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.STONE_BRICK_STAIRS).requiresCorrectToolForDrops()));
-        public static final RegistryObject<Block> SOUL_MUD_BRICK_WALL = registerBlockWithItem("soul_mud_brick_wall",
-                () -> new WallBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.STONE_BRICK_WALL).requiresCorrectToolForDrops()));
+        //Soulstone
+            //cobbled
+            public static final RegistryObject<Block> COBBLED_SOULSTONE = registerBlockWithItem("cobbled_soulstone",
+                    () -> new Block(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.COBBLESTONE).requiresCorrectToolForDrops()));
+            public static final RegistryObject<Block> COBBLED_SOULSTONE_SLAB = registerBlockWithItem("cobbeled_soulstone_slab",
+                    () -> new SlabBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.COBBLESTONE_SLAB).requiresCorrectToolForDrops()));
+            public static final RegistryObject<Block> COBBLED_SOULSTONE_STAIRS = registerBlockWithItem("cobbeled_soulstone_stairs",
+                    () -> new StairBlock(() -> COBBLED_SOULSTONE.get().defaultBlockState(), BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.COBBLESTONE_STAIRS).requiresCorrectToolForDrops()));
+            public static final RegistryObject<Block> COBBLED_SOULSTONE_WALL = registerBlockWithItem("cobbeled_soulstone_wall",
+                    () -> new WallBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.COBBLESTONE_WALL).requiresCorrectToolForDrops()));
+
+            //natural
+            public static final RegistryObject<Block> SOULSTONE = registerBlockWithItem("soulstone",
+                    () -> new Block(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.STONE).requiresCorrectToolForDrops()));
+            public static final RegistryObject<Block> SOULSTONE_SLAB = registerBlockWithItem("soulstone_slab",
+                    () -> new SlabBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.STONE_SLAB).requiresCorrectToolForDrops()));
+            public static final RegistryObject<Block> SOULSTONE_STAIRS = registerBlockWithItem("soulstone_stairs",
+                    () -> new StairBlock(() -> SOULSTONE.get().defaultBlockState(),BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.STONE_STAIRS).requiresCorrectToolForDrops()));
+            public static final RegistryObject<Block> SOULSTONE_WALL = registerBlockWithItem("soulstone_wall",
+                    () -> new WallBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.STONE_BRICK_WALL).requiresCorrectToolForDrops()));
+
+            //bricks
+            public static final RegistryObject<Block> SOULSTONE_BRICKS = registerBlockWithItem("soulstone_bricks",
+                    () -> new Block(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.STONE_BRICKS).requiresCorrectToolForDrops()));
+            public static final RegistryObject<Block> SOULSTONE_BRICK_SLAB = registerBlockWithItem("soulstone_brick_slab",
+                    () -> new SlabBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.STONE_BRICK_SLAB).requiresCorrectToolForDrops()));
+            public static final RegistryObject<Block> SOULSTONE_BRICK_STAIRS = registerBlockWithItem("soulstone_brick_stairs",
+                    () -> new StairBlock(() -> SOULSTONE_BRICKS.get().defaultBlockState(),BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.STONE_BRICK_STAIRS).requiresCorrectToolForDrops()));
+            public static final RegistryObject<Block> SOULSTONE_BRICK_WALL = registerBlockWithItem("sojstone_brick_wall",
+                    () -> new WallBlock(BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.STONE_BRICK_WALL).requiresCorrectToolForDrops()));
 
         //Firebricks
         public static final RegistryObject<Block> FIREBRICKS = registerBlockWithItem("firebricks",
                 () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS).requiresCorrectToolForDrops().strength(3.5F, 6)));
         public static final RegistryObject<Block> FIREBRICK_SLAB = registerBlockWithItem("firebrick_slab",
                 () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.BRICK_SLAB).requiresCorrectToolForDrops().strength(3.5F, 6)));
-        public static final RegistryObject<Block> FIREBRICK_STAIRS = registerBlockWithItem("firebrick_stair",
+        public static final RegistryObject<Block> FIREBRICK_STAIRS = registerBlockWithItem("firebrick_stairs",
                 () -> new StairBlock(() -> FIREBRICKS.get().defaultBlockState(),BlockBehaviour.Properties.copy(Blocks.BRICK_STAIRS).requiresCorrectToolForDrops().strength(3.5F, 6)));
         public static final RegistryObject<Block> FIREBRICK_WALL = registerBlockWithItem("firebrick_wall",
                 () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.BRICK_WALL).requiresCorrectToolForDrops().strength(3.5F, 6)));
@@ -433,7 +452,7 @@ public class EPBlocks {
         public static final RegistryObject<Block> ADOBE_FURNACE = registerBlockWithItem("adobe_furnace",
                 () -> new AdobeFurnaceBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE).noOcclusion()));
         public static final RegistryObject<Block> SOUL_FURNACE = registerBlockWithItem("soul_furnace",
-                () -> new SoulFurnaceBlock(BlockBehaviour.Properties.copy(EPBlocks.SOUL_MUD.get()).noOcclusion()));
+                () -> new SoulFurnaceBlock(BlockBehaviour.Properties.copy(EPBlocks.COBBLED_SOULSTONE.get()).noOcclusion()));
 
         //Masonry furnace
         public static final RegistryObject<Block> MASONRY_FURNACE = registerBlockWithItem("masonry_furnace",
