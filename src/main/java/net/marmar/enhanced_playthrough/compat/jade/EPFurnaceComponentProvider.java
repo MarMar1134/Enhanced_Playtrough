@@ -25,7 +25,7 @@ public enum EPFurnaceComponentProvider implements IBlockComponentProvider, IServ
         ListTag modFurnaceItems = data.getList("furnace_contents", Tag.TAG_COMPOUND);
         NonNullList<ItemStack> inventory = NonNullList.withSize(3, ItemStack.EMPTY);
         int progress = data.getInt("mod_furnace.progress");
-        int total = data.getInt("mod_furnace.total");
+        int maxProgress = data.getInt("mod_furnace.total");
 
         if (!data.contains("mod_furnace.progress")) {
             return;
@@ -37,7 +37,11 @@ public enum EPFurnaceComponentProvider implements IBlockComponentProvider, IServ
 
         iTooltip.add(helper.item(inventory.get(0)));
         iTooltip.append(helper.item(inventory.get(1)));
-        iTooltip.append(new ProgressArrowElement((float) progress / total));
+
+        if (progress != 0) {
+            iTooltip.append(new ProgressArrowElement((float) progress / maxProgress));
+        }
+
         iTooltip.append(helper.item(inventory.get(2)));
     }
 

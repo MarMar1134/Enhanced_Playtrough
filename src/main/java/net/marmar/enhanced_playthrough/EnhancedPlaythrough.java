@@ -60,6 +60,7 @@ public class EnhancedPlaythrough {
         EPParticleTypes.register(modEventBus);
 
         //Register
+        LOGGER.info("Registering Enhanced Playthrough...");
         MinecraftForge.EVENT_BUS.register(this);
     }
 }

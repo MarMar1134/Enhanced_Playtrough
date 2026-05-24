@@ -71,11 +71,17 @@ public class EPRecipes {
         public static final RegistryObject<RecipeType<MechanicalGrindRecipe>> MECHANICAL_GRIND_TYPE =
                 RECIPE_TYPE.register("mechanical_grinding", () -> MechanicalGrindRecipe.Type.INSTANCE);
 
-        //Alchemical dupping
-        public static final RegistryObject<RecipeSerializer<AlchemicalDuplicatingRecipe>> ALCHEMICAL_DUPLICATING_SERIALIZER =
-                RECIPE_SERIALIZER.register("alchemical_duplicating", () -> AlchemicalDuplicatingRecipe.Serializer.INSTANCE);
-        public static final RegistryObject<RecipeType<AlchemicalDuplicatingRecipe>> ALCHEMICAL_DUPLICATING_TYPE =
-                RECIPE_TYPE.register("alchemical_duplicating", () -> AlchemicalDuplicatingRecipe.Type.INSTANCE);
+        //Alchemical duplication
+        public static final RegistryObject<RecipeSerializer<AlchemicalDuplicationRecipe>> ALCHEMICAL_DUPLICATING_SERIALIZER =
+                RECIPE_SERIALIZER.register("alchemical_duplicating", () -> AlchemicalDuplicationRecipe.Serializer.INSTANCE);
+        public static final RegistryObject<RecipeType<AlchemicalDuplicationRecipe>> ALCHEMICAL_DUPLICATING_TYPE =
+                RECIPE_TYPE.register("alchemical_duplicating", () -> AlchemicalDuplicationRecipe.Type.INSTANCE);
+
+        //Leatherworking
+        public static final RegistryObject<RecipeSerializer<LeatherworkRecipe>> LEATHERWORKING_SERIALIZER =
+                    RECIPE_SERIALIZER.register("leatherworking", ()-> LeatherworkRecipe.Serializer.INSTANCE);
+        public static final RegistryObject<RecipeType<LeatherworkRecipe>> LEATHERWORKING_TYPE =
+                RECIPE_TYPE.register("leatherworking", ()-> LeatherworkRecipe.Type.INSTANCE);
 
     public static void register(IEventBus eventBus){
         EnhancedPlaythrough.LOGGER.info("Registering Enhanced Playthrough recipe serializers...");

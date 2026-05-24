@@ -401,6 +401,8 @@ public class EPBlockLootTables extends BlockLootSubProvider implements BlockLoot
 
         this.dropSelf(EPBlocks.ALCHEMICAL_DUPLICATOR.get());
 
+        this.dropSelf(EPBlocks.LEATHERWORKER_STATION.get());
+
         this.dropSelf(EPBlocks.GROWTH_DETECTOR.get());
     }
 

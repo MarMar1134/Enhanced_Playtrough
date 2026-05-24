@@ -5,7 +5,7 @@ Welcome to _Enhanced playthrough_, An overhaul mod for Minecraft 1.20.1
 ---
 ## About the mod
 - ### _Enhanced progress_
-    Enhanced Playthrough (also mentioned as **_"EP2"_**) adds lots of features to vanilla Minecraft,
+    Enhanced Playthrough adds lots of features to vanilla Minecraft,
 refactoring early and mid-game with new intermediate tiers and expanding late-game with side tiers that do not replace
 **_Netherite_**, but instead co-exists with it and makes it a _situational tier_ (like the golden alloys!).
 - ### _Enhanced difficulty_

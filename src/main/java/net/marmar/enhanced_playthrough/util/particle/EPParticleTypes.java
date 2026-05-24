@@ -16,7 +16,7 @@ public class EPParticleTypes {
             ()-> new SimpleParticleType(true));
 
     public static void register(IEventBus eventBus){
-        EnhancedPlaythrough.LOGGER.info("Registering Enhanced Playthrough custom particles...");
+        EnhancedPlaythrough.LOGGER.info("Registering Enhanced Playthrough particles...");
         PARTICLE_TYPES.register(eventBus);
     }
 }

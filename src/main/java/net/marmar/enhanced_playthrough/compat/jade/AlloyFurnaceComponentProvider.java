@@ -41,7 +41,11 @@ public enum AlloyFurnaceComponentProvider implements IBlockComponentProvider, IS
         iTooltip.add(GUIHelper.item(blockInventory.get(0)));
         iTooltip.append(GUIHelper.item(blockInventory.get(1)));
         iTooltip.append(GUIHelper.item(blockInventory.get(2)));
-        iTooltip.append(new ProgressArrowElement((float) alloyProgress / maxAlloyProgress));
+
+        if (alloyProgress != 0) {
+            iTooltip.append(new ProgressArrowElement((float) alloyProgress / maxAlloyProgress));
+        }
+
         iTooltip.append(GUIHelper.item(blockInventory.get(3)));
     }
 

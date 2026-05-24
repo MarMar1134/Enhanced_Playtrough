@@ -1,4 +1,4 @@
-// 1.20.1	2026-05-15T21:24:25.2808473	Tags for minecraft:block mod id enhanced_playthrough
+// 1.20.1	2026-05-24T13:47:22.8544508	Tags for minecraft:block mod id enhanced_playthrough
 79753f202ed6cd2b07dd609dec19558e6c68c837 data/enhanced_playthrough/tags/blocks/alloy_furnace.json
 47a02117dd60bac3b440fb46f534e4d5442d0e64 data/enhanced_playthrough/tags/blocks/basic_furnace.json
 5d27eebe0849b352469140e33f7a751d88d36e96 data/enhanced_playthrough/tags/blocks/bauxite_ores.json
@@ -28,7 +28,7 @@ de63434cd109289856ff5bfdcd84162a8393525b data/minecraft/tags/blocks/leaves.json
 cc7f01de72464bfac0275de5c6aaeeb445bc06d0 data/minecraft/tags/blocks/logs_that_burn.json
 2b82db86a41b26f00e2abbb0465d102f2c59996d data/minecraft/tags/blocks/mineable/axe.json
 de63434cd109289856ff5bfdcd84162a8393525b data/minecraft/tags/blocks/mineable/hoe.json
-b2250becd2418c7ac16ffa94e317743deb53a738 data/minecraft/tags/blocks/mineable/pickaxe.json
+5d224c3a4f6aa553c05ff6eeb6d5f30fa482a911 data/minecraft/tags/blocks/mineable/pickaxe.json
 114b85c5020f2489ec29e69f25614b7c3dec9eaf data/minecraft/tags/blocks/needs_diamond_tool.json
 02f26ade5bbe0d8f39c18abc86a4c4cb97628a2c data/minecraft/tags/blocks/needs_iron_tool.json
 8d309e631381e496645ef88e7f7e69e34b3b695e data/minecraft/tags/blocks/needs_stone_tool.json

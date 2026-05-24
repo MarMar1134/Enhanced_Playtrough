@@ -371,6 +371,8 @@ public class EPBlockTagGenerator extends BlockTagsProvider {
                 EPBlocks.PRIMAL_GRINDER.get(),
                 EPBlocks.MECHANICAL_GRINDER.get(),
                 EPBlocks.GEM_POLISHER.get(),
+                EPBlocks.ALCHEMICAL_DUPLICATOR.get(),
+                EPBlocks.LEATHERWORKER_STATION.get(),
 
                 //Ores
                 EPBlocks.NETHER_COPPER_ORE.get(),

@@ -20,6 +20,7 @@ import net.marmar.enhanced_playthrough.menu.screen.alchemicalduplicator.Alchemic
 import net.marmar.enhanced_playthrough.menu.screen.alloyfurnace.AdobeAlloyFurnaceScreen;
 import net.marmar.enhanced_playthrough.menu.screen.alloyfurnace.SoulAlloyScreen;
 import net.marmar.enhanced_playthrough.menu.screen.alloyfurnace.SuperAlloyFurnaceScreen;
+import net.marmar.enhanced_playthrough.menu.screen.leatherworker.LeatherworkerStationScreen;
 import net.marmar.enhanced_playthrough.menu.screen.modfurnace.AdobeFurnaceScreen;
 import net.marmar.enhanced_playthrough.menu.screen.modfurnace.SoulFurnaceScreen;
 import net.marmar.enhanced_playthrough.menu.screen.gempolisher.GemPolisherScreen;
@@ -140,6 +141,8 @@ public class EPClientEventBusEvents {
         MenuScreens.register(EPMenuTypes.MECHANICAL_GRINDER_MENU.get(), MechanicalGrinderScreen::new);
 
         MenuScreens.register(EPMenuTypes.ALCHEMICAL_DUPLICATOR_MENU.get(), AlchemicalDuplicatorScreen::new);
+
+        MenuScreens.register(EPMenuTypes.LEATHERWORKER_STATION_MENU.get(), LeatherworkerStationScreen::new);
     }
 
     @SubscribeEvent

@@ -39,7 +39,7 @@ public class AlchemicalDuplicatorMenu extends AbstractContainerMenu {
     }
 
     private void createSlots(AlchemicalDuplicatorBlockEntity alchemicalDuplicator){
-        //Blaze powder
+        //Sulfur
         alchemicalDuplicator.getSulfurSlotLazyHandler().ifPresent(itemStackHandler ->
                 addSlot(new SlotItemHandler(itemStackHandler, 0, 16, 22){
             @Override
@@ -48,7 +48,7 @@ public class AlchemicalDuplicatorMenu extends AbstractContainerMenu {
             }
         }));
 
-        //Book
+        //Fortune book
         alchemicalDuplicator.getBookSlotLazyHandler().ifPresent(itemStackHandler ->
                 addSlot(new SlotItemHandler(itemStackHandler, 0, 144, 22){
             @Override

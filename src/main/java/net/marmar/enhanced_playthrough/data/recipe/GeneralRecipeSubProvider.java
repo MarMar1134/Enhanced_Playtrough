@@ -5,6 +5,7 @@ import net.marmar.enhanced_playthrough.block.EPBlocks;
 import net.marmar.enhanced_playthrough.data.tag.EPTags;
 import net.marmar.enhanced_playthrough.item.EPItems;
 import net.marmar.enhanced_playthrough.recipe.EPRecipes;
+import net.marmar.enhanced_playthrough.recipe.builder.LeatherworkRecipeBuilder;
 import net.marmar.enhanced_playthrough.recipe.grind.AbstractGrindRecipe;
 import net.marmar.enhanced_playthrough.recipe.builder.GenericRecipeBuilder;
 import net.marmar.enhanced_playthrough.recipe.builder.EPSmithingRecipesBuilder;
@@ -20,6 +21,8 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.material.Fluid;
+import net.minecraft.world.level.material.Fluids;
 
 import java.util.function.Consumer;
 
@@ -33,6 +36,7 @@ public class GeneralRecipeSubProvider extends RecipeProvider {
         stonecuttingRecipes(consumer);
         gemPolishingRecipes(consumer);
         grindingRecipes(consumer);
+        leatherworkingRecipes(consumer);
     }
 
     private static void smithingRecipes(Consumer<FinishedRecipe> consumer){
@@ -464,6 +468,13 @@ public class GeneralRecipeSubProvider extends RecipeProvider {
         mechanicalItemGrinding(consumer, EPTags.Items.BLUE_GOLD_MANUFACTURABLE, "blue_gold_dust", EPItems.BLUE_GOLD_DUST.get(), 1);
     }
 
+    private static void leatherworkingRecipes(Consumer<FinishedRecipe> consumer){
+        leatherworking(consumer, Items.RABBIT_HIDE, Fluids.WATER, 100, Items.LEATHER, 1);
+        leatherworking(consumer, EPItems.COW_HIDE.get(), Fluids.WATER, 100, Items.LEATHER, 2);
+        leatherworking(consumer, EPItems.PIG_HIDE.get(), Fluids.WATER, 100, Items.LEATHER, 2);
+        leatherworking(consumer, EPItems.WERELLAGER_HIDE.get(), Fluids.WATER, 100, Items.LEATHER, 3);
+    }
+
     //Helpers
     protected static void stoneCutting(Consumer<FinishedRecipe> consumer, ItemLike input, ItemLike output, int count){
         stoneCuttingBuilder(consumer, input, output, count);
@@ -500,26 +511,33 @@ public class GeneralRecipeSubProvider extends RecipeProvider {
         goldenSmithingUpgrade(consumer, baseItem, EPItems.BLUE_GOLD_INGOT.get(), resultItem);
     }
 
-        //Grind
-            //Primal
-            protected static void primalItemGrinding(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike ingredient, String group, ItemLike result, int count){
-                oreGrindingSerialize(pFinishedRecipeConsumer, ingredient, result, group, count, ModRecipeCategory.GRIND, EPRecipes.PRIMAL_GRIND_SERIALIZER.get(), "from_primal_grinding");
-            }
-            protected static void primalItemGrinding(Consumer<FinishedRecipe> pFinishedRecipeConsumer, TagKey<Item> ingredient, String group, ItemLike result, int count){
-                oreGrindingTagSerialize(pFinishedRecipeConsumer, ingredient, result, group, count, ModRecipeCategory.GRIND, EPRecipes.PRIMAL_GRIND_SERIALIZER.get(), "from_primal_grinding");
-            }
+    //Grind
+        //Primal
+        protected static void primalItemGrinding(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike ingredient, String group, ItemLike result, int count){
+            oreGrindingSerialize(pFinishedRecipeConsumer, ingredient, result, group, count, ModRecipeCategory.GRIND, EPRecipes.PRIMAL_GRIND_SERIALIZER.get(), "from_primal_grinding");
+        }
+        protected static void primalItemGrinding(Consumer<FinishedRecipe> pFinishedRecipeConsumer, TagKey<Item> ingredient, String group, ItemLike result, int count){
+            oreGrindingTagSerialize(pFinishedRecipeConsumer, ingredient, result, group, count, ModRecipeCategory.GRIND, EPRecipes.PRIMAL_GRIND_SERIALIZER.get(), "from_primal_grinding");
+        }
 
-            //Mechanical
-            protected static void mechanicalItemGrinding(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike ingredient, String group, ItemLike result, int count){
-                oreGrindingSerialize(pFinishedRecipeConsumer, ingredient, result, group, count, ModRecipeCategory.MECHANICAL_GRIND, EPRecipes.MECHANICAL_GRIND_SERIALIZER.get(), "from_mechanical_grinding");
-            }
-            protected static void mechanicalItemGrinding(Consumer<FinishedRecipe> pFinishedRecipeConsumer, TagKey<Item> ingredient, String group, ItemLike result, int count){
-                oreGrindingTagSerialize(pFinishedRecipeConsumer, ingredient, result, group, count, ModRecipeCategory.MECHANICAL_GRIND, EPRecipes.MECHANICAL_GRIND_SERIALIZER.get(), "from_mechanical_grinding");
-            }
+        //Mechanical
+        protected static void mechanicalItemGrinding(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike ingredient, String group, ItemLike result, int count){
+            oreGrindingSerialize(pFinishedRecipeConsumer, ingredient, result, group, count, ModRecipeCategory.MECHANICAL_GRIND, EPRecipes.MECHANICAL_GRIND_SERIALIZER.get(), "from_mechanical_grinding");
+        }
+        protected static void mechanicalItemGrinding(Consumer<FinishedRecipe> pFinishedRecipeConsumer, TagKey<Item> ingredient, String group, ItemLike result, int count){
+            oreGrindingTagSerialize(pFinishedRecipeConsumer, ingredient, result, group, count, ModRecipeCategory.MECHANICAL_GRIND, EPRecipes.MECHANICAL_GRIND_SERIALIZER.get(), "from_mechanical_grinding");
+        }
 
     //Polish
     protected static void gemPolishing(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike ingredient, String group, ItemLike result){
         gemPolishingSerialize(pFinishedRecipeConsumer, ingredient, result, group);
+    }
+
+    //Leatherworking
+    protected static void leatherworking(Consumer<FinishedRecipe> pConsumer, ItemLike pSkin, Fluid fluid, int pWaterAmount, ItemLike pLeatherType, int pLeatherAmount){
+        LeatherworkRecipeBuilder.leatherworking(Ingredient.of(pSkin), fluid, pWaterAmount, pLeatherType, pLeatherAmount)
+                .unlockedBy(getHasName(pSkin),has(pSkin))
+                .save(pConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(pLeatherType) + "_from_leatherworking_" + getItemName(pSkin));
     }
 
     //Builders

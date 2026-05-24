@@ -40,7 +40,11 @@ public enum AlchemicalDuplicatorComponentProvider implements IBlockComponentProv
         iTooltip.add(GUIHelper.item(blockInventory.get(0)));
         iTooltip.append(GUIHelper.item(blockInventory.get(1)));
         iTooltip.append(GUIHelper.item(blockInventory.get(2)));
-        iTooltip.append(new ProgressArrowElement((float) progress / maxProgress));
+
+        if (progress != 0) {
+            iTooltip.append(new ProgressArrowElement((float) progress / maxProgress));
+        }
+
         iTooltip.append(GUIHelper.item(blockInventory.get(3)));
         iTooltip.append(GUIHelper.item(blockInventory.get(4)));
         iTooltip.append(GUIHelper.item(blockInventory.get(5)));

@@ -38,7 +38,11 @@ public enum MechanicalGrinderComponentProvider implements IBlockComponentProvide
         }
 
         iTooltip.add(GUIHelper.item(blockInventory.get(0)));
-        iTooltip.append(new ProgressArrowElement((float) grindProgress / maxGrindProgress));
+
+        if (grindProgress != 0) {
+            iTooltip.append(new ProgressArrowElement((float) grindProgress / maxGrindProgress));
+        }
+
         iTooltip.append(GUIHelper.item(blockInventory.get(1)));
     }
 

@@ -11,6 +11,7 @@ import net.marmar.enhanced_playthrough.menu.gempolisher.GemPolisherMenu;
 import net.marmar.enhanced_playthrough.menu.grinder.MechanicalGrinderMenu;
 import net.marmar.enhanced_playthrough.menu.grinder.PrimalGrinderMenu;
 import net.marmar.enhanced_playthrough.menu.epfurnace.MasonryFurnaceMenu;
+import net.marmar.enhanced_playthrough.menu.leatherworker.LeatherworkerStationMenu;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraftforge.common.extensions.IForgeMenuType;
@@ -49,6 +50,9 @@ public class EPMenuTypes {
 
     public static final RegistryObject<MenuType<AlchemicalDuplicatorMenu>> ALCHEMICAL_DUPLICATOR_MENU =
             registerMenuType("alchemical_duplicator_menu", AlchemicalDuplicatorMenu::new);
+
+    public static final RegistryObject<MenuType<LeatherworkerStationMenu>> LEATHERWORKER_STATION_MENU =
+            registerMenuType("leatherworker_station_menu", LeatherworkerStationMenu::new);
 
     //Register methods
     private static <T extends AbstractContainerMenu> RegistryObject<MenuType<T>> registerMenuType(String name, IContainerFactory<T> factory) {

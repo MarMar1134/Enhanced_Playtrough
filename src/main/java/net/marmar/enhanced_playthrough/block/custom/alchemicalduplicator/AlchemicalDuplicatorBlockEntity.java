@@ -3,7 +3,7 @@ package net.marmar.enhanced_playthrough.block.custom.alchemicalduplicator;
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.block.EPBlockEntities;
 import net.marmar.enhanced_playthrough.menu.alchemicalduplicator.AlchemicalDuplicatorMenu;
-import net.marmar.enhanced_playthrough.recipe.AlchemicalDuplicatingRecipe;
+import net.marmar.enhanced_playthrough.recipe.AlchemicalDuplicationRecipe;
 import net.marmar.enhanced_playthrough.recipe.EPRecipes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -268,18 +268,14 @@ public class AlchemicalDuplicatorBlockEntity extends BlockEntity implements Menu
     private void tryConsumeBook(){
         if (isFortuneBook(this.bookSlotHandler.getStackInSlot(0))){
             this.bookLevel = getBookLevel(this.bookSlotHandler.getStackInSlot(0));
-            this.bookUses = switch (this.bookLevel){
-                case 1 -> 128;
-                case 2 -> 64;
-                case 3 -> 32;
-                default -> 0;
-            };
+            this.bookUses = 64;
 
             this.bookSlotHandler.getStackInSlot(0).shrink(1);
             this.bookSlotHandler.setStackInSlot(0, new ItemStack(Items.BOOK));
 
             this.maxBookUses = this.bookUses;
         } else {
+            this.bookLevel = 0;
             this.bookUses = 0;
             this.maxBookUses = 0;
         }
@@ -289,26 +285,25 @@ public class AlchemicalDuplicatorBlockEntity extends BlockEntity implements Menu
         this.bookUses--;
     }
 
-    private Optional<AlchemicalDuplicatingRecipe> getCurrentRecipe(){
+    private Optional<AlchemicalDuplicationRecipe> getCurrentRecipe(){
         SimpleContainer inv = new SimpleContainer(1);
 
         inv.setItem(0, this.inputSlotHandler.getStackInSlot(0));
 
-        Optional<AlchemicalDuplicatingRecipe> recipe = this.level.getRecipeManager()
-                .getRecipeFor(EPRecipes.ALCHEMICAL_DUPLICATING_TYPE.get(), inv, level);
+        Optional<AlchemicalDuplicationRecipe> recipe = this.level.getRecipeManager().getRecipeFor(EPRecipes.ALCHEMICAL_DUPLICATING_TYPE.get(), inv, level);
 
         return recipe;
     }
 
-    private boolean isDupping(){
+    private boolean isDuplicating(){
         return this.progress != 0;
     }
 
-    private boolean hasFinishedDupping(){
+    private boolean hasFinishedDuplication(){
         return this.progress >= this.maxProgress;
     }
 
-    private void increaseDuppingProgress(){
+    private void increaseDuplicationProgress(){
         this.progress++;
     }
 
@@ -335,7 +330,7 @@ public class AlchemicalDuplicatorBlockEntity extends BlockEntity implements Menu
     }
 
     private boolean hasRecipe(){
-        Optional<AlchemicalDuplicatingRecipe> recipe = getCurrentRecipe();
+        Optional<AlchemicalDuplicationRecipe> recipe = getCurrentRecipe();
 
         if (recipe.isEmpty()) {
             return false;
@@ -347,7 +342,7 @@ public class AlchemicalDuplicatorBlockEntity extends BlockEntity implements Menu
     }
 
     private void duplicateItem(){
-        Optional<AlchemicalDuplicatingRecipe> recipe = getCurrentRecipe();
+        Optional<AlchemicalDuplicationRecipe> recipe = getCurrentRecipe();
 
         ItemStack result = recipe.get().getResultItem(getLevel().registryAccess());
 
@@ -361,7 +356,7 @@ public class AlchemicalDuplicatorBlockEntity extends BlockEntity implements Menu
         }
     }
 
-    public void tick(Level pLevel, BlockPos pPos, BlockState pState){
+    public void tick(Level pLevel, BlockPos pPos, BlockState pState) {
         if (!hasBookUses() && isFortuneBook(this.bookSlotHandler.getStackInSlot(0))) {
             tryConsumeBook();
             pLevel.playSound(null, pPos, SoundEvents.EXPERIENCE_ORB_PICKUP, SoundSource.BLOCKS, 1f, 0.5f);
@@ -369,7 +364,7 @@ public class AlchemicalDuplicatorBlockEntity extends BlockEntity implements Menu
         }
 
         if (hasRecipe() && hasSulfurLeft()){
-            increaseDuppingProgress();
+            increaseDuplicationProgress();
 
             sendUpdate();
         } else if (hasRecipe() && !this.sulfurSlotHandler.getStackInSlot(0).isEmpty()){
@@ -382,7 +377,7 @@ public class AlchemicalDuplicatorBlockEntity extends BlockEntity implements Menu
             sendUpdate();
         }
 
-        if (hasFinishedDupping()){
+        if (hasFinishedDuplication()){
             consumeSulfur();
 
             resetProgress();
@@ -399,7 +394,7 @@ public class AlchemicalDuplicatorBlockEntity extends BlockEntity implements Menu
             sendUpdate();
         }
 
-        if (isDupping()) {
+        if (isDuplicating()) {
             pState = pState.setValue(AlchemicalDuplicatorBlock.LIT, true);
         } else {
             pState = pState.setValue(AlchemicalDuplicatorBlock.LIT, false);

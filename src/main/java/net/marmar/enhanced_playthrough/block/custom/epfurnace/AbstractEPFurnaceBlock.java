@@ -63,7 +63,6 @@ public abstract class AbstractEPFurnaceBlock extends BaseEntityBlock implements 
             pLevel.addParticle(ParticleTypes.SMOKE, X_position + random_X, Y_position + random_Y, Z_position + random_Z, 0.0, 0.0, 0.0);
             pLevel.addParticle(ParticleTypes.FLAME, X_position + random_X, Y_position + random_Y, Z_position + random_Z, 0.0, 0.0, 0.0);
         }
-
     }
 
     @Override

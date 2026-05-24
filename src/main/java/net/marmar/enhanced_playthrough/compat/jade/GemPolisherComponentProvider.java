@@ -42,7 +42,11 @@ public enum GemPolisherComponentProvider implements IBlockComponentProvider, ISe
 
             iTooltip.add(GUIHelper.item(blockInventory.get(0)));
             iTooltip.append(GUIHelper.item(blockInventory.get(1)));
-            iTooltip.append(new ProgressArrowElement((float) polishProgress / maxPolishProgress));
+
+            if (polishProgress != 0) {
+                iTooltip.append(new ProgressArrowElement((float) polishProgress / maxPolishProgress));
+            }
+
             iTooltip.append(GUIHelper.item(blockInventory.get(2)));
         }
 

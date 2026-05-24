@@ -2,6 +2,7 @@ package net.marmar.enhanced_playthrough.block;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.block.custom.alchemicalduplicator.AlchemicalDuplicatorBlock;
+import net.marmar.enhanced_playthrough.block.custom.leatherworker.LeatherworkerStationBlock;
 import net.marmar.enhanced_playthrough.block.custom.plant.*;
 import net.marmar.enhanced_playthrough.block.custom.alloyfurnace.AdobeAlloyFurnaceBlock;
 import net.marmar.enhanced_playthrough.block.custom.alloyfurnace.SoulAlloyFurnaceBlock;
@@ -483,6 +484,10 @@ public class EPBlocks {
         //Alchemical duplicator
         public static final RegistryObject<Block> ALCHEMICAL_DUPLICATOR = registerBlockWithItem("alchemical_duplicator",
                 () -> new AlchemicalDuplicatorBlock(BlockBehaviour.Properties.copy(Blocks.NETHER_BRICKS)));
+
+        //Leatherworker station
+        public static final RegistryObject<Block> LEATHERWORKER_STATION = registerBlockWithItem("leatherworker_station",
+                () -> new LeatherworkerStationBlock(BlockBehaviour.Properties.copy(Blocks.CAULDRON)));
 
     //Crops
     public static final RegistryObject<Block> YERBA_MATE_CROP = BLOCKS.register("yerba_mate_crop",

@@ -12,6 +12,7 @@ import net.marmar.enhanced_playthrough.block.custom.grinder.entity.MechanicalGri
 import net.marmar.enhanced_playthrough.block.custom.grinder.entity.PrimalGrinderBlockEntity;
 import net.marmar.enhanced_playthrough.block.custom.epfurnace.entity.MasonryFurnaceBlockEntity;
 import net.marmar.enhanced_playthrough.block.custom.growthdetector.GrowthDetectorBlockEntity;
+import net.marmar.enhanced_playthrough.block.custom.leatherworker.LeatherworkerStationBlockEntity;
 import net.marmar.enhanced_playthrough.block.custom.wood.sign.entity.EPHangingSignBlockEntity;
 import net.marmar.enhanced_playthrough.block.custom.wood.sign.entity.EPSignBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -25,40 +26,44 @@ public class EPBlockEntities {
             DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, EnhancedPlaythrough.MOD_ID);
 
     public static final RegistryObject<BlockEntityType<AdobeFurnaceBlockEntity>> ADOBE_FURNACE_BLOCK_ENTITY =
-            BLOCK_ENTITIES.register("adobe_furnace", () -> BlockEntityType
-                    .Builder.of(AdobeFurnaceBlockEntity::new, EPBlocks.ADOBE_FURNACE.get()).build(null));
+            BLOCK_ENTITIES.register("adobe_furnace",
+                    () -> BlockEntityType.Builder.of(AdobeFurnaceBlockEntity::new, EPBlocks.ADOBE_FURNACE.get()).build(null));
     public static final RegistryObject<BlockEntityType<SoulFurnaceBlockEntity>> SOUL_FURNACE_BLOCK_ENTITY =
-            BLOCK_ENTITIES.register("soul_furnace", () -> BlockEntityType
-                    .Builder.of(SoulFurnaceBlockEntity::new, EPBlocks.SOUL_FURNACE.get()).build(null));
+            BLOCK_ENTITIES.register("soul_furnace",
+                    () -> BlockEntityType.Builder.of(SoulFurnaceBlockEntity::new, EPBlocks.SOUL_FURNACE.get()).build(null));
 
     public static final RegistryObject<BlockEntityType<MasonryFurnaceBlockEntity>> MASONRY_FURNACE_BLOCK_ENTITY =
-            BLOCK_ENTITIES.register("masonry_furnace", () -> BlockEntityType
-                    .Builder.of(MasonryFurnaceBlockEntity::new, EPBlocks.MASONRY_FURNACE.get()).build(null));
+            BLOCK_ENTITIES.register("masonry_furnace",
+                    () -> BlockEntityType.Builder.of(MasonryFurnaceBlockEntity::new, EPBlocks.MASONRY_FURNACE.get()).build(null));
 
     public static final RegistryObject<BlockEntityType<AdobeAlloyFurnaceBlockEntity>> ADOBE_ALLOY_FURNACE_BLOCK_ENTITY =
-            BLOCK_ENTITIES.register("adobe_alloy_furnace", () -> BlockEntityType
-                    .Builder.of(AdobeAlloyFurnaceBlockEntity::new, EPBlocks.ADOBE_ALLOY_FURNACE.get()).build(null));
+            BLOCK_ENTITIES.register("adobe_alloy_furnace",
+                    () -> BlockEntityType.Builder.of(AdobeAlloyFurnaceBlockEntity::new, EPBlocks.ADOBE_ALLOY_FURNACE.get()).build(null));
     public static final RegistryObject<BlockEntityType<SuperAlloyFurnaceBlockEntity>> SUPER_ALLOY_FURNACE_BLOCK_ENTITY =
-            BLOCK_ENTITIES.register("super_alloy_furnace", () -> BlockEntityType
-                    .Builder.of(SuperAlloyFurnaceBlockEntity::new, EPBlocks.SUPER_ALLOY_FURNACE.get()).build(null));
+            BLOCK_ENTITIES.register("super_alloy_furnace",
+                    () -> BlockEntityType.Builder.of(SuperAlloyFurnaceBlockEntity::new, EPBlocks.SUPER_ALLOY_FURNACE.get()).build(null));
     public static final RegistryObject<BlockEntityType<SoulAlloyFurnaceBlockEntity>> SOUL_ALLOY_FURNACE_BLOCK_ENTITY =
-            BLOCK_ENTITIES.register("soul_alloy_furnace", () -> BlockEntityType
-                    .Builder.of(SoulAlloyFurnaceBlockEntity::new, EPBlocks.SOUL_ALLOY_FURNACE.get()).build(null));
+            BLOCK_ENTITIES.register("soul_alloy_furnace",
+                    () -> BlockEntityType.Builder.of(SoulAlloyFurnaceBlockEntity::new, EPBlocks.SOUL_ALLOY_FURNACE.get()).build(null));
 
     public static final RegistryObject<BlockEntityType<GemPolisherBlockEntity>> GEM_POLISHER_BLOCK_ENTITY =
-            BLOCK_ENTITIES.register("gem_polisher_block", () -> BlockEntityType
-                    .Builder.of(GemPolisherBlockEntity::new, EPBlocks.GEM_POLISHER.get()).build(null));
+            BLOCK_ENTITIES.register("gem_polisher_block",
+                    () -> BlockEntityType.Builder.of(GemPolisherBlockEntity::new, EPBlocks.GEM_POLISHER.get()).build(null));
 
     public static final RegistryObject<BlockEntityType<PrimalGrinderBlockEntity>> PRIMAL_GRINDER_BLOCK_ENTITY =
-            BLOCK_ENTITIES.register("primal_grinder_block", () -> BlockEntityType
-                    .Builder.of(PrimalGrinderBlockEntity::new, EPBlocks.PRIMAL_GRINDER.get()).build(null));
+            BLOCK_ENTITIES.register("primal_grinder_block",
+                    () -> BlockEntityType.Builder.of(PrimalGrinderBlockEntity::new, EPBlocks.PRIMAL_GRINDER.get()).build(null));
     public static final RegistryObject<BlockEntityType<MechanicalGrinderBlockEntity>> MECHANICAL_GRINDER_BLOCK_ENTITY =
-            BLOCK_ENTITIES.register("mechanical_grinder_block", () -> BlockEntityType
-                    .Builder.of(MechanicalGrinderBlockEntity::new, EPBlocks.MECHANICAL_GRINDER.get()).build(null));
+            BLOCK_ENTITIES.register("mechanical_grinder_block",
+                    () -> BlockEntityType.Builder.of(MechanicalGrinderBlockEntity::new, EPBlocks.MECHANICAL_GRINDER.get()).build(null));
 
     public static final RegistryObject<BlockEntityType<AlchemicalDuplicatorBlockEntity>> ALCHEMICAL_DUPLICATOR_BLOCK_ENTITY =
-            BLOCK_ENTITIES.register("alchemical_duplicator_block", () -> BlockEntityType
-                    .Builder.of(AlchemicalDuplicatorBlockEntity::new, EPBlocks.ALCHEMICAL_DUPLICATOR.get()).build(null));
+            BLOCK_ENTITIES.register("alchemical_duplicator_block",
+                    () -> BlockEntityType.Builder.of(AlchemicalDuplicatorBlockEntity::new, EPBlocks.ALCHEMICAL_DUPLICATOR.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<LeatherworkerStationBlockEntity>> LEATHERWORKER_STATION_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("leatherworker_station_block_entity",
+                    () -> BlockEntityType.Builder.of(LeatherworkerStationBlockEntity::new, EPBlocks.LEATHERWORKER_STATION.get()).build(null));
 
     //Signs
     public static final RegistryObject<BlockEntityType<EPSignBlockEntity>> SIGN_BLOCK_ENTITY =

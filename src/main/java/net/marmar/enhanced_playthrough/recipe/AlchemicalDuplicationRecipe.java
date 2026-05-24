@@ -12,13 +12,13 @@ import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 
-public class AlchemicalDuplicatingRecipe implements Recipe<SimpleContainer> {
+public class AlchemicalDuplicationRecipe implements Recipe<SimpleContainer> {
     private final Ingredient input;
     private final ItemStack output;
     private final ResourceLocation recipeId;
     private final float givenXp;
 
-    public AlchemicalDuplicatingRecipe(Ingredient pInput, ItemStack pOutput, ResourceLocation pRecipeId, float pXp){
+    public AlchemicalDuplicationRecipe(Ingredient pInput, ItemStack pOutput, ResourceLocation pRecipeId, float pXp){
         this.input = pInput;
         this.output = pOutput;
         this.recipeId = pRecipeId;
@@ -63,15 +63,15 @@ public class AlchemicalDuplicatingRecipe implements Recipe<SimpleContainer> {
         return Type.INSTANCE;
     }
 
-    public static class Type implements RecipeType<AlchemicalDuplicatingRecipe> {
+    public static class Type implements RecipeType<AlchemicalDuplicationRecipe> {
         public static final Type INSTANCE = new Type();
     }
 
-    public static class Serializer implements RecipeSerializer<AlchemicalDuplicatingRecipe> {
+    public static class Serializer implements RecipeSerializer<AlchemicalDuplicationRecipe> {
         public static final Serializer INSTANCE = new Serializer();
 
         @Override
-        public AlchemicalDuplicatingRecipe fromJson(ResourceLocation resourceLocation, JsonObject jsonObject) {
+        public AlchemicalDuplicationRecipe fromJson(ResourceLocation resourceLocation, JsonObject jsonObject) {
             JsonElement ingredientElement = GsonHelper.isArrayNode(jsonObject, "input") ? GsonHelper.getAsJsonArray(jsonObject, "input") : GsonHelper.getAsJsonObject(jsonObject, "input");
             Ingredient ingredient = Ingredient.fromJson(ingredientElement, false);
 
@@ -79,27 +79,27 @@ public class AlchemicalDuplicatingRecipe implements Recipe<SimpleContainer> {
 
             float xp = GsonHelper.getAsFloat(jsonObject, "xp");
 
-            return new AlchemicalDuplicatingRecipe(ingredient, output, resourceLocation, xp);
+            return new AlchemicalDuplicationRecipe(ingredient, output, resourceLocation, xp);
         }
 
         @Override
-        public @Nullable AlchemicalDuplicatingRecipe fromNetwork(ResourceLocation resourceLocation, FriendlyByteBuf friendlyByteBuf) {
+        public @Nullable AlchemicalDuplicationRecipe fromNetwork(ResourceLocation resourceLocation, FriendlyByteBuf friendlyByteBuf) {
             Ingredient ingredient = Ingredient.fromNetwork(friendlyByteBuf);
 
             ItemStack output = friendlyByteBuf.readItem();
 
             float xp = friendlyByteBuf.readFloat();
 
-            return new AlchemicalDuplicatingRecipe(ingredient, output, resourceLocation, xp);
+            return new AlchemicalDuplicationRecipe(ingredient, output, resourceLocation, xp);
         }
 
         @Override
-        public void toNetwork(FriendlyByteBuf friendlyByteBuf, AlchemicalDuplicatingRecipe alchemicalDuplicatingRecipe) {
-            alchemicalDuplicatingRecipe.input.toNetwork(friendlyByteBuf);
+        public void toNetwork(FriendlyByteBuf friendlyByteBuf, AlchemicalDuplicationRecipe alchemicalDuplicationRecipe) {
+            alchemicalDuplicationRecipe.input.toNetwork(friendlyByteBuf);
 
-            friendlyByteBuf.writeItemStack(alchemicalDuplicatingRecipe.getResultItem(null), false);
+            friendlyByteBuf.writeItemStack(alchemicalDuplicationRecipe.getResultItem(null), false);
 
-            friendlyByteBuf.writeFloat(alchemicalDuplicatingRecipe.givenXp);
+            friendlyByteBuf.writeFloat(alchemicalDuplicationRecipe.givenXp);
         }
     }
 }
