@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "enhanced_playthrough:aluminum_ingot"
+  },
+  "base": {
+    "item": "enhanced_playthrough:rose_golden_sword"
+  },
+  "result": {
+    "item": "enhanced_playthrough:aluminum_rose_golden_sword"
+  },
+  "template": {
+    "item": "enhanced_playthrough:aluminum_upgrade_smithing_template"
+  }
+}

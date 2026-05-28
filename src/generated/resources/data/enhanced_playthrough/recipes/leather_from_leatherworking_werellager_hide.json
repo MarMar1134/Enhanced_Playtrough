@@ -1,0 +1,16 @@
+{
+  "type": "enhanced_playthrough:leatherworking",
+  "fluid": "minecraft:water",
+  "input": {
+    "amount": 100,
+    "item": {
+      "item": "enhanced_playthrough:werellager_hide"
+    }
+  },
+  "output": {
+    "amount": 3,
+    "item": {
+      "item": "minecraft:leather"
+    }
+  }
+}

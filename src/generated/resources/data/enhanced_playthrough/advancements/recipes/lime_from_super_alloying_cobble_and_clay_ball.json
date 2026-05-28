@@ -1,0 +1,40 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_required_materials": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:cobble"
+            ]
+          },
+          {
+            "items": [
+              "minecraft:clay_ball"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "enhanced_playthrough:lime_from_super_alloying_cobble_and_clay_ball"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_required_materials",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "enhanced_playthrough:lime_from_super_alloying_cobble_and_clay_ball"
+    ]
+  },
+  "sends_telemetry_event": false
+}

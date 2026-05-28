@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cow_hide": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:cow_hide"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "enhanced_playthrough:leather_from_leatherworking_cow_hide"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_cow_hide",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "enhanced_playthrough:leather_from_leatherworking_cow_hide"
+    ]
+  },
+  "sends_telemetry_event": false
+}
