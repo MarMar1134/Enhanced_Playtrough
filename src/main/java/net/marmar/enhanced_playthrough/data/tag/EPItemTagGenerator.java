@@ -752,6 +752,7 @@ public class EPItemTagGenerator extends ItemTagsProvider {
         );
 
         this.tag(EPTags.Items.BASIC_SMELT_INGREDIENT).add(
+                EPItems.LIMESTONE_COBBLE.get(),
                 Items.RAW_COPPER,
                 Blocks.COPPER_ORE.asItem(),
                 EPItems.RAW_ZINC.get(),
@@ -808,6 +809,8 @@ public class EPItemTagGenerator extends ItemTagsProvider {
         );
 
         this.tag(EPTags.Items.ALLOY_INGREDIENT).add(
+                EPItems.COBBLE.get(),
+                Items.CLAY_BALL,
                 Items.RAW_COPPER,
                 Items.RAW_IRON,
                 Items.COAL,
@@ -818,7 +821,6 @@ public class EPItemTagGenerator extends ItemTagsProvider {
 
         this.tag(EPTags.Items.BLAST_ALLOY_INGREDIENT).addTags(
                 EPTags.Items.ALLOY_INGREDIENT).add(
-                Items.CLAY_BALL,
                 Items.RAW_GOLD,
                 Items.COPPER_INGOT,
                 Items.IRON_INGOT,
@@ -867,7 +869,7 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                         Items.DANDELION,
                         Items.BLUE_ORCHID,
                         Items.CORNFLOWER,
-                        EPItems.LIME.get(),
+                        EPItems.LIME_FRUIT.get(),
                         Items.ALLIUM,
                         Items.PINK_TULIP,
                         Items.PINK_PETALS

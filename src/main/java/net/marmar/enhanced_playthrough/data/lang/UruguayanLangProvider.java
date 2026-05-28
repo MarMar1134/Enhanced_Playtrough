@@ -71,7 +71,8 @@ public class UruguayanLangProvider extends AbstractLangProvider {
         addGuiElements("gem_polisher_screen", "Usos");
 
         //Descriptions
-        addDescription("aluminum_tool", "Mango de aluminio: 20% mayor durabilidad");
+        addDescription("leather_stick_tool", "Mango reforzado: 10% mayor durabilidad");
+        addDescription("aluminum_stick_tool", "Mango de aluminio: 20% mayor durabilidad");
         addDescription("polisher_item","Utilizado en el pulidor de gemas como combustible");
         addDescription("silver_armor", "Con toda la equipación: otorga Apuro al jugador");
         addDescription("rose_gold_armor", "Con toda la equipación: otorga Apuro al jugador");
@@ -79,6 +80,7 @@ public class UruguayanLangProvider extends AbstractLangProvider {
         addDescription("green_gold_armor", "Con toda la equipación: otorga Apuro II al jugador");
         addDescription("blue_gold_armor", "Con toda la equipación: otorga Apuro II al jugador");
         addDescription("dagger_bleed", "Probabilidad de sangrado: ");
+        addDescription("raw_gem", "Debe ser pulida");
 
         //Sounds
         addSoundDescription("grind", "Molienda activada");
@@ -473,7 +475,7 @@ public class UruguayanLangProvider extends AbstractLangProvider {
             addItem(EPItems.TALL_REEDS_HEAD, "Cabeza de carrizo");
             addItem(EPItems.WATER_REEDS_HEAD, "Cabeza de junco");
             addItem(EPItems.PLANT_FIBER, "Fibra vegetal");
-
+            addItem(EPItems.LIME, "Cal");
 
             //Hide
             addItem(EPItems.COW_HIDE, "Piel de vaca");
@@ -771,7 +773,7 @@ public class UruguayanLangProvider extends AbstractLangProvider {
             //Fruits
             addItem(EPItems.TOMATO, "Tomate");
             addItem(EPItems.LEMON, "Limón");
-            addItem(EPItems.LIME, "Lima");
+            addItem(EPItems.LIME_FRUIT, "Lima");
             addItem(EPItems.ORANGE, "Naranja");
             addItem(EPItems.WALNUT, "Nuez");
             addItem(EPItems.PEELED_WALNUT, "Nuez pelada");

@@ -240,7 +240,7 @@ public class EPBlocks {
             public static final RegistryObject<Block> LIME_LEAVES = registerBlockWithItem("lime_leaves",
                     () -> new EPLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
         public static final RegistryObject<Block> LIME_LEAVES_WITH_FRUIT = registerBlockWithItem("lime_leaves_with_fruit",
-                () -> new LeavesWithFruitBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES), EPItems.LIME));
+                () -> new LeavesWithFruitBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES), EPItems.LIME_FRUIT));
 
         //Polished stone
         public static final RegistryObject<Block> POLISHED_STONE = registerBlockWithItem("polished_stone",

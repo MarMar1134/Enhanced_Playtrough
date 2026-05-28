@@ -102,6 +102,8 @@ public class EPTabs {
                         output.accept(EPItems.MUD_BRICK.get());
                         output.accept(EPItems.FIREBRICK.get());
 
+                        output.accept(EPItems.LIME.get());
+
                         output.accept(EPItems.ALUMINUM_ROD.get());
                         output.accept(EPItems.BRONZIUM_UPGRADE_SMITHING_TEMPLATE.get());
                         output.accept(EPItems.ALUMINUM_UPGRADE_SMITHING_TEMPLATE.get());
@@ -515,7 +517,7 @@ public class EPTabs {
 
                         output.accept(EPItems.LEMON.get());
 
-                        output.accept(EPItems.LIME.get());
+                        output.accept(EPItems.LIME_FRUIT.get());
 
                         output.accept(EPItems.WHEAT_FLOUR.get());
 

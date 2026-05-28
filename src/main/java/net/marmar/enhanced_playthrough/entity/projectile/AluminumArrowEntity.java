@@ -7,7 +7,6 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.phys.EntityHitResult;
 
 public class AluminumArrowEntity extends AbstractArrow {
     public AluminumArrowEntity(EntityType<? extends AbstractArrow> pEntityType, Level pLevel) {
@@ -21,16 +20,11 @@ public class AluminumArrowEntity extends AbstractArrow {
 
     public AluminumArrowEntity(Level pLevel, LivingEntity pShooter){
         super(EPEntityTypes.ALUMINUM_ARROW.get(), pShooter, pLevel);
+        this.setBaseDamage(4.0D);
     }
 
     @Override
     protected ItemStack getPickupItem() {
         return new ItemStack(EPItems.ALUMINUM_ARROW.get());
-    }
-
-    @Override
-    protected void onHitEntity(EntityHitResult pResult) {
-        this.setBaseDamage(4.0D);
-        super.onHitEntity(pResult);
     }
 }

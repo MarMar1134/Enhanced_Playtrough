@@ -21,6 +21,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.material.Fluids;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.util.LazyOptional;
@@ -85,8 +86,8 @@ public class LeatherworkerStationBlockEntity extends BlockEntity implements Menu
     private final LazyOptional<ItemStackHandler> lazyLeatherHandler = LazyOptional.of(()-> leatherHandler);
 
     protected final ContainerData data;
-    private int waterToDrain = 0;
-    private int progress = 0, maxProgress = 250;
+    private int progress = 0;
+    private final int maxProgress = 250;
 
     public LeatherworkerStationBlockEntity(BlockPos pPos, BlockState pBlockState) {
         super(EPBlockEntities.LEATHERWORKER_STATION_BLOCK_ENTITY.get(), pPos, pBlockState);
@@ -95,7 +96,6 @@ public class LeatherworkerStationBlockEntity extends BlockEntity implements Menu
             @Override
             public int get(int pIndex) {
                 return switch (pIndex){
-                    //case 0 -> LeatherworkerStationBlockEntity.this.limeLeft;
                     case 0 -> LeatherworkerStationBlockEntity.this.waterTank.getFluidAmount();
                     case 1 -> LeatherworkerStationBlockEntity.this.progress;
                     case 2 -> LeatherworkerStationBlockEntity.this.maxProgress;
@@ -266,7 +266,7 @@ public class LeatherworkerStationBlockEntity extends BlockEntity implements Menu
 
         bucketCap.ifPresent(itemFluidHandler -> {
             FluidStack inBucket = itemFluidHandler.getFluidInTank(0);
-            if (inBucket.isEmpty()) return;
+            if (inBucket.isEmpty() || !inBucket.getFluid().isSame(Fluids.WATER)) return;
 
             if (!this.waterTank.isEmpty() && !this.waterTank.getFluid().isFluidEqual(inBucket)) return;
 

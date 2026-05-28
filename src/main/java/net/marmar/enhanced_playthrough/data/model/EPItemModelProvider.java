@@ -259,7 +259,7 @@ public class EPItemModelProvider extends ItemModelProvider {
 
         simpleItem(EPItems.LEMON);
 
-        simpleItem(EPItems.LIME);
+        simpleItem(EPItems.LIME_FRUIT);
 
         simpleItem(EPItems.WALNUT);
         simpleItem(EPItems.PEELED_WALNUT);
@@ -389,6 +389,7 @@ public class EPItemModelProvider extends ItemModelProvider {
         simpleItem(EPItems.KENAF_BRANCH);
         simpleItem(EPItems.TALL_REEDS_HEAD);
         simpleItem(EPItems.WATER_REEDS_HEAD);
+        simpleItem(EPItems.LIME);
 
         //Hide
         simpleItem(EPItems.COW_HIDE);

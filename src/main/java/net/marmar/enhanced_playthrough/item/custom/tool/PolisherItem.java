@@ -23,7 +23,7 @@ public class PolisherItem extends TieredItem implements Vanishable {
     private final float speedAttribute;
     private final Multimap<Attribute, AttributeModifier> attributeModifiers;
 
-    public PolisherItem(Tier pTier, Properties pProperties) {
+    protected PolisherItem(Tier pTier, Properties pProperties) {
         super(pTier,pProperties);
 
         this.tier = pTier;

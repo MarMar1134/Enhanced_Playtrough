@@ -59,6 +59,9 @@ public class SmeltingRecipeSubProvider extends RecipeProvider {
         basicSmelting(consumer, Items.CLAY_BALL, Items.BRICK, "clay_ball");
         soulBasicSmelting(consumer, Items.CLAY_BALL, Items.BRICK, "clay_ball");
 
+        basicSmelting(consumer, EPItems.LIMESTONE_COBBLE.get(), EPItems.LIME.get(), "lime");
+        soulBasicSmelting(consumer, EPItems.LIMESTONE_COBBLE.get(), EPItems.LIME.get(), "lime");
+
         //Smelting Recipes
             //food
             smeltingByCampfire(consumer, EPItems.ZAPALLO.get(), RecipeCategory.FOOD, EPItems.COOKED_ZAPALLO.get(), 0.35f, "zapallo");
@@ -214,6 +217,10 @@ public class SmeltingRecipeSubProvider extends RecipeProvider {
 
             //limestone
             oreSmelting(consumer, EPBlocks.COBBLED_LIMESTONE.get(), RecipeCategory.BUILDING_BLOCKS, EPBlocks.LIMESTONE.get(), 0.1f, "limestone");
+
+            //Lime
+            oreSmelting(consumer, EPItems.LIMESTONE_COBBLE.get(), RecipeCategory.MISC, EPItems.LIME.get(), 0.3f, "lime");
+            oreBlasting(consumer, EPItems.LIMESTONE_COBBLE.get(), EPItems.LIME.get(), 0.3f, "lime");
 
         //Masonry smelting recipes
         masonrySmelting(consumer, Blocks.COBBLESTONE, Blocks.STONE, "stone");

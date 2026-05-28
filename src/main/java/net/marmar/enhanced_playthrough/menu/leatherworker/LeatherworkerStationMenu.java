@@ -1,8 +1,8 @@
 package net.marmar.enhanced_playthrough.menu.leatherworker;
 
-import net.marmar.enhanced_playthrough.block.EPBlockEntities;
 import net.marmar.enhanced_playthrough.block.EPBlocks;
 import net.marmar.enhanced_playthrough.block.custom.leatherworker.LeatherworkerStationBlockEntity;
+import net.marmar.enhanced_playthrough.item.EPItems;
 import net.marmar.enhanced_playthrough.menu.EPMenuTypes;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
@@ -62,7 +62,7 @@ public class LeatherworkerStationMenu extends AbstractContainerMenu {
             addSlot(new SlotItemHandler(itemStackHandler, 0, 13, 19){
                 @Override
                 public boolean mayPlace(@NotNull ItemStack stack) {
-                    return super.mayPlace(stack);
+                    return stack.is(EPItems.LIME.get());
                 }
             });
         });

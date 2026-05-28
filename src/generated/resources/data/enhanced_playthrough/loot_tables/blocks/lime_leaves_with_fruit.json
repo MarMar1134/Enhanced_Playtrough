@@ -64,7 +64,7 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "enhanced_playthrough:lime"
+          "name": "enhanced_playthrough:lime_fruit"
         }
       ],
       "rolls": 1.0
@@ -129,7 +129,7 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "enhanced_playthrough:lime"
+          "name": "enhanced_playthrough:lime_fruit"
         }
       ],
       "rolls": 1.0

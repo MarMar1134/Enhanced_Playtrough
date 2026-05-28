@@ -52,6 +52,11 @@ public class AlloyRecipeSubProvider extends RecipeProvider {
         superOreAlloying(consumer, EPItems.ALUMINUM_DUST.get(), Items.CLAY_BALL, EPItems.FIREBRICK.get(), 4,
                 AlloyRecipeCategory.SIMPLE_ALLOY, "firebrick");
 
+        //Lime
+        oreAlloying(consumer, EPItems.COBBLE.get(), Items.CLAY_BALL, EPItems.LIME.get(), 3, "lime");
+        superOreAlloying(consumer, EPItems.COBBLE.get(), Items.CLAY_BALL, EPItems.LIME.get(), 3,
+                AlloyRecipeCategory.SIMPLE_ALLOY, "lime");
+
         //Green gold
         goldenAlloy(consumer, Items.RAW_GOLD, EPItems.RAW_SILVER.get(), EPItems.GREEN_GOLD_INGOT.get(), 1,
                 AlloyRecipeCategory.SIMPLE_ALLOY, "green_gold_ingot");

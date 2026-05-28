@@ -58,92 +58,103 @@ public class GeneralRecipeSubProvider extends RecipeProvider {
 
         //Aluminum variants
             //Gold
-            aluminumSmithingTemplate(consumer, Items.GOLDEN_AXE, EPItems.ALUMINUM_GOLDEN_AXE.get());
-            aluminumSmithingTemplate(consumer, Items.GOLDEN_PICKAXE, EPItems.ALUMINUM_GOLDEN_PICKAXE.get());
-            aluminumSmithingTemplate(consumer, Items.GOLDEN_SHOVEL, EPItems.ALUMINUM_GOLDEN_SHOVEL.get());
-            aluminumSmithingTemplate(consumer, Items.GOLDEN_HOE, EPItems.ALUMINUM_GOLDEN_HOE.get());
-            aluminumSmithingTemplate(consumer, EPItems.GOLDEN_POLISHER.get(), EPItems.ALUMINUM_GOLDEN_POLISHER.get());
-            aluminumSmithingTemplate(consumer, EPItems.GOLDEN_DAGGER.get(), EPItems.ALUMINUM_GOLDEN_DAGGER.get());
+            aluminumSmithingUpgrade(consumer, Items.GOLDEN_SWORD, EPItems.ALUMINUM_GOLDEN_SWORD.get());
+            aluminumSmithingUpgrade(consumer, Items.GOLDEN_AXE, EPItems.ALUMINUM_GOLDEN_AXE.get());
+            aluminumSmithingUpgrade(consumer, Items.GOLDEN_PICKAXE, EPItems.ALUMINUM_GOLDEN_PICKAXE.get());
+            aluminumSmithingUpgrade(consumer, Items.GOLDEN_SHOVEL, EPItems.ALUMINUM_GOLDEN_SHOVEL.get());
+            aluminumSmithingUpgrade(consumer, Items.GOLDEN_HOE, EPItems.ALUMINUM_GOLDEN_HOE.get());
+            aluminumSmithingUpgrade(consumer, EPItems.GOLDEN_POLISHER.get(), EPItems.ALUMINUM_GOLDEN_POLISHER.get());
+            aluminumSmithingUpgrade(consumer, EPItems.GOLDEN_DAGGER.get(), EPItems.ALUMINUM_GOLDEN_DAGGER.get());
 
             //Silver
-            aluminumSmithingTemplate(consumer, EPItems.SILVER_AXE.get(), EPItems.ALUMINUM_SILVER_AXE.get());
-            aluminumSmithingTemplate(consumer, EPItems.SILVER_PICKAXE.get(), EPItems.ALUMINUM_SILVER_PICKAXE.get());
-            aluminumSmithingTemplate(consumer, EPItems.SILVER_SHOVEL.get(), EPItems.ALUMINUM_SILVER_SHOVEL.get());
-            aluminumSmithingTemplate(consumer, EPItems.SILVER_HOE.get(), EPItems.ALUMINUM_SILVER_HOE.get());
-            aluminumSmithingTemplate(consumer, EPItems.GOLDEN_POLISHER.get(), EPItems.ALUMINUM_SILVER_POLISHER.get());
-            aluminumSmithingTemplate(consumer, EPItems.SILVER_DAGGER.get(), EPItems.ALUMINUM_SILVER_DAGGER.get());
+            aluminumSmithingUpgrade(consumer, EPItems.SILVER_SWORD.get(), EPItems.ALUMINUM_SILVER_SWORD.get());
+            aluminumSmithingUpgrade(consumer, EPItems.SILVER_AXE.get(), EPItems.ALUMINUM_SILVER_AXE.get());
+            aluminumSmithingUpgrade(consumer, EPItems.SILVER_PICKAXE.get(), EPItems.ALUMINUM_SILVER_PICKAXE.get());
+            aluminumSmithingUpgrade(consumer, EPItems.SILVER_SHOVEL.get(), EPItems.ALUMINUM_SILVER_SHOVEL.get());
+            aluminumSmithingUpgrade(consumer, EPItems.SILVER_HOE.get(), EPItems.ALUMINUM_SILVER_HOE.get());
+            aluminumSmithingUpgrade(consumer, EPItems.GOLDEN_POLISHER.get(), EPItems.ALUMINUM_SILVER_POLISHER.get());
+            aluminumSmithingUpgrade(consumer, EPItems.SILVER_DAGGER.get(), EPItems.ALUMINUM_SILVER_DAGGER.get());
 
             //Iron
-            aluminumSmithingTemplate(consumer, Items.IRON_AXE, EPItems.ALUMINUM_IRON_AXE.get());
-            aluminumSmithingTemplate(consumer, Items.IRON_PICKAXE, EPItems.ALUMINUM_IRON_PICKAXE.get());
-            aluminumSmithingTemplate(consumer, Items.IRON_SHOVEL, EPItems.ALUMINUM_IRON_SHOVEL.get());
-            aluminumSmithingTemplate(consumer, Items.IRON_HOE, EPItems.ALUMINUM_IRON_HOE.get());
-            aluminumSmithingTemplate(consumer, EPItems.IRON_POLISHER.get(), EPItems.ALUMINUM_IRON_POLISHER.get());
-            aluminumSmithingTemplate(consumer, EPItems.IRON_DAGGER.get(), EPItems.ALUMINUM_IRON_DAGGER.get());
+            aluminumSmithingUpgrade(consumer, Items.IRON_SWORD, EPItems.ALUMINUM_IRON_SWORD.get());
+            aluminumSmithingUpgrade(consumer, Items.IRON_AXE, EPItems.ALUMINUM_IRON_AXE.get());
+            aluminumSmithingUpgrade(consumer, Items.IRON_PICKAXE, EPItems.ALUMINUM_IRON_PICKAXE.get());
+            aluminumSmithingUpgrade(consumer, Items.IRON_SHOVEL, EPItems.ALUMINUM_IRON_SHOVEL.get());
+            aluminumSmithingUpgrade(consumer, Items.IRON_HOE, EPItems.ALUMINUM_IRON_HOE.get());
+            aluminumSmithingUpgrade(consumer, EPItems.IRON_POLISHER.get(), EPItems.ALUMINUM_IRON_POLISHER.get());
+            aluminumSmithingUpgrade(consumer, EPItems.IRON_DAGGER.get(), EPItems.ALUMINUM_IRON_DAGGER.get());
 
             //Bronze
-            aluminumSmithingTemplate(consumer, EPItems.BRONZE_AXE.get(), EPItems.ALUMINUM_BRONZE_AXE.get());
-            aluminumSmithingTemplate(consumer, EPItems.BRONZE_PICKAXE.get(), EPItems.ALUMINUM_BRONZE_PICKAXE.get());
-            aluminumSmithingTemplate(consumer, EPItems.BRONZE_SHOVEL.get(), EPItems.ALUMINUM_BRONZE_SHOVEL.get());
-            aluminumSmithingTemplate(consumer, EPItems.BRONZE_HOE.get(), EPItems.ALUMINUM_BRONZE_HOE.get());
-            aluminumSmithingTemplate(consumer, EPItems.BRONZE_POLISHER.get(), EPItems.ALUMINUM_BRONZE_POLISHER.get());
-            aluminumSmithingTemplate(consumer, EPItems.BRONZE_DAGGER.get(), EPItems.ALUMINUM_BRONZE_DAGGER.get());
+            aluminumSmithingUpgrade(consumer, EPItems.BRONZE_SWORD.get(), EPItems.ALUMINUM_BRONZE_SWORD.get());
+            aluminumSmithingUpgrade(consumer, EPItems.BRONZE_AXE.get(), EPItems.ALUMINUM_BRONZE_AXE.get());
+            aluminumSmithingUpgrade(consumer, EPItems.BRONZE_PICKAXE.get(), EPItems.ALUMINUM_BRONZE_PICKAXE.get());
+            aluminumSmithingUpgrade(consumer, EPItems.BRONZE_SHOVEL.get(), EPItems.ALUMINUM_BRONZE_SHOVEL.get());
+            aluminumSmithingUpgrade(consumer, EPItems.BRONZE_HOE.get(), EPItems.ALUMINUM_BRONZE_HOE.get());
+            aluminumSmithingUpgrade(consumer, EPItems.BRONZE_POLISHER.get(), EPItems.ALUMINUM_BRONZE_POLISHER.get());
+            aluminumSmithingUpgrade(consumer, EPItems.BRONZE_DAGGER.get(), EPItems.ALUMINUM_BRONZE_DAGGER.get());
 
             //Brass
-            aluminumSmithingTemplate(consumer, EPItems.BRASS_AXE.get(), EPItems.ALUMINUM_BRASS_AXE.get());
-            aluminumSmithingTemplate(consumer, EPItems.BRASS_PICKAXE.get(), EPItems.ALUMINUM_BRASS_PICKAXE.get());
-            aluminumSmithingTemplate(consumer, EPItems.BRASS_SHOVEL.get(), EPItems.ALUMINUM_BRASS_SHOVEL.get());
-            aluminumSmithingTemplate(consumer, EPItems.BRASS_HOE.get(), EPItems.ALUMINUM_BRASS_HOE.get());
-            aluminumSmithingTemplate(consumer, EPItems.BRASS_POLISHER.get(), EPItems.ALUMINUM_BRASS_POLISHER.get());
-            aluminumSmithingTemplate(consumer, EPItems.BRASS_DAGGER.get(), EPItems.ALUMINUM_BRASS_DAGGER.get());
+            aluminumSmithingUpgrade(consumer, EPItems.BRASS_SWORD.get(), EPItems.ALUMINUM_BRASS_SWORD.get());
+            aluminumSmithingUpgrade(consumer, EPItems.BRASS_AXE.get(), EPItems.ALUMINUM_BRASS_AXE.get());
+            aluminumSmithingUpgrade(consumer, EPItems.BRASS_PICKAXE.get(), EPItems.ALUMINUM_BRASS_PICKAXE.get());
+            aluminumSmithingUpgrade(consumer, EPItems.BRASS_SHOVEL.get(), EPItems.ALUMINUM_BRASS_SHOVEL.get());
+            aluminumSmithingUpgrade(consumer, EPItems.BRASS_HOE.get(), EPItems.ALUMINUM_BRASS_HOE.get());
+            aluminumSmithingUpgrade(consumer, EPItems.BRASS_POLISHER.get(), EPItems.ALUMINUM_BRASS_POLISHER.get());
+            aluminumSmithingUpgrade(consumer, EPItems.BRASS_DAGGER.get(), EPItems.ALUMINUM_BRASS_DAGGER.get());
 
             //Rose Gold
-            aluminumSmithingTemplate(consumer, EPItems.ROSE_GOLDEN_AXE.get(), EPItems.ALUMINUM_ROSE_GOLDEN_AXE.get());
-            aluminumSmithingTemplate(consumer, EPItems.ROSE_GOLDEN_PICKAXE.get(), EPItems.ALUMINUM_ROSE_GOLDEN_PICKAXE.get());
-            aluminumSmithingTemplate(consumer, EPItems.ROSE_GOLDEN_SHOVEL.get(), EPItems.ALUMINUM_ROSE_GOLDEN_SHOVEL.get());
-            aluminumSmithingTemplate(consumer, EPItems.ROSE_GOLDEN_HOE.get(), EPItems.ALUMINUM_ROSE_GOLDEN_HOE.get());
-            aluminumSmithingTemplate(consumer, EPItems.ROSE_GOLDEN_POLISHER.get(), EPItems.ALUMINUM_ROSE_GOLDEN_POLISHER.get());
-            aluminumSmithingTemplate(consumer, EPItems.ROSE_GOLDEN_DAGGER.get(), EPItems.ALUMINUM_ROSE_GOLDEN_DAGGER.get());
+            aluminumSmithingUpgrade(consumer, EPItems.ROSE_GOLDEN_SWORD.get(), EPItems.ALUMINUM_ROSE_GOLDEN_SWORD.get());
+            aluminumSmithingUpgrade(consumer, EPItems.ROSE_GOLDEN_AXE.get(), EPItems.ALUMINUM_ROSE_GOLDEN_AXE.get());
+            aluminumSmithingUpgrade(consumer, EPItems.ROSE_GOLDEN_PICKAXE.get(), EPItems.ALUMINUM_ROSE_GOLDEN_PICKAXE.get());
+            aluminumSmithingUpgrade(consumer, EPItems.ROSE_GOLDEN_SHOVEL.get(), EPItems.ALUMINUM_ROSE_GOLDEN_SHOVEL.get());
+            aluminumSmithingUpgrade(consumer, EPItems.ROSE_GOLDEN_HOE.get(), EPItems.ALUMINUM_ROSE_GOLDEN_HOE.get());
+            aluminumSmithingUpgrade(consumer, EPItems.ROSE_GOLDEN_POLISHER.get(), EPItems.ALUMINUM_ROSE_GOLDEN_POLISHER.get());
+            aluminumSmithingUpgrade(consumer, EPItems.ROSE_GOLDEN_DAGGER.get(), EPItems.ALUMINUM_ROSE_GOLDEN_DAGGER.get());
 
             //Bronzium
-            aluminumSmithingTemplate(consumer, EPItems.BRONZIUM_AXE.get(), EPItems.ALUMINUM_BRONZIUM_AXE.get());
-            aluminumSmithingTemplate(consumer, EPItems.BRONZIUM_PICKAXE.get(), EPItems.ALUMINUM_BRONZIUM_PICKAXE.get());
-            aluminumSmithingTemplate(consumer, EPItems.BRONZIUM_SHOVEL.get(), EPItems.ALUMINUM_BRONZIUM_SHOVEL.get());
-            aluminumSmithingTemplate(consumer, EPItems.BRONZIUM_HOE.get(), EPItems.ALUMINUM_BRONZIUM_HOE.get());
-            aluminumSmithingTemplate(consumer, EPItems.BRONZIUM_POLISHER.get(), EPItems.ALUMINUM_BRONZIUM_POLISHER.get());
-            aluminumSmithingTemplate(consumer, EPItems.BRONZIUM_DAGGER.get(), EPItems.ALUMINUM_BRONZIUM_DAGGER.get());
+            aluminumSmithingUpgrade(consumer, EPItems.BRONZIUM_SWORD.get(), EPItems.ALUMINUM_BRONZIUM_SWORD.get());
+            aluminumSmithingUpgrade(consumer, EPItems.BRONZIUM_AXE.get(), EPItems.ALUMINUM_BRONZIUM_AXE.get());
+            aluminumSmithingUpgrade(consumer, EPItems.BRONZIUM_PICKAXE.get(), EPItems.ALUMINUM_BRONZIUM_PICKAXE.get());
+            aluminumSmithingUpgrade(consumer, EPItems.BRONZIUM_SHOVEL.get(), EPItems.ALUMINUM_BRONZIUM_SHOVEL.get());
+            aluminumSmithingUpgrade(consumer, EPItems.BRONZIUM_HOE.get(), EPItems.ALUMINUM_BRONZIUM_HOE.get());
+            aluminumSmithingUpgrade(consumer, EPItems.BRONZIUM_POLISHER.get(), EPItems.ALUMINUM_BRONZIUM_POLISHER.get());
+            aluminumSmithingUpgrade(consumer, EPItems.BRONZIUM_DAGGER.get(), EPItems.ALUMINUM_BRONZIUM_DAGGER.get());
 
             //Steel
-            aluminumSmithingTemplate(consumer, EPItems.STEEL_AXE.get(), EPItems.ALUMINUM_STEEL_AXE.get());
-            aluminumSmithingTemplate(consumer, EPItems.STEEL_PICKAXE.get(), EPItems.ALUMINUM_STEEL_PICKAXE.get());
-            aluminumSmithingTemplate(consumer, EPItems.STEEL_SHOVEL.get(), EPItems.ALUMINUM_STEEL_SHOVEL.get());
-            aluminumSmithingTemplate(consumer, EPItems.STEEL_HOE.get(), EPItems.ALUMINUM_STEEL_HOE.get());
-            aluminumSmithingTemplate(consumer, EPItems.STEEL_POLISHER.get(), EPItems.ALUMINUM_STEEL_POLISHER.get());
-            aluminumSmithingTemplate(consumer, EPItems.STEEL_DAGGER.get(), EPItems.ALUMINUM_STEEL_DAGGER.get());
+            aluminumSmithingUpgrade(consumer, EPItems.STEEL_SWORD.get(), EPItems.ALUMINUM_STEEL_SWORD.get());
+            aluminumSmithingUpgrade(consumer, EPItems.STEEL_AXE.get(), EPItems.ALUMINUM_STEEL_AXE.get());
+            aluminumSmithingUpgrade(consumer, EPItems.STEEL_PICKAXE.get(), EPItems.ALUMINUM_STEEL_PICKAXE.get());
+            aluminumSmithingUpgrade(consumer, EPItems.STEEL_SHOVEL.get(), EPItems.ALUMINUM_STEEL_SHOVEL.get());
+            aluminumSmithingUpgrade(consumer, EPItems.STEEL_HOE.get(), EPItems.ALUMINUM_STEEL_HOE.get());
+            aluminumSmithingUpgrade(consumer, EPItems.STEEL_POLISHER.get(), EPItems.ALUMINUM_STEEL_POLISHER.get());
+            aluminumSmithingUpgrade(consumer, EPItems.STEEL_DAGGER.get(), EPItems.ALUMINUM_STEEL_DAGGER.get());
 
             //Green Gold
-            aluminumSmithingTemplate(consumer, EPItems.GREEN_GOLDEN_AXE.get(), EPItems.ALUMINUM_GREEN_GOLDEN_AXE.get());
-            aluminumSmithingTemplate(consumer, EPItems.GREEN_GOLDEN_PICKAXE.get(), EPItems.ALUMINUM_GREEN_GOLDEN_PICKAXE.get());
-            aluminumSmithingTemplate(consumer, EPItems.GREEN_GOLDEN_SHOVEL.get(), EPItems.ALUMINUM_GREEN_GOLDEN_SHOVEL.get());
-            aluminumSmithingTemplate(consumer, EPItems.GREEN_GOLDEN_HOE.get(), EPItems.ALUMINUM_GREEN_GOLDEN_HOE.get());
-            aluminumSmithingTemplate(consumer, EPItems.GREEN_GOLDEN_POLISHER.get(), EPItems.ALUMINUM_GREEN_GOLDEN_POLISHER.get());
-            aluminumSmithingTemplate(consumer, EPItems.GREEN_GOLDEN_DAGGER.get(), EPItems.ALUMINUM_GREEN_GOLDEN_DAGGER.get());
+            aluminumSmithingUpgrade(consumer, EPItems.GREEN_GOLDEN_SWORD.get(), EPItems.ALUMINUM_GREEN_GOLDEN_SWORD.get());
+            aluminumSmithingUpgrade(consumer, EPItems.GREEN_GOLDEN_AXE.get(), EPItems.ALUMINUM_GREEN_GOLDEN_AXE.get());
+            aluminumSmithingUpgrade(consumer, EPItems.GREEN_GOLDEN_PICKAXE.get(), EPItems.ALUMINUM_GREEN_GOLDEN_PICKAXE.get());
+            aluminumSmithingUpgrade(consumer, EPItems.GREEN_GOLDEN_SHOVEL.get(), EPItems.ALUMINUM_GREEN_GOLDEN_SHOVEL.get());
+            aluminumSmithingUpgrade(consumer, EPItems.GREEN_GOLDEN_HOE.get(), EPItems.ALUMINUM_GREEN_GOLDEN_HOE.get());
+            aluminumSmithingUpgrade(consumer, EPItems.GREEN_GOLDEN_POLISHER.get(), EPItems.ALUMINUM_GREEN_GOLDEN_POLISHER.get());
+            aluminumSmithingUpgrade(consumer, EPItems.GREEN_GOLDEN_DAGGER.get(), EPItems.ALUMINUM_GREEN_GOLDEN_DAGGER.get());
 
             //Blue Gold
-            aluminumSmithingTemplate(consumer, EPItems.BLUE_GOLDEN_AXE.get(), EPItems.ALUMINUM_BLUE_GOLDEN_AXE.get());
-            aluminumSmithingTemplate(consumer, EPItems.BLUE_GOLDEN_PICKAXE.get(), EPItems.ALUMINUM_BLUE_GOLDEN_PICKAXE.get());
-            aluminumSmithingTemplate(consumer, EPItems.BLUE_GOLDEN_SHOVEL.get(), EPItems.ALUMINUM_BLUE_GOLDEN_SHOVEL.get());
-            aluminumSmithingTemplate(consumer, EPItems.BLUE_GOLDEN_HOE.get(), EPItems.ALUMINUM_BLUE_GOLDEN_HOE.get());
-            aluminumSmithingTemplate(consumer, EPItems.BLUE_GOLDEN_POLISHER.get(), EPItems.ALUMINUM_BLUE_GOLDEN_POLISHER.get());
-            aluminumSmithingTemplate(consumer, EPItems.BLUE_GOLDEN_DAGGER.get(), EPItems.ALUMINUM_BLUE_GOLDEN_DAGGER.get());
+            aluminumSmithingUpgrade(consumer, EPItems.BLUE_GOLDEN_SWORD.get(), EPItems.ALUMINUM_BLUE_GOLDEN_SWORD.get());
+            aluminumSmithingUpgrade(consumer, EPItems.BLUE_GOLDEN_AXE.get(), EPItems.ALUMINUM_BLUE_GOLDEN_AXE.get());
+            aluminumSmithingUpgrade(consumer, EPItems.BLUE_GOLDEN_PICKAXE.get(), EPItems.ALUMINUM_BLUE_GOLDEN_PICKAXE.get());
+            aluminumSmithingUpgrade(consumer, EPItems.BLUE_GOLDEN_SHOVEL.get(), EPItems.ALUMINUM_BLUE_GOLDEN_SHOVEL.get());
+            aluminumSmithingUpgrade(consumer, EPItems.BLUE_GOLDEN_HOE.get(), EPItems.ALUMINUM_BLUE_GOLDEN_HOE.get());
+            aluminumSmithingUpgrade(consumer, EPItems.BLUE_GOLDEN_POLISHER.get(), EPItems.ALUMINUM_BLUE_GOLDEN_POLISHER.get());
+            aluminumSmithingUpgrade(consumer, EPItems.BLUE_GOLDEN_DAGGER.get(), EPItems.ALUMINUM_BLUE_GOLDEN_DAGGER.get());
 
             //Diamond
-            aluminumSmithingTemplate(consumer, Items.DIAMOND_AXE, EPItems.ALUMINUM_DIAMOND_AXE.get());
-            aluminumSmithingTemplate(consumer, Items.DIAMOND_PICKAXE, EPItems.ALUMINUM_DIAMOND_PICKAXE.get());
-            aluminumSmithingTemplate(consumer, Items.DIAMOND_SHOVEL, EPItems.ALUMINUM_DIAMOND_SHOVEL.get());
-            aluminumSmithingTemplate(consumer, Items.DIAMOND_HOE, EPItems.ALUMINUM_DIAMOND_HOE.get());
-            aluminumSmithingTemplate(consumer, EPItems.DIAMOND_POLISHER.get(), EPItems.ALUMINUM_DIAMOND_POLISHER.get());
-            aluminumSmithingTemplate(consumer, EPItems.DIAMOND_DAGGER.get(), EPItems.ALUMINUM_DIAMOND_DAGGER.get());
+            aluminumSmithingUpgrade(consumer, Items.DIAMOND_SWORD, EPItems.ALUMINUM_DIAMOND_SWORD.get());
+            aluminumSmithingUpgrade(consumer, Items.DIAMOND_AXE, EPItems.ALUMINUM_DIAMOND_AXE.get());
+            aluminumSmithingUpgrade(consumer, Items.DIAMOND_PICKAXE, EPItems.ALUMINUM_DIAMOND_PICKAXE.get());
+            aluminumSmithingUpgrade(consumer, Items.DIAMOND_SHOVEL, EPItems.ALUMINUM_DIAMOND_SHOVEL.get());
+            aluminumSmithingUpgrade(consumer, Items.DIAMOND_HOE, EPItems.ALUMINUM_DIAMOND_HOE.get());
+            aluminumSmithingUpgrade(consumer, EPItems.DIAMOND_POLISHER.get(), EPItems.ALUMINUM_DIAMOND_POLISHER.get());
+            aluminumSmithingUpgrade(consumer, EPItems.DIAMOND_DAGGER.get(), EPItems.ALUMINUM_DIAMOND_DAGGER.get());
 
         //Rose gold upgrade
         roseGoldenSmithingUpgrade(consumer, Items.GOLDEN_HELMET, EPItems.ROSE_GOLDEN_HELMET.get());
@@ -414,8 +425,8 @@ public class GeneralRecipeSubProvider extends RecipeProvider {
             mechanicalItemGrinding(consumer, Items.CORNFLOWER, "blue_dye", Items.BLUE_DYE, 4);
 
             //Lime
-            primalItemGrinding(consumer, EPItems.LIME.get(), "lime_dye", Items.LIME_DYE, 2);
-            mechanicalItemGrinding(consumer, EPItems.LIME.get(), "lime_dye", Items.LIME_DYE, 3);
+            primalItemGrinding(consumer, EPItems.LIME_FRUIT.get(), "lime_dye", Items.LIME_DYE, 2);
+            mechanicalItemGrinding(consumer, EPItems.LIME_FRUIT.get(), "lime_dye", Items.LIME_DYE, 3);
 
             primalItemGrinding(consumer, EPBlocks.SUCCULENT.get(), "lime_dye", Items.LIME_DYE, 2);
             mechanicalItemGrinding(consumer, EPBlocks.SUCCULENT.get(), "lime_dye", Items.LIME_DYE, 3);
@@ -491,7 +502,7 @@ public class GeneralRecipeSubProvider extends RecipeProvider {
                 EPItems.BRONZIUM_INGOT.get(), bronziumItem);
     }
 
-    protected static void aluminumSmithingTemplate(Consumer<FinishedRecipe> consumer, ItemLike baseItem, ItemLike aluminizedItem){
+    protected static void aluminumSmithingUpgrade(Consumer<FinishedRecipe> consumer, ItemLike baseItem, ItemLike aluminizedItem){
         smithingUpgrade(consumer, EPItems.ALUMINUM_UPGRADE_SMITHING_TEMPLATE.get(), baseItem, EPItems.ALUMINUM_INGOT.get(), aluminizedItem);
     }
 

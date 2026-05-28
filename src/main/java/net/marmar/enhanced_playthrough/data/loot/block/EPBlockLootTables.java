@@ -340,9 +340,9 @@ public class EPBlockLootTables extends BlockLootSubProvider implements BlockLoot
             //Lime
             this.dropSelf(EPBlocks.LIME_SAPLING.get());
             this.add(EPBlocks.LIME_LEAVES.get(),
-                    block -> createLeavesWithFruitDrops(block, EPBlocks.LIME_SAPLING.get(), EPItems.LIME.get()));
+                    block -> createLeavesWithFruitDrops(block, EPBlocks.LIME_SAPLING.get(), EPItems.LIME_FRUIT.get()));
             this.add(EPBlocks.LIME_LEAVES_WITH_FRUIT.get(),
-                    block -> createLeavesWithExternalFruitDrops(block, EPBlocks.LIME_SAPLING.get(), EPItems.LIME.get(), 2));
+                    block -> createLeavesWithExternalFruitDrops(block, EPBlocks.LIME_SAPLING.get(), EPItems.LIME_FRUIT.get(), 2));
 
         //Crops
             //Yerba mate

@@ -70,7 +70,8 @@ public class EnglishLangProvider extends AbstractLangProvider {
         addGuiElements("gem_polisher_screen", "Uses");
 
         //Descriptions
-        addDescription("aluminum_tool", "Aluminum handle: 20% more durability");
+        addDescription("leather_stick_tool", "Reinforced handle: 10% more durability");
+        addDescription("aluminum_stick_tool", "Aluminum handle: 20% more durability");
         addDescription("polisher_item","Used on the Gem polisher as fuel");
         addDescription("silver_armor", "When full equipped: gives Haste to the player");
         addDescription("rose_gold_armor", "When full equipped: gives Haste to the player");
@@ -78,6 +79,7 @@ public class EnglishLangProvider extends AbstractLangProvider {
         addDescription("green_gold_armor", "When full equipped: gives Haste II to the player");
         addDescription("blue_gold_armor", "When full equipped: gives Haste II to the player");
         addDescription("dagger_bleed", "Bleed probability: ");
+        addDescription("raw_gem", "Must be polished");
 
         //Sounds
         addSoundDescription("grind", "Active grinder");
@@ -472,7 +474,7 @@ public class EnglishLangProvider extends AbstractLangProvider {
             addItem(EPItems.TALL_REEDS_HEAD, "tall reed head");
             addItem(EPItems.WATER_REEDS_HEAD, "Reed head");
             addItem(EPItems.PLANT_FIBER, "Plant fiber");
-
+            addItem(EPItems.LIME, "Lime");
 
             //Hide
             addItem(EPItems.COW_HIDE, "Cow hide");
@@ -770,7 +772,7 @@ public class EnglishLangProvider extends AbstractLangProvider {
                 //Fruits
                 addItem(EPItems.TOMATO, "Tomato");
                 addItem(EPItems.LEMON, "Lemon");
-                addItem(EPItems.LIME, "Lime");
+                addItem(EPItems.LIME_FRUIT, "Lime");
                 addItem(EPItems.ORANGE, "Orange");
                 addItem(EPItems.WALNUT, "Walnut");
                 addItem(EPItems.PEELED_WALNUT, "Peeled walnut");

@@ -99,7 +99,7 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .unlockedBy(getHasName(EPItems.CORN_SEEDS.get()), has(EPItems.CORN_SEEDS.get()))
                 .save(consumer);
 
-        //Misc
+        //Sulfur
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, EPBlocks.SULFUR_BLOCK.get())
                 .pattern("SSS")
                 .pattern("SSS")
@@ -113,11 +113,20 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .unlockedBy(getHasName(EPBlocks.SULFUR_BLOCK.get()), has(EPBlocks.SULFUR_BLOCK.get()))
                 .save(consumer);
 
+        //Dyes
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.YELLOW_DYE, 2)
                 .requires(EPItems.SULFUR.get())
                 .unlockedBy(getHasName(EPItems.SULFUR.get()), has(EPItems.SULFUR.get()))
+                .unlockedBy(getHasName(Items.YELLOW_DYE), has(Items.YELLOW_DYE))
                 .save(consumer);
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.WHITE_DYE, 3)
+                .requires(EPItems.LIME.get())
+                .unlockedBy(getHasName(EPItems.LIME.get()), has(EPItems.LIME.get()))
+                .unlockedBy(getHasName(Items.WHITE_DYE), has(Items.WHITE_DYE))
+                .save(consumer);
+
+        //Mud bricks
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EPItems.MUD_BRICK.get(), 2)
                 .requires(Items.DIRT)
                 .requires(EPItems.PLANT_FIBER.get())
@@ -135,6 +144,7 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .unlockedBy(getHasName(Items.CLAY_BALL), has(Items.CLAY_BALL))
                 .save(consumer, recipeName(EPItems.MUD_BRICK.get(), "from_wheat"));
 
+        //Aluminum
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, EPItems.ALUMINUM_ROD.get(), 4)
                 .pattern("A")
                 .pattern("A")
@@ -142,6 +152,18 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .unlockedBy(getHasName(EPItems.ALUMINUM_INGOT.get()), has(EPItems.ALUMINUM_INGOT.get()))
                 .save(consumer);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, EPItems.ALUMINUM_ARROW.get(), 4)
+                .pattern("F")
+                .pattern("R")
+                .pattern("A")
+                .define('F', Items.FLINT)
+                .define('R', EPItems.ALUMINUM_ROD.get())
+                .define('A', Items.FEATHER)
+                .unlockedBy("has_arrow_material", HAS_ARROW_MATERIALS())
+                .unlockedBy(getHasName(EPItems.ALUMINUM_ARROW.get()), has(EPItems.ALUMINUM_ARROW.get()))
+                .save(consumer);
+
+        //Leather
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.LEATHER)
                 .requires(EPItems.COW_HIDE.get(), 2)
                 .group("leather")
@@ -160,18 +182,7 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .unlockedBy(getHasName(EPItems.WERELLAGER_HIDE.get()), has(EPItems.WERELLAGER_HIDE.get()))
                 .save(consumer, recipeName(Items.LEATHER, "from_werellager_hide"));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, EPItems.ALUMINUM_ARROW.get(), 4)
-                .pattern("F")
-                .pattern("R")
-                .pattern("A")
-                .define('F', Items.FLINT)
-                .define('R', EPItems.ALUMINUM_ROD.get())
-                .define('A', Items.FEATHER)
-                .unlockedBy("has_arrow_material", HAS_ARROW_MATERIALS())
-                .unlockedBy(getHasName(EPItems.ALUMINUM_ARROW.get()), has(EPItems.ALUMINUM_ARROW.get()))
-                .save(consumer);
-
-        //Vegetable fibber
+        //Plant fiber
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EPItems.PLANT_FIBER.get())
                 .requires(EPItems.REEDS_HEAD.get(), 2)
                 .group("plant_fiber")

@@ -18,11 +18,24 @@
         "recipe": "minecraft:yellow_dye"
       },
       "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_yellow_dye": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:yellow_dye"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
     }
   },
   "requirements": [
     [
       "has_sulfur",
+      "has_yellow_dye",
       "has_the_recipe"
     ]
   ],
