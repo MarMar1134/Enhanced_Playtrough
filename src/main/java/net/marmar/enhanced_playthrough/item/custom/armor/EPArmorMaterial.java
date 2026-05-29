@@ -31,18 +31,18 @@ public enum EPArmorMaterial implements ArmorMaterial {
     private final String name;
     private final int durabilityMultiplier;
     private final int[] protectionAmounts;
-    private final int enchantmenValue;
+    private final int enchantmentValue;
     private final SoundEvent equipSound;
     private final float toughness;
     private final float knockbackResistance;
     private final Supplier<Ingredient> repairIngredient;
     private static final int[] BASE_DURABILITY = {11,16,16,13};
 
-    EPArmorMaterial(String name, int durabilityMultiplier, int[] protectionAmounts, int enchantmenValue, SoundEvent equipSound, float toughness, float knockbackResistance, Supplier<Ingredient> repairIngredient) {
+    EPArmorMaterial(String name, int durabilityMultiplier, int[] protectionAmounts, int enchantmentValue, SoundEvent equipSound, float toughness, float knockbackResistance, Supplier<Ingredient> repairIngredient) {
         this.name = name;
         this.durabilityMultiplier = durabilityMultiplier;
         this.protectionAmounts = protectionAmounts;
-        this.enchantmenValue = enchantmenValue;
+        this.enchantmentValue = enchantmentValue;
         this.equipSound = equipSound;
         this.toughness = toughness;
         this.knockbackResistance = knockbackResistance;
@@ -61,7 +61,7 @@ public enum EPArmorMaterial implements ArmorMaterial {
 
     @Override
     public int getEnchantmentValue() {
-        return enchantmenValue;
+        return this.enchantmentValue;
     }
 
     @Override

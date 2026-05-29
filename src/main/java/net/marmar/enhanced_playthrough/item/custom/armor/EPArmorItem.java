@@ -21,6 +21,7 @@ import java.util.Map;
 public class EPArmorItem extends ArmorItem {
     private final EPArmorMaterial armorMaterial;
     private final boolean isPiglinNeutral;
+
     private static final Map<ArmorMaterial, MobEffectInstance> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, MobEffectInstance>())
                     .put(EPArmorMaterial.SILVER, new MobEffectInstance(MobEffects.DIG_SPEED, 200, 0,

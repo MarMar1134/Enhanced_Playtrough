@@ -1,6 +1,7 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "enhanced_playthrough:item/bronzium_polisher"
+    "layer0": "enhanced_playthrough:item/bronzium_polisher",
+    "layer1": "enhanced_playthrough:item/handle/base_polisher"
   }
 }

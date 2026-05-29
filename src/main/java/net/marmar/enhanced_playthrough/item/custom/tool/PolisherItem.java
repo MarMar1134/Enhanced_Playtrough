@@ -67,14 +67,6 @@ public class PolisherItem extends TieredItem implements Vanishable {
         return super.isDamaged(stack);
     }
 
-    public float getAttackAttribute() {
-        return attackAttribute;
-    }
-
-    public float getSpeedAttribute() {
-        return speedAttribute;
-    }
-
     @Override
     public Multimap<Attribute, AttributeModifier> getDefaultAttributeModifiers(EquipmentSlot pSlot) {
         return pSlot == EquipmentSlot.MAINHAND ? this.attributeModifiers : super.getDefaultAttributeModifiers(pSlot);

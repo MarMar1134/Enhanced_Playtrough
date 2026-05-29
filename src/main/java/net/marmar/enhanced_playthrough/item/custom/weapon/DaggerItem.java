@@ -18,8 +18,8 @@ import java.util.concurrent.atomic.AtomicBoolean;
 public class DaggerItem extends WeaponItem {
     private final float baseBleedProbability;
 
-    protected DaggerItem(Tier pTier, int pAttackDamageModifier, float pBaseBleedProbability, Properties pProperties) {
-        super(pTier, pAttackDamageModifier, -1F, -1F, pProperties);
+    protected DaggerItem(Tier pTier, int pAttackDamageModifier, float pAttackSpeedModifier, float pBaseBleedProbability, Properties pProperties) {
+        super(pTier, pAttackDamageModifier, pAttackSpeedModifier, -1F, pProperties);
         this.baseBleedProbability = pBaseBleedProbability;
     }
 

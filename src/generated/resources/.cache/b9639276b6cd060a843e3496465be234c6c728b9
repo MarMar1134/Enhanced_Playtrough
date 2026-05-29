@@ -1,4 +1,4 @@
-// 1.20.1	2026-05-25T20:09:06.6608297	Tags for minecraft:item mod id enhanced_playthrough
+// 1.20.1	2026-05-28T11:51:44.4788433	Tags for minecraft:item mod id enhanced_playthrough
 0ff3092eb36a0159ae287d2f429e5f5eb6fb0c0a data/enhanced_playthrough/tags/items/aluminum.json
 b3b284c126879d981b4f706eb8ea0e63bd17ae12 data/enhanced_playthrough/tags/items/apple_logs.json
 7c7828adcbd60c80e9a7c4bd6e7d0382327527c8 data/enhanced_playthrough/tags/items/blue_gold.json
@@ -6,7 +6,7 @@ b3b284c126879d981b4f706eb8ea0e63bd17ae12 data/enhanced_playthrough/tags/items/ap
 ac34ae703a2c2baf2be8606c12616264c07ce35e data/enhanced_playthrough/tags/items/bronze.json
 027f10b9f74c636263b73bb0e505d0e684b0cc50 data/enhanced_playthrough/tags/items/bronzium.json
 58d0baffb4f84f2b600f8218ed0249cb4ffa5666 data/enhanced_playthrough/tags/items/cobble.json
-e5f2d642c9d9b020c4b93511a8cea241db8ae616 data/enhanced_playthrough/tags/items/gold.json
+f7243b2d7c3246714579ff7e5345c6268e6f68c4 data/enhanced_playthrough/tags/items/gold.json
 8594d787d8e4fa92e3fa3d55a3593f459440d415 data/enhanced_playthrough/tags/items/green_gold.json
 5cb953245495326a2398eaee4bea383aee7977df data/enhanced_playthrough/tags/items/ingots/aluminum.json
 e0e0c5e3b09ac1077d7935e70b6703de286273e4 data/enhanced_playthrough/tags/items/ingots/blue_gold.json
@@ -36,7 +36,7 @@ b5386969206b95de9139c983863096419f9d7f1f data/enhanced_playthrough/tags/items/ma
 b0c73437fdb0ed3001cc54a43766a8a9ee422317 data/enhanced_playthrough/tags/items/manufacturable/bronze.json
 e8b73c47f37a77af2c07779764950941c3c12328 data/enhanced_playthrough/tags/items/manufacturable/bronzium.json
 d6b36cf68ac26be577a83f121f9abcfaab6e6f7c data/enhanced_playthrough/tags/items/manufacturable/copper.json
-7d85c4c506cfe02a7aa4a061eb9eccd1744bc7c4 data/enhanced_playthrough/tags/items/manufacturable/gold.json
+df348de8e32381a8a2d75a076f89430b93fe1da9 data/enhanced_playthrough/tags/items/manufacturable/gold.json
 561f1c89d20272cc13ab76fbc2c48cbff15a85a0 data/enhanced_playthrough/tags/items/manufacturable/green_gold.json
 bb2f624386e28c59817797e749227f996f517ad0 data/enhanced_playthrough/tags/items/manufacturable/iron.json
 187e4882bf4d10de3077ba13c84f617087681d38 data/enhanced_playthrough/tags/items/manufacturable/rose_gold.json
@@ -65,7 +65,7 @@ b8ac97085c1e2d580911d8b946fbe4ee1129b132 data/enhanced_playthrough/tags/items/si
 a2809eefeb5127ce6cbb247c4ac406b07ce833a8 data/enhanced_playthrough/tags/items/terracotta_shard.json
 e486e622d64aa97dd9f514737bd73898804dc944 data/enhanced_playthrough/tags/items/tools/daggers.json
 06b04f42c8b8659c0cd7e5252643010728c62883 data/enhanced_playthrough/tags/items/tools/hurts_lycan.json
-0f470e87118a9d30965b48eb909f049e1737fe24 data/enhanced_playthrough/tags/items/tools/polishers.json
+32765381e10a1e094cc189a93220302cddce4df5 data/enhanced_playthrough/tags/items/tools/polishers.json
 dd45b2fedd17b120ce07c3e9345d41c34387316a data/enhanced_playthrough/tags/items/walnut_logs.json
 3892794950b545d7a5e0aa50938deed6cb26924b data/forge/tags/items/dusts.json
 5b5bda12ee2c87e66357b3ddefa6fcb923541da1 data/forge/tags/items/ingots.json

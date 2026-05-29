@@ -1,6 +1,7 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "enhanced_playthrough:item/blue_golden_axe"
+    "layer0": "enhanced_playthrough:item/blue_golden_axe",
+    "layer1": "enhanced_playthrough:item/handle/base_axe"
   }
 }

@@ -1,6 +1,7 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "enhanced_playthrough:item/brass_shovel"
+    "layer0": "enhanced_playthrough:item/brass_shovel",
+    "layer1": "enhanced_playthrough:item/handle/base_shovel"
   }
 }
