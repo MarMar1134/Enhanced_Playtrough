@@ -15,7 +15,7 @@ import net.marmar.enhanced_playthrough.menu.screen.gempolisher.GemPolisherScreen
 import net.marmar.enhanced_playthrough.menu.screen.grinder.MechanicalGrinderScreen;
 import net.marmar.enhanced_playthrough.menu.screen.grinder.PrimalGrinderScreen;
 import net.marmar.enhanced_playthrough.menu.screen.modfurnace.MasonryFurnaceScreen;
-import net.marmar.enhanced_playthrough.recipe.AlchemicalDuplicationRecipe;
+import net.marmar.enhanced_playthrough.recipe.alchemicalduplication.AlchemicalDuplicationRecipe;
 import net.marmar.enhanced_playthrough.recipe.GemPolishingRecipe;
 import net.marmar.enhanced_playthrough.recipe.epsmelt.MasonrySmeltingRecipe;
 import net.marmar.enhanced_playthrough.recipe.grind.MechanicalGrindRecipe;

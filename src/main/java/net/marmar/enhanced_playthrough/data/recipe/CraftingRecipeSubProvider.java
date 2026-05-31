@@ -4,6 +4,8 @@ import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.block.EPBlocks;
 import net.marmar.enhanced_playthrough.data.tag.EPTags;
 import net.marmar.enhanced_playthrough.item.EPItems;
+import net.marmar.enhanced_playthrough.recipe.crafting.EPShapedRecipeBuilder;
+import net.marmar.enhanced_playthrough.recipe.crafting.EPShapelessRecipeBuilder;
 import net.minecraft.advancements.critereon.EnterBlockTrigger;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.advancements.critereon.ItemPredicate;
@@ -181,6 +183,20 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .group("leather")
                 .unlockedBy(getHasName(EPItems.WERELLAGER_HIDE.get()), has(EPItems.WERELLAGER_HIDE.get()))
                 .save(consumer, recipeName(Items.LEATHER, "from_werellager_hide"));
+
+        EPShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EPItems.LEATHER_STRIPS.get(), 3)
+                .requires(Items.SHEARS)
+                .requires(Items.LEATHER)
+                .consumeDurability(true)
+                .durabilityToConsume(10)
+                .unlockedBy(getHasName(Items.LEATHER), has(Items.LEATHER))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.TOOLS, EPItems.REINFORCED_STICK.get())
+                .requires(EPItems.LEATHER_STRIPS.get())
+                .requires(Items.STICK)
+                .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
+                .save(consumer);
 
         //Plant fiber
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EPItems.PLANT_FIBER.get())

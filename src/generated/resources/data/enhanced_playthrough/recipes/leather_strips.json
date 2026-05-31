@@ -1,0 +1,18 @@
+{
+  "type": "enhanced_playthrough:ep_shapeless_crafting",
+  "category": "misc",
+  "consume_durability": true,
+  "durability_to_consume": 10,
+  "ingredients": [
+    {
+      "item": "minecraft:shears"
+    },
+    {
+      "item": "minecraft:leather"
+    }
+  ],
+  "result": {
+    "count": 3,
+    "item": "enhanced_playthrough:leather_strips"
+  }
+}

@@ -1,13 +1,17 @@
 package net.marmar.enhanced_playthrough.recipe;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
+import net.marmar.enhanced_playthrough.recipe.alchemicalduplication.AlchemicalDuplicationRecipe;
 import net.marmar.enhanced_playthrough.recipe.alloy.AlloyRecipe;
 import net.marmar.enhanced_playthrough.recipe.alloy.BlastAlloyRecipe;
+import net.marmar.enhanced_playthrough.recipe.crafting.EPShapedRecipe;
+import net.marmar.enhanced_playthrough.recipe.crafting.EPShapelessRecipe;
 import net.marmar.enhanced_playthrough.recipe.epsmelt.BasicSmeltingRecipe;
 import net.marmar.enhanced_playthrough.recipe.epsmelt.MasonrySmeltingRecipe;
 import net.marmar.enhanced_playthrough.recipe.epsmelt.SoulBasicSmeltingRecipe;
 import net.marmar.enhanced_playthrough.recipe.grind.MechanicalGrindRecipe;
 import net.marmar.enhanced_playthrough.recipe.grind.PrimalGrindRecipe;
+import net.marmar.enhanced_playthrough.recipe.leatherwork.LeatherworkRecipe;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -82,6 +86,13 @@ public class EPRecipes {
                     RECIPE_SERIALIZER.register("leatherworking", ()-> LeatherworkRecipe.Serializer.INSTANCE);
         public static final RegistryObject<RecipeType<LeatherworkRecipe>> LEATHERWORKING_TYPE =
                 RECIPE_TYPE.register("leatherworking", ()-> LeatherworkRecipe.Type.INSTANCE);
+
+        //Shaped and shapeless
+        public static final RegistryObject<RecipeSerializer<EPShapedRecipe>> EP_SHAPED_CRAFTING_SERIALIZER =
+                RECIPE_SERIALIZER.register("ep_shaped_crafting", () -> EPShapedRecipe.Serializer.INSTANCE);
+
+        public static final RegistryObject<RecipeSerializer<EPShapelessRecipe>> EP_SHAPELESS_CRAFTING_SERIALIZER =
+                RECIPE_SERIALIZER.register("ep_shapeless_crafting", () -> EPShapelessRecipe.Serializer.INSTANCE);
 
     public static void register(IEventBus eventBus){
         EnhancedPlaythrough.LOGGER.info("Registering Enhanced Playthrough recipe serializers...");

@@ -1,4 +1,4 @@
-package net.marmar.enhanced_playthrough.recipe.builder;
+package net.marmar.enhanced_playthrough.recipe.alchemicalduplication;
 
 import com.google.gson.JsonObject;
 import net.marmar.enhanced_playthrough.recipe.EPRecipes;
@@ -18,32 +18,32 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.function.Consumer;
 
-public class AlchemicalDuplicatingRecipeBuilder implements RecipeBuilder {
+public class AlchemicalDuplicationRecipeBuilder implements RecipeBuilder {
     private final Ingredient input;
     private final Item output;
     private final float xp;
     private final Advancement.Builder advancement = Advancement.Builder.recipeAdvancement();
     private final RecipeSerializer<?> serializer;
 
-    protected AlchemicalDuplicatingRecipeBuilder(Ingredient pInput, Item pOutput, float pXp, RecipeSerializer<?> pSerializer){
+    protected AlchemicalDuplicationRecipeBuilder(Ingredient pInput, Item pOutput, float pXp, RecipeSerializer<?> pSerializer){
         this.input = pInput;
         this.output = pOutput;
         this.xp = pXp;
         this.serializer = pSerializer;
     }
 
-    public static AlchemicalDuplicatingRecipeBuilder alchemicalDuplicating(Ingredient pInput, Item pOutput, float pXp){
-        return new AlchemicalDuplicatingRecipeBuilder(pInput, pOutput, pXp, EPRecipes.ALCHEMICAL_DUPLICATING_SERIALIZER.get());
+    public static AlchemicalDuplicationRecipeBuilder alchemicalDuplicating(Ingredient pInput, Item pOutput, float pXp){
+        return new AlchemicalDuplicationRecipeBuilder(pInput, pOutput, pXp, EPRecipes.ALCHEMICAL_DUPLICATING_SERIALIZER.get());
     }
 
     @Override
-    public AlchemicalDuplicatingRecipeBuilder unlockedBy(String s, CriterionTriggerInstance criterionTriggerInstance) {
+    public AlchemicalDuplicationRecipeBuilder unlockedBy(String s, CriterionTriggerInstance criterionTriggerInstance) {
         this.advancement.addCriterion(s, criterionTriggerInstance);
         return this;
     }
 
     @Override
-    public AlchemicalDuplicatingRecipeBuilder group(@Nullable String s) {
+    public AlchemicalDuplicationRecipeBuilder group(@Nullable String s) {
         return this;
     }
 

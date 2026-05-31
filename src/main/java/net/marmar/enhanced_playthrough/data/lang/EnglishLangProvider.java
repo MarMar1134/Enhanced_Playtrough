@@ -467,6 +467,8 @@ public class EnglishLangProvider extends AbstractLangProvider {
             //Others
             addItem(EPItems.MUD_BRICK, "Mud brick");
             addItem(EPItems.FIREBRICK, "Firebrick");
+            addItem(EPItems.LEATHER_STRIPS, "Leather strips");
+            addItem(EPItems.REINFORCED_STICK, "Reinforced stick");
             addItem(EPItems.ALUMINUM_ROD, "Aluminum rod");
             addItem(EPItems.COBALT, "Cobalt");
             addItem(EPItems.REEDS_HEAD, "Pampas grass head");

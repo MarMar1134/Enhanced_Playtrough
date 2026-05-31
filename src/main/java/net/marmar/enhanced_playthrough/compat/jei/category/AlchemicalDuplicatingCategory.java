@@ -11,7 +11,7 @@ import mezz.jei.api.recipe.category.IRecipeCategory;
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.block.EPBlocks;
 import net.marmar.enhanced_playthrough.item.EPItems;
-import net.marmar.enhanced_playthrough.recipe.AlchemicalDuplicationRecipe;
+import net.marmar.enhanced_playthrough.recipe.alchemicalduplication.AlchemicalDuplicationRecipe;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;

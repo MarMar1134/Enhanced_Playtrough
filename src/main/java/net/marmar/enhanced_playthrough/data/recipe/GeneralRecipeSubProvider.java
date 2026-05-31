@@ -5,10 +5,10 @@ import net.marmar.enhanced_playthrough.block.EPBlocks;
 import net.marmar.enhanced_playthrough.data.tag.EPTags;
 import net.marmar.enhanced_playthrough.item.EPItems;
 import net.marmar.enhanced_playthrough.recipe.EPRecipes;
-import net.marmar.enhanced_playthrough.recipe.builder.LeatherworkRecipeBuilder;
+import net.marmar.enhanced_playthrough.recipe.leatherwork.LeatherworkRecipeBuilder;
 import net.marmar.enhanced_playthrough.recipe.grind.AbstractGrindRecipe;
-import net.marmar.enhanced_playthrough.recipe.builder.GenericRecipeBuilder;
-import net.marmar.enhanced_playthrough.recipe.builder.EPSmithingRecipesBuilder;
+import net.marmar.enhanced_playthrough.recipe.GenericRecipeBuilder;
+import net.marmar.enhanced_playthrough.recipe.EPSmithingRecipesBuilder;
 import net.marmar.enhanced_playthrough.recipe.category.ModRecipeCategory;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
@@ -321,6 +321,9 @@ public class GeneralRecipeSubProvider extends RecipeProvider {
 
         primalItemGrinding(consumer, ItemTags.WOOL, "string", Items.STRING, 2);
         mechanicalItemGrinding(consumer, ItemTags.WOOL, "string", Items.STRING, 4);
+
+        primalItemGrinding(consumer, Items.LEATHER, "leather", EPItems.LEATHER_STRIPS.get(), 2);
+        mechanicalItemGrinding(consumer, Items.LEATHER, "leather", EPItems.LEATHER_STRIPS.get(), 4);
 
         //Sulfur from Blazes
         mechanicalItemGrinding(consumer, Items.BLAZE_ROD, "sulfur", EPItems.SULFUR.get(), 3);

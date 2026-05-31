@@ -2,6 +2,7 @@ package net.marmar.enhanced_playthrough.recipe;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
+import net.marmar.enhanced_playthrough.block.EPBlocks;
 import net.marmar.enhanced_playthrough.recipe.category.ModRecipeCategory;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.network.FriendlyByteBuf;
@@ -68,6 +69,11 @@ public class GemPolishingRecipe implements Recipe<SimpleContainer> {
     @Override
     public RecipeType<?> getType() {
         return GemPolishingRecipe.Type.INSTANCE;
+    }
+
+    @Override
+    public ItemStack getToastSymbol() {
+        return new ItemStack(EPBlocks.GEM_POLISHER.get());
     }
 
     public static class Type implements RecipeType<GemPolishingRecipe>{

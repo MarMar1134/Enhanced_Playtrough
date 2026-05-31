@@ -3,7 +3,7 @@ package net.marmar.enhanced_playthrough.block.custom.alchemicalduplicator;
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.block.EPBlockEntities;
 import net.marmar.enhanced_playthrough.menu.alchemicalduplicator.AlchemicalDuplicatorMenu;
-import net.marmar.enhanced_playthrough.recipe.AlchemicalDuplicationRecipe;
+import net.marmar.enhanced_playthrough.recipe.alchemicalduplication.AlchemicalDuplicationRecipe;
 import net.marmar.enhanced_playthrough.recipe.EPRecipes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

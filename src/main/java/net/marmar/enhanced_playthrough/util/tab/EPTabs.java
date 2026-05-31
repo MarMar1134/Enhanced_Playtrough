@@ -102,6 +102,9 @@ public class EPTabs {
                         output.accept(EPItems.MUD_BRICK.get());
                         output.accept(EPItems.FIREBRICK.get());
 
+                        output.accept(EPItems.LEATHER_STRIPS.get());
+                        output.accept(EPItems.REINFORCED_STICK.get());
+
                         output.accept(EPItems.LIME.get());
 
                         output.accept(EPItems.ALUMINUM_ROD.get());

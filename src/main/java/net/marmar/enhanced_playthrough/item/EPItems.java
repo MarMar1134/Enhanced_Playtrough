@@ -228,6 +228,10 @@ public class EPItems {
             "mud_brick", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> FIREBRICK = ITEMS.register(
             "firebrick", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> LEATHER_STRIPS = ITEMS.register(
+            "leather_strips", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> REINFORCED_STICK = ITEMS.register(
+            "reinforced_stick", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> ALUMINUM_ROD = ITEMS.register(
             "aluminum_rod", ()-> new Item(new Item.Properties()));
     public static final RegistryObject<Item> PLANT_FIBER = ITEMS.register(

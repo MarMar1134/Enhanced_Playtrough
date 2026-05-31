@@ -468,6 +468,8 @@ public class ArgentinianLangProvider extends AbstractLangProvider {
         //Others
         addItem(EPItems.MUD_BRICK, "Ladrillo de adobe");
         addItem(EPItems.FIREBRICK, "Ladrillo refractario");
+        addItem(EPItems.LEATHER_STRIPS, "Tiras de cuero");
+        addItem(EPItems.REINFORCED_STICK, "Palo reforzado");
         addItem(EPItems.ALUMINUM_ROD, "Vara de aluminio");
         addItem(EPItems.COBALT, "Cobalto");
         addItem(EPItems.REEDS_HEAD, "Cabeza de plumero");

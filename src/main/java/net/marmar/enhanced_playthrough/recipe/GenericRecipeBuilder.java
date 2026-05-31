@@ -1,6 +1,5 @@
-package net.marmar.enhanced_playthrough.recipe.builder;
+package net.marmar.enhanced_playthrough.recipe;
 
-import net.marmar.enhanced_playthrough.recipe.EPRecipes;
 import net.marmar.enhanced_playthrough.recipe.grind.AbstractGrindRecipe;
 import net.marmar.enhanced_playthrough.recipe.category.ModRecipeCategory;
 import com.google.gson.JsonObject;

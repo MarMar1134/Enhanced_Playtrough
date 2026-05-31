@@ -2,7 +2,7 @@ package net.marmar.enhanced_playthrough.data.recipe;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.item.EPItems;
-import net.marmar.enhanced_playthrough.recipe.builder.AlchemicalDuplicatingRecipeBuilder;
+import net.marmar.enhanced_playthrough.recipe.alchemicalduplication.AlchemicalDuplicationRecipeBuilder;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeProvider;
@@ -31,13 +31,13 @@ public class AlchemicalDuplicatingSubProvider extends RecipeProvider {
     }
 
     private static void alchemicalDuplicating(Consumer<FinishedRecipe> pConsumer, TagKey<Item> pInput, ItemLike pOutput, float pXp){
-        AlchemicalDuplicatingRecipeBuilder.alchemicalDuplicating(Ingredient.of(pInput), pOutput.asItem(), pXp)
+        AlchemicalDuplicationRecipeBuilder.alchemicalDuplicating(Ingredient.of(pInput), pOutput.asItem(), pXp)
                 .unlockedBy("has_" + pInput, has(pInput))
                 .save(pConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(pOutput) + "_from_alchemical_duplicating");
     }
 
     private static void alchemicalDuplicating(Consumer<FinishedRecipe> pConsumer, ItemLike pInput, ItemLike pOutput, float pXp){
-        AlchemicalDuplicatingRecipeBuilder.alchemicalDuplicating(Ingredient.of(pInput), pOutput.asItem(), pXp)
+        AlchemicalDuplicationRecipeBuilder.alchemicalDuplicating(Ingredient.of(pInput), pOutput.asItem(), pXp)
                 .unlockedBy(getHasName(pInput), has(pInput))
                 .save(pConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(pOutput) + "_from_alchemical_duplicating");
     }

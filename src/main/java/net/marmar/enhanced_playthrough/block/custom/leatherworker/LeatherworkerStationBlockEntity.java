@@ -3,7 +3,7 @@ package net.marmar.enhanced_playthrough.block.custom.leatherworker;
 import net.marmar.enhanced_playthrough.block.EPBlockEntities;
 import net.marmar.enhanced_playthrough.menu.leatherworker.LeatherworkerStationMenu;
 import net.marmar.enhanced_playthrough.recipe.EPRecipes;
-import net.marmar.enhanced_playthrough.recipe.LeatherworkRecipe;
+import net.marmar.enhanced_playthrough.recipe.leatherwork.LeatherworkRecipe;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;

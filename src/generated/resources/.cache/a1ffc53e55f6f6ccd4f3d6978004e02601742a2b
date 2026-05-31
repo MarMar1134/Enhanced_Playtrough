@@ -1,4 +1,4 @@
-// 1.20.1	2026-05-29T12:27:40.0878751	Item Models: enhanced_playthrough
+// 1.20.1	2026-05-31T16:00:11.1063759	Item Models: enhanced_playthrough
 b2df27b0d68c4c96244f2f344cb1fc54663e392f assets/enhanced_playthrough/models/item/adobe_alloy_furnace.json
 9731043a19f6a4326f19981cca25ade3d23cd23d assets/enhanced_playthrough/models/item/adobe_furnace.json
 c56c6fdc1e91add0abd02c8c7acc92cdb3044eb1 assets/enhanced_playthrough/models/item/alchemical_duplicator.json
@@ -429,6 +429,7 @@ b47c4bfd2cb833d9e4b6aa4fd27314006a0c0102 assets/enhanced_playthrough/models/item
 bb94f4c8acf9f8bb81c005698f2895fb5e751e93 assets/enhanced_playthrough/models/item/iron_polisher.json
 046659a3dc790780861bc11202d67d12244f4f6a assets/enhanced_playthrough/models/item/kenaf.json
 83488b0390da996420ef759a742a6e35d11c7359 assets/enhanced_playthrough/models/item/kenaf_branch.json
+fa98683b5a0c2151bb8d6e23363e790763f341c6 assets/enhanced_playthrough/models/item/leather_strips.json
 3c5789e1dd243492c4debcd621713257c6ac7bd4 assets/enhanced_playthrough/models/item/lemon.json
 d55d6b440bb3c87458395f2ed3dae275c221d266 assets/enhanced_playthrough/models/item/lemon_boat.json
 ab577a8e420e59c6aeebf8037e45afef7b686fbb assets/enhanced_playthrough/models/item/lemon_button.json
@@ -508,6 +509,7 @@ f6aebd04dfc2f18d2fe5b10cf39edb4b2da35954 assets/enhanced_playthrough/models/item
 5829118be073eef70646c60dd5dbd7616dd7c2a2 assets/enhanced_playthrough/models/item/red_terracotta_shard.json
 27c2ecfbb64479b56ac0d5aaa9c7bbb0d6c9c69c assets/enhanced_playthrough/models/item/reeds.json
 a188ccda68bbf8d30f714ebea973c971d3c6ba12 assets/enhanced_playthrough/models/item/reeds_head.json
+290a6b731accf2648f5c0bdb191e311ef749ed71 assets/enhanced_playthrough/models/item/reinforced_stick.json
 8f0efb36286d9f0ce5b1ba0a872581a3d31498b6 assets/enhanced_playthrough/models/item/rice_bowl.json
 840b9296800e8149da6c3b5276b9e2e44d0b64fb assets/enhanced_playthrough/models/item/rice_grains.json
 20fc5853c1ad342ab4e255f23617d488c2db699c assets/enhanced_playthrough/models/item/rose_golden_axe.json

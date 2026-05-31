@@ -385,6 +385,8 @@ public class EPItemModelProvider extends ItemModelProvider {
         //Other materials
         simpleItem(EPItems.MUD_BRICK);
         simpleItem(EPItems.FIREBRICK);
+        simpleItem(EPItems.LEATHER_STRIPS);
+        simpleItem(EPItems.REINFORCED_STICK);
         simpleItem(EPItems.ALUMINUM_ROD);
         simpleItem(EPItems.PLANT_FIBER);
         simpleItem(EPItems.REEDS_HEAD);

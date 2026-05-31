@@ -1,4 +1,4 @@
-package net.marmar.enhanced_playthrough.recipe;
+package net.marmar.enhanced_playthrough.recipe.alchemicalduplication;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
