@@ -263,16 +263,26 @@ public interface BlockLootTableBuilders {
     }
 
     default LootTable.Builder createRoughMiningDrops(Block pBlock, ItemLike pRoughDrop, int pRoughQuantity){
-        return LootTable.lootTable().withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1))
-                //When doesn't have Rough mining, the base block is dropped
-                .add(LootItem.lootTableItem(pBlock)).when(HAS_ROUGH_MINING.invert()))
-
-                //When has Rough mining, the alternative loot is dropped
+        return LootTable.lootTable()
                 .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1))
-                        .add(LootItem.lootTableItem(pRoughDrop)
-                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(pRoughQuantity)))
-                                .apply(ApplyBonusCount.addUniformBonusCount(Enchantments.BLOCK_FORTUNE)))
-                        .when(HAS_ROUGH_MINING));
+                    .add(LootItem.lootTableItem(pBlock))
+                    .when(HAS_ROUGH_MINING.invert())) //Doesn't have rough mining
+                .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1))
+                    .add(LootItem.lootTableItem(pRoughDrop)
+                            .apply(SetItemCountFunction.setCount(ConstantValue.exactly(pRoughQuantity)))
+                            .apply(ApplyBonusCount.addUniformBonusCount(Enchantments.BLOCK_FORTUNE)))
+                    .when(HAS_ROUGH_MINING)); //Has rough mining
+    }
+
+    default LootTable.Builder createRawMaterialBlockDrops(Block pRawBlock, ItemLike pRawMaterial){
+        return LootTable.lootTable()
+                .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1))
+                        .add(LootItem.lootTableItem(pRawBlock))
+                        .when(HAS_ROUGH_MINING.invert())) //Doesn't have rough mining
+                .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1))
+                        .add(LootItem.lootTableItem(pRawMaterial)
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(9))))
+                        .when(HAS_ROUGH_MINING)); //Has rough mining
     }
 
     /**

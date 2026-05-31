@@ -24,7 +24,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "enhanced_playthrough:raw_aluminum_block"
+          "name": "minecraft:raw_iron_block"
         }
       ],
       "rolls": 1.0
@@ -56,11 +56,11 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "enhanced_playthrough:raw_aluminum"
+          "name": "minecraft:raw_iron"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "enhanced_playthrough:blocks/raw_aluminum_block"
+  "random_sequence": "minecraft:blocks/raw_iron_block"
 }

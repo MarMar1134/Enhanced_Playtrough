@@ -22,8 +22,10 @@ public class CustomToolItem {
 
         public Sword(Tier pTier, HandleTier pHandleTier, int pAttackDamageModifier, float pAttackSpeedModifier, Properties pProperties) {
             super(pTier,
-                    (int) (pAttackDamageModifier + pHandleTier.getAttackDamageMultiplier()),
-                    pAttackSpeedModifier + pHandleTier.getAttackSpeedMultiplier(),
+                    (int) (pAttackDamageModifier * pHandleTier.getAttackDamageMultiplier()),
+                    pAttackSpeedModifier < 0
+                            ? pAttackSpeedModifier + (-pAttackSpeedModifier * pHandleTier.getAttackSpeedMultiplier())
+                            : pAttackSpeedModifier + (pAttackSpeedModifier * pHandleTier.getAttackSpeedMultiplier()),
                     pProperties.defaultDurability((int) (pTier.getUses() * pHandleTier.getDurabilityMultiplier())));
 
             this.handleTier = pHandleTier;
@@ -52,8 +54,10 @@ public class CustomToolItem {
 
         public Dagger(Tier pTier, HandleTier pHandleTier, int pAttackDamageModifier, float pAttackSpeedModifier, float pBaseBleedProbability, Properties pProperties) {
             super(pTier,
-                    (int) (pAttackDamageModifier + pHandleTier.getAttackDamageMultiplier()),
-                    pAttackSpeedModifier + pHandleTier.getAttackSpeedMultiplier(),
+                    (int) (pAttackDamageModifier * pHandleTier.getAttackDamageMultiplier()),
+                    pAttackSpeedModifier < 0
+                            ? pAttackSpeedModifier + (-pAttackSpeedModifier * pHandleTier.getAttackSpeedMultiplier())
+                            : pAttackSpeedModifier + (pAttackSpeedModifier * pHandleTier.getAttackSpeedMultiplier()),
                     pBaseBleedProbability,
                     pProperties.defaultDurability((int) (pTier.getUses() * pHandleTier.getDurabilityMultiplier())));
 
@@ -82,8 +86,10 @@ public class CustomToolItem {
 
         public Pickaxe(Tier pTier, HandleTier pHandleTier, float pAttackDamageModifier, float pAttackSpeedModifier, Properties pProperties) {
             super(pTier,
-                    (int) (pAttackDamageModifier + pHandleTier.getAttackDamageMultiplier()),
-                    pAttackSpeedModifier + pHandleTier.getAttackSpeedMultiplier(),
+                    (int) (pAttackDamageModifier * pHandleTier.getAttackDamageMultiplier()),
+                    pAttackSpeedModifier < 0
+                            ? pAttackSpeedModifier + (-pAttackSpeedModifier * pHandleTier.getAttackSpeedMultiplier())
+                            : pAttackSpeedModifier + (pAttackSpeedModifier * pHandleTier.getAttackSpeedMultiplier()),
                     pProperties.defaultDurability((int) (pTier.getUses() * pHandleTier.getDurabilityMultiplier())));
 
             this.handleTier = pHandleTier;
@@ -111,8 +117,10 @@ public class CustomToolItem {
 
         public Axe(Tier pTier, HandleTier pHandleTier, float pAttackDamageModifier, float pAttackSpeedModifier, Properties pProperties) {
             super(pTier,
-                    (int) (pAttackDamageModifier + pHandleTier.getAttackDamageMultiplier()),
-                    pAttackSpeedModifier + pHandleTier.getAttackSpeedMultiplier(),
+                    (int) (pAttackDamageModifier * pHandleTier.getAttackDamageMultiplier()),
+                    pAttackSpeedModifier < 0
+                            ? pAttackSpeedModifier + (-pAttackSpeedModifier * pHandleTier.getAttackSpeedMultiplier())
+                            : pAttackSpeedModifier + (pAttackSpeedModifier * pHandleTier.getAttackSpeedMultiplier()),
                     pProperties.defaultDurability((int) (pTier.getUses() * pHandleTier.getDurabilityMultiplier())));
 
             this.handleTier = pHandleTier;
@@ -140,8 +148,10 @@ public class CustomToolItem {
 
         public Shovel(Tier pTier, HandleTier pHandleTier, float pAttackDamageModifier, float pAttackSpeedModifier, Properties pProperties) {
             super(pTier,
-                    (int) (pAttackDamageModifier + pHandleTier.getAttackDamageMultiplier()),
-                    pAttackSpeedModifier + pHandleTier.getAttackSpeedMultiplier(),
+                    (int) (pAttackDamageModifier * pHandleTier.getAttackDamageMultiplier()),
+                    pAttackSpeedModifier < 0
+                            ? pAttackSpeedModifier + (-pAttackSpeedModifier * pHandleTier.getAttackSpeedMultiplier())
+                            : pAttackSpeedModifier + (pAttackSpeedModifier * pHandleTier.getAttackSpeedMultiplier()),
                     pProperties.defaultDurability((int) (pTier.getUses() * pHandleTier.getDurabilityMultiplier())));
 
             this.handleTier = pHandleTier;
@@ -169,8 +179,10 @@ public class CustomToolItem {
 
         public Hoe(Tier pTier, HandleTier pHandleTier, int pAttackDamageModifier, float pAttackSpeedModifier, Properties pProperties) {
             super(pTier,
-                    (int) (pAttackDamageModifier + pHandleTier.getAttackDamageMultiplier()),
-                    pAttackSpeedModifier + pHandleTier.getAttackSpeedMultiplier(),
+                    (int) (pAttackDamageModifier * pHandleTier.getAttackDamageMultiplier()),
+                    pAttackSpeedModifier < 0
+                            ? pAttackSpeedModifier + (-pAttackSpeedModifier * pHandleTier.getAttackSpeedMultiplier())
+                            : pAttackSpeedModifier + (pAttackSpeedModifier * pHandleTier.getAttackSpeedMultiplier()),
                     pProperties.defaultDurability((int) (pTier.getUses() * pHandleTier.getDurabilityMultiplier())));
 
             this.handleTier = pHandleTier;

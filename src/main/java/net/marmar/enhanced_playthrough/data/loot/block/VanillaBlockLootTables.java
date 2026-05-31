@@ -119,6 +119,11 @@ public class VanillaBlockLootTables extends BlockLootSubProvider implements Bloc
                     createGemsDrops(Blocks.DIAMOND_ORE, EPItems.RAW_DIAMOND.get(), 1, Items.DIAMOND, 1));
             this.add(Blocks.DEEPSLATE_DIAMOND_ORE, block ->
                     createDeepslateGemsDrops(Blocks.DEEPSLATE_DIAMOND_ORE, EPItems.RAW_DIAMOND.get(), 1,  Items.DIAMOND, 1));
+
+        //Raw materials
+        this.add(Blocks.RAW_COPPER_BLOCK, block -> createRawMaterialBlockDrops(Blocks.RAW_COPPER_BLOCK, Items.RAW_COPPER));
+        this.add(Blocks.RAW_IRON_BLOCK, block -> createRawMaterialBlockDrops(Blocks.RAW_IRON_BLOCK, Items.RAW_IRON));
+        this.add(Blocks.RAW_GOLD_BLOCK, block -> createRawMaterialBlockDrops(Blocks.RAW_GOLD_BLOCK, Items.RAW_GOLD));
     }
 
     private final Predicate<Block> overrideBlocks = block ->
@@ -154,7 +159,10 @@ public class VanillaBlockLootTables extends BlockLootSubProvider implements Bloc
         block == Blocks.LAPIS_ORE || block == Blocks.DEEPSLATE_LAPIS_ORE ||
         block == Blocks.REDSTONE_ORE || block == Blocks.DEEPSLATE_REDSTONE_ORE ||
         block == Blocks.EMERALD_ORE || block == Blocks.DEEPSLATE_EMERALD_ORE ||
-        block == Blocks.DIAMOND_ORE || block == Blocks.DEEPSLATE_DIAMOND_ORE;
+        block == Blocks.DIAMOND_ORE || block == Blocks.DEEPSLATE_DIAMOND_ORE ||
+        block == Blocks.RAW_COPPER_BLOCK || block == Blocks.RAW_IRON_BLOCK ||
+        block == Blocks.RAW_GOLD_BLOCK
+        ;
 
     @Override
     protected Iterable<Block> getKnownBlocks() {

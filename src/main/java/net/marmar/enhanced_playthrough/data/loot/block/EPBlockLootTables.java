@@ -6,6 +6,7 @@ import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.Set;
@@ -147,10 +148,10 @@ public class EPBlockLootTables extends BlockLootSubProvider implements BlockLoot
                     block -> createBauxiteOreDrops(EPBlocks.YELLOW_BAUXITE.get(), EPItems.YELLOW_TERRACOTTA_SHARD.get()));
 
         //Raw ore blocks
-        this.dropSelf(EPBlocks.RAW_SILVER_BLOCK.get());
-        this.dropSelf(EPBlocks.RAW_ALUMINUM_BLOCK.get());
-        this.dropSelf(EPBlocks.RAW_TIN_BLOCK.get());
-        this.dropSelf(EPBlocks.RAW_ZINC_BLOCK.get());
+        this.add(EPBlocks.RAW_TIN_BLOCK.get(), block -> createRawMaterialBlockDrops(EPBlocks.RAW_TIN_BLOCK.get(), EPItems.RAW_TIN.get()));
+        this.add(EPBlocks.RAW_ZINC_BLOCK.get(), block -> createRawMaterialBlockDrops(EPBlocks.RAW_ZINC_BLOCK.get(), EPItems.RAW_ZINC.get()));
+        this.add(EPBlocks.RAW_SILVER_BLOCK.get(), block -> createRawMaterialBlockDrops(EPBlocks.RAW_SILVER_BLOCK.get(), EPItems.RAW_SILVER.get()));
+        this.add(EPBlocks.RAW_ALUMINUM_BLOCK.get(), block -> createRawMaterialBlockDrops(EPBlocks.RAW_ALUMINUM_BLOCK.get(), EPItems.RAW_ALUMINUM.get()));
 
         //ore blocks
         this.dropSelf(EPBlocks.SULFUR_BLOCK.get());

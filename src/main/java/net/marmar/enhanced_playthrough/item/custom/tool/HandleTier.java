@@ -10,10 +10,10 @@ import net.minecraft.network.chat.MutableComponent;
  * Alongside durability, attackDamage can also be modified by this enum.
  */
 public enum HandleTier {
-    BASE("base", 1.0f, 0f, 0f, Component.literal("")),
-    REINFORCED("reinforced",1.1f, 0f, 0f, Component.translatable("desc.enhanced_playthrough.leather_stick_tool")
+    BASE("base", 1.0f, 1.0f, 0f, Component.literal("")),
+    REINFORCED("reinforced",1.1f, 1.0f, 0f, Component.translatable("desc.enhanced_playthrough.leather_stick_tool")
             .withStyle(ChatFormatting.GRAY).withStyle(ChatFormatting.ITALIC)),
-    ALUMINUM("aluminum", 1.2f, 0f, 0.5f, Component.translatable("desc.enhanced_playthrough.aluminum_stick_tool")
+    ALUMINUM("aluminum", 1.2f, 1.0f, 0.1f, Component.translatable("desc.enhanced_playthrough.aluminum_stick_tool")
             .withStyle(ChatFormatting.GRAY).withStyle(ChatFormatting.ITALIC));
 
     private final String literal;
@@ -22,11 +22,11 @@ public enum HandleTier {
     private final float attackSpeedMultiplier;
     private final Component itemDesc;
 
-    HandleTier(String pLiteral, float pDurabilityModifier, float pAttackDamageMultiplier, float pAttackSpeedModifier, MutableComponent pItemDesc){
+    HandleTier(String pLiteral, float pDurabilityMultiplier, float pAttackDamageMultiplier, float pAttackSpeedMultiplier, MutableComponent pItemDesc){
         this.literal = pLiteral;
-        this.durabilityMultiplier = pDurabilityModifier;
+        this.durabilityMultiplier = pDurabilityMultiplier;
         this.attackDamageMultiplier = pAttackDamageMultiplier;
-        this.attackSpeedMultiplier = pAttackSpeedModifier;
+        this.attackSpeedMultiplier = pAttackSpeedMultiplier;
         this.itemDesc = pItemDesc;
     }
 
@@ -43,7 +43,7 @@ public enum HandleTier {
     }
 
     public float getAttackSpeedMultiplier() {
-        return attackSpeedMultiplier;
+        return this.attackSpeedMultiplier;
     }
 
     public Component getItemDesc() {
