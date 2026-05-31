@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_aluminum_blue_golden_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:aluminum_blue_golden_pickaxe"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_reinforced_blue_golden_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:reinforced_blue_golden_pickaxe"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "enhanced_playthrough:aluminum_blue_golden_pickaxe_from_smithing_reinforced_blue_golden_pickaxe_with_aluminum_ingot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_reinforced_blue_golden_pickaxe",
+      "has_aluminum_blue_golden_pickaxe",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "enhanced_playthrough:aluminum_blue_golden_pickaxe_from_smithing_reinforced_blue_golden_pickaxe_with_aluminum_ingot"
+    ]
+  },
+  "sends_telemetry_event": false
+}

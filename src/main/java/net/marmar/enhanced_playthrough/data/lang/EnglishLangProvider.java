@@ -16,7 +16,8 @@ public class EnglishLangProvider extends AbstractLangProvider {
         //Creative tabs
         addCreativeTab("weapons", "Combat");
         addCreativeTab("tools", "Tools");
-        addCreativeTab("aluminum_tools", "Aluminum tools");
+        addCreativeTab("reinforced_tools", "Tools with reinforced handle");
+        addCreativeTab("aluminum_tools", "Tools with aluminum handle");
         addCreativeTab("minerals", "Ores and minerals");
         addCreativeTab("jewelery", "Jewelery");
         addCreativeTab("utility", "Utility");
@@ -549,6 +550,14 @@ public class EnglishLangProvider extends AbstractLangProvider {
             addItem(EPItems.SILVER_LEGGINGS, "Silver leggings");
             addItem(EPItems.SILVER_BOOTS, "Silver boots");
 
+            addItem(EPItems.REINFORCED_SILVER_SWORD, "Silver Sword");
+            addItem(EPItems.REINFORCED_SILVER_DAGGER, "Silver Dagger");
+            addItem(EPItems.REINFORCED_SILVER_PICKAXE, "Silver Pickaxe");
+            addItem(EPItems.REINFORCED_SILVER_AXE, "Silver Axe");
+            addItem(EPItems.REINFORCED_SILVER_SHOVEL, "Silver Shovel");
+            addItem(EPItems.REINFORCED_SILVER_HOE, "Silver Hoe");
+            addItem(EPItems.REINFORCED_SILVER_POLISHER, "Silver Polisher");
+
             addItem(EPItems.ALUMINUM_SILVER_SWORD, "Silver Sword");
             addItem(EPItems.ALUMINUM_SILVER_DAGGER, "Silver Dagger");
             addItem(EPItems.ALUMINUM_SILVER_PICKAXE, "Silver Pickaxe");
@@ -560,6 +569,14 @@ public class EnglishLangProvider extends AbstractLangProvider {
             //Gold equipment
             addItem(EPItems.GOLDEN_POLISHER, "Golden polisher");
             addItem(EPItems.GOLDEN_DAGGER, "Golden dagger");
+
+            addItem(EPItems.REINFORCED_GOLDEN_SWORD, "Golden Sword");
+            addItem(EPItems.REINFORCED_GOLDEN_DAGGER, "Golden Dagger");
+            addItem(EPItems.REINFORCED_GOLDEN_PICKAXE, "Golden Pickaxe");
+            addItem(EPItems.REINFORCED_GOLDEN_AXE, "Golden Axe");
+            addItem(EPItems.REINFORCED_GOLDEN_SHOVEL, "Golden Shovel");
+            addItem(EPItems.REINFORCED_GOLDEN_HOE, "Golden Hoe");
+            addItem(EPItems.REINFORCED_GOLDEN_POLISHER, "Golden Polisher");
 
             addItem(EPItems.ALUMINUM_GOLDEN_SWORD, "Golden Sword");
             addItem(EPItems.ALUMINUM_GOLDEN_DAGGER, "Golden Dagger");
@@ -589,6 +606,14 @@ public class EnglishLangProvider extends AbstractLangProvider {
             addItem(EPItems.BRASS_LEGGINGS, "Brass leggings");
             addItem(EPItems.BRASS_BOOTS, "Brass boots");
 
+            addItem(EPItems.REINFORCED_BRASS_SWORD, "Brass Sword");
+            addItem(EPItems.REINFORCED_BRASS_DAGGER, "Brass Dagger");
+            addItem(EPItems.REINFORCED_BRASS_PICKAXE, "Brass Pickaxe");
+            addItem(EPItems.REINFORCED_BRASS_AXE, "Brass Axe");
+            addItem(EPItems.REINFORCED_BRASS_SHOVEL, "Brass Shovel");
+            addItem(EPItems.REINFORCED_BRASS_HOE, "Brass Hoe");
+            addItem(EPItems.REINFORCED_BRASS_POLISHER, "Brass Polisher");
+
             addItem(EPItems.ALUMINUM_BRASS_SWORD, "Brass Sword");
             addItem(EPItems.ALUMINUM_BRASS_DAGGER, "Brass Dagger");
             addItem(EPItems.ALUMINUM_BRASS_PICKAXE, "Brass Pickaxe");
@@ -609,6 +634,14 @@ public class EnglishLangProvider extends AbstractLangProvider {
             addItem(EPItems.BRONZE_CHESTPLATE, "Bronze chestplate");
             addItem(EPItems.BRONZE_LEGGINGS, "Bronze leggings");
             addItem(EPItems.BRONZE_BOOTS, "Bronze boots");
+
+            addItem(EPItems.REINFORCED_BRONZE_SWORD, "Bronze Sword");
+            addItem(EPItems.REINFORCED_BRONZE_DAGGER, "Bronze Dagger");
+            addItem(EPItems.REINFORCED_BRONZE_PICKAXE, "Bronze Pickaxe");
+            addItem(EPItems.REINFORCED_BRONZE_AXE, "Bronze Axe");
+            addItem(EPItems.REINFORCED_BRONZE_SHOVEL, "Bronze Shovel");
+            addItem(EPItems.REINFORCED_BRONZE_HOE, "Bronze Hoe");
+            addItem(EPItems.REINFORCED_BRONZE_POLISHER, "Bronze Polisher");
 
             addItem(EPItems.ALUMINUM_BRONZE_SWORD, "Bronze Sword");
             addItem(EPItems.ALUMINUM_BRONZE_DAGGER, "Bronze Dagger");
@@ -631,6 +664,14 @@ public class EnglishLangProvider extends AbstractLangProvider {
             addItem(EPItems.ROSE_GOLDEN_LEGGINGS, "Rose golden leggings");
             addItem(EPItems.ROSE_GOLDEN_BOOTS, "Rose golden boots");
 
+            addItem(EPItems.REINFORCED_ROSE_GOLDEN_SWORD, "Rose Golden Sword");
+            addItem(EPItems.REINFORCED_ROSE_GOLDEN_DAGGER, "Rose Golden Dagger");
+            addItem(EPItems.REINFORCED_ROSE_GOLDEN_PICKAXE, "Rose Golden Pickaxe");
+            addItem(EPItems.REINFORCED_ROSE_GOLDEN_AXE, "Rose Golden Axe");
+            addItem(EPItems.REINFORCED_ROSE_GOLDEN_SHOVEL, "Rose Golden Shovel");
+            addItem(EPItems.REINFORCED_ROSE_GOLDEN_HOE, "Rose Golden Hoe");
+            addItem(EPItems.REINFORCED_ROSE_GOLDEN_POLISHER, "Rose Golden Polisher");
+
             addItem(EPItems.ALUMINUM_ROSE_GOLDEN_SWORD, "Rose Golden Sword");
             addItem(EPItems.ALUMINUM_ROSE_GOLDEN_DAGGER, "Rose Golden Dagger");
             addItem(EPItems.ALUMINUM_ROSE_GOLDEN_PICKAXE, "Rose Golden Pickaxe");
@@ -652,6 +693,14 @@ public class EnglishLangProvider extends AbstractLangProvider {
             addItem(EPItems.BRONZIUM_LEGGINGS, "Bronzium leggings");
             addItem(EPItems.BRONZIUM_BOOTS, "Bronzium boots");
 
+            addItem(EPItems.REINFORCED_BRONZIUM_SWORD, "Bronzium Sword");
+            addItem(EPItems.REINFORCED_BRONZIUM_DAGGER, "Bronzium Dagger");
+            addItem(EPItems.REINFORCED_BRONZIUM_PICKAXE, "Bronzium Pickaxe");
+            addItem(EPItems.REINFORCED_BRONZIUM_AXE, "Bronzium Axe");
+            addItem(EPItems.REINFORCED_BRONZIUM_SHOVEL, "Bronzium Shovel");
+            addItem(EPItems.REINFORCED_BRONZIUM_HOE, "Bronzium Hoe");
+            addItem(EPItems.REINFORCED_BRONZIUM_POLISHER, "Bronzium Polisher");
+
             addItem(EPItems.ALUMINUM_BRONZIUM_SWORD, "Bronzium Sword");
             addItem(EPItems.ALUMINUM_BRONZIUM_DAGGER, "Bronzium Dagger");
             addItem(EPItems.ALUMINUM_BRONZIUM_PICKAXE, "Bronzium Pickaxe");
@@ -663,6 +712,14 @@ public class EnglishLangProvider extends AbstractLangProvider {
             //Iron equipment
             addItem(EPItems.IRON_POLISHER, "Iron polisher");
             addItem(EPItems.IRON_DAGGER, "Iron dagger");
+
+            addItem(EPItems.REINFORCED_IRON_SWORD, "Iron Sword");
+            addItem(EPItems.REINFORCED_IRON_DAGGER, "Iron Dagger");
+            addItem(EPItems.REINFORCED_IRON_PICKAXE, "Iron Pickaxe");
+            addItem(EPItems.REINFORCED_IRON_AXE, "Iron Axe");
+            addItem(EPItems.REINFORCED_IRON_SHOVEL, "Iron Shovel");
+            addItem(EPItems.REINFORCED_IRON_HOE, "Iron Hoe");
+            addItem(EPItems.REINFORCED_IRON_POLISHER, "Iron Polisher");
 
             addItem(EPItems.ALUMINUM_IRON_SWORD, "Iron Sword");
             addItem(EPItems.ALUMINUM_IRON_DAGGER, "Iron Dagger");
@@ -685,6 +742,14 @@ public class EnglishLangProvider extends AbstractLangProvider {
             addItem(EPItems.GREEN_GOLDEN_LEGGINGS, "Green golden leggings");
             addItem(EPItems.GREEN_GOLDEN_BOOTS, "Green golden boots");
 
+            addItem(EPItems.REINFORCED_GREEN_GOLDEN_SWORD, "Green Golden Sword");
+            addItem(EPItems.REINFORCED_GREEN_GOLDEN_DAGGER, "Green Golden Dagger");
+            addItem(EPItems.REINFORCED_GREEN_GOLDEN_PICKAXE, "Green Golden Pickaxe");
+            addItem(EPItems.REINFORCED_GREEN_GOLDEN_AXE, "Green Golden Axe");
+            addItem(EPItems.REINFORCED_GREEN_GOLDEN_SHOVEL, "Green Golden Shovel");
+            addItem(EPItems.REINFORCED_GREEN_GOLDEN_HOE, "Green Golden Hoe");
+            addItem(EPItems.REINFORCED_GREEN_GOLDEN_POLISHER, "Green Golden Polisher");
+
             addItem(EPItems.ALUMINUM_GREEN_GOLDEN_SWORD, "Green Golden Sword");
             addItem(EPItems.ALUMINUM_GREEN_GOLDEN_DAGGER, "Green Golden Dagger");
             addItem(EPItems.ALUMINUM_GREEN_GOLDEN_PICKAXE, "Green Golden Pickaxe");
@@ -705,6 +770,14 @@ public class EnglishLangProvider extends AbstractLangProvider {
             addItem(EPItems.STEEL_CHESTPLATE, "Steel chestplate");
             addItem(EPItems.STEEL_LEGGINGS, "Steel leggings");
             addItem(EPItems.STEEL_BOOTS, "Steel boots");
+
+            addItem(EPItems.REINFORCED_STEEL_SWORD, "Steel Sword");
+            addItem(EPItems.REINFORCED_STEEL_DAGGER, "Steel Dagger");
+            addItem(EPItems.REINFORCED_STEEL_PICKAXE, "Steel Pickaxe");
+            addItem(EPItems.REINFORCED_STEEL_AXE, "Steel Axe");
+            addItem(EPItems.REINFORCED_STEEL_SHOVEL, "Steel Shovel");
+            addItem(EPItems.REINFORCED_STEEL_HOE, "Steel Hoe");
+            addItem(EPItems.REINFORCED_STEEL_POLISHER, "Steel Polisher");
 
             addItem(EPItems.ALUMINUM_STEEL_SWORD, "Steel Sword");
             addItem(EPItems.ALUMINUM_STEEL_DAGGER, "Steel Dagger");
@@ -727,6 +800,14 @@ public class EnglishLangProvider extends AbstractLangProvider {
             addItem(EPItems.BLUE_GOLDEN_LEGGINGS, "Blue Golden leggings");
             addItem(EPItems.BLUE_GOLDEN_BOOTS, "Blue Golden boots");
 
+            addItem(EPItems.REINFORCED_BLUE_GOLDEN_SWORD, "Blue Golden Sword");
+            addItem(EPItems.REINFORCED_BLUE_GOLDEN_DAGGER, "Blue Golden Dagger");
+            addItem(EPItems.REINFORCED_BLUE_GOLDEN_PICKAXE, "Blue Golden Pickaxe");
+            addItem(EPItems.REINFORCED_BLUE_GOLDEN_AXE, "Blue Golden Axe");
+            addItem(EPItems.REINFORCED_BLUE_GOLDEN_SHOVEL, "Blue Golden Shovel");
+            addItem(EPItems.REINFORCED_BLUE_GOLDEN_HOE, "Blue Golden Hoe");
+            addItem(EPItems.REINFORCED_BLUE_GOLDEN_POLISHER, "Blue Golden Polisher");
+
             addItem(EPItems.ALUMINUM_BLUE_GOLDEN_SWORD, "Blue Golden Sword");
             addItem(EPItems.ALUMINUM_BLUE_GOLDEN_DAGGER, "Blue Golden Dagger");
             addItem(EPItems.ALUMINUM_BLUE_GOLDEN_PICKAXE, "Blue Golden Pickaxe");
@@ -738,6 +819,14 @@ public class EnglishLangProvider extends AbstractLangProvider {
             //Diamond equipment
             addItem(EPItems.DIAMOND_POLISHER, "Diamond polisher");
             addItem(EPItems.DIAMOND_DAGGER, "Diamond dagger");
+
+            addItem(EPItems.REINFORCED_DIAMOND_SWORD, "Diamond Sword");
+            addItem(EPItems.REINFORCED_DIAMOND_DAGGER, "Diamond Dagger");
+            addItem(EPItems.REINFORCED_DIAMOND_PICKAXE, "Diamond Pickaxe");
+            addItem(EPItems.REINFORCED_DIAMOND_AXE, "Diamond Axe");
+            addItem(EPItems.REINFORCED_DIAMOND_SHOVEL, "Diamond Shovel");
+            addItem(EPItems.REINFORCED_DIAMOND_HOE, "Diamond Hoe");
+            addItem(EPItems.REINFORCED_DIAMOND_POLISHER, "Diamond Polisher");
 
             addItem(EPItems.ALUMINUM_DIAMOND_SWORD, "Diamond Sword");
             addItem(EPItems.ALUMINUM_DIAMOND_DAGGER, "Diamond Dagger");
@@ -811,10 +900,14 @@ public class EnglishLangProvider extends AbstractLangProvider {
             //Smithing templates
             addSmithingTemplateTitle("Smithing template", "Applies to:", "Ingredients:");
 
+            addSmithingUpgrade("reinforced", "Handle reinforcement", "Tools with wooden handle", "Leather strips",
+                    "Add any tool with a wooden handle", "Add a leather strip");
+
             addSmithingUpgrade("bronzium", "Bronzium upgrade", "Bronze equipment, Brass equipment", "Bronzium ingot",
                     "Add a bronze or brass armor, weapon or tool", "Add an bronzium ingot");
-            addSmithingUpgrade("aluminum", "Aluminum upgrade", "Tools with wooden handle", "Aluminum ingot",
-                    "Add any tool with a wooden handle", "Add an aluminum ingot");
+
+            addSmithingUpgrade("aluminum", "Aluminum upgrade", "Tools with wooden or reinforced handle", "Aluminum ingot",
+                    "Add any tool with a wooden or reinforced handle", "Add an aluminum ingot");
 
             addSmithingUpgrade("golden", "Golden upgrade", "Gold equipment",
                     "Rose gold ingot, Green gold ingot, Blue gold ingot", "Add a golden armor, weapon or tool",

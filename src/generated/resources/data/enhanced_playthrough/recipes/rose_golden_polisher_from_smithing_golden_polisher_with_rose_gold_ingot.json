@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "enhanced_playthrough:rose_gold_ingot"
+  },
+  "base": {
+    "item": "enhanced_playthrough:golden_polisher"
+  },
+  "result": {
+    "item": "enhanced_playthrough:rose_golden_polisher"
+  },
+  "template": {
+    "item": "enhanced_playthrough:golden_upgrade_smithing_template"
+  }
+}

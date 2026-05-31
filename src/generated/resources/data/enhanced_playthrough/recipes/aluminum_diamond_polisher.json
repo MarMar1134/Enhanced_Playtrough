@@ -3,7 +3,7 @@
   "category": "equipment",
   "key": {
     "#": {
-      "tag": "enhanced_playthrough:rods/aluminum"
+      "item": "enhanced_playthrough:aluminum_rod"
     },
     "I": {
       "item": "minecraft:diamond"

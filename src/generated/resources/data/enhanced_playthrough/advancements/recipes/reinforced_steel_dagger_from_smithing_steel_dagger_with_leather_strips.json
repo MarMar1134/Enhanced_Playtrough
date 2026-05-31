@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_reinforced_steel_dagger": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:reinforced_steel_dagger"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_steel_dagger": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:steel_dagger"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "enhanced_playthrough:reinforced_steel_dagger_from_smithing_steel_dagger_with_leather_strips"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_steel_dagger",
+      "has_reinforced_steel_dagger",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "enhanced_playthrough:reinforced_steel_dagger_from_smithing_steel_dagger_with_leather_strips"
+    ]
+  },
+  "sends_telemetry_event": false
+}

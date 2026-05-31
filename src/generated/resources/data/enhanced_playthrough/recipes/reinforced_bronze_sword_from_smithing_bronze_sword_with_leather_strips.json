@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "enhanced_playthrough:leather_strips"
+  },
+  "base": {
+    "item": "enhanced_playthrough:bronze_sword"
+  },
+  "result": {
+    "item": "enhanced_playthrough:reinforced_bronze_sword"
+  },
+  "template": {
+    "item": "enhanced_playthrough:reinforced_upgrade_smithing_template"
+  }
+}

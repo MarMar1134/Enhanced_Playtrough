@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "enhanced_playthrough:leather_strips"
+  },
+  "base": {
+    "item": "enhanced_playthrough:iron_polisher"
+  },
+  "result": {
+    "item": "enhanced_playthrough:reinforced_iron_polisher"
+  },
+  "template": {
+    "item": "enhanced_playthrough:reinforced_upgrade_smithing_template"
+  }
+}

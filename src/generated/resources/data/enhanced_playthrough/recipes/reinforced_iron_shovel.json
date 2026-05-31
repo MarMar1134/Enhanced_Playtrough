@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "enhanced_playthrough:reinforced_stick"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "I",
+    "#",
+    "#"
+  ],
+  "result": {
+    "item": "enhanced_playthrough:reinforced_iron_shovel"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_blue_golden_axe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:blue_golden_axe"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_reinforced_blue_golden_axe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:reinforced_blue_golden_axe"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "enhanced_playthrough:reinforced_blue_golden_axe_from_smithing_blue_golden_axe_with_leather_strips"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_blue_golden_axe",
+      "has_reinforced_blue_golden_axe",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "enhanced_playthrough:reinforced_blue_golden_axe_from_smithing_blue_golden_axe_with_leather_strips"
+    ]
+  },
+  "sends_telemetry_event": false
+}

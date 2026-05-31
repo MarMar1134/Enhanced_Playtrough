@@ -108,6 +108,7 @@ public class EPTabs {
                         output.accept(EPItems.LIME.get());
 
                         output.accept(EPItems.ALUMINUM_ROD.get());
+                        output.accept(EPItems.REINFORCED_UPGRADE_SMITHING_TEMPLATE.get());
                         output.accept(EPItems.BRONZIUM_UPGRADE_SMITHING_TEMPLATE.get());
                         output.accept(EPItems.ALUMINUM_UPGRADE_SMITHING_TEMPLATE.get());
                         output.accept(EPItems.GOLDEN_UPGRADE_SMITHING_TEMPLATE.get());
@@ -182,7 +183,7 @@ public class EPTabs {
     public static final RegistryObject<CreativeModeTab> TOOLS = TABS.register(
             "tools", () -> CreativeModeTab.builder().icon(() -> new ItemStack(EPItems.STEEL_PICKAXE.get()))
                     .title((Component.translatable("creativetab." + EnhancedPlaythrough.MOD_ID + ".tools")))
-                    .withTabsAfter(EPTabs.ALUMINUM_TOOLS.getId())
+                    .withTabsAfter(EPTabs.REINFORCED_TOOLS.getId())
                     .withTabsBefore(EPTabs.UTILITY.getId())
                     .displayItems((itemDisplayParameters, output) -> {
                         //Silver
@@ -257,13 +258,127 @@ public class EPTabs {
                         output.accept(EPItems.LEMON_CHEST_BOAT.get());
                     }).build());
 
+    public static final RegistryObject<CreativeModeTab> REINFORCED_TOOLS = TABS.register(
+            "reinforced_tools", () -> CreativeModeTab.builder().icon(() -> new ItemStack(EPItems.REINFORCED_STEEL_PICKAXE.get()))
+                    .title(Component.translatable("creativetab." + EnhancedPlaythrough.MOD_ID + ".reinforced_tools"))
+                    .withTabsAfter(EPTabs.ALUMINUM_TOOLS.getId())
+                    .withTabsBefore(EPTabs.TOOLS.getId())
+                    .displayItems((itemDisplayParameters, output) -> {
+                        //Upgrade materials
+                        output.accept(EPItems.REINFORCED_UPGRADE_SMITHING_TEMPLATE.get());
+                        output.accept(EPItems.LEATHER_STRIPS.get());
+
+                        //Golden
+                        output.accept(EPItems.REINFORCED_GOLDEN_PICKAXE.get());
+                        output.accept(EPItems.REINFORCED_GOLDEN_AXE.get());
+                        output.accept(EPItems.REINFORCED_GOLDEN_SHOVEL.get());
+                        output.accept(EPItems.REINFORCED_GOLDEN_HOE.get());
+                        output.accept(EPItems.REINFORCED_GOLDEN_POLISHER.get());
+                        output.accept(EPItems.REINFORCED_GOLDEN_SWORD.get());
+                        output.accept(EPItems.REINFORCED_GOLDEN_DAGGER.get());
+
+                        //Silver
+                        output.accept(EPItems.REINFORCED_SILVER_PICKAXE.get());
+                        output.accept(EPItems.REINFORCED_SILVER_AXE.get());
+                        output.accept(EPItems.REINFORCED_SILVER_SHOVEL.get());
+                        output.accept(EPItems.REINFORCED_SILVER_HOE.get());
+                        output.accept(EPItems.REINFORCED_SILVER_POLISHER.get());
+                        output.accept(EPItems.REINFORCED_SILVER_SWORD.get());
+                        output.accept(EPItems.REINFORCED_SILVER_DAGGER.get());
+
+                        //Bronze
+                        output.accept(EPItems.REINFORCED_BRONZE_PICKAXE.get());
+                        output.accept(EPItems.REINFORCED_BRONZE_AXE.get());
+                        output.accept(EPItems.REINFORCED_BRONZE_SHOVEL.get());
+                        output.accept(EPItems.REINFORCED_BRONZE_HOE.get());
+                        output.accept(EPItems.REINFORCED_BRONZE_POLISHER.get());
+                        output.accept(EPItems.REINFORCED_BRONZE_SWORD.get());
+                        output.accept(EPItems.REINFORCED_BRONZE_DAGGER.get());
+
+                        //Brass
+                        output.accept(EPItems.REINFORCED_BRASS_PICKAXE.get());
+                        output.accept(EPItems.REINFORCED_BRASS_AXE.get());
+                        output.accept(EPItems.REINFORCED_BRASS_SHOVEL.get());
+                        output.accept(EPItems.REINFORCED_BRASS_HOE.get());
+                        output.accept(EPItems.REINFORCED_BRASS_POLISHER.get());
+                        output.accept(EPItems.REINFORCED_BRASS_SWORD.get());
+                        output.accept(EPItems.REINFORCED_BRASS_DAGGER.get());
+
+                        //Rose Gold
+                        output.accept(EPItems.REINFORCED_ROSE_GOLDEN_PICKAXE.get());
+                        output.accept(EPItems.REINFORCED_ROSE_GOLDEN_AXE.get());
+                        output.accept(EPItems.REINFORCED_ROSE_GOLDEN_SHOVEL.get());
+                        output.accept(EPItems.REINFORCED_ROSE_GOLDEN_HOE.get());
+                        output.accept(EPItems.REINFORCED_ROSE_GOLDEN_POLISHER.get());
+                        output.accept(EPItems.REINFORCED_ROSE_GOLDEN_SWORD.get());
+                        output.accept(EPItems.REINFORCED_ROSE_GOLDEN_DAGGER.get());
+
+                        //Iron
+                        output.accept(EPItems.REINFORCED_IRON_PICKAXE.get());
+                        output.accept(EPItems.REINFORCED_IRON_AXE.get());
+                        output.accept(EPItems.REINFORCED_IRON_SHOVEL.get());
+                        output.accept(EPItems.REINFORCED_IRON_HOE.get());
+                        output.accept(EPItems.REINFORCED_IRON_POLISHER.get());
+                        output.accept(EPItems.REINFORCED_IRON_SWORD.get());
+                        output.accept(EPItems.REINFORCED_IRON_DAGGER.get());
+
+                        //Bronzium
+                        output.accept(EPItems.REINFORCED_BRONZIUM_PICKAXE.get());
+                        output.accept(EPItems.REINFORCED_BRONZIUM_AXE.get());
+                        output.accept(EPItems.REINFORCED_BRONZIUM_SHOVEL.get());
+                        output.accept(EPItems.REINFORCED_BRONZIUM_HOE.get());
+                        output.accept(EPItems.REINFORCED_BRONZIUM_POLISHER.get());
+                        output.accept(EPItems.REINFORCED_BRONZIUM_SWORD.get());
+                        output.accept(EPItems.REINFORCED_BRONZIUM_DAGGER.get());
+
+                        //Green Gold
+                        output.accept(EPItems.REINFORCED_GREEN_GOLDEN_PICKAXE.get());
+                        output.accept(EPItems.REINFORCED_GREEN_GOLDEN_AXE.get());
+                        output.accept(EPItems.REINFORCED_GREEN_GOLDEN_SHOVEL.get());
+                        output.accept(EPItems.REINFORCED_GREEN_GOLDEN_HOE.get());
+                        output.accept(EPItems.REINFORCED_GREEN_GOLDEN_POLISHER.get());
+                        output.accept(EPItems.REINFORCED_GREEN_GOLDEN_SWORD.get());
+                        output.accept(EPItems.REINFORCED_GREEN_GOLDEN_DAGGER.get());
+
+                        //Steel
+                        output.accept(EPItems.REINFORCED_STEEL_PICKAXE.get());
+                        output.accept(EPItems.REINFORCED_STEEL_AXE.get());
+                        output.accept(EPItems.REINFORCED_STEEL_SHOVEL.get());
+                        output.accept(EPItems.REINFORCED_STEEL_HOE.get());
+                        output.accept(EPItems.REINFORCED_STEEL_POLISHER.get());
+                        output.accept(EPItems.REINFORCED_STEEL_SWORD.get());
+                        output.accept(EPItems.REINFORCED_STEEL_DAGGER.get());
+
+                        //Blue Gold
+                        output.accept(EPItems.REINFORCED_BLUE_GOLDEN_PICKAXE.get());
+                        output.accept(EPItems.REINFORCED_BLUE_GOLDEN_AXE.get());
+                        output.accept(EPItems.REINFORCED_BLUE_GOLDEN_SHOVEL.get());
+                        output.accept(EPItems.REINFORCED_BLUE_GOLDEN_HOE.get());
+                        output.accept(EPItems.REINFORCED_BLUE_GOLDEN_POLISHER.get());
+                        output.accept(EPItems.REINFORCED_BLUE_GOLDEN_SWORD.get());
+                        output.accept(EPItems.REINFORCED_BLUE_GOLDEN_DAGGER.get());
+
+                        //Diamond
+                        output.accept(EPItems.REINFORCED_DIAMOND_PICKAXE.get());
+                        output.accept(EPItems.REINFORCED_DIAMOND_AXE.get());
+                        output.accept(EPItems.REINFORCED_DIAMOND_SHOVEL.get());
+                        output.accept(EPItems.REINFORCED_DIAMOND_HOE.get());
+                        output.accept(EPItems.REINFORCED_DIAMOND_POLISHER.get());
+                        output.accept(EPItems.REINFORCED_DIAMOND_SWORD.get());
+                        output.accept(EPItems.REINFORCED_DIAMOND_DAGGER.get());
+                    }).build());
+
     public static final RegistryObject<CreativeModeTab> ALUMINUM_TOOLS = TABS.register(
             "aluminum_tools", () -> CreativeModeTab.builder().icon(() -> new ItemStack(EPItems.ALUMINUM_STEEL_PICKAXE.get()))
                     .title((Component.translatable("creativetab." + EnhancedPlaythrough.MOD_ID + ".aluminum_tools")))
                     .withTabsAfter(EPTabs.WEAPONS.getId())
                     .withTabsBefore(EPTabs.TOOLS.getId())
                     .displayItems((itemDisplayParameters, output) -> {
-                        //Aluminum Golden
+                        //Upgrade materials
+                        output.accept(EPItems.ALUMINUM_UPGRADE_SMITHING_TEMPLATE.get());
+                        output.accept(EPItems.ALUMINUM_INGOT.get());
+
+                        //Golden
                         output.accept(EPItems.ALUMINUM_GOLDEN_PICKAXE.get());
                         output.accept(EPItems.ALUMINUM_GOLDEN_AXE.get());
                         output.accept(EPItems.ALUMINUM_GOLDEN_SHOVEL.get());
@@ -272,7 +387,7 @@ public class EPTabs {
                         output.accept(EPItems.ALUMINUM_GOLDEN_SWORD.get());
                         output.accept(EPItems.ALUMINUM_GOLDEN_DAGGER.get());
 
-                        //Aluminum Silver
+                        //Silver
                         output.accept(EPItems.ALUMINUM_SILVER_PICKAXE.get());
                         output.accept(EPItems.ALUMINUM_SILVER_AXE.get());
                         output.accept(EPItems.ALUMINUM_SILVER_SHOVEL.get());
@@ -281,7 +396,7 @@ public class EPTabs {
                         output.accept(EPItems.ALUMINUM_SILVER_SWORD.get());
                         output.accept(EPItems.ALUMINUM_SILVER_DAGGER.get());
 
-                        //Aluminum Bronze
+                        //Bronze
                         output.accept(EPItems.ALUMINUM_BRONZE_PICKAXE.get());
                         output.accept(EPItems.ALUMINUM_BRONZE_AXE.get());
                         output.accept(EPItems.ALUMINUM_BRONZE_SHOVEL.get());
@@ -290,7 +405,7 @@ public class EPTabs {
                         output.accept(EPItems.ALUMINUM_BRONZE_SWORD.get());
                         output.accept(EPItems.ALUMINUM_BRONZE_DAGGER.get());
 
-                        //Aluminum Brass
+                        //Brass
                         output.accept(EPItems.ALUMINUM_BRASS_PICKAXE.get());
                         output.accept(EPItems.ALUMINUM_BRASS_AXE.get());
                         output.accept(EPItems.ALUMINUM_BRASS_SHOVEL.get());
@@ -299,7 +414,7 @@ public class EPTabs {
                         output.accept(EPItems.ALUMINUM_BRASS_SWORD.get());
                         output.accept(EPItems.ALUMINUM_BRASS_DAGGER.get());
 
-                        //Aluminum Rose Gold
+                        //Rose Gold
                         output.accept(EPItems.ALUMINUM_ROSE_GOLDEN_PICKAXE.get());
                         output.accept(EPItems.ALUMINUM_ROSE_GOLDEN_AXE.get());
                         output.accept(EPItems.ALUMINUM_ROSE_GOLDEN_SHOVEL.get());
@@ -308,7 +423,7 @@ public class EPTabs {
                         output.accept(EPItems.ALUMINUM_ROSE_GOLDEN_SWORD.get());
                         output.accept(EPItems.ALUMINUM_ROSE_GOLDEN_DAGGER.get());
 
-                        //Aluminum Iron
+                        //Iron
                         output.accept(EPItems.ALUMINUM_IRON_PICKAXE.get());
                         output.accept(EPItems.ALUMINUM_IRON_AXE.get());
                         output.accept(EPItems.ALUMINUM_IRON_SHOVEL.get());
@@ -317,7 +432,7 @@ public class EPTabs {
                         output.accept(EPItems.ALUMINUM_IRON_SWORD.get());
                         output.accept(EPItems.ALUMINUM_IRON_DAGGER.get());
 
-                        //Aluminum Bronzium
+                        //Bronzium
                         output.accept(EPItems.ALUMINUM_BRONZIUM_PICKAXE.get());
                         output.accept(EPItems.ALUMINUM_BRONZIUM_AXE.get());
                         output.accept(EPItems.ALUMINUM_BRONZIUM_SHOVEL.get());
@@ -326,7 +441,7 @@ public class EPTabs {
                         output.accept(EPItems.ALUMINUM_BRONZIUM_SWORD.get());
                         output.accept(EPItems.ALUMINUM_BRONZIUM_DAGGER.get());
 
-                        //Aluminum Green Gold
+                        //Green Gold
                         output.accept(EPItems.ALUMINUM_GREEN_GOLDEN_PICKAXE.get());
                         output.accept(EPItems.ALUMINUM_GREEN_GOLDEN_AXE.get());
                         output.accept(EPItems.ALUMINUM_GREEN_GOLDEN_SHOVEL.get());
@@ -335,7 +450,7 @@ public class EPTabs {
                         output.accept(EPItems.ALUMINUM_GREEN_GOLDEN_SWORD.get());
                         output.accept(EPItems.ALUMINUM_GREEN_GOLDEN_DAGGER.get());
 
-                        //Aluminum Steel
+                        //Steel
                         output.accept(EPItems.ALUMINUM_STEEL_PICKAXE.get());
                         output.accept(EPItems.ALUMINUM_STEEL_AXE.get());
                         output.accept(EPItems.ALUMINUM_STEEL_SHOVEL.get());
@@ -344,7 +459,7 @@ public class EPTabs {
                         output.accept(EPItems.ALUMINUM_STEEL_SWORD.get());
                         output.accept(EPItems.ALUMINUM_STEEL_DAGGER.get());
 
-                        //Aluminum Blue Gold
+                        //Blue Gold
                         output.accept(EPItems.ALUMINUM_BLUE_GOLDEN_PICKAXE.get());
                         output.accept(EPItems.ALUMINUM_BLUE_GOLDEN_AXE.get());
                         output.accept(EPItems.ALUMINUM_BLUE_GOLDEN_SHOVEL.get());
@@ -353,7 +468,7 @@ public class EPTabs {
                         output.accept(EPItems.ALUMINUM_BLUE_GOLDEN_SWORD.get());
                         output.accept(EPItems.ALUMINUM_BLUE_GOLDEN_DAGGER.get());
 
-                        //Aluminum Diamond
+                        //Diamond
                         output.accept(EPItems.ALUMINUM_DIAMOND_PICKAXE.get());
                         output.accept(EPItems.ALUMINUM_DIAMOND_AXE.get());
                         output.accept(EPItems.ALUMINUM_DIAMOND_SHOVEL.get());

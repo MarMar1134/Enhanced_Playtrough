@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "enhanced_playthrough:reinforced_stick"
+    },
+    "I": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "pattern": [
+    "I",
+    "I",
+    "#"
+  ],
+  "result": {
+    "item": "enhanced_playthrough:reinforced_diamond_sword"
+  },
+  "show_notification": true
+}

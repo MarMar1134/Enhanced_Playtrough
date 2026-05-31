@@ -16,7 +16,8 @@ public class UruguayanLangProvider extends AbstractLangProvider {
         //Creative tabs
         addCreativeTab("weapons", "Armas y armaduras");
         addCreativeTab("tools", "Herramientas");
-        addCreativeTab("aluminum_tools", "Herramientas de aluminio");
+        addCreativeTab("reinforced_tools", "Herramientas con mango reforzado");
+        addCreativeTab("aluminum_tools", "Herramientas con mango de aluminio");
         addCreativeTab("minerals", "Minerales");
         addCreativeTab("jewelery", "Joyeria");
         addCreativeTab("utility", "Utiles");
@@ -550,6 +551,14 @@ public class UruguayanLangProvider extends AbstractLangProvider {
         addItem(EPItems.SILVER_LEGGINGS, "Pantalones de plata");
         addItem(EPItems.SILVER_BOOTS, "Botas de plata");
 
+        addItem(EPItems.REINFORCED_SILVER_SWORD, "Espada de plata");
+        addItem(EPItems.REINFORCED_SILVER_DAGGER, "Daga de plata");
+        addItem(EPItems.REINFORCED_SILVER_PICKAXE, "Pico de plata");
+        addItem(EPItems.REINFORCED_SILVER_AXE, "Hacha de plata");
+        addItem(EPItems.REINFORCED_SILVER_SHOVEL, "Pala de plata");
+        addItem(EPItems.REINFORCED_SILVER_HOE, "Azadón de plata");
+        addItem(EPItems.REINFORCED_SILVER_POLISHER, "Pulidora de plata");
+
         addItem(EPItems.ALUMINUM_SILVER_SWORD, "Espada de plata");
         addItem(EPItems.ALUMINUM_SILVER_DAGGER, "Daga de plata");
         addItem(EPItems.ALUMINUM_SILVER_PICKAXE, "Pico de plata");
@@ -561,6 +570,14 @@ public class UruguayanLangProvider extends AbstractLangProvider {
         //Gold equipment
         addItem(EPItems.GOLDEN_POLISHER, "Pulidora de oro");
         addItem(EPItems.GOLDEN_DAGGER, "Daga de oro");
+
+        addItem(EPItems.REINFORCED_GOLDEN_SWORD, "Espada de oro");
+        addItem(EPItems.REINFORCED_GOLDEN_DAGGER, "Daga de oro");
+        addItem(EPItems.REINFORCED_GOLDEN_PICKAXE, "Pico de oro");
+        addItem(EPItems.REINFORCED_GOLDEN_AXE, "Hacha de oro");
+        addItem(EPItems.REINFORCED_GOLDEN_SHOVEL, "Pala de oro");
+        addItem(EPItems.REINFORCED_GOLDEN_HOE, "Azadón de oro");
+        addItem(EPItems.REINFORCED_GOLDEN_POLISHER, "Pulidora de oro");
 
         addItem(EPItems.ALUMINUM_GOLDEN_SWORD, "Espada de oro");
         addItem(EPItems.ALUMINUM_GOLDEN_DAGGER, "Daga de oro");
@@ -590,6 +607,14 @@ public class UruguayanLangProvider extends AbstractLangProvider {
         addItem(EPItems.BRASS_LEGGINGS, "Pantalones de latón");
         addItem(EPItems.BRASS_BOOTS, "Botas de latón");
 
+        addItem(EPItems.REINFORCED_BRASS_SWORD, "Espada de latón");
+        addItem(EPItems.REINFORCED_BRASS_DAGGER, "Daga de latón");
+        addItem(EPItems.REINFORCED_BRASS_PICKAXE, "Pico de latón");
+        addItem(EPItems.REINFORCED_BRASS_AXE, "Hacha de latón");
+        addItem(EPItems.REINFORCED_BRASS_SHOVEL, "Pala de latón");
+        addItem(EPItems.REINFORCED_BRASS_HOE, "Azadón de latón");
+        addItem(EPItems.REINFORCED_BRASS_POLISHER, "Pulidora de latón");
+
         addItem(EPItems.ALUMINUM_BRASS_SWORD, "Espada de latón");
         addItem(EPItems.ALUMINUM_BRASS_DAGGER, "Daga de latón");
         addItem(EPItems.ALUMINUM_BRASS_PICKAXE, "Pico de latón");
@@ -610,6 +635,14 @@ public class UruguayanLangProvider extends AbstractLangProvider {
         addItem(EPItems.BRONZE_CHESTPLATE, "Pechera de bronce");
         addItem(EPItems.BRONZE_LEGGINGS, "Pantalones de bronce");
         addItem(EPItems.BRONZE_BOOTS, "Botas de bronce");
+
+        addItem(EPItems.REINFORCED_BRONZE_SWORD, "Espada de bronce");
+        addItem(EPItems.REINFORCED_BRONZE_DAGGER, "Daga de bronce");
+        addItem(EPItems.REINFORCED_BRONZE_PICKAXE, "Pico de bronce");
+        addItem(EPItems.REINFORCED_BRONZE_AXE, "Hacha de bronce");
+        addItem(EPItems.REINFORCED_BRONZE_SHOVEL, "Pala de bronce");
+        addItem(EPItems.REINFORCED_BRONZE_HOE, "Azadón de bronce");
+        addItem(EPItems.REINFORCED_BRONZE_POLISHER, "Pulidora de bronce");
 
         addItem(EPItems.ALUMINUM_BRONZE_SWORD, "Espada de bronce");
         addItem(EPItems.ALUMINUM_BRONZE_DAGGER, "Daga de bronce");
@@ -632,6 +665,14 @@ public class UruguayanLangProvider extends AbstractLangProvider {
         addItem(EPItems.ROSE_GOLDEN_LEGGINGS, "Pantalones de oro rosado");
         addItem(EPItems.ROSE_GOLDEN_BOOTS, "Botas de oro rosado");
 
+        addItem(EPItems.REINFORCED_ROSE_GOLDEN_SWORD, "Espada de oro rosado");
+        addItem(EPItems.REINFORCED_ROSE_GOLDEN_DAGGER, "Daga de oro rosado");
+        addItem(EPItems.REINFORCED_ROSE_GOLDEN_PICKAXE, "Pico de oro rosado");
+        addItem(EPItems.REINFORCED_ROSE_GOLDEN_AXE, "Hacha de oro rosado");
+        addItem(EPItems.REINFORCED_ROSE_GOLDEN_SHOVEL, "Pala de oro rosado");
+        addItem(EPItems.REINFORCED_ROSE_GOLDEN_HOE, "Azadón de oro rosado");
+        addItem(EPItems.REINFORCED_ROSE_GOLDEN_POLISHER, "Pulidora de oro rosado");
+
         addItem(EPItems.ALUMINUM_ROSE_GOLDEN_SWORD, "Espada de oro rosado");
         addItem(EPItems.ALUMINUM_ROSE_GOLDEN_DAGGER, "Daga de oro rosado");
         addItem(EPItems.ALUMINUM_ROSE_GOLDEN_PICKAXE, "Pico de oro rosado");
@@ -653,6 +694,14 @@ public class UruguayanLangProvider extends AbstractLangProvider {
         addItem(EPItems.BRONZIUM_LEGGINGS, "Pantalones de broncio");
         addItem(EPItems.BRONZIUM_BOOTS, "Botas de broncio");
 
+        addItem(EPItems.REINFORCED_BRONZIUM_SWORD, "Espada de broncio");
+        addItem(EPItems.REINFORCED_BRONZIUM_DAGGER, "Daga de broncio");
+        addItem(EPItems.REINFORCED_BRONZIUM_PICKAXE, "Pico de broncio");
+        addItem(EPItems.REINFORCED_BRONZIUM_AXE, "Hacha de broncio");
+        addItem(EPItems.REINFORCED_BRONZIUM_SHOVEL, "Pala de broncio");
+        addItem(EPItems.REINFORCED_BRONZIUM_HOE, "Azadón de broncio");
+        addItem(EPItems.REINFORCED_BRONZIUM_POLISHER, "Pulidora de broncio");
+
         addItem(EPItems.ALUMINUM_BRONZIUM_SWORD, "Espada de broncio");
         addItem(EPItems.ALUMINUM_BRONZIUM_DAGGER, "Daga de broncio");
         addItem(EPItems.ALUMINUM_BRONZIUM_PICKAXE, "Pico de broncio");
@@ -664,6 +713,14 @@ public class UruguayanLangProvider extends AbstractLangProvider {
         //Iron equipment
         addItem(EPItems.IRON_POLISHER, "Pulidora de hierro");
         addItem(EPItems.IRON_DAGGER, "Daga de hierro");
+
+        addItem(EPItems.REINFORCED_IRON_SWORD, "Espada de hierro");
+        addItem(EPItems.REINFORCED_IRON_DAGGER, "Daga de hierro");
+        addItem(EPItems.REINFORCED_IRON_PICKAXE, "Pico de hierro");
+        addItem(EPItems.REINFORCED_IRON_AXE, "Hacha de hierro");
+        addItem(EPItems.REINFORCED_IRON_SHOVEL, "Pala de hierro");
+        addItem(EPItems.REINFORCED_IRON_HOE, "Azadón de hierro");
+        addItem(EPItems.REINFORCED_IRON_POLISHER, "Pulidora de hierro");
 
         addItem(EPItems.ALUMINUM_IRON_SWORD, "Espada de hierro");
         addItem(EPItems.ALUMINUM_IRON_DAGGER, "Daga de hierro");
@@ -686,6 +743,14 @@ public class UruguayanLangProvider extends AbstractLangProvider {
         addItem(EPItems.GREEN_GOLDEN_LEGGINGS, "Pantalones de oro verde");
         addItem(EPItems.GREEN_GOLDEN_BOOTS, "Botas de oro verde");
 
+        addItem(EPItems.REINFORCED_GREEN_GOLDEN_SWORD, "Espada de oro verde");
+        addItem(EPItems.REINFORCED_GREEN_GOLDEN_DAGGER, "Daga de oro verde");
+        addItem(EPItems.REINFORCED_GREEN_GOLDEN_PICKAXE, "Pico de oro verde");
+        addItem(EPItems.REINFORCED_GREEN_GOLDEN_AXE, "Hacha de oro verde");
+        addItem(EPItems.REINFORCED_GREEN_GOLDEN_SHOVEL, "Pala de oro verde");
+        addItem(EPItems.REINFORCED_GREEN_GOLDEN_HOE, "Azadón de oro verde");
+        addItem(EPItems.REINFORCED_GREEN_GOLDEN_POLISHER, "Pulidora de oro verde");
+
         addItem(EPItems.ALUMINUM_GREEN_GOLDEN_SWORD, "Espada de oro verde");
         addItem(EPItems.ALUMINUM_GREEN_GOLDEN_DAGGER, "Daga de oro verde");
         addItem(EPItems.ALUMINUM_GREEN_GOLDEN_PICKAXE, "Pico de oro verde");
@@ -706,6 +771,14 @@ public class UruguayanLangProvider extends AbstractLangProvider {
         addItem(EPItems.STEEL_CHESTPLATE, "Pechera de acero");
         addItem(EPItems.STEEL_LEGGINGS, "Pantalones de acero");
         addItem(EPItems.STEEL_BOOTS, "Botas de acero");
+
+        addItem(EPItems.REINFORCED_STEEL_SWORD, "Espada de acero");
+        addItem(EPItems.REINFORCED_STEEL_DAGGER, "Daga de acero");
+        addItem(EPItems.REINFORCED_STEEL_PICKAXE, "Pico de acero");
+        addItem(EPItems.REINFORCED_STEEL_AXE, "Hacha de acero");
+        addItem(EPItems.REINFORCED_STEEL_SHOVEL, "Pala de acero");
+        addItem(EPItems.REINFORCED_STEEL_HOE, "Azadón de acero");
+        addItem(EPItems.REINFORCED_STEEL_POLISHER, "Pulidora de acero");
 
         addItem(EPItems.ALUMINUM_STEEL_SWORD, "Espada de acero");
         addItem(EPItems.ALUMINUM_STEEL_DAGGER, "Daga de acero");
@@ -728,6 +801,14 @@ public class UruguayanLangProvider extends AbstractLangProvider {
         addItem(EPItems.BLUE_GOLDEN_LEGGINGS, "Pantalones de oro azul");
         addItem(EPItems.BLUE_GOLDEN_BOOTS, "Botas de oro azul");
 
+        addItem(EPItems.REINFORCED_BLUE_GOLDEN_SWORD, "Espada de oro azul");
+        addItem(EPItems.REINFORCED_BLUE_GOLDEN_DAGGER, "Daga de oro azul");
+        addItem(EPItems.REINFORCED_BLUE_GOLDEN_PICKAXE, "Pico de oro azul");
+        addItem(EPItems.REINFORCED_BLUE_GOLDEN_AXE, "Hacha de oro azul");
+        addItem(EPItems.REINFORCED_BLUE_GOLDEN_SHOVEL, "Pala de oro azul");
+        addItem(EPItems.REINFORCED_BLUE_GOLDEN_HOE, "Azadón de oro azul");
+        addItem(EPItems.REINFORCED_BLUE_GOLDEN_POLISHER, "Pulidora de oro azul");
+
         addItem(EPItems.ALUMINUM_BLUE_GOLDEN_SWORD, "Espada de oro azul");
         addItem(EPItems.ALUMINUM_BLUE_GOLDEN_DAGGER, "Daga de oro azul");
         addItem(EPItems.ALUMINUM_BLUE_GOLDEN_PICKAXE, "Pico de oro azul");
@@ -739,6 +820,14 @@ public class UruguayanLangProvider extends AbstractLangProvider {
         //Diamond equipment
         addItem(EPItems.DIAMOND_POLISHER, "Pulidora de diamante");
         addItem(EPItems.DIAMOND_DAGGER, "Daga de diamante");
+
+        addItem(EPItems.REINFORCED_DIAMOND_SWORD, "Espada de diamante");
+        addItem(EPItems.REINFORCED_DIAMOND_DAGGER, "Daga de diamante");
+        addItem(EPItems.REINFORCED_DIAMOND_PICKAXE, "Pico de diamante");
+        addItem(EPItems.REINFORCED_DIAMOND_AXE, "Hacha de diamante");
+        addItem(EPItems.REINFORCED_DIAMOND_SHOVEL, "Pala de diamante");
+        addItem(EPItems.REINFORCED_DIAMOND_HOE, "Azadón de diamante");
+        addItem(EPItems.REINFORCED_DIAMOND_POLISHER, "Pulidora de diamante");
 
         addItem(EPItems.ALUMINUM_DIAMOND_SWORD, "Espada de diamante");
         addItem(EPItems.ALUMINUM_DIAMOND_DAGGER, "Daga de diamante");
@@ -812,10 +901,13 @@ public class UruguayanLangProvider extends AbstractLangProvider {
         //Smithing templates
         addSmithingTemplateTitle("Plantilla de herreria", "Se aplica a:", "Ingredientes:");
 
+        addSmithingUpgrade("reinforced", "Reforzado del mango", "Equipación con mango de madera",
+                "Tiras de cuero", "Coloque cualquier equipo con un mango de madera o reforzado", "Coloque una tira de cuero");
+
         addSmithingUpgrade("bronzium", "Mejora de broncio", "Equipo de bronze, equipo de latón",
                 "Lingote de broncio", "Coloque un arma, herramienta o armadora de bronce o de latón", "Coloque un Lingote de broncio");
 
-        addSmithingUpgrade("aluminum", "Mejora de aluminio", "Equipación con mango de madera",
+        addSmithingUpgrade("aluminum", "Mejora de aluminio", "Equipación con mango de madera o reforzado",
                 "Lingote de aluminio", "Coloque cualquier equipo con un mango de madera", "Coloque un lingote de aluminio");
 
         addSmithingUpgrade("golden", "Mejora áurea", "Equipación de oro",

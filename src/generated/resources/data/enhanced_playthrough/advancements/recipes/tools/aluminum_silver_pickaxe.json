@@ -1,24 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_rod": {
+    "has_handle": {
       "conditions": {
         "items": [
           {
             "items": [
               "enhanced_playthrough:aluminum_rod"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_smithing_template": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "enhanced_playthrough:aluminum_upgrade_smithing_template"
             ]
           }
         ]
@@ -47,8 +35,7 @@
   "requirements": [
     [
       "has_tool",
-      "has_rod",
-      "has_smithing_template",
+      "has_handle",
       "has_the_recipe"
     ]
   ],

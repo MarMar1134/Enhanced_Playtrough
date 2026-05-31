@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "enhanced_playthrough:reinforced_stick"
+    },
+    "I": {
+      "item": "enhanced_playthrough:steel_ingot"
+    }
+  },
+  "pattern": [
+    "II",
+    " #",
+    " #"
+  ],
+  "result": {
+    "item": "enhanced_playthrough:reinforced_steel_hoe"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "enhanced_playthrough:green_gold_ingot"
+  },
+  "base": {
+    "item": "enhanced_playthrough:reinforced_golden_shovel"
+  },
+  "result": {
+    "item": "enhanced_playthrough:reinforced_green_golden_shovel"
+  },
+  "template": {
+    "item": "enhanced_playthrough:golden_upgrade_smithing_template"
+  }
+}

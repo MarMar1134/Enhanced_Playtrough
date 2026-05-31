@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "enhanced_playthrough:reinforced_stick"
+    },
+    "I": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "pattern": [
+    "III",
+    " # ",
+    " # "
+  ],
+  "result": {
+    "item": "enhanced_playthrough:reinforced_diamond_pickaxe"
+  },
+  "show_notification": true
+}

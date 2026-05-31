@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "enhanced_playthrough:reinforced_upgrade_smithing_template"
+    },
+    "L": {
+      "item": "minecraft:leather"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "SAS",
+    "SLS",
+    "SSS"
+  ],
+  "result": {
+    "count": 2,
+    "item": "enhanced_playthrough:reinforced_upgrade_smithing_template"
+  },
+  "show_notification": true
+}

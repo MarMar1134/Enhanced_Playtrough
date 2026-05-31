@@ -4,7 +4,6 @@ import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.block.EPBlocks;
 import net.marmar.enhanced_playthrough.data.tag.EPTags;
 import net.marmar.enhanced_playthrough.item.EPItems;
-import net.marmar.enhanced_playthrough.recipe.crafting.EPShapedRecipeBuilder;
 import net.marmar.enhanced_playthrough.recipe.crafting.EPShapelessRecipeBuilder;
 import net.minecraft.advancements.critereon.EnterBlockTrigger;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
@@ -228,6 +227,16 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .save(consumer, recipeName(EPItems.PLANT_FIBER.get(), "from_kenaf_branch"));
 
         //Smithing templates
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, EPItems.REINFORCED_UPGRADE_SMITHING_TEMPLATE.get(), 2)
+                .pattern("SAS")
+                .pattern("SLS")
+                .pattern("SSS")
+                .define('A', EPItems.REINFORCED_UPGRADE_SMITHING_TEMPLATE.get())
+                .define('L', Items.LEATHER)
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(EPItems.REINFORCED_UPGRADE_SMITHING_TEMPLATE.get()), has(EPItems.REINFORCED_UPGRADE_SMITHING_TEMPLATE.get()))
+                .save(consumer);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, EPItems.BRONZIUM_UPGRADE_SMITHING_TEMPLATE.get(), 2)
                 .pattern("BAB")
                 .pattern("BVB")
@@ -237,7 +246,8 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .define('B', Items.NETHER_BRICK)
                 .unlockedBy(getHasName(EPItems.BRONZIUM_UPGRADE_SMITHING_TEMPLATE.get()), has(EPItems.BRONZIUM_UPGRADE_SMITHING_TEMPLATE.get()))
                 .save(consumer);
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, EPItems.ALUMINUM_UPGRADE_SMITHING_TEMPLATE.get(), 2)
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, EPItems.ALUMINUM_UPGRADE_SMITHING_TEMPLATE.get(), 2)
                 .pattern("SAS")
                 .pattern("SVS")
                 .pattern("SSS")
@@ -246,7 +256,8 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .define('S', EPTags.Items.TERRACOTTA_SHARD)
                 .unlockedBy(getHasName(EPItems.ALUMINUM_UPGRADE_SMITHING_TEMPLATE.get()), has(EPItems.ALUMINUM_UPGRADE_SMITHING_TEMPLATE.get()))
                 .save(consumer);
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, EPItems.GOLDEN_UPGRADE_SMITHING_TEMPLATE.get(), 2)
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, EPItems.GOLDEN_UPGRADE_SMITHING_TEMPLATE.get(), 2)
                 .pattern("SAS")
                 .pattern("SVS")
                 .pattern("SSS")
@@ -255,7 +266,8 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .define('S', EPItems.COBBLE.get())
                 .unlockedBy(getHasName(EPItems.GOLDEN_UPGRADE_SMITHING_TEMPLATE.get()), has(EPItems.GOLDEN_UPGRADE_SMITHING_TEMPLATE.get()))
                 .save(consumer);
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, EPItems.ANCIENT_ARMOR_TRIM_SMITHING_TEMPLATE.get(), 2)
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, EPItems.ANCIENT_ARMOR_TRIM_SMITHING_TEMPLATE.get(), 2)
                 .pattern("SAS")
                 .pattern("SVS")
                 .pattern("SSS")
@@ -528,7 +540,11 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                     EPItems.SILVER_HELMET.get(), EPItems.SILVER_CHESTPLATE.get(), EPItems.SILVER_LEGGINGS.get(), EPItems.SILVER_BOOTS.get(),
                     consumer);
 
-            addAluminumGear(EPItems.SILVER_INGOT.get(), EPItems.ALUMINUM_SILVER_AXE.get(), EPItems.ALUMINUM_SILVER_PICKAXE.get(),
+            addCustomHandleGear(EPItems.SILVER_INGOT.get(), EPItems.REINFORCED_STICK.get(), EPItems.REINFORCED_SILVER_AXE.get(), EPItems.REINFORCED_SILVER_PICKAXE.get(),
+                    EPItems.REINFORCED_SILVER_SWORD.get(), EPItems.REINFORCED_SILVER_DAGGER.get(), EPItems.REINFORCED_SILVER_SHOVEL.get(),
+                    EPItems.REINFORCED_SILVER_HOE.get(), EPItems.REINFORCED_SILVER_POLISHER.get(), consumer);
+
+            addCustomHandleGear(EPItems.SILVER_INGOT.get(), EPItems.ALUMINUM_ROD.get(), EPItems.ALUMINUM_SILVER_AXE.get(), EPItems.ALUMINUM_SILVER_PICKAXE.get(),
                     EPItems.ALUMINUM_SILVER_SWORD.get(), EPItems.ALUMINUM_SILVER_DAGGER.get(), EPItems.ALUMINUM_SILVER_SHOVEL.get(),
                     EPItems.ALUMINUM_SILVER_HOE.get(), EPItems.ALUMINUM_SILVER_POLISHER.get(), consumer);
 
@@ -555,7 +571,11 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
 
             addArmor(Items.GOLD_INGOT, Items.GOLDEN_HELMET, Items.GOLDEN_CHESTPLATE, Items.GOLDEN_LEGGINGS, Items.GOLDEN_BOOTS, consumer);
 
-            addAluminumGear(Items.GOLD_INGOT, EPItems.ALUMINUM_GOLDEN_AXE.get(), EPItems.ALUMINUM_GOLDEN_PICKAXE.get(),
+            addCustomHandleGear(Items.GOLD_INGOT, EPItems.REINFORCED_STICK.get(), EPItems.REINFORCED_GOLDEN_AXE.get(), EPItems.REINFORCED_GOLDEN_PICKAXE.get(),
+                    EPItems.REINFORCED_GOLDEN_SWORD.get(), EPItems.REINFORCED_GOLDEN_DAGGER.get(), EPItems.REINFORCED_GOLDEN_SHOVEL.get(),
+                    EPItems.REINFORCED_GOLDEN_HOE.get(), EPItems.REINFORCED_GOLDEN_POLISHER.get(), consumer);
+
+            addCustomHandleGear(Items.GOLD_INGOT, EPItems.ALUMINUM_ROD.get(), EPItems.ALUMINUM_GOLDEN_AXE.get(), EPItems.ALUMINUM_GOLDEN_PICKAXE.get(),
                     EPItems.ALUMINUM_GOLDEN_SWORD.get(), EPItems.ALUMINUM_GOLDEN_DAGGER.get(), EPItems.ALUMINUM_GOLDEN_SHOVEL.get(),
                     EPItems.ALUMINUM_GOLDEN_HOE.get(), EPItems.ALUMINUM_GOLDEN_POLISHER.get(), consumer);
 
@@ -596,7 +616,11 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                     EPItems.BRASS_HELMET.get(), EPItems.BRASS_CHESTPLATE.get(), EPItems.BRASS_LEGGINGS.get(), EPItems.BRASS_BOOTS.get(),
                     consumer);
 
-            addAluminumGear(EPItems.BRASS_INGOT.get(), EPItems.ALUMINUM_BRASS_AXE.get(), EPItems.ALUMINUM_BRASS_PICKAXE.get(),
+            addCustomHandleGear(EPItems.BRASS_INGOT.get(), EPItems.REINFORCED_STICK.get(), EPItems.REINFORCED_BRASS_AXE.get(), EPItems.REINFORCED_BRASS_PICKAXE.get(),
+                    EPItems.REINFORCED_BRASS_SWORD.get(), EPItems.REINFORCED_BRASS_DAGGER.get(), EPItems.REINFORCED_BRASS_SHOVEL.get(),
+                    EPItems.REINFORCED_BRASS_HOE.get(), EPItems.REINFORCED_BRASS_POLISHER.get(), consumer);
+
+            addCustomHandleGear(EPItems.BRASS_INGOT.get(), EPItems.ALUMINUM_ROD.get(), EPItems.ALUMINUM_BRASS_AXE.get(), EPItems.ALUMINUM_BRASS_PICKAXE.get(),
                     EPItems.ALUMINUM_BRASS_SWORD.get(), EPItems.ALUMINUM_BRASS_DAGGER.get(), EPItems.ALUMINUM_BRASS_SHOVEL.get(),
                     EPItems.ALUMINUM_BRASS_HOE.get(), EPItems.ALUMINUM_BRASS_POLISHER.get(), consumer);
 
@@ -608,7 +632,12 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                     EPItems.BRONZE_HELMET.get(), EPItems.BRONZE_CHESTPLATE.get(), EPItems.BRONZE_LEGGINGS.get(), EPItems.BRONZE_BOOTS.get(),
                     consumer);
 
-            addAluminumGear(EPItems.BRONZE_INGOT.get(), EPItems.ALUMINUM_BRONZE_AXE.get(), EPItems.ALUMINUM_BRONZE_PICKAXE.get(),
+
+            addCustomHandleGear(EPItems.BRONZE_INGOT.get(), EPItems.REINFORCED_STICK.get(), EPItems.REINFORCED_BRONZE_AXE.get(), EPItems.REINFORCED_BRONZE_PICKAXE.get(),
+                    EPItems.REINFORCED_BRONZE_SWORD.get(), EPItems.REINFORCED_BRONZE_DAGGER.get(), EPItems.REINFORCED_BRONZE_SHOVEL.get(),
+                    EPItems.REINFORCED_BRONZE_HOE.get(), EPItems.REINFORCED_BRONZE_POLISHER.get(), consumer);
+
+            addCustomHandleGear(EPItems.BRONZE_INGOT.get(), EPItems.ALUMINUM_ROD.get(), EPItems.ALUMINUM_BRONZE_AXE.get(), EPItems.ALUMINUM_BRONZE_PICKAXE.get(),
                     EPItems.ALUMINUM_BRONZE_SWORD.get(), EPItems.ALUMINUM_BRONZE_DAGGER.get(), EPItems.ALUMINUM_BRONZE_SHOVEL.get(),
                     EPItems.ALUMINUM_BRONZE_HOE.get(), EPItems.ALUMINUM_BRONZE_POLISHER.get(), consumer);
 
@@ -634,7 +663,12 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
 
             addArmor(Items.IRON_INGOT, Items.IRON_HELMET, Items.IRON_CHESTPLATE, Items.IRON_LEGGINGS, Items.IRON_BOOTS, consumer);
 
-            addAluminumGear(Items.IRON_INGOT, EPItems.ALUMINUM_IRON_AXE.get(), EPItems.ALUMINUM_IRON_PICKAXE.get(),
+
+            addCustomHandleGear(Items.IRON_INGOT, EPItems.REINFORCED_STICK.get(), EPItems.REINFORCED_IRON_AXE.get(), EPItems.REINFORCED_IRON_PICKAXE.get(),
+                    EPItems.REINFORCED_IRON_SWORD.get(), EPItems.REINFORCED_IRON_DAGGER.get(), EPItems.REINFORCED_IRON_SHOVEL.get(),
+                    EPItems.REINFORCED_IRON_HOE.get(), EPItems.REINFORCED_IRON_POLISHER.get(), consumer);
+
+            addCustomHandleGear(Items.IRON_INGOT, EPItems.ALUMINUM_ROD.get(), EPItems.ALUMINUM_IRON_AXE.get(), EPItems.ALUMINUM_IRON_PICKAXE.get(),
                     EPItems.ALUMINUM_IRON_SWORD.get(), EPItems.ALUMINUM_IRON_DAGGER.get(), EPItems.ALUMINUM_IRON_SHOVEL.get(),
                     EPItems.ALUMINUM_IRON_HOE.get(), EPItems.ALUMINUM_IRON_POLISHER.get(), consumer);
 
@@ -649,7 +683,12 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                     EPItems.STEEL_HELMET.get(), EPItems.STEEL_CHESTPLATE.get(), EPItems.STEEL_LEGGINGS.get(), EPItems.STEEL_BOOTS.get(),
                     consumer);
 
-            addAluminumGear(EPItems.STEEL_INGOT.get(), EPItems.ALUMINUM_STEEL_AXE.get(), EPItems.ALUMINUM_STEEL_PICKAXE.get(),
+
+            addCustomHandleGear(EPItems.STEEL_INGOT.get(), EPItems.REINFORCED_STICK.get(), EPItems.REINFORCED_STEEL_AXE.get(), EPItems.REINFORCED_STEEL_PICKAXE.get(),
+                    EPItems.REINFORCED_STEEL_SWORD.get(), EPItems.REINFORCED_STEEL_DAGGER.get(), EPItems.REINFORCED_STEEL_SHOVEL.get(),
+                    EPItems.REINFORCED_STEEL_HOE.get(), EPItems.REINFORCED_STEEL_POLISHER.get(), consumer);
+
+            addCustomHandleGear(EPItems.STEEL_INGOT.get(), EPItems.ALUMINUM_ROD.get(), EPItems.ALUMINUM_STEEL_AXE.get(), EPItems.ALUMINUM_STEEL_PICKAXE.get(),
                     EPItems.ALUMINUM_STEEL_SWORD.get(), EPItems.ALUMINUM_STEEL_DAGGER.get(), EPItems.ALUMINUM_STEEL_SHOVEL.get(),
                     EPItems.ALUMINUM_STEEL_HOE.get(), EPItems.ALUMINUM_STEEL_POLISHER.get(), consumer);
 
@@ -675,7 +714,12 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
 
             addArmor(Items.DIAMOND, Items.DIAMOND_HELMET, Items.DIAMOND_CHESTPLATE, Items.DIAMOND_LEGGINGS, Items.DIAMOND_BOOTS, consumer);
 
-            addAluminumGear(Items.DIAMOND, EPItems.ALUMINUM_DIAMOND_AXE.get(), EPItems.ALUMINUM_DIAMOND_PICKAXE.get(),
+
+            addCustomHandleGear(Items.DIAMOND, EPItems.REINFORCED_STICK.get(), EPItems.REINFORCED_DIAMOND_AXE.get(), EPItems.REINFORCED_DIAMOND_PICKAXE.get(),
+                    EPItems.REINFORCED_DIAMOND_SWORD.get(), EPItems.REINFORCED_DIAMOND_DAGGER.get(), EPItems.REINFORCED_DIAMOND_SHOVEL.get(),
+                    EPItems.REINFORCED_DIAMOND_HOE.get(), EPItems.REINFORCED_DIAMOND_POLISHER.get(), consumer);
+
+            addCustomHandleGear(Items.DIAMOND, EPItems.ALUMINUM_ROD.get(), EPItems.ALUMINUM_DIAMOND_AXE.get(), EPItems.ALUMINUM_DIAMOND_PICKAXE.get(),
                     EPItems.ALUMINUM_DIAMOND_SWORD.get(), EPItems.ALUMINUM_DIAMOND_DAGGER.get(), EPItems.ALUMINUM_DIAMOND_SHOVEL.get(),
                     EPItems.ALUMINUM_DIAMOND_HOE.get(), EPItems.ALUMINUM_DIAMOND_POLISHER.get(), consumer);
 
@@ -927,10 +971,6 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .unlockedBy(getHasName(pIngot), has(pIngot))
                 .unlockedBy(getHasName(pBlock), has(pBlock))
                 .save(pConsumer);
-    }
-
-    protected static InventoryChangeTrigger.TriggerInstance HAS_ALUMINUM_ROD(){
-        return InventoryChangeTrigger.TriggerInstance.hasItems(EPItems.ALUMINUM_ROD.get());
     }
 
     protected static ItemPredicate IS_ARROW_MATERIAL = ItemPredicate.Builder.item().of(EPItems.ALUMINUM_ROD.get(),
@@ -1275,76 +1315,76 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .save(pConsumer);
     }
 
-    protected static void addAluminumGear(ItemLike pIngot, ItemLike pAxe, ItemLike pPickaxe, ItemLike pSword, ItemLike pDagger, ItemLike pShovel,
-                                          ItemLike pHoe, ItemLike pPolisher, Consumer<FinishedRecipe> pConsumer){
+    protected static void addCustomHandleGear(ItemLike pIngot, ItemLike pHandle, ItemLike pAxe, ItemLike pPickaxe, ItemLike pSword, ItemLike pDagger, ItemLike pShovel,
+                                              ItemLike pHoe, ItemLike pPolisher, Consumer<FinishedRecipe> pConsumer){
         //Tools
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, pSword)
                 .pattern("I")
                 .pattern("I")
                 .pattern("#")
                 .define('I', pIngot)
-                .define('#', EPTags.Items.ALUMINUM_ROD)
+                .define('#', pHandle)
                 .unlockedBy("has_tool", has(pSword))
-                .unlockedBy("has_rod", HAS_ALUMINUM_ROD())
-                .unlockedBy("has_smithing_template", has(EPItems.ALUMINUM_UPGRADE_SMITHING_TEMPLATE.get()))
+                .unlockedBy("has_handle", has(pHandle))
+                //.unlockedBy("has_smithing_template", has(EPItems.ALUMINUM_UPGRADE_SMITHING_TEMPLATE.get()))
                 .save(pConsumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, pDagger)
                 .pattern("I")
                 .pattern("#")
                 .define('I', pIngot)
-                .define('#', EPTags.Items.ALUMINUM_ROD)
+                .define('#', pHandle)
                 .unlockedBy("has_tool", has(pDagger))
-                .unlockedBy("has_rod", HAS_ALUMINUM_ROD())
-                .unlockedBy("has_smithing_template", has(EPItems.ALUMINUM_UPGRADE_SMITHING_TEMPLATE.get()))
+                .unlockedBy("has_handle", has(pHandle))
+                //.unlockedBy("has_smithing_template", has(EPItems.ALUMINUM_UPGRADE_SMITHING_TEMPLATE.get()))
                 .save(pConsumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, pPickaxe)
                 .pattern("III")
                 .pattern(" # ")
                 .pattern(" # ")
                 .define('I', pIngot)
-                .define('#', EPTags.Items.ALUMINUM_ROD)
+                .define('#', pHandle)
                 .unlockedBy("has_tool", has(pPickaxe))
-                .unlockedBy("has_rod", HAS_ALUMINUM_ROD())
-                .unlockedBy("has_smithing_template", has(EPItems.ALUMINUM_UPGRADE_SMITHING_TEMPLATE.get()))
+                .unlockedBy("has_handle", has(pHandle))
+                //.unlockedBy("has_smithing_template", has(EPItems.ALUMINUM_UPGRADE_SMITHING_TEMPLATE.get()))
                 .save(pConsumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, pAxe)
                 .pattern("II")
                 .pattern("I#")
                 .pattern(" #")
                 .define('I', pIngot)
-                .define('#', EPTags.Items.ALUMINUM_ROD)
+                .define('#', pHandle)
                 .unlockedBy("has_tool", has(pAxe))
-                .unlockedBy("has_rod", HAS_ALUMINUM_ROD())
-                .unlockedBy("has_smithing_template", has(EPItems.ALUMINUM_UPGRADE_SMITHING_TEMPLATE.get()))
+                .unlockedBy("has_handle", has(pHandle))
+                //.unlockedBy("has_smithing_template", has(EPItems.ALUMINUM_UPGRADE_SMITHING_TEMPLATE.get()))
                 .save(pConsumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, pShovel)
                 .pattern("I")
                 .pattern("#")
                 .pattern("#")
                 .define('I', pIngot)
-                .define('#', EPTags.Items.ALUMINUM_ROD)
+                .define('#', pHandle)
                 .unlockedBy("has_tool", has(pShovel))
-                .unlockedBy("has_rod", HAS_ALUMINUM_ROD())
-                .unlockedBy("has_smithing_template", has(EPItems.ALUMINUM_UPGRADE_SMITHING_TEMPLATE.get()))
+                .unlockedBy("has_handle", has(pHandle))
+                //.unlockedBy("has_smithing_template", has(EPItems.ALUMINUM_UPGRADE_SMITHING_TEMPLATE.get()))
                 .save(pConsumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, pHoe)
                 .pattern("II")
                 .pattern(" #")
                 .pattern(" #")
                 .define('I', pIngot)
-                .define('#', EPTags.Items.ALUMINUM_ROD)
+                .define('#', pHandle)
                 .unlockedBy("has_tool", has(pHoe))
-                .unlockedBy("has_rod", HAS_ALUMINUM_ROD())
-                .unlockedBy("has_smithing_template", has(EPItems.ALUMINUM_UPGRADE_SMITHING_TEMPLATE.get()))
+                .unlockedBy("has_handle", has(pHandle))
+                //.unlockedBy("has_smithing_template", has(EPItems.ALUMINUM_UPGRADE_SMITHING_TEMPLATE.get()))
                 .save(pConsumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, pPolisher)
                 .pattern(" I")
                 .pattern("# ")
                 .define('I', pIngot)
-                .define('#', EPTags.Items.ALUMINUM_ROD)
+                .define('#', pHandle)
                 .unlockedBy("has_tool", has(pPolisher))
-                .unlockedBy("has_rod", HAS_ALUMINUM_ROD())
-                .unlockedBy("has_smithing_template", has(EPItems.ALUMINUM_UPGRADE_SMITHING_TEMPLATE.get()))
+                .unlockedBy("has_handle", has(pHandle))
+                //.unlockedBy("has_smithing_template", has(EPItems.ALUMINUM_UPGRADE_SMITHING_TEMPLATE.get()))
                 .save(pConsumer);
     }
 

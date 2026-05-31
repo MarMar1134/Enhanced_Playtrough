@@ -42,6 +42,15 @@ public class EPSmithingTemplateItem extends SmithingTemplateItem {
         return List.of(EMPTY_SLOT_INGOT);
     }
 
+    public static EPSmithingTemplateItem createReinforcedSmithingTemplate(){
+        Component SMITHING_UPGRADE = Component.translatable("smithing." + EnhancedPlaythrough.MOD_ID + ".reinforced.title").withStyle(TITLES);
+        Component APPLIES_TO = Component.translatable("smithing." + EnhancedPlaythrough.MOD_ID + ".reinforced.applies_to").withStyle(DESCS);
+        Component INGREDIENTS = Component.translatable("smithing." + EnhancedPlaythrough.MOD_ID + ".reinforced.ingredients").withStyle(DESCS);
+        Component BASE_SLOT_DESCRIPTION = Component.translatable("smithing." + EnhancedPlaythrough.MOD_ID + ".reinforced.base_slot_description");
+        Component ADDITIONS_SLOT_DESCRIPTION = Component.translatable("smithing." + EnhancedPlaythrough.MOD_ID + ".reinforced.additions_slot_description");
+        return new EPSmithingTemplateItem(APPLIES_TO, INGREDIENTS, SMITHING_UPGRADE, BASE_SLOT_DESCRIPTION, ADDITIONS_SLOT_DESCRIPTION, createSmithingUpgradeIconList(), createSmithingUpgradeMaterialList());
+    }
+
     public static EPSmithingTemplateItem createBronziumSmithingTemplate(){
         Component SMITHING_UPGRADE = Component.translatable("smithing." + EnhancedPlaythrough.MOD_ID + ".bronzium.title").withStyle(TITLES);
         Component APPLIES_TO = Component.translatable("smithing." + EnhancedPlaythrough.MOD_ID + ".bronzium.applies_to").withStyle(DESCS);

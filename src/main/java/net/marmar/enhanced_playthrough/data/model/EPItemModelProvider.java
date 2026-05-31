@@ -350,6 +350,7 @@ public class EPItemModelProvider extends ItemModelProvider {
         simpleItem(EPItems.CALIBRATED_QUARTZ);
 
         //templates
+        simpleItem(EPItems.REINFORCED_UPGRADE_SMITHING_TEMPLATE);
         simpleItem(EPItems.BRONZIUM_UPGRADE_SMITHING_TEMPLATE);
         simpleItem(EPItems.ALUMINUM_UPGRADE_SMITHING_TEMPLATE);
         simpleItem(EPItems.GOLDEN_UPGRADE_SMITHING_TEMPLATE);
@@ -420,7 +421,15 @@ public class EPItemModelProvider extends ItemModelProvider {
             //Gold
             polisherItem(EPItems.GOLDEN_POLISHER, "golden");
             daggerItem(EPItems.GOLDEN_DAGGER, "golden");
-                //Aluminum gold
+                // Reinforced handle gold
+                swordItem(EPItems.REINFORCED_GOLDEN_SWORD, "golden");
+                daggerItem(EPItems.REINFORCED_GOLDEN_DAGGER, "golden");
+                pickaxeItem(EPItems.REINFORCED_GOLDEN_PICKAXE, "golden");
+                axeItem(EPItems.REINFORCED_GOLDEN_AXE, "golden");
+                shovelItem(EPItems.REINFORCED_GOLDEN_SHOVEL, "golden");
+                hoeItem(EPItems.REINFORCED_GOLDEN_HOE, "golden");
+                polisherItem(EPItems.REINFORCED_GOLDEN_POLISHER, "golden");
+                //Aluminum handle gold
                 swordItem(EPItems.ALUMINUM_GOLDEN_SWORD, "golden");
                 daggerItem(EPItems.ALUMINUM_GOLDEN_DAGGER, "golden");
                 pickaxeItem(EPItems.ALUMINUM_GOLDEN_PICKAXE, "golden");
@@ -437,7 +446,15 @@ public class EPItemModelProvider extends ItemModelProvider {
             shovelItem(EPItems.SILVER_SHOVEL, "silver");
             hoeItem(EPItems.SILVER_HOE, "silver");
             polisherItem(EPItems.SILVER_POLISHER, "silver");
-                //Aluminum silver
+                // Reinforced handle silver
+                swordItem(EPItems.REINFORCED_SILVER_SWORD, "silver");
+                daggerItem(EPItems.REINFORCED_SILVER_DAGGER, "silver");
+                pickaxeItem(EPItems.REINFORCED_SILVER_PICKAXE, "silver");
+                axeItem(EPItems.REINFORCED_SILVER_AXE, "silver");
+                shovelItem(EPItems.REINFORCED_SILVER_SHOVEL, "silver");
+                hoeItem(EPItems.REINFORCED_SILVER_HOE, "silver");
+                polisherItem(EPItems.REINFORCED_SILVER_POLISHER, "silver");
+                //Aluminum handle silver
                 swordItem(EPItems.ALUMINUM_SILVER_SWORD, "silver");
                 daggerItem(EPItems.ALUMINUM_SILVER_DAGGER, "silver");
                 pickaxeItem(EPItems.ALUMINUM_SILVER_PICKAXE, "silver");
@@ -463,7 +480,15 @@ public class EPItemModelProvider extends ItemModelProvider {
             shovelItem(EPItems.BRONZE_SHOVEL, "bronze");
             hoeItem(EPItems.BRONZE_HOE, "bronze");
             polisherItem(EPItems.BRONZE_POLISHER, "bronze");
-                //Aluminum bronze
+                //Reinforced handle bronze
+                swordItem(EPItems.REINFORCED_BRONZE_SWORD, "bronze");
+                daggerItem(EPItems.REINFORCED_BRONZE_DAGGER, "bronze");
+                pickaxeItem(EPItems.REINFORCED_BRONZE_PICKAXE, "bronze");
+                axeItem(EPItems.REINFORCED_BRONZE_AXE, "bronze");
+                shovelItem(EPItems.REINFORCED_BRONZE_SHOVEL, "bronze");
+                hoeItem(EPItems.REINFORCED_BRONZE_HOE, "bronze");
+                polisherItem(EPItems.REINFORCED_BRONZE_POLISHER, "bronze");
+                //Aluminum handle bronze
                 swordItem(EPItems.ALUMINUM_BRONZE_SWORD, "bronze");
                 daggerItem(EPItems.ALUMINUM_BRONZE_DAGGER, "bronze");
                 pickaxeItem(EPItems.ALUMINUM_BRONZE_PICKAXE, "bronze");
@@ -485,7 +510,15 @@ public class EPItemModelProvider extends ItemModelProvider {
             shovelItem(EPItems.BRASS_SHOVEL, "brass");
             hoeItem(EPItems.BRASS_HOE, "brass");
             polisherItem(EPItems.BRASS_POLISHER, "brass");
-                //Aluminum brass
+                //Reinforced handle brass
+                swordItem(EPItems.REINFORCED_BRASS_SWORD, "brass");
+                daggerItem(EPItems.REINFORCED_BRASS_DAGGER, "brass");
+                pickaxeItem(EPItems.REINFORCED_BRASS_PICKAXE, "brass");
+                axeItem(EPItems.REINFORCED_BRASS_AXE, "brass");
+                shovelItem(EPItems.REINFORCED_BRASS_SHOVEL, "brass");
+                hoeItem(EPItems.REINFORCED_BRASS_HOE, "brass");
+                polisherItem(EPItems.REINFORCED_BRASS_POLISHER, "brass");
+                //Aluminum handle brass
                 swordItem(EPItems.ALUMINUM_BRASS_SWORD, "brass");
                 daggerItem(EPItems.ALUMINUM_BRASS_DAGGER, "brass");
                 pickaxeItem(EPItems.ALUMINUM_BRASS_PICKAXE, "brass");
@@ -507,7 +540,15 @@ public class EPItemModelProvider extends ItemModelProvider {
             shovelItem(EPItems.ROSE_GOLDEN_SHOVEL, "rose_golden");
             hoeItem(EPItems.ROSE_GOLDEN_HOE, "rose_golden");
             polisherItem(EPItems.ROSE_GOLDEN_POLISHER, "rose_golden");
-                //Aluminum rose gold
+                //Reinforced handle rose gold
+                swordItem(EPItems.REINFORCED_ROSE_GOLDEN_SWORD, "rose_golden");
+                daggerItem(EPItems.REINFORCED_ROSE_GOLDEN_DAGGER, "rose_golden");
+                pickaxeItem(EPItems.REINFORCED_ROSE_GOLDEN_PICKAXE, "rose_golden");
+                axeItem(EPItems.REINFORCED_ROSE_GOLDEN_AXE, "rose_golden");
+                shovelItem(EPItems.REINFORCED_ROSE_GOLDEN_SHOVEL, "rose_golden");
+                hoeItem(EPItems.REINFORCED_ROSE_GOLDEN_HOE, "rose_golden");
+                polisherItem(EPItems.REINFORCED_ROSE_GOLDEN_POLISHER, "rose_golden");
+                //Aluminum handle rose gold
                 swordItem(EPItems.ALUMINUM_ROSE_GOLDEN_SWORD, "rose_golden");
                 daggerItem(EPItems.ALUMINUM_ROSE_GOLDEN_DAGGER, "rose_golden");
                 pickaxeItem(EPItems.ALUMINUM_ROSE_GOLDEN_PICKAXE, "rose_golden");
@@ -529,7 +570,15 @@ public class EPItemModelProvider extends ItemModelProvider {
             shovelItem(EPItems.BRONZIUM_SHOVEL, "bronzium");
             hoeItem(EPItems.BRONZIUM_HOE, "bronzium");
             polisherItem(EPItems.BRONZIUM_POLISHER, "bronzium");
-                //Aluminum bronzium
+                //Reinforced handle bronzium
+                swordItem(EPItems.REINFORCED_BRONZIUM_SWORD, "bronzium");
+                daggerItem(EPItems.REINFORCED_BRONZIUM_DAGGER, "bronzium");
+                pickaxeItem(EPItems.REINFORCED_BRONZIUM_PICKAXE, "bronzium");
+                axeItem(EPItems.REINFORCED_BRONZIUM_AXE, "bronzium");
+                shovelItem(EPItems.REINFORCED_BRONZIUM_SHOVEL, "bronzium");
+                hoeItem(EPItems.REINFORCED_BRONZIUM_HOE, "bronzium");
+                polisherItem(EPItems.REINFORCED_BRONZIUM_POLISHER, "bronzium");
+                //Aluminum handle bronzium
                 swordItem(EPItems.ALUMINUM_BRONZIUM_SWORD, "bronzium");
                 daggerItem(EPItems.ALUMINUM_BRONZIUM_DAGGER, "bronzium");
                 pickaxeItem(EPItems.ALUMINUM_BRONZIUM_PICKAXE, "bronzium");
@@ -546,7 +595,15 @@ public class EPItemModelProvider extends ItemModelProvider {
             //Iron
             handheldItem(EPItems.IRON_POLISHER);
             handheldItem(EPItems.IRON_DAGGER);
-                //Aluminum iron
+                //Reinforced handle iron
+                swordItem(EPItems.REINFORCED_IRON_SWORD, "iron");
+                daggerItem(EPItems.REINFORCED_IRON_DAGGER, "iron");
+                pickaxeItem(EPItems.REINFORCED_IRON_PICKAXE, "iron");
+                axeItem(EPItems.REINFORCED_IRON_AXE, "iron");
+                shovelItem(EPItems.REINFORCED_IRON_SHOVEL, "iron");
+                hoeItem(EPItems.REINFORCED_IRON_HOE, "iron");
+                polisherItem(EPItems.REINFORCED_IRON_POLISHER, "iron");
+                //Aluminum handle iron
                 swordItem(EPItems.ALUMINUM_IRON_SWORD, "iron");
                 daggerItem(EPItems.ALUMINUM_IRON_DAGGER, "iron");
                 pickaxeItem(EPItems.ALUMINUM_IRON_PICKAXE, "iron");
@@ -563,7 +620,15 @@ public class EPItemModelProvider extends ItemModelProvider {
             shovelItem(EPItems.STEEL_SHOVEL, "steel");
             hoeItem(EPItems.STEEL_HOE, "steel");
             polisherItem(EPItems.STEEL_POLISHER, "steel");
-                //Aluminum steel
+                //Reinforced handle steel
+                swordItem(EPItems.REINFORCED_STEEL_SWORD, "steel");
+                daggerItem(EPItems.REINFORCED_STEEL_DAGGER, "steel");
+                pickaxeItem(EPItems.REINFORCED_STEEL_PICKAXE, "steel");
+                axeItem(EPItems.REINFORCED_STEEL_AXE, "steel");
+                shovelItem(EPItems.REINFORCED_STEEL_SHOVEL, "steel");
+                hoeItem(EPItems.REINFORCED_STEEL_HOE, "steel");
+                polisherItem(EPItems.REINFORCED_STEEL_POLISHER, "steel");
+                //Aluminum handle steel
                 swordItem(EPItems.ALUMINUM_STEEL_SWORD, "steel");
                 daggerItem(EPItems.ALUMINUM_STEEL_DAGGER, "steel");
                 pickaxeItem(EPItems.ALUMINUM_STEEL_PICKAXE, "steel");
@@ -585,7 +650,15 @@ public class EPItemModelProvider extends ItemModelProvider {
             shovelItem(EPItems.GREEN_GOLDEN_SHOVEL, "green_golden");
             hoeItem(EPItems.GREEN_GOLDEN_HOE, "green_golden");
             polisherItem(EPItems.GREEN_GOLDEN_POLISHER, "green_golden");
-                //Aluminum green gold
+                //Reinforced handle green gold
+                swordItem(EPItems.REINFORCED_GREEN_GOLDEN_SWORD, "green_golden");
+                daggerItem(EPItems.REINFORCED_GREEN_GOLDEN_DAGGER, "green_golden");
+                pickaxeItem(EPItems.REINFORCED_GREEN_GOLDEN_PICKAXE, "green_golden");
+                axeItem(EPItems.REINFORCED_GREEN_GOLDEN_AXE, "green_golden");
+                shovelItem(EPItems.REINFORCED_GREEN_GOLDEN_SHOVEL, "green_golden");
+                hoeItem(EPItems.REINFORCED_GREEN_GOLDEN_HOE, "green_golden");
+                polisherItem(EPItems.REINFORCED_GREEN_GOLDEN_POLISHER, "green_golden");
+                //Aluminum handle green gold
                 swordItem(EPItems.ALUMINUM_GREEN_GOLDEN_SWORD, "green_golden");
                 daggerItem(EPItems.ALUMINUM_GREEN_GOLDEN_DAGGER, "green_golden");
                 pickaxeItem(EPItems.ALUMINUM_GREEN_GOLDEN_PICKAXE, "green_golden");
@@ -607,7 +680,15 @@ public class EPItemModelProvider extends ItemModelProvider {
             shovelItem(EPItems.BLUE_GOLDEN_SHOVEL, "blue_golden");
             hoeItem(EPItems.BLUE_GOLDEN_HOE, "blue_golden");
             polisherItem(EPItems.BLUE_GOLDEN_POLISHER, "blue_golden");
-                //Aluminum blue gold
+                //Reinforced handle blue gold
+                swordItem(EPItems.REINFORCED_BLUE_GOLDEN_SWORD, "blue_golden");
+                daggerItem(EPItems.REINFORCED_BLUE_GOLDEN_DAGGER, "blue_golden");
+                pickaxeItem(EPItems.REINFORCED_BLUE_GOLDEN_PICKAXE, "blue_golden");
+                axeItem(EPItems.REINFORCED_BLUE_GOLDEN_AXE, "blue_golden");
+                shovelItem(EPItems.REINFORCED_BLUE_GOLDEN_SHOVEL, "blue_golden");
+                hoeItem(EPItems.REINFORCED_BLUE_GOLDEN_HOE, "blue_golden");
+                polisherItem(EPItems.REINFORCED_BLUE_GOLDEN_POLISHER, "blue_golden");
+                //Aluminum handle blue gold
                 swordItem(EPItems.ALUMINUM_BLUE_GOLDEN_SWORD, "blue_golden");
                 daggerItem(EPItems.ALUMINUM_BLUE_GOLDEN_DAGGER, "blue_golden");
                 pickaxeItem(EPItems.ALUMINUM_BLUE_GOLDEN_PICKAXE, "blue_golden");
@@ -624,7 +705,15 @@ public class EPItemModelProvider extends ItemModelProvider {
             //Diamond
             handheldItem(EPItems.DIAMOND_POLISHER);
             handheldItem(EPItems.DIAMOND_DAGGER);
-                //Aluminum diamond
+                //Reinforced handle diamond
+                swordItem(EPItems.REINFORCED_DIAMOND_SWORD, "diamond");
+                daggerItem(EPItems.REINFORCED_DIAMOND_DAGGER, "diamond");
+                pickaxeItem(EPItems.REINFORCED_DIAMOND_PICKAXE, "diamond");
+                axeItem(EPItems.REINFORCED_DIAMOND_AXE, "diamond");
+                shovelItem(EPItems.REINFORCED_DIAMOND_SHOVEL, "diamond");
+                hoeItem(EPItems.REINFORCED_DIAMOND_HOE, "diamond");
+                polisherItem(EPItems.REINFORCED_DIAMOND_POLISHER, "diamond");
+                //Aluminum handle diamond
                 swordItem(EPItems.ALUMINUM_DIAMOND_SWORD, "diamond");
                 daggerItem(EPItems.ALUMINUM_DIAMOND_DAGGER, "diamond");
                 pickaxeItem(EPItems.ALUMINUM_DIAMOND_PICKAXE, "diamond");
