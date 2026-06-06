@@ -7,7 +7,11 @@ import net.marmar.enhanced_playthrough.recipe.leatherwork.LeatherworkRecipe;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.Connection;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.protocol.Packet;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
+import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.world.Containers;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.SimpleContainer;
@@ -44,6 +48,7 @@ public class LeatherworkerStationBlockEntity extends BlockEntity implements Menu
             setChanged();
         }
     };
+
     private final LazyOptional<ItemStackHandler> lazyLimeHandler = LazyOptional.of(() -> limeHandler);
 
     //Water
@@ -54,6 +59,7 @@ public class LeatherworkerStationBlockEntity extends BlockEntity implements Menu
             setChanged();
         }
     };
+
     private final LazyOptional<ItemStackHandler> lazyBucketHandler = LazyOptional.of(()-> bucketHandler);
 
     private final FluidTank waterTank = new FluidTank(1000) {
@@ -63,6 +69,7 @@ public class LeatherworkerStationBlockEntity extends BlockEntity implements Menu
             setChanged();
         }
     };
+
     private final LazyOptional<FluidTank> lazyWaterTank = LazyOptional.of(()-> waterTank);
 
     //Skin
@@ -73,6 +80,7 @@ public class LeatherworkerStationBlockEntity extends BlockEntity implements Menu
             setChanged();
         }
     };
+
     private final LazyOptional<ItemStackHandler> lazySkinHandler = LazyOptional.of(()-> skinHandler);
 
     //Leather
@@ -83,6 +91,7 @@ public class LeatherworkerStationBlockEntity extends BlockEntity implements Menu
             setChanged();
         }
     };
+
     private final LazyOptional<ItemStackHandler> lazyLeatherHandler = LazyOptional.of(()-> leatherHandler);
 
     protected final ContainerData data;
@@ -224,6 +233,24 @@ public class LeatherworkerStationBlockEntity extends BlockEntity implements Menu
         this.progress = pTag.getInt("leatherworker.progress");
     }
 
+    @Override
+    public CompoundTag getUpdateTag() {
+        CompoundTag tag = new CompoundTag();
+        saveAdditional(tag);
+        return tag;
+    }
+
+    @Override
+    public Packet<ClientGamePacketListener> getUpdatePacket() {
+        return ClientboundBlockEntityDataPacket.create(this);
+    }
+
+    @Override
+    public void onDataPacket(Connection net, ClientboundBlockEntityDataPacket pkt) {
+        CompoundTag tag = pkt.getTag();
+        if (tag != null) load(tag);
+    }
+
     protected void sendUpdate() {
         setChanged();
 
@@ -233,21 +260,11 @@ public class LeatherworkerStationBlockEntity extends BlockEntity implements Menu
     }
 
     private boolean canInsertAmountIntoLeatherSlot(int amount) {
-        for (int i = 0; i < this.leatherHandler.getSlots(); i++){
-            if (this.leatherHandler.getStackInSlot(i).getCount() + amount <= this.leatherHandler.getStackInSlot(i).getMaxStackSize()){
-                return true;
-            }
-        }
-        return false;
+        return this.leatherHandler.getStackInSlot(0).getCount() + amount <= this.leatherHandler.getStackInSlot(0).getMaxStackSize();
     }
 
     private boolean canInsertItemIntoLeatherSlot(Item item){
-        for (int i = 0; i < this.leatherHandler.getSlots(); i++){
-            if (this.leatherHandler.getStackInSlot(i).is(item) || this.leatherHandler.getStackInSlot(i).isEmpty())
-                return true;
-        }
-
-        return false;
+        return this.leatherHandler.getStackInSlot(0).is(item) || this.leatherHandler.getStackInSlot(0).isEmpty();
     }
 
     private Optional<LeatherworkRecipe> getCurrentRecipe() {
@@ -255,24 +272,29 @@ public class LeatherworkerStationBlockEntity extends BlockEntity implements Menu
 
         inv.setItem(0, this.skinHandler.getStackInSlot(0));
 
-        Optional<LeatherworkRecipe> currentRecipe = this.level.getRecipeManager().getRecipeFor(EPRecipes.LEATHERWORKING_TYPE.get(), inv, this.level);
-
-        return currentRecipe;
+        return this.level.getRecipeManager().getRecipeFor(EPRecipes.LEATHERWORKING_TYPE.get(), inv, this.level);
     }
 
     private void tryConsumeWaterBucket() {
-        LazyOptional<IFluidHandlerItem> bucketCap =
-                this.bucketHandler.getStackInSlot(0).getCapability(ForgeCapabilities.FLUID_HANDLER_ITEM);
+        LazyOptional<IFluidHandlerItem> bucketCap = this.bucketHandler.getStackInSlot(0).getCapability(ForgeCapabilities.FLUID_HANDLER_ITEM);
 
         bucketCap.ifPresent(itemFluidHandler -> {
             FluidStack inBucket = itemFluidHandler.getFluidInTank(0);
-            if (inBucket.isEmpty() || !inBucket.getFluid().isSame(Fluids.WATER)) return;
 
-            if (!this.waterTank.isEmpty() && !this.waterTank.getFluid().isFluidEqual(inBucket)) return;
+            if (inBucket.isEmpty() || !inBucket.getFluid().isSame(Fluids.WATER)) {
+                return;
+            }
+
+            if (!this.waterTank.isEmpty() && !this.waterTank.getFluid().isFluidEqual(inBucket)) {
+                return;
+            }
 
             int amountToDrain = this.waterTank.getCapacity() - this.waterTank.getFluidAmount();
             int canDrain = itemFluidHandler.drain(amountToDrain, IFluidHandler.FluidAction.SIMULATE).getAmount();
-            if (canDrain <= 0) return;
+
+            if (canDrain <= 0) {
+                return;
+            }
 
             FluidStack drained = itemFluidHandler.drain(amountToDrain, IFluidHandler.FluidAction.EXECUTE);
             this.waterTank.fill(drained, IFluidHandler.FluidAction.EXECUTE);
@@ -281,37 +303,44 @@ public class LeatherworkerStationBlockEntity extends BlockEntity implements Menu
         });
     }
 
-
     private boolean hasRecipe() {
-        Optional<LeatherworkRecipe> recipeOpt = getCurrentRecipe();
-        if (recipeOpt.isEmpty()) return false;
+        Optional<LeatherworkRecipe> recipe = getCurrentRecipe();
 
-        LeatherworkRecipe recipe = recipeOpt.get();
+        if (recipe.isEmpty()) {
+            return false;
+        }
 
-        FluidStack required = recipe.getFluidInput();
-        if (!this.waterTank.getFluid().isFluidEqual(required)) return false;
+        FluidStack fluidInput = recipe.get().getFluidInput();
 
-        if (this.waterTank.getFluidAmount() < recipe.getWaterAmount()) return false;
+        if (!this.waterTank.getFluid().isFluidEqual(fluidInput)) {
+            return false;
+        }
 
-        ItemStack result = recipe.getResultItem(getLevel().registryAccess());
+        if (this.waterTank.getFluidAmount() < recipe.get().getFluidAmount()) {
+            return false;
+        }
+
+        ItemStack result = recipe.get().getResultItem(getLevel().registryAccess());
 
         return canInsertAmountIntoLeatherSlot(result.getCount()) && canInsertItemIntoLeatherSlot(result.getItem());
     }
 
     private void leatherworkSkin() {
-        Optional<LeatherworkRecipe> recipeOpt = getCurrentRecipe();
-        if (recipeOpt.isEmpty()) return;
+        Optional<LeatherworkRecipe> recipe = getCurrentRecipe();
 
-        LeatherworkRecipe recipe = recipeOpt.get();
-        ItemStack result = recipe.getResultItem(getLevel().registryAccess());
+        if (recipe.isEmpty()) {
+            return;
+        }
+
+        ItemStack result = recipe.get().getResultItem(getLevel().registryAccess());
 
         this.limeHandler.extractItem(0, 1, false);
-        this.waterTank.drain(recipe.getWaterAmount(), IFluidHandler.FluidAction.EXECUTE);
+        this.waterTank.drain(recipe.get().getFluidAmount(), IFluidHandler.FluidAction.EXECUTE);
         this.skinHandler.extractItem(0, 1, false);
 
         int currentCount = this.leatherHandler.getStackInSlot(0).getCount();
 
-        this.leatherHandler.setStackInSlot(0, new ItemStack(result.getItem(), currentCount + recipe.getLeatherAmount()));
+        this.leatherHandler.setStackInSlot(0, new ItemStack(result.getItem(), currentCount + recipe.get().getLeatherAmount()));
     }
 
     public void tick(Level pLevel, BlockPos pPos, BlockState pState) {
@@ -324,6 +353,7 @@ public class LeatherworkerStationBlockEntity extends BlockEntity implements Menu
 
         if (this.waterTank.getFluidAmount() < this.waterTank.getCapacity()) {
             tryConsumeWaterBucket();
+            sendUpdate();
         }
 
         if (hasRecipe()) {
@@ -335,11 +365,11 @@ public class LeatherworkerStationBlockEntity extends BlockEntity implements Menu
             }
         } else {
             this.progress = 0;
+            sendUpdate();
         }
 
         setChanged(pLevel, pPos, pState);
     }
-
 
     @Override
     public Component getDisplayName() {

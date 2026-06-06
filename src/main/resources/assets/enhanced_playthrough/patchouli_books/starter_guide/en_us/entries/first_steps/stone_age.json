@@ -1,0 +1,35 @@
+{
+  "name": "The stone age",
+  "category": "enhanced_playthrough:first_steps",
+  "icon": "minecraft:textures/item/stone_pickaxe.png",
+  "read_by_default": true,
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "After you've got some $(bold)plant fiber$(), you are ready to get some stone tools and progress on your mining skills."
+    },
+    {
+      "title": "Cobble types",
+      "type": "patchouli:spotlight",
+      "text": "First, you'll need to mine some stone and get $(bold)cobble.$() The cobble type you get depends on the stone you mine, but for crafting tools all cobbles work.",
+      "item": {
+        "tag": "enhanced_playthrough:cobble"
+      }
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Once you've got your cobble pieces, you need to combine them with plant fiber and sticks on a specific order to make your first stone tools."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecraft:stone_pickaxe",
+      "recipe2": "minecraft:stone_axe"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecraft:stone_shovel",
+      "recipe2": "minecraft:stone_sword"
+    }
+  ]
+}

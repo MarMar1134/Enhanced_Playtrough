@@ -40,9 +40,13 @@ public class LeatherworkerStationMenu extends AbstractContainerMenu {
     public int getScaledProgress() {
         int progress = this.data.get(1);
         int maxProgress = this.data.get(2);
-        int arrowSize = 23;
+        int arrowSize = 34;
 
         return (maxProgress != 0 && progress != 0) ? progress * arrowSize / maxProgress : 0;
+    }
+
+    public int getRemainingWater(){
+        return data.get(0);
     }
 
     public int getScaledFluidLevel(int barHeight) {
@@ -51,7 +55,6 @@ public class LeatherworkerStationMenu extends AbstractContainerMenu {
         return amount != 0 ? amount * barHeight / capacity : 0;
     }
 
-
     public LeatherworkerStationBlockEntity getBlockEntity() {
         return this.blockEntity;
     }
@@ -59,7 +62,7 @@ public class LeatherworkerStationMenu extends AbstractContainerMenu {
     private void createSlots(LeatherworkerStationBlockEntity pLeatherworker) {
         //Lime slot
         pLeatherworker.getLazyLimeHandler().ifPresent(itemStackHandler -> {
-            addSlot(new SlotItemHandler(itemStackHandler, 0, 13, 19){
+            addSlot(new SlotItemHandler(itemStackHandler, 0, 18, 19){
                 @Override
                 public boolean mayPlace(@NotNull ItemStack stack) {
                     return stack.is(EPItems.LIME.get());
@@ -69,7 +72,7 @@ public class LeatherworkerStationMenu extends AbstractContainerMenu {
 
         //Bucket slot
         pLeatherworker.getLazyBucketHandler().ifPresent(itemStackHandler -> {
-            addSlot(new SlotItemHandler(itemStackHandler, 0, 13, 51){
+            addSlot(new SlotItemHandler(itemStackHandler, 0, 18, 51){
                 @Override
                 public boolean mayPlace(@NotNull ItemStack stack) {
                     return stack.getCapability(ForgeCapabilities.FLUID_HANDLER_ITEM).isPresent();
@@ -79,12 +82,12 @@ public class LeatherworkerStationMenu extends AbstractContainerMenu {
 
         //Skin slot
         pLeatherworker.getLazySkinHandler().ifPresent(itemStackHandler -> {
-            addSlot(new SlotItemHandler(itemStackHandler, 0, 63, 35));
+            addSlot(new SlotItemHandler(itemStackHandler, 0, 68, 35));
         });
 
         //Leather slot
         pLeatherworker.getLazyLeatherHandler().ifPresent(itemStackHandler -> {
-            addSlot(new SlotItemHandler(itemStackHandler, 0, 134, 35){
+            addSlot(new SlotItemHandler(itemStackHandler, 0, 138, 35){
                 @Override
                 public boolean mayPlace(@NotNull ItemStack stack) {
                     return false;
@@ -107,39 +110,45 @@ public class LeatherworkerStationMenu extends AbstractContainerMenu {
         }
     }
 
+    private static final int LEATHERWORKER_SLOT_COUNT = 4;
+    private static final int LEATHERWORKER_FIRST_SLOT = 0;
+    private static final int LEATHERWORKER_SLOT_LIME = LEATHERWORKER_FIRST_SLOT;
+    private static final int LEATHERWORKER_SLOT_BUCKET = LEATHERWORKER_FIRST_SLOT + 1;
+    private static final int LEATHERWORKER_SLOT_SKIN = LEATHERWORKER_FIRST_SLOT + 2;
+    private static final int LEATHERWORKER_SLOT_LEATHER = LEATHERWORKER_FIRST_SLOT + 3;
+
     private static final int PLAYER_MAIN_ROWS = 3;
     private static final int PLAYER_COLS = 9;
     private static final int HOTBAR_SIZE = 9;
     private static final int PLAYER_SLOT_COUNT = PLAYER_MAIN_ROWS * PLAYER_COLS + HOTBAR_SIZE;
-    private static final int PLAYER_FIRST_SLOT = 0;
-
-    private static final int TE_FIRST_SLOT = PLAYER_SLOT_COUNT;
-    private static final int TE_SLOT_LIME = TE_FIRST_SLOT;
-    private static final int TE_SLOT_BUCKET = TE_FIRST_SLOT + 1;
-    private static final int TE_SLOT_SKIN = TE_FIRST_SLOT + 2;
-    private static final int TE_SLOT_LEATHER = TE_FIRST_SLOT + 3;
-    private static final int TE_SLOT_COUNT = 4;
+    private static final int PLAYER_FIRST_SLOT = LEATHERWORKER_SLOT_COUNT;
+    private static final int PLAYER_LAST_SLOT = PLAYER_FIRST_SLOT + PLAYER_SLOT_COUNT - 1;
 
     @Override
     public ItemStack quickMoveStack(Player player, int pIndex) {
         Slot sourceSlot = slots.get(pIndex);
-        if (sourceSlot == null || !sourceSlot.hasItem()) return ItemStack.EMPTY;
 
-        ItemStack source     = sourceSlot.getItem();
+        if (sourceSlot == null || !sourceSlot.hasItem()) {
+            return ItemStack.EMPTY;
+        }
+
+        ItemStack source = sourceSlot.getItem();
         ItemStack sourceCopy = source.copy();
 
-        if (pIndex < PLAYER_SLOT_COUNT) {
-            if (!moveItemStackTo(source, TE_FIRST_SLOT, TE_SLOT_LEATHER, false)) {
+        if (pIndex >= PLAYER_FIRST_SLOT && pIndex <= PLAYER_LAST_SLOT) {
+            if (!moveItemStackTo(source, LEATHERWORKER_FIRST_SLOT, LEATHERWORKER_SLOT_LEATHER, false)) {
                 return ItemStack.EMPTY;
             }
-        } else if (pIndex == TE_SLOT_LEATHER) {
-            if (!moveItemStackTo(source, PLAYER_FIRST_SLOT, PLAYER_SLOT_COUNT, true)) {
+        } else if (pIndex == LEATHERWORKER_SLOT_LEATHER) {
+            if (!moveItemStackTo(source, PLAYER_FIRST_SLOT, PLAYER_LAST_SLOT + 1, true)) {
+                return ItemStack.EMPTY;
+            }
+        } else if (pIndex >= LEATHERWORKER_FIRST_SLOT && pIndex < LEATHERWORKER_SLOT_LEATHER) {
+            if (!moveItemStackTo(source, PLAYER_FIRST_SLOT, PLAYER_LAST_SLOT + 1, false)) {
                 return ItemStack.EMPTY;
             }
         } else {
-            if (!moveItemStackTo(source, PLAYER_FIRST_SLOT, PLAYER_SLOT_COUNT, false)) {
-                return ItemStack.EMPTY;
-            }
+            return ItemStack.EMPTY;
         }
 
         if (source.getCount() == 0) {
@@ -147,10 +156,10 @@ public class LeatherworkerStationMenu extends AbstractContainerMenu {
         } else {
             sourceSlot.setChanged();
         }
+
         sourceSlot.onTake(player, source);
         return sourceCopy;
     }
-
 
     @Override
     public boolean stillValid(Player pPlayer) {

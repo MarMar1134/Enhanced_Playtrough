@@ -35,7 +35,8 @@ public interface BlockLootTableBuilders {
     LootItemCondition.Builder IS_WOODEN_OR_STONE_PICKAXE = MatchTool.toolMatches(ItemPredicate.Builder.item().of(Items.WOODEN_PICKAXE))
             .or(MatchTool.toolMatches(ItemPredicate.Builder.item().of(Items.STONE_PICKAXE)));
 
-    LootItemCondition.Builder IS_STEEL_PICKAXE = MatchTool.toolMatches(ItemPredicate.Builder.item().of(EPItems.STEEL_PICKAXE.get()));
+LootItemCondition.Builder IS_STEEL_PICKAXE = MatchTool.toolMatches(ItemPredicate.Builder.item().of(
+        EPItems.STEEL_PICKAXE.get(), EPItems.REINFORCED_STEEL_PICKAXE.get(), EPItems.ALUMINUM_STEEL_PICKAXE.get()));
 
     LootItemCondition.Builder HAS_FINE_MINING = MatchTool.toolMatches(ItemPredicate.Builder.item()
             .hasEnchantment(new EnchantmentPredicate(EPEnchantments.FINE_MINING.get(), MinMaxBounds.Ints.atLeast(1))));

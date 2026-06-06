@@ -65,62 +65,47 @@ public class AlchemicalDuplicationRecipeBuilder implements RecipeBuilder {
                         RecipeUnlockedTrigger.unlocked(recipeId)).rewards(AdvancementRewards.Builder.recipe(recipeId))
                 .requirements(RequirementsStrategy.OR);
 
-        consumer.accept(new Result(recipeId, this.input, this.output, this.xp, this.advancement,
+        consumer.accept(new AlchemicalDuplicationRecipeBuilder.Result(recipeId, this.input, this.output, this.xp, this.advancement,
                 recipeId.withPrefix("recipes/"), this.serializer));
     }
 
-    private static class Result implements FinishedRecipe {
-        private final ResourceLocation recipeId;
-        private final Ingredient input;
-        private final Item output;
-        private final float xp;
-        private final Advancement.Builder advancement;
-        private final ResourceLocation advancementId;
-        private final RecipeSerializer<?> serializer;
-
-        private Result(ResourceLocation pId, Ingredient pInput, Item pOutput, float pXp, Advancement.Builder pAdvancement, ResourceLocation pAdvancementId, RecipeSerializer<?> pSerializer) {
-            this.recipeId = pId;
-            this.input = pInput;
-            this.output = pOutput;
-            this.xp = pXp;
-            this.advancement = pAdvancement;
-            this.serializer = pSerializer;
-            this.advancementId = pAdvancementId;
-        }
+    private record Result(ResourceLocation recipeId, Ingredient input, Item output, float xp,
+                          Advancement.Builder advancement, ResourceLocation advancementId,
+                          RecipeSerializer<?> serializer) implements FinishedRecipe {
 
         @Override
-        public void serializeRecipeData(JsonObject jsonObject) {
-            //Input
-            jsonObject.add("input", this.input.toJson());
+            public void serializeRecipeData(JsonObject jsonObject) {
+                //Input
+                jsonObject.add("input", this.input.toJson());
 
-            //Output
-            JsonObject output = new JsonObject();
-            output.addProperty("item", ForgeRegistries.ITEMS.getKey(this.output).toString());
+                //Output
+                JsonObject output = new JsonObject();
+                output.addProperty("item", ForgeRegistries.ITEMS.getKey(this.output).toString());
 
-            jsonObject.add("output", output);
+                jsonObject.add("output", output);
 
-            //Xp
-            jsonObject.addProperty("xp", this.xp);
+                //Xp
+                jsonObject.addProperty("xp", this.xp);
+            }
+
+            @Override
+            public ResourceLocation getId() {
+                return this.recipeId;
+            }
+
+            @Override
+            public RecipeSerializer<?> getType() {
+                return this.serializer;
+            }
+
+            @Override
+            public @Nullable JsonObject serializeAdvancement() {
+                return this.advancement.serializeToJson();
+            }
+
+            @Override
+            public @Nullable ResourceLocation getAdvancementId() {
+                return this.advancementId;
+            }
         }
-
-        @Override
-        public ResourceLocation getId() {
-            return this.recipeId;
-        }
-
-        @Override
-        public RecipeSerializer<?> getType() {
-            return this.serializer;
-        }
-
-        @Override
-        public @Nullable JsonObject serializeAdvancement() {
-            return this.advancement.serializeToJson();
-        }
-
-        @Override
-        public @Nullable ResourceLocation getAdvancementId() {
-            return this.advancementId;
-        }
-    }
 }

@@ -1,0 +1,46 @@
+{
+  "name": "Getting mud bricks",
+  "category": "enhanced_playthrough:first_steps",
+  "icon": "enhanced_playthrough:textures/item/mud_brick.png",
+  "read_by_default": true,
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Now that you've got some tools, is time to craft $(bold)mud bricks$() and make a $(bold)mud furnace$()."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "enhanced_playthrough:mud_brick"
+      },
+      "text": "Mud bricks are essential to the game's progression, as they unlock crafting blocks and the useful mud furnace."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "minecraft:clay_ball"
+      },
+      "text": "The key ingredient to make any kind of brick are $(bold)clay balls$(), these can be collected from clay blocks with a shovel.$(br) These sources are found near water."
+    },
+    {
+      "type": "patchouli:image",
+      "text": "A patch of clay blocks.",
+      "images": [
+        "enhanced_playthrough:patchouli/images/clay_source.png"
+      ]
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "minecraft:dirt"
+      },
+      "text": "Next, collect some $(bold)blocks of dirt$(), that are practically everywhere."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "enhanced_playthrough:mud_brick_from_plant_fiber",
+      "recipe2": "enhanced_playthrough:mud_brick_from_wheat"
+    }
+  ]
+}

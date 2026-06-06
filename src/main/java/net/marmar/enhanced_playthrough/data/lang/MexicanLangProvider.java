@@ -68,6 +68,11 @@ public class MexicanLangProvider extends AbstractLangProvider {
 
         addJadeConfigTranslation("alchemical_duplicator", "Duplicación alquimica");
 
+        //Patchouli
+        addPatchouliBookTitle("starter_guide", "Guia para principiantes");
+        addPatchouliBookLandingText("starter_guide", "¡Bienvenido/a a Enhanced Playthrough!" +
+                "$(br)En esta guia, aprenderás a desenvolverte en este renovado mundo de Minecraft.");
+
         //GUI elements
         addGuiElements("gem_polisher_screen", "Usos");
 
@@ -424,6 +429,7 @@ public class MexicanLangProvider extends AbstractLangProvider {
         addBlock(EPBlocks.MECHANICAL_GRINDER, "Moledora mecánizada");
         addBlock(EPBlocks.ALCHEMICAL_DUPLICATOR, "Duplicador alquímico");
         addBlock(EPBlocks.GROWTH_DETECTOR, "Detector de crecimiento");
+        addBlock(EPBlocks.LEATHERWORKER_STATION, "Estación de curado");
 
         //Items
         //Raw ores

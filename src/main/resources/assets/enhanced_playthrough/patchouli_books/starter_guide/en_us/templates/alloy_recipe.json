@@ -1,0 +1,83 @@
+{
+  "processor": "net.marmar.enhanced_playthrough.compat.patchouli.AlloyRecipeProcessor",
+  "components": [
+    {
+      "type": "patchouli:header",
+      "text": "#title",
+      "x": 60,
+      "y": 0
+    },
+    {
+      "type": "patchouli:item",
+      "item": "#first_input",
+      "framed": true,
+      "x": 0,
+      "y": 15
+    },
+    {
+      "type": "patchouli:image",
+      "image": "enhanced_playthrough:patchouli/gui/plus_simbol.png",
+      "width": 16,
+      "height": 16,
+      "texture_width": 16,
+      "texture_height": 16,
+      "u": 0,
+      "v": 0,
+      "x": 19,
+      "y": 18,
+      "scale": 0.6
+    },
+    {
+      "type": "patchouli:item",
+      "item": "#second_input",
+      "framed": true,
+      "x": 33,
+      "y": 15
+    },
+    {
+      "type": "patchouli:image",
+      "image": "enhanced_playthrough:patchouli/gui/arrow_simbol.png",
+      "width": 16,
+      "height": 16,
+      "texture_width": 16,
+      "texture_height": 16,
+      "u": 0,
+      "v": 0,
+      "x": 52,
+      "y": 18,
+      "scale": 0.6
+    },
+    {
+      "type": "patchouli:item",
+      "item": "#alloy_furnace",
+      "x": 66,
+      "y": 15
+    },
+    {
+      "type": "patchouli:image",
+      "image": "enhanced_playthrough:patchouli/gui/arrow_simbol.png",
+      "width": 16,
+      "height": 16,
+      "texture_width": 16,
+      "texture_height": 16,
+      "u": 0,
+      "v": 0,
+      "x": 85,
+      "y": 18,
+      "scale": 0.6
+    },
+    {
+      "type": "patchouli:item",
+      "item": "#output",
+      "framed": true,
+      "x": 99,
+      "y": 15
+    },
+    {
+      "type": "patchouli:text",
+      "text": "#text",
+      "x": 0,
+      "y": 37
+    }
+  ]
+}

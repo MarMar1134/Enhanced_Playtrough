@@ -15,6 +15,7 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -134,6 +135,7 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .requires(Items.CLAY_BALL)
                 .unlockedBy(getHasName(EPItems.PLANT_FIBER.get()), has(EPItems.PLANT_FIBER.get()))
                 .unlockedBy(getHasName(Items.CLAY_BALL), has(Items.CLAY_BALL))
+                .unlockedBy(getHasName(EPItems.MUD_BRICK.get()), has(EPItems.MUD_BRICK.get()))
                 .save(consumer, recipeName(EPItems.MUD_BRICK.get(), "from_plant_fiber"));
 
 
@@ -143,6 +145,7 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .requires(Items.CLAY_BALL)
                 .unlockedBy(getHasName(Items.WHEAT), has(Items.WHEAT))
                 .unlockedBy(getHasName(Items.CLAY_BALL), has(Items.CLAY_BALL))
+                .unlockedBy(getHasName(EPItems.MUD_BRICK.get()), has(EPItems.MUD_BRICK.get()))
                 .save(consumer, recipeName(EPItems.MUD_BRICK.get(), "from_wheat"));
 
         //Aluminum
@@ -151,6 +154,7 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .pattern("A")
                 .define('A', EPItems.ALUMINUM_INGOT.get())
                 .unlockedBy(getHasName(EPItems.ALUMINUM_INGOT.get()), has(EPItems.ALUMINUM_INGOT.get()))
+                .unlockedBy(getHasName(EPItems.ALUMINUM_ROD.get()), has(EPItems.ALUMINUM_ROD.get()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, EPItems.ALUMINUM_ARROW.get(), 4)
@@ -160,7 +164,7 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .define('F', Items.FLINT)
                 .define('R', EPItems.ALUMINUM_ROD.get())
                 .define('A', Items.FEATHER)
-                .unlockedBy("has_arrow_material", HAS_ARROW_MATERIALS())
+                .unlockedBy(getHasName(EPItems.ALUMINUM_ROD.get()), has(EPItems.ALUMINUM_ROD.get()))
                 .unlockedBy(getHasName(EPItems.ALUMINUM_ARROW.get()), has(EPItems.ALUMINUM_ARROW.get()))
                 .save(consumer);
 
@@ -189,6 +193,7 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .consumeDurability(true)
                 .durabilityToConsume(10)
                 .unlockedBy(getHasName(Items.LEATHER), has(Items.LEATHER))
+                .unlockedBy(getHasName(EPItems.LEATHER_STRIPS.get()), has(EPItems.LEATHER_STRIPS.get()))
                 .save(consumer);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.TOOLS, EPItems.REINFORCED_STICK.get())
@@ -335,7 +340,7 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
             blockWithPolishedVersionRecipes(EPBlocks.POLISHED_LIMESTONE.get(), EPBlocks.LIMESTONE_BRICKS.get(), EPBlocks.LIMESTONE_BRICK_WALL.get(),
                     EPBlocks.LIMESTONE_BRICK_STAIRS.get(), EPBlocks.LIMESTONE_BRICK_SLAB.get(), consumer);
 
-            //Cobbled SOULstone
+            //Cobbled soulstone
             ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EPBlocks.COBBLED_SOULSTONE.get())
                     .pattern("SS")
                     .pattern("SS")
@@ -347,11 +352,11 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
             blockWithoutPolishedVersionRecipes(EPBlocks.COBBLED_SOULSTONE.get(), EPBlocks.COBBLED_SOULSTONE_WALL.get(), EPBlocks.COBBLED_SOULSTONE_STAIRS.get(),
                     EPBlocks.COBBLED_SOULSTONE_SLAB.get(), consumer);
 
-            //SOULstone
+            //Soulstone
             blockWithoutPolishedVersionRecipes(EPBlocks.SOULSTONE.get(), EPBlocks.SOULSTONE_WALL.get(), EPBlocks.SOULSTONE_STAIRS.get(),
                     EPBlocks.SOULSTONE_SLAB.get(), consumer);
 
-            //SOULstone bricks
+            //Soulstone bricks
             blockWithPolishedVersionRecipes(EPBlocks.SOULSTONE.get(), EPBlocks.SOULSTONE_BRICKS.get(), EPBlocks.SOULSTONE_BRICK_WALL.get(),
                     EPBlocks.SOULSTONE_BRICK_STAIRS.get(), EPBlocks.SOULSTONE_BRICK_SLAB.get(), consumer);
 
@@ -580,8 +585,12 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                     EPItems.ALUMINUM_GOLDEN_HOE.get(), EPItems.ALUMINUM_GOLDEN_POLISHER.get(), consumer);
 
             //Stone
-            addStoneGear(Items.STONE_AXE, Items.STONE_PICKAXE, Items.STONE_SWORD, EPItems.STONE_DAGGER.get(),
-                    Items.STONE_SHOVEL, Items.STONE_HOE, EPItems.STONE_POLISHER.get(), false, consumer);
+            addStoneGear(Ingredient.of(Tags.Items.RODS_WOODEN), Items.STONE_AXE, Items.STONE_PICKAXE, Items.STONE_SWORD, EPItems.STONE_DAGGER.get(),
+                    Items.STONE_SHOVEL, Items.STONE_HOE, EPItems.STONE_POLISHER.get(), consumer);
+
+            //TODO: Agregar herramientas de piedra con mango reforzado
+//            addStoneGear(Ingredient.of(EPItems.REINFORCED_STICK.get()), EPItems.REINFORCED_STONE_AXE.get(), EPItems.REINFORCED_STONE_PICKAXE.get(), EPItems.REINFORCED_STONE_SWORD.get(), EPItems.REINFORCED_STONE_DAGGER.get(),
+//                    EPItems.REINFORCED_STONE_SHOVEL.get(), EPItems.REINFORCED_STONE_HOE.get(), EPItems.STONE_POLISHER.get(), consumer);
 
             //Copper
             ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EPItems.COPPER_NUGGET.get(), 9)
@@ -1388,15 +1397,15 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .save(pConsumer);
     }
 
-    protected static void addStoneGear(ItemLike pAxe, ItemLike pPickaxe, ItemLike pSword, ItemLike pDagger, ItemLike pShovel,
-                                       ItemLike pHoe, ItemLike pPolisher, boolean isAluminum, Consumer<FinishedRecipe> pConsumer){
+    protected static void addStoneGear(Ingredient pHandle, ItemLike pAxe, ItemLike pPickaxe, ItemLike pSword, ItemLike pDagger, ItemLike pShovel,
+                                       ItemLike pHoe, ItemLike pPolisher, Consumer<FinishedRecipe> pConsumer){
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, pSword)
                 .pattern(" I ")
                 .pattern(" IS")
                 .pattern(" # ")
                 .define('I', EPTags.Items.COBBLE)
                 .define('S', Tags.Items.STRING)
-                .define('#', Tags.Items.RODS_WOODEN)
+                .define('#', pHandle)
                 .unlockedBy("has_cobble", has(EPTags.Items.COBBLE))
                 .unlockedBy(getHasName(pSword), has(pSword))
                 .save(pConsumer);
@@ -1406,7 +1415,7 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .pattern(" # ")
                 .define('I', EPTags.Items.COBBLE)
                 .define('S', Tags.Items.STRING)
-                .define('#', Tags.Items.RODS_WOODEN)
+                .define('#', pHandle)
                 .unlockedBy("has_cobble", has(EPTags.Items.COBBLE))
                 .unlockedBy(getHasName(pPickaxe), has(pPickaxe))
                 .save(pConsumer);
@@ -1416,7 +1425,7 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .pattern(" # ")
                 .define('I', EPTags.Items.COBBLE)
                 .define('S', Tags.Items.STRING)
-                .define('#', Tags.Items.RODS_WOODEN)
+                .define('#', pHandle)
                 .unlockedBy("has_cobble", has(EPTags.Items.COBBLE))
                 .unlockedBy(getHasName(pAxe), has(pAxe))
                 .save(pConsumer);
@@ -1426,7 +1435,7 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .pattern(" # ")
                 .define('I', EPTags.Items.COBBLE)
                 .define('S', Tags.Items.STRING)
-                .define('#', Tags.Items.RODS_WOODEN)
+                .define('#', pHandle)
                 .unlockedBy("has_cobble", has(EPTags.Items.COBBLE))
                 .unlockedBy(getHasName(pShovel), has(pShovel))
                 .save(pConsumer);
@@ -1436,7 +1445,7 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .pattern(" # ")
                 .define('I', EPTags.Items.COBBLE)
                 .define('S', Tags.Items.STRING)
-                .define('#', Tags.Items.RODS_WOODEN)
+                .define('#', pHandle)
                 .unlockedBy("has_cobble", has(EPTags.Items.COBBLE))
                 .unlockedBy(getHasName(pHoe), has(pHoe))
                 .save(pConsumer);
@@ -1445,7 +1454,7 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .pattern("# ")
                 .define('I', EPTags.Items.COBBLE)
                 .define('S', Tags.Items.STRING)
-                .define('#', Tags.Items.RODS_WOODEN)
+                .define('#', pHandle)
                 .unlockedBy("has_cobble", has(EPTags.Items.COBBLE))
                 .unlockedBy(getHasName(pPolisher), has(pPolisher))
                 .save(pConsumer);
@@ -1454,7 +1463,7 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .pattern("#S")
                 .define('I', EPTags.Items.COBBLE)
                 .define('S', Tags.Items.STRING)
-                .define('#', Tags.Items.RODS_WOODEN)
+                .define('#', pHandle)
                 .unlockedBy("has_cobble", has(EPTags.Items.COBBLE))
                 .unlockedBy(getHasName(pDagger), has(pDagger))
                 .save(pConsumer);

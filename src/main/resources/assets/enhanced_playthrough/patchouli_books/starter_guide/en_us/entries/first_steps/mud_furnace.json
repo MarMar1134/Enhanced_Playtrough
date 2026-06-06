@@ -1,0 +1,36 @@
+{
+  "name": "The mud furnace",
+  "category": "enhanced_playthrough:first_steps",
+  "icon": "enhanced_playthrough:adobe_furnace",
+  "read_by_default": true,
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "One you've got your $(bold)mud bricks$(), you're ready to craft a $(bold)mud furnace$() and smelt some $(bold)raw minerals$()."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "enhanced_playthrough:adobe_furnace"
+      },
+      "text": "The mud furnace is the first iteration of a furnace you will get. It works to cook basic materials, like food, copper and to make charcoal."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "minecraft:cobblestone"
+      },
+      "text": "Before you can craft the mud furnace, you will need cobblestone. Cobblestone is made combining 4 cobble pieces."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecraft:cobblestone"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "enhanced_playthrough:adobe_furnace",
+      "text": "Combining mud bricks with cobblestone, you will get your first mud furnace."
+    }
+  ]
+}

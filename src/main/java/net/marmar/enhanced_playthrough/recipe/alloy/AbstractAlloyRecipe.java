@@ -45,7 +45,7 @@ public abstract class AbstractAlloyRecipe implements Recipe<SimpleContainer> {
         if (level.isClientSide){
             return false;
         }
-        return inputs.get(0).test(simpleContainer.getItem(0)) && inputs.get(1).test(simpleContainer.getItem(1));
+        return this.inputs.get(0).test(simpleContainer.getItem(0)) && this.inputs.get(1).test(simpleContainer.getItem(1));
     }
 
     @Override
@@ -53,9 +53,17 @@ public abstract class AbstractAlloyRecipe implements Recipe<SimpleContainer> {
         return this.inputs;
     }
 
+    public Ingredient getFirstIngredient(){
+        return this.inputs.get(0);
+    }
+
+    public Ingredient getSecondIngredient(){
+        return this.inputs.get(1);
+    }
+
     @Override
     public ItemStack assemble(SimpleContainer simpleContainer, RegistryAccess registryAccess) {
-        return output.copy();
+        return this.output.copy();
     }
 
     @Override
@@ -65,11 +73,11 @@ public abstract class AbstractAlloyRecipe implements Recipe<SimpleContainer> {
 
     @Override
     public ItemStack getResultItem(RegistryAccess registryAccess) {
-        return output.copy();
+        return this.output.copy();
     }
 
     @Override
     public ResourceLocation getId() {
-        return recipeId;
+        return this.recipeId;
     }
 }

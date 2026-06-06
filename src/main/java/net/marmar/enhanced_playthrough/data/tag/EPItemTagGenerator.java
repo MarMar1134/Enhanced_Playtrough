@@ -516,6 +516,13 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                 EPBlocks.COBALT_ORE.get().asItem(),
                 EPBlocks.DEEPSLATE_COBALT_ORE.get().asItem()
         );
+
+        this.tag(EPTags.Items.PLANT_FIBER_SOURCES).add(
+                EPItems.REEDS_HEAD.get(),
+                EPItems.TALL_REEDS_HEAD.get(),
+                EPItems.WATER_REEDS_HEAD.get(),
+                EPItems.KENAF_BRANCH.get()
+        );
     }
 
     private void addToolsTags(){
@@ -751,7 +758,9 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                 EPTags.Items.ALCHEMICAL_DUPLICATING_INGREDIENT
         );
 
-        this.tag(EPTags.Items.BASIC_SMELT_INGREDIENT).add(
+        this.tag(EPTags.Items.BASIC_SMELT_INGREDIENT)
+                .addTag(ItemTags.LOGS_THAT_BURN)
+                .add(
                 EPItems.LIMESTONE_COBBLE.get(),
                 Items.RAW_COPPER,
                 Blocks.COPPER_ORE.asItem(),
@@ -840,8 +849,7 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                         EPTags.Items.COPPER_MANUFACTURABLE,
                         EPTags.Items.BRASS_MANUFACTURABLE,
                         EPTags.Items.BRONZE_MANUFACTURABLE
-                ).add(
-                        EPBlocks.COBBLED_LIMESTONE.get().asItem(),
+                ).add(EPBlocks.COBBLED_LIMESTONE.get().asItem(),
                         Blocks.COBBLESTONE.asItem(),
                         Blocks.COBBLED_DEEPSLATE.asItem(),
                         EPBlocks.COBBLED_SOULSTONE.get().asItem(),

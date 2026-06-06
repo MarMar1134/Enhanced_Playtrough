@@ -1,16 +1,16 @@
 {
   "type": "enhanced_playthrough:leatherworking",
-  "fluid": "minecraft:water",
   "input": {
-    "amount": 100,
+    "fluid": "minecraft:water",
+    "fluid_amount": 100,
     "item": {
       "item": "minecraft:rabbit_hide"
     }
   },
   "output": {
-    "amount": 1,
     "item": {
       "item": "minecraft:leather"
-    }
+    },
+    "leather_amount": 1
   }
 }

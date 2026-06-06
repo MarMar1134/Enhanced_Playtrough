@@ -422,6 +422,10 @@ public class EPBlockTagGenerator extends BlockTagsProvider {
                 EPBlocks.CALIBRATED_QUARTZ_BRICKS.get()
         );
 
+        this.tag(BlockTags.MINEABLE_WITH_SHOVEL).add(
+                Blocks.CLAY
+        );
+
         this.tag(Tags.Blocks.NEEDS_WOOD_TOOL).add(
                 //Polished stone
                 EPBlocks.POLISHED_STONE.get(),
@@ -486,6 +490,8 @@ public class EPBlockTagGenerator extends BlockTagsProvider {
         );
 
         this.tag(BlockTags.NEEDS_STONE_TOOL).add(
+                Blocks.CLAY,
+
                 //Limestone bricks
                 EPBlocks.LIMESTONE_BRICKS.get(),
                 EPBlocks.LIMESTONE_BRICK_SLAB.get(),

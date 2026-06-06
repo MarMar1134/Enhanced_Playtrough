@@ -32,7 +32,9 @@
                         "condition": "minecraft:match_tool",
                         "predicate": {
                           "items": [
-                            "enhanced_playthrough:steel_pickaxe"
+                            "enhanced_playthrough:steel_pickaxe",
+                            "enhanced_playthrough:reinforced_steel_pickaxe",
+                            "enhanced_playthrough:aluminum_steel_pickaxe"
                           ]
                         }
                       }

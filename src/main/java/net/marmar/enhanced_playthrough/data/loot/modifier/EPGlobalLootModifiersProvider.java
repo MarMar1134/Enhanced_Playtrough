@@ -120,10 +120,15 @@ public class EPGlobalLootModifiersProvider extends GlobalLootModifierProvider {
                 new LootTableIdCondition.Builder(new ResourceLocation("chests/abandoned_mineshaft")).build(),
                 LootItemRandomChanceCondition.randomChance(0.5f).build()}, EPItems.ROSE_GOLD_INGOT.get()));
 
+            //Aluminum upgrade
+            add("aluminum_smithing_upgrade_template_from_mineshaft", new AddItemModifier(new LootItemCondition[] {
+                    new LootTableIdCondition.Builder(new ResourceLocation("chests/abandoned_mineshaft")).build(),
+                    LootItemRandomChanceCondition.randomChance(0.3f).build()}, EPItems.ALUMINUM_UPGRADE_SMITHING_TEMPLATE.get()));
+
             //Golden upgrade
             add("golden_smithing_upgrade_template_from_mineshaft", new AddItemModifier(new LootItemCondition[] {
                     new LootTableIdCondition.Builder(new ResourceLocation("chests/abandoned_mineshaft")).build(),
-                    LootItemRandomChanceCondition.randomChance(0.45f).build()}, EPItems.GOLDEN_UPGRADE_SMITHING_TEMPLATE.get()));
+                    LootItemRandomChanceCondition.randomChance(0.3f).build()}, EPItems.GOLDEN_UPGRADE_SMITHING_TEMPLATE.get()));
 
         //Villages
         add("zapallo_seeds_from_villages", new AddItemModifier(new LootItemCondition[] {

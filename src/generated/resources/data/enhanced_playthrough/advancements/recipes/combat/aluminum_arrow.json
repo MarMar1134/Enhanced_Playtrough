@@ -13,14 +13,12 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_arrow_material": {
+    "has_aluminum_rod": {
       "conditions": {
         "items": [
           {
             "items": [
-              "enhanced_playthrough:aluminum_rod",
-              "minecraft:flint",
-              "minecraft:feather"
+              "enhanced_playthrough:aluminum_rod"
             ]
           }
         ]
@@ -36,7 +34,7 @@
   },
   "requirements": [
     [
-      "has_arrow_material",
+      "has_aluminum_rod",
       "has_aluminum_arrow",
       "has_the_recipe"
     ]

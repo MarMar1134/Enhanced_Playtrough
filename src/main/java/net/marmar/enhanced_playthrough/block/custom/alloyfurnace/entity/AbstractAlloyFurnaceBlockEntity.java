@@ -104,7 +104,6 @@ public abstract class AbstractAlloyFurnaceBlockEntity extends BlockEntity {
         this.maxProgress = 200;
     }
 
-    //Handler getters (used on Jade compatibility)
     public ItemStackHandler getFirstInputHandler() {
         return firstInputHandler;
     }
@@ -118,7 +117,6 @@ public abstract class AbstractAlloyFurnaceBlockEntity extends BlockEntity {
         return outputHandler;
     }
 
-    //Lazy handler getters (used on the menu)
     public LazyOptional<ItemStackHandler> getFirstInputLazyHandler(){
         return this.firstInputLazyHandler;
     }
@@ -132,7 +130,6 @@ public abstract class AbstractAlloyFurnaceBlockEntity extends BlockEntity {
         return this.outputLazyHandler;
     }
 
-    //Capability getters (used for item colocation management)
     @Override
     public @NotNull <T> LazyOptional<T> getCapability(@NotNull Capability<T> cap, @Nullable Direction side) {
         if (cap == ForgeCapabilities.ITEM_HANDLER){
@@ -149,7 +146,6 @@ public abstract class AbstractAlloyFurnaceBlockEntity extends BlockEntity {
         return super.getCapability(cap, side);
     }
 
-
     @Override
     public void invalidateCaps() {
         super.invalidateCaps();
@@ -158,7 +154,6 @@ public abstract class AbstractAlloyFurnaceBlockEntity extends BlockEntity {
         fuelLazyHandler.invalidate();
         outputLazyHandler.invalidate();
     }
-
 
     public void drops() {
         SimpleContainer inventory = new SimpleContainer(4);
@@ -171,7 +166,6 @@ public abstract class AbstractAlloyFurnaceBlockEntity extends BlockEntity {
         Containers.dropContents(this.level, this.worldPosition, inventory);
     }
 
-    //saves the metadata of the remaining burn time, the alloy progress and the inventory
     @Override
     protected void saveAdditional(CompoundTag pTag) {
         pTag.put("first_input", firstInputHandler.serializeNBT());
@@ -197,7 +191,6 @@ public abstract class AbstractAlloyFurnaceBlockEntity extends BlockEntity {
         burnTime = pTag.getInt("alloy_furnace.burnTime");
     }
 
-    //sends and update to the block entity
     private void sendUpdate() {
         setChanged();
 
@@ -205,82 +198,67 @@ public abstract class AbstractAlloyFurnaceBlockEntity extends BlockEntity {
             this.level.sendBlockUpdated(this.worldPosition, getBlockState(), getBlockState(), Block.UPDATE_ALL);
     }
 
-    public static void tick(Level pLevel, BlockPos pPos, BlockState pState, AbstractAlloyFurnaceBlockEntity entity) {
-        // checks if the entity is burning. If true, changes the "BURNING" value to true and checks if it has a recipe on the input slots.
-        // Then starts to decrease the burning time.
-        if (entity.isBurning()){
+    public static void tick(Level pLevel, BlockPos pPos, BlockState pState, AbstractAlloyFurnaceBlockEntity alloyFurnace) {
+        if (alloyFurnace.isBurning()){
+            if (alloyFurnace.hasRecipe()){
+                alloyFurnace.setMaxProgress(alloyFurnace.getCurrentRecipe());
 
-            //if is burning, checks if it has a recipe available. if true, starts to increase the crafting progress.
-            if (entity.hasRecipe()){
-                //Sets the max alloy progress in reference of the recipeType
-                entity.setMaxProgress(entity.getCurrentRecipe());
+                alloyFurnace.increaseAlloyProgress();
 
-                entity.increaseAlloyProgress();
-
-                entity.sendUpdate();
+                alloyFurnace.sendUpdate();
             } else {
-                entity.resetProgress();
+                alloyFurnace.resetProgress();
             }
+
             pState = pState.setValue(AbstractAlloyFurnaceBlock.BURNING, true);
 
-            entity.decreaseBurnTime();
+            alloyFurnace.decreaseBurnTime();
 
-            entity.sendUpdate();
+            alloyFurnace.sendUpdate();
+        } else if (alloyFurnace.hasRecipe()){
+            if (alloyFurnace.canBurn(alloyFurnace.fuelHandler.getStackInSlot(0))){
+                alloyFurnace.burn();
 
-        //if not is burning, still checks if it has a recipe. If true, checks if there´s an item in the Fuel Slot that can be burned.
-        } else if (entity.hasRecipe()){
-            if (entity.canBurn(entity.fuelHandler.getStackInSlot(0))){
-                entity.burn();
-
-                entity.sendUpdate();
+                alloyFurnace.sendUpdate();
             }
-
-        //if not is burning nor have an item that can be burned, changes the "BURNING" value to false.
         } else {
             pState = pState.setValue(AbstractAlloyFurnaceBlock.BURNING, false);
 
-            entity.resetProgress();
+            alloyFurnace.resetProgress();
 
-            entity.sendUpdate();
+            alloyFurnace.sendUpdate();
         }
 
-        //checks if the crafting progress finished. If true, crafts the item
-        if (entity.hasProcessFinished()){
-            entity.alloyItem();
+        if (alloyFurnace.hasProcessFinished()){
+            alloyFurnace.alloyItem();
 
-            entity.resetProgress();
+            alloyFurnace.resetProgress();
 
-            entity.sendUpdate();
+            alloyFurnace.sendUpdate();
         }
 
-        //sets the blockstate
         pLevel.setBlock(pPos, pState, 1);
         setChanged(pLevel, pPos, pState);
     }
 
-    //checks if the passed item has a "burntime" parameter on his metadata
     public boolean canBurn(ItemStack stack) {
         return getFuelBurnTime(stack) > 0;
     }
 
-    //returns the required burning time of the current recipe
     public int getFuelBurnTime(ItemStack stack) {
         return ForgeHooks.getBurnTime(stack, this.recipeType);
     }
 
-    //checks if the burn time is mayor than 0
     private boolean isBurning(){
         return burnTime > 0;
     }
 
-    //takes an item from the Fuel Slot, then copies his "burntime" metadata and gives it to burntime
     private void burn(){
         this.maxBurnTime = getFuelBurnTime(this.fuelHandler.getStackInSlot(0));
         this.burnTime = this.maxBurnTime;
         this.fuelHandler.getStackInSlot(0).shrink(1);
     }
 
-    //simply decreases the burn time
     private void decreaseBurnTime(){
         burnTime -= 1;
     }
@@ -297,18 +275,15 @@ public abstract class AbstractAlloyFurnaceBlockEntity extends BlockEntity {
         return this.maxProgress;
     }
 
-    //takes the items from the Input Slots, puts them on a Container and then calls the selected recipe to check if the ingredients match
-    protected Optional<? extends AbstractAlloyRecipe>
-    getCurrentRecipe() {
+    protected Optional<? extends AbstractAlloyRecipe> getCurrentRecipe() {
         SimpleContainer inventory = new SimpleContainer(2);
 
         inventory.setItem(0, firstInputHandler.getStackInSlot(0));
         inventory.setItem(1, secondInputHandler.getStackInSlot(0));
 
-        return this.level.getRecipeManager().getRecipeFor(this.recipeType, inventory, level);
+        return this.level.getRecipeManager().getRecipeFor(this.recipeType, inventory, this.level);
     }
 
-    //checks if there is any recipe available to start working
     protected boolean hasRecipe(){
         Optional<? extends AbstractAlloyRecipe> recipe = getCurrentRecipe();
 
@@ -321,22 +296,18 @@ public abstract class AbstractAlloyFurnaceBlockEntity extends BlockEntity {
         return canInsertAmountIntoOutputSlot(result.getCount()) && canInsertItemIntoOutputSlot(result.getItem());
     }
 
-    //resets the alloy progress
     private void resetProgress() {
         progress = 0;
     }
 
-    //increases the alloy progress
     private void increaseAlloyProgress() {
         progress++;
     }
 
-    //checks if the current alloy has finished
     private boolean hasProcessFinished(){
         return progress >= maxProgress;
     }
 
-    //takes the selected recipe, then extracts the items from his Input Slots and generates the pertinent item in the Result Slot
     protected void alloyItem() {
         Optional<? extends AbstractAlloyRecipe> recipe = getCurrentRecipe();
 
@@ -345,16 +316,13 @@ public abstract class AbstractAlloyFurnaceBlockEntity extends BlockEntity {
         this.firstInputHandler.extractItem(0, 1, false);
         this.secondInputHandler.extractItem(0, 1, false);
 
-        this.outputHandler.setStackInSlot(0, new ItemStack(result.getItem(),
-                this.outputHandler.getStackInSlot(0).getCount() + result.getCount()));
+        this.outputHandler.setStackInSlot(0, new ItemStack(result.getItem(), this.outputHandler.getStackInSlot(0).getCount() + result.getCount()));
     }
 
-    //checks if the result of the selected recipe matches the item in the Result Slot
     private boolean canInsertItemIntoOutputSlot(Item item) {
         return this.outputHandler.getStackInSlot(0).isEmpty() || this.outputHandler.getStackInSlot(0).is(item);
     }
 
-    //checks if the item in the Result Slot is not in his maximum capacity
     private boolean canInsertAmountIntoOutputSlot(int count) {
         return this.outputHandler.getStackInSlot(0).getCount() + count <= this.outputHandler.getStackInSlot(0).getMaxStackSize();
     }

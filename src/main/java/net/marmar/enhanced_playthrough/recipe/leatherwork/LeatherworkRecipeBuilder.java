@@ -23,24 +23,24 @@ import java.util.function.Consumer;
 public class LeatherworkRecipeBuilder implements RecipeBuilder {
     private final Ingredient skin;
     private final Fluid fluid;
-    private final int waterAmount;
+    private final int fluidAmount;
     private final Item leather;
     private final int leatherAmount;
     private String group;
     private final Advancement.Builder advancement = Advancement.Builder.recipeAdvancement();
     private final RecipeSerializer<?> serializer;
 
-    protected LeatherworkRecipeBuilder(Ingredient skin, Fluid fluid, int waterAmount, ItemLike leather, int leatherAmount, RecipeSerializer<?> serializer) {
+    protected LeatherworkRecipeBuilder(Ingredient skin, Fluid fluid, int fluidAmount, ItemLike leather, int leatherAmount, RecipeSerializer<?> serializer) {
         this.skin = skin;
         this.fluid = fluid;
-        this.waterAmount = waterAmount;
+        this.fluidAmount = fluidAmount;
         this.leather = leather.asItem();
         this.leatherAmount = leatherAmount;
         this.serializer = serializer;
     }
 
-    public static LeatherworkRecipeBuilder leatherworking(Ingredient pSkin, Fluid pFluid, int pWaterAmount, ItemLike pLeather, int pAmount){
-        return new LeatherworkRecipeBuilder(pSkin, pFluid, pWaterAmount, pLeather, pAmount, EPRecipes.LEATHERWORKING_SERIALIZER.get());
+    public static LeatherworkRecipeBuilder leatherworking(Ingredient pSkin, Fluid pFluid, int pFluidAmount, ItemLike pLeather, int pAmount){
+        return new LeatherworkRecipeBuilder(pSkin, pFluid, pFluidAmount, pLeather, pAmount, EPRecipes.LEATHERWORKING_SERIALIZER.get());
     }
 
     @Override
@@ -73,76 +73,58 @@ public class LeatherworkRecipeBuilder implements RecipeBuilder {
         this.advancement.parent(ROOT_RECIPE_ADVANCEMENT).addCriterion("has_the_recipe", RecipeUnlockedTrigger.unlocked(pRecipeId))
                 .rewards(AdvancementRewards.Builder.recipe(pRecipeId)).requirements(RequirementsStrategy.OR);
 
-        consumer.accept(new LeatherworkRecipeBuilder.Result(pRecipeId, this.skin, this.fluid, this.waterAmount, this.leather, this.leatherAmount,
+        consumer.accept(new LeatherworkRecipeBuilder.Result(pRecipeId, this.skin, this.fluid, this.fluidAmount, this.leather, this.leatherAmount,
                 this.advancement, pRecipeId.withPrefix("recipes/"), this.serializer));
     }
 
-    static class Result implements FinishedRecipe {
-        private final ResourceLocation recipeId;
-        private final Ingredient skin;
-        private final Fluid fluid;
-        private final int waterAmount;
-        private final Item leather;
-        private final int leatherAmount;
-        private final Advancement.Builder advancement;
-        private final ResourceLocation advancementId;
-        private final RecipeSerializer<?> serializer;
-
-        private Result(ResourceLocation recipeId, Ingredient skin, Fluid fluid, int waterAmount, Item leather, int leatherAmount, Advancement.Builder advancement, ResourceLocation advancementId, RecipeSerializer<?> serializer) {
-            this.recipeId = recipeId;
-            this.skin = skin;
-            this.fluid = fluid;
-            this.waterAmount = waterAmount;
-            this.leather = leather;
-            this.leatherAmount = leatherAmount;
-            this.advancement = advancement;
-            this.advancementId = advancementId;
-            this.serializer = serializer;
-        }
+    private record Result(ResourceLocation recipeId, Ingredient skin, Fluid fluid, int waterAmount, Item leather,
+                          int leatherAmount, Advancement.Builder advancement, ResourceLocation advancementId,
+                          RecipeSerializer<?> serializer) implements FinishedRecipe {
 
         @Override
         public void serializeRecipeData(JsonObject pJson) {
-            //I
+            //Input
             JsonObject input = new JsonObject();
             input.add("item", this.skin.toJson());
-            input.addProperty("amount", this.waterAmount);
+
+                //Fluid
+                ResourceLocation fluid = ForgeRegistries.FLUIDS.getKey(this.fluid);
+                input.addProperty("fluid", fluid.toString());
+                input.addProperty("fluid_amount", this.waterAmount);
 
             pJson.add("input", input);
 
-            //F
-            ResourceLocation fluidKey = ForgeRegistries.FLUIDS.getKey(this.fluid);
-            pJson.addProperty("fluid", fluidKey.toString());
+            //Fluid
+//            ResourceLocation fluid = ForgeRegistries.FLUIDS.getKey(this.fluid);
+//            pJson.addProperty("fluid", fluid.toString());
 
             //Output
             JsonObject output = new JsonObject();
 
-            JsonObject itemObj = new JsonObject();
-            itemObj.addProperty("item", ForgeRegistries.ITEMS.getKey(this.leather).toString());
-            output.add("item", itemObj);
-            output.addProperty("amount", this.leatherAmount);
+            JsonObject leather = new JsonObject();
+            leather.addProperty("item", ForgeRegistries.ITEMS.getKey(this.leather).toString());
+            output.add("item", leather);
+            output.addProperty("leather_amount", this.leatherAmount);
 
             pJson.add("output", output);
-
         }
 
         @Override
         public ResourceLocation getId() {
-            return this.recipeId;
+                return this.recipeId;
         }
 
-        @Override
-        public RecipeSerializer<?> getType() {
-            return this.serializer;
+        @Override public RecipeSerializer<?> getType() {
+                return this.serializer;
         }
 
-        @Override
-        public @Nullable JsonObject serializeAdvancement() {
-            return this.advancement.serializeToJson();
+        @Override public @Nullable JsonObject serializeAdvancement() {
+                return this.advancement.serializeToJson();
         }
 
         @Override
         public @Nullable ResourceLocation getAdvancementId() {
-            return this.advancementId;
+                return this.advancementId;
         }
     }
 }

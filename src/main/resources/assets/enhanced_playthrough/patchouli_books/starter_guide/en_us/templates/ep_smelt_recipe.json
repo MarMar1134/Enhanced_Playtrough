@@ -1,0 +1,63 @@
+{
+  "processor": "net.marmar.enhanced_playthrough.compat.patchouli.EPSmeltRecipeProcessor",
+  "components": [
+    {
+      "type": "patchouli:header",
+      "text": "#title",
+      "x": 60,
+      "y": 0
+    },
+    {
+      "type": "patchouli:item",
+      "item": "#input",
+      "framed": true,
+      "x": 18,
+      "y": 15
+    },
+    {
+      "type": "patchouli:image",
+      "image": "enhanced_playthrough:patchouli/gui/arrow_simbol.png",
+      "width": 16,
+      "height": 16,
+      "texture_width": 16,
+      "texture_height": 16,
+      "u": 0,
+      "v": 0,
+      "x": 37,
+      "y": 18,
+      "scale": 0.6
+    },
+    {
+      "type": "patchouli:item",
+      "item": "#ep_furnace",
+      "x": 51,
+      "y": 15
+    },
+    {
+      "type": "patchouli:image",
+      "image": "enhanced_playthrough:patchouli/gui/arrow_simbol.png",
+      "width": 16,
+      "height": 16,
+      "texture_width": 16,
+      "texture_height": 16,
+      "u": 0,
+      "v": 0,
+      "x": 70,
+      "y": 18,
+      "scale": 0.6
+    },
+    {
+      "type": "patchouli:item",
+      "item": "#output",
+      "framed": true,
+      "x": 84,
+      "y": 15
+    },
+    {
+      "type": "patchouli:text",
+      "text": "#text",
+      "x": 0,
+      "y": 37
+    }
+  ]
+}

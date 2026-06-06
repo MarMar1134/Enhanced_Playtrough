@@ -235,7 +235,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "enhanced_playthrough:aluminum_upgrade_smithing_template",
+          "name": "enhanced_playthrough:reinforced_upgrade_smithing_template",
           "weight": 2
         },
         {

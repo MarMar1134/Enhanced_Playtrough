@@ -1,0 +1,46 @@
+{
+  "name": "Obteniendo ladrillos de adobe",
+  "category": "enhanced_playthrough:first_steps",
+  "icon": "enhanced_playthrough:textures/item/mud_brick.png",
+  "read_by_default": true,
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Ya con herramientas de piedra, es hora de craftear unos $(bold)ladrillos de adobe$() para hacer un $(bold)horno de adobe$()."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "enhanced_playthrough:mud_brick"
+      },
+      "text": "Los ladrillos de adobe son esenciales para progresar, ya que permiten crear hornos de todo tipo y bloques para la construcción de tu hogar."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "minecraft:clay_ball"
+      },
+      "text": "El ingrediente clave para cualquier ladrillo son las $(bold)bolas de arcilla$(), que pueden ser obtenidas recolectando fuentes de arcilla con una pala.$(br) Éstas fuentes se pueden encontrar cerca del agua."
+    },
+    {
+      "type": "patchouli:image",
+      "text": "Un parche de bloques de arcilla.",
+      "images": [
+        "enhanced_playthrough:patchouli/images/clay_source.png"
+      ]
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "minecraft:dirt"
+      },
+      "text": "Luego de recolectar arcilla, necesitarás $(bold)bloques de tierra$(), que están prácticamente en cualquier parte."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "enhanced_playthrough:mud_brick_from_plant_fiber",
+      "recipe2": "enhanced_playthrough:mud_brick_from_wheat"
+    }
+  ]
+}

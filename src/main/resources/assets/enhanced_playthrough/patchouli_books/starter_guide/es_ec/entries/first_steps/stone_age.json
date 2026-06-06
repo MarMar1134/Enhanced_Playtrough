@@ -1,0 +1,35 @@
+{
+  "name": "La edad de piedra",
+  "category": "enhanced_playthrough:first_steps",
+  "icon": "minecraft:textures/item/stone_pickaxe.png",
+  "read_by_default": true,
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Luego de obtener $(bold)fibra vegetal$(), estás preparado para craftear herramientas de piedra y obtener nuevos minerales."
+    },
+    {
+      "title": "Tipos de adoquines",
+      "type": "patchouli:spotlight",
+      "text": "Lo primero que deberás hacer es conseguir $(bold)adoquines$(). El tipo de adoquín dependerá de la piedra que mines, pero todos sirven para crear herramientas de piedra.",
+      "item": {
+        "tag": "enhanced_playthrough:cobble"
+      }
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Una vez conseguidos los adoquines, deberás combinarlos siguiendo la receta vanilla y agregando fibra vegetal para atar los adoquines al mango."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecraft:stone_pickaxe",
+      "recipe2": "minecraft:stone_axe"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecraft:stone_shovel",
+      "recipe2": "minecraft:stone_sword"
+    }
+  ]
+}

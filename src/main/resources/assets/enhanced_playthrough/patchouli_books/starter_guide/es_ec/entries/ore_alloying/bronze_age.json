@@ -1,0 +1,43 @@
+{
+  "name": "La edad del bronze",
+  "category": "enhanced_playthrough:ore_alloying",
+  "icon": "enhanced_playthrough:bronze_ingot",
+  "read_by_default": true,
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Con tu horno de aleación completamente operativo, estás listo para combinar metales y minerales a gusto. La primera de estas combinaciones es el $(bold)bronze$()."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "enhanced_playthrough:bronze_ingot"
+      },
+      "text": "El bronze es una aleación de cobre y estaño, dos metales básicos y endebles.",
+      "link_recipe": true
+    },
+    {
+      "type": "patchouli:image",
+      "title": "Yacimiento de cobre",
+      "text": "El cobre es un metal abundante en el Overworld, puede ser encontrado entre y=-40 and y=140. Necesitarás un $(bold)pico de piedra$() para minarlo.",
+      "images": [
+        "enhanced_playthrough:patchouli/images/copper_vein.png"
+      ]
+    },
+    {
+      "type": "patchouli:image",
+      "title": "Yacimiento de estaño",
+      "text": "El estaño es un metal del overworld, puede ser encontrado y=-40 and y=140 cerca de yacimientos de cobre. Necesitarás un $(bold)pico de piedra$() para minarlo.",
+      "images": [
+        "enhanced_playthrough:patchouli/images/tin_vein.png"
+      ]
+    },
+    {
+      "type": "enhanced_playthrough:alloy_recipe",
+      "recipe": "enhanced_playthrough:bronze_ingot_from_alloying_raw_copper_and_raw_tin",
+      "alloy_furnace": "enhanced_playthrough:adobe_alloy_furnace",
+      "text": "Coloca $(bold)cobre bruto$() y $(bold)estaño$() dentro del horno de aleación (en cualquier orden), añade $(bold)combustible$() y podrás fundirlos para obtener $(bold)bronze$()."
+    }
+  ]
+}

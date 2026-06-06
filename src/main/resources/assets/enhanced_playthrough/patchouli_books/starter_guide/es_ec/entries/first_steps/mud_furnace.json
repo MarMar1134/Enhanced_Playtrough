@@ -1,0 +1,36 @@
+{
+  "name": "El horno de adobe",
+  "category": "enhanced_playthrough:first_steps",
+  "icon": "enhanced_playthrough:adobe_furnace",
+  "read_by_default": true,
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Una vez obtenidos los $(bold)ladrillos de adobe$(), estás preparado para craftear tu primer $(bold)horno de adobe$() y fundir $(bold)minerales básicos$()."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "enhanced_playthrough:adobe_furnace"
+      },
+      "text": "El horno de adobe es el primer tipo de horno. Puede cocinar carnes y verduras, asi como hacer carbón vegetal y fundir minerales básicos."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "minecraft:cobblestone"
+      },
+      "text": "Antes de craftear el horno en si, deberás obtener adoquines (en bloque). Los bloques de adoquín se obtienen combinando 4 adoquines."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecraft:cobblestone"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "enhanced_playthrough:adobe_furnace",
+      "text": "Combinando ladrillos de adobe con adoquines podrás craftear el ansiado horno de adobe."
+    }
+  ]
+}

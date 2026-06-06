@@ -4,15 +4,15 @@ public enum AlloyRecipeCategory {
     COMPLEX_ALLOY("complex_alloy"),
     SIMPLE_ALLOY("simple_alloy");
 
-    private final String category_name;
+    private final String categoryName;
 
-    AlloyRecipeCategory(String pCategory_name){
-        this.category_name = pCategory_name;
+    AlloyRecipeCategory(String pCategoryName){
+        this.categoryName = pCategoryName;
     }
 
     public static AlloyRecipeCategory findCategory(String category_name) {
         for (AlloyRecipeCategory name: values()){
-            if (name.category_name.equals(category_name)){
+            if (name.categoryName.equals(category_name)){
                 return name;
             }
         }
@@ -20,6 +20,6 @@ public enum AlloyRecipeCategory {
     }
 
     public String getSerializedName() {
-        return category_name;
+        return categoryName;
     }
 }

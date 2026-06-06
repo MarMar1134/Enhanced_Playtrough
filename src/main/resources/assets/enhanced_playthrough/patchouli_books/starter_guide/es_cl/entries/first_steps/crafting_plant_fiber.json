@@ -1,0 +1,51 @@
+{
+  "name": "Crafteando fibra vegetal",
+  "category": "enhanced_playthrough:first_steps",
+  "icon": "enhanced_playthrough:textures/item/plant_fiber.png",
+  "read_by_default": true,
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Lo primero que tendrás que hacer para conseguir herramientas de piedra es encontrar alguna fuente natural de $(bold)fibra vegetal$()."
+    },
+    {
+      "type": "patchouli:image",
+      "text": "Éstas plantas son exelentes fuentes de fibra vegetal.",
+      "images": [
+        "enhanced_playthrough:patchouli/images/reeds.png",
+        "enhanced_playthrough:patchouli/images/tall_reeds.png",
+        "enhanced_playthrough:patchouli/images/water_reeds.png",
+        "enhanced_playthrough:patchouli/images/kenaf.png"
+      ]
+    },
+    {
+      "title": "Fuentes de fibra vegetal",
+      "type": "patchouli:spotlight",
+      "item": {
+        "tag": "enhanced_playthrough:plant_fiber_sources"
+      },
+      "text": "Haciendo click izquierdo en la cabeza de éstas plantas, obtendrás el material necesario para crear la fibra vegetal.$(br) Éstas crecerán de manera natural, similar a las bayas dulces. La única exepción son los juncos, cuya cabeza no crece."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "enhanced_playthrough:plant_fiber"
+      },
+      "text": "La fibra vegetal es un reemplazo natural y renovable del hilo.",
+      "link_recipe": true
+    },
+    {
+      "type": "patchouli:crafting",
+      "title": "Recetas de fibra vegetal",
+      "recipe": "enhanced_playthrough:plant_fiber_from_reeds_head",
+      "recipe2": "enhanced_playthrough:plant_fiber_from_tall_reeds_head"
+    },
+    {
+      "type": "patchouli:crafting",
+      "title": "Recetas de fibra vegetal",
+      "recipe": "enhanced_playthrough:plant_fiber_from_water_reeds_head",
+      "recipe2": "enhanced_playthrough:plant_fiber_from_kenaf_branch"
+    }
+  ]
+}

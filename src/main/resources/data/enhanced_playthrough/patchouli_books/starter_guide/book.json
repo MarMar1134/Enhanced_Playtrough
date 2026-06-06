@@ -1,0 +1,10 @@
+{
+  "name": "patchouli.enhanced_playthrough.starter_guide.title",
+  "landing_text": "patchouli.enhanced_playthrough.starter_guide.landing_text",
+  "version": 1,
+  "creative_tab": "enhanced_playthrough:utility",
+  "model": "enhanced_playthrough:book_garnet",
+  "book_texture": "enhanced_playthrough:patchouli/gui/book_garnet.png",
+  "use_resource_pack": true,
+  "show_progress": false
+}

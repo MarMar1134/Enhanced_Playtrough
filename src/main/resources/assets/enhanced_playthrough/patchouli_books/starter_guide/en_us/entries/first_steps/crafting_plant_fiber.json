@@ -1,0 +1,51 @@
+{
+  "name": "Crafting plant fiber",
+  "category": "enhanced_playthrough:first_steps",
+  "icon": "enhanced_playthrough:textures/item/plant_fiber.png",
+  "read_by_default": true,
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "The first thing you need to do in order to get some stone tools, you'll need to find any source of $(bold)plant fiber.$()"
+    },
+    {
+      "type": "patchouli:image",
+      "text": "These plants can be collected to craft plant fiber.",
+      "images": [
+        "enhanced_playthrough:patchouli/images/reeds.png",
+        "enhanced_playthrough:patchouli/images/tall_reeds.png",
+        "enhanced_playthrough:patchouli/images/water_reeds.png",
+        "enhanced_playthrough:patchouli/images/kenaf.png"
+      ]
+    },
+    {
+      "title": "Plant fiber sources",
+      "type": "patchouli:spotlight",
+      "item": {
+        "tag": "enhanced_playthrough:plant_fiber_sources"
+      },
+      "text": "These plants can be collected by pressing right click on the head of the block. $(br)They will grow up like regular crops. The only exception to this rule are water reeds who must be destroyed to get his head."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "enhanced_playthrough:plant_fiber"
+      },
+      "text": "Plant fiber is a renewable replacement for string. Is highly abundant on the overworld.",
+      "link_recipe": true
+    },
+    {
+      "type": "patchouli:crafting",
+      "title": "Plant fiber recipes",
+      "recipe": "enhanced_playthrough:plant_fiber_from_reeds_head",
+      "recipe2": "enhanced_playthrough:plant_fiber_from_tall_reeds_head"
+    },
+    {
+      "type": "patchouli:crafting",
+      "title": "Plant fiber recipes",
+      "recipe": "enhanced_playthrough:plant_fiber_from_water_reeds_head",
+      "recipe2": "enhanced_playthrough:plant_fiber_from_kenaf_branch"
+    }
+  ]
+}

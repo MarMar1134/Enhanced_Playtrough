@@ -92,14 +92,14 @@ public class EPBlockLootTables extends BlockLootSubProvider implements BlockLoot
         this.add(EPBlocks.TIN_ORE.get(), block ->
                 createOreDrops(EPBlocks.TIN_ORE.get(), 1, 4, EPItems.RAW_TIN.get()));
         this.add(EPBlocks.DEEPSLATE_TIN_ORE.get(), block ->
-                createDeepslateOreDrops(EPBlocks.TIN_ORE.get(), 2, 6, EPItems.RAW_TIN.get()));
+                createDeepslateOreDrops(EPBlocks.DEEPSLATE_TIN_ORE.get(), 2, 6, EPItems.RAW_TIN.get()));
 
         this.add(EPBlocks.ZINC_ORE.get(), block ->
                 createOreDrops(EPBlocks.ZINC_ORE.get(), 1, 3, EPItems.RAW_ZINC.get()));
         this.add(EPBlocks.DEEPSLATE_ZINC_ORE.get(), block ->
-                createDeepslateOreDrops(EPBlocks.ZINC_ORE.get(), 2, 5, EPItems.RAW_ZINC.get()));
+                createDeepslateOreDrops(EPBlocks.DEEPSLATE_ZINC_ORE.get(), 2, 5, EPItems.RAW_ZINC.get()));
         this.add(EPBlocks.NETHER_ZINC_ORE.get(), block ->
-                createOreDrops(EPBlocks.ZINC_ORE.get(), 3, 7, EPItems.RAW_ZINC.get()));
+                createOreDrops(EPBlocks.NETHER_ZINC_ORE.get(), 3, 7, EPItems.RAW_ZINC.get()));
 
         this.add(EPBlocks.SULFUR_ORE.get(), block ->
                 createOreDrops(EPBlocks.SULFUR_ORE.get(), 2, 5, EPItems.SULFUR.get()));

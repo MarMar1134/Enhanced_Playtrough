@@ -104,6 +104,7 @@ public class EPTags {
         public static final TagKey<Item> RAW_GEMS = itemTag("raw_gems");
         public static final TagKey<Item> COBBLE = itemTag("cobble");
         public static final TagKey<Item> TERRACOTTA_SHARD = itemTag("terracotta_shard");
+        public static final TagKey<Item> PLANT_FIBER_SOURCES = itemTag("plant_fiber_sources");
 
         //Ingots
         public static final TagKey<Item> TIN_INGOT = ingotTag("tin");

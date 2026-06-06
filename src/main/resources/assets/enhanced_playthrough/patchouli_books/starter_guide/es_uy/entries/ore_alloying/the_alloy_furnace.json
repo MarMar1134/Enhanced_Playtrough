@@ -1,0 +1,36 @@
+{
+  "name": "El horno de aleación",
+  "category": "enhanced_playthrough:ore_alloying",
+  "icon": "enhanced_playthrough:adobe_alloy_furnace",
+  "read_by_default": true,
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Uno de los materiales más básicos para armar herramientas son los metales. Hay algunos metales naturales en el Overworld, como el $(bold)cobre$(), pero no son muy resistentes que digamos. Sin embargo, uno puede endurecer estos metales combinandolos con otros en un proceso llamado $(bold)aleación$(). $(br)Para poder alear metales, necesitarás un $(bold)horno de aleación$()."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "enhanced_playthrough:adobe_alloy_furnace"
+      },
+      "text": "El horno de aleación es un bloque capaz de combinar materiales a través del calor. Funciona de manera similar a un horno común, con el extra de tener un slot para el material con el que se combinará la base."
+    },
+    {
+      "type": "enhanced_playthrough:ep_smelt_recipe",
+      "recipe": "enhanced_playthrough:brick_from_basic_smelting_clay_ball",
+      "ep_furnace": "enhanced_playthrough:adobe_furnace",
+      "text": "Para poder craftear el horno de aleación necesitaremos ladrillos. Éstos se consiguen cocinando arcilla en un horno."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecraft:bricks",
+      "text": "Luego, deberás craftear al menos $(bold)6 bloques de ladrillo$()."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "enhanced_playthrough:adobe_alloy_furnace",
+      "text": "Cuando tengas los ladrillos, consigue $(bold)3 bloques de adoquín$() y combinalos con los $(bold)6 bloques de ladrillo$() y un $(bold)horno de adobe$() para crear tu primer $(bold)horno de aleación$()."
+    }
+  ]
+}

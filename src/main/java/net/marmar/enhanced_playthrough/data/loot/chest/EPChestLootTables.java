@@ -80,7 +80,7 @@ public class EPChestLootTables implements LootTableSubProvider {
                 )
 
                 .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1))
-                        .add(LootItem.lootTableItem(EPItems.ALUMINUM_UPGRADE_SMITHING_TEMPLATE.get()).setWeight(2))
+                        .add(LootItem.lootTableItem(EPItems.REINFORCED_UPGRADE_SMITHING_TEMPLATE.get()).setWeight(2))
                         .add(EmptyLootItem.emptyItem().setWeight(4)));
     }
 

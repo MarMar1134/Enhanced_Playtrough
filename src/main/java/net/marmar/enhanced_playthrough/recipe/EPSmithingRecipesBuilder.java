@@ -67,66 +67,49 @@ public class EPSmithingRecipesBuilder implements RecipeBuilder {
         }
     }
 
-    static class Result implements FinishedRecipe {
-        private final ResourceLocation id;
-        private final Ingredient addition;
-        private final Ingredient base;
-        private final Item result;
-        private final Item template;
-        private final Advancement.Builder advancement;
-        private final ResourceLocation resourceLocation;
-        private final RecipeSerializer<? extends SmithingRecipe> serializer;
-
-        public Result(ResourceLocation id, Ingredient addition, Ingredient base, Item result, Item template, Advancement.Builder advancement, ResourceLocation resourceLocation, RecipeSerializer<? extends SmithingRecipe> serializer) {
-            this.id = id;
-            this.addition = addition;
-            this.base = base;
-            this.result = result;
-            this.template = template;
-            this.advancement = advancement;
-            this.resourceLocation = resourceLocation;
-            this.serializer = serializer;
-        }
+    private record Result(ResourceLocation id, Ingredient addition, Ingredient base, Item result, Item template,
+                          Advancement.Builder advancement, ResourceLocation resourceLocation,
+                          RecipeSerializer<? extends SmithingRecipe> serializer) implements FinishedRecipe {
 
         @Override
-        public void serializeRecipeData(JsonObject jsonObject) {
-            //addition
-            jsonObject.add("addition", this.addition.toJson());
+            public void serializeRecipeData(JsonObject jsonObject) {
+                //addition
+                jsonObject.add("addition", this.addition.toJson());
 
-            //base
-            jsonObject.add("base", this.base.toJson());
+                //base
+                jsonObject.add("base", this.base.toJson());
 
-            //result
-            if (this.result != null){
-                JsonObject result = new JsonObject();
-                result.addProperty("item", ForgeRegistries.ITEMS.getKey(this.result).toString());
-                jsonObject.add("result", result);
+                //result
+                if (this.result != null) {
+                    JsonObject result = new JsonObject();
+                    result.addProperty("item", ForgeRegistries.ITEMS.getKey(this.result).toString());
+                    jsonObject.add("result", result);
+                }
+
+                //template
+                JsonObject template = new JsonObject();
+                template.addProperty("item", ForgeRegistries.ITEMS.getKey(this.template).toString());
+                jsonObject.add("template", template);
             }
 
-            //template
-            JsonObject template = new JsonObject();
-            template.addProperty("item", ForgeRegistries.ITEMS.getKey(this.template).toString());
-            jsonObject.add("template", template);
-        }
+            @Override
+            public ResourceLocation getId() {
+                return this.id;
+            }
 
-        @Override
-        public ResourceLocation getId() {
-            return this.id;
-        }
+            @Override
+            public RecipeSerializer<?> getType() {
+                return this.serializer;
+            }
 
-        @Override
-        public RecipeSerializer<?> getType() {
-            return this.serializer;
-        }
+            @Override
+            public @Nullable JsonObject serializeAdvancement() {
+                return this.advancement.serializeToJson();
+            }
 
-        @Override
-        public @Nullable JsonObject serializeAdvancement() {
-            return this.advancement.serializeToJson();
+            @Override
+            public @Nullable ResourceLocation getAdvancementId() {
+                return this.resourceLocation;
+            }
         }
-
-        @Override
-        public @Nullable ResourceLocation getAdvancementId() {
-            return this.resourceLocation;
-        }
-    }
 }

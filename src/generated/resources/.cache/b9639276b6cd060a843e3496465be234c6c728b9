@@ -1,4 +1,4 @@
-// 1.20.1	2026-05-28T11:51:44.4788433	Tags for minecraft:item mod id enhanced_playthrough
+// 1.20.1	2026-06-04T14:13:22.9228921	Tags for minecraft:item mod id enhanced_playthrough
 0ff3092eb36a0159ae287d2f429e5f5eb6fb0c0a data/enhanced_playthrough/tags/items/aluminum.json
 b3b284c126879d981b4f706eb8ea0e63bd17ae12 data/enhanced_playthrough/tags/items/apple_logs.json
 7c7828adcbd60c80e9a7c4bd6e7d0382327527c8 data/enhanced_playthrough/tags/items/blue_gold.json
@@ -22,7 +22,7 @@ d4c382fd80e3db9371b76d593e7c4c9ded30562b data/enhanced_playthrough/tags/items/in
 9248362b80b6139c9763e14a5a9266b30a4d831f data/enhanced_playthrough/tags/items/ingredients.json
 4162a109f672bddadb69abe88f6342254b40ad60 data/enhanced_playthrough/tags/items/ingredients/alchemical_duplicating.json
 c0d7fd1590d30795eb290aec37b960e58e34e40a data/enhanced_playthrough/tags/items/ingredients/alloy.json
-28c6938300a8c7e8dfd5aa184a0361d3d1232b57 data/enhanced_playthrough/tags/items/ingredients/basic_smelt.json
+06ae42aba3379240aed92f122c7f762c3702cd2d data/enhanced_playthrough/tags/items/ingredients/basic_smelt.json
 15d7aba76deeda91360fcea869395153c5f5d84c data/enhanced_playthrough/tags/items/ingredients/blast_alloy.json
 5e721bdc414693a14c4480e190f068f275b27533 data/enhanced_playthrough/tags/items/ingredients/masonry.json
 c20f22cfa3728305152d9e31f5393a9880dc68a5 data/enhanced_playthrough/tags/items/ingredients/mechanical_grind.json
@@ -57,6 +57,7 @@ aae115d005c5fe23885c738fc2e13a317ee65c89 data/enhanced_playthrough/tags/items/or
 91ea176efa45aaf51177fe9afb84629048e27ed2 data/enhanced_playthrough/tags/items/ores/sulfur.json
 249784e172026977ce3d5cb73991bdc2903b414c data/enhanced_playthrough/tags/items/ores/tin.json
 6cb61d10a550aa75f3e2f1a4e3ee86f17bf6ec5f data/enhanced_playthrough/tags/items/ores/zinc.json
+64ae58872b3379836337e00a0b98acb20093b8ef data/enhanced_playthrough/tags/items/plant_fiber_sources.json
 c48734bcfcda2db12268011ee56ef74e370665d9 data/enhanced_playthrough/tags/items/raw_gems.json
 23b7f237258e89a443190cc767e97e82751d96d1 data/enhanced_playthrough/tags/items/rods/aluminum.json
 97afdeb6e6eae64aafd0bfe2f3972e78a2061251 data/enhanced_playthrough/tags/items/rose_gold.json

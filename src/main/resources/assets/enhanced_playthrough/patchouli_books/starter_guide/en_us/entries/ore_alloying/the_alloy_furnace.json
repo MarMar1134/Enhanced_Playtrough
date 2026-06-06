@@ -1,0 +1,36 @@
+{
+  "name": "The alloy furnace",
+  "category": "enhanced_playthrough:ore_alloying",
+  "icon": "enhanced_playthrough:adobe_alloy_furnace",
+  "read_by_default": true,
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "One of the basics to get better technology are metals. There are some natural metals on the overworld, like $(bold)copper$(), but aren't the more resistent. $(br)To get stronger metals like $(bold)iron$(), you will need something harder to mine it: $(bold)bronze$()."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "enhanced_playthrough:adobe_alloy_furnace"
+      },
+      "text": "The alloy furnace is a block cappable of combine different materials utilizing heat. Is similar to normal furnaces, with the addition of another slot to add an extra material."
+    },
+    {
+      "type": "enhanced_playthrough:ep_smelt_recipe",
+      "recipe": "enhanced_playthrough:brick_from_basic_smelting_clay_ball",
+      "ep_furnace": "enhanced_playthrough:adobe_furnace",
+      "text": "In order to make the alloy furnace, you'll need some bricks."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecraft:bricks",
+      "text": "Then you have to craft at least $(bold)6 brick blocks$()."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "enhanced_playthrough:adobe_alloy_furnace",
+      "text": "One you've got all the materials, combine $(bold)6 brick blocks$(), $(bold)3 cobblestone$() and an $(bold)adobe furnace$() to make your first $(bold)alloy furnace$()."
+    }
+  ]
+}

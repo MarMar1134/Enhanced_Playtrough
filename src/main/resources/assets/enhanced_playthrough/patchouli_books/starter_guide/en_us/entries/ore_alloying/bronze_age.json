@@ -1,0 +1,43 @@
+{
+  "name": "The bronze age",
+  "category": "enhanced_playthrough:ore_alloying",
+  "icon": "enhanced_playthrough:bronze_ingot",
+  "read_by_default": true,
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "With your alloy furnace fully operational, you can now make powerful alloys to improve your resource collection. One of this alloys is $(bold)bronze$()."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "enhanced_playthrough:bronze_ingot"
+      },
+      "text": "Bronze is an alloy of copper and tin, hard enough to make tools and armor.",
+      "link_recipe": true
+    },
+    {
+      "type": "patchouli:image",
+      "title": "Copper vein",
+      "text": "Copper is an abundant metal that generates on the overworld, between y=-40 and y=140. You need a $(bold)stone pickaxe$() to mine it.",
+      "images": [
+        "enhanced_playthrough:patchouli/images/copper_vein.png"
+      ]
+    },
+    {
+      "type": "patchouli:image",
+      "title": "Tin vein",
+      "text": "Tin is a metal that generates on the overworld, between y=-40 and y=140. You need a $(bold)stone pickaxe$() to mine it. Is usually located near $(bold)copper veins$().",
+      "images": [
+        "enhanced_playthrough:patchouli/images/tin_vein.png"
+      ]
+    },
+    {
+      "type": "enhanced_playthrough:alloy_recipe",
+      "recipe": "enhanced_playthrough:bronze_ingot_from_alloying_raw_copper_and_raw_tin",
+      "alloy_furnace": "enhanced_playthrough:adobe_alloy_furnace",
+      "text": "Put your $(bold)raw copper$() and your $(bold)raw tin$() inside the alloy furnace (the order doesn't matter), put any $(bold)fuel$() and you'll get your precious $(bold)bronze$()."
+    }
+  ]
+}

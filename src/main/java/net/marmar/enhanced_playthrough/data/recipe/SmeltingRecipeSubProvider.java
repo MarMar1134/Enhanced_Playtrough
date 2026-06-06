@@ -10,6 +10,7 @@ import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
@@ -56,8 +57,11 @@ public class SmeltingRecipeSubProvider extends RecipeProvider {
         basicSmelting(consumer, Items.CACTUS, Items.GREEN_DYE, "cactus");
         soulBasicSmelting(consumer, Items.CACTUS, Items.GREEN_DYE, "cactus");
 
-        basicSmelting(consumer, Items.CLAY_BALL, Items.BRICK, "clay_ball");
-        soulBasicSmelting(consumer, Items.CLAY_BALL, Items.BRICK, "clay_ball");
+        basicSmelting(consumer, ItemTags.LOGS_THAT_BURN, Items.CHARCOAL, "charcoal");
+        soulBasicSmelting(consumer, ItemTags.LOGS_THAT_BURN, Items.CHARCOAL, "charcoal");
+
+        basicSmelting(consumer, Items.CLAY_BALL, Items.BRICK, "brick");
+        soulBasicSmelting(consumer, Items.CLAY_BALL, Items.BRICK, "brick");
 
         basicSmelting(consumer, EPItems.LIMESTONE_COBBLE.get(), EPItems.LIME.get(), "lime");
         soulBasicSmelting(consumer, EPItems.LIMESTONE_COBBLE.get(), EPItems.LIME.get(), "lime");

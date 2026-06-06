@@ -84,66 +84,47 @@ public class GenericRecipeBuilder implements RecipeBuilder {
         }
     }
 
-    static class Result implements FinishedRecipe {
-        private final ResourceLocation id;
-        private final Ingredient ingredient;
-        private final Item result;
-        private final ModRecipeCategory category;
-        private final String group;
-        private final int count;
-        private final Advancement.Builder advancement;
-        private final ResourceLocation resourceLocation;
-        private final RecipeSerializer<?> serializer;
-
-        public Result(ResourceLocation pId, Ingredient pIngredient, Item pResult, ModRecipeCategory category, String group, int quantity, Advancement.Builder pAdvancement, ResourceLocation pAdvancementId, RecipeSerializer<?> pSerializer) {
-            this.id = pId;
-            this.ingredient = pIngredient;
-            this.result = pResult;
-            this.category = category;
-            this.group = group;
-            this.count = quantity;
-            this.advancement = pAdvancement;
-            this.resourceLocation = pAdvancementId;
-            this.serializer = pSerializer;
-        }
+    private record Result(ResourceLocation id, Ingredient ingredient, Item result, ModRecipeCategory category,
+                          String group, int count, Advancement.Builder advancement, ResourceLocation resourceLocation,
+                          RecipeSerializer<?> serializer) implements FinishedRecipe {
 
         public void serializeRecipeData(JsonObject pJson) {
-            if (!this.group.isEmpty()){
-                pJson.addProperty("group", this.group);
+                if (!this.group.isEmpty()) {
+                    pJson.addProperty("group", this.group);
+                }
+
+                pJson.addProperty("category", this.category.getSerializedName());
+
+                //Input
+                pJson.add("ingredient", this.ingredient.toJson());
+
+                //Output
+                JsonObject output = new JsonObject();
+                output.addProperty("item", ForgeRegistries.ITEMS.getKey(this.result).toString());
+
+                if (this.count != 1) {
+                    output.addProperty("count", this.count);
+                }
+
+                pJson.add("output", output);
             }
 
-            pJson.addProperty("category", this.category.getSerializedName());
-
-            //Input
-            pJson.add("ingredient", this.ingredient.toJson());
-
-            //Output
-            JsonObject output = new JsonObject();
-            output.addProperty("item", ForgeRegistries.ITEMS.getKey(this.result).toString());
-
-            if (this.count != 1){
-                output.addProperty("count", this.count);
+            public RecipeSerializer<?> getType() {
+                return this.serializer;
             }
 
-            pJson.add("output", output);
-        }
+            public ResourceLocation getId() {
+                return this.id;
+            }
 
-        public RecipeSerializer<?> getType() {
-            return this.serializer;
-        }
+            @Nullable
+            public JsonObject serializeAdvancement() {
+                return this.advancement.serializeToJson();
+            }
 
-        public ResourceLocation getId() {
-            return this.id;
+            @Nullable
+            public ResourceLocation getAdvancementId() {
+                return this.resourceLocation;
+            }
         }
-
-        @Nullable
-        public JsonObject serializeAdvancement() {
-            return this.advancement.serializeToJson();
-        }
-
-        @Nullable
-        public ResourceLocation getAdvancementId() {
-            return this.resourceLocation;
-        }
-    }
 }

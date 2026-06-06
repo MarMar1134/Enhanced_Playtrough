@@ -87,61 +87,43 @@ public class EPSmeltingRecipeBuilder implements RecipeBuilder {
         }
     }
 
-    static class Result implements FinishedRecipe {
-        private final ResourceLocation id;
-        private final Ingredient ingredient;
-        private final Item result;
-        private final int alloyTime;
-        private final ModRecipeCategory category;
-        private final String group;
-        private final Advancement.Builder advancement;
-        private final ResourceLocation advancementId;
-        private final RecipeSerializer<?> serializer;
+    private record Result(ResourceLocation id, Ingredient ingredient, Item result, int alloyTime,
+                          ModRecipeCategory category, String group, Advancement.Builder advancement,
+                          ResourceLocation advancementId, RecipeSerializer<?> serializer) implements FinishedRecipe {
 
-        public Result(ResourceLocation pId, Ingredient ingredient, Item pResult, int alloyingTime, ModRecipeCategory recipeCategory, String pGroup, Advancement.Builder pAdvancement, ResourceLocation pAdvancementId, RecipeSerializer<?> pSerializer) {
-            this.id = pId;
-            this.ingredient = ingredient;
-            this.result = pResult;
-            this.alloyTime = alloyingTime;
-            this.category = recipeCategory;
-            this.group = pGroup;
-            this.advancement = pAdvancement;
-            this.advancementId = pAdvancementId;
-            this.serializer = pSerializer;
-        }
         public void serializeRecipeData(JsonObject pJson) {
-            if (!this.group.isEmpty()) pJson.addProperty("group", this.group);
+                if (!this.group.isEmpty()) pJson.addProperty("group", this.group);
 
-            pJson.addProperty("category", this.category.getSerializedName());
+                pJson.addProperty("category", this.category.getSerializedName());
 
-            pJson.addProperty("cooktime", this.alloyTime);
+                pJson.addProperty("cooktime", this.alloyTime);
 
-            pJson.add("ingredient", this.ingredient.toJson());
+                pJson.add("ingredient", this.ingredient.toJson());
 
-            //Output
-            JsonObject outputObject = new JsonObject();
+                //Output
+                JsonObject outputObject = new JsonObject();
 
-            outputObject.addProperty("item", ForgeRegistries.ITEMS.getKey(this.result).toString());
+                outputObject.addProperty("item", ForgeRegistries.ITEMS.getKey(this.result).toString());
 
-            pJson.add("output", outputObject);
+                pJson.add("output", outputObject);
+            }
+
+            public RecipeSerializer<?> getType() {
+                return this.serializer;
+            }
+
+            public ResourceLocation getId() {
+                return this.id;
+            }
+
+            @Nullable
+            public JsonObject serializeAdvancement() {
+                return this.advancement.serializeToJson();
+            }
+
+            @Nullable
+            public ResourceLocation getAdvancementId() {
+                return this.advancementId;
+            }
         }
-
-        public RecipeSerializer<?> getType() {
-            return this.serializer;
-        }
-
-        public ResourceLocation getId() {
-            return this.id;
-        }
-
-        @Nullable
-        public JsonObject serializeAdvancement() {
-            return this.advancement.serializeToJson();
-        }
-
-        @Nullable
-        public ResourceLocation getAdvancementId() {
-            return this.advancementId;
-        }
-    }
 }

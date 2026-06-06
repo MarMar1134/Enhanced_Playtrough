@@ -2,7 +2,7 @@
   "type": "enhanced_playthrough:basic_smelting",
   "category": "basic_smelt",
   "cooktime": 300,
-  "group": "clay_ball",
+  "group": "brick",
   "ingredient": {
     "item": "minecraft:clay_ball"
   },

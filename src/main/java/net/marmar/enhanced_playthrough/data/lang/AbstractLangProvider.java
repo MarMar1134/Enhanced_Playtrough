@@ -61,6 +61,14 @@ public abstract class AbstractLangProvider extends LanguageProvider {
         this.add("config.jade.plugin_" + EnhancedPlaythrough.MOD_ID + "." + block, translation);
     }
 
+    protected void addPatchouliBookTitle(String pBook, String pName){
+        this.add("patchouli." + EnhancedPlaythrough.MOD_ID + "." + pBook + ".title", pName);
+    }
+
+    protected void addPatchouliBookLandingText(String pBook, String pText){
+        this.add("patchouli." + EnhancedPlaythrough.MOD_ID + "." + pBook + ".landing_text", pText);
+    }
+
     protected void addCreativeTab(String tabName, String translation){
         this.add("creativetab." + EnhancedPlaythrough.MOD_ID + "." + tabName, translation);
     }

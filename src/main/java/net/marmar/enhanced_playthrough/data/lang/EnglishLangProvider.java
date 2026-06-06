@@ -67,6 +67,11 @@ public class EnglishLangProvider extends AbstractLangProvider {
 
         addJadeConfigTranslation("alchemical_duplicator", "Alchemical duplication");
 
+        //Patchouli
+        addPatchouliBookTitle("starter_guide", "Starter guide");
+        addPatchouliBookLandingText("starter_guide", "Welcome to Enhanced Playthrough!" +
+                "$(br)This guide will teach you the basics of this renovated Minecraft world.");
+
         //GUI elements
         addGuiElements("gem_polisher_screen", "Uses");
 
@@ -423,6 +428,7 @@ public class EnglishLangProvider extends AbstractLangProvider {
             addBlock(EPBlocks.MECHANICAL_GRINDER, "Mechanical grinder");
             addBlock(EPBlocks.ALCHEMICAL_DUPLICATOR, "Alchemical duplicator");
             addBlock(EPBlocks.GROWTH_DETECTOR, "Crops growth detector");
+            addBlock(EPBlocks.LEATHERWORKER_STATION, "Leatherwork station");
 
         //Items
             //Raw ores

@@ -10,7 +10,7 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.Nullable;
 
-public class AdobeAlloyFurnaceBlock extends AbstractAlloyFurnaceBlock{
+public class AdobeAlloyFurnaceBlock extends AbstractAlloyFurnaceBlock {
 
     public AdobeAlloyFurnaceBlock(Properties pProperties) {
         super(pProperties);

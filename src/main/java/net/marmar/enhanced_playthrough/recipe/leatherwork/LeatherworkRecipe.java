@@ -19,15 +19,15 @@ public class LeatherworkRecipe implements Recipe<SimpleContainer> {
     private final ResourceLocation recipeId;
     private final Ingredient skin;
     private final FluidStack water;
-    private final int waterAmount;
+    private final int fluidAmount;
     private final ItemStack leather;
     private final int leatherAmount;
 
-    public LeatherworkRecipe(ResourceLocation recipeId, Ingredient skin, FluidStack water, int waterAmount, ItemStack leather, int leatherAmount) {
+    public LeatherworkRecipe(ResourceLocation recipeId, Ingredient skin, FluidStack water, int fluidAmount, ItemStack leather, int leatherAmount) {
         this.recipeId = recipeId;
         this.skin = skin;
         this.water = water;
-        this.waterAmount = waterAmount;
+        this.fluidAmount = fluidAmount;
         this.leather = leather;
         this.leatherAmount = leatherAmount;
     }
@@ -56,8 +56,8 @@ public class LeatherworkRecipe implements Recipe<SimpleContainer> {
         return this.water;
     }
 
-    public int getWaterAmount() {
-        return waterAmount;
+    public int getFluidAmount() {
+        return fluidAmount;
     }
 
     public int getLeatherAmount() {
@@ -96,18 +96,18 @@ public class LeatherworkRecipe implements Recipe<SimpleContainer> {
             Ingredient ingredient = Ingredient.fromJson(ingredientElement, false);
 
             //Water
-            Fluid fluid = ForgeRegistries.FLUIDS.getValue(new ResourceLocation(jsonObject.get("fluid").getAsString()));
-            int waterAmount = GsonHelper.getAsInt(inputObject, "amount", 0);
+            Fluid fluid = ForgeRegistries.FLUIDS.getValue(new ResourceLocation(inputObject.get("fluid").getAsString()));
+            int fluidAmount = GsonHelper.getAsInt(inputObject, "fluid_amount", 0);
 
-            FluidStack fluidStack = new FluidStack(fluid, waterAmount);
+            FluidStack fluidStack = new FluidStack(fluid, fluidAmount);
 
             //Output
             JsonObject outputObject = GsonHelper.getAsJsonObject(jsonObject, "output", null);
 
             ItemStack output = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(outputObject, "item"));
-            int outputAmount = GsonHelper.getAsInt(outputObject, "amount", 0);
+            int outputAmount = GsonHelper.getAsInt(outputObject, "leather_amount", 0);
 
-            return new LeatherworkRecipe(pRecipeId, ingredient, fluidStack, waterAmount, output, outputAmount);
+            return new LeatherworkRecipe(pRecipeId, ingredient, fluidStack, fluidAmount, output, outputAmount);
         }
 
         @Override
@@ -115,12 +115,12 @@ public class LeatherworkRecipe implements Recipe<SimpleContainer> {
             Ingredient input = Ingredient.fromNetwork(pBuffer);
 
             FluidStack fluid  = FluidStack.readFromPacket(pBuffer);
-            int waterAmount = pBuffer.readVarInt();
+            int fluidAmount = pBuffer.readVarInt();
 
             ItemStack output = pBuffer.readItem();
             int amount = pBuffer.readVarInt();
 
-            return new LeatherworkRecipe(pRecipeId, input, fluid, waterAmount, output, amount);
+            return new LeatherworkRecipe(pRecipeId, input, fluid, fluidAmount, output, amount);
         }
 
         @Override
@@ -128,7 +128,7 @@ public class LeatherworkRecipe implements Recipe<SimpleContainer> {
             pRecipe.skin.toNetwork(pBuffer);
 
             pRecipe.getFluidInput().writeToPacket(pBuffer);
-            pBuffer.writeVarInt(pRecipe.waterAmount);
+            pBuffer.writeVarInt(pRecipe.fluidAmount);
 
             pBuffer.writeItemStack(pRecipe.getResultItem(null), false);
             pBuffer.writeVarInt(pRecipe.leatherAmount);
