@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:barrel"
+    },
+    "D": {
+      "item": "enhanced_playthrough:bronze_dagger"
+    },
+    "F": {
+      "tag": "minecraft:wooden_fences"
+    },
+    "S": {
+      "tag": "minecraft:wooden_slabs"
+    }
+  },
+  "pattern": [
+    "SSS",
+    "FDF",
+    "FBF"
+  ],
+  "result": {
+    "item": "enhanced_playthrough:leatherworker_station"
+  },
+  "show_notification": true
+}

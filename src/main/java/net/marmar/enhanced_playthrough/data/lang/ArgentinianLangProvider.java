@@ -37,6 +37,7 @@ public class ArgentinianLangProvider extends AbstractLangProvider {
         addJeiCategory("primal_grinder", "Molienda");
         addJeiCategory("mechanical_grinder", "Molienda mecánizada");
         addJeiCategory("alchemical_duplicator", "Duplicación alquimica");
+        addJeiCategory("leatherworker_station", "Estación de curado");
 
         addJeiItemDesc("plant_fiber", "Material usado en la fabricación de distintos objetos." +
                 "\nSirve como reemplazo del hilo tradicional, y se fabrica con plantas altas en fibra.");
@@ -67,6 +68,8 @@ public class ArgentinianLangProvider extends AbstractLangProvider {
         addJadeConfigTranslation("grinder", "Molienda");
 
         addJadeConfigTranslation("alchemical_duplicator", "Duplicación alquimica");
+
+        addJadeConfigTranslation("leatherworker_station", "Curado de cuero");
 
         //Patchouli
         addPatchouliBookTitle("starter_guide", "Guia para principiantes");

@@ -1,24 +1,24 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_alchemical_duplicator": {
+    "has_leather": {
       "conditions": {
         "items": [
           {
             "items": [
-              "enhanced_playthrough:alchemical_duplicator"
+              "minecraft:leather"
             ]
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_bronzium_ingot": {
+    "has_leatherworker_station": {
       "conditions": {
         "items": [
           {
             "items": [
-              "enhanced_playthrough:bronzium_ingot"
+              "enhanced_playthrough:leatherworker_station"
             ]
           }
         ]
@@ -27,21 +27,21 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "enhanced_playthrough:alchemical_duplicator"
+        "recipe": "enhanced_playthrough:leatherworker_station"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_alchemical_duplicator",
-      "has_bronzium_ingot",
+      "has_leather",
+      "has_leatherworker_station",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "enhanced_playthrough:alchemical_duplicator"
+      "enhanced_playthrough:leatherworker_station"
     ]
   },
   "sends_telemetry_event": false

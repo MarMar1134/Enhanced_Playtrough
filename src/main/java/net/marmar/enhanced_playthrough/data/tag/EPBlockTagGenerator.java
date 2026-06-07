@@ -294,7 +294,10 @@ public class EPBlockTagGenerator extends BlockTagsProvider {
                 EPBlocks.LEMON_LOG.get(),
                 EPBlocks.STRIPPED_LEMON_LOG.get(),
                 EPBlocks.LEMON_WOOD.get(),
-                EPBlocks.STRIPPED_LEMON_WOOD.get()
+                EPBlocks.STRIPPED_LEMON_WOOD.get(),
+
+                //Block entities
+                EPBlocks.LEATHERWORKER_STATION.get()
         );
 
         this.tag(EPTags.Blocks.BASIC_FURNACE).add(

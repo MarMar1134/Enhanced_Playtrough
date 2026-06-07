@@ -13,6 +13,8 @@ import net.marmar.enhanced_playthrough.block.custom.grinder.MechanicalGrinderBlo
 import net.marmar.enhanced_playthrough.block.custom.grinder.PrimalGrinderBlock;
 import net.marmar.enhanced_playthrough.block.custom.grinder.entity.MechanicalGrinderBlockEntity;
 import net.marmar.enhanced_playthrough.block.custom.grinder.entity.PrimalGrinderBlockEntity;
+import net.marmar.enhanced_playthrough.block.custom.leatherworker.LeatherworkerStationBlock;
+import net.marmar.enhanced_playthrough.block.custom.leatherworker.LeatherworkerStationBlockEntity;
 import net.minecraft.resources.ResourceLocation;
 import snownee.jade.api.IWailaClientRegistration;
 import snownee.jade.api.IWailaCommonRegistration;
@@ -27,6 +29,7 @@ public class EnhancedPlaythroughJadePlugin implements IWailaPlugin {
     public static final ResourceLocation GEM_POLISHER = new ResourceLocation(EnhancedPlaythrough.MOD_ID,"gem_polisher");
     public static final ResourceLocation GRINDER = new ResourceLocation(EnhancedPlaythrough.MOD_ID,"grinder");
     public static final ResourceLocation ALCHEMICAL_DUPLICATOR = new ResourceLocation(EnhancedPlaythrough.MOD_ID, "alchemical_duplicator");
+    public static final ResourceLocation LEATHERWORKER_STATION =new ResourceLocation(EnhancedPlaythrough.MOD_ID, "leatherworker_station");
 
     @Override
     public void register(IWailaCommonRegistration registration) {
@@ -36,6 +39,7 @@ public class EnhancedPlaythroughJadePlugin implements IWailaPlugin {
         registration.registerBlockDataProvider(GrinderComponentProvider.INSTANCE, PrimalGrinderBlockEntity.class);
         registration.registerBlockDataProvider(MechanicalGrinderComponentProvider.INSTANCE, MechanicalGrinderBlockEntity.class);
         registration.registerBlockDataProvider(AlchemicalDuplicatorComponentProvider.INSTANCE, AlchemicalDuplicatorBlockEntity.class);
+        registration.registerBlockDataProvider(LeatherworkerStationComponentProvider.INSTANCE, LeatherworkerStationBlockEntity.class);
     }
 
     @Override
@@ -46,5 +50,6 @@ public class EnhancedPlaythroughJadePlugin implements IWailaPlugin {
         registration.registerBlockComponent(GrinderComponentProvider.INSTANCE, PrimalGrinderBlock.class);
         registration.registerBlockComponent(MechanicalGrinderComponentProvider.INSTANCE, MechanicalGrinderBlock.class);
         registration.registerBlockComponent(AlchemicalDuplicatorComponentProvider.INSTANCE, AlchemicalDuplicatorBlock.class);
+        registration.registerBlockComponent(LeatherworkerStationComponentProvider.INSTANCE, LeatherworkerStationBlock.class);
     }
 }

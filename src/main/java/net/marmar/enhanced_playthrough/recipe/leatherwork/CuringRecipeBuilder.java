@@ -1,6 +1,7 @@
 package net.marmar.enhanced_playthrough.recipe.leatherwork;
 
 import com.google.gson.JsonObject;
+import net.marmar.enhanced_playthrough.item.EPItems;
 import net.marmar.enhanced_playthrough.recipe.EPRecipes;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.advancements.AdvancementRewards;
@@ -20,27 +21,29 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.function.Consumer;
 
-public class LeatherworkRecipeBuilder implements RecipeBuilder {
-    private final Ingredient skin;
+public class CuringRecipeBuilder implements RecipeBuilder {
+    private final Ingredient catalyst;
+    private final Ingredient input;
     private final Fluid fluid;
     private final int fluidAmount;
-    private final Item leather;
-    private final int leatherAmount;
+    private final Item output;
+    private final int outputAmount;
     private String group;
     private final Advancement.Builder advancement = Advancement.Builder.recipeAdvancement();
     private final RecipeSerializer<?> serializer;
 
-    protected LeatherworkRecipeBuilder(Ingredient skin, Fluid fluid, int fluidAmount, ItemLike leather, int leatherAmount, RecipeSerializer<?> serializer) {
-        this.skin = skin;
-        this.fluid = fluid;
-        this.fluidAmount = fluidAmount;
-        this.leather = leather.asItem();
-        this.leatherAmount = leatherAmount;
-        this.serializer = serializer;
+    protected CuringRecipeBuilder(Ingredient pCatalyst, Ingredient pInput, Fluid pFluid, int pFluidAmount, ItemLike pOutput, int pOutputAmount, RecipeSerializer<?> pSerializer) {
+        this.catalyst = pCatalyst;
+        this.input = pInput;
+        this.fluid = pFluid;
+        this.fluidAmount = pFluidAmount;
+        this.output = pOutput.asItem();
+        this.outputAmount = pOutputAmount;
+        this.serializer = pSerializer;
     }
 
-    public static LeatherworkRecipeBuilder leatherworking(Ingredient pSkin, Fluid pFluid, int pFluidAmount, ItemLike pLeather, int pAmount){
-        return new LeatherworkRecipeBuilder(pSkin, pFluid, pFluidAmount, pLeather, pAmount, EPRecipes.LEATHERWORKING_SERIALIZER.get());
+    public static CuringRecipeBuilder leatherworking(Ingredient pSkin, Fluid pFluid, int pFluidAmount, ItemLike pLeather, int pAmount){
+        return new CuringRecipeBuilder(Ingredient.of(EPItems.LIME.get()), pSkin, pFluid, pFluidAmount, pLeather, pAmount, EPRecipes.CURING_SERIALIZER.get());
     }
 
     @Override
@@ -57,7 +60,7 @@ public class LeatherworkRecipeBuilder implements RecipeBuilder {
 
     @Override
     public Item getResult() {
-        return this.leather;
+        return this.output;
     }
 
     private void ensureValid(ResourceLocation pId) {
@@ -73,16 +76,22 @@ public class LeatherworkRecipeBuilder implements RecipeBuilder {
         this.advancement.parent(ROOT_RECIPE_ADVANCEMENT).addCriterion("has_the_recipe", RecipeUnlockedTrigger.unlocked(pRecipeId))
                 .rewards(AdvancementRewards.Builder.recipe(pRecipeId)).requirements(RequirementsStrategy.OR);
 
-        consumer.accept(new LeatherworkRecipeBuilder.Result(pRecipeId, this.skin, this.fluid, this.fluidAmount, this.leather, this.leatherAmount,
+        consumer.accept(new CuringRecipeBuilder.Result(pRecipeId, this.catalyst, this.input, this.fluid, this.fluidAmount, this.output, this.outputAmount,
                 this.advancement, pRecipeId.withPrefix("recipes/"), this.serializer));
     }
 
-    private record Result(ResourceLocation recipeId, Ingredient skin, Fluid fluid, int waterAmount, Item leather,
+    private record Result(ResourceLocation recipeId, Ingredient catalyst, Ingredient skin, Fluid fluid, int waterAmount, Item leather,
                           int leatherAmount, Advancement.Builder advancement, ResourceLocation advancementId,
                           RecipeSerializer<?> serializer) implements FinishedRecipe {
 
         @Override
         public void serializeRecipeData(JsonObject pJson) {
+            //Catalyst
+            JsonObject catalyst = new JsonObject();
+            catalyst.add("item", this.catalyst.toJson());
+
+            pJson.add("catalyst", catalyst);
+
             //Input
             JsonObject input = new JsonObject();
             input.add("item", this.skin.toJson());
@@ -93,10 +102,6 @@ public class LeatherworkRecipeBuilder implements RecipeBuilder {
                 input.addProperty("fluid_amount", this.waterAmount);
 
             pJson.add("input", input);
-
-            //Fluid
-//            ResourceLocation fluid = ForgeRegistries.FLUIDS.getKey(this.fluid);
-//            pJson.addProperty("fluid", fluid.toString());
 
             //Output
             JsonObject output = new JsonObject();

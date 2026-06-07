@@ -92,14 +92,12 @@ public class LeatherworkerStationScreen extends AbstractContainerScreen<Leatherw
         FluidTank tank = this.menu.getBlockEntity().getWaterTank();
 
         if (tank == null){
-            EnhancedPlaythrough.LOGGER.info("Tank not found");
             return;
         }
 
         FluidStack fluidStack = tank.getFluid();
 
         if (fluidStack.isEmpty()) {
-            EnhancedPlaythrough.LOGGER.info("Tank is empty, amount:{}", tank.getFluidAmount());
             return;
         }
 
@@ -107,7 +105,6 @@ public class LeatherworkerStationScreen extends AbstractContainerScreen<Leatherw
         ResourceLocation stillTexture = ext.getStillTexture(fluidStack);
 
         if (stillTexture == null) {
-            EnhancedPlaythrough.LOGGER.info("Texture doesn't exist");
             return;
         }
 

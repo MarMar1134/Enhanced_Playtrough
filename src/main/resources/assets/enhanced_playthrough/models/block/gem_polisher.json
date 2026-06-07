@@ -191,28 +191,56 @@
 			}
 		}
 	],
+	"display": {
+		"thirdperson_righthand": {
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"thirdperson_lefthand": {
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"firstperson_righthand": {
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"firstperson_lefthand": {
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"ground": {
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"gui": {
+			"rotation": [15, 50, 0],
+			"scale": [0.6, 0.6, 0.6]
+		},
+		"head": {
+			"scale": [1, 0.9, 1]
+		}
+	},
 	"groups": [
 		{
 			"name": "centro",
 			"origin": [-1, 10, 7],
+			"scope": 0,
 			"color": 0,
 			"children": [0, 1]
 		},
 		{
 			"name": "bordes_superiores",
 			"origin": [7, 10, 7],
+			"scope": 0,
 			"color": 0,
 			"children": [2, 3, 4, 5]
 		},
 		{
 			"name": "pilares",
 			"origin": [12, 0, 3],
+			"scope": 0,
 			"color": 0,
 			"children": [6, 7, 8, 9]
 		},
 		{
 			"name": "bordes_inferiores",
 			"origin": [8, 8, 8],
+			"scope": 0,
 			"color": 0,
 			"children": [10, 11, 12, 13]
 		}

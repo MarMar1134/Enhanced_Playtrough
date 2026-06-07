@@ -38,21 +38,11 @@ public class LeatherworkerStationMenu extends AbstractContainerMenu {
     }
 
     public int getScaledProgress() {
-        int progress = this.data.get(1);
-        int maxProgress = this.data.get(2);
+        int progress = this.data.get(0);
+        int maxProgress = this.data.get(1);
         int arrowSize = 34;
 
         return (maxProgress != 0 && progress != 0) ? progress * arrowSize / maxProgress : 0;
-    }
-
-    public int getRemainingWater(){
-        return data.get(0);
-    }
-
-    public int getScaledFluidLevel(int barHeight) {
-        int amount = this.data.get(0);
-        int capacity = 1000;
-        return amount != 0 ? amount * barHeight / capacity : 0;
     }
 
     public LeatherworkerStationBlockEntity getBlockEntity() {

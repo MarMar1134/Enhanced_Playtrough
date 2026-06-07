@@ -1,6 +1,3 @@
 {
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "enhanced_playthrough:item/gem_polisher"
-  }
+  "parent": "enhanced_playthrough:block/gem_polisher"
 }

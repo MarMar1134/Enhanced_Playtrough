@@ -5,7 +5,7 @@ import net.marmar.enhanced_playthrough.block.EPBlocks;
 import net.marmar.enhanced_playthrough.data.tag.EPTags;
 import net.marmar.enhanced_playthrough.item.EPItems;
 import net.marmar.enhanced_playthrough.recipe.EPRecipes;
-import net.marmar.enhanced_playthrough.recipe.leatherwork.LeatherworkRecipeBuilder;
+import net.marmar.enhanced_playthrough.recipe.leatherwork.CuringRecipeBuilder;
 import net.marmar.enhanced_playthrough.recipe.grind.AbstractGrindRecipe;
 import net.marmar.enhanced_playthrough.recipe.GenericRecipeBuilder;
 import net.marmar.enhanced_playthrough.recipe.EPSmithingRecipesBuilder;
@@ -771,7 +771,7 @@ public class GeneralRecipeSubProvider extends RecipeProvider {
 
     //Leatherworking
     protected static void leatherworking(Consumer<FinishedRecipe> pConsumer, ItemLike pSkin, Fluid fluid, int pWaterAmount, ItemLike pLeatherType, int pLeatherAmount){
-        LeatherworkRecipeBuilder.leatherworking(Ingredient.of(pSkin), fluid, pWaterAmount, pLeatherType, pLeatherAmount)
+        CuringRecipeBuilder.leatherworking(Ingredient.of(pSkin), fluid, pWaterAmount, pLeatherType, pLeatherAmount)
                 .unlockedBy(getHasName(pSkin),has(pSkin))
                 .save(pConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(pLeatherType) + "_from_leatherworking_" + getItemName(pSkin));
     }

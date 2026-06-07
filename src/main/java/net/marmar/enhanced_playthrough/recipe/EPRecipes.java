@@ -11,7 +11,7 @@ import net.marmar.enhanced_playthrough.recipe.epsmelt.MasonrySmeltingRecipe;
 import net.marmar.enhanced_playthrough.recipe.epsmelt.SoulBasicSmeltingRecipe;
 import net.marmar.enhanced_playthrough.recipe.grind.MechanicalGrindRecipe;
 import net.marmar.enhanced_playthrough.recipe.grind.PrimalGrindRecipe;
-import net.marmar.enhanced_playthrough.recipe.leatherwork.LeatherworkRecipe;
+import net.marmar.enhanced_playthrough.recipe.leatherwork.CuringRecipe;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -82,10 +82,10 @@ public class EPRecipes {
                 RECIPE_TYPE.register("alchemical_duplicating", () -> AlchemicalDuplicationRecipe.Type.INSTANCE);
 
         //Leatherworking
-        public static final RegistryObject<RecipeSerializer<LeatherworkRecipe>> LEATHERWORKING_SERIALIZER =
-                    RECIPE_SERIALIZER.register("leatherworking", ()-> LeatherworkRecipe.Serializer.INSTANCE);
-        public static final RegistryObject<RecipeType<LeatherworkRecipe>> LEATHERWORKING_TYPE =
-                RECIPE_TYPE.register("leatherworking", ()-> LeatherworkRecipe.Type.INSTANCE);
+        public static final RegistryObject<RecipeSerializer<CuringRecipe>> CURING_SERIALIZER =
+                    RECIPE_SERIALIZER.register("curing", ()-> CuringRecipe.Serializer.INSTANCE);
+        public static final RegistryObject<RecipeType<CuringRecipe>> CURING_TYPE =
+                RECIPE_TYPE.register("curing", ()-> CuringRecipe.Type.INSTANCE);
 
         //Shaped and shapeless
         public static final RegistryObject<RecipeSerializer<EPShapedRecipe>> EP_SHAPED_CRAFTING_SERIALIZER =

@@ -1,15 +1,14 @@
 package net.marmar.enhanced_playthrough.block.custom.leatherworker;
 
 import net.marmar.enhanced_playthrough.block.EPBlockEntities;
-import net.marmar.enhanced_playthrough.block.custom.alchemicalduplicator.AlchemicalDuplicatorBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.MenuProvider;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.Block;
@@ -20,22 +19,33 @@ import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.network.NetworkHooks;
 import org.jetbrains.annotations.Nullable;
 
 import static net.minecraft.world.level.block.state.properties.BlockStateProperties.FACING;
 
 public class LeatherworkerStationBlock extends BaseEntityBlock implements EntityBlock {
+    public static final VoxelShape SHAPE = Block.box(1,0,1, 15, 14, 15);
+    public static final BooleanProperty WITH_WATER;
+
     public LeatherworkerStationBlock(Properties pProperties) {
         super(pProperties);
-        registerDefaultState(defaultBlockState().setValue(FACING, Direction.SOUTH));
+        registerDefaultState(defaultBlockState().setValue(FACING, Direction.SOUTH).setValue(WITH_WATER, false));
     }
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
         super.createBlockStateDefinition(pBuilder);
-        pBuilder.add(FACING);
+        pBuilder.add(FACING, WITH_WATER);
+    }
+
+    @Override
+    public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
+        return SHAPE;
     }
 
     @Override
@@ -87,5 +97,9 @@ public class LeatherworkerStationBlock extends BaseEntityBlock implements Entity
 
         return createTickerHelper(pBlockEntityType, EPBlockEntities.LEATHERWORKER_STATION_BLOCK_ENTITY.get(),
                 (pLevel1, pPos, pState1, pBlockEntity) -> pBlockEntity.tick(pLevel1, pPos, pState1));
+    }
+
+    static {
+        WITH_WATER = BooleanProperty.create("with_water");
     }
 }

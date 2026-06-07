@@ -37,7 +37,9 @@ public class EPTabs {
                         output.accept(EPBlocks.PRIMAL_GRINDER.get());
                         output.accept(EPBlocks.MECHANICAL_GRINDER.get());
 
-                        output.accept(EPBlocks.ALCHEMICAL_DUPLICATOR.get());
+                        output.accept(EPBlocks.LEATHERWORKER_STATION.get());
+
+                        //output.accept(EPBlocks.ALCHEMICAL_DUPLICATOR.get());
 
                         output.accept(EPBlocks.GROWTH_DETECTOR.get());
 

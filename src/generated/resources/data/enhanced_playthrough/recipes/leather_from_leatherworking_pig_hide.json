@@ -1,5 +1,10 @@
 {
-  "type": "enhanced_playthrough:leatherworking",
+  "type": "enhanced_playthrough:curing",
+  "catalyst": {
+    "item": {
+      "item": "enhanced_playthrough:lime"
+    }
+  },
   "input": {
     "fluid": "minecraft:water",
     "fluid_amount": 100,

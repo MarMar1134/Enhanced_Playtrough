@@ -29,7 +29,7 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
         super(pOutput);
     }
 
-    public static void addCraftingRecipes(Consumer<FinishedRecipe> consumer){
+    public static void addCraftingRecipes(Consumer<FinishedRecipe> consumer) {
         //Foods
         ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, EPItems.EMPTY_MATE.get())
                 .pattern("#")
@@ -283,123 +283,123 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .save(consumer);
 
         //Block recipes
-            //Wood
-                //walnut wood
-                woodRecipes(EPBlocks.WALNUT_LOG.get(), EPBlocks.STRIPPED_WALNUT_LOG.get(), EPBlocks.WALNUT_WOOD.get(), EPBlocks.STRIPPED_WALNUT_WOOD.get(),
-                        EPBlocks.WALNUT_PLANKS.get(), EPBlocks.WALNUT_DOOR.get(), EPBlocks.WALNUT_TRAPDOOR.get(),
-                        EPBlocks.WALNUT_STAIRS.get(), EPBlocks.WALNUT_SLAB.get(), EPBlocks.WALNUT_FENCE.get(), EPBlocks.WALNUT_FENCEGATE.get(),
-                        EPItems.WALNUT_SIGN.get(), EPItems.WALNUT_HANGING_SIGN.get(), EPItems.WALNUT_BOAT.get(), EPItems.WALNUT_CHEST_BOAT.get(),
-                        EPBlocks.WALNUT_BUTTON.get(), EPBlocks.WALNUT_PRESSURE_PLATE.get(), EPTags.Items.WALNUT_LOGS, consumer);
+        //Wood
+        //walnut wood
+        woodRecipes(EPBlocks.WALNUT_LOG.get(), EPBlocks.STRIPPED_WALNUT_LOG.get(), EPBlocks.WALNUT_WOOD.get(), EPBlocks.STRIPPED_WALNUT_WOOD.get(),
+                EPBlocks.WALNUT_PLANKS.get(), EPBlocks.WALNUT_DOOR.get(), EPBlocks.WALNUT_TRAPDOOR.get(),
+                EPBlocks.WALNUT_STAIRS.get(), EPBlocks.WALNUT_SLAB.get(), EPBlocks.WALNUT_FENCE.get(), EPBlocks.WALNUT_FENCEGATE.get(),
+                EPItems.WALNUT_SIGN.get(), EPItems.WALNUT_HANGING_SIGN.get(), EPItems.WALNUT_BOAT.get(), EPItems.WALNUT_CHEST_BOAT.get(),
+                EPBlocks.WALNUT_BUTTON.get(), EPBlocks.WALNUT_PRESSURE_PLATE.get(), EPTags.Items.WALNUT_LOGS, consumer);
 
-                //Apple wood
-                woodRecipes(EPBlocks.APPLE_LOG.get(), EPBlocks.STRIPPED_APPLE_LOG.get(), EPBlocks.APPLE_WOOD.get(), EPBlocks.STRIPPED_APPLE_WOOD.get(),
-                        EPBlocks.APPLE_PLANKS.get(), EPBlocks.APPLE_DOOR.get(), EPBlocks.APPLE_TRAPDOOR.get(),
-                        EPBlocks.APPLE_STAIRS.get(), EPBlocks.APPLE_SLAB.get(), EPBlocks.APPLE_FENCE.get(), EPBlocks.APPLE_FENCEGATE.get(),
-                        EPItems.APPLE_SIGN.get(), EPItems.APPLE_HANGING_SIGN.get(), EPItems.APPLE_BOAT.get(), EPItems.APPLE_CHEST_BOAT.get(),
-                        EPBlocks.APPLE_BUTTON.get(), EPBlocks.APPLE_PRESSURE_PLATE.get(), EPTags.Items.APPLE_LOGS, consumer);
+        //Apple wood
+        woodRecipes(EPBlocks.APPLE_LOG.get(), EPBlocks.STRIPPED_APPLE_LOG.get(), EPBlocks.APPLE_WOOD.get(), EPBlocks.STRIPPED_APPLE_WOOD.get(),
+                EPBlocks.APPLE_PLANKS.get(), EPBlocks.APPLE_DOOR.get(), EPBlocks.APPLE_TRAPDOOR.get(),
+                EPBlocks.APPLE_STAIRS.get(), EPBlocks.APPLE_SLAB.get(), EPBlocks.APPLE_FENCE.get(), EPBlocks.APPLE_FENCEGATE.get(),
+                EPItems.APPLE_SIGN.get(), EPItems.APPLE_HANGING_SIGN.get(), EPItems.APPLE_BOAT.get(), EPItems.APPLE_CHEST_BOAT.get(),
+                EPBlocks.APPLE_BUTTON.get(), EPBlocks.APPLE_PRESSURE_PLATE.get(), EPTags.Items.APPLE_LOGS, consumer);
 
-                //Orange wood
-                woodRecipes(EPBlocks.ORANGE_LOG.get(), EPBlocks.STRIPPED_ORANGE_LOG.get(), EPBlocks.ORANGE_WOOD.get(), EPBlocks.STRIPPED_ORANGE_WOOD.get(),
-                        EPBlocks.ORANGE_PLANKS.get(), EPBlocks.ORANGE_DOOR.get(), EPBlocks.ORANGE_TRAPDOOR.get(),
-                        EPBlocks.ORANGE_STAIRS.get(), EPBlocks.ORANGE_SLAB.get(), EPBlocks.ORANGE_FENCE.get(), EPBlocks.ORANGE_FENCEGATE.get(),
-                        EPItems.ORANGE_SIGN.get(), EPItems.ORANGE_HANGING_SIGN.get(), EPItems.ORANGE_BOAT.get(), EPItems.ORANGE_CHEST_BOAT.get(),
-                        EPBlocks.ORANGE_BUTTON.get(), EPBlocks.ORANGE_PRESSURE_PLATE.get(), EPTags.Items.ORANGE_LOGS, consumer);
+        //Orange wood
+        woodRecipes(EPBlocks.ORANGE_LOG.get(), EPBlocks.STRIPPED_ORANGE_LOG.get(), EPBlocks.ORANGE_WOOD.get(), EPBlocks.STRIPPED_ORANGE_WOOD.get(),
+                EPBlocks.ORANGE_PLANKS.get(), EPBlocks.ORANGE_DOOR.get(), EPBlocks.ORANGE_TRAPDOOR.get(),
+                EPBlocks.ORANGE_STAIRS.get(), EPBlocks.ORANGE_SLAB.get(), EPBlocks.ORANGE_FENCE.get(), EPBlocks.ORANGE_FENCEGATE.get(),
+                EPItems.ORANGE_SIGN.get(), EPItems.ORANGE_HANGING_SIGN.get(), EPItems.ORANGE_BOAT.get(), EPItems.ORANGE_CHEST_BOAT.get(),
+                EPBlocks.ORANGE_BUTTON.get(), EPBlocks.ORANGE_PRESSURE_PLATE.get(), EPTags.Items.ORANGE_LOGS, consumer);
 
-                //Lemon wood
-                woodRecipes(EPBlocks.LEMON_LOG.get(), EPBlocks.STRIPPED_LEMON_LOG.get(), EPBlocks.LEMON_WOOD.get(), EPBlocks.STRIPPED_LEMON_WOOD.get(),
-                        EPBlocks.LEMON_PLANKS.get(), EPBlocks.LEMON_DOOR.get(), EPBlocks.LEMON_TRAPDOOR.get(),
-                        EPBlocks.LEMON_STAIRS.get(), EPBlocks.LEMON_SLAB.get(), EPBlocks.LEMON_FENCE.get(), EPBlocks.LEMON_FENCEGATE.get(),
-                        EPItems.LEMON_SIGN.get(), EPItems.LEMON_HANGING_SIGN.get(), EPItems.LEMON_BOAT.get(), EPItems.LEMON_CHEST_BOAT.get(),
-                        EPBlocks.LEMON_BUTTON.get(), EPBlocks.LEMON_PRESSURE_PLATE.get(), EPTags.Items.LEMON_LOGS, consumer);
+        //Lemon wood
+        woodRecipes(EPBlocks.LEMON_LOG.get(), EPBlocks.STRIPPED_LEMON_LOG.get(), EPBlocks.LEMON_WOOD.get(), EPBlocks.STRIPPED_LEMON_WOOD.get(),
+                EPBlocks.LEMON_PLANKS.get(), EPBlocks.LEMON_DOOR.get(), EPBlocks.LEMON_TRAPDOOR.get(),
+                EPBlocks.LEMON_STAIRS.get(), EPBlocks.LEMON_SLAB.get(), EPBlocks.LEMON_FENCE.get(), EPBlocks.LEMON_FENCEGATE.get(),
+                EPItems.LEMON_SIGN.get(), EPItems.LEMON_HANGING_SIGN.get(), EPItems.LEMON_BOAT.get(), EPItems.LEMON_CHEST_BOAT.get(),
+                EPBlocks.LEMON_BUTTON.get(), EPBlocks.LEMON_PRESSURE_PLATE.get(), EPTags.Items.LEMON_LOGS, consumer);
 
-            //Polished stone
-            blockWithPolishedVersionRecipes(Blocks.STONE, EPBlocks.POLISHED_STONE.get(), EPBlocks.POLISHED_STONE_WALL.get(), EPBlocks.POLISHED_STONE_STAIRS.get(),
-                    EPBlocks.POLISHED_STONE_SLAB.get(), consumer);
+        //Polished stone
+        blockWithPolishedVersionRecipes(Blocks.STONE, EPBlocks.POLISHED_STONE.get(), EPBlocks.POLISHED_STONE_WALL.get(), EPBlocks.POLISHED_STONE_STAIRS.get(),
+                EPBlocks.POLISHED_STONE_SLAB.get(), consumer);
 
-            //Cobbled limestone
-            ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EPBlocks.COBBLED_LIMESTONE.get())
-                    .pattern("LL")
-                    .pattern("LL")
-                    .define('L', EPItems.LIMESTONE_COBBLE.get())
-                    .unlockedBy(getHasName(EPItems.LIMESTONE_COBBLE.get()), has(EPItems.LIMESTONE_COBBLE.get()))
-                    .unlockedBy(getHasName(EPBlocks.COBBLED_LIMESTONE.get()), has(EPBlocks.COBBLED_LIMESTONE.get()))
-                    .save(consumer);
+        //Cobbled limestone
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EPBlocks.COBBLED_LIMESTONE.get())
+                .pattern("LL")
+                .pattern("LL")
+                .define('L', EPItems.LIMESTONE_COBBLE.get())
+                .unlockedBy(getHasName(EPItems.LIMESTONE_COBBLE.get()), has(EPItems.LIMESTONE_COBBLE.get()))
+                .unlockedBy(getHasName(EPBlocks.COBBLED_LIMESTONE.get()), has(EPBlocks.COBBLED_LIMESTONE.get()))
+                .save(consumer);
 
-            blockWithoutPolishedVersionRecipes(EPBlocks.COBBLED_LIMESTONE.get(), EPBlocks.COBBLED_LIMESTONE_WALL.get(), EPBlocks.COBBLED_LIMESTONE_STAIRS.get(),
-                    EPBlocks.COBBLED_LIMESTONE_SLAB.get(), consumer);
+        blockWithoutPolishedVersionRecipes(EPBlocks.COBBLED_LIMESTONE.get(), EPBlocks.COBBLED_LIMESTONE_WALL.get(), EPBlocks.COBBLED_LIMESTONE_STAIRS.get(),
+                EPBlocks.COBBLED_LIMESTONE_SLAB.get(), consumer);
 
-            //Limestone
-            blockWithoutPolishedVersionRecipes(EPBlocks.LIMESTONE.get(), EPBlocks.LIMESTONE_WALL.get(), EPBlocks.LIMESTONE_STAIRS.get(),
-                    EPBlocks.LIMESTONE_SLAB.get(), consumer);
+        //Limestone
+        blockWithoutPolishedVersionRecipes(EPBlocks.LIMESTONE.get(), EPBlocks.LIMESTONE_WALL.get(), EPBlocks.LIMESTONE_STAIRS.get(),
+                EPBlocks.LIMESTONE_SLAB.get(), consumer);
 
-            //Polished limestone
-            blockWithPolishedVersionRecipes(EPBlocks.LIMESTONE.get(), EPBlocks.POLISHED_LIMESTONE.get(), EPBlocks.POLISHED_LIMESTONE_WALL.get(),
-                    EPBlocks.POLISHED_LIMESTONE_STAIRS.get(), EPBlocks.POLISHED_LIMESTONE_SLAB.get(), consumer);
+        //Polished limestone
+        blockWithPolishedVersionRecipes(EPBlocks.LIMESTONE.get(), EPBlocks.POLISHED_LIMESTONE.get(), EPBlocks.POLISHED_LIMESTONE_WALL.get(),
+                EPBlocks.POLISHED_LIMESTONE_STAIRS.get(), EPBlocks.POLISHED_LIMESTONE_SLAB.get(), consumer);
 
-            //Limestone bricks
-            blockWithPolishedVersionRecipes(EPBlocks.POLISHED_LIMESTONE.get(), EPBlocks.LIMESTONE_BRICKS.get(), EPBlocks.LIMESTONE_BRICK_WALL.get(),
-                    EPBlocks.LIMESTONE_BRICK_STAIRS.get(), EPBlocks.LIMESTONE_BRICK_SLAB.get(), consumer);
+        //Limestone bricks
+        blockWithPolishedVersionRecipes(EPBlocks.POLISHED_LIMESTONE.get(), EPBlocks.LIMESTONE_BRICKS.get(), EPBlocks.LIMESTONE_BRICK_WALL.get(),
+                EPBlocks.LIMESTONE_BRICK_STAIRS.get(), EPBlocks.LIMESTONE_BRICK_SLAB.get(), consumer);
 
-            //Cobbled soulstone
-            ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EPBlocks.COBBLED_SOULSTONE.get())
-                    .pattern("SS")
-                    .pattern("SS")
-                    .define('S', EPItems.SOULSTONE_COBBLE.get())
-                    .unlockedBy(getHasName(EPItems.SOULSTONE_COBBLE.get()), has(EPItems.SOULSTONE_COBBLE.get()))
-                    .unlockedBy(getHasName(EPBlocks.COBBLED_SOULSTONE.get()), has(EPBlocks.COBBLED_SOULSTONE.get()))
-                    .save(consumer);
+        //Cobbled soulstone
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EPBlocks.COBBLED_SOULSTONE.get())
+                .pattern("SS")
+                .pattern("SS")
+                .define('S', EPItems.SOULSTONE_COBBLE.get())
+                .unlockedBy(getHasName(EPItems.SOULSTONE_COBBLE.get()), has(EPItems.SOULSTONE_COBBLE.get()))
+                .unlockedBy(getHasName(EPBlocks.COBBLED_SOULSTONE.get()), has(EPBlocks.COBBLED_SOULSTONE.get()))
+                .save(consumer);
 
-            blockWithoutPolishedVersionRecipes(EPBlocks.COBBLED_SOULSTONE.get(), EPBlocks.COBBLED_SOULSTONE_WALL.get(), EPBlocks.COBBLED_SOULSTONE_STAIRS.get(),
-                    EPBlocks.COBBLED_SOULSTONE_SLAB.get(), consumer);
+        blockWithoutPolishedVersionRecipes(EPBlocks.COBBLED_SOULSTONE.get(), EPBlocks.COBBLED_SOULSTONE_WALL.get(), EPBlocks.COBBLED_SOULSTONE_STAIRS.get(),
+                EPBlocks.COBBLED_SOULSTONE_SLAB.get(), consumer);
 
-            //Soulstone
-            blockWithoutPolishedVersionRecipes(EPBlocks.SOULSTONE.get(), EPBlocks.SOULSTONE_WALL.get(), EPBlocks.SOULSTONE_STAIRS.get(),
-                    EPBlocks.SOULSTONE_SLAB.get(), consumer);
+        //Soulstone
+        blockWithoutPolishedVersionRecipes(EPBlocks.SOULSTONE.get(), EPBlocks.SOULSTONE_WALL.get(), EPBlocks.SOULSTONE_STAIRS.get(),
+                EPBlocks.SOULSTONE_SLAB.get(), consumer);
 
-            //Soulstone bricks
-            blockWithPolishedVersionRecipes(EPBlocks.SOULSTONE.get(), EPBlocks.SOULSTONE_BRICKS.get(), EPBlocks.SOULSTONE_BRICK_WALL.get(),
-                    EPBlocks.SOULSTONE_BRICK_STAIRS.get(), EPBlocks.SOULSTONE_BRICK_SLAB.get(), consumer);
+        //Soulstone bricks
+        blockWithPolishedVersionRecipes(EPBlocks.SOULSTONE.get(), EPBlocks.SOULSTONE_BRICKS.get(), EPBlocks.SOULSTONE_BRICK_WALL.get(),
+                EPBlocks.SOULSTONE_BRICK_STAIRS.get(), EPBlocks.SOULSTONE_BRICK_SLAB.get(), consumer);
 
-            //Firebricks
-            ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EPBlocks.FIREBRICKS.get())
-                    .pattern("FF")
-                    .pattern("FF")
-                    .define('F', EPItems.FIREBRICK.get())
-                    .unlockedBy(getHasName(EPItems.FIREBRICK.get()), has(EPItems.FIREBRICK.get()))
-                    .unlockedBy(getHasName(EPBlocks.FIREBRICKS.get()), has(EPBlocks.FIREBRICKS.get()))
-                    .save(consumer);
+        //Firebricks
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EPBlocks.FIREBRICKS.get())
+                .pattern("FF")
+                .pattern("FF")
+                .define('F', EPItems.FIREBRICK.get())
+                .unlockedBy(getHasName(EPItems.FIREBRICK.get()), has(EPItems.FIREBRICK.get()))
+                .unlockedBy(getHasName(EPBlocks.FIREBRICKS.get()), has(EPBlocks.FIREBRICKS.get()))
+                .save(consumer);
 
-            blockWithoutPolishedVersionRecipes(EPBlocks.FIREBRICKS.get(), EPBlocks.FIREBRICK_WALL.get(), EPBlocks.FIREBRICK_STAIRS.get(),
-                    EPBlocks.FIREBRICK_SLAB.get(), consumer);
+        blockWithoutPolishedVersionRecipes(EPBlocks.FIREBRICKS.get(), EPBlocks.FIREBRICK_WALL.get(), EPBlocks.FIREBRICK_STAIRS.get(),
+                EPBlocks.FIREBRICK_SLAB.get(), consumer);
 
-            //Calibrated quartz
-            ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EPBlocks.CALIBRATED_QUARTZ_BLOCK.get())
-                    .pattern("CC")
-                    .pattern("CC")
-                    .define('C', EPItems.CALIBRATED_QUARTZ.get())
-                    .unlockedBy(getHasName(EPBlocks.CALIBRATED_QUARTZ_BLOCK.get()), has(EPBlocks.CALIBRATED_QUARTZ_BLOCK.get()))
-                    .unlockedBy(getHasName(EPItems.CALIBRATED_QUARTZ.get()), has(EPItems.CALIBRATED_QUARTZ.get()))
-                    .save(consumer);
-            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EPItems.CALIBRATED_QUARTZ.get(), 4)
-                    .requires(EPBlocks.CALIBRATED_QUARTZ_BLOCK.get())
-                    .unlockedBy(getHasName(EPItems.CALIBRATED_QUARTZ.get()), has(EPItems.CALIBRATED_QUARTZ.get()))
-                    .save(consumer);
-            ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EPBlocks.CALIBRATED_QUARTZ_PILLAR.get())
-                    .pattern("C")
-                    .pattern("C")
-                    .define('C', EPBlocks.CALIBRATED_QUARTZ_BLOCK.get())
-                    .unlockedBy(getHasName(EPBlocks.CALIBRATED_QUARTZ_BLOCK.get()), has(EPBlocks.CALIBRATED_QUARTZ_BLOCK.get()))
-                    .unlockedBy(getHasName(EPBlocks.CALIBRATED_QUARTZ_PILLAR.get()), has(EPBlocks.CALIBRATED_QUARTZ_PILLAR.get()))
-                    .save(consumer);
-            ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EPBlocks.CALIBRATED_QUARTZ_BRICKS.get())
-                    .pattern("CC")
-                    .pattern("CC")
-                    .define('C', EPBlocks.CALIBRATED_QUARTZ_BLOCK.get())
-                    .unlockedBy(getHasName(EPBlocks.CALIBRATED_QUARTZ_BLOCK.get()), has(EPBlocks.CALIBRATED_QUARTZ_BLOCK.get()))
-                    .unlockedBy(getHasName(EPBlocks.CALIBRATED_QUARTZ_BRICKS.get()), has(EPBlocks.CALIBRATED_QUARTZ_BRICKS.get()))
-                    .save(consumer);
+        //Calibrated quartz
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EPBlocks.CALIBRATED_QUARTZ_BLOCK.get())
+                .pattern("CC")
+                .pattern("CC")
+                .define('C', EPItems.CALIBRATED_QUARTZ.get())
+                .unlockedBy(getHasName(EPBlocks.CALIBRATED_QUARTZ_BLOCK.get()), has(EPBlocks.CALIBRATED_QUARTZ_BLOCK.get()))
+                .unlockedBy(getHasName(EPItems.CALIBRATED_QUARTZ.get()), has(EPItems.CALIBRATED_QUARTZ.get()))
+                .save(consumer);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EPItems.CALIBRATED_QUARTZ.get(), 4)
+                .requires(EPBlocks.CALIBRATED_QUARTZ_BLOCK.get())
+                .unlockedBy(getHasName(EPItems.CALIBRATED_QUARTZ.get()), has(EPItems.CALIBRATED_QUARTZ.get()))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EPBlocks.CALIBRATED_QUARTZ_PILLAR.get())
+                .pattern("C")
+                .pattern("C")
+                .define('C', EPBlocks.CALIBRATED_QUARTZ_BLOCK.get())
+                .unlockedBy(getHasName(EPBlocks.CALIBRATED_QUARTZ_BLOCK.get()), has(EPBlocks.CALIBRATED_QUARTZ_BLOCK.get()))
+                .unlockedBy(getHasName(EPBlocks.CALIBRATED_QUARTZ_PILLAR.get()), has(EPBlocks.CALIBRATED_QUARTZ_PILLAR.get()))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EPBlocks.CALIBRATED_QUARTZ_BRICKS.get())
+                .pattern("CC")
+                .pattern("CC")
+                .define('C', EPBlocks.CALIBRATED_QUARTZ_BLOCK.get())
+                .unlockedBy(getHasName(EPBlocks.CALIBRATED_QUARTZ_BLOCK.get()), has(EPBlocks.CALIBRATED_QUARTZ_BLOCK.get()))
+                .unlockedBy(getHasName(EPBlocks.CALIBRATED_QUARTZ_BRICKS.get()), has(EPBlocks.CALIBRATED_QUARTZ_BRICKS.get()))
+                .save(consumer);
 
-        //Entities
+        //Block entities
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, EPBlocks.ADOBE_FURNACE.get())
                 .pattern("###")
                 .pattern("# #")
@@ -507,14 +507,27 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .unlockedBy(getHasName(EPBlocks.GROWTH_DETECTOR.get()), has(EPBlocks.GROWTH_DETECTOR.get()))
                 .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, EPBlocks.ALCHEMICAL_DUPLICATOR.get())
-                .pattern("BBB")
-                .pattern("BSB")
-                .pattern("BBB")
-                .define('B', EPItems.BRONZIUM_INGOT.get())
-                .define('S', EPItems.SULFUR.get())
-                .unlockedBy(getHasName(EPBlocks.ALCHEMICAL_DUPLICATOR.get()), has(EPBlocks.ALCHEMICAL_DUPLICATOR.get()))
-                .unlockedBy(getHasName(EPItems.BRONZIUM_INGOT.get()),has(EPItems.BRONZIUM_INGOT.get()))
+        //TODO: Terminar el duplicador alquímico
+//        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, EPBlocks.ALCHEMICAL_DUPLICATOR.get())
+//                .pattern("BBB")
+//                .pattern("BSB")
+//                .pattern("BBB")
+//                .define('B', EPItems.BRONZIUM_INGOT.get())
+//                .define('S', EPItems.SULFUR.get())
+//                .unlockedBy(getHasName(EPBlocks.ALCHEMICAL_DUPLICATOR.get()), has(EPBlocks.ALCHEMICAL_DUPLICATOR.get()))
+//                .unlockedBy(getHasName(EPItems.BRONZIUM_INGOT.get()), has(EPItems.BRONZIUM_INGOT.get()))
+//                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, EPBlocks.LEATHERWORKER_STATION.get())
+                .pattern("SSS")
+                .pattern("FDF")
+                .pattern("FBF")
+                .define('S', ItemTags.WOODEN_SLABS)
+                .define('F', ItemTags.WOODEN_FENCES)
+                .define('D', EPItems.BRONZE_DAGGER.get())
+                .define('B', Items.BARREL)
+                .unlockedBy(getHasName(Items.LEATHER), has(Items.LEATHER))
+                .unlockedBy(getHasName(EPBlocks.LEATHERWORKER_STATION.get()), has(EPBlocks.LEATHERWORKER_STATION.get()))
                 .save(consumer);
 
         //Equipment recipes

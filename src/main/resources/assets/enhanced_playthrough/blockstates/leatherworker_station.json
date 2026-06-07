@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=east,with_water=false": {
+      "model": "enhanced_playthrough:block/leatherworker_station",
+      "y": 270
+    },
+    "facing=east,with_water=true": {
+      "model": "enhanced_playthrough:block/leatherworker_station_with_water",
+      "y": 270
+    },
+    "facing=north,with_water=false": {
+      "model": "enhanced_playthrough:block/leatherworker_station",
+      "y": 180
+    },
+    "facing=north,with_water=true": {
+      "model": "enhanced_playthrough:block/leatherworker_station_with_water",
+      "y": 180
+    },
+    "facing=south,with_water=false": {
+      "model": "enhanced_playthrough:block/leatherworker_station"
+    },
+    "facing=south,with_water=true": {
+      "model": "enhanced_playthrough:block/leatherworker_station_with_water"
+    },
+    "facing=west,with_water=false": {
+      "model": "enhanced_playthrough:block/leatherworker_station",
+      "y": 90
+    },
+    "facing=west,with_water=true": {
+      "model": "enhanced_playthrough:block/leatherworker_station_with_water",
+      "y": 90
+    }
+  }
+}

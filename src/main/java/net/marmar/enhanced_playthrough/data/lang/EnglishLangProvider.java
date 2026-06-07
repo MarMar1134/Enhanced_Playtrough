@@ -37,6 +37,7 @@ public class EnglishLangProvider extends AbstractLangProvider {
         addJeiCategory("primal_grinder", "Basic grinding");
         addJeiCategory("mechanical_grinder", "Mechanical grinding");
         addJeiCategory("alchemical_duplicator", "Alchemical duplication");
+        addJeiCategory("leatherworker_station", "Leatherworking station");
 
         addJeiItemDesc("plant_fiber", "Syntetic material, made out of heads from fibrose plants." +
                 "\nWorks as replacement of traditional String.");
@@ -66,6 +67,8 @@ public class EnglishLangProvider extends AbstractLangProvider {
         addJadeConfigTranslation("grinder", "Grinder");
 
         addJadeConfigTranslation("alchemical_duplicator", "Alchemical duplication");
+
+        addJadeConfigTranslation("leatherworker_station", "Leatherworking");
 
         //Patchouli
         addPatchouliBookTitle("starter_guide", "Starter guide");
