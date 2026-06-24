@@ -28,8 +28,6 @@ import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.Nullable;
 
 public class SkeletonBowmaster extends AbstractSkeleton {
-    private static final Logger LOGGER = LogManager.getLogger();
-
     public SkeletonBowmaster(EntityType<? extends AbstractSkeleton> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
     }

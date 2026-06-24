@@ -45,6 +45,8 @@ public class DataGenerators {
 
         //Loot tables
         generator.addProvider(event.includeServer(), EPLootTableProvider.create(packOutput));
+
+        //Loot modifiers
         generator.addProvider(event.includeServer(), new EPGlobalLootModifiersProvider(packOutput));
 
         //Models
