@@ -4,6 +4,7 @@ import net.marmar.enhanced_playthrough.item.custom.weapon.DaggerItem;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
@@ -40,6 +41,11 @@ public class CustomToolItem {
         }
 
         @Override
+        public float getDestroySpeed(ItemStack pStack, BlockState pState) {
+            return super.getDestroySpeed(pStack, pState) + handleTier.getDestroySpeedBonus();
+        }
+
+        @Override
         public HandleTier getHandleTier() {
             return this.handleTier;
         }
@@ -73,10 +79,16 @@ public class CustomToolItem {
         }
 
         @Override
+        public float getDestroySpeed(ItemStack pStack, BlockState pState) {
+            return super.getDestroySpeed(pStack, pState) + handleTier.getDestroySpeedBonus();
+        }
+
+        @Override
         public HandleTier getHandleTier() {
             return this.handleTier;
         }
     }
+
     public static class Pickaxe extends PickaxeItem implements TieredHandleItem {
         private final HandleTier handleTier;
 
@@ -104,10 +116,16 @@ public class CustomToolItem {
         }
 
         @Override
+        public float getDestroySpeed(ItemStack pStack, BlockState pState) {
+            return super.getDestroySpeed(pStack, pState) + handleTier.getDestroySpeedBonus();
+        }
+
+        @Override
         public HandleTier getHandleTier() {
             return this.handleTier;
         }
     }
+
     public static class Axe extends AxeItem implements TieredHandleItem {
         private final HandleTier handleTier;
 
@@ -135,10 +153,16 @@ public class CustomToolItem {
         }
 
         @Override
+        public float getDestroySpeed(ItemStack pStack, BlockState pState) {
+            return super.getDestroySpeed(pStack, pState) + handleTier.getDestroySpeedBonus();
+        }
+
+        @Override
         public HandleTier getHandleTier() {
             return this.handleTier;
         }
     }
+
     public static class Shovel extends ShovelItem implements TieredHandleItem {
         private final HandleTier handleTier;
 
@@ -166,10 +190,16 @@ public class CustomToolItem {
         }
 
         @Override
+        public float getDestroySpeed(ItemStack pStack, BlockState pState) {
+            return super.getDestroySpeed(pStack, pState) + handleTier.getDestroySpeedBonus();
+        }
+
+        @Override
         public HandleTier getHandleTier() {
             return this.handleTier;
         }
     }
+
     public static class Hoe extends HoeItem implements TieredHandleItem {
         private final HandleTier handleTier;
 
@@ -197,10 +227,16 @@ public class CustomToolItem {
         }
 
         @Override
+        public float getDestroySpeed(ItemStack pStack, BlockState pState) {
+            return super.getDestroySpeed(pStack, pState) + handleTier.getDestroySpeedBonus();
+        }
+
+        @Override
         public HandleTier getHandleTier() {
             return this.handleTier;
         }
     }
+
     public static class Polisher extends PolisherItem implements TieredHandleItem {
         private final HandleTier handleTier;
 
@@ -215,6 +251,11 @@ public class CustomToolItem {
                 pTooltipComponents.add(this.handleTier.getItemDesc());
 
             super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
+        }
+
+        @Override
+        public float getDestroySpeed(ItemStack pStack, BlockState pState) {
+            return super.getDestroySpeed(pStack, pState) + handleTier.getDestroySpeedBonus();
         }
 
         @Override

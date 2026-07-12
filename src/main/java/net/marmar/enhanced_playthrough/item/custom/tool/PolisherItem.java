@@ -63,11 +63,6 @@ public class PolisherItem extends TieredItem implements Vanishable {
     }
 
     @Override
-    public boolean isDamaged(ItemStack stack) {
-        return super.isDamaged(stack);
-    }
-
-    @Override
     public Multimap<Attribute, AttributeModifier> getDefaultAttributeModifiers(EquipmentSlot pSlot) {
         return pSlot == EquipmentSlot.MAINHAND ? this.attributeModifiers : super.getDefaultAttributeModifiers(pSlot);
     }

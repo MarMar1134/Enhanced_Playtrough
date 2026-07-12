@@ -8,7 +8,7 @@ import net.marmar.enhanced_playthrough.item.custom.food.EPFoodProperties;
 import net.marmar.enhanced_playthrough.item.custom.food.StewItem;
 import net.marmar.enhanced_playthrough.item.custom.tool.*;
 import net.marmar.enhanced_playthrough.item.custom.weapon.AluminumArrowItem;
-import net.marmar.enhanced_playthrough.item.custom.weapon.EPTiers;
+import net.marmar.enhanced_playthrough.item.custom.weapon.EPToolTier;
 import net.marmar.enhanced_playthrough.entity.boat.EPBoatEntity;
 import net.marmar.enhanced_playthrough.item.custom.armor.EPArmorItem;
 import net.marmar.enhanced_playthrough.item.custom.armor.EPArmorMaterial;
@@ -375,52 +375,82 @@ public class EPItems {
                     "aluminum_golden_hoe", () -> new CustomToolItem.Hoe(Tiers.GOLD, HandleTier.ALUMINUM, 0, new Item.Properties()));
             public static final RegistryObject<Item> ALUMINUM_GOLDEN_POLISHER = ITEMS.register(
                     "aluminum_golden_polisher", () -> new CustomToolItem.Polisher(Tiers.GOLD, HandleTier.ALUMINUM, new Item.Properties()));
+            // Purple gold handle gold
+            public static final RegistryObject<Item> PURPLE_GOLD_GOLDEN_SWORD = ITEMS.register(
+                    "purple_gold_golden_sword", () -> new CustomToolItem.Sword(Tiers.GOLD, HandleTier.PURPLE_GOLD, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_GOLDEN_DAGGER = ITEMS.register(
+                    "purple_gold_golden_dagger", () -> new CustomToolItem.Dagger(Tiers.GOLD, HandleTier.PURPLE_GOLD, 1, 0.25f, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_GOLDEN_PICKAXE = ITEMS.register(
+                    "purple_gold_golden_pickaxe", () -> new CustomToolItem.Pickaxe(Tiers.GOLD, HandleTier.PURPLE_GOLD, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_GOLDEN_AXE = ITEMS.register(
+                    "purple_gold_golden_axe", () -> new CustomToolItem.Axe(Tiers.GOLD, HandleTier.PURPLE_GOLD, 6, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_GOLDEN_SHOVEL = ITEMS.register(
+                    "purple_gold_golden_shovel", () -> new CustomToolItem.Shovel(Tiers.GOLD, HandleTier.PURPLE_GOLD,  new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_GOLDEN_HOE = ITEMS.register(
+                    "purple_gold_golden_hoe", () -> new CustomToolItem.Hoe(Tiers.GOLD, HandleTier.PURPLE_GOLD, 0, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_GOLDEN_POLISHER = ITEMS.register(
+                    "purple_gold_golden_polisher", () -> new CustomToolItem.Polisher(Tiers.GOLD, HandleTier.PURPLE_GOLD, new Item.Properties()));
 
         //Silver
         public static final RegistryObject<Item> SILVER_SWORD = ITEMS.register(
-                "silver_sword",() -> new CustomToolItem.Sword(EPTiers.SILVER, HandleTier.BASE, new Item.Properties()));
+                "silver_sword",() -> new CustomToolItem.Sword(EPToolTier.SILVER, HandleTier.BASE, new Item.Properties()));
         public static final RegistryObject<Item> SILVER_DAGGER = ITEMS.register(
-                "silver_dagger", () ->  new CustomToolItem.Dagger(EPTiers.SILVER, HandleTier.BASE, 1, 0.25f, new Item.Properties()));
+                "silver_dagger", () ->  new CustomToolItem.Dagger(EPToolTier.SILVER, HandleTier.BASE, 1, 0.25f, new Item.Properties()));
         public static final RegistryObject<Item> SILVER_PICKAXE = ITEMS.register(
-                "silver_pickaxe",() -> new CustomToolItem.Pickaxe(EPTiers.SILVER, HandleTier.BASE, new Item.Properties()));
+                "silver_pickaxe",() -> new CustomToolItem.Pickaxe(EPToolTier.SILVER, HandleTier.BASE, new Item.Properties()));
         public static final RegistryObject<Item> SILVER_AXE = ITEMS.register(
-                "silver_axe",() -> new CustomToolItem.Axe(EPTiers.SILVER, HandleTier.BASE, 6, new Item.Properties()));
+                "silver_axe",() -> new CustomToolItem.Axe(EPToolTier.SILVER, HandleTier.BASE, 6, new Item.Properties()));
         public static final RegistryObject<Item> SILVER_SHOVEL = ITEMS.register(
-                "silver_shovel",() -> new CustomToolItem.Shovel(EPTiers.SILVER, HandleTier.BASE, new Item.Properties()));
+                "silver_shovel",() -> new CustomToolItem.Shovel(EPToolTier.SILVER, HandleTier.BASE, new Item.Properties()));
         public static final RegistryObject<Item> SILVER_HOE = ITEMS.register(
-                "silver_hoe",() -> new CustomToolItem.Hoe(EPTiers.SILVER, HandleTier.BASE, 2,  new Item.Properties()));
+                "silver_hoe",() -> new CustomToolItem.Hoe(EPToolTier.SILVER, HandleTier.BASE, 2,  new Item.Properties()));
         public static final RegistryObject<Item> SILVER_POLISHER = ITEMS.register(
-                "silver_polisher",() -> new CustomToolItem.Polisher(EPTiers.SILVER, HandleTier.BASE, new Item.Properties()));
+                "silver_polisher",() -> new CustomToolItem.Polisher(EPToolTier.SILVER, HandleTier.BASE, new Item.Properties()));
             // Reinforced handle silver
             public static final RegistryObject<Item> REINFORCED_SILVER_SWORD = ITEMS.register(
-                    "reinforced_silver_sword",() -> new CustomToolItem.Sword(EPTiers.SILVER, HandleTier.REINFORCED, new Item.Properties()));
+                    "reinforced_silver_sword",() -> new CustomToolItem.Sword(EPToolTier.SILVER, HandleTier.REINFORCED, new Item.Properties()));
             public static final RegistryObject<Item> REINFORCED_SILVER_DAGGER = ITEMS.register(
-                    "reinforced_silver_dagger", () -> new CustomToolItem.Dagger(EPTiers.SILVER, HandleTier.REINFORCED, 1, 0.25f, new Item.Properties()));
+                    "reinforced_silver_dagger", () -> new CustomToolItem.Dagger(EPToolTier.SILVER, HandleTier.REINFORCED, 1, 0.25f, new Item.Properties()));
             public static final RegistryObject<Item> REINFORCED_SILVER_PICKAXE = ITEMS.register(
-                    "reinforced_silver_pickaxe",() -> new CustomToolItem.Pickaxe(EPTiers.SILVER, HandleTier.REINFORCED, new Item.Properties()));
+                    "reinforced_silver_pickaxe",() -> new CustomToolItem.Pickaxe(EPToolTier.SILVER, HandleTier.REINFORCED, new Item.Properties()));
             public static final RegistryObject<Item> REINFORCED_SILVER_AXE = ITEMS.register(
-                    "reinforced_silver_axe",() -> new CustomToolItem.Axe(EPTiers.SILVER, HandleTier.REINFORCED, 6, new Item.Properties()));
+                    "reinforced_silver_axe",() -> new CustomToolItem.Axe(EPToolTier.SILVER, HandleTier.REINFORCED, 6, new Item.Properties()));
             public static final RegistryObject<Item> REINFORCED_SILVER_SHOVEL = ITEMS.register(
-                    "reinforced_silver_shovel",() -> new CustomToolItem.Shovel(EPTiers.SILVER, HandleTier.REINFORCED, new Item.Properties()));
+                    "reinforced_silver_shovel",() -> new CustomToolItem.Shovel(EPToolTier.SILVER, HandleTier.REINFORCED, new Item.Properties()));
             public static final RegistryObject<Item> REINFORCED_SILVER_HOE = ITEMS.register(
-                    "reinforced_silver_hoe",() -> new CustomToolItem.Hoe(EPTiers.SILVER, HandleTier.REINFORCED, 0, new Item.Properties()));
+                    "reinforced_silver_hoe",() -> new CustomToolItem.Hoe(EPToolTier.SILVER, HandleTier.REINFORCED, 0, new Item.Properties()));
             public static final RegistryObject<Item> REINFORCED_SILVER_POLISHER = ITEMS.register(
-                    "reinforced_silver_polisher",() -> new CustomToolItem.Polisher(EPTiers.SILVER, HandleTier.REINFORCED, new Item.Properties()));
+                    "reinforced_silver_polisher",() -> new CustomToolItem.Polisher(EPToolTier.SILVER, HandleTier.REINFORCED, new Item.Properties()));
             //Aluminum handle silver
             public static final RegistryObject<Item> ALUMINUM_SILVER_SWORD = ITEMS.register(
-                    "aluminum_silver_sword",() -> new CustomToolItem.Sword(EPTiers.SILVER, HandleTier.ALUMINUM, new Item.Properties()));
+                    "aluminum_silver_sword",() -> new CustomToolItem.Sword(EPToolTier.SILVER, HandleTier.ALUMINUM, new Item.Properties()));
             public static final RegistryObject<Item> ALUMINUM_SILVER_DAGGER = ITEMS.register(
-                    "aluminum_silver_dagger", () -> new CustomToolItem.Dagger(EPTiers.SILVER, HandleTier.ALUMINUM, 1, 0.25f, new Item.Properties()));
+                    "aluminum_silver_dagger", () -> new CustomToolItem.Dagger(EPToolTier.SILVER, HandleTier.ALUMINUM, 1, 0.25f, new Item.Properties()));
             public static final RegistryObject<Item> ALUMINUM_SILVER_PICKAXE = ITEMS.register(
-                    "aluminum_silver_pickaxe",() -> new CustomToolItem.Pickaxe(EPTiers.SILVER, HandleTier.ALUMINUM, new Item.Properties()));
+                    "aluminum_silver_pickaxe",() -> new CustomToolItem.Pickaxe(EPToolTier.SILVER, HandleTier.ALUMINUM, new Item.Properties()));
             public static final RegistryObject<Item> ALUMINUM_SILVER_AXE = ITEMS.register(
-                    "aluminum_silver_axe",() -> new CustomToolItem.Axe(EPTiers.SILVER, HandleTier.ALUMINUM, 6, new Item.Properties()));
+                    "aluminum_silver_axe",() -> new CustomToolItem.Axe(EPToolTier.SILVER, HandleTier.ALUMINUM, 6, new Item.Properties()));
             public static final RegistryObject<Item> ALUMINUM_SILVER_SHOVEL = ITEMS.register(
-                    "aluminum_silver_shovel",() -> new CustomToolItem.Shovel(EPTiers.SILVER, HandleTier.ALUMINUM, new Item.Properties()));
+                    "aluminum_silver_shovel",() -> new CustomToolItem.Shovel(EPToolTier.SILVER, HandleTier.ALUMINUM, new Item.Properties()));
             public static final RegistryObject<Item> ALUMINUM_SILVER_HOE = ITEMS.register(
-                    "aluminum_silver_hoe",() -> new CustomToolItem.Hoe(EPTiers.SILVER, HandleTier.ALUMINUM, 0, new Item.Properties()));
+                    "aluminum_silver_hoe",() -> new CustomToolItem.Hoe(EPToolTier.SILVER, HandleTier.ALUMINUM, 0, new Item.Properties()));
             public static final RegistryObject<Item> ALUMINUM_SILVER_POLISHER = ITEMS.register(
-                    "aluminum_silver_polisher",() -> new CustomToolItem.Polisher(EPTiers.SILVER, HandleTier.ALUMINUM, new Item.Properties()));
+                    "aluminum_silver_polisher",() -> new CustomToolItem.Polisher(EPToolTier.SILVER, HandleTier.ALUMINUM, new Item.Properties()));
+            // Purple gold handle silver
+            public static final RegistryObject<Item> PURPLE_GOLD_SILVER_SWORD = ITEMS.register(
+                    "purple_gold_silver_sword",() -> new CustomToolItem.Sword(EPToolTier.SILVER, HandleTier.PURPLE_GOLD, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_SILVER_DAGGER = ITEMS.register(
+                    "purple_gold_silver_dagger", () -> new CustomToolItem.Dagger(EPToolTier.SILVER, HandleTier.PURPLE_GOLD, 1, 0.25f, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_SILVER_PICKAXE = ITEMS.register(
+                    "purple_gold_silver_pickaxe",() -> new CustomToolItem.Pickaxe(EPToolTier.SILVER, HandleTier.PURPLE_GOLD, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_SILVER_AXE = ITEMS.register(
+                    "purple_gold_silver_axe",() -> new CustomToolItem.Axe(EPToolTier.SILVER, HandleTier.PURPLE_GOLD, 6, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_SILVER_SHOVEL = ITEMS.register(
+                    "purple_gold_silver_shovel",() -> new CustomToolItem.Shovel(EPToolTier.SILVER, HandleTier.PURPLE_GOLD, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_SILVER_HOE = ITEMS.register(
+                    "purple_gold_silver_hoe",() -> new CustomToolItem.Hoe(EPToolTier.SILVER, HandleTier.PURPLE_GOLD, 0, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_SILVER_POLISHER = ITEMS.register(
+                    "purple_gold_silver_polisher",() -> new CustomToolItem.Polisher(EPToolTier.SILVER, HandleTier.PURPLE_GOLD, new Item.Properties()));
 
         public static final RegistryObject<Item> SILVER_HELMET = ITEMS.register(
                 "silver_helmet", () -> new EPArmorItem(EPArmorMaterial.SILVER, ArmorItem.Type.HELMET, false, new Item.Properties()));
@@ -433,51 +463,66 @@ public class EPItems {
 
         //Bronze
         public static final RegistryObject<Item> BRONZE_SWORD = ITEMS.register(
-                "bronze_sword",() -> new CustomToolItem.Sword(EPTiers.BRONZE, HandleTier.BASE, new Item.Properties()));
+                "bronze_sword",() -> new CustomToolItem.Sword(EPToolTier.BRONZE, HandleTier.BASE, new Item.Properties()));
         public static final RegistryObject<Item> BRONZE_DAGGER = ITEMS.register(
-                "bronze_dagger", () ->  new CustomToolItem.Dagger(EPTiers.BRONZE, HandleTier.BASE, 1, 0.25f, new Item.Properties()));
+                "bronze_dagger", () ->  new CustomToolItem.Dagger(EPToolTier.BRONZE, HandleTier.BASE, 1, 0.25f, new Item.Properties()));
         public static final RegistryObject<Item> BRONZE_PICKAXE = ITEMS.register(
-                "bronze_pickaxe",() -> new CustomToolItem.Pickaxe(EPTiers.BRONZE, HandleTier.BASE, new Item.Properties()));
+                "bronze_pickaxe",() -> new CustomToolItem.Pickaxe(EPToolTier.BRONZE, HandleTier.BASE, new Item.Properties()));
         public static final RegistryObject<Item> BRONZE_AXE = ITEMS.register(
-                "bronze_axe",() -> new CustomToolItem.Axe(EPTiers.BRONZE, HandleTier.BASE,6.0f, new Item.Properties()));
+                "bronze_axe",() -> new CustomToolItem.Axe(EPToolTier.BRONZE, HandleTier.BASE,6.0f, new Item.Properties()));
         public static final RegistryObject<Item> BRONZE_SHOVEL = ITEMS.register(
-                "bronze_shovel",() -> new CustomToolItem.Shovel(EPTiers.BRONZE, HandleTier.BASE, new Item.Properties()));
+                "bronze_shovel",() -> new CustomToolItem.Shovel(EPToolTier.BRONZE, HandleTier.BASE, new Item.Properties()));
         public static final RegistryObject<Item> BRONZE_HOE = ITEMS.register(
-                "bronze_hoe",() -> new CustomToolItem.Hoe(EPTiers.BRONZE, HandleTier.BASE, -1, new Item.Properties()));
+                "bronze_hoe",() -> new CustomToolItem.Hoe(EPToolTier.BRONZE, HandleTier.BASE, -1, new Item.Properties()));
         public static final RegistryObject<Item> BRONZE_POLISHER = ITEMS.register(
-                "bronze_polisher",() -> new CustomToolItem.Polisher(EPTiers.BRONZE, HandleTier.BASE, new Item.Properties()));
+                "bronze_polisher",() -> new CustomToolItem.Polisher(EPToolTier.BRONZE, HandleTier.BASE, new Item.Properties()));
             // Reinforced handle bronze
             public static final RegistryObject<Item> REINFORCED_BRONZE_SWORD = ITEMS.register(
-                    "reinforced_bronze_sword", () -> new CustomToolItem.Sword(EPTiers.BRONZE, HandleTier.REINFORCED, new Item.Properties()));
+                    "reinforced_bronze_sword", () -> new CustomToolItem.Sword(EPToolTier.BRONZE, HandleTier.REINFORCED, new Item.Properties()));
             public static final RegistryObject<Item> REINFORCED_BRONZE_DAGGER = ITEMS.register(
-                    "reinforced_bronze_dagger", () -> new CustomToolItem.Dagger(EPTiers.BRONZE, HandleTier.REINFORCED, 1, 0.25f, new Item.Properties()));
+                    "reinforced_bronze_dagger", () -> new CustomToolItem.Dagger(EPToolTier.BRONZE, HandleTier.REINFORCED, 1, 0.25f, new Item.Properties()));
             public static final RegistryObject<Item> REINFORCED_BRONZE_PICKAXE = ITEMS.register(
-                    "reinforced_bronze_pickaxe", () -> new CustomToolItem.Pickaxe(EPTiers.BRONZE, HandleTier.REINFORCED, new Item.Properties()));
+                    "reinforced_bronze_pickaxe", () -> new CustomToolItem.Pickaxe(EPToolTier.BRONZE, HandleTier.REINFORCED, new Item.Properties()));
             public static final RegistryObject<Item> REINFORCED_BRONZE_AXE = ITEMS.register(
-                    "reinforced_bronze_axe", () -> new CustomToolItem.Axe(EPTiers.BRONZE, HandleTier.REINFORCED, 6, new Item.Properties()));
+                    "reinforced_bronze_axe", () -> new CustomToolItem.Axe(EPToolTier.BRONZE, HandleTier.REINFORCED, 6, new Item.Properties()));
             public static final RegistryObject<Item> REINFORCED_BRONZE_SHOVEL = ITEMS.register(
-                    "reinforced_bronze_shovel", () -> new CustomToolItem.Shovel(EPTiers.BRONZE, HandleTier.REINFORCED, new Item.Properties()));
+                    "reinforced_bronze_shovel", () -> new CustomToolItem.Shovel(EPToolTier.BRONZE, HandleTier.REINFORCED, new Item.Properties()));
             public static final RegistryObject<Item> REINFORCED_BRONZE_HOE = ITEMS.register(
-                    "reinforced_bronze_hoe", () -> new CustomToolItem.Hoe(EPTiers.BRONZE, HandleTier.REINFORCED, -1, new Item.Properties()));
+                    "reinforced_bronze_hoe", () -> new CustomToolItem.Hoe(EPToolTier.BRONZE, HandleTier.REINFORCED, -1, new Item.Properties()));
             public static final RegistryObject<Item> REINFORCED_BRONZE_POLISHER = ITEMS.register(
-                    "reinforced_bronze_polisher", () -> new CustomToolItem.Polisher(EPTiers.BRONZE, HandleTier.REINFORCED, new Item.Properties()));
+                    "reinforced_bronze_polisher", () -> new CustomToolItem.Polisher(EPToolTier.BRONZE, HandleTier.REINFORCED, new Item.Properties()));
             // Aluminum handle bronze
             public static final RegistryObject<Item> ALUMINUM_BRONZE_SWORD = ITEMS.register(
-                    "aluminum_bronze_sword", () -> new CustomToolItem.Sword(EPTiers.BRONZE, HandleTier.ALUMINUM, new Item.Properties()));
+                    "aluminum_bronze_sword", () -> new CustomToolItem.Sword(EPToolTier.BRONZE, HandleTier.ALUMINUM, new Item.Properties()));
             public static final RegistryObject<Item> ALUMINUM_BRONZE_DAGGER = ITEMS.register(
-                    "aluminum_bronze_dagger", () -> new CustomToolItem.Dagger(EPTiers.BRONZE, HandleTier.ALUMINUM, 1, 0.25f, new Item.Properties()));
+                    "aluminum_bronze_dagger", () -> new CustomToolItem.Dagger(EPToolTier.BRONZE, HandleTier.ALUMINUM, 1, 0.25f, new Item.Properties()));
             public static final RegistryObject<Item> ALUMINUM_BRONZE_PICKAXE = ITEMS.register(
-                    "aluminum_bronze_pickaxe", () -> new CustomToolItem.Pickaxe(EPTiers.BRONZE, HandleTier.ALUMINUM, new Item.Properties()));
+                    "aluminum_bronze_pickaxe", () -> new CustomToolItem.Pickaxe(EPToolTier.BRONZE, HandleTier.ALUMINUM, new Item.Properties()));
             public static final RegistryObject<Item> ALUMINUM_BRONZE_AXE = ITEMS.register(
-                    "aluminum_bronze_axe", () -> new CustomToolItem.Axe(EPTiers.BRONZE, HandleTier.ALUMINUM, 6, new Item.Properties()));
+                    "aluminum_bronze_axe", () -> new CustomToolItem.Axe(EPToolTier.BRONZE, HandleTier.ALUMINUM, 6, new Item.Properties()));
             public static final RegistryObject<Item> ALUMINUM_BRONZE_SHOVEL = ITEMS.register(
-                    "aluminum_bronze_shovel", () -> new CustomToolItem.Shovel(EPTiers.BRONZE, HandleTier.ALUMINUM, new Item.Properties()));
+                    "aluminum_bronze_shovel", () -> new CustomToolItem.Shovel(EPToolTier.BRONZE, HandleTier.ALUMINUM, new Item.Properties()));
             public static final RegistryObject<Item> ALUMINUM_BRONZE_HOE = ITEMS.register(
-                    "aluminum_bronze_hoe", () -> new CustomToolItem.Hoe(EPTiers.BRONZE, HandleTier.ALUMINUM, -1, new Item.Properties()));
+                    "aluminum_bronze_hoe", () -> new CustomToolItem.Hoe(EPToolTier.BRONZE, HandleTier.ALUMINUM, -1, new Item.Properties()));
             public static final RegistryObject<Item> ALUMINUM_BRONZE_POLISHER = ITEMS.register(
-                    "aluminum_bronze_polisher", () -> new CustomToolItem.Polisher(EPTiers.BRONZE, HandleTier.ALUMINUM, new Item.Properties()));
+                    "aluminum_bronze_polisher", () -> new CustomToolItem.Polisher(EPToolTier.BRONZE, HandleTier.ALUMINUM, new Item.Properties()));
+            // Purple gold handle bronze
+            public static final RegistryObject<Item> PURPLE_GOLD_BRONZE_SWORD = ITEMS.register(
+                    "purple_gold_bronze_sword", () -> new CustomToolItem.Sword(EPToolTier.BRONZE, HandleTier.PURPLE_GOLD, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_BRONZE_DAGGER = ITEMS.register(
+                    "purple_gold_bronze_dagger", () -> new CustomToolItem.Dagger(EPToolTier.BRONZE, HandleTier.PURPLE_GOLD, 1, 0.25f, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_BRONZE_PICKAXE = ITEMS.register(
+                    "purple_gold_bronze_pickaxe", () -> new CustomToolItem.Pickaxe(EPToolTier.BRONZE, HandleTier.PURPLE_GOLD, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_BRONZE_AXE = ITEMS.register(
+                    "purple_gold_bronze_axe", () -> new CustomToolItem.Axe(EPToolTier.BRONZE, HandleTier.PURPLE_GOLD, 6, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_BRONZE_SHOVEL = ITEMS.register(
+                    "purple_gold_bronze_shovel", () -> new CustomToolItem.Shovel(EPToolTier.BRONZE, HandleTier.PURPLE_GOLD, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_BRONZE_HOE = ITEMS.register(
+                    "purple_gold_bronze_hoe", () -> new CustomToolItem.Hoe(EPToolTier.BRONZE, HandleTier.PURPLE_GOLD, -1, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_BRONZE_POLISHER = ITEMS.register(
+                    "purple_gold_bronze_polisher", () -> new CustomToolItem.Polisher(EPToolTier.BRONZE, HandleTier.PURPLE_GOLD, new Item.Properties()));
 
-         public static final RegistryObject<Item> BRONZE_HELMET = ITEMS.register(
+          public static final RegistryObject<Item> BRONZE_HELMET = ITEMS.register(
                 "bronze_helmet", () -> new ArmorItem(EPArmorMaterial.BRONZE, ArmorItem.Type.HELMET, new Item.Properties()));
         public static final RegistryObject<Item> BRONZE_CHESTPLATE = ITEMS.register(
                 "bronze_chestplate", () -> new ArmorItem(EPArmorMaterial.BRONZE, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
@@ -488,49 +533,64 @@ public class EPItems {
 
         //Brass
         public static final RegistryObject<Item> BRASS_SWORD = ITEMS.register(
-                "brass_sword",() -> new CustomToolItem.Sword(EPTiers.BRASS, HandleTier.BASE, new Item.Properties()));
+                "brass_sword",() -> new CustomToolItem.Sword(EPToolTier.BRASS, HandleTier.BASE, new Item.Properties()));
         public static final RegistryObject<Item> BRASS_DAGGER = ITEMS.register(
-                "brass_dagger", () ->  new CustomToolItem.Dagger(EPTiers.BRASS, HandleTier.BASE, 1, 0.25f, new Item.Properties()));
+                "brass_dagger", () ->  new CustomToolItem.Dagger(EPToolTier.BRASS, HandleTier.BASE, 1, 0.25f, new Item.Properties()));
         public static final RegistryObject<Item> BRASS_PICKAXE = ITEMS.register(
-                "brass_pickaxe",() -> new CustomToolItem.Pickaxe(EPTiers.BRASS, HandleTier.BASE, new Item.Properties()));
+                "brass_pickaxe",() -> new CustomToolItem.Pickaxe(EPToolTier.BRASS, HandleTier.BASE, new Item.Properties()));
         public static final RegistryObject<Item> BRASS_AXE = ITEMS.register(
-                "brass_axe",() -> new CustomToolItem.Axe(EPTiers.BRASS, HandleTier.BASE, 6, new Item.Properties()));
+                "brass_axe",() -> new CustomToolItem.Axe(EPToolTier.BRASS, HandleTier.BASE, 6, new Item.Properties()));
         public static final RegistryObject<Item> BRASS_SHOVEL = ITEMS.register(
-                "brass_shovel",() -> new CustomToolItem.Shovel(EPTiers.BRASS, HandleTier.BASE, new Item.Properties()));
+                "brass_shovel",() -> new CustomToolItem.Shovel(EPToolTier.BRASS, HandleTier.BASE, new Item.Properties()));
         public static final RegistryObject<Item> BRASS_HOE = ITEMS.register(
-                "brass_hoe",() -> new CustomToolItem.Hoe(EPTiers.BRASS, HandleTier.BASE, 1,  new Item.Properties()));
+                "brass_hoe",() -> new CustomToolItem.Hoe(EPToolTier.BRASS, HandleTier.BASE, 1,  new Item.Properties()));
         public static final RegistryObject<Item> BRASS_POLISHER = ITEMS.register(
-                "brass_polisher",() -> new CustomToolItem.Polisher(EPTiers.BRASS, HandleTier.BASE, new Item.Properties()));
+                "brass_polisher",() -> new CustomToolItem.Polisher(EPToolTier.BRASS, HandleTier.BASE, new Item.Properties()));
             // Reinforced handle brass
             public static final RegistryObject<Item> REINFORCED_BRASS_SWORD = ITEMS.register(
-                    "reinforced_brass_sword", () -> new CustomToolItem.Sword(EPTiers.BRASS, HandleTier.REINFORCED, new Item.Properties()));
+                    "reinforced_brass_sword", () -> new CustomToolItem.Sword(EPToolTier.BRASS, HandleTier.REINFORCED, new Item.Properties()));
             public static final RegistryObject<Item> REINFORCED_BRASS_DAGGER = ITEMS.register(
-                    "reinforced_brass_dagger", () -> new CustomToolItem.Dagger(EPTiers.BRASS, HandleTier.REINFORCED, 1, 0.25f, new Item.Properties()));
+                    "reinforced_brass_dagger", () -> new CustomToolItem.Dagger(EPToolTier.BRASS, HandleTier.REINFORCED, 1, 0.25f, new Item.Properties()));
             public static final RegistryObject<Item> REINFORCED_BRASS_PICKAXE = ITEMS.register(
-                    "reinforced_brass_pickaxe", () -> new CustomToolItem.Pickaxe(EPTiers.BRASS, HandleTier.REINFORCED, new Item.Properties()));
+                    "reinforced_brass_pickaxe", () -> new CustomToolItem.Pickaxe(EPToolTier.BRASS, HandleTier.REINFORCED, new Item.Properties()));
             public static final RegistryObject<Item> REINFORCED_BRASS_AXE = ITEMS.register(
-                    "reinforced_brass_axe", () -> new CustomToolItem.Axe(EPTiers.BRASS, HandleTier.REINFORCED, 6, new Item.Properties()));
+                    "reinforced_brass_axe", () -> new CustomToolItem.Axe(EPToolTier.BRASS, HandleTier.REINFORCED, 6, new Item.Properties()));
             public static final RegistryObject<Item> REINFORCED_BRASS_SHOVEL = ITEMS.register(
-                    "reinforced_brass_shovel", () -> new CustomToolItem.Shovel(EPTiers.BRASS, HandleTier.REINFORCED, new Item.Properties()));
+                    "reinforced_brass_shovel", () -> new CustomToolItem.Shovel(EPToolTier.BRASS, HandleTier.REINFORCED, new Item.Properties()));
             public static final RegistryObject<Item> REINFORCED_BRASS_HOE = ITEMS.register(
-                    "reinforced_brass_hoe", () -> new CustomToolItem.Hoe(EPTiers.BRASS, HandleTier.REINFORCED, -1, new Item.Properties()));
+                    "reinforced_brass_hoe", () -> new CustomToolItem.Hoe(EPToolTier.BRASS, HandleTier.REINFORCED, -1, new Item.Properties()));
             public static final RegistryObject<Item> REINFORCED_BRASS_POLISHER = ITEMS.register(
-                    "reinforced_brass_polisher", () -> new CustomToolItem.Polisher(EPTiers.BRASS, HandleTier.REINFORCED, new Item.Properties()));
+                    "reinforced_brass_polisher", () -> new CustomToolItem.Polisher(EPToolTier.BRASS, HandleTier.REINFORCED, new Item.Properties()));
             // Aluminum handle brass
             public static final RegistryObject<Item> ALUMINUM_BRASS_SWORD = ITEMS.register(
-                    "aluminum_brass_sword", () -> new CustomToolItem.Sword(EPTiers.BRASS, HandleTier.ALUMINUM, new Item.Properties()));
+                    "aluminum_brass_sword", () -> new CustomToolItem.Sword(EPToolTier.BRASS, HandleTier.ALUMINUM, new Item.Properties()));
             public static final RegistryObject<Item> ALUMINUM_BRASS_DAGGER = ITEMS.register(
-                    "aluminum_brass_dagger", () -> new CustomToolItem.Dagger(EPTiers.BRASS, HandleTier.ALUMINUM, 1, 0.25f, new Item.Properties()));
+                    "aluminum_brass_dagger", () -> new CustomToolItem.Dagger(EPToolTier.BRASS, HandleTier.ALUMINUM, 1, 0.25f, new Item.Properties()));
             public static final RegistryObject<Item> ALUMINUM_BRASS_PICKAXE = ITEMS.register(
-                    "aluminum_brass_pickaxe", () -> new CustomToolItem.Pickaxe(EPTiers.BRASS, HandleTier.ALUMINUM, new Item.Properties()));
+                    "aluminum_brass_pickaxe", () -> new CustomToolItem.Pickaxe(EPToolTier.BRASS, HandleTier.ALUMINUM, new Item.Properties()));
             public static final RegistryObject<Item> ALUMINUM_BRASS_AXE = ITEMS.register(
-                    "aluminum_brass_axe", () -> new CustomToolItem.Axe(EPTiers.BRASS, HandleTier.ALUMINUM, 6, new Item.Properties()));
+                    "aluminum_brass_axe", () -> new CustomToolItem.Axe(EPToolTier.BRASS, HandleTier.ALUMINUM, 6, new Item.Properties()));
             public static final RegistryObject<Item> ALUMINUM_BRASS_SHOVEL = ITEMS.register(
-                    "aluminum_brass_shovel", () -> new CustomToolItem.Shovel(EPTiers.BRASS, HandleTier.ALUMINUM, new Item.Properties()));
+                    "aluminum_brass_shovel", () -> new CustomToolItem.Shovel(EPToolTier.BRASS, HandleTier.ALUMINUM, new Item.Properties()));
             public static final RegistryObject<Item> ALUMINUM_BRASS_HOE = ITEMS.register(
-                    "aluminum_brass_hoe", () -> new CustomToolItem.Hoe(EPTiers.BRASS, HandleTier.ALUMINUM, -1, new Item.Properties()));
+                    "aluminum_brass_hoe", () -> new CustomToolItem.Hoe(EPToolTier.BRASS, HandleTier.ALUMINUM, -1, new Item.Properties()));
             public static final RegistryObject<Item> ALUMINUM_BRASS_POLISHER = ITEMS.register(
-                    "aluminum_brass_polisher", () -> new CustomToolItem.Polisher(EPTiers.BRASS, HandleTier.ALUMINUM, new Item.Properties()));
+                    "aluminum_brass_polisher", () -> new CustomToolItem.Polisher(EPToolTier.BRASS, HandleTier.ALUMINUM, new Item.Properties()));
+            // Purple gold handle brass
+            public static final RegistryObject<Item> PURPLE_GOLD_BRASS_SWORD = ITEMS.register(
+                    "purple_gold_brass_sword", () -> new CustomToolItem.Sword(EPToolTier.BRASS, HandleTier.PURPLE_GOLD, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_BRASS_DAGGER = ITEMS.register(
+                    "purple_gold_brass_dagger", () -> new CustomToolItem.Dagger(EPToolTier.BRASS, HandleTier.PURPLE_GOLD, 1, 0.25f, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_BRASS_PICKAXE = ITEMS.register(
+                    "purple_gold_brass_pickaxe", () -> new CustomToolItem.Pickaxe(EPToolTier.BRASS, HandleTier.PURPLE_GOLD, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_BRASS_AXE = ITEMS.register(
+                    "purple_gold_brass_axe", () -> new CustomToolItem.Axe(EPToolTier.BRASS, HandleTier.PURPLE_GOLD, 6, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_BRASS_SHOVEL = ITEMS.register(
+                    "purple_gold_brass_shovel", () -> new CustomToolItem.Shovel(EPToolTier.BRASS, HandleTier.PURPLE_GOLD, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_BRASS_HOE = ITEMS.register(
+                    "purple_gold_brass_hoe", () -> new CustomToolItem.Hoe(EPToolTier.BRASS, HandleTier.PURPLE_GOLD, -1, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_BRASS_POLISHER = ITEMS.register(
+                    "purple_gold_brass_polisher", () -> new CustomToolItem.Polisher(EPToolTier.BRASS, HandleTier.PURPLE_GOLD, new Item.Properties()));
 
         public static final RegistryObject<Item> BRASS_HELMET = ITEMS.register(
                 "brass_helmet", () -> new ArmorItem(EPArmorMaterial.BRASS, ArmorItem.Type.HELMET, new Item.Properties()));
@@ -543,49 +603,64 @@ public class EPItems {
 
         //Rose Gold
         public static final RegistryObject<Item> ROSE_GOLDEN_SWORD = ITEMS.register(
-                "rose_golden_sword",() -> new CustomToolItem.Sword(EPTiers.ROSE_GOLD, HandleTier.BASE, new Item.Properties()));
+                "rose_golden_sword",() -> new CustomToolItem.Sword(EPToolTier.ROSE_GOLD, HandleTier.BASE, new Item.Properties()));
         public static final RegistryObject<Item> ROSE_GOLDEN_DAGGER = ITEMS.register(
-                "rose_golden_dagger", () ->  new CustomToolItem.Dagger(EPTiers.ROSE_GOLD, HandleTier.BASE, 2, 0.25f, new Item.Properties()));
+                "rose_golden_dagger", () ->  new CustomToolItem.Dagger(EPToolTier.ROSE_GOLD, HandleTier.BASE, 2, 0.25f, new Item.Properties()));
         public static final RegistryObject<Item> ROSE_GOLDEN_PICKAXE = ITEMS.register(
-                "rose_golden_pickaxe",() -> new CustomToolItem.Pickaxe(EPTiers.ROSE_GOLD, HandleTier.BASE, new Item.Properties()));
+                "rose_golden_pickaxe",() -> new CustomToolItem.Pickaxe(EPToolTier.ROSE_GOLD, HandleTier.BASE, new Item.Properties()));
         public static final RegistryObject<Item> ROSE_GOLDEN_AXE = ITEMS.register(
-                "rose_golden_axe",() -> new CustomToolItem.Axe(EPTiers.ROSE_GOLD, HandleTier.BASE, 6, new Item.Properties()));
+                "rose_golden_axe",() -> new CustomToolItem.Axe(EPToolTier.ROSE_GOLD, HandleTier.BASE, 6, new Item.Properties()));
         public static final RegistryObject<Item> ROSE_GOLDEN_SHOVEL = ITEMS.register(
-                "rose_golden_shovel",() -> new CustomToolItem.Shovel(EPTiers.ROSE_GOLD, HandleTier.BASE, new Item.Properties()));
+                "rose_golden_shovel",() -> new CustomToolItem.Shovel(EPToolTier.ROSE_GOLD, HandleTier.BASE, new Item.Properties()));
         public static final RegistryObject<Item> ROSE_GOLDEN_HOE = ITEMS.register(
-                "rose_golden_hoe",() -> new CustomToolItem.Hoe(EPTiers.ROSE_GOLD, HandleTier.BASE, -2, new Item.Properties()));
+                "rose_golden_hoe",() -> new CustomToolItem.Hoe(EPToolTier.ROSE_GOLD, HandleTier.BASE, -2, new Item.Properties()));
         public static final RegistryObject<Item> ROSE_GOLDEN_POLISHER = ITEMS.register(
-                "rose_golden_polisher", () -> new CustomToolItem.Polisher(EPTiers.ROSE_GOLD, HandleTier.BASE, new Item.Properties()));
+                "rose_golden_polisher", () -> new CustomToolItem.Polisher(EPToolTier.ROSE_GOLD, HandleTier.BASE, new Item.Properties()));
             // Reinforced handle rose gold
             public static final RegistryObject<Item> REINFORCED_ROSE_GOLDEN_SWORD = ITEMS.register(
-                    "reinforced_rose_golden_sword", () -> new CustomToolItem.Sword(EPTiers.ROSE_GOLD, HandleTier.REINFORCED, new Item.Properties()));
+                    "reinforced_rose_golden_sword", () -> new CustomToolItem.Sword(EPToolTier.ROSE_GOLD, HandleTier.REINFORCED, new Item.Properties()));
             public static final RegistryObject<Item> REINFORCED_ROSE_GOLDEN_DAGGER = ITEMS.register(
-                    "reinforced_rose_golden_dagger", () -> new CustomToolItem.Dagger(EPTiers.ROSE_GOLD, HandleTier.REINFORCED, 2, 0.25f, new Item.Properties()));
+                    "reinforced_rose_golden_dagger", () -> new CustomToolItem.Dagger(EPToolTier.ROSE_GOLD, HandleTier.REINFORCED, 2, 0.25f, new Item.Properties()));
             public static final RegistryObject<Item> REINFORCED_ROSE_GOLDEN_PICKAXE = ITEMS.register(
-                    "reinforced_rose_golden_pickaxe", () -> new CustomToolItem.Pickaxe(EPTiers.ROSE_GOLD, HandleTier.REINFORCED, new Item.Properties()));
+                    "reinforced_rose_golden_pickaxe", () -> new CustomToolItem.Pickaxe(EPToolTier.ROSE_GOLD, HandleTier.REINFORCED, new Item.Properties()));
             public static final RegistryObject<Item> REINFORCED_ROSE_GOLDEN_AXE = ITEMS.register(
-                    "reinforced_rose_golden_axe", () -> new CustomToolItem.Axe(EPTiers.ROSE_GOLD, HandleTier.REINFORCED, 6, new Item.Properties()));
+                    "reinforced_rose_golden_axe", () -> new CustomToolItem.Axe(EPToolTier.ROSE_GOLD, HandleTier.REINFORCED, 6, new Item.Properties()));
             public static final RegistryObject<Item> REINFORCED_ROSE_GOLDEN_SHOVEL = ITEMS.register(
-                    "reinforced_rose_golden_shovel", () -> new CustomToolItem.Shovel(EPTiers.ROSE_GOLD, HandleTier.REINFORCED, new Item.Properties()));
+                    "reinforced_rose_golden_shovel", () -> new CustomToolItem.Shovel(EPToolTier.ROSE_GOLD, HandleTier.REINFORCED, new Item.Properties()));
             public static final RegistryObject<Item> REINFORCED_ROSE_GOLDEN_HOE = ITEMS.register(
-                    "reinforced_rose_golden_hoe", () -> new CustomToolItem.Hoe(EPTiers.ROSE_GOLD, HandleTier.REINFORCED, -2, new Item.Properties()));
+                    "reinforced_rose_golden_hoe", () -> new CustomToolItem.Hoe(EPToolTier.ROSE_GOLD, HandleTier.REINFORCED, -2, new Item.Properties()));
             public static final RegistryObject<Item> REINFORCED_ROSE_GOLDEN_POLISHER = ITEMS.register(
-                    "reinforced_rose_golden_polisher", () -> new CustomToolItem.Polisher(EPTiers.ROSE_GOLD, HandleTier.REINFORCED, new Item.Properties()));
+                    "reinforced_rose_golden_polisher", () -> new CustomToolItem.Polisher(EPToolTier.ROSE_GOLD, HandleTier.REINFORCED, new Item.Properties()));
             // Aluminum handle rose gold
             public static final RegistryObject<Item> ALUMINUM_ROSE_GOLDEN_SWORD = ITEMS.register(
-                    "aluminum_rose_golden_sword", () -> new CustomToolItem.Sword(EPTiers.ROSE_GOLD, HandleTier.ALUMINUM, new Item.Properties()));
+                    "aluminum_rose_golden_sword", () -> new CustomToolItem.Sword(EPToolTier.ROSE_GOLD, HandleTier.ALUMINUM, new Item.Properties()));
             public static final RegistryObject<Item> ALUMINUM_ROSE_GOLDEN_DAGGER = ITEMS.register(
-                    "aluminum_rose_golden_dagger", () -> new CustomToolItem.Dagger(EPTiers.ROSE_GOLD, HandleTier.ALUMINUM, 2, 0.25f, new Item.Properties()));
+                    "aluminum_rose_golden_dagger", () -> new CustomToolItem.Dagger(EPToolTier.ROSE_GOLD, HandleTier.ALUMINUM, 2, 0.25f, new Item.Properties()));
             public static final RegistryObject<Item> ALUMINUM_ROSE_GOLDEN_PICKAXE = ITEMS.register(
-                    "aluminum_rose_golden_pickaxe", () -> new CustomToolItem.Pickaxe(EPTiers.ROSE_GOLD, HandleTier.ALUMINUM, new Item.Properties()));
+                    "aluminum_rose_golden_pickaxe", () -> new CustomToolItem.Pickaxe(EPToolTier.ROSE_GOLD, HandleTier.ALUMINUM, new Item.Properties()));
             public static final RegistryObject<Item> ALUMINUM_ROSE_GOLDEN_AXE = ITEMS.register(
-                    "aluminum_rose_golden_axe", () -> new CustomToolItem.Axe(EPTiers.ROSE_GOLD, HandleTier.ALUMINUM, 6, new Item.Properties()));
+                    "aluminum_rose_golden_axe", () -> new CustomToolItem.Axe(EPToolTier.ROSE_GOLD, HandleTier.ALUMINUM, 6, new Item.Properties()));
             public static final RegistryObject<Item> ALUMINUM_ROSE_GOLDEN_SHOVEL = ITEMS.register(
-                    "aluminum_rose_golden_shovel", () -> new CustomToolItem.Shovel(EPTiers.ROSE_GOLD, HandleTier.ALUMINUM, new Item.Properties()));
+                    "aluminum_rose_golden_shovel", () -> new CustomToolItem.Shovel(EPToolTier.ROSE_GOLD, HandleTier.ALUMINUM, new Item.Properties()));
             public static final RegistryObject<Item> ALUMINUM_ROSE_GOLDEN_HOE = ITEMS.register(
-                    "aluminum_rose_golden_hoe", () -> new CustomToolItem.Hoe(EPTiers.ROSE_GOLD, HandleTier.ALUMINUM, -2, new Item.Properties()));
+                    "aluminum_rose_golden_hoe", () -> new CustomToolItem.Hoe(EPToolTier.ROSE_GOLD, HandleTier.ALUMINUM, -2, new Item.Properties()));
             public static final RegistryObject<Item> ALUMINUM_ROSE_GOLDEN_POLISHER = ITEMS.register(
-                    "aluminum_rose_golden_polisher", () -> new CustomToolItem.Polisher(EPTiers.ROSE_GOLD, HandleTier.ALUMINUM, new Item.Properties()));
+                    "aluminum_rose_golden_polisher", () -> new CustomToolItem.Polisher(EPToolTier.ROSE_GOLD, HandleTier.ALUMINUM, new Item.Properties()));
+            // Purple gold handle rose gold
+            public static final RegistryObject<Item> PURPLE_GOLD_ROSE_GOLDEN_SWORD = ITEMS.register(
+                    "purple_gold_rose_golden_sword", () -> new CustomToolItem.Sword(EPToolTier.ROSE_GOLD, HandleTier.PURPLE_GOLD, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_ROSE_GOLDEN_DAGGER = ITEMS.register(
+                    "purple_gold_rose_golden_dagger", () -> new CustomToolItem.Dagger(EPToolTier.ROSE_GOLD, HandleTier.PURPLE_GOLD, 2, 0.25f, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_ROSE_GOLDEN_PICKAXE = ITEMS.register(
+                    "purple_gold_rose_golden_pickaxe", () -> new CustomToolItem.Pickaxe(EPToolTier.ROSE_GOLD, HandleTier.PURPLE_GOLD, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_ROSE_GOLDEN_AXE = ITEMS.register(
+                    "purple_gold_rose_golden_axe", () -> new CustomToolItem.Axe(EPToolTier.ROSE_GOLD, HandleTier.PURPLE_GOLD, 6, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_ROSE_GOLDEN_SHOVEL = ITEMS.register(
+                    "purple_gold_rose_golden_shovel", () -> new CustomToolItem.Shovel(EPToolTier.ROSE_GOLD, HandleTier.PURPLE_GOLD, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_ROSE_GOLDEN_HOE = ITEMS.register(
+                    "purple_gold_rose_golden_hoe", () -> new CustomToolItem.Hoe(EPToolTier.ROSE_GOLD, HandleTier.PURPLE_GOLD, -2, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_ROSE_GOLDEN_POLISHER = ITEMS.register(
+                    "purple_gold_rose_golden_polisher", () -> new CustomToolItem.Polisher(EPToolTier.ROSE_GOLD, HandleTier.PURPLE_GOLD, new Item.Properties()));
 
         public static final RegistryObject<Item> ROSE_GOLDEN_HELMET = ITEMS.register(
                 "rose_golden_helmet", () -> new EPArmorItem(EPArmorMaterial.ROSE_GOLD, ArmorItem.Type.HELMET, true, new Item.Properties()));
@@ -598,49 +673,64 @@ public class EPItems {
 
         //Bronzium
         public static final RegistryObject<Item> BRONZIUM_SWORD = ITEMS.register(
-                "bronzium_sword",() -> new CustomToolItem.Sword(EPTiers.BRONZIUM, HandleTier.BASE, new Item.Properties()));
+                "bronzium_sword",() -> new CustomToolItem.Sword(EPToolTier.BRONZIUM, HandleTier.BASE, new Item.Properties()));
         public static final RegistryObject<Item> BRONZIUM_DAGGER = ITEMS.register(
-                "bronzium_dagger", () ->  new CustomToolItem.Dagger(EPTiers.BRONZIUM, HandleTier.BASE, 2, 0.25f, new Item.Properties()));
+                "bronzium_dagger", () ->  new CustomToolItem.Dagger(EPToolTier.BRONZIUM, HandleTier.BASE, 2, 0.25f, new Item.Properties()));
         public static final RegistryObject<Item> BRONZIUM_PICKAXE = ITEMS.register(
-                "bronzium_pickaxe",() -> new CustomToolItem.Pickaxe(EPTiers.BRONZIUM, HandleTier.BASE, new Item.Properties()));
+                "bronzium_pickaxe",() -> new CustomToolItem.Pickaxe(EPToolTier.BRONZIUM, HandleTier.BASE, new Item.Properties()));
         public static final RegistryObject<Item> BRONZIUM_AXE = ITEMS.register(
-                "bronzium_axe",() -> new CustomToolItem.Axe(EPTiers.BRONZIUM, HandleTier.BASE, 5, new Item.Properties()));
+                "bronzium_axe",() -> new CustomToolItem.Axe(EPToolTier.BRONZIUM, HandleTier.BASE, 5, new Item.Properties()));
         public static final RegistryObject<Item> BRONZIUM_SHOVEL = ITEMS.register(
-                "bronzium_shovel",() -> new CustomToolItem.Shovel(EPTiers.BRONZIUM, HandleTier.BASE, new Item.Properties()));
+                "bronzium_shovel",() -> new CustomToolItem.Shovel(EPToolTier.BRONZIUM, HandleTier.BASE, new Item.Properties()));
         public static final RegistryObject<Item> BRONZIUM_HOE = ITEMS.register(
-                "bronzium_hoe",() -> new CustomToolItem.Hoe(EPTiers.BRONZIUM, HandleTier.BASE, -2,  new Item.Properties()));
+                "bronzium_hoe",() -> new CustomToolItem.Hoe(EPToolTier.BRONZIUM, HandleTier.BASE, -2,  new Item.Properties()));
         public static final RegistryObject<Item> BRONZIUM_POLISHER = ITEMS.register(
-                "bronzium_polisher",() -> new CustomToolItem.Polisher(EPTiers.BRONZIUM, HandleTier.BASE, new Item.Properties()));
+                "bronzium_polisher",() -> new CustomToolItem.Polisher(EPToolTier.BRONZIUM, HandleTier.BASE, new Item.Properties()));
             // Reinforced handle bronzium
             public static final RegistryObject<Item> REINFORCED_BRONZIUM_SWORD = ITEMS.register(
-                    "reinforced_bronzium_sword", () -> new CustomToolItem.Sword(EPTiers.BRONZIUM, HandleTier.REINFORCED, new Item.Properties()));
+                    "reinforced_bronzium_sword", () -> new CustomToolItem.Sword(EPToolTier.BRONZIUM, HandleTier.REINFORCED, new Item.Properties()));
             public static final RegistryObject<Item> REINFORCED_BRONZIUM_DAGGER = ITEMS.register(
-                    "reinforced_bronzium_dagger", () -> new CustomToolItem.Dagger(EPTiers.BRONZIUM, HandleTier.REINFORCED, 2, 0.25f, new Item.Properties()));
+                    "reinforced_bronzium_dagger", () -> new CustomToolItem.Dagger(EPToolTier.BRONZIUM, HandleTier.REINFORCED, 2, 0.25f, new Item.Properties()));
             public static final RegistryObject<Item> REINFORCED_BRONZIUM_PICKAXE = ITEMS.register(
-                    "reinforced_bronzium_pickaxe", () -> new CustomToolItem.Pickaxe(EPTiers.BRONZIUM, HandleTier.REINFORCED, new Item.Properties()));
+                    "reinforced_bronzium_pickaxe", () -> new CustomToolItem.Pickaxe(EPToolTier.BRONZIUM, HandleTier.REINFORCED, new Item.Properties()));
             public static final RegistryObject<Item> REINFORCED_BRONZIUM_AXE = ITEMS.register(
-                    "reinforced_bronzium_axe", () -> new CustomToolItem.Axe(EPTiers.BRONZIUM, HandleTier.REINFORCED, 5, new Item.Properties()));
+                    "reinforced_bronzium_axe", () -> new CustomToolItem.Axe(EPToolTier.BRONZIUM, HandleTier.REINFORCED, 5, new Item.Properties()));
             public static final RegistryObject<Item> REINFORCED_BRONZIUM_SHOVEL = ITEMS.register(
-                    "reinforced_bronzium_shovel", () -> new CustomToolItem.Shovel(EPTiers.BRONZIUM, HandleTier.REINFORCED, new Item.Properties()));
+                    "reinforced_bronzium_shovel", () -> new CustomToolItem.Shovel(EPToolTier.BRONZIUM, HandleTier.REINFORCED, new Item.Properties()));
             public static final RegistryObject<Item> REINFORCED_BRONZIUM_HOE = ITEMS.register(
-                    "reinforced_bronzium_hoe", () -> new CustomToolItem.Hoe(EPTiers.BRONZIUM, HandleTier.REINFORCED, -2, new Item.Properties()));
+                    "reinforced_bronzium_hoe", () -> new CustomToolItem.Hoe(EPToolTier.BRONZIUM, HandleTier.REINFORCED, -2, new Item.Properties()));
             public static final RegistryObject<Item> REINFORCED_BRONZIUM_POLISHER = ITEMS.register(
-                    "reinforced_bronzium_polisher", () -> new CustomToolItem.Polisher(EPTiers.BRONZIUM, HandleTier.REINFORCED, new Item.Properties()));
+                    "reinforced_bronzium_polisher", () -> new CustomToolItem.Polisher(EPToolTier.BRONZIUM, HandleTier.REINFORCED, new Item.Properties()));
             // Aluminum handle bronzium
             public static final RegistryObject<Item> ALUMINUM_BRONZIUM_SWORD = ITEMS.register(
-                    "aluminum_bronzium_sword", () -> new CustomToolItem.Sword(EPTiers.BRONZIUM, HandleTier.ALUMINUM, new Item.Properties()));
+                    "aluminum_bronzium_sword", () -> new CustomToolItem.Sword(EPToolTier.BRONZIUM, HandleTier.ALUMINUM, new Item.Properties()));
             public static final RegistryObject<Item> ALUMINUM_BRONZIUM_DAGGER = ITEMS.register(
-                    "aluminum_bronzium_dagger", () -> new CustomToolItem.Dagger(EPTiers.BRONZIUM, HandleTier.ALUMINUM, 2, 0.25f, new Item.Properties()));
+                    "aluminum_bronzium_dagger", () -> new CustomToolItem.Dagger(EPToolTier.BRONZIUM, HandleTier.ALUMINUM, 2, 0.25f, new Item.Properties()));
             public static final RegistryObject<Item> ALUMINUM_BRONZIUM_PICKAXE = ITEMS.register(
-                    "aluminum_bronzium_pickaxe", () -> new CustomToolItem.Pickaxe(EPTiers.BRONZIUM, HandleTier.ALUMINUM, new Item.Properties()));
+                    "aluminum_bronzium_pickaxe", () -> new CustomToolItem.Pickaxe(EPToolTier.BRONZIUM, HandleTier.ALUMINUM, new Item.Properties()));
             public static final RegistryObject<Item> ALUMINUM_BRONZIUM_AXE = ITEMS.register(
-                    "aluminum_bronzium_axe", () -> new CustomToolItem.Axe(EPTiers.BRONZIUM, HandleTier.ALUMINUM, 5, new Item.Properties()));
+                    "aluminum_bronzium_axe", () -> new CustomToolItem.Axe(EPToolTier.BRONZIUM, HandleTier.ALUMINUM, 5, new Item.Properties()));
             public static final RegistryObject<Item> ALUMINUM_BRONZIUM_SHOVEL = ITEMS.register(
-                    "aluminum_bronzium_shovel", () -> new CustomToolItem.Shovel(EPTiers.BRONZIUM, HandleTier.ALUMINUM, new Item.Properties()));
+                    "aluminum_bronzium_shovel", () -> new CustomToolItem.Shovel(EPToolTier.BRONZIUM, HandleTier.ALUMINUM, new Item.Properties()));
             public static final RegistryObject<Item> ALUMINUM_BRONZIUM_HOE = ITEMS.register(
-                    "aluminum_bronzium_hoe", () -> new CustomToolItem.Hoe(EPTiers.BRONZIUM, HandleTier.ALUMINUM, -2, new Item.Properties()));
+                    "aluminum_bronzium_hoe", () -> new CustomToolItem.Hoe(EPToolTier.BRONZIUM, HandleTier.ALUMINUM, -2, new Item.Properties()));
             public static final RegistryObject<Item> ALUMINUM_BRONZIUM_POLISHER = ITEMS.register(
-                    "aluminum_bronzium_polisher", () -> new CustomToolItem.Polisher(EPTiers.BRONZIUM, HandleTier.ALUMINUM, new Item.Properties()));
+                    "aluminum_bronzium_polisher", () -> new CustomToolItem.Polisher(EPToolTier.BRONZIUM, HandleTier.ALUMINUM, new Item.Properties()));
+            // Purple gold handle bronzium
+            public static final RegistryObject<Item> PURPLE_GOLD_BRONZIUM_SWORD = ITEMS.register(
+                    "purple_gold_bronzium_sword", () -> new CustomToolItem.Sword(EPToolTier.BRONZIUM, HandleTier.PURPLE_GOLD, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_BRONZIUM_DAGGER = ITEMS.register(
+                    "purple_gold_bronzium_dagger", () -> new CustomToolItem.Dagger(EPToolTier.BRONZIUM, HandleTier.PURPLE_GOLD, 2, 0.25f, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_BRONZIUM_PICKAXE = ITEMS.register(
+                    "purple_gold_bronzium_pickaxe", () -> new CustomToolItem.Pickaxe(EPToolTier.BRONZIUM, HandleTier.PURPLE_GOLD, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_BRONZIUM_AXE = ITEMS.register(
+                    "purple_gold_bronzium_axe", () -> new CustomToolItem.Axe(EPToolTier.BRONZIUM, HandleTier.PURPLE_GOLD, 5, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_BRONZIUM_SHOVEL = ITEMS.register(
+                    "purple_gold_bronzium_shovel", () -> new CustomToolItem.Shovel(EPToolTier.BRONZIUM, HandleTier.PURPLE_GOLD, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_BRONZIUM_HOE = ITEMS.register(
+                    "purple_gold_bronzium_hoe", () -> new CustomToolItem.Hoe(EPToolTier.BRONZIUM, HandleTier.PURPLE_GOLD, -2, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_BRONZIUM_POLISHER = ITEMS.register(
+                    "purple_gold_bronzium_polisher", () -> new CustomToolItem.Polisher(EPToolTier.BRONZIUM, HandleTier.PURPLE_GOLD, new Item.Properties()));
 
         public static final RegistryObject<Item> BRONZIUM_HELMET = ITEMS.register(
                 "bronzium_helmet", () -> new EPArmorItem(EPArmorMaterial.BRONZIUM, ArmorItem.Type.HELMET, false, new Item.Properties()));
@@ -686,52 +776,82 @@ public class EPItems {
                     "aluminum_iron_hoe", () -> new CustomToolItem.Hoe(Tiers.IRON, HandleTier.ALUMINUM, -2, new Item.Properties()));
             public static final RegistryObject<Item> ALUMINUM_IRON_POLISHER = ITEMS.register(
                     "aluminum_iron_polisher", () -> new CustomToolItem.Polisher(Tiers.IRON, HandleTier.ALUMINUM, new Item.Properties()));
+            // Purple gold handle iron
+            public static final RegistryObject<Item> PURPLE_GOLD_IRON_SWORD = ITEMS.register(
+                    "purple_gold_iron_sword", () -> new CustomToolItem.Sword(Tiers.IRON, HandleTier.PURPLE_GOLD, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_IRON_DAGGER = ITEMS.register(
+                    "purple_gold_iron_dagger", () -> new CustomToolItem.Dagger(Tiers.IRON, HandleTier.PURPLE_GOLD, 2, 0.2f, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_IRON_PICKAXE = ITEMS.register(
+                    "purple_gold_iron_pickaxe", () -> new CustomToolItem.Pickaxe(Tiers.IRON, HandleTier.PURPLE_GOLD, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_IRON_AXE = ITEMS.register(
+                    "purple_gold_iron_axe", () -> new CustomToolItem.Axe(Tiers.IRON, HandleTier.PURPLE_GOLD, 6, -2.6f, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_IRON_SHOVEL = ITEMS.register(
+                    "purple_gold_iron_shovel", () -> new CustomToolItem.Shovel(Tiers.IRON, HandleTier.PURPLE_GOLD, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_IRON_HOE = ITEMS.register(
+                    "purple_gold_iron_hoe", () -> new CustomToolItem.Hoe(Tiers.IRON, HandleTier.PURPLE_GOLD, -2, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_IRON_POLISHER = ITEMS.register(
+                    "purple_gold_iron_polisher", () -> new CustomToolItem.Polisher(Tiers.IRON, HandleTier.PURPLE_GOLD, new Item.Properties()));
 
         //Steel
         public static final RegistryObject<Item> STEEL_SWORD = ITEMS.register(
-                "steel_sword",() -> new CustomToolItem.Sword(EPTiers.STEEL, HandleTier.BASE, new Item.Properties()));
+                "steel_sword",() -> new CustomToolItem.Sword(EPToolTier.STEEL, HandleTier.BASE, new Item.Properties()));
         public static final RegistryObject<Item> STEEL_DAGGER = ITEMS.register(
-                "steel_dagger", () ->  new CustomToolItem.Dagger(EPTiers.STEEL, HandleTier.BASE, 2, 0.3f, new Item.Properties()));
+                "steel_dagger", () ->  new CustomToolItem.Dagger(EPToolTier.STEEL, HandleTier.BASE, 2, 0.3f, new Item.Properties()));
         public static final RegistryObject<Item> STEEL_PICKAXE = ITEMS.register(
-                "steel_pickaxe",() -> new CustomToolItem.Pickaxe(EPTiers.STEEL, HandleTier.BASE, new Item.Properties()));
+                "steel_pickaxe",() -> new CustomToolItem.Pickaxe(EPToolTier.STEEL, HandleTier.BASE, new Item.Properties()));
         public static final RegistryObject<Item> STEEL_AXE = ITEMS.register(
-                "steel_axe",() -> new CustomToolItem.Axe(EPTiers.STEEL, HandleTier.BASE, 5, new Item.Properties()));
+                "steel_axe",() -> new CustomToolItem.Axe(EPToolTier.STEEL, HandleTier.BASE, 5, new Item.Properties()));
         public static final RegistryObject<Item> STEEL_SHOVEL = ITEMS.register(
-                "steel_shovel",() -> new CustomToolItem.Shovel(EPTiers.STEEL, HandleTier.BASE, new Item.Properties()));
+                "steel_shovel",() -> new CustomToolItem.Shovel(EPToolTier.STEEL, HandleTier.BASE, new Item.Properties()));
         public static final RegistryObject<Item> STEEL_HOE = ITEMS.register(
-                "steel_hoe",() -> new CustomToolItem.Hoe(EPTiers.STEEL, HandleTier.BASE, -3, new Item.Properties()));
+                "steel_hoe",() -> new CustomToolItem.Hoe(EPToolTier.STEEL, HandleTier.BASE, -3, new Item.Properties()));
         public static final RegistryObject<Item> STEEL_POLISHER = ITEMS.register(
-            "steel_polisher",() -> new CustomToolItem.Polisher(EPTiers.STEEL, HandleTier.BASE, new Item.Properties()));
+            "steel_polisher",() -> new CustomToolItem.Polisher(EPToolTier.STEEL, HandleTier.BASE, new Item.Properties()));
             // Reinforced handle steel
             public static final RegistryObject<Item> REINFORCED_STEEL_SWORD = ITEMS.register(
-                    "reinforced_steel_sword", () -> new CustomToolItem.Sword(EPTiers.STEEL, HandleTier.REINFORCED, new Item.Properties()));
+                    "reinforced_steel_sword", () -> new CustomToolItem.Sword(EPToolTier.STEEL, HandleTier.REINFORCED, new Item.Properties()));
             public static final RegistryObject<Item> REINFORCED_STEEL_DAGGER = ITEMS.register(
-                    "reinforced_steel_dagger", () -> new CustomToolItem.Dagger(EPTiers.STEEL, HandleTier.REINFORCED, 2, 0.3f, new Item.Properties()));
+                    "reinforced_steel_dagger", () -> new CustomToolItem.Dagger(EPToolTier.STEEL, HandleTier.REINFORCED, 2, 0.3f, new Item.Properties()));
             public static final RegistryObject<Item> REINFORCED_STEEL_PICKAXE = ITEMS.register(
-                    "reinforced_steel_pickaxe", () -> new CustomToolItem.Pickaxe(EPTiers.STEEL, HandleTier.REINFORCED, new Item.Properties()));
+                    "reinforced_steel_pickaxe", () -> new CustomToolItem.Pickaxe(EPToolTier.STEEL, HandleTier.REINFORCED, new Item.Properties()));
             public static final RegistryObject<Item> REINFORCED_STEEL_AXE = ITEMS.register(
-                    "reinforced_steel_axe", () -> new CustomToolItem.Axe(EPTiers.STEEL, HandleTier.REINFORCED, 5, new Item.Properties()));
+                    "reinforced_steel_axe", () -> new CustomToolItem.Axe(EPToolTier.STEEL, HandleTier.REINFORCED, 5, new Item.Properties()));
             public static final RegistryObject<Item> REINFORCED_STEEL_SHOVEL = ITEMS.register(
-                    "reinforced_steel_shovel", () -> new CustomToolItem.Shovel(EPTiers.STEEL, HandleTier.REINFORCED, new Item.Properties()));
+                    "reinforced_steel_shovel", () -> new CustomToolItem.Shovel(EPToolTier.STEEL, HandleTier.REINFORCED, new Item.Properties()));
             public static final RegistryObject<Item> REINFORCED_STEEL_HOE = ITEMS.register(
-                    "reinforced_steel_hoe", () -> new CustomToolItem.Hoe(EPTiers.STEEL, HandleTier.REINFORCED, -3, new Item.Properties()));
+                    "reinforced_steel_hoe", () -> new CustomToolItem.Hoe(EPToolTier.STEEL, HandleTier.REINFORCED, -3, new Item.Properties()));
             public static final RegistryObject<Item> REINFORCED_STEEL_POLISHER = ITEMS.register(
-                    "reinforced_steel_polisher", () -> new CustomToolItem.Polisher(EPTiers.STEEL, HandleTier.REINFORCED, new Item.Properties()));
+                    "reinforced_steel_polisher", () -> new CustomToolItem.Polisher(EPToolTier.STEEL, HandleTier.REINFORCED, new Item.Properties()));
             // Aluminum handle steel
             public static final RegistryObject<Item> ALUMINUM_STEEL_SWORD = ITEMS.register(
-                    "aluminum_steel_sword", () -> new CustomToolItem.Sword(EPTiers.STEEL, HandleTier.ALUMINUM, new Item.Properties()));
+                    "aluminum_steel_sword", () -> new CustomToolItem.Sword(EPToolTier.STEEL, HandleTier.ALUMINUM, new Item.Properties()));
             public static final RegistryObject<Item> ALUMINUM_STEEL_DAGGER = ITEMS.register(
-                    "aluminum_steel_dagger", () -> new CustomToolItem.Dagger(EPTiers.STEEL, HandleTier.ALUMINUM, 2, 0.3f, new Item.Properties()));
+                    "aluminum_steel_dagger", () -> new CustomToolItem.Dagger(EPToolTier.STEEL, HandleTier.ALUMINUM, 2, 0.3f, new Item.Properties()));
             public static final RegistryObject<Item> ALUMINUM_STEEL_PICKAXE = ITEMS.register(
-                    "aluminum_steel_pickaxe", () -> new CustomToolItem.Pickaxe(EPTiers.STEEL, HandleTier.ALUMINUM, new Item.Properties()));
+                    "aluminum_steel_pickaxe", () -> new CustomToolItem.Pickaxe(EPToolTier.STEEL, HandleTier.ALUMINUM, new Item.Properties()));
             public static final RegistryObject<Item> ALUMINUM_STEEL_AXE = ITEMS.register(
-                    "aluminum_steel_axe", () -> new CustomToolItem.Axe(EPTiers.STEEL, HandleTier.ALUMINUM, 5, new Item.Properties()));
+                    "aluminum_steel_axe", () -> new CustomToolItem.Axe(EPToolTier.STEEL, HandleTier.ALUMINUM, 5, new Item.Properties()));
             public static final RegistryObject<Item> ALUMINUM_STEEL_SHOVEL = ITEMS.register(
-                    "aluminum_steel_shovel", () -> new CustomToolItem.Shovel(EPTiers.STEEL, HandleTier.ALUMINUM, new Item.Properties()));
+                    "aluminum_steel_shovel", () -> new CustomToolItem.Shovel(EPToolTier.STEEL, HandleTier.ALUMINUM, new Item.Properties()));
             public static final RegistryObject<Item> ALUMINUM_STEEL_HOE = ITEMS.register(
-                    "aluminum_steel_hoe", () -> new CustomToolItem.Hoe(EPTiers.STEEL, HandleTier.ALUMINUM, -3, new Item.Properties()));
+                    "aluminum_steel_hoe", () -> new CustomToolItem.Hoe(EPToolTier.STEEL, HandleTier.ALUMINUM, -3, new Item.Properties()));
             public static final RegistryObject<Item> ALUMINUM_STEEL_POLISHER = ITEMS.register(
-                    "aluminum_steel_polisher", () -> new CustomToolItem.Polisher(EPTiers.STEEL, HandleTier.ALUMINUM, new Item.Properties()));
+                    "aluminum_steel_polisher", () -> new CustomToolItem.Polisher(EPToolTier.STEEL, HandleTier.ALUMINUM, new Item.Properties()));
+            // Purple gold handle steel
+            public static final RegistryObject<Item> PURPLE_GOLD_STEEL_SWORD = ITEMS.register(
+                    "purple_gold_steel_sword", () -> new CustomToolItem.Sword(EPToolTier.STEEL, HandleTier.PURPLE_GOLD, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_STEEL_DAGGER = ITEMS.register(
+                    "purple_gold_steel_dagger", () -> new CustomToolItem.Dagger(EPToolTier.STEEL, HandleTier.PURPLE_GOLD, 2, 0.3f, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_STEEL_PICKAXE = ITEMS.register(
+                    "purple_gold_steel_pickaxe", () -> new CustomToolItem.Pickaxe(EPToolTier.STEEL, HandleTier.PURPLE_GOLD, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_STEEL_AXE = ITEMS.register(
+                    "purple_gold_steel_axe", () -> new CustomToolItem.Axe(EPToolTier.STEEL, HandleTier.PURPLE_GOLD, 5, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_STEEL_SHOVEL = ITEMS.register(
+                    "purple_gold_steel_shovel", () -> new CustomToolItem.Shovel(EPToolTier.STEEL, HandleTier.PURPLE_GOLD, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_STEEL_HOE = ITEMS.register(
+                    "purple_gold_steel_hoe", () -> new CustomToolItem.Hoe(EPToolTier.STEEL, HandleTier.PURPLE_GOLD, -3, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_STEEL_POLISHER = ITEMS.register(
+                    "purple_gold_steel_polisher", () -> new CustomToolItem.Polisher(EPToolTier.STEEL, HandleTier.PURPLE_GOLD, new Item.Properties()));
 
         public static final RegistryObject<Item> STEEL_HELMET = ITEMS.register(
             "steel_helmet", () -> new ArmorItem(EPArmorMaterial.STEEL, ArmorItem.Type.HELMET, new Item.Properties()));
@@ -744,49 +864,64 @@ public class EPItems {
 
         //Green Gold
         public static final RegistryObject<Item> GREEN_GOLDEN_SWORD = ITEMS.register(
-                "green_golden_sword",() -> new CustomToolItem.Sword(EPTiers.GREEN_GOLD, HandleTier.BASE, new Item.Properties()));
+                "green_golden_sword",() -> new CustomToolItem.Sword(EPToolTier.GREEN_GOLD, HandleTier.BASE, new Item.Properties()));
         public static final RegistryObject<Item> GREEN_GOLDEN_DAGGER = ITEMS.register(
-                "green_golden_dagger", () ->  new CustomToolItem.Dagger(EPTiers.GREEN_GOLD, HandleTier.BASE, 2, 0.25f, new Item.Properties()));
+                "green_golden_dagger", () ->  new CustomToolItem.Dagger(EPToolTier.GREEN_GOLD, HandleTier.BASE, 2, 0.25f, new Item.Properties()));
         public static final RegistryObject<Item> GREEN_GOLDEN_PICKAXE = ITEMS.register(
-                "green_golden_pickaxe",() -> new CustomToolItem.Pickaxe(EPTiers.GREEN_GOLD, HandleTier.BASE, new Item.Properties()));
+                "green_golden_pickaxe",() -> new CustomToolItem.Pickaxe(EPToolTier.GREEN_GOLD, HandleTier.BASE, new Item.Properties()));
         public static final RegistryObject<Item> GREEN_GOLDEN_AXE = ITEMS.register(
-                "green_golden_axe",() -> new CustomToolItem.Axe(EPTiers.GREEN_GOLD, HandleTier.BASE, 7, new Item.Properties()));
+                "green_golden_axe",() -> new CustomToolItem.Axe(EPToolTier.GREEN_GOLD, HandleTier.BASE, 7, new Item.Properties()));
         public static final RegistryObject<Item> GREEN_GOLDEN_SHOVEL = ITEMS.register(
-                "green_golden_shovel",() -> new CustomToolItem.Shovel(EPTiers.GREEN_GOLD, HandleTier.BASE, new Item.Properties()));
+                "green_golden_shovel",() -> new CustomToolItem.Shovel(EPToolTier.GREEN_GOLD, HandleTier.BASE, new Item.Properties()));
         public static final RegistryObject<Item> GREEN_GOLDEN_HOE = ITEMS.register(
-                "green_golden_hoe",() -> new CustomToolItem.Hoe(EPTiers.GREEN_GOLD, HandleTier.BASE, -3, new Item.Properties()));
+                "green_golden_hoe",() -> new CustomToolItem.Hoe(EPToolTier.GREEN_GOLD, HandleTier.BASE, -3, new Item.Properties()));
         public static final RegistryObject<Item> GREEN_GOLDEN_POLISHER = ITEMS.register(
-                "green_golden_polisher", () -> new CustomToolItem.Polisher(EPTiers.GREEN_GOLD, HandleTier.BASE, new Item.Properties()));
+                "green_golden_polisher", () -> new CustomToolItem.Polisher(EPToolTier.GREEN_GOLD, HandleTier.BASE, new Item.Properties()));
             // Reinforced handle green gold
             public static final RegistryObject<Item> REINFORCED_GREEN_GOLDEN_SWORD = ITEMS.register(
-                    "reinforced_green_golden_sword", () -> new CustomToolItem.Sword(EPTiers.GREEN_GOLD, HandleTier.REINFORCED, new Item.Properties()));
+                    "reinforced_green_golden_sword", () -> new CustomToolItem.Sword(EPToolTier.GREEN_GOLD, HandleTier.REINFORCED, new Item.Properties()));
             public static final RegistryObject<Item> REINFORCED_GREEN_GOLDEN_DAGGER = ITEMS.register(
-                    "reinforced_green_golden_dagger", () -> new CustomToolItem.Dagger(EPTiers.GREEN_GOLD, HandleTier.REINFORCED, 2, 0.25f, new Item.Properties()));
+                    "reinforced_green_golden_dagger", () -> new CustomToolItem.Dagger(EPToolTier.GREEN_GOLD, HandleTier.REINFORCED, 2, 0.25f, new Item.Properties()));
             public static final RegistryObject<Item> REINFORCED_GREEN_GOLDEN_PICKAXE = ITEMS.register(
-                    "reinforced_green_golden_pickaxe", () -> new CustomToolItem.Pickaxe(EPTiers.GREEN_GOLD, HandleTier.REINFORCED, new Item.Properties()));
+                    "reinforced_green_golden_pickaxe", () -> new CustomToolItem.Pickaxe(EPToolTier.GREEN_GOLD, HandleTier.REINFORCED, new Item.Properties()));
             public static final RegistryObject<Item> REINFORCED_GREEN_GOLDEN_AXE = ITEMS.register(
-                    "reinforced_green_golden_axe", () -> new CustomToolItem.Axe(EPTiers.GREEN_GOLD, HandleTier.REINFORCED, 7, new Item.Properties()));
+                    "reinforced_green_golden_axe", () -> new CustomToolItem.Axe(EPToolTier.GREEN_GOLD, HandleTier.REINFORCED, 7, new Item.Properties()));
             public static final RegistryObject<Item> REINFORCED_GREEN_GOLDEN_SHOVEL = ITEMS.register(
-                    "reinforced_green_golden_shovel", () -> new CustomToolItem.Shovel(EPTiers.GREEN_GOLD, HandleTier.REINFORCED, new Item.Properties()));
+                    "reinforced_green_golden_shovel", () -> new CustomToolItem.Shovel(EPToolTier.GREEN_GOLD, HandleTier.REINFORCED, new Item.Properties()));
             public static final RegistryObject<Item> REINFORCED_GREEN_GOLDEN_HOE = ITEMS.register(
-                    "reinforced_green_golden_hoe", () -> new CustomToolItem.Hoe(EPTiers.GREEN_GOLD, HandleTier.REINFORCED, -3, new Item.Properties()));
+                    "reinforced_green_golden_hoe", () -> new CustomToolItem.Hoe(EPToolTier.GREEN_GOLD, HandleTier.REINFORCED, -3, new Item.Properties()));
             public static final RegistryObject<Item> REINFORCED_GREEN_GOLDEN_POLISHER = ITEMS.register(
-                    "reinforced_green_golden_polisher", () -> new CustomToolItem.Polisher(EPTiers.GREEN_GOLD, HandleTier.REINFORCED, new Item.Properties()));
+                    "reinforced_green_golden_polisher", () -> new CustomToolItem.Polisher(EPToolTier.GREEN_GOLD, HandleTier.REINFORCED, new Item.Properties()));
             // Aluminum handle green gold
             public static final RegistryObject<Item> ALUMINUM_GREEN_GOLDEN_SWORD = ITEMS.register(
-                    "aluminum_green_golden_sword", () -> new CustomToolItem.Sword(EPTiers.GREEN_GOLD, HandleTier.ALUMINUM, new Item.Properties()));
+                    "aluminum_green_golden_sword", () -> new CustomToolItem.Sword(EPToolTier.GREEN_GOLD, HandleTier.ALUMINUM, new Item.Properties()));
             public static final RegistryObject<Item> ALUMINUM_GREEN_GOLDEN_DAGGER = ITEMS.register(
-                    "aluminum_green_golden_dagger", () -> new CustomToolItem.Dagger(EPTiers.GREEN_GOLD, HandleTier.ALUMINUM, 2, 0.25f, new Item.Properties()));
+                    "aluminum_green_golden_dagger", () -> new CustomToolItem.Dagger(EPToolTier.GREEN_GOLD, HandleTier.ALUMINUM, 2, 0.25f, new Item.Properties()));
             public static final RegistryObject<Item> ALUMINUM_GREEN_GOLDEN_PICKAXE = ITEMS.register(
-                    "aluminum_green_golden_pickaxe", () -> new CustomToolItem.Pickaxe(EPTiers.GREEN_GOLD, HandleTier.ALUMINUM, new Item.Properties()));
+                    "aluminum_green_golden_pickaxe", () -> new CustomToolItem.Pickaxe(EPToolTier.GREEN_GOLD, HandleTier.ALUMINUM, new Item.Properties()));
             public static final RegistryObject<Item> ALUMINUM_GREEN_GOLDEN_AXE = ITEMS.register(
-                    "aluminum_green_golden_axe", () -> new CustomToolItem.Axe(EPTiers.GREEN_GOLD, HandleTier.ALUMINUM, 7, new Item.Properties()));
+                    "aluminum_green_golden_axe", () -> new CustomToolItem.Axe(EPToolTier.GREEN_GOLD, HandleTier.ALUMINUM, 7, new Item.Properties()));
             public static final RegistryObject<Item> ALUMINUM_GREEN_GOLDEN_SHOVEL = ITEMS.register(
-                    "aluminum_green_golden_shovel", () -> new CustomToolItem.Shovel(EPTiers.GREEN_GOLD, HandleTier.ALUMINUM, new Item.Properties()));
+                    "aluminum_green_golden_shovel", () -> new CustomToolItem.Shovel(EPToolTier.GREEN_GOLD, HandleTier.ALUMINUM, new Item.Properties()));
             public static final RegistryObject<Item> ALUMINUM_GREEN_GOLDEN_HOE = ITEMS.register(
-                    "aluminum_green_golden_hoe", () -> new CustomToolItem.Hoe(EPTiers.GREEN_GOLD, HandleTier.ALUMINUM, -3, new Item.Properties()));
+                    "aluminum_green_golden_hoe", () -> new CustomToolItem.Hoe(EPToolTier.GREEN_GOLD, HandleTier.ALUMINUM, -3, new Item.Properties()));
             public static final RegistryObject<Item> ALUMINUM_GREEN_GOLDEN_POLISHER = ITEMS.register(
-                    "aluminum_green_golden_polisher", () -> new CustomToolItem.Polisher(EPTiers.GREEN_GOLD, HandleTier.ALUMINUM, new Item.Properties()));
+                    "aluminum_green_golden_polisher", () -> new CustomToolItem.Polisher(EPToolTier.GREEN_GOLD, HandleTier.ALUMINUM, new Item.Properties()));
+            // Purple gold handle green gold
+            public static final RegistryObject<Item> PURPLE_GOLD_GREEN_GOLDEN_SWORD = ITEMS.register(
+                    "purple_gold_green_golden_sword", () -> new CustomToolItem.Sword(EPToolTier.GREEN_GOLD, HandleTier.PURPLE_GOLD, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_GREEN_GOLDEN_DAGGER = ITEMS.register(
+                    "purple_gold_green_golden_dagger", () -> new CustomToolItem.Dagger(EPToolTier.GREEN_GOLD, HandleTier.PURPLE_GOLD, 2, 0.25f, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_GREEN_GOLDEN_PICKAXE = ITEMS.register(
+                    "purple_gold_green_golden_pickaxe", () -> new CustomToolItem.Pickaxe(EPToolTier.GREEN_GOLD, HandleTier.PURPLE_GOLD, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_GREEN_GOLDEN_AXE = ITEMS.register(
+                    "purple_gold_green_golden_axe", () -> new CustomToolItem.Axe(EPToolTier.GREEN_GOLD, HandleTier.PURPLE_GOLD, 7, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_GREEN_GOLDEN_SHOVEL = ITEMS.register(
+                    "purple_gold_green_golden_shovel", () -> new CustomToolItem.Shovel(EPToolTier.GREEN_GOLD, HandleTier.PURPLE_GOLD, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_GREEN_GOLDEN_HOE = ITEMS.register(
+                    "purple_gold_green_golden_hoe", () -> new CustomToolItem.Hoe(EPToolTier.GREEN_GOLD, HandleTier.PURPLE_GOLD, -3, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_GREEN_GOLDEN_POLISHER = ITEMS.register(
+                    "purple_gold_green_golden_polisher", () -> new CustomToolItem.Polisher(EPToolTier.GREEN_GOLD, HandleTier.PURPLE_GOLD, new Item.Properties()));
 
         public static final RegistryObject<Item> GREEN_GOLDEN_HELMET = ITEMS.register(
                 "green_golden_helmet", () -> new EPArmorItem(EPArmorMaterial.GREEN_GOLD, ArmorItem.Type.HELMET, true, new Item.Properties()));
@@ -799,49 +934,64 @@ public class EPItems {
 
         //Blue gold
         public static final RegistryObject<Item> BLUE_GOLDEN_SWORD = ITEMS.register(
-                "blue_golden_sword",() -> new CustomToolItem.Sword(EPTiers.BLUE_GOLD, HandleTier.BASE, new Item.Properties()));
+                "blue_golden_sword",() -> new CustomToolItem.Sword(EPToolTier.BLUE_GOLD, HandleTier.BASE, new Item.Properties()));
         public static final RegistryObject<Item> BLUE_GOLDEN_DAGGER = ITEMS.register(
-                "blue_golden_dagger", () ->  new CustomToolItem.Dagger(EPTiers.BLUE_GOLD, HandleTier.BASE, 3, 0.3f, new Item.Properties()));
+                "blue_golden_dagger", () ->  new CustomToolItem.Dagger(EPToolTier.BLUE_GOLD, HandleTier.BASE, 3, 0.3f, new Item.Properties()));
         public static final RegistryObject<Item> BLUE_GOLDEN_PICKAXE = ITEMS.register(
-                "blue_golden_pickaxe",() -> new CustomToolItem.Pickaxe(EPTiers.BLUE_GOLD, HandleTier.BASE, new Item.Properties()));
+                "blue_golden_pickaxe",() -> new CustomToolItem.Pickaxe(EPToolTier.BLUE_GOLD, HandleTier.BASE, new Item.Properties()));
         public static final RegistryObject<Item> BLUE_GOLDEN_AXE = ITEMS.register(
-                "blue_golden_axe",() -> new CustomToolItem.Axe(EPTiers.BLUE_GOLD, HandleTier.BASE, 8, new Item.Properties()));
+                "blue_golden_axe",() -> new CustomToolItem.Axe(EPToolTier.BLUE_GOLD, HandleTier.BASE, 8, new Item.Properties()));
         public static final RegistryObject<Item> BLUE_GOLDEN_SHOVEL = ITEMS.register(
-                "blue_golden_shovel",() -> new CustomToolItem.Shovel(EPTiers.BLUE_GOLD, HandleTier.BASE, new Item.Properties()));
+                "blue_golden_shovel",() -> new CustomToolItem.Shovel(EPToolTier.BLUE_GOLD, HandleTier.BASE, new Item.Properties()));
         public static final RegistryObject<Item> BLUE_GOLDEN_HOE = ITEMS.register(
-                "blue_golden_hoe",() -> new CustomToolItem.Hoe(EPTiers.BLUE_GOLD, HandleTier.BASE, -3, new Item.Properties()));
+                "blue_golden_hoe",() -> new CustomToolItem.Hoe(EPToolTier.BLUE_GOLD, HandleTier.BASE, -3, new Item.Properties()));
         public static final RegistryObject<Item> BLUE_GOLDEN_POLISHER = ITEMS.register(
-                "blue_golden_polisher", () -> new CustomToolItem.Polisher(EPTiers.BLUE_GOLD, HandleTier.BASE, new Item.Properties()));
+                "blue_golden_polisher", () -> new CustomToolItem.Polisher(EPToolTier.BLUE_GOLD, HandleTier.BASE, new Item.Properties()));
             // Reinforced handle blue gold
             public static final RegistryObject<Item> REINFORCED_BLUE_GOLDEN_SWORD = ITEMS.register(
-                    "reinforced_blue_golden_sword", () -> new CustomToolItem.Sword(EPTiers.BLUE_GOLD, HandleTier.REINFORCED, new Item.Properties()));
+                    "reinforced_blue_golden_sword", () -> new CustomToolItem.Sword(EPToolTier.BLUE_GOLD, HandleTier.REINFORCED, new Item.Properties()));
             public static final RegistryObject<Item> REINFORCED_BLUE_GOLDEN_DAGGER = ITEMS.register(
-                    "reinforced_blue_golden_dagger", () -> new CustomToolItem.Dagger(EPTiers.BLUE_GOLD, HandleTier.REINFORCED, 3, 0.25f, new Item.Properties()));
+                    "reinforced_blue_golden_dagger", () -> new CustomToolItem.Dagger(EPToolTier.BLUE_GOLD, HandleTier.REINFORCED, 3, 0.25f, new Item.Properties()));
             public static final RegistryObject<Item> REINFORCED_BLUE_GOLDEN_PICKAXE = ITEMS.register(
-                    "reinforced_blue_golden_pickaxe", () -> new CustomToolItem.Pickaxe(EPTiers.BLUE_GOLD, HandleTier.REINFORCED, new Item.Properties()));
+                    "reinforced_blue_golden_pickaxe", () -> new CustomToolItem.Pickaxe(EPToolTier.BLUE_GOLD, HandleTier.REINFORCED, new Item.Properties()));
             public static final RegistryObject<Item> REINFORCED_BLUE_GOLDEN_AXE = ITEMS.register(
-                    "reinforced_blue_golden_axe", () -> new CustomToolItem.Axe(EPTiers.BLUE_GOLD, HandleTier.REINFORCED, 8, new Item.Properties()));
+                    "reinforced_blue_golden_axe", () -> new CustomToolItem.Axe(EPToolTier.BLUE_GOLD, HandleTier.REINFORCED, 8, new Item.Properties()));
             public static final RegistryObject<Item> REINFORCED_BLUE_GOLDEN_SHOVEL = ITEMS.register(
-                    "reinforced_blue_golden_shovel", () -> new CustomToolItem.Shovel(EPTiers.BLUE_GOLD, HandleTier.REINFORCED, new Item.Properties()));
+                    "reinforced_blue_golden_shovel", () -> new CustomToolItem.Shovel(EPToolTier.BLUE_GOLD, HandleTier.REINFORCED, new Item.Properties()));
             public static final RegistryObject<Item> REINFORCED_BLUE_GOLDEN_HOE = ITEMS.register(
-                    "reinforced_blue_golden_hoe", () -> new CustomToolItem.Hoe(EPTiers.BLUE_GOLD, HandleTier.REINFORCED, -3, new Item.Properties()));
+                    "reinforced_blue_golden_hoe", () -> new CustomToolItem.Hoe(EPToolTier.BLUE_GOLD, HandleTier.REINFORCED, -3, new Item.Properties()));
             public static final RegistryObject<Item> REINFORCED_BLUE_GOLDEN_POLISHER = ITEMS.register(
-                    "reinforced_blue_golden_polisher", () -> new CustomToolItem.Polisher(EPTiers.BLUE_GOLD, HandleTier.REINFORCED, new Item.Properties()));
+                    "reinforced_blue_golden_polisher", () -> new CustomToolItem.Polisher(EPToolTier.BLUE_GOLD, HandleTier.REINFORCED, new Item.Properties()));
             // Aluminum handle blue gold
             public static final RegistryObject<Item> ALUMINUM_BLUE_GOLDEN_SWORD = ITEMS.register(
-                    "aluminum_blue_golden_sword", () -> new CustomToolItem.Sword(EPTiers.BLUE_GOLD, HandleTier.ALUMINUM, new Item.Properties()));
+                    "aluminum_blue_golden_sword", () -> new CustomToolItem.Sword(EPToolTier.BLUE_GOLD, HandleTier.ALUMINUM, new Item.Properties()));
             public static final RegistryObject<Item> ALUMINUM_BLUE_GOLDEN_DAGGER = ITEMS.register(
-                    "aluminum_blue_golden_dagger", () -> new CustomToolItem.Dagger(EPTiers.BLUE_GOLD, HandleTier.ALUMINUM, 3, 0.25f, new Item.Properties()));
+                    "aluminum_blue_golden_dagger", () -> new CustomToolItem.Dagger(EPToolTier.BLUE_GOLD, HandleTier.ALUMINUM, 3, 0.25f, new Item.Properties()));
             public static final RegistryObject<Item> ALUMINUM_BLUE_GOLDEN_PICKAXE = ITEMS.register(
-                    "aluminum_blue_golden_pickaxe", () -> new CustomToolItem.Pickaxe(EPTiers.BLUE_GOLD, HandleTier.ALUMINUM, new Item.Properties()));
+                    "aluminum_blue_golden_pickaxe", () -> new CustomToolItem.Pickaxe(EPToolTier.BLUE_GOLD, HandleTier.ALUMINUM, new Item.Properties()));
             public static final RegistryObject<Item> ALUMINUM_BLUE_GOLDEN_AXE = ITEMS.register(
-                    "aluminum_blue_golden_axe", () -> new CustomToolItem.Axe(EPTiers.BLUE_GOLD, HandleTier.ALUMINUM, 8, new Item.Properties()));
+                    "aluminum_blue_golden_axe", () -> new CustomToolItem.Axe(EPToolTier.BLUE_GOLD, HandleTier.ALUMINUM, 8, new Item.Properties()));
             public static final RegistryObject<Item> ALUMINUM_BLUE_GOLDEN_SHOVEL = ITEMS.register(
-                    "aluminum_blue_golden_shovel", () -> new CustomToolItem.Shovel(EPTiers.BLUE_GOLD, HandleTier.ALUMINUM, new Item.Properties()));
+                    "aluminum_blue_golden_shovel", () -> new CustomToolItem.Shovel(EPToolTier.BLUE_GOLD, HandleTier.ALUMINUM, new Item.Properties()));
             public static final RegistryObject<Item> ALUMINUM_BLUE_GOLDEN_HOE = ITEMS.register(
-                    "aluminum_blue_golden_hoe", () -> new CustomToolItem.Hoe(EPTiers.BLUE_GOLD, HandleTier.ALUMINUM, -3, new Item.Properties()));
+                    "aluminum_blue_golden_hoe", () -> new CustomToolItem.Hoe(EPToolTier.BLUE_GOLD, HandleTier.ALUMINUM, -3, new Item.Properties()));
             public static final RegistryObject<Item> ALUMINUM_BLUE_GOLDEN_POLISHER = ITEMS.register(
-                    "aluminum_blue_golden_polisher", () -> new CustomToolItem.Polisher(EPTiers.BLUE_GOLD, HandleTier.ALUMINUM, new Item.Properties()));
+                    "aluminum_blue_golden_polisher", () -> new CustomToolItem.Polisher(EPToolTier.BLUE_GOLD, HandleTier.ALUMINUM, new Item.Properties()));
+            // Purple gold handle blue gold
+            public static final RegistryObject<Item> PURPLE_GOLD_BLUE_GOLDEN_SWORD = ITEMS.register(
+                    "purple_gold_blue_golden_sword", () -> new CustomToolItem.Sword(EPToolTier.BLUE_GOLD, HandleTier.PURPLE_GOLD, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_BLUE_GOLDEN_DAGGER = ITEMS.register(
+                    "purple_gold_blue_golden_dagger", () -> new CustomToolItem.Dagger(EPToolTier.BLUE_GOLD, HandleTier.PURPLE_GOLD, 3, 0.25f, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_BLUE_GOLDEN_PICKAXE = ITEMS.register(
+                    "purple_gold_blue_golden_pickaxe", () -> new CustomToolItem.Pickaxe(EPToolTier.BLUE_GOLD, HandleTier.PURPLE_GOLD, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_BLUE_GOLDEN_AXE = ITEMS.register(
+                    "purple_gold_blue_golden_axe", () -> new CustomToolItem.Axe(EPToolTier.BLUE_GOLD, HandleTier.PURPLE_GOLD, 8, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_BLUE_GOLDEN_SHOVEL = ITEMS.register(
+                    "purple_gold_blue_golden_shovel", () -> new CustomToolItem.Shovel(EPToolTier.BLUE_GOLD, HandleTier.PURPLE_GOLD, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_BLUE_GOLDEN_HOE = ITEMS.register(
+                    "purple_gold_blue_golden_hoe", () -> new CustomToolItem.Hoe(EPToolTier.BLUE_GOLD, HandleTier.PURPLE_GOLD, -3, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_BLUE_GOLDEN_POLISHER = ITEMS.register(
+                    "purple_gold_blue_golden_polisher", () -> new CustomToolItem.Polisher(EPToolTier.BLUE_GOLD, HandleTier.PURPLE_GOLD, new Item.Properties()));
 
         public static final RegistryObject<Item> BLUE_GOLDEN_HELMET = ITEMS.register(
                 "blue_golden_helmet", () -> new EPArmorItem(EPArmorMaterial.BLUE_GOLD, ArmorItem.Type.HELMET, true, new Item.Properties()));
@@ -887,6 +1037,21 @@ public class EPItems {
                     "aluminum_diamond_hoe", () -> new CustomToolItem.Hoe(Tiers.DIAMOND, HandleTier.ALUMINUM, -3, new Item.Properties()));
             public static final RegistryObject<Item> ALUMINUM_DIAMOND_POLISHER = ITEMS.register(
                     "aluminum_diamond_polisher", () -> new CustomToolItem.Polisher(Tiers.DIAMOND, HandleTier.ALUMINUM, new Item.Properties()));
+            // Purple gold handle diamond
+            public static final RegistryObject<Item> PURPLE_GOLD_DIAMOND_SWORD = ITEMS.register(
+                    "purple_gold_diamond_sword", () -> new CustomToolItem.Sword(Tiers.DIAMOND, HandleTier.PURPLE_GOLD, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_DIAMOND_DAGGER = ITEMS.register(
+                    "purple_gold_diamond_dagger", () -> new CustomToolItem.Dagger(Tiers.DIAMOND, HandleTier.PURPLE_GOLD, 3, 0.3f, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_DIAMOND_PICKAXE = ITEMS.register(
+                    "purple_gold_diamond_pickaxe", () -> new CustomToolItem.Pickaxe(Tiers.DIAMOND, HandleTier.PURPLE_GOLD, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_DIAMOND_AXE = ITEMS.register(
+                    "purple_gold_diamond_axe", () -> new CustomToolItem.Axe(Tiers.DIAMOND, HandleTier.PURPLE_GOLD, 5, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_DIAMOND_SHOVEL = ITEMS.register(
+                    "purple_gold_diamond_shovel", () -> new CustomToolItem.Shovel(Tiers.DIAMOND, HandleTier.PURPLE_GOLD, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_DIAMOND_HOE = ITEMS.register(
+                    "purple_gold_diamond_hoe", () -> new CustomToolItem.Hoe(Tiers.DIAMOND, HandleTier.PURPLE_GOLD, -3, new Item.Properties()));
+            public static final RegistryObject<Item> PURPLE_GOLD_DIAMOND_POLISHER = ITEMS.register(
+                    "purple_gold_diamond_polisher", () -> new CustomToolItem.Polisher(Tiers.DIAMOND, HandleTier.PURPLE_GOLD, new Item.Properties()));
 
         //Netherite
         public static final RegistryObject<Item> NETHERITE_POLISHER = ITEMS.register(

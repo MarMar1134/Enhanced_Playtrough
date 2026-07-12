@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "enhanced_playthrough:item/iron_shovel",
+    "layer1": "enhanced_playthrough:item/handle/purple_gold_shovel"
+  }
+}

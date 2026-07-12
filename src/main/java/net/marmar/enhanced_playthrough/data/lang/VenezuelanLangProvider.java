@@ -80,8 +80,9 @@ public class VenezuelanLangProvider extends AbstractLangProvider {
         addGuiElements("gem_polisher_screen", "Usos");
 
         //Descriptions
-        addDescription("leather_stick_tool", "Mango reforzado: 10% mayor durabilidad");
-        addDescription("aluminum_stick_tool", "Mango de aluminio: 20% mayor durabilidad");
+        addDescription("reinforced_handle", "Mango reforzado: +10% durabilidad");
+        addDescription("aluminum_handle", "Mango de aluminio: +20% durabilidad, +1 velocidad de minado");
+        addDescription("purple_gold_handle", "Mango de oro morado: -10% durabilidad, +2 velocidad de minado");
         addDescription("polisher_item","Utilizado en el pulidor de gemas como combustible");
         addDescription("silver_armor", "Con toda la equipación: otorga Apuro al jugador");
         addDescription("rose_gold_armor", "Con toda la equipación: otorga Apuro al jugador");
@@ -575,6 +576,14 @@ public class VenezuelanLangProvider extends AbstractLangProvider {
         addItem(EPItems.ALUMINUM_SILVER_HOE, "Azadón de plata");
         addItem(EPItems.ALUMINUM_SILVER_POLISHER, "Pulidora de plata");
 
+        addItem(EPItems.PURPLE_GOLD_SILVER_SWORD, "Espada de plata");
+        addItem(EPItems.PURPLE_GOLD_SILVER_DAGGER, "Daga de plata");
+        addItem(EPItems.PURPLE_GOLD_SILVER_PICKAXE, "Pico de plata");
+        addItem(EPItems.PURPLE_GOLD_SILVER_AXE, "Hacha de plata");
+        addItem(EPItems.PURPLE_GOLD_SILVER_SHOVEL, "Pala de plata");
+        addItem(EPItems.PURPLE_GOLD_SILVER_HOE, "Azadón de plata");
+        addItem(EPItems.PURPLE_GOLD_SILVER_POLISHER, "Pulidora de plata");
+
         //Gold equipment
         addItem(EPItems.GOLDEN_POLISHER, "Pulidora de oro");
         addItem(EPItems.GOLDEN_DAGGER, "Daga de oro");
@@ -594,6 +603,14 @@ public class VenezuelanLangProvider extends AbstractLangProvider {
         addItem(EPItems.ALUMINUM_GOLDEN_SHOVEL, "Pala de oro");
         addItem(EPItems.ALUMINUM_GOLDEN_HOE, "Azadón de oro");
         addItem(EPItems.ALUMINUM_GOLDEN_POLISHER, "Pulidora de oro");
+
+        addItem(EPItems.PURPLE_GOLD_GOLDEN_SWORD, "Espada de oro");
+        addItem(EPItems.PURPLE_GOLD_GOLDEN_DAGGER, "Daga de oro");
+        addItem(EPItems.PURPLE_GOLD_GOLDEN_PICKAXE, "Pico de oro");
+        addItem(EPItems.PURPLE_GOLD_GOLDEN_AXE, "Hacha de oro");
+        addItem(EPItems.PURPLE_GOLD_GOLDEN_SHOVEL, "Pala de oro");
+        addItem(EPItems.PURPLE_GOLD_GOLDEN_HOE, "Azadón de oro");
+        addItem(EPItems.PURPLE_GOLD_GOLDEN_POLISHER, "Pulidora de oro");
 
         //Wood equipment
         addItem(EPItems.WOODEN_DAGGER, "Daga de madera");
@@ -631,6 +648,14 @@ public class VenezuelanLangProvider extends AbstractLangProvider {
         addItem(EPItems.ALUMINUM_BRASS_HOE, "Azadón de latón");
         addItem(EPItems.ALUMINUM_BRASS_POLISHER, "Pulidora de latón");
 
+        addItem(EPItems.PURPLE_GOLD_BRASS_SWORD, "Espada de latón");
+        addItem(EPItems.PURPLE_GOLD_BRASS_DAGGER, "Daga de latón");
+        addItem(EPItems.PURPLE_GOLD_BRASS_PICKAXE, "Pico de latón");
+        addItem(EPItems.PURPLE_GOLD_BRASS_AXE, "Hacha de latón");
+        addItem(EPItems.PURPLE_GOLD_BRASS_SHOVEL, "Pala de latón");
+        addItem(EPItems.PURPLE_GOLD_BRASS_HOE, "Azadón de latón");
+        addItem(EPItems.PURPLE_GOLD_BRASS_POLISHER, "Pulidora de latón");
+
         //Bronze equipment
         addItem(EPItems.BRONZE_SWORD, "Espada de bronce");
         addItem(EPItems.BRONZE_DAGGER, "Daga de bronce");
@@ -659,6 +684,14 @@ public class VenezuelanLangProvider extends AbstractLangProvider {
         addItem(EPItems.ALUMINUM_BRONZE_SHOVEL, "Pala de bronce");
         addItem(EPItems.ALUMINUM_BRONZE_HOE, "Azadón de bronce");
         addItem(EPItems.ALUMINUM_BRONZE_POLISHER, "Pulidora de bronce");
+
+        addItem(EPItems.PURPLE_GOLD_BRONZE_SWORD, "Espada de bronce");
+        addItem(EPItems.PURPLE_GOLD_BRONZE_DAGGER, "Daga de bronce");
+        addItem(EPItems.PURPLE_GOLD_BRONZE_PICKAXE, "Pico de bronce");
+        addItem(EPItems.PURPLE_GOLD_BRONZE_AXE, "Hacha de bronce");
+        addItem(EPItems.PURPLE_GOLD_BRONZE_SHOVEL, "Pala de bronce");
+        addItem(EPItems.PURPLE_GOLD_BRONZE_HOE, "Azadón de bronce");
+        addItem(EPItems.PURPLE_GOLD_BRONZE_POLISHER, "Pulidora de bronce");
 
         //Rose golden equipment
         addItem(EPItems.ROSE_GOLDEN_SWORD, "Espada de oro rosado");
@@ -689,6 +722,14 @@ public class VenezuelanLangProvider extends AbstractLangProvider {
         addItem(EPItems.ALUMINUM_ROSE_GOLDEN_HOE, "Azadón de oro rosado");
         addItem(EPItems.ALUMINUM_ROSE_GOLDEN_POLISHER, "Pulidora de oro rosado");
 
+        addItem(EPItems.PURPLE_GOLD_ROSE_GOLDEN_SWORD, "Espada de oro rosado");
+        addItem(EPItems.PURPLE_GOLD_ROSE_GOLDEN_DAGGER, "Daga de oro rosado");
+        addItem(EPItems.PURPLE_GOLD_ROSE_GOLDEN_PICKAXE, "Pico de oro rosado");
+        addItem(EPItems.PURPLE_GOLD_ROSE_GOLDEN_AXE, "Hacha de oro rosado");
+        addItem(EPItems.PURPLE_GOLD_ROSE_GOLDEN_SHOVEL, "Pala de oro rosado");
+        addItem(EPItems.PURPLE_GOLD_ROSE_GOLDEN_HOE, "Azadón de oro rosado");
+        addItem(EPItems.PURPLE_GOLD_ROSE_GOLDEN_POLISHER, "Pulidora de oro rosado");
+
         //Bronzium equipment
         addItem(EPItems.BRONZIUM_SWORD, "Espada de broncio");
         addItem(EPItems.BRONZIUM_DAGGER, "Daga de broncio");
@@ -718,6 +759,14 @@ public class VenezuelanLangProvider extends AbstractLangProvider {
         addItem(EPItems.ALUMINUM_BRONZIUM_HOE, "Azadón de broncio");
         addItem(EPItems.ALUMINUM_BRONZIUM_POLISHER, "Pulidora de broncio");
 
+        addItem(EPItems.PURPLE_GOLD_BRONZIUM_SWORD, "Espada de broncio");
+        addItem(EPItems.PURPLE_GOLD_BRONZIUM_DAGGER, "Daga de broncio");
+        addItem(EPItems.PURPLE_GOLD_BRONZIUM_PICKAXE, "Pico de broncio");
+        addItem(EPItems.PURPLE_GOLD_BRONZIUM_AXE, "Hacha de broncio");
+        addItem(EPItems.PURPLE_GOLD_BRONZIUM_SHOVEL, "Pala de broncio");
+        addItem(EPItems.PURPLE_GOLD_BRONZIUM_HOE, "Azadón de broncio");
+        addItem(EPItems.PURPLE_GOLD_BRONZIUM_POLISHER, "Pulidora de broncio");
+
         //Iron equipment
         addItem(EPItems.IRON_POLISHER, "Pulidora de hierro");
         addItem(EPItems.IRON_DAGGER, "Daga de hierro");
@@ -737,6 +786,14 @@ public class VenezuelanLangProvider extends AbstractLangProvider {
         addItem(EPItems.ALUMINUM_IRON_SHOVEL, "Pala de hierro");
         addItem(EPItems.ALUMINUM_IRON_HOE, "Azadón de hierro");
         addItem(EPItems.ALUMINUM_IRON_POLISHER, "Pulidora de hierro");
+
+        addItem(EPItems.PURPLE_GOLD_IRON_SWORD, "Espada de hierro");
+        addItem(EPItems.PURPLE_GOLD_IRON_DAGGER, "Daga de hierro");
+        addItem(EPItems.PURPLE_GOLD_IRON_PICKAXE, "Pico de hierro");
+        addItem(EPItems.PURPLE_GOLD_IRON_AXE, "Hacha de hierro");
+        addItem(EPItems.PURPLE_GOLD_IRON_SHOVEL, "Pala de hierro");
+        addItem(EPItems.PURPLE_GOLD_IRON_HOE, "Azadón de hierro");
+        addItem(EPItems.PURPLE_GOLD_IRON_POLISHER, "Pulidora de hierro");
 
         //Green golden equipment
         addItem(EPItems.GREEN_GOLDEN_SWORD, "Espada de oro verde");
@@ -767,6 +824,14 @@ public class VenezuelanLangProvider extends AbstractLangProvider {
         addItem(EPItems.ALUMINUM_GREEN_GOLDEN_HOE, "Azadón de oro verde");
         addItem(EPItems.ALUMINUM_GREEN_GOLDEN_POLISHER, "Pulidora de oro verde");
 
+        addItem(EPItems.PURPLE_GOLD_GREEN_GOLDEN_SWORD, "Espada de oro verde");
+        addItem(EPItems.PURPLE_GOLD_GREEN_GOLDEN_DAGGER, "Daga de oro verde");
+        addItem(EPItems.PURPLE_GOLD_GREEN_GOLDEN_PICKAXE, "Pico de oro verde");
+        addItem(EPItems.PURPLE_GOLD_GREEN_GOLDEN_AXE, "Hacha de oro verde");
+        addItem(EPItems.PURPLE_GOLD_GREEN_GOLDEN_SHOVEL, "Pala de oro verde");
+        addItem(EPItems.PURPLE_GOLD_GREEN_GOLDEN_HOE, "Azadón de oro verde");
+        addItem(EPItems.PURPLE_GOLD_GREEN_GOLDEN_POLISHER, "Pulidora de oro verde");
+
         //Steel equipment
         addItem(EPItems.STEEL_SWORD, "Espada de acero");
         addItem(EPItems.STEEL_DAGGER, "Daga de acero");
@@ -795,6 +860,14 @@ public class VenezuelanLangProvider extends AbstractLangProvider {
         addItem(EPItems.ALUMINUM_STEEL_SHOVEL, "Pala de acero");
         addItem(EPItems.ALUMINUM_STEEL_HOE, "Azadón de acero");
         addItem(EPItems.ALUMINUM_STEEL_POLISHER, "Pulidora de acero");
+
+        addItem(EPItems.PURPLE_GOLD_STEEL_SWORD, "Espada de acero");
+        addItem(EPItems.PURPLE_GOLD_STEEL_DAGGER, "Daga de acero");
+        addItem(EPItems.PURPLE_GOLD_STEEL_PICKAXE, "Pico de acero");
+        addItem(EPItems.PURPLE_GOLD_STEEL_AXE, "Hacha de acero");
+        addItem(EPItems.PURPLE_GOLD_STEEL_SHOVEL, "Pala de acero");
+        addItem(EPItems.PURPLE_GOLD_STEEL_HOE, "Azadón de acero");
+        addItem(EPItems.PURPLE_GOLD_STEEL_POLISHER, "Pulidora de acero");
 
         //Blue gold equipment
         addItem(EPItems.BLUE_GOLDEN_SWORD, "Espada de oro azul");
@@ -825,6 +898,14 @@ public class VenezuelanLangProvider extends AbstractLangProvider {
         addItem(EPItems.ALUMINUM_BLUE_GOLDEN_HOE, "Azadón de oro azul");
         addItem(EPItems.ALUMINUM_BLUE_GOLDEN_POLISHER, "Pulidora de oro azul");
 
+        addItem(EPItems.PURPLE_GOLD_BLUE_GOLDEN_SWORD, "Espada de oro azul");
+        addItem(EPItems.PURPLE_GOLD_BLUE_GOLDEN_DAGGER, "Daga de oro azul");
+        addItem(EPItems.PURPLE_GOLD_BLUE_GOLDEN_PICKAXE, "Pico de oro azul");
+        addItem(EPItems.PURPLE_GOLD_BLUE_GOLDEN_AXE, "Hacha de oro azul");
+        addItem(EPItems.PURPLE_GOLD_BLUE_GOLDEN_SHOVEL, "Pala de oro azul");
+        addItem(EPItems.PURPLE_GOLD_BLUE_GOLDEN_HOE, "Azadón de oro azul");
+        addItem(EPItems.PURPLE_GOLD_BLUE_GOLDEN_POLISHER, "Pulidora de oro azul");
+
         //Diamond equipment
         addItem(EPItems.DIAMOND_POLISHER, "Pulidora de diamante");
         addItem(EPItems.DIAMOND_DAGGER, "Daga de diamante");
@@ -844,6 +925,14 @@ public class VenezuelanLangProvider extends AbstractLangProvider {
         addItem(EPItems.ALUMINUM_DIAMOND_SHOVEL, "Pala de diamante");
         addItem(EPItems.ALUMINUM_DIAMOND_HOE, "Azadón de diamante");
         addItem(EPItems.ALUMINUM_DIAMOND_POLISHER, "Pulidora de diamante");
+
+        addItem(EPItems.PURPLE_GOLD_DIAMOND_SWORD, "Espada de diamante");
+        addItem(EPItems.PURPLE_GOLD_DIAMOND_DAGGER, "Daga de diamante");
+        addItem(EPItems.PURPLE_GOLD_DIAMOND_PICKAXE, "Pico de diamante");
+        addItem(EPItems.PURPLE_GOLD_DIAMOND_AXE, "Hacha de diamante");
+        addItem(EPItems.PURPLE_GOLD_DIAMOND_SHOVEL, "Pala de diamante");
+        addItem(EPItems.PURPLE_GOLD_DIAMOND_HOE, "Azadón de diamante");
+        addItem(EPItems.PURPLE_GOLD_DIAMOND_POLISHER, "Pulidora de diamante");
 
         //Netherite equipment
         addItem(EPItems.NETHERITE_POLISHER, "Pulidora de netherita");

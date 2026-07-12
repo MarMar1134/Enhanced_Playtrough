@@ -3,6 +3,7 @@ package net.marmar.enhanced_playthrough.worldgen;
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.data.tag.EPTags;
 import net.marmar.enhanced_playthrough.entity.EPEntityTypes;
+import net.marmar.enhanced_playthrough.worldgen.ore.EPOreBiomeModifiers;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
@@ -56,39 +57,6 @@ public class EPBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_COLD_LYRIUM = registerKey("add_cold_lyrium");
     public static final ResourceKey<BiomeModifier> ADD_SUCCULENT = registerKey("add_succulent");
 
-    //Ores
-    public static final ResourceKey<BiomeModifier> ADD_NETHER_COPPER_ORES = registerKey("add_nether_copper_ores");
-    public static final ResourceKey<BiomeModifier> ADD_SOULSTONE_PATCH = registerKey("add_soulstone_patch");
-
-    public static final ResourceKey<BiomeModifier> ADD_SMALL_TIN_ORES = registerKey("add_small_tin_ores");
-    public static final ResourceKey<BiomeModifier> ADD_BIG_TIN_ORES = registerKey("add_big_tin_ores");
-    public static final ResourceKey<BiomeModifier> ADD_EXTRA_TIN_ORES = registerKey("add_extra_tin_ores");
-
-    public static final ResourceKey<BiomeModifier> ADD_SMALL_ZINC_ORES = registerKey("add_small_zinc_ores");
-    public static final ResourceKey<BiomeModifier> ADD_BIG_ZINC_ORES = registerKey("add_big_zinc_ores");
-    public static final ResourceKey<BiomeModifier> ADD_NETHER_ZINC_ORES = registerKey("add_nether_zinc_ores");
-
-    public static final ResourceKey<BiomeModifier> ADD_UPPER_SULFUR_ORES = registerKey("add_upper_sulfur_ores");
-    public static final ResourceKey<BiomeModifier> ADD_EXTRA_SULFUR_ORES = registerKey("add_extra_sulfur_ores");
-    public static final ResourceKey<BiomeModifier> ADD_LOWER_SULFUR_ORES = registerKey("add_lower_sulfur_ores");
-    public static final ResourceKey<BiomeModifier> ADD_NETHER_SULFUR_ORES = registerKey("add_nether_sulfur_ores");
-
-    public static final ResourceKey<BiomeModifier> ADD_SILVER_ORES = registerKey("add_silver_ores");
-    public static final ResourceKey<BiomeModifier> ADD_EXTRA_SILVER_ORES = registerKey("add_extra_silver_ores");
-    public static final ResourceKey<BiomeModifier> ADD_BADLANDS_SILVER_ORES = registerKey("add_badlands_silver_ores");
-
-    public static final ResourceKey<BiomeModifier> ADD_BAUXITE_ORES = registerKey("add_bauxite_ores");
-
-    public static final ResourceKey<BiomeModifier> ADD_SAPPHIRE_ORES = registerKey("add_sapphire_ores");
-    public static final ResourceKey<BiomeModifier> ADD_EXTRA_SAPPHIRE_ORES = registerKey("add_extra_sapphire_ores");
-
-    public static final ResourceKey<BiomeModifier> ADD_RUBY_ORES = registerKey("add_ruby_ores");
-    public static final ResourceKey<BiomeModifier> ADD_EXTRA_RUBY_ORES = registerKey("add_extra_ruby_ores");
-
-    public static final ResourceKey<BiomeModifier> ADD_NETHER_GARNET_ORES = registerKey("add_nether_garnet_ores");
-
-    public static final ResourceKey<BiomeModifier> ADD_COBALT_ORES = registerKey("add_cobalt_ores");
-
     //Mobs
     public static final ResourceKey<BiomeModifier> ADD_ZOMBIE_KNIGHT_SPAWNS = registerKey("add_zombie_knight_spawns");
     public static final ResourceKey<BiomeModifier> ADD_ZOMBIE_KNIGHT_SPAWNS_ON_DESERT = registerKey("add_zombie_knight_spawns_on_desert");
@@ -102,6 +70,9 @@ public class EPBiomeModifiers {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
         var biomes = context.lookup(Registries.BIOME);
 
+        //Ores
+        EPOreBiomeModifiers.bootstrap(context);
+
         //Mud
         context.register(ADD_MUD_PATCH, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 HolderSet.direct(biomes.getOrThrow(Biomes.RIVER), biomes.getOrThrow(Biomes.SWAMP)),
@@ -113,124 +84,6 @@ public class EPBiomeModifiers {
                 biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
                 HolderSet.direct(placedFeatures.getOrThrow(EPPlacedFeatures.LIMESTONE_PATCH_PLACED)),
                 GenerationStep.Decoration.UNDERGROUND_DECORATION));
-
-        //Copper
-        context.register(ADD_NETHER_COPPER_ORES, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(BiomeTags.IS_NETHER),
-                HolderSet.direct(placedFeatures.getOrThrow(EPPlacedFeatures.NETHER_COPPER_ORE_PLACED)),
-                GenerationStep.Decoration.UNDERGROUND_ORES));
-
-        //Soulstone
-        context.register(ADD_SOULSTONE_PATCH, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(BiomeTags.IS_NETHER),
-                HolderSet.direct(placedFeatures.getOrThrow(EPPlacedFeatures.SOULSTONE_PATCH_PLACED)),
-                GenerationStep.Decoration.UNDERGROUND_DECORATION));
-
-        //Tin
-        context.register(ADD_SMALL_TIN_ORES, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
-                HolderSet.direct(placedFeatures.getOrThrow(EPPlacedFeatures.SMALL_TIN_ORES_PLACED)),
-                GenerationStep.Decoration.UNDERGROUND_ORES));
-        context.register(ADD_BIG_TIN_ORES, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
-                HolderSet.direct(placedFeatures.getOrThrow(EPPlacedFeatures.BIG_TIN_ORES_PLACED)),
-                GenerationStep.Decoration.UNDERGROUND_ORES));
-
-        context.register(ADD_EXTRA_TIN_ORES, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
-                HolderSet.direct(placedFeatures.getOrThrow(EPPlacedFeatures.EXTRA_TIN_ORES_PLACED)),
-                GenerationStep.Decoration.UNDERGROUND_ORES));
-
-        //Zinc
-        context.register(ADD_SMALL_ZINC_ORES, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
-                HolderSet.direct(placedFeatures.getOrThrow(EPPlacedFeatures.SMALL_ZINC_ORES_PLACED)),
-                GenerationStep.Decoration.UNDERGROUND_ORES));
-        context.register(ADD_BIG_ZINC_ORES, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
-                HolderSet.direct(placedFeatures.getOrThrow(EPPlacedFeatures.BIG_ZINC_ORES_PLACED)),
-                GenerationStep.Decoration.UNDERGROUND_ORES));
-
-        context.register(ADD_NETHER_ZINC_ORES, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(BiomeTags.IS_NETHER),
-                HolderSet.direct(placedFeatures.getOrThrow(EPPlacedFeatures.NETHER_ZINC_ORES_PLACED)),
-                GenerationStep.Decoration.UNDERGROUND_ORES));
-
-        //Sulfur
-        context.register(ADD_UPPER_SULFUR_ORES, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
-                HolderSet.direct(placedFeatures.getOrThrow(EPPlacedFeatures.UPPER_SULFUR_ORES_PLACED)),
-                GenerationStep.Decoration.UNDERGROUND_ORES));
-        context.register(ADD_EXTRA_SULFUR_ORES, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                HolderSet.direct(biomes.getOrThrow(Biomes.STONY_PEAKS), biomes.getOrThrow(Biomes.JAGGED_PEAKS),
-                                 biomes.getOrThrow(Biomes.SNOWY_SLOPES), biomes.getOrThrow(Biomes.FROZEN_PEAKS)),
-                HolderSet.direct(placedFeatures.getOrThrow(EPPlacedFeatures.EXTRA_SULFUR_ORES_PLACED)),
-                GenerationStep.Decoration.UNDERGROUND_ORES));
-        context.register(ADD_LOWER_SULFUR_ORES, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
-                HolderSet.direct(placedFeatures.getOrThrow(EPPlacedFeatures.LOWER_SULFUR_ORES_PLACED)),
-                GenerationStep.Decoration.UNDERGROUND_ORES));
-
-        context.register(ADD_NETHER_SULFUR_ORES, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(BiomeTags.IS_NETHER),
-                HolderSet.direct(placedFeatures.getOrThrow(EPPlacedFeatures.NETHER_SULFUR_ORES_PLACED)),
-                GenerationStep.Decoration.UNDERGROUND_ORES));
-
-        //Silver
-        context.register(ADD_SILVER_ORES, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
-                HolderSet.direct(placedFeatures.getOrThrow(EPPlacedFeatures.SILVER_ORES_PLACED)),
-                GenerationStep.Decoration.UNDERGROUND_ORES));
-
-        context.register(ADD_EXTRA_SILVER_ORES, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
-                HolderSet.direct(placedFeatures.getOrThrow(EPPlacedFeatures.EXTRA_SILVER_ORES_PLACED)),
-                GenerationStep.Decoration.UNDERGROUND_ORES));
-
-        context.register(ADD_BADLANDS_SILVER_ORES, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                HolderSet.direct(biomes.getOrThrow(Biomes.BADLANDS)),
-                HolderSet.direct(placedFeatures.getOrThrow(EPPlacedFeatures.BADLANDS_SILVER_ORES_PLACED)),
-                GenerationStep.Decoration.UNDERGROUND_ORES));
-
-        //Bauxite
-        context.register(ADD_BAUXITE_ORES, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(BiomeTags.IS_BADLANDS),
-                HolderSet.direct(placedFeatures.getOrThrow(EPPlacedFeatures.BAUXITE_ORES_PLACED)),
-                GenerationStep.Decoration.UNDERGROUND_ORES));
-
-        //Sapphire
-        context.register(ADD_SAPPHIRE_ORES, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(EPTags.Biomes.HUMIDITY_BIOMES),
-                HolderSet.direct(placedFeatures.getOrThrow(EPPlacedFeatures.SAPPHIRE_ORES_PLACED)),
-                GenerationStep.Decoration.UNDERGROUND_ORES));
-
-        context.register(ADD_EXTRA_SAPPHIRE_ORES, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(EPTags.Biomes.HUMIDITY_BIOMES),
-                HolderSet.direct(placedFeatures.getOrThrow(EPPlacedFeatures.EXTRA_SAPPHIRE_ORES_PLACED)),
-                GenerationStep.Decoration.UNDERGROUND_ORES));
-
-        //Ruby
-        context.register(ADD_RUBY_ORES, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(EPTags.Biomes.HUMIDITY_BIOMES),
-                HolderSet.direct(placedFeatures.getOrThrow(EPPlacedFeatures.RUBY_ORES_PLACED)),
-                GenerationStep.Decoration.UNDERGROUND_ORES));
-
-        context.register(ADD_EXTRA_RUBY_ORES, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(EPTags.Biomes.HUMIDITY_BIOMES),
-                HolderSet.direct(placedFeatures.getOrThrow(EPPlacedFeatures.EXTRA_RUBY_ORES_PLACED)),
-                GenerationStep.Decoration.UNDERGROUND_ORES));
-
-        //Nether garnet
-        context.register(ADD_NETHER_GARNET_ORES, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(BiomeTags.IS_NETHER),
-                HolderSet.direct(placedFeatures.getOrThrow(EPPlacedFeatures.NETHER_GARNET_ORES_PLACED)),
-                GenerationStep.Decoration.UNDERGROUND_ORES));
-
-        //Cobalt
-        context.register(ADD_COBALT_ORES, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
-                HolderSet.direct(placedFeatures.getOrThrow(EPPlacedFeatures.COBALT_ORES_PLACED)),
-                GenerationStep.Decoration.UNDERGROUND_ORES));
 
         //Trees
             //Walnut

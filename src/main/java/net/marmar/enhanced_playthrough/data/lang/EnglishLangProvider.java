@@ -79,8 +79,9 @@ public class EnglishLangProvider extends AbstractLangProvider {
         addGuiElements("gem_polisher_screen", "Uses");
 
         //Descriptions
-        addDescription("leather_stick_tool", "Reinforced handle: 10% more durability");
-        addDescription("aluminum_stick_tool", "Aluminum handle: 20% more durability");
+        addDescription("reinforced_handle", "Mango reforzado: +10% durabilidad");
+        addDescription("aluminum_handle", "Mango de aluminio: +20% durabilidad, +1 velocidad de minado");
+        addDescription("purple_gold_handle", "Mango de oro morado: -10% durabilidad, +2 velocidad de minado");
         addDescription("polisher_item","Used on the Gem polisher as fuel");
         addDescription("silver_armor", "When full equipped: gives Haste to the player");
         addDescription("rose_gold_armor", "When full equipped: gives Haste to the player");
@@ -575,6 +576,14 @@ public class EnglishLangProvider extends AbstractLangProvider {
             addItem(EPItems.ALUMINUM_SILVER_HOE, "Silver Hoe");
             addItem(EPItems.ALUMINUM_SILVER_POLISHER, "Silver Polisher");
 
+            addItem(EPItems.PURPLE_GOLD_SILVER_SWORD, "Silver Sword");
+            addItem(EPItems.PURPLE_GOLD_SILVER_DAGGER, "Silver Dagger");
+            addItem(EPItems.PURPLE_GOLD_SILVER_PICKAXE, "Silver Pickaxe");
+            addItem(EPItems.PURPLE_GOLD_SILVER_AXE, "Silver Axe");
+            addItem(EPItems.PURPLE_GOLD_SILVER_SHOVEL, "Silver Shovel");
+            addItem(EPItems.PURPLE_GOLD_SILVER_HOE, "Silver Hoe");
+            addItem(EPItems.PURPLE_GOLD_SILVER_POLISHER, "Silver Polisher");
+
             //Gold equipment
             addItem(EPItems.GOLDEN_POLISHER, "Golden polisher");
             addItem(EPItems.GOLDEN_DAGGER, "Golden dagger");
@@ -595,7 +604,15 @@ public class EnglishLangProvider extends AbstractLangProvider {
             addItem(EPItems.ALUMINUM_GOLDEN_HOE, "Golden Hoe");
             addItem(EPItems.ALUMINUM_GOLDEN_POLISHER, "Golden Polisher");
 
-            //Wood equipment
+            addItem(EPItems.PURPLE_GOLD_GOLDEN_SWORD, "Golden Sword");
+            addItem(EPItems.PURPLE_GOLD_GOLDEN_DAGGER, "Golden Dagger");
+            addItem(EPItems.PURPLE_GOLD_GOLDEN_PICKAXE, "Golden Pickaxe");
+            addItem(EPItems.PURPLE_GOLD_GOLDEN_AXE, "Golden Axe");
+            addItem(EPItems.PURPLE_GOLD_GOLDEN_SHOVEL, "Golden Shovel");
+            addItem(EPItems.PURPLE_GOLD_GOLDEN_HOE, "Golden Hoe");
+            addItem(EPItems.PURPLE_GOLD_GOLDEN_POLISHER, "Golden Polisher");
+
+        //Wood equipment
             addItem(EPItems.WOODEN_DAGGER, "Wooden dagger");
 
             //Stone equipment
@@ -631,6 +648,14 @@ public class EnglishLangProvider extends AbstractLangProvider {
             addItem(EPItems.ALUMINUM_BRASS_HOE, "Brass Hoe");
             addItem(EPItems.ALUMINUM_BRASS_POLISHER, "Brass Polisher");
 
+            addItem(EPItems.PURPLE_GOLD_BRASS_SWORD, "Brass Sword");
+            addItem(EPItems.PURPLE_GOLD_BRASS_DAGGER, "Brass Dagger");
+            addItem(EPItems.PURPLE_GOLD_BRASS_PICKAXE, "Brass Pickaxe");
+            addItem(EPItems.PURPLE_GOLD_BRASS_AXE, "Brass Axe");
+            addItem(EPItems.PURPLE_GOLD_BRASS_SHOVEL, "Brass Shovel");
+            addItem(EPItems.PURPLE_GOLD_BRASS_HOE, "Brass Hoe");
+            addItem(EPItems.PURPLE_GOLD_BRASS_POLISHER, "Brass Polisher");
+
             //Bronze equipment
             addItem(EPItems.BRONZE_SWORD, "Bronze sword");
             addItem(EPItems.BRONZE_DAGGER, "Bronze dagger");
@@ -659,6 +684,14 @@ public class EnglishLangProvider extends AbstractLangProvider {
             addItem(EPItems.ALUMINUM_BRONZE_SHOVEL, "Bronze Shovel");
             addItem(EPItems.ALUMINUM_BRONZE_HOE, "Bronze Hoe");
             addItem(EPItems.ALUMINUM_BRONZE_POLISHER, "Bronze Polisher");
+
+            addItem(EPItems.PURPLE_GOLD_BRONZE_SWORD, "Bronze Sword");
+            addItem(EPItems.PURPLE_GOLD_BRONZE_DAGGER, "Bronze Dagger");
+            addItem(EPItems.PURPLE_GOLD_BRONZE_PICKAXE, "Bronze Pickaxe");
+            addItem(EPItems.PURPLE_GOLD_BRONZE_AXE, "Bronze Axe");
+            addItem(EPItems.PURPLE_GOLD_BRONZE_SHOVEL, "Bronze Shovel");
+            addItem(EPItems.PURPLE_GOLD_BRONZE_HOE, "Bronze Hoe");
+            addItem(EPItems.PURPLE_GOLD_BRONZE_POLISHER, "Bronze Polisher");
 
             //Rose golden equipment
             addItem(EPItems.ROSE_GOLDEN_SWORD, "Rose golden sword");
@@ -689,6 +722,14 @@ public class EnglishLangProvider extends AbstractLangProvider {
             addItem(EPItems.ALUMINUM_ROSE_GOLDEN_HOE, "Rose Golden Hoe");
             addItem(EPItems.ALUMINUM_ROSE_GOLDEN_POLISHER, "Rose Golden Polisher");
 
+            addItem(EPItems.PURPLE_GOLD_ROSE_GOLDEN_SWORD, "Rose Golden Sword");
+            addItem(EPItems.PURPLE_GOLD_ROSE_GOLDEN_DAGGER, "Rose Golden Dagger");
+            addItem(EPItems.PURPLE_GOLD_ROSE_GOLDEN_PICKAXE, "Rose Golden Pickaxe");
+            addItem(EPItems.PURPLE_GOLD_ROSE_GOLDEN_AXE, "Rose Golden Axe");
+            addItem(EPItems.PURPLE_GOLD_ROSE_GOLDEN_SHOVEL, "Rose Golden Shovel");
+            addItem(EPItems.PURPLE_GOLD_ROSE_GOLDEN_HOE, "Rose Golden Hoe");
+            addItem(EPItems.PURPLE_GOLD_ROSE_GOLDEN_POLISHER, "Rose Golden Polisher");
+
             //Bronzium equipment
             addItem(EPItems.BRONZIUM_SWORD, "Bronzium sword");
             addItem(EPItems.BRONZIUM_DAGGER, "Bronzium dagger");
@@ -718,6 +759,14 @@ public class EnglishLangProvider extends AbstractLangProvider {
             addItem(EPItems.ALUMINUM_BRONZIUM_HOE, "Bronzium Hoe");
             addItem(EPItems.ALUMINUM_BRONZIUM_POLISHER, "Bronzium Polisher");
 
+            addItem(EPItems.PURPLE_GOLD_BRONZIUM_SWORD, "Bronzium Sword");
+            addItem(EPItems.PURPLE_GOLD_BRONZIUM_DAGGER, "Bronzium Dagger");
+            addItem(EPItems.PURPLE_GOLD_BRONZIUM_PICKAXE, "Bronzium Pickaxe");
+            addItem(EPItems.PURPLE_GOLD_BRONZIUM_AXE, "Bronzium Axe");
+            addItem(EPItems.PURPLE_GOLD_BRONZIUM_SHOVEL, "Bronzium Shovel");
+            addItem(EPItems.PURPLE_GOLD_BRONZIUM_HOE, "Bronzium Hoe");
+            addItem(EPItems.PURPLE_GOLD_BRONZIUM_POLISHER, "Bronzium Polisher");
+
             //Iron equipment
             addItem(EPItems.IRON_POLISHER, "Iron polisher");
             addItem(EPItems.IRON_DAGGER, "Iron dagger");
@@ -737,6 +786,14 @@ public class EnglishLangProvider extends AbstractLangProvider {
             addItem(EPItems.ALUMINUM_IRON_SHOVEL, "Iron Shovel");
             addItem(EPItems.ALUMINUM_IRON_HOE, "Iron Hoe");
             addItem(EPItems.ALUMINUM_IRON_POLISHER, "Iron Polisher");
+
+            addItem(EPItems.PURPLE_GOLD_IRON_SWORD, "Iron Sword");
+            addItem(EPItems.PURPLE_GOLD_IRON_DAGGER, "Iron Dagger");
+            addItem(EPItems.PURPLE_GOLD_IRON_PICKAXE, "Iron Pickaxe");
+            addItem(EPItems.PURPLE_GOLD_IRON_AXE, "Iron Axe");
+            addItem(EPItems.PURPLE_GOLD_IRON_SHOVEL, "Iron Shovel");
+            addItem(EPItems.PURPLE_GOLD_IRON_HOE, "Iron Hoe");
+            addItem(EPItems.PURPLE_GOLD_IRON_POLISHER, "Iron Polisher");
 
             //Green golden equipment
             addItem(EPItems.GREEN_GOLDEN_SWORD, "Green golden sword");
@@ -767,6 +824,14 @@ public class EnglishLangProvider extends AbstractLangProvider {
             addItem(EPItems.ALUMINUM_GREEN_GOLDEN_HOE, "Green Golden Hoe");
             addItem(EPItems.ALUMINUM_GREEN_GOLDEN_POLISHER, "Green Golden Polisher");
 
+            addItem(EPItems.PURPLE_GOLD_GREEN_GOLDEN_SWORD, "Green Golden Sword");
+            addItem(EPItems.PURPLE_GOLD_GREEN_GOLDEN_DAGGER, "Green Golden Dagger");
+            addItem(EPItems.PURPLE_GOLD_GREEN_GOLDEN_PICKAXE, "Green Golden Pickaxe");
+            addItem(EPItems.PURPLE_GOLD_GREEN_GOLDEN_AXE, "Green Golden Axe");
+            addItem(EPItems.PURPLE_GOLD_GREEN_GOLDEN_SHOVEL, "Green Golden Shovel");
+            addItem(EPItems.PURPLE_GOLD_GREEN_GOLDEN_HOE, "Green Golden Hoe");
+            addItem(EPItems.PURPLE_GOLD_GREEN_GOLDEN_POLISHER, "Green Golden Polisher");
+
             //Steel equipment
             addItem(EPItems.STEEL_SWORD, "Steel sword");
             addItem(EPItems.STEEL_DAGGER, "Steel dagger");
@@ -795,6 +860,14 @@ public class EnglishLangProvider extends AbstractLangProvider {
             addItem(EPItems.ALUMINUM_STEEL_SHOVEL, "Steel Shovel");
             addItem(EPItems.ALUMINUM_STEEL_HOE, "Steel Hoe");
             addItem(EPItems.ALUMINUM_STEEL_POLISHER, "Steel Polisher");
+
+            addItem(EPItems.PURPLE_GOLD_STEEL_SWORD, "Steel Sword");
+            addItem(EPItems.PURPLE_GOLD_STEEL_DAGGER, "Steel Dagger");
+            addItem(EPItems.PURPLE_GOLD_STEEL_PICKAXE, "Steel Pickaxe");
+            addItem(EPItems.PURPLE_GOLD_STEEL_AXE, "Steel Axe");
+            addItem(EPItems.PURPLE_GOLD_STEEL_SHOVEL, "Steel Shovel");
+            addItem(EPItems.PURPLE_GOLD_STEEL_HOE, "Steel Hoe");
+            addItem(EPItems.PURPLE_GOLD_STEEL_POLISHER, "Steel Polisher");
 
             //Blue gold equipment
             addItem(EPItems.BLUE_GOLDEN_SWORD, "Blue Golden sword");
@@ -825,6 +898,14 @@ public class EnglishLangProvider extends AbstractLangProvider {
             addItem(EPItems.ALUMINUM_BLUE_GOLDEN_HOE, "Blue Golden Hoe");
             addItem(EPItems.ALUMINUM_BLUE_GOLDEN_POLISHER, "Blue Golden Polisher");
 
+            addItem(EPItems.PURPLE_GOLD_BLUE_GOLDEN_SWORD, "Blue Golden Sword");
+            addItem(EPItems.PURPLE_GOLD_BLUE_GOLDEN_DAGGER, "Blue Golden Dagger");
+            addItem(EPItems.PURPLE_GOLD_BLUE_GOLDEN_PICKAXE, "Blue Golden Pickaxe");
+            addItem(EPItems.PURPLE_GOLD_BLUE_GOLDEN_AXE, "Blue Golden Axe");
+            addItem(EPItems.PURPLE_GOLD_BLUE_GOLDEN_SHOVEL, "Blue Golden Shovel");
+            addItem(EPItems.PURPLE_GOLD_BLUE_GOLDEN_HOE, "Blue Golden Hoe");
+            addItem(EPItems.PURPLE_GOLD_BLUE_GOLDEN_POLISHER, "Blue Golden Polisher");
+
             //Diamond equipment
             addItem(EPItems.DIAMOND_POLISHER, "Diamond polisher");
             addItem(EPItems.DIAMOND_DAGGER, "Diamond dagger");
@@ -844,6 +925,14 @@ public class EnglishLangProvider extends AbstractLangProvider {
             addItem(EPItems.ALUMINUM_DIAMOND_SHOVEL, "Diamond Shovel");
             addItem(EPItems.ALUMINUM_DIAMOND_HOE, "Diamond Hoe");
             addItem(EPItems.ALUMINUM_DIAMOND_POLISHER, "Diamond Polisher");
+
+            addItem(EPItems.PURPLE_GOLD_DIAMOND_SWORD, "Diamond Sword");
+            addItem(EPItems.PURPLE_GOLD_DIAMOND_DAGGER, "Diamond Dagger");
+            addItem(EPItems.PURPLE_GOLD_DIAMOND_PICKAXE, "Diamond Pickaxe");
+            addItem(EPItems.PURPLE_GOLD_DIAMOND_AXE, "Diamond Axe");
+            addItem(EPItems.PURPLE_GOLD_DIAMOND_SHOVEL, "Diamond Shovel");
+            addItem(EPItems.PURPLE_GOLD_DIAMOND_HOE, "Diamond Hoe");
+            addItem(EPItems.PURPLE_GOLD_DIAMOND_POLISHER, "Diamond Polisher");
 
             //Netherite equipment
             addItem(EPItems.NETHERITE_POLISHER, "Netherite polisher");

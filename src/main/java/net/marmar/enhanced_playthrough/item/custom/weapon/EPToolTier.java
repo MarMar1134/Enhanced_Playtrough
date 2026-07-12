@@ -12,7 +12,7 @@ import net.minecraftforge.common.TierSortingRegistry;
 
 import java.util.List;
 
-public class EPTiers {
+public class EPToolTier {
     @SuppressWarnings("removal")
     private static ResourceLocation modLoc(String pPath){
         return new ResourceLocation(EnhancedPlaythrough.MOD_ID, pPath);

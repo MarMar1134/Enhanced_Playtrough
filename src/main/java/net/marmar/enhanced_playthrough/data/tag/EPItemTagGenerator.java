@@ -231,9 +231,19 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                 Items.GOLDEN_AXE, Items.GOLDEN_PICKAXE, Items.GOLDEN_SHOVEL, Items.GOLDEN_SWORD,
                 EPItems.GOLDEN_DAGGER.get(), EPItems.GOLDEN_POLISHER.get(), Items.GOLDEN_HOE,
 
+                /*-----------------REINFORCED VARIANTS-------------------------*/
+                EPItems.REINFORCED_GOLDEN_SWORD.get(), EPItems.REINFORCED_GOLDEN_DAGGER.get(), EPItems.REINFORCED_GOLDEN_PICKAXE.get(), EPItems.REINFORCED_GOLDEN_AXE.get(),
+                EPItems.REINFORCED_GOLDEN_SHOVEL.get(), EPItems.REINFORCED_GOLDEN_HOE.get(), EPItems.REINFORCED_GOLDEN_POLISHER.get(),
+                /*-----------------------------------------------------------*/
+
                 /*-----------------ALUMINUM VARIANTS-------------------------*/
                 EPItems.ALUMINUM_GOLDEN_SWORD.get(), EPItems.ALUMINUM_GOLDEN_DAGGER.get(), EPItems.ALUMINUM_GOLDEN_PICKAXE.get(), EPItems.ALUMINUM_GOLDEN_AXE.get(),
                 EPItems.ALUMINUM_GOLDEN_SHOVEL.get(), EPItems.ALUMINUM_GOLDEN_HOE.get(), EPItems.ALUMINUM_GOLDEN_POLISHER.get(),
+                /*-----------------------------------------------------------*/
+
+                /*-----------------PURPLE_GOLD VARIANTS-------------------------*/
+                EPItems.PURPLE_GOLD_GOLDEN_SWORD.get(), EPItems.PURPLE_GOLD_GOLDEN_DAGGER.get(), EPItems.PURPLE_GOLD_GOLDEN_PICKAXE.get(), EPItems.PURPLE_GOLD_GOLDEN_AXE.get(),
+                EPItems.PURPLE_GOLD_GOLDEN_SHOVEL.get(), EPItems.PURPLE_GOLD_GOLDEN_HOE.get(), EPItems.PURPLE_GOLD_GOLDEN_POLISHER.get(),
                 /*-----------------------------------------------------------*/
 
                 Items.GOLDEN_HELMET, Items.GOLDEN_CHESTPLATE, Items.GOLDEN_LEGGINGS, Items.GOLDEN_BOOTS
@@ -244,9 +254,19 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                 EPItems.SILVER_SWORD.get(), EPItems.SILVER_DAGGER.get(), EPItems.SILVER_PICKAXE.get(),
                 EPItems.SILVER_AXE.get(), EPItems.SILVER_SHOVEL.get(), EPItems.SILVER_HOE.get(), EPItems.SILVER_POLISHER.get(),
 
+                /*-----------------REINFORCED VARIANTS-------------------------*/
+                EPItems.REINFORCED_SILVER_SWORD.get(), EPItems.REINFORCED_SILVER_DAGGER.get(), EPItems.REINFORCED_SILVER_PICKAXE.get(), EPItems.REINFORCED_SILVER_AXE.get(),
+                EPItems.REINFORCED_SILVER_SHOVEL.get(), EPItems.REINFORCED_SILVER_HOE.get(), EPItems.REINFORCED_SILVER_POLISHER.get(),
+                /*-----------------------------------------------------------*/
+
                 /*-----------------ALUMINUM VARIANTS-------------------------*/
                 EPItems.ALUMINUM_SILVER_SWORD.get(), EPItems.ALUMINUM_SILVER_DAGGER.get(), EPItems.ALUMINUM_SILVER_PICKAXE.get(), EPItems.ALUMINUM_SILVER_AXE.get(),
                 EPItems.ALUMINUM_SILVER_SHOVEL.get(), EPItems.ALUMINUM_SILVER_HOE.get(), EPItems.ALUMINUM_SILVER_POLISHER.get(),
+                /*-----------------------------------------------------------*/
+
+                /*-----------------PURPLE_GOLD VARIANTS-------------------------*/
+                EPItems.PURPLE_GOLD_SILVER_SWORD.get(), EPItems.PURPLE_GOLD_SILVER_DAGGER.get(), EPItems.PURPLE_GOLD_SILVER_PICKAXE.get(), EPItems.PURPLE_GOLD_SILVER_AXE.get(),
+                EPItems.PURPLE_GOLD_SILVER_SHOVEL.get(), EPItems.PURPLE_GOLD_SILVER_HOE.get(), EPItems.PURPLE_GOLD_SILVER_POLISHER.get(),
                 /*-----------------------------------------------------------*/
 
                 EPItems.SILVER_HELMET.get(), EPItems.SILVER_CHESTPLATE.get(), EPItems.SILVER_LEGGINGS.get(), EPItems.SILVER_BOOTS.get()
@@ -257,9 +277,19 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                 EPItems.BRONZE_SWORD.get(), EPItems.BRONZE_DAGGER.get(), EPItems.BRONZE_PICKAXE.get(),
                 EPItems.BRONZE_AXE.get(), EPItems.BRONZE_SHOVEL.get(), EPItems.BRONZE_HOE.get(), EPItems.BRONZE_POLISHER.get(),
 
+                /*-----------------REINFORCED VARIANTS-------------------------*/
+                EPItems.REINFORCED_BRONZE_SWORD.get(), EPItems.REINFORCED_BRONZE_DAGGER.get(), EPItems.REINFORCED_BRONZE_PICKAXE.get(), EPItems.REINFORCED_BRONZE_AXE.get(),
+                EPItems.REINFORCED_BRONZE_SHOVEL.get(), EPItems.REINFORCED_BRONZE_HOE.get(), EPItems.REINFORCED_BRONZE_POLISHER.get(),
+                /*-----------------------------------------------------------*/
+
                 /*-----------------ALUMINUM VARIANTS-------------------------*/
                 EPItems.ALUMINUM_BRONZE_SWORD.get(), EPItems.ALUMINUM_BRONZE_DAGGER.get(), EPItems.ALUMINUM_BRONZE_PICKAXE.get(), EPItems.ALUMINUM_BRONZE_AXE.get(),
                 EPItems.ALUMINUM_BRONZE_SHOVEL.get(), EPItems.ALUMINUM_BRONZE_HOE.get(), EPItems.ALUMINUM_BRONZE_POLISHER.get(),
+                /*-----------------------------------------------------------*/
+
+                /*-----------------PURPLE_GOLD VARIANTS-------------------------*/
+                EPItems.PURPLE_GOLD_BRONZE_SWORD.get(), EPItems.PURPLE_GOLD_BRONZE_DAGGER.get(), EPItems.PURPLE_GOLD_BRONZE_PICKAXE.get(), EPItems.PURPLE_GOLD_BRONZE_AXE.get(),
+                EPItems.PURPLE_GOLD_BRONZE_SHOVEL.get(), EPItems.PURPLE_GOLD_BRONZE_HOE.get(), EPItems.PURPLE_GOLD_BRONZE_POLISHER.get(),
                 /*-----------------------------------------------------------*/
 
                 EPItems.BRONZE_HELMET.get(), EPItems.BRONZE_CHESTPLATE.get(), EPItems.BRONZE_LEGGINGS.get(), EPItems.BRONZE_BOOTS.get()
@@ -270,9 +300,19 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                 EPItems.BRASS_SWORD.get(), EPItems.BRASS_DAGGER.get(), EPItems.BRASS_PICKAXE.get(),
                 EPItems.BRASS_AXE.get(), EPItems.BRASS_SHOVEL.get(), EPItems.BRASS_HOE.get(), EPItems.BRASS_POLISHER.get(),
 
+                /*-----------------REINFORCED VARIANTS-------------------------*/
+                EPItems.REINFORCED_BRASS_SWORD.get(), EPItems.REINFORCED_BRASS_DAGGER.get(), EPItems.REINFORCED_BRASS_PICKAXE.get(), EPItems.REINFORCED_BRASS_AXE.get(),
+                EPItems.REINFORCED_BRASS_SHOVEL.get(), EPItems.REINFORCED_BRASS_HOE.get(), EPItems.REINFORCED_BRASS_POLISHER.get(),
+                /*-----------------------------------------------------------*/
+
                 /*-----------------ALUMINUM VARIANTS-------------------------*/
                 EPItems.ALUMINUM_BRASS_SWORD.get(), EPItems.ALUMINUM_BRASS_DAGGER.get(), EPItems.ALUMINUM_BRASS_PICKAXE.get(), EPItems.ALUMINUM_BRASS_AXE.get(),
                 EPItems.ALUMINUM_BRASS_SHOVEL.get(), EPItems.ALUMINUM_BRASS_HOE.get(), EPItems.ALUMINUM_BRASS_POLISHER.get(),
+                /*-----------------------------------------------------------*/
+
+                /*-----------------PURPLE_GOLD VARIANTS-------------------------*/
+                EPItems.PURPLE_GOLD_BRASS_SWORD.get(), EPItems.PURPLE_GOLD_BRASS_DAGGER.get(), EPItems.PURPLE_GOLD_BRASS_PICKAXE.get(), EPItems.PURPLE_GOLD_BRASS_AXE.get(),
+                EPItems.PURPLE_GOLD_BRASS_SHOVEL.get(), EPItems.PURPLE_GOLD_BRASS_HOE.get(), EPItems.PURPLE_GOLD_BRASS_POLISHER.get(),
                 /*-----------------------------------------------------------*/
 
                 EPItems.BRASS_HELMET.get(), EPItems.BRASS_CHESTPLATE.get(), EPItems.BRASS_LEGGINGS.get(), EPItems.BRASS_BOOTS.get()
@@ -283,9 +323,19 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                 EPItems.ROSE_GOLDEN_SWORD.get(), EPItems.ROSE_GOLDEN_DAGGER.get(), EPItems.ROSE_GOLDEN_PICKAXE.get(),
                 EPItems.ROSE_GOLDEN_AXE.get(), EPItems.ROSE_GOLDEN_SHOVEL.get(), EPItems.ROSE_GOLDEN_HOE.get(), EPItems.ROSE_GOLDEN_POLISHER.get(),
 
+                /*-----------------REINFORCED VARIANTS-------------------------*/
+                EPItems.REINFORCED_ROSE_GOLDEN_SWORD.get(), EPItems.REINFORCED_ROSE_GOLDEN_DAGGER.get(), EPItems.REINFORCED_ROSE_GOLDEN_PICKAXE.get(), EPItems.REINFORCED_ROSE_GOLDEN_AXE.get(),
+                EPItems.REINFORCED_ROSE_GOLDEN_SHOVEL.get(), EPItems.REINFORCED_ROSE_GOLDEN_HOE.get(), EPItems.REINFORCED_ROSE_GOLDEN_POLISHER.get(),
+                /*-----------------------------------------------------------*/
+
                 /*-----------------ALUMINUM VARIANTS-------------------------*/
                 EPItems.ALUMINUM_ROSE_GOLDEN_SWORD.get(), EPItems.ALUMINUM_ROSE_GOLDEN_DAGGER.get(), EPItems.ALUMINUM_ROSE_GOLDEN_PICKAXE.get(), EPItems.ALUMINUM_ROSE_GOLDEN_AXE.get(),
                 EPItems.ALUMINUM_ROSE_GOLDEN_SHOVEL.get(), EPItems.ALUMINUM_ROSE_GOLDEN_HOE.get(), EPItems.ALUMINUM_ROSE_GOLDEN_POLISHER.get(),
+                /*-----------------------------------------------------------*/
+
+                /*-----------------PURPLE_GOLD VARIANTS-------------------------*/
+                EPItems.PURPLE_GOLD_ROSE_GOLDEN_SWORD.get(), EPItems.PURPLE_GOLD_ROSE_GOLDEN_DAGGER.get(), EPItems.PURPLE_GOLD_ROSE_GOLDEN_PICKAXE.get(), EPItems.PURPLE_GOLD_ROSE_GOLDEN_AXE.get(),
+                EPItems.PURPLE_GOLD_ROSE_GOLDEN_SHOVEL.get(), EPItems.PURPLE_GOLD_ROSE_GOLDEN_HOE.get(), EPItems.PURPLE_GOLD_ROSE_GOLDEN_POLISHER.get(),
                 /*-----------------------------------------------------------*/
 
                 EPItems.ROSE_GOLDEN_HELMET.get(), EPItems.ROSE_GOLDEN_CHESTPLATE.get(), EPItems.ROSE_GOLDEN_LEGGINGS.get(), EPItems.ROSE_GOLDEN_BOOTS.get()
@@ -295,9 +345,19 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                 Items.IRON_INGOT, Items.IRON_NUGGET, Items.IRON_BLOCK,
                 Items.IRON_AXE, Items.IRON_PICKAXE, Items.IRON_SHOVEL, Items.IRON_SWORD, EPItems.IRON_DAGGER.get(), EPItems.IRON_POLISHER.get(),
 
+                /*-----------------REINFORCED VARIANTS-------------------------*/
+                EPItems.REINFORCED_IRON_SWORD.get(), EPItems.REINFORCED_IRON_DAGGER.get(), EPItems.REINFORCED_IRON_PICKAXE.get(), EPItems.REINFORCED_IRON_AXE.get(),
+                EPItems.REINFORCED_IRON_SHOVEL.get(), EPItems.REINFORCED_IRON_HOE.get(), EPItems.REINFORCED_IRON_POLISHER.get(),
+                /*-----------------------------------------------------------*/
+
                 /*-----------------ALUMINUM VARIANTS-------------------------*/
                 EPItems.ALUMINUM_IRON_SWORD.get(), EPItems.ALUMINUM_IRON_DAGGER.get(), EPItems.ALUMINUM_IRON_PICKAXE.get(), EPItems.ALUMINUM_IRON_AXE.get(),
                 EPItems.ALUMINUM_IRON_SHOVEL.get(), EPItems.ALUMINUM_IRON_HOE.get(), EPItems.ALUMINUM_IRON_POLISHER.get(),
+                /*-----------------------------------------------------------*/
+
+                /*-----------------PURPLE_GOLD VARIANTS-------------------------*/
+                EPItems.PURPLE_GOLD_IRON_SWORD.get(), EPItems.PURPLE_GOLD_IRON_DAGGER.get(), EPItems.PURPLE_GOLD_IRON_PICKAXE.get(), EPItems.PURPLE_GOLD_IRON_AXE.get(),
+                EPItems.PURPLE_GOLD_IRON_SHOVEL.get(), EPItems.PURPLE_GOLD_IRON_HOE.get(), EPItems.PURPLE_GOLD_IRON_POLISHER.get(),
                 /*-----------------------------------------------------------*/
 
                 Items.IRON_HOE, Items.IRON_HELMET, Items.IRON_CHESTPLATE, Items.IRON_LEGGINGS, Items.IRON_BOOTS
@@ -308,9 +368,19 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                 EPItems.BRONZIUM_SWORD.get(), EPItems.BRONZIUM_DAGGER.get(), EPItems.BRONZIUM_PICKAXE.get(),
                 EPItems.BRONZIUM_AXE.get(), EPItems.BRONZIUM_SHOVEL.get(), EPItems.BRONZIUM_HOE.get(), EPItems.BRONZIUM_POLISHER.get(),
 
+                /*-----------------REINFORCED VARIANTS-------------------------*/
+                EPItems.REINFORCED_BRONZIUM_SWORD.get(), EPItems.REINFORCED_BRONZIUM_DAGGER.get(), EPItems.REINFORCED_BRONZIUM_PICKAXE.get(), EPItems.REINFORCED_BRONZIUM_AXE.get(),
+                EPItems.REINFORCED_BRONZIUM_SHOVEL.get(), EPItems.REINFORCED_BRONZIUM_HOE.get(), EPItems.REINFORCED_BRONZIUM_POLISHER.get(),
+                /*-----------------------------------------------------------*/
+
                 /*-----------------ALUMINUM VARIANTS-------------------------*/
                 EPItems.ALUMINUM_BRONZIUM_SWORD.get(), EPItems.ALUMINUM_BRONZIUM_DAGGER.get(), EPItems.ALUMINUM_BRONZIUM_PICKAXE.get(), EPItems.ALUMINUM_BRONZIUM_AXE.get(),
                 EPItems.ALUMINUM_BRONZIUM_SHOVEL.get(), EPItems.ALUMINUM_BRONZIUM_HOE.get(), EPItems.ALUMINUM_BRONZIUM_POLISHER.get(),
+                /*-----------------------------------------------------------*/
+
+                /*-----------------PURPLE_GOLD VARIANTS-------------------------*/
+                EPItems.PURPLE_GOLD_BRONZIUM_SWORD.get(), EPItems.PURPLE_GOLD_BRONZIUM_DAGGER.get(), EPItems.PURPLE_GOLD_BRONZIUM_PICKAXE.get(), EPItems.PURPLE_GOLD_BRONZIUM_AXE.get(),
+                EPItems.PURPLE_GOLD_BRONZIUM_SHOVEL.get(), EPItems.PURPLE_GOLD_BRONZIUM_HOE.get(), EPItems.PURPLE_GOLD_BRONZIUM_POLISHER.get(),
                 /*-----------------------------------------------------------*/
 
                 EPItems.BRONZIUM_HELMET.get(), EPItems.BRONZIUM_CHESTPLATE.get(), EPItems.BRONZIUM_LEGGINGS.get(), EPItems.BRONZIUM_BOOTS.get()
@@ -321,9 +391,19 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                 EPItems.STEEL_SWORD.get(), EPItems.STEEL_DAGGER.get(), EPItems.STEEL_PICKAXE.get(),
                 EPItems.STEEL_AXE.get(), EPItems.STEEL_SHOVEL.get(), EPItems.STEEL_HOE.get(), EPItems.STEEL_POLISHER.get(),
 
+                /*-----------------REINFORCED VARIANTS-------------------------*/
+                EPItems.REINFORCED_STEEL_SWORD.get(), EPItems.REINFORCED_STEEL_DAGGER.get(), EPItems.REINFORCED_STEEL_PICKAXE.get(), EPItems.REINFORCED_STEEL_AXE.get(),
+                EPItems.REINFORCED_STEEL_SHOVEL.get(), EPItems.REINFORCED_STEEL_HOE.get(), EPItems.REINFORCED_STEEL_POLISHER.get(),
+                /*-----------------------------------------------------------*/
+
                 /*-----------------ALUMINUM VARIANTS-------------------------*/
                 EPItems.ALUMINUM_STEEL_SWORD.get(), EPItems.ALUMINUM_STEEL_DAGGER.get(), EPItems.ALUMINUM_STEEL_PICKAXE.get(), EPItems.ALUMINUM_STEEL_AXE.get(),
                 EPItems.ALUMINUM_STEEL_SHOVEL.get(), EPItems.ALUMINUM_STEEL_HOE.get(), EPItems.ALUMINUM_STEEL_POLISHER.get(),
+                /*-----------------------------------------------------------*/
+
+                /*-----------------PURPLE_GOLD VARIANTS-------------------------*/
+                EPItems.PURPLE_GOLD_STEEL_SWORD.get(), EPItems.PURPLE_GOLD_STEEL_DAGGER.get(), EPItems.PURPLE_GOLD_STEEL_PICKAXE.get(), EPItems.PURPLE_GOLD_STEEL_AXE.get(),
+                EPItems.PURPLE_GOLD_STEEL_SHOVEL.get(), EPItems.PURPLE_GOLD_STEEL_HOE.get(), EPItems.PURPLE_GOLD_STEEL_POLISHER.get(),
                 /*-----------------------------------------------------------*/
 
                 EPItems.STEEL_HELMET.get(), EPItems.STEEL_CHESTPLATE.get(), EPItems.STEEL_LEGGINGS.get(), EPItems.STEEL_BOOTS.get()
@@ -334,10 +414,21 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                 EPItems.GREEN_GOLDEN_SWORD.get(), EPItems.GREEN_GOLDEN_DAGGER.get(), EPItems.GREEN_GOLDEN_PICKAXE.get(),
                 EPItems.GREEN_GOLDEN_AXE.get(), EPItems.GREEN_GOLDEN_SHOVEL.get(), EPItems.GREEN_GOLDEN_HOE.get(), EPItems.GREEN_GOLDEN_POLISHER.get(),
 
+                /*-----------------REINFORCED VARIANTS-------------------------*/
+                EPItems.REINFORCED_GREEN_GOLDEN_SWORD.get(), EPItems.REINFORCED_GREEN_GOLDEN_DAGGER.get(), EPItems.REINFORCED_GREEN_GOLDEN_PICKAXE.get(), EPItems.REINFORCED_GREEN_GOLDEN_AXE.get(),
+                EPItems.REINFORCED_GREEN_GOLDEN_SHOVEL.get(), EPItems.REINFORCED_GREEN_GOLDEN_HOE.get(), EPItems.REINFORCED_GREEN_GOLDEN_POLISHER.get(),
+                /*-----------------------------------------------------------*/
+
                 /*-----------------ALUMINUM VARIANTS-------------------------*/
                 EPItems.ALUMINUM_GREEN_GOLDEN_SWORD.get(), EPItems.ALUMINUM_GREEN_GOLDEN_DAGGER.get(), EPItems.ALUMINUM_GREEN_GOLDEN_PICKAXE.get(), EPItems.ALUMINUM_GREEN_GOLDEN_AXE.get(),
                 EPItems.ALUMINUM_GREEN_GOLDEN_SHOVEL.get(), EPItems.ALUMINUM_GREEN_GOLDEN_HOE.get(), EPItems.ALUMINUM_GREEN_GOLDEN_POLISHER.get(),
                 /*-----------------------------------------------------------*/
+
+                /*-----------------PURPLE_GOLD VARIANTS-------------------------*/
+                EPItems.PURPLE_GOLD_GREEN_GOLDEN_SWORD.get(), EPItems.PURPLE_GOLD_GREEN_GOLDEN_DAGGER.get(), EPItems.PURPLE_GOLD_GREEN_GOLDEN_PICKAXE.get(), EPItems.PURPLE_GOLD_GREEN_GOLDEN_AXE.get(),
+                EPItems.PURPLE_GOLD_GREEN_GOLDEN_SHOVEL.get(), EPItems.PURPLE_GOLD_GREEN_GOLDEN_HOE.get(), EPItems.PURPLE_GOLD_GREEN_GOLDEN_POLISHER.get(),
+                /*-----------------------------------------------------------*/
+
                 EPItems.GREEN_GOLDEN_HELMET.get(), EPItems.GREEN_GOLDEN_CHESTPLATE.get(), EPItems.GREEN_GOLDEN_LEGGINGS.get(), EPItems.GREEN_GOLDEN_BOOTS.get()
         );
 
@@ -346,10 +437,21 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                 EPItems.BLUE_GOLDEN_SWORD.get(), EPItems.BLUE_GOLDEN_DAGGER.get(), EPItems.BLUE_GOLDEN_PICKAXE.get(),
                 EPItems.BLUE_GOLDEN_AXE.get(), EPItems.BLUE_GOLDEN_SHOVEL.get(), EPItems.BLUE_GOLDEN_HOE.get(), EPItems.BLUE_GOLDEN_POLISHER.get(),
 
+                /*-----------------REINFORCED VARIANTS-------------------------*/
+                EPItems.REINFORCED_BLUE_GOLDEN_SWORD.get(), EPItems.REINFORCED_BLUE_GOLDEN_DAGGER.get(), EPItems.REINFORCED_BLUE_GOLDEN_PICKAXE.get(), EPItems.REINFORCED_BLUE_GOLDEN_AXE.get(),
+                EPItems.REINFORCED_BLUE_GOLDEN_SHOVEL.get(), EPItems.REINFORCED_BLUE_GOLDEN_HOE.get(), EPItems.REINFORCED_BLUE_GOLDEN_POLISHER.get(),
+                /*-----------------------------------------------------------*/
+
                 /*-----------------ALUMINUM VARIANTS-------------------------*/
                 EPItems.ALUMINUM_BLUE_GOLDEN_SWORD.get(), EPItems.ALUMINUM_BLUE_GOLDEN_DAGGER.get(), EPItems.ALUMINUM_BLUE_GOLDEN_PICKAXE.get(), EPItems.ALUMINUM_BLUE_GOLDEN_AXE.get(),
                 EPItems.ALUMINUM_BLUE_GOLDEN_SHOVEL.get(), EPItems.ALUMINUM_BLUE_GOLDEN_HOE.get(), EPItems.ALUMINUM_BLUE_GOLDEN_POLISHER.get(),
                 /*-----------------------------------------------------------*/
+
+                /*-----------------PURPLE_GOLD VARIANTS-------------------------*/
+                EPItems.PURPLE_GOLD_BLUE_GOLDEN_SWORD.get(), EPItems.PURPLE_GOLD_BLUE_GOLDEN_DAGGER.get(), EPItems.PURPLE_GOLD_BLUE_GOLDEN_PICKAXE.get(), EPItems.PURPLE_GOLD_BLUE_GOLDEN_AXE.get(),
+                EPItems.PURPLE_GOLD_BLUE_GOLDEN_SHOVEL.get(), EPItems.PURPLE_GOLD_BLUE_GOLDEN_HOE.get(), EPItems.PURPLE_GOLD_BLUE_GOLDEN_POLISHER.get(),
+                /*-----------------------------------------------------------*/
+
                 EPItems.BLUE_GOLDEN_HELMET.get(), EPItems.BLUE_GOLDEN_CHESTPLATE.get(), EPItems.BLUE_GOLDEN_LEGGINGS.get(), EPItems.BLUE_GOLDEN_BOOTS.get()
         );
 
@@ -541,6 +643,18 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                 EPItems.GREEN_GOLDEN_SHOVEL.get(),
                 EPItems.BLUE_GOLDEN_SHOVEL.get(),
 
+                EPItems.REINFORCED_GOLDEN_SHOVEL.get(),
+                EPItems.REINFORCED_SILVER_SHOVEL.get(),
+                EPItems.REINFORCED_BRONZE_SHOVEL.get(),
+                EPItems.REINFORCED_BRASS_SHOVEL.get(),
+                EPItems.REINFORCED_ROSE_GOLDEN_SHOVEL.get(),
+                EPItems.REINFORCED_BRONZIUM_SHOVEL.get(),
+                EPItems.REINFORCED_IRON_SHOVEL.get(),
+                EPItems.REINFORCED_STEEL_SHOVEL.get(),
+                EPItems.REINFORCED_GREEN_GOLDEN_SHOVEL.get(),
+                EPItems.REINFORCED_BLUE_GOLDEN_SHOVEL.get(),
+                EPItems.REINFORCED_DIAMOND_SHOVEL.get(),
+
                 EPItems.ALUMINUM_GOLDEN_SHOVEL.get(),
                 EPItems.ALUMINUM_SILVER_SHOVEL.get(),
                 EPItems.ALUMINUM_BRONZE_SHOVEL.get(),
@@ -551,7 +665,19 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                 EPItems.ALUMINUM_STEEL_SHOVEL.get(),
                 EPItems.ALUMINUM_GREEN_GOLDEN_SHOVEL.get(),
                 EPItems.ALUMINUM_BLUE_GOLDEN_SHOVEL.get(),
-                EPItems.ALUMINUM_DIAMOND_SHOVEL.get()
+                EPItems.ALUMINUM_DIAMOND_SHOVEL.get(),
+
+                EPItems.PURPLE_GOLD_GOLDEN_SHOVEL.get(),
+                EPItems.PURPLE_GOLD_SILVER_SHOVEL.get(),
+                EPItems.PURPLE_GOLD_BRONZE_SHOVEL.get(),
+                EPItems.PURPLE_GOLD_BRASS_SHOVEL.get(),
+                EPItems.PURPLE_GOLD_ROSE_GOLDEN_SHOVEL.get(),
+                EPItems.PURPLE_GOLD_BRONZIUM_SHOVEL.get(),
+                EPItems.PURPLE_GOLD_IRON_SHOVEL.get(),
+                EPItems.PURPLE_GOLD_STEEL_SHOVEL.get(),
+                EPItems.PURPLE_GOLD_GREEN_GOLDEN_SHOVEL.get(),
+                EPItems.PURPLE_GOLD_BLUE_GOLDEN_SHOVEL.get(),
+                EPItems.PURPLE_GOLD_DIAMOND_SHOVEL.get()
         );
 
         this.tag(ItemTags.AXES).add(
@@ -563,6 +689,18 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                 EPItems.STEEL_AXE.get(),
                 EPItems.GREEN_GOLDEN_AXE.get(),
                 EPItems.BLUE_GOLDEN_AXE.get(),
+
+                EPItems.REINFORCED_GOLDEN_AXE.get(),
+                EPItems.REINFORCED_SILVER_AXE.get(),
+                EPItems.REINFORCED_BRONZE_AXE.get(),
+                EPItems.REINFORCED_BRASS_AXE.get(),
+                EPItems.REINFORCED_ROSE_GOLDEN_AXE.get(),
+                EPItems.REINFORCED_BRONZIUM_AXE.get(),
+                EPItems.REINFORCED_IRON_AXE.get(),
+                EPItems.REINFORCED_STEEL_AXE.get(),
+                EPItems.REINFORCED_GREEN_GOLDEN_AXE.get(),
+                EPItems.REINFORCED_BLUE_GOLDEN_AXE.get(),
+                EPItems.REINFORCED_DIAMOND_AXE.get(),
 
                 EPItems.ALUMINUM_GOLDEN_AXE.get(),
                 EPItems.ALUMINUM_SILVER_AXE.get(),
@@ -587,6 +725,18 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                 EPItems.GREEN_GOLDEN_PICKAXE.get(),
                 EPItems.BLUE_GOLDEN_PICKAXE.get(),
 
+                EPItems.REINFORCED_GOLDEN_PICKAXE.get(),
+                EPItems.REINFORCED_SILVER_PICKAXE.get(),
+                EPItems.REINFORCED_BRONZE_PICKAXE.get(),
+                EPItems.REINFORCED_BRASS_PICKAXE.get(),
+                EPItems.REINFORCED_ROSE_GOLDEN_PICKAXE.get(),
+                EPItems.REINFORCED_BRONZIUM_PICKAXE.get(),
+                EPItems.REINFORCED_IRON_PICKAXE.get(),
+                EPItems.REINFORCED_STEEL_PICKAXE.get(),
+                EPItems.REINFORCED_GREEN_GOLDEN_PICKAXE.get(),
+                EPItems.REINFORCED_BLUE_GOLDEN_PICKAXE.get(),
+                EPItems.REINFORCED_DIAMOND_PICKAXE.get(),
+
                 EPItems.ALUMINUM_GOLDEN_PICKAXE.get(),
                 EPItems.ALUMINUM_SILVER_PICKAXE.get(),
                 EPItems.ALUMINUM_BRONZE_PICKAXE.get(),
@@ -597,7 +747,19 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                 EPItems.ALUMINUM_STEEL_PICKAXE.get(),
                 EPItems.ALUMINUM_GREEN_GOLDEN_PICKAXE.get(),
                 EPItems.ALUMINUM_BLUE_GOLDEN_PICKAXE.get(),
-                EPItems.ALUMINUM_DIAMOND_PICKAXE.get()
+                EPItems.ALUMINUM_DIAMOND_PICKAXE.get(),
+
+                EPItems.PURPLE_GOLD_GOLDEN_PICKAXE.get(),
+                EPItems.PURPLE_GOLD_SILVER_PICKAXE.get(),
+                EPItems.PURPLE_GOLD_BRONZE_PICKAXE.get(),
+                EPItems.PURPLE_GOLD_BRASS_PICKAXE.get(),
+                EPItems.PURPLE_GOLD_ROSE_GOLDEN_PICKAXE.get(),
+                EPItems.PURPLE_GOLD_BRONZIUM_PICKAXE.get(),
+                EPItems.PURPLE_GOLD_IRON_PICKAXE.get(),
+                EPItems.PURPLE_GOLD_STEEL_PICKAXE.get(),
+                EPItems.PURPLE_GOLD_GREEN_GOLDEN_PICKAXE.get(),
+                EPItems.PURPLE_GOLD_BLUE_GOLDEN_PICKAXE.get(),
+                EPItems.PURPLE_GOLD_DIAMOND_PICKAXE.get()
         );
 
         this.tag(ItemTags.SWORDS).add(
@@ -610,6 +772,18 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                 EPItems.GREEN_GOLDEN_SWORD.get(),
                 EPItems.BLUE_GOLDEN_SWORD.get(),
 
+                EPItems.REINFORCED_GOLDEN_SWORD.get(),
+                EPItems.REINFORCED_SILVER_SWORD.get(),
+                EPItems.REINFORCED_BRONZE_SWORD.get(),
+                EPItems.REINFORCED_BRASS_SWORD.get(),
+                EPItems.REINFORCED_ROSE_GOLDEN_SWORD.get(),
+                EPItems.REINFORCED_BRONZIUM_SWORD.get(),
+                EPItems.REINFORCED_IRON_SWORD.get(),
+                EPItems.REINFORCED_STEEL_SWORD.get(),
+                EPItems.REINFORCED_GREEN_GOLDEN_SWORD.get(),
+                EPItems.REINFORCED_BLUE_GOLDEN_SWORD.get(),
+                EPItems.REINFORCED_DIAMOND_SWORD.get(),
+
                 EPItems.ALUMINUM_GOLDEN_SWORD.get(),
                 EPItems.ALUMINUM_SILVER_SWORD.get(),
                 EPItems.ALUMINUM_BRONZE_SWORD.get(),
@@ -620,7 +794,19 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                 EPItems.ALUMINUM_STEEL_SWORD.get(),
                 EPItems.ALUMINUM_GREEN_GOLDEN_SWORD.get(),
                 EPItems.ALUMINUM_BLUE_GOLDEN_SWORD.get(),
-                EPItems.ALUMINUM_DIAMOND_SWORD.get()
+                EPItems.ALUMINUM_DIAMOND_SWORD.get(),
+
+                EPItems.PURPLE_GOLD_GOLDEN_SWORD.get(),
+                EPItems.PURPLE_GOLD_SILVER_SWORD.get(),
+                EPItems.PURPLE_GOLD_BRONZE_SWORD.get(),
+                EPItems.PURPLE_GOLD_BRASS_SWORD.get(),
+                EPItems.PURPLE_GOLD_ROSE_GOLDEN_SWORD.get(),
+                EPItems.PURPLE_GOLD_BRONZIUM_SWORD.get(),
+                EPItems.PURPLE_GOLD_IRON_SWORD.get(),
+                EPItems.PURPLE_GOLD_STEEL_SWORD.get(),
+                EPItems.PURPLE_GOLD_GREEN_GOLDEN_SWORD.get(),
+                EPItems.PURPLE_GOLD_BLUE_GOLDEN_SWORD.get(),
+                EPItems.PURPLE_GOLD_DIAMOND_SWORD.get()
         );
 
         this.tag(ItemTags.HOES).add(
@@ -633,6 +819,18 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                 EPItems.GREEN_GOLDEN_HOE.get(),
                 EPItems.BLUE_GOLDEN_HOE.get(),
 
+                EPItems.REINFORCED_GOLDEN_HOE.get(),
+                EPItems.REINFORCED_SILVER_HOE.get(),
+                EPItems.REINFORCED_BRONZE_HOE.get(),
+                EPItems.REINFORCED_BRASS_HOE.get(),
+                EPItems.REINFORCED_ROSE_GOLDEN_HOE.get(),
+                EPItems.REINFORCED_BRONZIUM_HOE.get(),
+                EPItems.REINFORCED_IRON_HOE.get(),
+                EPItems.REINFORCED_STEEL_HOE.get(),
+                EPItems.REINFORCED_GREEN_GOLDEN_HOE.get(),
+                EPItems.REINFORCED_BLUE_GOLDEN_HOE.get(),
+                EPItems.REINFORCED_DIAMOND_HOE.get(),
+
                 EPItems.ALUMINUM_GOLDEN_HOE.get(),
                 EPItems.ALUMINUM_SILVER_HOE.get(),
                 EPItems.ALUMINUM_BRONZE_HOE.get(),
@@ -643,7 +841,19 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                 EPItems.ALUMINUM_STEEL_HOE.get(),
                 EPItems.ALUMINUM_GREEN_GOLDEN_HOE.get(),
                 EPItems.ALUMINUM_BLUE_GOLDEN_HOE.get(),
-                EPItems.ALUMINUM_DIAMOND_HOE.get()
+                EPItems.ALUMINUM_DIAMOND_HOE.get(),
+
+                EPItems.PURPLE_GOLD_GOLDEN_HOE.get(),
+                EPItems.PURPLE_GOLD_SILVER_HOE.get(),
+                EPItems.PURPLE_GOLD_BRONZE_HOE.get(),
+                EPItems.PURPLE_GOLD_BRASS_HOE.get(),
+                EPItems.PURPLE_GOLD_ROSE_GOLDEN_HOE.get(),
+                EPItems.PURPLE_GOLD_BRONZIUM_HOE.get(),
+                EPItems.PURPLE_GOLD_IRON_HOE.get(),
+                EPItems.PURPLE_GOLD_STEEL_HOE.get(),
+                EPItems.PURPLE_GOLD_GREEN_GOLDEN_HOE.get(),
+                EPItems.PURPLE_GOLD_BLUE_GOLDEN_HOE.get(),
+                EPItems.PURPLE_GOLD_DIAMOND_HOE.get()
         );
 
         this.tag(EPTags.Items.POLISHER).add(
@@ -661,6 +871,18 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                 EPItems.DIAMOND_POLISHER.get(),
                 EPItems.NETHERITE_POLISHER.get(),
 
+                EPItems.REINFORCED_GOLDEN_POLISHER.get(),
+                EPItems.REINFORCED_SILVER_POLISHER.get(),
+                EPItems.REINFORCED_BRONZE_POLISHER.get(),
+                EPItems.REINFORCED_BRASS_POLISHER.get(),
+                EPItems.REINFORCED_ROSE_GOLDEN_POLISHER.get(),
+                EPItems.REINFORCED_BRONZIUM_POLISHER.get(),
+                EPItems.REINFORCED_IRON_POLISHER.get(),
+                EPItems.REINFORCED_STEEL_POLISHER.get(),
+                EPItems.REINFORCED_GREEN_GOLDEN_POLISHER.get(),
+                EPItems.REINFORCED_BLUE_GOLDEN_POLISHER.get(),
+                EPItems.REINFORCED_DIAMOND_POLISHER.get(),
+
                 EPItems.ALUMINUM_GOLDEN_POLISHER.get(),
                 EPItems.ALUMINUM_SILVER_POLISHER.get(),
                 EPItems.ALUMINUM_BRONZE_POLISHER.get(),
@@ -671,7 +893,19 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                 EPItems.ALUMINUM_STEEL_POLISHER.get(),
                 EPItems.ALUMINUM_GREEN_GOLDEN_POLISHER.get(),
                 EPItems.ALUMINUM_BLUE_GOLDEN_POLISHER.get(),
-                EPItems.ALUMINUM_DIAMOND_POLISHER.get()
+                EPItems.ALUMINUM_DIAMOND_POLISHER.get(),
+
+                EPItems.PURPLE_GOLD_GOLDEN_POLISHER.get(),
+                EPItems.PURPLE_GOLD_SILVER_POLISHER.get(),
+                EPItems.PURPLE_GOLD_BRONZE_POLISHER.get(),
+                EPItems.PURPLE_GOLD_BRASS_POLISHER.get(),
+                EPItems.PURPLE_GOLD_ROSE_GOLDEN_POLISHER.get(),
+                EPItems.PURPLE_GOLD_BRONZIUM_POLISHER.get(),
+                EPItems.PURPLE_GOLD_IRON_POLISHER.get(),
+                EPItems.PURPLE_GOLD_STEEL_POLISHER.get(),
+                EPItems.PURPLE_GOLD_GREEN_GOLDEN_POLISHER.get(),
+                EPItems.PURPLE_GOLD_BLUE_GOLDEN_POLISHER.get(),
+                EPItems.PURPLE_GOLD_DIAMOND_POLISHER.get()
         );
 
         this.tag(EPTags.Items.DAGGER).add(
@@ -690,6 +924,18 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                 EPItems.DIAMOND_DAGGER.get(),
                 EPItems.NETHERITE_DAGGER.get(),
 
+                EPItems.REINFORCED_GOLDEN_DAGGER.get(),
+                EPItems.REINFORCED_SILVER_DAGGER.get(),
+                EPItems.REINFORCED_BRONZE_DAGGER.get(),
+                EPItems.REINFORCED_BRASS_DAGGER.get(),
+                EPItems.REINFORCED_ROSE_GOLDEN_DAGGER.get(),
+                EPItems.REINFORCED_BRONZIUM_DAGGER.get(),
+                EPItems.REINFORCED_IRON_DAGGER.get(),
+                EPItems.REINFORCED_STEEL_DAGGER.get(),
+                EPItems.REINFORCED_GREEN_GOLDEN_DAGGER.get(),
+                EPItems.REINFORCED_BLUE_GOLDEN_DAGGER.get(),
+                EPItems.REINFORCED_DIAMOND_DAGGER.get(),
+
                 EPItems.ALUMINUM_GOLDEN_DAGGER.get(),
                 EPItems.ALUMINUM_SILVER_DAGGER.get(),
                 EPItems.ALUMINUM_BRONZE_DAGGER.get(),
@@ -700,10 +946,29 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                 EPItems.ALUMINUM_STEEL_DAGGER.get(),
                 EPItems.ALUMINUM_GREEN_GOLDEN_DAGGER.get(),
                 EPItems.ALUMINUM_BLUE_GOLDEN_DAGGER.get(),
-                EPItems.ALUMINUM_DIAMOND_DAGGER.get()
+                EPItems.ALUMINUM_DIAMOND_DAGGER.get(),
+
+                EPItems.PURPLE_GOLD_GOLDEN_DAGGER.get(),
+                EPItems.PURPLE_GOLD_SILVER_DAGGER.get(),
+                EPItems.PURPLE_GOLD_BRONZE_DAGGER.get(),
+                EPItems.PURPLE_GOLD_BRASS_DAGGER.get(),
+                EPItems.PURPLE_GOLD_ROSE_GOLDEN_DAGGER.get(),
+                EPItems.PURPLE_GOLD_BRONZIUM_DAGGER.get(),
+                EPItems.PURPLE_GOLD_IRON_DAGGER.get(),
+                EPItems.PURPLE_GOLD_STEEL_DAGGER.get(),
+                EPItems.PURPLE_GOLD_GREEN_GOLDEN_DAGGER.get(),
+                EPItems.PURPLE_GOLD_BLUE_GOLDEN_DAGGER.get(),
+                EPItems.PURPLE_GOLD_DIAMOND_DAGGER.get()
         );
 
         this.tag(EPTags.Items.HURTS_LYCAN).addTags(EPTags.Items.SILVER, EPTags.Items.GREEN_GOLD);
+
+        this.tag(EPTags.Items.STEEL_PICKAXE).add(
+                EPItems.STEEL_PICKAXE.get(),
+                EPItems.REINFORCED_STEEL_PICKAXE.get(),
+                EPItems.ALUMINUM_STEEL_PICKAXE.get(),
+                EPItems.PURPLE_GOLD_STEEL_PICKAXE.get()
+        );
     }
 
     private void addIngredientTags(){

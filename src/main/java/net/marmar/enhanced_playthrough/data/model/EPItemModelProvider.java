@@ -437,8 +437,16 @@ public class EPItemModelProvider extends ItemModelProvider {
                 pickaxeItem(EPItems.ALUMINUM_GOLDEN_PICKAXE, "golden");
                 axeItem(EPItems.ALUMINUM_GOLDEN_AXE, "golden");
                 shovelItem(EPItems.ALUMINUM_GOLDEN_SHOVEL, "golden");
-                hoeItem(EPItems.ALUMINUM_GOLDEN_HOE, "golden");
-                polisherItem(EPItems.ALUMINUM_GOLDEN_POLISHER, "golden");
+                 hoeItem(EPItems.ALUMINUM_GOLDEN_HOE, "golden");
+                 polisherItem(EPItems.ALUMINUM_GOLDEN_POLISHER, "golden");
+                 //Purple gold handle gold
+                 swordItem(EPItems.PURPLE_GOLD_GOLDEN_SWORD, "golden");
+                 daggerItem(EPItems.PURPLE_GOLD_GOLDEN_DAGGER, "golden");
+                 pickaxeItem(EPItems.PURPLE_GOLD_GOLDEN_PICKAXE, "golden");
+                 axeItem(EPItems.PURPLE_GOLD_GOLDEN_AXE, "golden");
+                 shovelItem(EPItems.PURPLE_GOLD_GOLDEN_SHOVEL, "golden");
+                 hoeItem(EPItems.PURPLE_GOLD_GOLDEN_HOE, "golden");
+                 polisherItem(EPItems.PURPLE_GOLD_GOLDEN_POLISHER, "golden");
 
             //Silver
             swordItem(EPItems.SILVER_SWORD, "silver");
@@ -462,8 +470,16 @@ public class EPItemModelProvider extends ItemModelProvider {
                 pickaxeItem(EPItems.ALUMINUM_SILVER_PICKAXE, "silver");
                 axeItem(EPItems.ALUMINUM_SILVER_AXE, "silver");
                 shovelItem(EPItems.ALUMINUM_SILVER_SHOVEL, "silver");
-                hoeItem(EPItems.ALUMINUM_SILVER_HOE, "silver");
-                polisherItem(EPItems.ALUMINUM_SILVER_POLISHER, "silver");
+                 hoeItem(EPItems.ALUMINUM_SILVER_HOE, "silver");
+                 polisherItem(EPItems.ALUMINUM_SILVER_POLISHER, "silver");
+                 //Purple gold handle silver
+                 swordItem(EPItems.PURPLE_GOLD_SILVER_SWORD, "silver");
+                 daggerItem(EPItems.PURPLE_GOLD_SILVER_DAGGER, "silver");
+                 pickaxeItem(EPItems.PURPLE_GOLD_SILVER_PICKAXE, "silver");
+                 axeItem(EPItems.PURPLE_GOLD_SILVER_AXE, "silver");
+                 shovelItem(EPItems.PURPLE_GOLD_SILVER_SHOVEL, "silver");
+                 hoeItem(EPItems.PURPLE_GOLD_SILVER_HOE, "silver");
+                 polisherItem(EPItems.PURPLE_GOLD_SILVER_POLISHER, "silver");
 
             trimmedArmorItem(EPItems.SILVER_HELMET);
             trimmedArmorItem(EPItems.SILVER_CHESTPLATE);
@@ -496,8 +512,16 @@ public class EPItemModelProvider extends ItemModelProvider {
                 pickaxeItem(EPItems.ALUMINUM_BRONZE_PICKAXE, "bronze");
                 axeItem(EPItems.ALUMINUM_BRONZE_AXE, "bronze");
                 shovelItem(EPItems.ALUMINUM_BRONZE_SHOVEL, "bronze");
-                hoeItem(EPItems.ALUMINUM_BRONZE_HOE, "bronze");
-                polisherItem(EPItems.ALUMINUM_BRONZE_POLISHER, "bronze");
+                 hoeItem(EPItems.ALUMINUM_BRONZE_HOE, "bronze");
+                 polisherItem(EPItems.ALUMINUM_BRONZE_POLISHER, "bronze");
+                 //Purple gold handle bronze
+                 swordItem(EPItems.PURPLE_GOLD_BRONZE_SWORD, "bronze");
+                 daggerItem(EPItems.PURPLE_GOLD_BRONZE_DAGGER, "bronze");
+                 pickaxeItem(EPItems.PURPLE_GOLD_BRONZE_PICKAXE, "bronze");
+                 axeItem(EPItems.PURPLE_GOLD_BRONZE_AXE, "bronze");
+                 shovelItem(EPItems.PURPLE_GOLD_BRONZE_SHOVEL, "bronze");
+                 hoeItem(EPItems.PURPLE_GOLD_BRONZE_HOE, "bronze");
+                 polisherItem(EPItems.PURPLE_GOLD_BRONZE_POLISHER, "bronze");
 
             trimmedArmorItem(EPItems.BRONZE_HELMET);
             trimmedArmorItem(EPItems.BRONZE_CHESTPLATE);
@@ -526,8 +550,16 @@ public class EPItemModelProvider extends ItemModelProvider {
                 pickaxeItem(EPItems.ALUMINUM_BRASS_PICKAXE, "brass");
                 axeItem(EPItems.ALUMINUM_BRASS_AXE, "brass");
                 shovelItem(EPItems.ALUMINUM_BRASS_SHOVEL, "brass");
-                hoeItem(EPItems.ALUMINUM_BRASS_HOE, "brass");
-                polisherItem(EPItems.ALUMINUM_BRASS_POLISHER, "brass");
+                 hoeItem(EPItems.ALUMINUM_BRASS_HOE, "brass");
+                 polisherItem(EPItems.ALUMINUM_BRASS_POLISHER, "brass");
+                 //Purple gold handle brass
+                 swordItem(EPItems.PURPLE_GOLD_BRASS_SWORD, "brass");
+                 daggerItem(EPItems.PURPLE_GOLD_BRASS_DAGGER, "brass");
+                 pickaxeItem(EPItems.PURPLE_GOLD_BRASS_PICKAXE, "brass");
+                 axeItem(EPItems.PURPLE_GOLD_BRASS_AXE, "brass");
+                 shovelItem(EPItems.PURPLE_GOLD_BRASS_SHOVEL, "brass");
+                 hoeItem(EPItems.PURPLE_GOLD_BRASS_HOE, "brass");
+                 polisherItem(EPItems.PURPLE_GOLD_BRASS_POLISHER, "brass");
 
             trimmedArmorItem(EPItems.BRASS_HELMET);
             trimmedArmorItem(EPItems.BRASS_CHESTPLATE);
@@ -556,8 +588,16 @@ public class EPItemModelProvider extends ItemModelProvider {
                 pickaxeItem(EPItems.ALUMINUM_ROSE_GOLDEN_PICKAXE, "rose_golden");
                 axeItem(EPItems.ALUMINUM_ROSE_GOLDEN_AXE, "rose_golden");
                 shovelItem(EPItems.ALUMINUM_ROSE_GOLDEN_SHOVEL, "rose_golden");
-                hoeItem(EPItems.ALUMINUM_ROSE_GOLDEN_HOE, "rose_golden");
-                polisherItem(EPItems.ALUMINUM_ROSE_GOLDEN_POLISHER, "rose_golden");
+                 hoeItem(EPItems.ALUMINUM_ROSE_GOLDEN_HOE, "rose_golden");
+                 polisherItem(EPItems.ALUMINUM_ROSE_GOLDEN_POLISHER, "rose_golden");
+                 //Purple gold handle rose gold
+                 swordItem(EPItems.PURPLE_GOLD_ROSE_GOLDEN_SWORD, "rose_golden");
+                 daggerItem(EPItems.PURPLE_GOLD_ROSE_GOLDEN_DAGGER, "rose_golden");
+                 pickaxeItem(EPItems.PURPLE_GOLD_ROSE_GOLDEN_PICKAXE, "rose_golden");
+                 axeItem(EPItems.PURPLE_GOLD_ROSE_GOLDEN_AXE, "rose_golden");
+                 shovelItem(EPItems.PURPLE_GOLD_ROSE_GOLDEN_SHOVEL, "rose_golden");
+                 hoeItem(EPItems.PURPLE_GOLD_ROSE_GOLDEN_HOE, "rose_golden");
+                 polisherItem(EPItems.PURPLE_GOLD_ROSE_GOLDEN_POLISHER, "rose_golden");
 
             trimmedArmorItem(EPItems.ROSE_GOLDEN_HELMET);
             trimmedArmorItem(EPItems.ROSE_GOLDEN_CHESTPLATE);
@@ -586,8 +626,16 @@ public class EPItemModelProvider extends ItemModelProvider {
                 pickaxeItem(EPItems.ALUMINUM_BRONZIUM_PICKAXE, "bronzium");
                 axeItem(EPItems.ALUMINUM_BRONZIUM_AXE, "bronzium");
                 shovelItem(EPItems.ALUMINUM_BRONZIUM_SHOVEL, "bronzium");
-                hoeItem(EPItems.ALUMINUM_BRONZIUM_HOE, "bronzium");
-                polisherItem(EPItems.ALUMINUM_BRONZIUM_POLISHER, "bronzium");
+                 hoeItem(EPItems.ALUMINUM_BRONZIUM_HOE, "bronzium");
+                 polisherItem(EPItems.ALUMINUM_BRONZIUM_POLISHER, "bronzium");
+                 //Purple gold handle bronzium
+                 swordItem(EPItems.PURPLE_GOLD_BRONZIUM_SWORD, "bronzium");
+                 daggerItem(EPItems.PURPLE_GOLD_BRONZIUM_DAGGER, "bronzium");
+                 pickaxeItem(EPItems.PURPLE_GOLD_BRONZIUM_PICKAXE, "bronzium");
+                 axeItem(EPItems.PURPLE_GOLD_BRONZIUM_AXE, "bronzium");
+                 shovelItem(EPItems.PURPLE_GOLD_BRONZIUM_SHOVEL, "bronzium");
+                 hoeItem(EPItems.PURPLE_GOLD_BRONZIUM_HOE, "bronzium");
+                 polisherItem(EPItems.PURPLE_GOLD_BRONZIUM_POLISHER, "bronzium");
 
             trimmedArmorItem(EPItems.BRONZIUM_HELMET);
             trimmedArmorItem(EPItems.BRONZIUM_CHESTPLATE);
@@ -611,8 +659,16 @@ public class EPItemModelProvider extends ItemModelProvider {
                 pickaxeItem(EPItems.ALUMINUM_IRON_PICKAXE, "iron");
                 axeItem(EPItems.ALUMINUM_IRON_AXE, "iron");
                 shovelItem(EPItems.ALUMINUM_IRON_SHOVEL, "iron");
-                hoeItem(EPItems.ALUMINUM_IRON_HOE, "iron");
-                polisherItem(EPItems.ALUMINUM_IRON_POLISHER, "iron");
+                 hoeItem(EPItems.ALUMINUM_IRON_HOE, "iron");
+                 polisherItem(EPItems.ALUMINUM_IRON_POLISHER, "iron");
+                 //Purple gold handle iron
+                 swordItem(EPItems.PURPLE_GOLD_IRON_SWORD, "iron");
+                 daggerItem(EPItems.PURPLE_GOLD_IRON_DAGGER, "iron");
+                 pickaxeItem(EPItems.PURPLE_GOLD_IRON_PICKAXE, "iron");
+                 axeItem(EPItems.PURPLE_GOLD_IRON_AXE, "iron");
+                 shovelItem(EPItems.PURPLE_GOLD_IRON_SHOVEL, "iron");
+                 hoeItem(EPItems.PURPLE_GOLD_IRON_HOE, "iron");
+                 polisherItem(EPItems.PURPLE_GOLD_IRON_POLISHER, "iron");
 
             //Steel
             swordItem(EPItems.STEEL_SWORD, "steel");
@@ -636,8 +692,16 @@ public class EPItemModelProvider extends ItemModelProvider {
                 pickaxeItem(EPItems.ALUMINUM_STEEL_PICKAXE, "steel");
                 axeItem(EPItems.ALUMINUM_STEEL_AXE, "steel");
                 shovelItem(EPItems.ALUMINUM_STEEL_SHOVEL, "steel");
-                hoeItem(EPItems.ALUMINUM_STEEL_HOE, "steel");
-                polisherItem(EPItems.ALUMINUM_STEEL_POLISHER, "steel");
+                 hoeItem(EPItems.ALUMINUM_STEEL_HOE, "steel");
+                 polisherItem(EPItems.ALUMINUM_STEEL_POLISHER, "steel");
+                 //Purple gold handle steel
+                 swordItem(EPItems.PURPLE_GOLD_STEEL_SWORD, "steel");
+                 daggerItem(EPItems.PURPLE_GOLD_STEEL_DAGGER, "steel");
+                 pickaxeItem(EPItems.PURPLE_GOLD_STEEL_PICKAXE, "steel");
+                 axeItem(EPItems.PURPLE_GOLD_STEEL_AXE, "steel");
+                 shovelItem(EPItems.PURPLE_GOLD_STEEL_SHOVEL, "steel");
+                 hoeItem(EPItems.PURPLE_GOLD_STEEL_HOE, "steel");
+                 polisherItem(EPItems.PURPLE_GOLD_STEEL_POLISHER, "steel");
 
             trimmedArmorItem(EPItems.STEEL_HELMET);
             trimmedArmorItem(EPItems.STEEL_CHESTPLATE);
@@ -666,8 +730,16 @@ public class EPItemModelProvider extends ItemModelProvider {
                 pickaxeItem(EPItems.ALUMINUM_GREEN_GOLDEN_PICKAXE, "green_golden");
                 axeItem(EPItems.ALUMINUM_GREEN_GOLDEN_AXE, "green_golden");
                 shovelItem(EPItems.ALUMINUM_GREEN_GOLDEN_SHOVEL, "green_golden");
-                hoeItem(EPItems.ALUMINUM_GREEN_GOLDEN_HOE, "green_golden");
-                polisherItem(EPItems.ALUMINUM_GREEN_GOLDEN_POLISHER, "green_golden");
+                 hoeItem(EPItems.ALUMINUM_GREEN_GOLDEN_HOE, "green_golden");
+                 polisherItem(EPItems.ALUMINUM_GREEN_GOLDEN_POLISHER, "green_golden");
+                 //Purple gold handle green gold
+                 swordItem(EPItems.PURPLE_GOLD_GREEN_GOLDEN_SWORD, "green_golden");
+                 daggerItem(EPItems.PURPLE_GOLD_GREEN_GOLDEN_DAGGER, "green_golden");
+                 pickaxeItem(EPItems.PURPLE_GOLD_GREEN_GOLDEN_PICKAXE, "green_golden");
+                 axeItem(EPItems.PURPLE_GOLD_GREEN_GOLDEN_AXE, "green_golden");
+                 shovelItem(EPItems.PURPLE_GOLD_GREEN_GOLDEN_SHOVEL, "green_golden");
+                 hoeItem(EPItems.PURPLE_GOLD_GREEN_GOLDEN_HOE, "green_golden");
+                 polisherItem(EPItems.PURPLE_GOLD_GREEN_GOLDEN_POLISHER, "green_golden");
 
             trimmedArmorItem(EPItems.GREEN_GOLDEN_HELMET);
             trimmedArmorItem(EPItems.GREEN_GOLDEN_CHESTPLATE);
@@ -696,8 +768,16 @@ public class EPItemModelProvider extends ItemModelProvider {
                 pickaxeItem(EPItems.ALUMINUM_BLUE_GOLDEN_PICKAXE, "blue_golden");
                 axeItem(EPItems.ALUMINUM_BLUE_GOLDEN_AXE, "blue_golden");
                 shovelItem(EPItems.ALUMINUM_BLUE_GOLDEN_SHOVEL, "blue_golden");
-                hoeItem(EPItems.ALUMINUM_BLUE_GOLDEN_HOE, "blue_golden");
-                polisherItem(EPItems.ALUMINUM_BLUE_GOLDEN_POLISHER, "blue_golden");
+                 hoeItem(EPItems.ALUMINUM_BLUE_GOLDEN_HOE, "blue_golden");
+                 polisherItem(EPItems.ALUMINUM_BLUE_GOLDEN_POLISHER, "blue_golden");
+                 //Purple gold handle blue gold
+                 swordItem(EPItems.PURPLE_GOLD_BLUE_GOLDEN_SWORD, "blue_golden");
+                 daggerItem(EPItems.PURPLE_GOLD_BLUE_GOLDEN_DAGGER, "blue_golden");
+                 pickaxeItem(EPItems.PURPLE_GOLD_BLUE_GOLDEN_PICKAXE, "blue_golden");
+                 axeItem(EPItems.PURPLE_GOLD_BLUE_GOLDEN_AXE, "blue_golden");
+                 shovelItem(EPItems.PURPLE_GOLD_BLUE_GOLDEN_SHOVEL, "blue_golden");
+                 hoeItem(EPItems.PURPLE_GOLD_BLUE_GOLDEN_HOE, "blue_golden");
+                 polisherItem(EPItems.PURPLE_GOLD_BLUE_GOLDEN_POLISHER, "blue_golden");
 
             trimmedArmorItem(EPItems.BLUE_GOLDEN_HELMET);
             trimmedArmorItem(EPItems.BLUE_GOLDEN_CHESTPLATE);
@@ -721,8 +801,16 @@ public class EPItemModelProvider extends ItemModelProvider {
                 pickaxeItem(EPItems.ALUMINUM_DIAMOND_PICKAXE, "diamond");
                 axeItem(EPItems.ALUMINUM_DIAMOND_AXE, "diamond");
                 shovelItem(EPItems.ALUMINUM_DIAMOND_SHOVEL, "diamond");
-                hoeItem(EPItems.ALUMINUM_DIAMOND_HOE, "diamond");
-                polisherItem(EPItems.ALUMINUM_DIAMOND_POLISHER, "diamond");
+                 hoeItem(EPItems.ALUMINUM_DIAMOND_HOE, "diamond");
+                 polisherItem(EPItems.ALUMINUM_DIAMOND_POLISHER, "diamond");
+                 //Purple gold handle diamond
+                 swordItem(EPItems.PURPLE_GOLD_DIAMOND_SWORD, "diamond");
+                 daggerItem(EPItems.PURPLE_GOLD_DIAMOND_DAGGER, "diamond");
+                 pickaxeItem(EPItems.PURPLE_GOLD_DIAMOND_PICKAXE, "diamond");
+                 axeItem(EPItems.PURPLE_GOLD_DIAMOND_AXE, "diamond");
+                 shovelItem(EPItems.PURPLE_GOLD_DIAMOND_SHOVEL, "diamond");
+                 hoeItem(EPItems.PURPLE_GOLD_DIAMOND_HOE, "diamond");
+                 polisherItem(EPItems.PURPLE_GOLD_DIAMOND_POLISHER, "diamond");
 
             //Netherite
             handheldItem(EPItems.NETHERITE_POLISHER);

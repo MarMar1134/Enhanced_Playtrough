@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "enhanced_playthrough:item/bronze_pickaxe",
+    "layer1": "enhanced_playthrough:item/handle/purple_gold_pickaxe"
+  }
+}
