@@ -110,6 +110,8 @@ public class EPTabs {
                         output.accept(EPItems.LIME.get());
 
                         output.accept(EPItems.ALUMINUM_ROD.get());
+                        output.accept(EPItems.PURPLE_GOLD_ROD.get());
+
                         output.accept(EPItems.REINFORCED_UPGRADE_SMITHING_TEMPLATE.get());
                         output.accept(EPItems.BRONZIUM_UPGRADE_SMITHING_TEMPLATE.get());
                         output.accept(EPItems.ALUMINUM_UPGRADE_SMITHING_TEMPLATE.get());
@@ -178,6 +180,10 @@ public class EPTabs {
                         output.accept(EPItems.BLUE_GOLD_INGOT.get());
                         output.accept(EPItems.BLUE_GOLD_DUST.get());
                         output.accept(EPItems.BLUE_GOLD_NUGGET.get());
+
+                        output.accept(EPItems.PURPLE_GOLD_INGOT.get());
+                        output.accept(EPItems.PURPLE_GOLD_DUST.get());
+                        output.accept(EPItems.PURPLE_GOLD_NUGGET.get());
 
                         output.accept(EPItems.CALIBRATED_QUARTZ.get());
                     }).build());
@@ -269,6 +275,7 @@ public class EPTabs {
                         //Upgrade materials
                         output.accept(EPItems.REINFORCED_UPGRADE_SMITHING_TEMPLATE.get());
                         output.accept(EPItems.LEATHER_STRIPS.get());
+                        output.accept(EPItems.REINFORCED_STICK.get());
 
                         //Golden
                         output.accept(EPItems.REINFORCED_GOLDEN_PICKAXE.get());
@@ -373,12 +380,13 @@ public class EPTabs {
     public static final RegistryObject<CreativeModeTab> ALUMINUM_TOOLS = TABS.register(
             "aluminum_tools", () -> CreativeModeTab.builder().icon(() -> new ItemStack(EPItems.ALUMINUM_STEEL_PICKAXE.get()))
                     .title((Component.translatable("creativetab." + EnhancedPlaythrough.MOD_ID + ".aluminum_tools")))
-                    .withTabsAfter(EPTabs.WEAPONS.getId())
-                    .withTabsBefore(EPTabs.TOOLS.getId())
+                    .withTabsAfter(EPTabs.PURPLE_GOLD_TOOLS.getId())
+                    .withTabsBefore(EPTabs.REINFORCED_TOOLS.getId())
                     .displayItems((itemDisplayParameters, output) -> {
                         //Upgrade materials
                         output.accept(EPItems.ALUMINUM_UPGRADE_SMITHING_TEMPLATE.get());
                         output.accept(EPItems.ALUMINUM_INGOT.get());
+                        output.accept(EPItems.ALUMINUM_ROD.get());
 
                         //Golden
                         output.accept(EPItems.ALUMINUM_GOLDEN_PICKAXE.get());
@@ -478,6 +486,117 @@ public class EPTabs {
                         output.accept(EPItems.ALUMINUM_DIAMOND_POLISHER.get());
                         output.accept(EPItems.ALUMINUM_DIAMOND_SWORD.get());
                         output.accept(EPItems.ALUMINUM_DIAMOND_DAGGER.get());
+                    }).build());
+
+    public static final RegistryObject<CreativeModeTab> PURPLE_GOLD_TOOLS = TABS.register(
+            "purple_gold_tools", () -> CreativeModeTab.builder().icon(() -> new ItemStack(EPItems.PURPLE_GOLD_STEEL_PICKAXE.get()))
+                    .title((Component.translatable("creativetab." + EnhancedPlaythrough.MOD_ID + ".purple_gold_tools")))
+                    .withTabsAfter(EPTabs.WEAPONS.getId())
+                    .withTabsBefore(EPTabs.ALUMINUM_TOOLS.getId())
+                    .displayItems((itemDisplayParameters, output) -> {
+                        //Upgrade materials
+                        output.accept(EPItems.GOLDEN_UPGRADE_SMITHING_TEMPLATE.get()); //TODO: Add new template
+                        output.accept(EPItems.PURPLE_GOLD_INGOT.get());
+                        output.accept(EPItems.PURPLE_GOLD_ROD.get());
+
+                        //Golden
+                        output.accept(EPItems.PURPLE_GOLD_GOLDEN_PICKAXE.get());
+                        output.accept(EPItems.PURPLE_GOLD_GOLDEN_AXE.get());
+                        output.accept(EPItems.PURPLE_GOLD_GOLDEN_SHOVEL.get());
+                        output.accept(EPItems.PURPLE_GOLD_GOLDEN_HOE.get());
+                        output.accept(EPItems.PURPLE_GOLD_GOLDEN_POLISHER.get());
+                        output.accept(EPItems.PURPLE_GOLD_GOLDEN_SWORD.get());
+                        output.accept(EPItems.PURPLE_GOLD_GOLDEN_DAGGER.get());
+
+                        //Silver
+                        output.accept(EPItems.PURPLE_GOLD_SILVER_PICKAXE.get());
+                        output.accept(EPItems.PURPLE_GOLD_SILVER_AXE.get());
+                        output.accept(EPItems.PURPLE_GOLD_SILVER_SHOVEL.get());
+                        output.accept(EPItems.PURPLE_GOLD_SILVER_HOE.get());
+                        output.accept(EPItems.PURPLE_GOLD_SILVER_POLISHER.get());
+                        output.accept(EPItems.PURPLE_GOLD_SILVER_SWORD.get());
+                        output.accept(EPItems.PURPLE_GOLD_SILVER_DAGGER.get());
+
+                        //Bronze
+                        output.accept(EPItems.PURPLE_GOLD_BRONZE_PICKAXE.get());
+                        output.accept(EPItems.PURPLE_GOLD_BRONZE_AXE.get());
+                        output.accept(EPItems.PURPLE_GOLD_BRONZE_SHOVEL.get());
+                        output.accept(EPItems.PURPLE_GOLD_BRONZE_HOE.get());
+                        output.accept(EPItems.PURPLE_GOLD_BRONZE_POLISHER.get());
+                        output.accept(EPItems.PURPLE_GOLD_BRONZE_SWORD.get());
+                        output.accept(EPItems.PURPLE_GOLD_BRONZE_DAGGER.get());
+
+                        //Brass
+                        output.accept(EPItems.PURPLE_GOLD_BRASS_PICKAXE.get());
+                        output.accept(EPItems.PURPLE_GOLD_BRASS_AXE.get());
+                        output.accept(EPItems.PURPLE_GOLD_BRASS_SHOVEL.get());
+                        output.accept(EPItems.PURPLE_GOLD_BRASS_HOE.get());
+                        output.accept(EPItems.PURPLE_GOLD_BRASS_POLISHER.get());
+                        output.accept(EPItems.PURPLE_GOLD_BRASS_SWORD.get());
+                        output.accept(EPItems.PURPLE_GOLD_BRASS_DAGGER.get());
+
+                        //Rose Gold
+                        output.accept(EPItems.PURPLE_GOLD_ROSE_GOLDEN_PICKAXE.get());
+                        output.accept(EPItems.PURPLE_GOLD_ROSE_GOLDEN_AXE.get());
+                        output.accept(EPItems.PURPLE_GOLD_ROSE_GOLDEN_SHOVEL.get());
+                        output.accept(EPItems.PURPLE_GOLD_ROSE_GOLDEN_HOE.get());
+                        output.accept(EPItems.PURPLE_GOLD_ROSE_GOLDEN_POLISHER.get());
+                        output.accept(EPItems.PURPLE_GOLD_ROSE_GOLDEN_SWORD.get());
+                        output.accept(EPItems.PURPLE_GOLD_ROSE_GOLDEN_DAGGER.get());
+
+                        //Iron
+                        output.accept(EPItems.PURPLE_GOLD_IRON_PICKAXE.get());
+                        output.accept(EPItems.PURPLE_GOLD_IRON_AXE.get());
+                        output.accept(EPItems.PURPLE_GOLD_IRON_SHOVEL.get());
+                        output.accept(EPItems.PURPLE_GOLD_IRON_HOE.get());
+                        output.accept(EPItems.PURPLE_GOLD_IRON_POLISHER.get());
+                        output.accept(EPItems.PURPLE_GOLD_IRON_SWORD.get());
+                        output.accept(EPItems.PURPLE_GOLD_IRON_DAGGER.get());
+
+                        //Bronzium
+                        output.accept(EPItems.PURPLE_GOLD_BRONZIUM_PICKAXE.get());
+                        output.accept(EPItems.PURPLE_GOLD_BRONZIUM_AXE.get());
+                        output.accept(EPItems.PURPLE_GOLD_BRONZIUM_SHOVEL.get());
+                        output.accept(EPItems.PURPLE_GOLD_BRONZIUM_HOE.get());
+                        output.accept(EPItems.PURPLE_GOLD_BRONZIUM_POLISHER.get());
+                        output.accept(EPItems.PURPLE_GOLD_BRONZIUM_SWORD.get());
+                        output.accept(EPItems.PURPLE_GOLD_BRONZIUM_DAGGER.get());
+
+                        //Green Gold
+                        output.accept(EPItems.PURPLE_GOLD_GREEN_GOLDEN_PICKAXE.get());
+                        output.accept(EPItems.PURPLE_GOLD_GREEN_GOLDEN_AXE.get());
+                        output.accept(EPItems.PURPLE_GOLD_GREEN_GOLDEN_SHOVEL.get());
+                        output.accept(EPItems.PURPLE_GOLD_GREEN_GOLDEN_HOE.get());
+                        output.accept(EPItems.PURPLE_GOLD_GREEN_GOLDEN_POLISHER.get());
+                        output.accept(EPItems.PURPLE_GOLD_GREEN_GOLDEN_SWORD.get());
+                        output.accept(EPItems.PURPLE_GOLD_GREEN_GOLDEN_DAGGER.get());
+
+                        //Steel
+                        output.accept(EPItems.PURPLE_GOLD_STEEL_PICKAXE.get());
+                        output.accept(EPItems.PURPLE_GOLD_STEEL_AXE.get());
+                        output.accept(EPItems.PURPLE_GOLD_STEEL_SHOVEL.get());
+                        output.accept(EPItems.PURPLE_GOLD_STEEL_HOE.get());
+                        output.accept(EPItems.PURPLE_GOLD_STEEL_POLISHER.get());
+                        output.accept(EPItems.PURPLE_GOLD_STEEL_SWORD.get());
+                        output.accept(EPItems.PURPLE_GOLD_STEEL_DAGGER.get());
+
+                        //Blue Gold
+                        output.accept(EPItems.PURPLE_GOLD_BLUE_GOLDEN_PICKAXE.get());
+                        output.accept(EPItems.PURPLE_GOLD_BLUE_GOLDEN_AXE.get());
+                        output.accept(EPItems.PURPLE_GOLD_BLUE_GOLDEN_SHOVEL.get());
+                        output.accept(EPItems.PURPLE_GOLD_BLUE_GOLDEN_HOE.get());
+                        output.accept(EPItems.PURPLE_GOLD_BLUE_GOLDEN_POLISHER.get());
+                        output.accept(EPItems.PURPLE_GOLD_BLUE_GOLDEN_SWORD.get());
+                        output.accept(EPItems.PURPLE_GOLD_BLUE_GOLDEN_DAGGER.get());
+
+                        //Diamond
+                        output.accept(EPItems.PURPLE_GOLD_DIAMOND_PICKAXE.get());
+                        output.accept(EPItems.PURPLE_GOLD_DIAMOND_AXE.get());
+                        output.accept(EPItems.PURPLE_GOLD_DIAMOND_SHOVEL.get());
+                        output.accept(EPItems.PURPLE_GOLD_DIAMOND_HOE.get());
+                        output.accept(EPItems.PURPLE_GOLD_DIAMOND_POLISHER.get());
+                        output.accept(EPItems.PURPLE_GOLD_DIAMOND_SWORD.get());
+                        output.accept(EPItems.PURPLE_GOLD_DIAMOND_DAGGER.get());
                     }).build());
 
     public static final RegistryObject<CreativeModeTab> WEAPONS = TABS.register(
@@ -886,6 +1005,7 @@ public class EPTabs {
                         output.accept(EPBlocks.GREEN_GOLD_BLOCK.get());
                         output.accept(EPBlocks.STEEL_BLOCK.get());
                         output.accept(EPBlocks.BLUE_GOLD_BLOCK.get());
+                        output.accept(EPBlocks.PURPLE_GOLD_BLOCK.get());
 
                         output.accept(EPBlocks.CALIBRATED_QUARTZ_BLOCK.get());
                         output.accept(EPBlocks.SMOOTH_CALIBRATED_QUARTZ_BLOCK.get());

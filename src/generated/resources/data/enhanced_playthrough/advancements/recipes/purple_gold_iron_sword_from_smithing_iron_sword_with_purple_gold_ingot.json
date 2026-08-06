@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_iron_sword": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:iron_sword"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_purple_gold_iron_sword": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:purple_gold_iron_sword"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "enhanced_playthrough:purple_gold_iron_sword_from_smithing_iron_sword_with_purple_gold_ingot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_iron_sword",
+      "has_purple_gold_iron_sword",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "enhanced_playthrough:purple_gold_iron_sword_from_smithing_iron_sword_with_purple_gold_ingot"
+    ]
+  },
+  "sends_telemetry_event": false
+}

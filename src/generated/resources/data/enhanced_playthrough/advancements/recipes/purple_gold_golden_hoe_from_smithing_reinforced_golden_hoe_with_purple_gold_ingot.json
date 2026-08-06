@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_purple_gold_golden_hoe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:purple_gold_golden_hoe"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_reinforced_golden_hoe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:reinforced_golden_hoe"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "enhanced_playthrough:purple_gold_golden_hoe_from_smithing_reinforced_golden_hoe_with_purple_gold_ingot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_reinforced_golden_hoe",
+      "has_purple_gold_golden_hoe",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "enhanced_playthrough:purple_gold_golden_hoe_from_smithing_reinforced_golden_hoe_with_purple_gold_ingot"
+    ]
+  },
+  "sends_telemetry_event": false
+}

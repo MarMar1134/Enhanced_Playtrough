@@ -5,7 +5,7 @@
   "experience": 0.1,
   "group": "silver_nugget",
   "ingredient": {
-    "tag": "enhanced_playthrough:manufacturable/silver"
+    "tag": "enhanced_playthrough:smelt_to_nugget/silver"
   },
   "result": "enhanced_playthrough:silver_nugget"
 }

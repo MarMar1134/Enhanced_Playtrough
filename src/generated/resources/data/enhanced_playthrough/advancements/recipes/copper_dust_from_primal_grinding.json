@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "TagKey[minecraft:item / enhanced_playthrough:manufacturable/copper]": {
+    "TagKey[minecraft:item / enhanced_playthrough:grindable/copper]": {
       "conditions": {
         "items": [
           {
-            "tag": "enhanced_playthrough:manufacturable/copper"
+            "tag": "enhanced_playthrough:grindable/copper"
           }
         ]
       },
@@ -20,7 +20,7 @@
   },
   "requirements": [
     [
-      "TagKey[minecraft:item / enhanced_playthrough:manufacturable/copper]",
+      "TagKey[minecraft:item / enhanced_playthrough:grindable/copper]",
       "has_the_recipe"
     ]
   ],

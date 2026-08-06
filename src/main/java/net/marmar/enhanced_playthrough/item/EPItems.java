@@ -7,8 +7,8 @@ import net.marmar.enhanced_playthrough.item.custom.food.MateItem;
 import net.marmar.enhanced_playthrough.item.custom.food.EPFoodProperties;
 import net.marmar.enhanced_playthrough.item.custom.food.StewItem;
 import net.marmar.enhanced_playthrough.item.custom.tool.*;
-import net.marmar.enhanced_playthrough.item.custom.weapon.AluminumArrowItem;
-import net.marmar.enhanced_playthrough.item.custom.weapon.EPToolTier;
+import net.marmar.enhanced_playthrough.item.custom.tool.weapon.AluminumArrowItem;
+import net.marmar.enhanced_playthrough.item.custom.tool.EPToolTier;
 import net.marmar.enhanced_playthrough.entity.boat.EPBoatEntity;
 import net.marmar.enhanced_playthrough.item.custom.armor.EPArmorItem;
 import net.marmar.enhanced_playthrough.item.custom.armor.EPArmorMaterial;
@@ -112,6 +112,11 @@ public class EPItems {
         public static final RegistryObject<Item> BLUE_GOLD_NUGGET = ITEMS.register(
                 "blue_gold_nugget", () -> new Item(new Item.Properties()));
 
+        public static final RegistryObject<Item> PURPLE_GOLD_INGOT = ITEMS.register(
+                "purple_gold_ingot", () -> new Item(new Item.Properties()));
+        public static final RegistryObject<Item> PURPLE_GOLD_NUGGET = ITEMS.register(
+                "purple_gold_nugget", () -> new Item(new Item.Properties()));
+
         public static final RegistryObject<Item> RUBY = ITEMS.register(
                 "ruby", () -> new Item(new Item.Properties()));
         public static final RegistryObject<Item> SAPPHIRE = ITEMS.register(
@@ -148,6 +153,8 @@ public class EPItems {
                 "steel_dust", ()-> new Item(new Item.Properties()));
         public static final RegistryObject<Item> BLUE_GOLD_DUST = ITEMS.register(
                 "blue_gold_dust", ()-> new Item(new Item.Properties()));
+        public static final RegistryObject<Item> PURPLE_GOLD_DUST = ITEMS.register(
+                "purple_gold_dust", ()-> new Item(new Item.Properties()));
 
         //Manufactured
         public static final RegistryObject<Item> CALIBRATED_QUARTZ = ITEMS.register(
@@ -225,6 +232,14 @@ public class EPItems {
     public static final RegistryObject<Item> WERELLAGER_HIDE = ITEMS.register(
             "werellager_hide", () -> new Item(new Item.Properties()));
 
+    //Rods
+    public static final RegistryObject<Item> REINFORCED_STICK = ITEMS.register(
+            "reinforced_stick", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ALUMINUM_ROD = ITEMS.register(
+            "aluminum_rod", ()-> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> PURPLE_GOLD_ROD = ITEMS.register(
+            "purple_gold_rod", ()-> new Item(new Item.Properties()));
+
     //Other materials
     public static final RegistryObject<Item> MUD_BRICK = ITEMS.register(
             "mud_brick", () -> new Item(new Item.Properties()));
@@ -232,10 +247,6 @@ public class EPItems {
             "firebrick", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> LEATHER_STRIPS = ITEMS.register(
             "leather_strips", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> REINFORCED_STICK = ITEMS.register(
-            "reinforced_stick", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> ALUMINUM_ROD = ITEMS.register(
-            "aluminum_rod", ()-> new Item(new Item.Properties()));
     public static final RegistryObject<Item> PLANT_FIBER = ITEMS.register(
             "plant_fiber", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> REEDS_HEAD = ITEMS.register(

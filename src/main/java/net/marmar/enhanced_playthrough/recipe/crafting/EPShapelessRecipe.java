@@ -80,7 +80,7 @@ public class EPShapelessRecipe extends ShapelessRecipe {
 
             for(int i = 0; i < pIngredientArray.size(); ++i) {
                 Ingredient ingredient = Ingredient.fromJson(pIngredientArray.get(i), false);
-                if (true || !ingredient.isEmpty()) {
+                if (true) {
                     ingredients.add(ingredient);
                 }
             }
@@ -98,9 +98,7 @@ public class EPShapelessRecipe extends ShapelessRecipe {
 
             NonNullList<Ingredient> ingredients = NonNullList.withSize(ingredientQuantity, Ingredient.EMPTY);
 
-            for(int j = 0; j < ingredients.size(); ++j) {
-                ingredients.set(j, Ingredient.fromNetwork(pBuffer));
-            }
+            ingredients.replaceAll(ignored -> Ingredient.fromNetwork(pBuffer));
 
             boolean consumeDurability = pBuffer.readBoolean();
             int durabilityToConsume = pBuffer.readVarInt();

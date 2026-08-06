@@ -9,7 +9,7 @@ import net.marmar.enhanced_playthrough.util.enchantment.EPEnchantments;
 import net.marmar.enhanced_playthrough.entity.EPEntityTypes;
 import net.marmar.enhanced_playthrough.item.EPItems;
 import net.marmar.enhanced_playthrough.util.tab.EPTabs;
-import net.marmar.enhanced_playthrough.data.loot.modifier.EPLootModifiers;
+import net.marmar.enhanced_playthrough.datagen.loot.modifier.EPLootModifiers;
 import net.marmar.enhanced_playthrough.recipe.EPRecipes;
 import net.marmar.enhanced_playthrough.menu.EPMenuTypes;
 import net.marmar.enhanced_playthrough.entity.villager.EPVillagerProfessions;

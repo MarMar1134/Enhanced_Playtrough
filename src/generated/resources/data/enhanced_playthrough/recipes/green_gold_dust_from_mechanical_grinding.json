@@ -3,7 +3,7 @@
   "category": "mechanical_grind",
   "group": "green_gold_dust",
   "ingredient": {
-    "tag": "enhanced_playthrough:manufacturable/green_gold"
+    "tag": "enhanced_playthrough:grindable/green_gold"
   },
   "output": {
     "item": "enhanced_playthrough:green_gold_dust"

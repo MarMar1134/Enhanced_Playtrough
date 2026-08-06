@@ -1,0 +1,50 @@
+{
+  "parent": "enhanced_playthrough:design_choices",
+  "criteria": {
+    "killed_villagers": {
+      "conditions": {
+        "entity": {
+          "type": "minecraft:villager",
+          "flags": {
+            "is_baby": true
+          }
+        },
+        "required_kills": {
+          "min": 5
+        },
+        "weapon": {
+          "items": [
+            "enhanced_playthrough:purple_gold_iron_dagger"
+          ]
+        }
+      },
+      "trigger": "enhanced_playthrough:killed_with_weapon"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "enhanced_playthrough:textures/block/bronze_block.png",
+    "description": {
+      "translate": "advancement.enhanced_playthrough.desc.survival.the_man_behind_the_slaughter"
+    },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "item": "enhanced_playthrough:purple_gold_iron_dagger",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.enhanced_playthrough.title.survival.the_man_behind_the_slaughter"
+    }
+  },
+  "requirements": [
+    [
+      "killed_villagers"
+    ]
+  ],
+  "rewards": {
+    "experience": 1987
+  },
+  "sends_telemetry_event": true
+}

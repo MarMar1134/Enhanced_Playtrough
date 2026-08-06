@@ -5,7 +5,7 @@
   "experience": 0.1,
   "group": "brass_nugget",
   "ingredient": {
-    "tag": "enhanced_playthrough:manufacturable/brass"
+    "tag": "enhanced_playthrough:smelt_to_nugget/brass"
   },
   "result": "enhanced_playthrough:brass_nugget"
 }

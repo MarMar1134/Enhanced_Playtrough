@@ -42,7 +42,7 @@ import javax.annotation.Nullable;
 import java.util.Map;
 
 public class Bandit extends AbstractIllager {
-    public static EntityDataAccessor<Boolean> ATTACKING;
+    public static final EntityDataAccessor<Boolean> ATTACKING;
     public final AnimationState attackAnimationState = new AnimationState();
     public int attackAnimationTimeout = 0;
 

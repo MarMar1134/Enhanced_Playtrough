@@ -29,7 +29,7 @@ import org.jetbrains.annotations.Nullable;
 import static net.minecraft.world.level.block.state.properties.BlockStateProperties.FACING;
 
 public class AlchemicalDuplicatorBlock extends BaseEntityBlock implements EntityBlock {
-    public static BooleanProperty LIT;
+    public static final BooleanProperty LIT;
     protected static final VoxelShape SHAPE = Block.box(0,0,0,16,16,16);
 
     public AlchemicalDuplicatorBlock(Properties pProperties) {

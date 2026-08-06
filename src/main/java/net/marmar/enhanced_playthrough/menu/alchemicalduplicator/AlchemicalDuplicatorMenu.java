@@ -2,7 +2,7 @@ package net.marmar.enhanced_playthrough.menu.alchemicalduplicator;
 
 import net.marmar.enhanced_playthrough.block.EPBlocks;
 import net.marmar.enhanced_playthrough.block.custom.alchemicalduplicator.AlchemicalDuplicatorBlockEntity;
-import net.marmar.enhanced_playthrough.data.tag.EPTags;
+import net.marmar.enhanced_playthrough.datagen.tag.EPTags;
 import net.marmar.enhanced_playthrough.item.EPItems;
 import net.marmar.enhanced_playthrough.menu.EPMenuTypes;
 import net.minecraft.network.FriendlyByteBuf;

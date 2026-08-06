@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "TagKey[minecraft:item / enhanced_playthrough:manufacturable/blue_gold]": {
+    "TagKey[minecraft:item / enhanced_playthrough:grindable/blue_gold]": {
       "conditions": {
         "items": [
           {
-            "tag": "enhanced_playthrough:manufacturable/blue_gold"
+            "tag": "enhanced_playthrough:grindable/blue_gold"
           }
         ]
       },
@@ -20,7 +20,7 @@
   },
   "requirements": [
     [
-      "TagKey[minecraft:item / enhanced_playthrough:manufacturable/blue_gold]",
+      "TagKey[minecraft:item / enhanced_playthrough:grindable/blue_gold]",
       "has_the_recipe"
     ]
   ],

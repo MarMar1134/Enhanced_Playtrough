@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_diamond_shovel": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:diamond_shovel"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_purple_gold_diamond_shovel": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:purple_gold_diamond_shovel"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "enhanced_playthrough:purple_gold_diamond_shovel_from_smithing_diamond_shovel_with_purple_gold_ingot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_diamond_shovel",
+      "has_purple_gold_diamond_shovel",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "enhanced_playthrough:purple_gold_diamond_shovel_from_smithing_diamond_shovel_with_purple_gold_ingot"
+    ]
+  },
+  "sends_telemetry_event": false
+}

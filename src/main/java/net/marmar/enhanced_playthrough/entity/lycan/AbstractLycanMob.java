@@ -1,6 +1,6 @@
 package net.marmar.enhanced_playthrough.entity.lycan;
 
-import net.marmar.enhanced_playthrough.data.tag.EPTags;
+import net.marmar.enhanced_playthrough.datagen.tag.EPTags;
 import net.marmar.enhanced_playthrough.entity.EPMobType;
 import net.marmar.enhanced_playthrough.util.enchantment.EPEnchantments;
 import net.minecraft.core.BlockPos;

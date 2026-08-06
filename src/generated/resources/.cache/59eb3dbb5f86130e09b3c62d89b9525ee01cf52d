@@ -1,4 +1,4 @@
-// 1.20.1	2026-07-12T17:03:55.4872707	Loot Tables
+// 1.20.1	2026-08-05T12:49:50.4898007	Loot Tables
 2876cbc680a836d5ddee2832692d949fb4ef4a08 data/enhanced_playthrough/loot_tables/advancements/abrass_your_soul.json
 6fe69585b6fdef5fe87c9206529ab3f067bd7faf data/enhanced_playthrough/loot_tables/advancements/all_flowers.json
 1eeafbc68a3d12b314210c1a8b6a594e785fda3f data/enhanced_playthrough/loot_tables/advancements/get_all_gems.json
@@ -132,6 +132,7 @@ d2981d363e46abced2acb108d70f8b3f3d860eba data/enhanced_playthrough/loot_tables/b
 0fc635eda5db8329fb91d7824ae4d03637c36781 data/enhanced_playthrough/loot_tables/blocks/potted_cold_lyrium.json
 508b2e022e9f6de0dfe464f6c77302add8474ebf data/enhanced_playthrough/loot_tables/blocks/potted_succulent.json
 ec816075986ec49599b9b029b9a5d90591aadb43 data/enhanced_playthrough/loot_tables/blocks/primal_grinder.json
+27342d47ee0393dee4362c383bbbd4e21ca9bc39 data/enhanced_playthrough/loot_tables/blocks/purple_gold_block.json
 e1c2d850cefbe5ef019894520b3284bc85aa29a1 data/enhanced_playthrough/loot_tables/blocks/raw_aluminum_block.json
 32f1a206d088159676b1f7517e865f4cecb45034 data/enhanced_playthrough/loot_tables/blocks/raw_silver_block.json
 8324b07d463ed8853bb79e88d26d75f9d11daae3 data/enhanced_playthrough/loot_tables/blocks/raw_tin_block.json

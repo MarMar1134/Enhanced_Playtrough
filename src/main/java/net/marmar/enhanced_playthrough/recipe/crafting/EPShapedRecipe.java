@@ -18,8 +18,8 @@ import java.util.Map;
 import java.util.Set;
 
 public class EPShapedRecipe extends ShapedRecipe {
-    static int MAX_WIDTH = 3;
-    static int MAX_HEIGHT = 3;
+    static final int MAX_WIDTH = 3;
+    static final int MAX_HEIGHT = 3;
     final ItemStack result;
     private final boolean consumeDurability;
     private final int durabilityToConsume;
@@ -36,7 +36,7 @@ public class EPShapedRecipe extends ShapedRecipe {
 
         for(Map.Entry<String, JsonElement> entry : pKeyEntry.entrySet()) {
             if (entry.getKey().length() != 1) {
-                throw new JsonSyntaxException("Invalid key entry: '" + (String)entry.getKey() + "' is an invalid symbol (must be 1 character only).");
+                throw new JsonSyntaxException("Invalid key entry: '" + entry.getKey() + "' is an invalid symbol (must be 1 character only).");
             }
 
             if (" ".equals(entry.getKey())) {
@@ -214,9 +214,7 @@ public class EPShapedRecipe extends ShapedRecipe {
 
             NonNullList<Ingredient> ingredients = NonNullList.withSize(width * height, Ingredient.EMPTY);
 
-            for(int k = 0; k < ingredients.size(); ++k) {
-                ingredients.set(k, Ingredient.fromNetwork(pBuffer));
-            }
+            ingredients.replaceAll(ignored -> Ingredient.fromNetwork(pBuffer));
 
             ItemStack result = pBuffer.readItem();
 

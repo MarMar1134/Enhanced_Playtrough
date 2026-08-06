@@ -1,7 +1,7 @@
 package net.marmar.enhanced_playthrough.util.enchantment;
 
-import net.marmar.enhanced_playthrough.data.tag.EPTags;
-import net.marmar.enhanced_playthrough.item.custom.weapon.DaggerItem;
+import net.marmar.enhanced_playthrough.datagen.tag.EPTags;
+import net.marmar.enhanced_playthrough.item.custom.tool.weapon.DaggerItem;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.SwordItem;

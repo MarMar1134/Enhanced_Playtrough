@@ -32,11 +32,6 @@ public class MateItem extends Item {
     }
 
     @Override
-    public SoundEvent getDrinkingSound() {
-        return SoundEvents.GENERIC_DRINK;
-    }
-
-    @Override
     public ItemStack finishUsingItem(ItemStack pStack, Level pLevel, LivingEntity entity) {
         Player player = entity instanceof Player ? (Player) entity : null;
 

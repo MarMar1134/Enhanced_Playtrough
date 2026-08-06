@@ -6,7 +6,6 @@ import net.marmar.enhanced_playthrough.compat.jei.category.OreAlloyingCategory;
 import net.marmar.enhanced_playthrough.menu.EPMenuTypes;
 import net.marmar.enhanced_playthrough.menu.alloyfurnace.AdobeAlloyFurnaceMenu;
 import net.marmar.enhanced_playthrough.recipe.alloy.AlloyRecipe;
-import net.minecraft.client.Minecraft;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.inventory.Slot;
 

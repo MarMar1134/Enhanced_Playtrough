@@ -1,0 +1,18 @@
+{
+  "type": "enhanced_playthrough:super_ore_alloying",
+  "alloytime": 100,
+  "category": "complex_alloy",
+  "group": "purple_gold_ingot",
+  "ingredients": [
+    {
+      "item": "minecraft:raw_gold"
+    },
+    {
+      "item": "enhanced_playthrough:raw_aluminum"
+    }
+  ],
+  "output": {
+    "item": "enhanced_playthrough:purple_gold_ingot"
+  },
+  "xp": 0.5
+}

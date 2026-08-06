@@ -3,7 +3,7 @@
   "category": "grind",
   "group": "copper_dust",
   "ingredient": {
-    "tag": "enhanced_playthrough:manufacturable/copper"
+    "tag": "enhanced_playthrough:grindable/copper"
   },
   "output": {
     "item": "enhanced_playthrough:copper_dust"

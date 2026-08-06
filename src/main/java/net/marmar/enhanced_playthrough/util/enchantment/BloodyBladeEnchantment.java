@@ -2,7 +2,6 @@ package net.marmar.enhanced_playthrough.util.enchantment;
 
 import net.marmar.enhanced_playthrough.util.effect.EPMobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;

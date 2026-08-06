@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "enhanced_playthrough:purple_gold_ingot"
+  },
+  "base": {
+    "item": "enhanced_playthrough:golden_dagger"
+  },
+  "result": {
+    "item": "enhanced_playthrough:purple_gold_golden_dagger"
+  },
+  "template": {
+    "item": "enhanced_playthrough:golden_upgrade_smithing_template"
+  }
+}

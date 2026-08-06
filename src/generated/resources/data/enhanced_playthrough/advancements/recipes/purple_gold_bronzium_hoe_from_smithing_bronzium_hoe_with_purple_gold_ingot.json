@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bronzium_hoe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:bronzium_hoe"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_purple_gold_bronzium_hoe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:purple_gold_bronzium_hoe"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "enhanced_playthrough:purple_gold_bronzium_hoe_from_smithing_bronzium_hoe_with_purple_gold_ingot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_bronzium_hoe",
+      "has_purple_gold_bronzium_hoe",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "enhanced_playthrough:purple_gold_bronzium_hoe_from_smithing_bronzium_hoe_with_purple_gold_ingot"
+    ]
+  },
+  "sends_telemetry_event": false
+}

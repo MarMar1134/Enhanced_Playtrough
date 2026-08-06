@@ -6,7 +6,6 @@ package net.marmar.enhanced_playthrough.entity.lycan.werellager.model;// Made wi
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.marmar.enhanced_playthrough.entity.lycan.werellager.Werellager;
-import net.marmar.enhanced_playthrough.entity.lycan.werellager.anim.WerellagerHumanAnimations;
 import net.marmar.enhanced_playthrough.entity.lycan.werellager.anim.WerellagerLycanAnimations;
 import net.minecraft.client.model.HierarchicalModel;
 import net.minecraft.client.model.geom.ModelPart;

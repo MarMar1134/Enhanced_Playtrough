@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "TagKey[minecraft:item / enhanced_playthrough:manufacturable/steel]": {
+    "TagKey[minecraft:item / enhanced_playthrough:grindable/steel]": {
       "conditions": {
         "items": [
           {
-            "tag": "enhanced_playthrough:manufacturable/steel"
+            "tag": "enhanced_playthrough:grindable/steel"
           }
         ]
       },
@@ -20,7 +20,7 @@
   },
   "requirements": [
     [
-      "TagKey[minecraft:item / enhanced_playthrough:manufacturable/steel]",
+      "TagKey[minecraft:item / enhanced_playthrough:grindable/steel]",
       "has_the_recipe"
     ]
   ],

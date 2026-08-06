@@ -1,11 +1,11 @@
 {
   "values": [
     "#minecraft:wool",
-    "#enhanced_playthrough:manufacturable/zinc",
-    "#enhanced_playthrough:manufacturable/tin",
-    "#enhanced_playthrough:manufacturable/copper",
-    "#enhanced_playthrough:manufacturable/brass",
-    "#enhanced_playthrough:manufacturable/bronze",
+    "#enhanced_playthrough:grindable/zinc",
+    "#enhanced_playthrough:grindable/tin",
+    "#enhanced_playthrough:grindable/copper",
+    "#enhanced_playthrough:grindable/brass",
+    "#enhanced_playthrough:grindable/bronze",
     "enhanced_playthrough:cobbled_limestone",
     "minecraft:cobblestone",
     "minecraft:cobbled_deepslate",

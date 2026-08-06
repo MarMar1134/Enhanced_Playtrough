@@ -2,13 +2,12 @@ package net.marmar.enhanced_playthrough.menu.epfurnace;
 
 import net.marmar.enhanced_playthrough.block.custom.epfurnace.entity.AbstractEPFurnaceBlockEntity;
 import net.marmar.enhanced_playthrough.block.custom.epfurnace.entity.MasonryFurnaceBlockEntity;
-import net.marmar.enhanced_playthrough.data.tag.EPTags;
+import net.marmar.enhanced_playthrough.datagen.tag.EPTags;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.*;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraftforge.items.SlotItemHandler;
 import org.jetbrains.annotations.NotNull;

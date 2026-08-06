@@ -1,6 +1,6 @@
 package net.marmar.enhanced_playthrough.block.custom.plant;
 
-import net.marmar.enhanced_playthrough.data.tag.EPTags;
+import net.marmar.enhanced_playthrough.datagen.tag.EPTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.level.BlockGetter;

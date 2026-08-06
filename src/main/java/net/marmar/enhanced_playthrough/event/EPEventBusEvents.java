@@ -11,6 +11,7 @@ import net.marmar.enhanced_playthrough.util.particle.BleedParticle;
 import net.marmar.enhanced_playthrough.util.particle.EPParticleTypes;
 import net.marmar.enhanced_playthrough.entity.bandit.Bandit;
 import net.marmar.enhanced_playthrough.entity.EPEntityTypes;
+import net.marmar.enhanced_playthrough.util.trigger.EPCriteriaTriggers;
 import net.minecraft.Util;
 import net.minecraft.core.Position;
 import net.minecraft.core.dispenser.AbstractProjectileDispenseBehavior;
@@ -199,6 +200,11 @@ public class EPEventBusEvents {
                 return aluminumArrow;
             }
         });
+    }
+
+    @SubscribeEvent
+    public static void registerTriggers(final FMLCommonSetupEvent event){
+        EPCriteriaTriggers.register();
     }
 
     @SubscribeEvent

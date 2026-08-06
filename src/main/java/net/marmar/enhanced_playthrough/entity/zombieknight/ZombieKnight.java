@@ -1,13 +1,10 @@
 package net.marmar.enhanced_playthrough.entity.zombieknight;
 
-import net.marmar.enhanced_playthrough.data.tag.EPTags;
 import net.marmar.enhanced_playthrough.item.EPItems;
 import net.marmar.enhanced_playthrough.util.EPSoundEvents;
-import net.marmar.enhanced_playthrough.util.enchantment.EPEnchantments;
 import net.marmar.enhanced_playthrough.worldgen.structure.EPStructureUtils;
 import net.marmar.enhanced_playthrough.worldgen.structure.EPStructures;
 import net.minecraft.core.BlockPos;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.Difficulty;
@@ -16,19 +13,14 @@ import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.MobSpawnType;
-import net.minecraft.world.entity.SpawnGroupData;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.monster.Zombie;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.jetbrains.annotations.Nullable;
 
 public class ZombieKnight extends Zombie {
     public ZombieKnight(EntityType<? extends Zombie> pEntityType, Level pLevel) {

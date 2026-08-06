@@ -1,6 +1,6 @@
 package net.marmar.enhanced_playthrough.menu.alloyfurnace;
 
-import net.marmar.enhanced_playthrough.data.tag.EPTags;
+import net.marmar.enhanced_playthrough.datagen.tag.EPTags;
 import net.marmar.enhanced_playthrough.block.custom.alloyfurnace.entity.AbstractAlloyFurnaceBlockEntity;
 import net.marmar.enhanced_playthrough.block.custom.alloyfurnace.entity.SuperAlloyFurnaceBlockEntity;
 import net.minecraft.network.FriendlyByteBuf;

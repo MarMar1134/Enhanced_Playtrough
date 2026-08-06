@@ -1,7 +1,7 @@
 package net.marmar.enhanced_playthrough.worldgen.structure;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
-import net.marmar.enhanced_playthrough.data.tag.EPTags;
+import net.marmar.enhanced_playthrough.datagen.tag.EPTags;
 import net.marmar.enhanced_playthrough.entity.EPEntityTypes;
 import net.marmar.enhanced_playthrough.worldgen.structure.pool.AncientLordsDomainPools;
 import net.marmar.enhanced_playthrough.worldgen.structure.pool.EPStructureTemplatePools;

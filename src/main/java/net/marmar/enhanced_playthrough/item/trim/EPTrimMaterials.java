@@ -16,19 +16,19 @@ import net.minecraft.world.item.armortrim.TrimMaterial;
 import java.util.Map;
 
 public class EPTrimMaterials {
-    public static ResourceKey<TrimMaterial> ALUMINUM = registerKey("aluminum");
-    public static ResourceKey<TrimMaterial> SILVER = registerKey("silver");
-    public static ResourceKey<TrimMaterial> ZINC = registerKey("zinc");
-    public static ResourceKey<TrimMaterial> BRONZE = registerKey("bronze");
-    public static ResourceKey<TrimMaterial> BRASS = registerKey("brass");
-    public static ResourceKey<TrimMaterial> BRONZIUM = registerKey("bronzium");
-    public static ResourceKey<TrimMaterial> STEEL = registerKey("steel");
-    public static ResourceKey<TrimMaterial> ROSE_GOLD = registerKey("rose_gold");
-    public static ResourceKey<TrimMaterial> GREEN_GOLD = registerKey("green_gold");
-    public static ResourceKey<TrimMaterial> BLUE_GOLD = registerKey("blue_gold");
-    public static ResourceKey<TrimMaterial> RUBY = registerKey("ruby");
-    public static ResourceKey<TrimMaterial> SAPPHIRE = registerKey("sapphire");
-    public static ResourceKey<TrimMaterial> GARNET = registerKey("garnet");
+    public static final ResourceKey<TrimMaterial> ALUMINUM = registerKey("aluminum");
+    public static final ResourceKey<TrimMaterial> SILVER = registerKey("silver");
+    public static final ResourceKey<TrimMaterial> ZINC = registerKey("zinc");
+    public static final ResourceKey<TrimMaterial> BRONZE = registerKey("bronze");
+    public static final ResourceKey<TrimMaterial> BRASS = registerKey("brass");
+    public static final ResourceKey<TrimMaterial> BRONZIUM = registerKey("bronzium");
+    public static final ResourceKey<TrimMaterial> STEEL = registerKey("steel");
+    public static final ResourceKey<TrimMaterial> ROSE_GOLD = registerKey("rose_gold");
+    public static final ResourceKey<TrimMaterial> GREEN_GOLD = registerKey("green_gold");
+    public static final ResourceKey<TrimMaterial> BLUE_GOLD = registerKey("blue_gold");
+    public static final ResourceKey<TrimMaterial> RUBY = registerKey("ruby");
+    public static final ResourceKey<TrimMaterial> SAPPHIRE = registerKey("sapphire");
+    public static final ResourceKey<TrimMaterial> GARNET = registerKey("garnet");
 
     public static void bootstrap(BootstapContext<TrimMaterial> pContext){
         registerMaterial(pContext, ALUMINUM, EPItems.ALUMINUM_INGOT.get(), Style.EMPTY.withColor(TextColor.parseColor("#54585a")), 0.2f);

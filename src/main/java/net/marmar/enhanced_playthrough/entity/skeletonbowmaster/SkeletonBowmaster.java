@@ -1,7 +1,7 @@
 package net.marmar.enhanced_playthrough.entity.skeletonbowmaster;
 
 import net.marmar.enhanced_playthrough.item.EPItems;
-import net.marmar.enhanced_playthrough.item.custom.weapon.AluminumArrowItem;
+import net.marmar.enhanced_playthrough.item.custom.tool.weapon.AluminumArrowItem;
 import net.marmar.enhanced_playthrough.util.EPSoundEvents;
 import net.marmar.enhanced_playthrough.worldgen.structure.EPStructureUtils;
 import net.marmar.enhanced_playthrough.worldgen.structure.EPStructures;
@@ -23,8 +23,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.Nullable;
 
 public class SkeletonBowmaster extends AbstractSkeleton {

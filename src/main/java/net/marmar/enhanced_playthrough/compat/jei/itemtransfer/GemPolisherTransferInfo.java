@@ -6,7 +6,6 @@ import net.marmar.enhanced_playthrough.compat.jei.category.GemPolishingCategory;
 import net.marmar.enhanced_playthrough.menu.EPMenuTypes;
 import net.marmar.enhanced_playthrough.menu.gempolisher.GemPolisherMenu;
 import net.marmar.enhanced_playthrough.recipe.GemPolishingRecipe;
-import net.minecraft.client.Minecraft;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.inventory.Slot;
 

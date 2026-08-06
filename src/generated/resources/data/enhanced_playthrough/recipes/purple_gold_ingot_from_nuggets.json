@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "purple_gold_ingot",
+  "key": {
+    "N": {
+      "item": "enhanced_playthrough:purple_gold_nugget"
+    }
+  },
+  "pattern": [
+    "NNN",
+    "NNN",
+    "NNN"
+  ],
+  "result": {
+    "item": "enhanced_playthrough:purple_gold_ingot"
+  },
+  "show_notification": true
+}

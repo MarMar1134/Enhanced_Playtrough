@@ -21,9 +21,9 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
 public class GrowthDetectorBlock extends BaseEntityBlock implements EntityBlock {
-    public static DirectionProperty FACING;
-    public static BooleanProperty POWERED;
-    public static IntegerProperty POWER;
+    public static final DirectionProperty FACING;
+    public static final BooleanProperty POWERED;
+    public static final IntegerProperty POWER;
 
     protected static final VoxelShape SHAPE = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 2.0D, 16.0D);
 

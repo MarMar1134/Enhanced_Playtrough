@@ -5,7 +5,7 @@
   "experience": 0.1,
   "group": "bronzium_nugget",
   "ingredient": {
-    "tag": "enhanced_playthrough:manufacturable/bronzium"
+    "tag": "enhanced_playthrough:smelt_to_nugget/bronzium"
   },
   "result": "enhanced_playthrough:bronzium_nugget"
 }

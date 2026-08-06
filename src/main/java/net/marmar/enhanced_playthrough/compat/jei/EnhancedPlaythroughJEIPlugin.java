@@ -6,7 +6,6 @@ import net.marmar.enhanced_playthrough.block.EPBlocks;
 import net.marmar.enhanced_playthrough.compat.jei.category.*;
 import net.marmar.enhanced_playthrough.compat.jei.itemtransfer.*;
 import net.marmar.enhanced_playthrough.item.EPItems;
-import net.marmar.enhanced_playthrough.menu.screen.alchemicalduplicator.AlchemicalDuplicatorScreen;
 import net.marmar.enhanced_playthrough.menu.screen.alloyfurnace.AdobeAlloyFurnaceScreen;
 import net.marmar.enhanced_playthrough.menu.screen.alloyfurnace.SuperAlloyFurnaceScreen;
 import net.marmar.enhanced_playthrough.menu.screen.leatherworker.LeatherworkerStationScreen;
@@ -16,7 +15,6 @@ import net.marmar.enhanced_playthrough.menu.screen.gempolisher.GemPolisherScreen
 import net.marmar.enhanced_playthrough.menu.screen.grinder.MechanicalGrinderScreen;
 import net.marmar.enhanced_playthrough.menu.screen.grinder.PrimalGrinderScreen;
 import net.marmar.enhanced_playthrough.menu.screen.modfurnace.MasonryFurnaceScreen;
-import net.marmar.enhanced_playthrough.recipe.alchemicalduplication.AlchemicalDuplicationRecipe;
 import net.marmar.enhanced_playthrough.recipe.GemPolishingRecipe;
 import net.marmar.enhanced_playthrough.recipe.epsmelt.MasonrySmeltingRecipe;
 import net.marmar.enhanced_playthrough.recipe.grind.MechanicalGrindRecipe;

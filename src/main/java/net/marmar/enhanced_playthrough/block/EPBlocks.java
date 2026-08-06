@@ -435,6 +435,8 @@ public class EPBlocks {
                 () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
         public static final RegistryObject<Block> BLUE_GOLD_BLOCK = registerBlockWithItem("blue_gold_block",
                 () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(6, 8)));
+        public static final RegistryObject<Block> PURPLE_GOLD_BLOCK = registerBlockWithItem("purple_gold_block",
+                () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(3, 3)));
 
         //Calibrated quartz
         public static final RegistryObject<Block> CALIBRATED_QUARTZ_BLOCK = registerBlockWithItem("calibrated_quartz_block",

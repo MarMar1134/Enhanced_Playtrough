@@ -6,7 +6,6 @@ import net.marmar.enhanced_playthrough.compat.jei.category.BasicSmeltingCategory
 import net.marmar.enhanced_playthrough.menu.EPMenuTypes;
 import net.marmar.enhanced_playthrough.menu.epfurnace.AdobeFurnaceMenu;
 import net.marmar.enhanced_playthrough.recipe.epsmelt.BasicSmeltingRecipe;
-import net.minecraft.client.Minecraft;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.inventory.Slot;
 

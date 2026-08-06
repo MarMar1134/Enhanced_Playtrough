@@ -1,6 +1,6 @@
 package net.marmar.enhanced_playthrough.menu.grinder;
 
-import net.marmar.enhanced_playthrough.data.tag.EPTags;
+import net.marmar.enhanced_playthrough.datagen.tag.EPTags;
 import net.marmar.enhanced_playthrough.block.EPBlocks;
 import net.marmar.enhanced_playthrough.block.custom.grinder.entity.MechanicalGrinderBlockEntity;
 import net.marmar.enhanced_playthrough.menu.EPMenuTypes;

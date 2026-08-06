@@ -3,7 +3,7 @@
   "category": "mechanical_grind",
   "group": "rose_gold_dust",
   "ingredient": {
-    "tag": "enhanced_playthrough:manufacturable/rose_gold"
+    "tag": "enhanced_playthrough:grindable/rose_gold"
   },
   "output": {
     "item": "enhanced_playthrough:rose_gold_dust"

@@ -1,4 +1,4 @@
-// 1.20.1	2026-06-07T15:40:08.9356185	Tags for minecraft:block mod id enhanced_playthrough
+// 1.20.1	2026-08-05T12:49:50.5038026	Tags for minecraft:block mod id enhanced_playthrough
 79753f202ed6cd2b07dd609dec19558e6c68c837 data/enhanced_playthrough/tags/blocks/alloy_furnace.json
 47a02117dd60bac3b440fb46f534e4d5442d0e64 data/enhanced_playthrough/tags/blocks/basic_furnace.json
 5d27eebe0849b352469140e33f7a751d88d36e96 data/enhanced_playthrough/tags/blocks/bauxite_ores.json
@@ -21,17 +21,17 @@ aae115d005c5fe23885c738fc2e13a317ee65c89 data/enhanced_playthrough/tags/blocks/s
 b60f42d09679be8e71ba4e0e1c4daaccfe0e3752 data/forge/tags/blocks/needs_wood_tool.json
 dcda19163fa507e8427cb3c8d93dcab71bc12a7f data/forge/tags/blocks/ores.json
 8e61fa1c7bcdcb459ec46f2c61d6e508e61792d3 data/forge/tags/blocks/stone.json
-6f2688a3532795748cc8f7a7cedcc7548c53081f data/minecraft/tags/blocks/beacon_base_blocks.json
+0a8e55b9ef073617d5181d125c68c307971290bc data/minecraft/tags/blocks/beacon_base_blocks.json
 27e60c70e70af1db39bde73645a398c6b70bec63 data/minecraft/tags/blocks/fences.json
 bfecdab9baabf8268fd1903dba73ff07fa8fd1e1 data/minecraft/tags/blocks/fence_gates.json
 de63434cd109289856ff5bfdcd84162a8393525b data/minecraft/tags/blocks/leaves.json
 cc7f01de72464bfac0275de5c6aaeeb445bc06d0 data/minecraft/tags/blocks/logs_that_burn.json
 287d0893e46204b4fe9d08566c442cc7b69f74a9 data/minecraft/tags/blocks/mineable/axe.json
 de63434cd109289856ff5bfdcd84162a8393525b data/minecraft/tags/blocks/mineable/hoe.json
-5d224c3a4f6aa553c05ff6eeb6d5f30fa482a911 data/minecraft/tags/blocks/mineable/pickaxe.json
+59a0f8df9975ad31024cecd4acee978240655146 data/minecraft/tags/blocks/mineable/pickaxe.json
 da1d12f678963493519caaff63a76241b220579f data/minecraft/tags/blocks/mineable/shovel.json
 114b85c5020f2489ec29e69f25614b7c3dec9eaf data/minecraft/tags/blocks/needs_diamond_tool.json
-02f26ade5bbe0d8f39c18abc86a4c4cb97628a2c data/minecraft/tags/blocks/needs_iron_tool.json
+5aea9f206c4cef6dcad182e5da62ab2645997a1e data/minecraft/tags/blocks/needs_iron_tool.json
 e08e43c8785fe6e03b648d0bfa036461df3db4ff data/minecraft/tags/blocks/needs_stone_tool.json
 34fcc954121e727482e6b9d94d2c998b7d9338f8 data/minecraft/tags/blocks/overworld_natural_logs.json
 09c1bed1eb894a8dc53a3c61aa274cfa3f6f7197 data/minecraft/tags/blocks/planks.json

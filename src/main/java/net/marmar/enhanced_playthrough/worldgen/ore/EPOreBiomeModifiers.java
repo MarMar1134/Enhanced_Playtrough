@@ -1,7 +1,7 @@
 package net.marmar.enhanced_playthrough.worldgen.ore;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
-import net.marmar.enhanced_playthrough.data.tag.EPTags;
+import net.marmar.enhanced_playthrough.datagen.tag.EPTags;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;

@@ -3,7 +3,7 @@
   "category": "mechanical_grind",
   "group": "zinc_dust",
   "ingredient": {
-    "tag": "enhanced_playthrough:manufacturable/zinc"
+    "tag": "enhanced_playthrough:grindable/zinc"
   },
   "output": {
     "item": "enhanced_playthrough:zinc_dust"

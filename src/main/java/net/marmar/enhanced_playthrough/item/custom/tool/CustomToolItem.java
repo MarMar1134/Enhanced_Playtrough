@@ -1,8 +1,10 @@
 package net.marmar.enhanced_playthrough.item.custom.tool;
 
-import net.marmar.enhanced_playthrough.item.custom.weapon.DaggerItem;
+import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
+import net.marmar.enhanced_playthrough.item.custom.tool.weapon.DaggerItem;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.*;
+import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.Nullable;
@@ -12,6 +14,7 @@ import java.util.List;
 public class CustomToolItem {
     protected interface TieredHandleItem {
         HandleTier getHandleTier();
+        int getSpeedBonus(ItemStack pStack, HandleTier pHandleTier);
     }
 
     public static class Sword extends SwordItem implements TieredHandleItem {
@@ -41,8 +44,13 @@ public class CustomToolItem {
         }
 
         @Override
+        public int getSpeedBonus(ItemStack pStack, HandleTier pHandleTier) {
+            return pHandleTier.getDestroySpeedBonus();
+        }
+
+        @Override
         public float getDestroySpeed(ItemStack pStack, BlockState pState) {
-            return super.getDestroySpeed(pStack, pState) + handleTier.getDestroySpeedBonus();
+            return super.getDestroySpeed(pStack, pState) + getSpeedBonus(pStack, this.handleTier);
         }
 
         @Override
@@ -79,8 +87,13 @@ public class CustomToolItem {
         }
 
         @Override
+        public int getSpeedBonus(ItemStack pStack, HandleTier pHandleTier) {
+            return pHandleTier.getDestroySpeedBonus();
+        }
+
+        @Override
         public float getDestroySpeed(ItemStack pStack, BlockState pState) {
-            return super.getDestroySpeed(pStack, pState) + handleTier.getDestroySpeedBonus();
+            return super.getDestroySpeed(pStack, pState) + getSpeedBonus(pStack, this.handleTier);
         }
 
         @Override
@@ -116,8 +129,18 @@ public class CustomToolItem {
         }
 
         @Override
+        public int getSpeedBonus(ItemStack pStack, HandleTier pHandleTier) {
+            int efficiencyLevel = pStack.getEnchantmentLevel(Enchantments.BLOCK_EFFICIENCY);
+
+            if (efficiencyLevel <= 0) //If, somehow, efficiency was -I or less, we cap the bonus at is base
+                return pHandleTier.getDestroySpeedBonus();
+
+            return pHandleTier.getDestroySpeedBonus() * efficiencyLevel;
+        }
+
+        @Override
         public float getDestroySpeed(ItemStack pStack, BlockState pState) {
-            return super.getDestroySpeed(pStack, pState) + handleTier.getDestroySpeedBonus();
+            return super.getDestroySpeed(pStack, pState) + getSpeedBonus(pStack, this.handleTier);
         }
 
         @Override
@@ -150,6 +173,16 @@ public class CustomToolItem {
                 pTooltipComponents.add(this.handleTier.getItemDesc());
 
             super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
+        }
+
+        @Override
+        public int getSpeedBonus(ItemStack pStack, HandleTier pHandleTier) {
+            int efficiencyLevel = pStack.getEnchantmentLevel(Enchantments.BLOCK_EFFICIENCY);
+
+            if (efficiencyLevel <= 0)
+                return pHandleTier.getDestroySpeedBonus();
+
+            return pHandleTier.getDestroySpeedBonus() * efficiencyLevel;
         }
 
         @Override
@@ -190,6 +223,16 @@ public class CustomToolItem {
         }
 
         @Override
+        public int getSpeedBonus(ItemStack pStack, HandleTier pHandleTier) {
+            int efficiencyLevel = pStack.getEnchantmentLevel(Enchantments.BLOCK_EFFICIENCY);
+
+            if (efficiencyLevel <= 0)
+                return pHandleTier.getDestroySpeedBonus();
+
+            return pHandleTier.getDestroySpeedBonus() * efficiencyLevel;
+        }
+
+        @Override
         public float getDestroySpeed(ItemStack pStack, BlockState pState) {
             return super.getDestroySpeed(pStack, pState) + handleTier.getDestroySpeedBonus();
         }
@@ -227,6 +270,16 @@ public class CustomToolItem {
         }
 
         @Override
+        public int getSpeedBonus(ItemStack pStack, HandleTier pHandleTier) {
+            int efficiencyLevel = pStack.getEnchantmentLevel(Enchantments.BLOCK_EFFICIENCY);
+
+            if (efficiencyLevel <= 0)
+                return pHandleTier.getDestroySpeedBonus();
+
+            return pHandleTier.getDestroySpeedBonus() * efficiencyLevel;
+        }
+
+        @Override
         public float getDestroySpeed(ItemStack pStack, BlockState pState) {
             return super.getDestroySpeed(pStack, pState) + handleTier.getDestroySpeedBonus();
         }
@@ -251,6 +304,16 @@ public class CustomToolItem {
                 pTooltipComponents.add(this.handleTier.getItemDesc());
 
             super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
+        }
+
+        @Override
+        public int getSpeedBonus(ItemStack pStack, HandleTier pHandleTier) {
+            int efficiencyLevel = pStack.getEnchantmentLevel(Enchantments.BLOCK_EFFICIENCY);
+
+            if (efficiencyLevel <= 0)
+                return pHandleTier.getDestroySpeedBonus();
+
+            return pHandleTier.getDestroySpeedBonus() * efficiencyLevel;
         }
 
         @Override

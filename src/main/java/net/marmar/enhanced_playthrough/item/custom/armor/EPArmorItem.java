@@ -53,7 +53,8 @@ public class EPArmorItem extends ArmorItem {
 
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
-        pTooltipComponents.add(Component.translatable("desc." + EnhancedPlaythrough.MOD_ID + "." + this.armorMaterial.getTierName()).withStyle(ChatFormatting.GRAY).withStyle(ChatFormatting.ITALIC));
+        pTooltipComponents.add(Component.translatable("desc." + EnhancedPlaythrough.MOD_ID + "." + this.armorMaterial.getTierName())
+                .withStyle(ChatFormatting.GRAY).withStyle(ChatFormatting.ITALIC));
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
     }

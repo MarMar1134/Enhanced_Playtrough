@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "enhanced_playthrough:purple_gold_rod"
+    },
+    "I": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "pattern": [
+    "III",
+    " # ",
+    " # "
+  ],
+  "result": {
+    "item": "enhanced_playthrough:purple_gold_diamond_pickaxe"
+  },
+  "show_notification": true
+}

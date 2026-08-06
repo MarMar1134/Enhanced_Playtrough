@@ -1,9 +1,8 @@
 package net.marmar.enhanced_playthrough.menu.gempolisher;
 
 import net.marmar.enhanced_playthrough.block.EPBlocks;
-import net.marmar.enhanced_playthrough.data.tag.EPTags;
+import net.marmar.enhanced_playthrough.datagen.tag.EPTags;
 import net.marmar.enhanced_playthrough.block.custom.gempolisher.GemPolisherBlockEntity;
-import net.marmar.enhanced_playthrough.item.custom.tool.PolisherItem;
 import net.marmar.enhanced_playthrough.menu.EPMenuTypes;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;

@@ -1,0 +1,22 @@
+{
+  "values": [
+    "minecraft:golden_axe",
+    "minecraft:golden_pickaxe",
+    "minecraft:golden_shovel",
+    "enhanced_playthrough:golden_polisher",
+    "minecraft:golden_hoe",
+    "minecraft:golden_sword",
+    "enhanced_playthrough:golden_dagger",
+    "enhanced_playthrough:reinforced_golden_axe",
+    "enhanced_playthrough:reinforced_golden_pickaxe",
+    "enhanced_playthrough:reinforced_golden_sword",
+    "enhanced_playthrough:reinforced_golden_dagger",
+    "enhanced_playthrough:reinforced_golden_shovel",
+    "enhanced_playthrough:reinforced_golden_hoe",
+    "enhanced_playthrough:reinforced_golden_polisher",
+    "minecraft:golden_helmet",
+    "minecraft:golden_chestplate",
+    "minecraft:golden_leggings",
+    "minecraft:golden_boots"
+  ]
+}

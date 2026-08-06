@@ -1,0 +1,39 @@
+{
+  "parent": "enhanced_playthrough:ancient_knowledge",
+  "criteria": {
+    "has_purple_gold_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:purple_gold_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "enhanced_playthrough:textures/block/bronze_block.png",
+    "description": {
+      "translate": "advancement.enhanced_playthrough.desc.survival.design_choices"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "enhanced_playthrough:purple_gold_ingot"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.enhanced_playthrough.title.survival.design_choices"
+    }
+  },
+  "requirements": [
+    [
+      "has_purple_gold_ingot"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
