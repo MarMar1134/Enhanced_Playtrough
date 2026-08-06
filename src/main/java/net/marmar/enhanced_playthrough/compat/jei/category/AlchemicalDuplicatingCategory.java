@@ -30,7 +30,7 @@ public class AlchemicalDuplicatingCategory implements IRecipeCategory<Alchemical
     private final IDrawable icon;
 
     public AlchemicalDuplicatingCategory(IGuiHelper helper){
-        this.background = helper.createDrawable(TEXTURE, 0, 0, 176, 82);
+        this.background = helper.createDrawable(TEXTURE, 4, 3, 169, 78);
         this.icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(EPBlocks.ALCHEMICAL_DUPLICATOR.get()));
     }
 
@@ -56,15 +56,15 @@ public class AlchemicalDuplicatingCategory implements IRecipeCategory<Alchemical
 
     @Override
     public void setRecipe(IRecipeLayoutBuilder builder, AlchemicalDuplicationRecipe recipe, IFocusGroup focuses) {
-        builder.addSlot(RecipeIngredientRole.INPUT, 16, 22).addItemStack(new ItemStack(EPItems.SULFUR.get()));
-        builder.addSlot(RecipeIngredientRole.INPUT, 80, 22).addIngredients(recipe.getIngredients().get(0));
+        builder.addSlot(RecipeIngredientRole.INPUT, 12, 19).addItemStack(new ItemStack(EPItems.SULFUR.get()));
+        builder.addSlot(RecipeIngredientRole.INPUT, 76, 19).addIngredients(recipe.getIngredients().get(0));
 
         ItemStack result = recipe.getResultItem(null);
 
-        builder.addSlot(RecipeIngredientRole.OUTPUT, 33, 56).addItemStack(result);
-        builder.addSlot(RecipeIngredientRole.OUTPUT, 65, 56).addItemStack(result);
-        builder.addSlot(RecipeIngredientRole.OUTPUT, 97, 56).addItemStack(result);
-        builder.addSlot(RecipeIngredientRole.OUTPUT, 129, 56).addItemStack(result);
+        builder.addSlot(RecipeIngredientRole.OUTPUT, 29, 53).addItemStack(result);
+        builder.addSlot(RecipeIngredientRole.OUTPUT, 61, 53).addItemStack(result);
+        builder.addSlot(RecipeIngredientRole.OUTPUT, 92, 53).addItemStack(result);
+        builder.addSlot(RecipeIngredientRole.OUTPUT, 123, 53).addItemStack(result);
     }
 
 

@@ -9,7 +9,6 @@ import net.marmar.enhanced_playthrough.recipe.leatherwork.CuringRecipeBuilder;
 import net.marmar.enhanced_playthrough.recipe.grind.AbstractGrindRecipe;
 import net.marmar.enhanced_playthrough.recipe.GenericRecipeBuilder;
 import net.marmar.enhanced_playthrough.recipe.EPSmithingRecipesBuilder;
-import net.marmar.enhanced_playthrough.recipe.category.ModRecipeCategory;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
@@ -115,35 +114,44 @@ public class GeneralRecipeSubProvider extends RecipeProvider {
     }
 
     private static void grindingRecipes(Consumer<FinishedRecipe> consumer){
-        //Misc
+        //Yerba mate
         primalItemGrinding(consumer, EPItems.YERBA_MATE.get(), "grounded_yerba_mate", EPItems.GROUNDED_YERBA_MATE.get(), 2);
         mechanicalItemGrinding(consumer, EPItems.YERBA_MATE.get(), "grounded_yerba_mate", EPItems.GROUNDED_YERBA_MATE.get(), 4);
 
+        //Walnuts
         primalItemGrinding(consumer, EPItems.WALNUT.get(), "peeled_walnut", EPItems.PEELED_WALNUT.get(), 2);
         mechanicalItemGrinding(consumer, EPItems.WALNUT.get(), "peeled_walnut", EPItems.PEELED_WALNUT.get(), 4);
 
+        //Flour
         primalItemGrinding(consumer, Items.WHEAT, "wheat_flour", EPItems.WHEAT_FLOUR.get(), 2);
         mechanicalItemGrinding(consumer, Items.WHEAT, "wheat_flour", EPItems.WHEAT_FLOUR.get(), 4);
 
         primalItemGrinding(consumer, Items.PUMPKIN, "pumpkin_flour", EPItems.PUMPKIN_FLOUR.get(), 2);
         mechanicalItemGrinding(consumer, Items.PUMPKIN, "pumpkin_flour", EPItems.PUMPKIN_FLOUR.get(), 4);
 
+        //Sugar
         primalItemGrinding(consumer, Items.SUGAR_CANE, "sugar", Items.SUGAR, 2);
         mechanicalItemGrinding(consumer, Items.SUGAR_CANE, "sugar", Items.SUGAR, 3);
 
+        //Bone meal
         primalItemGrinding(consumer, Items.BONE, "bone_meal", Items.BONE_MEAL, 2);
         mechanicalItemGrinding(consumer, Items.BONE, "bone_meal", Items.BONE_MEAL, 3);
 
-        primalItemGrinding(consumer, ItemTags.WOOL, "string", Items.STRING, 2);
+        //String
+        primalItemGrinding(consumer, ItemTags.WOOL, "string", Items.STRING, 3);
         mechanicalItemGrinding(consumer, ItemTags.WOOL, "string", Items.STRING, 4);
 
+        primalItemGrinding(consumer, Items.COBWEB, "string", Items.STRING, 3);
+        mechanicalItemGrinding(consumer, Items.COBWEB, "string", Items.STRING, 4);
+
+        //Leather strips
         primalItemGrinding(consumer, Items.LEATHER, "leather", EPItems.LEATHER_STRIPS.get(), 2);
         mechanicalItemGrinding(consumer, Items.LEATHER, "leather", EPItems.LEATHER_STRIPS.get(), 4);
 
         //Sulfur from Blazes
         mechanicalItemGrinding(consumer, Items.BLAZE_ROD, "sulfur", EPItems.SULFUR.get(), 3);
 
-        //Cobble
+        //Cobble types
         primalItemGrinding(consumer, Blocks.COBBLESTONE, "cobble", EPItems.COBBLE.get(), 2);
         mechanicalItemGrinding(consumer, Blocks.COBBLESTONE, "cobble", EPItems.COBBLE.get(), 4);
 
@@ -158,7 +166,7 @@ public class GeneralRecipeSubProvider extends RecipeProvider {
         primalItemGrinding(consumer, Blocks.NETHERRACK, "netherrack_rubble", EPItems.NETHERRACK_RUBBLE.get(), 2);
         mechanicalItemGrinding(consumer, Blocks.NETHERRACK, "netherrack_rubble", EPItems.NETHERRACK_RUBBLE.get(), 4);
 
-        //Reeds
+        //Plant fiber
         primalItemGrinding(consumer, EPBlocks.TALL_REEDS.get(), "vegetable_fiber", EPItems.PLANT_FIBER.get(), 3);
         mechanicalItemGrinding(consumer, EPBlocks.TALL_REEDS.get(), "vegetable_fiber", EPItems.PLANT_FIBER.get(), 6);
 
@@ -349,18 +357,18 @@ public class GeneralRecipeSubProvider extends RecipeProvider {
     //Grind
         //Primal
         protected static void primalItemGrinding(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike ingredient, String group, ItemLike result, int count){
-            oreGrindingSerialize(pFinishedRecipeConsumer, ingredient, result, group, count, ModRecipeCategory.GRIND, EPRecipes.PRIMAL_GRIND_SERIALIZER.get(), "from_primal_grinding");
+            oreGrindingSerialize(pFinishedRecipeConsumer, ingredient, result, group, count, EPRecipes.PRIMAL_GRIND_SERIALIZER.get(), "from_primal_grinding");
         }
         protected static void primalItemGrinding(Consumer<FinishedRecipe> pFinishedRecipeConsumer, TagKey<Item> ingredient, String group, ItemLike result, int count){
-            oreGrindingTagSerialize(pFinishedRecipeConsumer, ingredient, result, group, count, ModRecipeCategory.GRIND, EPRecipes.PRIMAL_GRIND_SERIALIZER.get(), "from_primal_grinding");
+            oreGrindingTagSerialize(pFinishedRecipeConsumer, ingredient, result, group, count, EPRecipes.PRIMAL_GRIND_SERIALIZER.get(), "from_primal_grinding");
         }
 
         //Mechanical
         protected static void mechanicalItemGrinding(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike ingredient, String group, ItemLike result, int count){
-            oreGrindingSerialize(pFinishedRecipeConsumer, ingredient, result, group, count, ModRecipeCategory.MECHANICAL_GRIND, EPRecipes.MECHANICAL_GRIND_SERIALIZER.get(), "from_mechanical_grinding");
+            oreGrindingSerialize(pFinishedRecipeConsumer, ingredient, result, group, count, EPRecipes.MECHANICAL_GRIND_SERIALIZER.get(), "from_mechanical_grinding");
         }
         protected static void mechanicalItemGrinding(Consumer<FinishedRecipe> pFinishedRecipeConsumer, TagKey<Item> ingredient, String group, ItemLike result, int count){
-            oreGrindingTagSerialize(pFinishedRecipeConsumer, ingredient, result, group, count, ModRecipeCategory.MECHANICAL_GRIND, EPRecipes.MECHANICAL_GRIND_SERIALIZER.get(), "from_mechanical_grinding");
+            oreGrindingTagSerialize(pFinishedRecipeConsumer, ingredient, result, group, count, EPRecipes.MECHANICAL_GRIND_SERIALIZER.get(), "from_mechanical_grinding");
         }
 
     //Polish
@@ -402,14 +410,14 @@ public class GeneralRecipeSubProvider extends RecipeProvider {
                 .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(output) + "_from_gem_polishing_" + getItemName(input));
     }
 
-    protected static void oreGrindingSerialize(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike input, ItemLike output, String group, int quantity, ModRecipeCategory pRecipeCategory, RecipeSerializer<? extends AbstractGrindRecipe> recipeSerializer, String recipeName){
-        GenericRecipeBuilder.itemGrinding(Ingredient.of(input), output, group, quantity, pRecipeCategory, recipeSerializer)
+    protected static void oreGrindingSerialize(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike input, ItemLike output, String group, int quantity, RecipeSerializer<? extends AbstractGrindRecipe> recipeSerializer, String recipeName){
+        GenericRecipeBuilder.itemGrinding(Ingredient.of(input), output, group, quantity, recipeSerializer)
                 .unlockedBy(getHasName(input), has(input))
                 .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(output) +  "_" + recipeName + "_" + getItemName(input));
     }
 
-    protected static void oreGrindingTagSerialize(Consumer<FinishedRecipe> pFinishedRecipeConsumer, TagKey<Item> input, ItemLike output, String group, int quantity, ModRecipeCategory pRecipeCategory, RecipeSerializer<? extends AbstractGrindRecipe> recipeSerializer, String recipeName){
-        GenericRecipeBuilder.itemGrinding(Ingredient.of(input), output, group, quantity, pRecipeCategory, recipeSerializer)
+    protected static void oreGrindingTagSerialize(Consumer<FinishedRecipe> pFinishedRecipeConsumer, TagKey<Item> input, ItemLike output, String group, int quantity, RecipeSerializer<? extends AbstractGrindRecipe> recipeSerializer, String recipeName){
+        GenericRecipeBuilder.itemGrinding(Ingredient.of(input), output, group, quantity, recipeSerializer)
                 .unlockedBy(input.toString(), has(input))
                 .save(pFinishedRecipeConsumer, EnhancedPlaythrough.MOD_ID + ":" + getItemName(output) +  "_" + recipeName);
     }

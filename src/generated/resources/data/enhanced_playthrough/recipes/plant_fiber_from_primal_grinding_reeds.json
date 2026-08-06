@@ -1,6 +1,5 @@
 {
   "type": "enhanced_playthrough:primal_grinding",
-  "category": "grind",
   "group": "vegetable_fiber",
   "ingredient": {
     "item": "enhanced_playthrough:reeds"

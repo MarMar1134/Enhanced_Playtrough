@@ -1,0 +1,19 @@
+{
+  "type": "enhanced_playthrough:ep_shapeless_crafting",
+  "category": "misc",
+  "consume_durability": true,
+  "durability_to_consume": 15,
+  "group": "string",
+  "ingredients": [
+    {
+      "tag": "minecraft:wool"
+    },
+    {
+      "item": "minecraft:shears"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "minecraft:string"
+  }
+}

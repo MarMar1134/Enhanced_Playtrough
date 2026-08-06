@@ -1,0 +1,11 @@
+{
+  "type": "enhanced_playthrough:mechanical_grinding",
+  "group": "string",
+  "ingredient": {
+    "item": "minecraft:cobweb"
+  },
+  "output": {
+    "count": 4,
+    "item": "minecraft:string"
+  }
+}

@@ -3,7 +3,6 @@ package net.marmar.enhanced_playthrough.recipe;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import net.marmar.enhanced_playthrough.block.EPBlocks;
-import net.marmar.enhanced_playthrough.recipe.category.ModRecipeCategory;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
@@ -18,14 +17,12 @@ public class GemPolishingRecipe implements Recipe<SimpleContainer> {
     private final Ingredient input;
     private final ItemStack output;
     private final ResourceLocation id;
-    private final ModRecipeCategory category;
     private final String group;
 
-    public GemPolishingRecipe(Ingredient pInput, ItemStack pOutput, ResourceLocation RecipeId, ModRecipeCategory pCategory, String pGroup) {
+    public GemPolishingRecipe(Ingredient pInput, ItemStack pOutput, ResourceLocation RecipeId, String pGroup) {
         this.input = pInput;
         this.output = pOutput;
         this.id = RecipeId;
-        this.category = pCategory;
         this.group = pGroup;
     }
 
@@ -84,9 +81,7 @@ public class GemPolishingRecipe implements Recipe<SimpleContainer> {
         public static final Serializer INSTANCE = new Serializer();
 
         @Override
-        public GemPolishingRecipe fromJson(ResourceLocation resourceLocation, JsonObject jsonObject) {
-            ModRecipeCategory recipeCategory = ModRecipeCategory.CODEC.byName(GsonHelper.getAsString(jsonObject, "category"));
-
+        public GemPolishingRecipe fromJson(ResourceLocation pRecipeId, JsonObject jsonObject) {
             String group = GsonHelper.getAsString(jsonObject, "group");
 
             JsonElement ingredientElement = GsonHelper.isArrayNode(jsonObject, "ingredient") ? GsonHelper.getAsJsonArray(jsonObject, "ingredient") : GsonHelper.getAsJsonObject(jsonObject, "ingredient");
@@ -94,31 +89,27 @@ public class GemPolishingRecipe implements Recipe<SimpleContainer> {
 
             ItemStack output = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(jsonObject, "output"));
 
-            return new GemPolishingRecipe(ingredient, output, resourceLocation, recipeCategory, group);
+            return new GemPolishingRecipe(ingredient, output, pRecipeId, group);
         }
 
         @Override
-        public @Nullable GemPolishingRecipe fromNetwork(ResourceLocation resourceLocation, FriendlyByteBuf friendlyByteBuf) {
-            ModRecipeCategory recipeCategory = friendlyByteBuf.readEnum(ModRecipeCategory.class);
+        public @Nullable GemPolishingRecipe fromNetwork(ResourceLocation pRecipeId, FriendlyByteBuf pBuffer) {
+            String group = pBuffer.readUtf();
 
-            String group = friendlyByteBuf.readUtf();
+            Ingredient ingredient = Ingredient.fromNetwork(pBuffer);
 
-            Ingredient ingredient = Ingredient.fromNetwork(friendlyByteBuf);
+            ItemStack output = pBuffer.readItem();
 
-            ItemStack output = friendlyByteBuf.readItem();
-
-            return new GemPolishingRecipe(ingredient, output, resourceLocation, recipeCategory, group);
+            return new GemPolishingRecipe(ingredient, output, pRecipeId, group);
         }
 
         @Override
-        public void toNetwork(FriendlyByteBuf friendlyByteBuf, GemPolishingRecipe gemPolishingRecipes) {
-            friendlyByteBuf.writeEnum(gemPolishingRecipes.category);
+        public void toNetwork(FriendlyByteBuf pBuffer, GemPolishingRecipe pRecipe) {
+            pBuffer.writeUtf(pRecipe.group);
 
-            friendlyByteBuf.writeUtf(gemPolishingRecipes.group);
+            pRecipe.input.toNetwork(pBuffer);
 
-            gemPolishingRecipes.input.toNetwork(friendlyByteBuf);
-
-            friendlyByteBuf.writeItemStack(gemPolishingRecipes.getResultItem(null), false);
+            pBuffer.writeItemStack(pRecipe.getResultItem(null), false);
         }
     }
 }

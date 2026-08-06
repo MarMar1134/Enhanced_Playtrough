@@ -1,6 +1,5 @@
 {
   "type": "enhanced_playthrough:primal_grinding",
-  "category": "grind",
   "group": "zinc_dust",
   "ingredient": {
     "tag": "enhanced_playthrough:grindable/zinc"

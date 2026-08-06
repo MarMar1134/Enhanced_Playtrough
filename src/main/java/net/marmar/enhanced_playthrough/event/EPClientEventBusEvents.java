@@ -18,7 +18,6 @@ import net.marmar.enhanced_playthrough.entity.zombieknight.model.ZombieKnightRen
 import net.marmar.enhanced_playthrough.menu.EPMenuTypes;
 import net.marmar.enhanced_playthrough.menu.screen.alchemicalduplicator.AlchemicalDuplicatorScreen;
 import net.marmar.enhanced_playthrough.menu.screen.alloyfurnace.AdobeAlloyFurnaceScreen;
-import net.marmar.enhanced_playthrough.menu.screen.alloyfurnace.SoulAlloyScreen;
 import net.marmar.enhanced_playthrough.menu.screen.alloyfurnace.SuperAlloyFurnaceScreen;
 import net.marmar.enhanced_playthrough.menu.screen.leatherworker.LeatherworkerStationScreen;
 import net.marmar.enhanced_playthrough.menu.screen.modfurnace.AdobeFurnaceScreen;
@@ -133,7 +132,6 @@ public class EPClientEventBusEvents {
 
         MenuScreens.register(EPMenuTypes.ADOBE_ALLOY_FURNACE_MENU.get(), AdobeAlloyFurnaceScreen::new);
         MenuScreens.register(EPMenuTypes.SUPER_ALLOY_FURNACE_MENU.get(), SuperAlloyFurnaceScreen::new);
-        MenuScreens.register(EPMenuTypes.SOUL_ALLOY_FURNACE_MENU.get(), SoulAlloyScreen::new);
 
         MenuScreens.register(EPMenuTypes.GEM_POLISHER_MENU.get(), GemPolisherScreen::new);
 

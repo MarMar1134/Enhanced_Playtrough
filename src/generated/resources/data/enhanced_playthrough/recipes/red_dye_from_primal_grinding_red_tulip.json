@@ -1,6 +1,5 @@
 {
   "type": "enhanced_playthrough:primal_grinding",
-  "category": "grind",
   "group": "red_dye",
   "ingredient": {
     "item": "minecraft:red_tulip"

@@ -1,7 +1,6 @@
 {
   "type": "enhanced_playthrough:super_ore_alloying",
   "alloytime": 100,
-  "category": "complex_alloy",
   "group": "purple_gold_ingot",
   "ingredients": [
     {
@@ -14,5 +13,5 @@
   "output": {
     "item": "enhanced_playthrough:purple_gold_ingot"
   },
-  "xp": 0.5
+  "xp": 1.0
 }

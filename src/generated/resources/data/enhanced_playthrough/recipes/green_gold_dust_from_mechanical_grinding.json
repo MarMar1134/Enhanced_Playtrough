@@ -1,6 +1,5 @@
 {
   "type": "enhanced_playthrough:mechanical_grinding",
-  "category": "mechanical_grind",
   "group": "green_gold_dust",
   "ingredient": {
     "tag": "enhanced_playthrough:grindable/green_gold"

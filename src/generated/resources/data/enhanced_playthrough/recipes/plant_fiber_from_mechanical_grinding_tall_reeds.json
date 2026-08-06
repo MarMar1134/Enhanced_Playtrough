@@ -1,6 +1,5 @@
 {
   "type": "enhanced_playthrough:mechanical_grinding",
-  "category": "mechanical_grind",
   "group": "vegetable_fiber",
   "ingredient": {
     "item": "enhanced_playthrough:tall_reeds"

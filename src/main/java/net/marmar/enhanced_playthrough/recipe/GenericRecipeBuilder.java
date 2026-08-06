@@ -1,7 +1,6 @@
 package net.marmar.enhanced_playthrough.recipe;
 
 import net.marmar.enhanced_playthrough.recipe.grind.AbstractGrindRecipe;
-import net.marmar.enhanced_playthrough.recipe.category.ModRecipeCategory;
 import com.google.gson.JsonObject;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.advancements.AdvancementRewards;
@@ -22,32 +21,30 @@ import java.util.function.Consumer;
 
 public class GenericRecipeBuilder implements RecipeBuilder {
     private final Item result;
-    private final ModRecipeCategory category;
     private String group;
     private final Ingredient ingredient;
     private final int count;
     private final Advancement.Builder advancement = Advancement.Builder.recipeAdvancement();
     private final RecipeSerializer<?> serializer;
 
-    private GenericRecipeBuilder(ItemLike pResult, int pCount, Ingredient pIngredient, ModRecipeCategory pCategory, String pGroup, RecipeSerializer<?> pSerializer) {
+    private GenericRecipeBuilder(ItemLike pResult, int pCount, Ingredient pIngredient, String pGroup, RecipeSerializer<?> pSerializer) {
         this.result = pResult.asItem();
-        this.category = pCategory;
         this.group = pGroup;
         this.count = pCount;
         this.ingredient = pIngredient;
         this.serializer = pSerializer;
     }
 
-    public static GenericRecipeBuilder generic(Ingredient pIngredient, ItemLike pResult, int pCount, String pGroup, ModRecipeCategory pCategory, RecipeSerializer<?> pSerializer){
-        return new GenericRecipeBuilder(pResult, pCount, pIngredient, pCategory, pGroup, pSerializer);
+    public static GenericRecipeBuilder generic(Ingredient pIngredient, ItemLike pResult, int pCount, String pGroup, RecipeSerializer<?> pSerializer){
+        return new GenericRecipeBuilder(pResult, pCount, pIngredient, pGroup, pSerializer);
     }
 
     public static GenericRecipeBuilder gemPolishing(Ingredient pIngredient, ItemLike pResult, String pGroup) {
-        return generic(pIngredient, pResult, 1, pGroup, ModRecipeCategory.GEM_POLISH, EPRecipes.POLISHING_SERIALIZER.get());
+        return generic(pIngredient, pResult, 1, pGroup, EPRecipes.POLISHING_SERIALIZER.get());
     }
 
-    public static GenericRecipeBuilder itemGrinding(Ingredient pIngredient, ItemLike pResult, String pGroup, int pCount, ModRecipeCategory pCategory, RecipeSerializer<? extends AbstractGrindRecipe> pSerializer) {
-        return generic(pIngredient, pResult, pCount, pGroup, pCategory, pSerializer);
+    public static GenericRecipeBuilder itemGrinding(Ingredient pIngredient, ItemLike pResult, String pGroup, int pCount, RecipeSerializer<? extends AbstractGrindRecipe> pSerializer) {
+        return generic(pIngredient, pResult, pCount, pGroup, pSerializer);
     }
 
     @Override
@@ -74,7 +71,7 @@ public class GenericRecipeBuilder implements RecipeBuilder {
                 RecipeUnlockedTrigger.unlocked(resourceLocation)).rewards(AdvancementRewards.Builder.recipe(resourceLocation))
                 .requirements(RequirementsStrategy.OR);
 
-        consumer.accept(new Result(resourceLocation, this.ingredient, this.result, this.category, this.group, this.count, this.advancement,
+        consumer.accept(new Result(resourceLocation, this.ingredient, this.result, this.group, this.count, this.advancement,
                 resourceLocation.withPrefix("recipes/"), this.serializer));
     }
 
@@ -84,7 +81,7 @@ public class GenericRecipeBuilder implements RecipeBuilder {
         }
     }
 
-    private record Result(ResourceLocation id, Ingredient ingredient, Item result, ModRecipeCategory category,
+    private record Result(ResourceLocation id, Ingredient ingredient, Item result,
                           String group, int count, Advancement.Builder advancement, ResourceLocation resourceLocation,
                           RecipeSerializer<?> serializer) implements FinishedRecipe {
 
@@ -92,8 +89,6 @@ public class GenericRecipeBuilder implements RecipeBuilder {
                 if (!this.group.isEmpty()) {
                     pJson.addProperty("group", this.group);
                 }
-
-                pJson.addProperty("category", this.category.getSerializedName());
 
                 //Input
                 pJson.add("ingredient", this.ingredient.toJson());

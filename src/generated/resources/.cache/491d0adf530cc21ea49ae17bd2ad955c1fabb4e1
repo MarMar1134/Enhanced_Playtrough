@@ -1,4 +1,4 @@
-// 1.20.1	2026-08-05T12:49:50.5038026	Tags for minecraft:block mod id enhanced_playthrough
+// 1.20.1	2026-08-06T09:01:46.9797321	Tags for minecraft:block mod id enhanced_playthrough
 79753f202ed6cd2b07dd609dec19558e6c68c837 data/enhanced_playthrough/tags/blocks/alloy_furnace.json
 47a02117dd60bac3b440fb46f534e4d5442d0e64 data/enhanced_playthrough/tags/blocks/basic_furnace.json
 5d27eebe0849b352469140e33f7a751d88d36e96 data/enhanced_playthrough/tags/blocks/bauxite_ores.json
@@ -18,7 +18,7 @@ aae115d005c5fe23885c738fc2e13a317ee65c89 data/enhanced_playthrough/tags/blocks/s
 91ea176efa45aaf51177fe9afb84629048e27ed2 data/enhanced_playthrough/tags/blocks/sulfur_ores.json
 249784e172026977ce3d5cb73991bdc2903b414c data/enhanced_playthrough/tags/blocks/tin_ores.json
 6cb61d10a550aa75f3e2f1a4e3ee86f17bf6ec5f data/enhanced_playthrough/tags/blocks/zinc_ores.json
-b60f42d09679be8e71ba4e0e1c4daaccfe0e3752 data/forge/tags/blocks/needs_wood_tool.json
+e45ee594b0e4c50f7d85ad11ca1e5b614a77b475 data/forge/tags/blocks/needs_wood_tool.json
 dcda19163fa507e8427cb3c8d93dcab71bc12a7f data/forge/tags/blocks/ores.json
 8e61fa1c7bcdcb459ec46f2c61d6e508e61792d3 data/forge/tags/blocks/stone.json
 0a8e55b9ef073617d5181d125c68c307971290bc data/minecraft/tags/blocks/beacon_base_blocks.json
@@ -28,7 +28,7 @@ de63434cd109289856ff5bfdcd84162a8393525b data/minecraft/tags/blocks/leaves.json
 cc7f01de72464bfac0275de5c6aaeeb445bc06d0 data/minecraft/tags/blocks/logs_that_burn.json
 287d0893e46204b4fe9d08566c442cc7b69f74a9 data/minecraft/tags/blocks/mineable/axe.json
 de63434cd109289856ff5bfdcd84162a8393525b data/minecraft/tags/blocks/mineable/hoe.json
-59a0f8df9975ad31024cecd4acee978240655146 data/minecraft/tags/blocks/mineable/pickaxe.json
+c00d8980cfb6017abf5c8388f7de20f64626f0c1 data/minecraft/tags/blocks/mineable/pickaxe.json
 da1d12f678963493519caaff63a76241b220579f data/minecraft/tags/blocks/mineable/shovel.json
 114b85c5020f2489ec29e69f25614b7c3dec9eaf data/minecraft/tags/blocks/needs_diamond_tool.json
 5aea9f206c4cef6dcad182e5da62ab2645997a1e data/minecraft/tags/blocks/needs_iron_tool.json

@@ -1,17 +1,24 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_required_materials": {
+    "has_aluminum_dust": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:aluminum_dust"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_clay_ball": {
       "conditions": {
         "items": [
           {
             "items": [
               "minecraft:clay_ball"
-            ]
-          },
-          {
-            "items": [
-              "enhanced_playthrough:aluminum_dust"
             ]
           }
         ]
@@ -27,7 +34,8 @@
   },
   "requirements": [
     [
-      "has_required_materials",
+      "has_clay_ball",
+      "has_aluminum_dust",
       "has_the_recipe"
     ]
   ],

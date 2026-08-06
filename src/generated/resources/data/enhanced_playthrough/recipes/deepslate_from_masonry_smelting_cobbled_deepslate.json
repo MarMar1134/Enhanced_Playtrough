@@ -1,6 +1,5 @@
 {
   "type": "enhanced_playthrough:masonry_smelting",
-  "category": "masonry_smelt",
   "cooktime": 100,
   "group": "deepslate",
   "ingredient": {

@@ -1,0 +1,44 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "TagKey[minecraft:item / enhanced_playthrough:allyable/copper]": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "enhanced_playthrough:allyable/copper"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "TagKey[minecraft:item / enhanced_playthrough:allyable/zinc]": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "enhanced_playthrough:allyable/zinc"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "enhanced_playthrough:brass_ingot_from_super_alloying_allyable/zinc_and_allyable/copper"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "TagKey[minecraft:item / enhanced_playthrough:allyable/zinc]",
+      "TagKey[minecraft:item / enhanced_playthrough:allyable/copper]",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "enhanced_playthrough:brass_ingot_from_super_alloying_allyable/zinc_and_allyable/copper"
+    ]
+  },
+  "sends_telemetry_event": false
+}

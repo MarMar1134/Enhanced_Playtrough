@@ -161,7 +161,7 @@ public class EnglishLangProvider extends AbstractLangProvider {
 
             addSurvivalAdvancement("design_choices", "Design choices",
                     "Alloy gold and aluminum to get purple gold.");
-            addSurvivalAdvancement("the_man_behind_the_slaughter", "Its been so long...",
+            addSurvivalAdvancement("the_man_behind_the_slaughter", "It's been so long...",
                     "Kill 5 baby villagers with an iron dagger with a purple gold handle.");
 
             //Gems
@@ -432,7 +432,6 @@ public class EnglishLangProvider extends AbstractLangProvider {
             addBlock(EPBlocks.SOUL_FURNACE, "Soul mud furnace");
             addBlock(EPBlocks.MASONRY_FURNACE, "Masonry furnace");
             addBlock(EPBlocks.ADOBE_ALLOY_FURNACE, "Bricks alloy furnace");
-            addBlock(EPBlocks.SOUL_ALLOY_FURNACE, "Soul bricks alloy furnace");
             addBlock(EPBlocks.SUPER_ALLOY_FURNACE, "Blast alloy furnace");
             addBlock(EPBlocks.GEM_POLISHER, "Gem polisher");
             addBlock(EPBlocks.PRIMAL_GRINDER, "Grinder");

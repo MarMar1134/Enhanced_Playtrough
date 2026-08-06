@@ -1,6 +1,5 @@
 {
   "type": "enhanced_playthrough:mechanical_grinding",
-  "category": "mechanical_grind",
   "group": "limestone_cobble",
   "ingredient": {
     "item": "enhanced_playthrough:cobbled_limestone"

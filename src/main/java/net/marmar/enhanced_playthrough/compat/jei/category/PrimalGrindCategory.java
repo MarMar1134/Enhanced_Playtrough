@@ -81,19 +81,9 @@ public class PrimalGrindCategory implements IRecipeCategory<PrimalGrindRecipe> {
         return this.icon;
     }
 
-    private List<ItemStack> getValidFuels() {
-        return ForgeRegistries.ITEMS.getValues()
-                .stream()
-                .filter(item -> ForgeHooks.getBurnTime(new ItemStack(item), null) > 0)
-                .map(ItemStack::new)
-                .toList();
-    }
-
     @Override
     public void setRecipe(IRecipeLayoutBuilder builder, PrimalGrindRecipe primalGrindRecipe, IFocusGroup iFocusGroup) {
         builder.addSlot(RecipeIngredientRole.INPUT, 40, 17).addIngredients(primalGrindRecipe.getIngredient());
-
-        builder.addSlot(RecipeIngredientRole.INPUT, 40, 50).addItemStacks(getValidFuels());
 
         builder.addSlot(RecipeIngredientRole.OUTPUT, 125, 34).addItemStack(primalGrindRecipe.getResultItem(null));
     }

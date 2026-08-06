@@ -1,0 +1,11 @@
+{
+  "type": "enhanced_playthrough:primal_grinding",
+  "group": "string",
+  "ingredient": {
+    "item": "minecraft:cobweb"
+  },
+  "output": {
+    "count": 3,
+    "item": "minecraft:string"
+  }
+}

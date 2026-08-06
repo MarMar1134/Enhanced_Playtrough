@@ -1,0 +1,17 @@
+{
+  "type": "enhanced_playthrough:super_ore_alloying",
+  "alloytime": 100,
+  "group": "green_gold_ingot",
+  "ingredients": [
+    {
+      "tag": "enhanced_playthrough:allyable/silver"
+    },
+    {
+      "tag": "enhanced_playthrough:allyable/gold"
+    }
+  ],
+  "output": {
+    "item": "enhanced_playthrough:green_gold_ingot"
+  },
+  "xp": 1.0
+}

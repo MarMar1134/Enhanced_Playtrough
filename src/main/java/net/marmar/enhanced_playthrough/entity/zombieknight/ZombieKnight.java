@@ -36,11 +36,6 @@ public class ZombieKnight extends Zombie {
       return pLevel.getLevel().getDayTime() / 24000 >= (pLevel.getDifficulty() == Difficulty.HARD ? 20 : 30);
     }
 
-    @Override
-    public void tick() {
-        super.tick();
-    }
-
     /**
      * Static method that checks if the {@code Zombie Knight} can spawn.
      * <p>

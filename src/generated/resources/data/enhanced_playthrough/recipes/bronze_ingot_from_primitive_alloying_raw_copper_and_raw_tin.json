@@ -1,0 +1,17 @@
+{
+  "type": "enhanced_playthrough:primitive_ore_alloying",
+  "alloytime": 300,
+  "group": "bronze_ingot",
+  "ingredients": [
+    {
+      "item": "minecraft:raw_copper"
+    },
+    {
+      "item": "enhanced_playthrough:raw_tin"
+    }
+  ],
+  "output": {
+    "item": "enhanced_playthrough:bronze_ingot"
+  },
+  "xp": 0.4
+}

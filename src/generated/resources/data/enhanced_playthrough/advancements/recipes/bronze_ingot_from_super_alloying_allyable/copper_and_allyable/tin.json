@@ -1,0 +1,44 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "TagKey[minecraft:item / enhanced_playthrough:allyable/copper]": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "enhanced_playthrough:allyable/copper"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "TagKey[minecraft:item / enhanced_playthrough:allyable/tin]": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "enhanced_playthrough:allyable/tin"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "enhanced_playthrough:bronze_ingot_from_super_alloying_allyable/copper_and_allyable/tin"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "TagKey[minecraft:item / enhanced_playthrough:allyable/copper]",
+      "TagKey[minecraft:item / enhanced_playthrough:allyable/tin]",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "enhanced_playthrough:bronze_ingot_from_super_alloying_allyable/copper_and_allyable/tin"
+    ]
+  },
+  "sends_telemetry_event": false
+}

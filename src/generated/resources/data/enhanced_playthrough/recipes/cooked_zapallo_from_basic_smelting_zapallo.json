@@ -1,6 +1,5 @@
 {
   "type": "enhanced_playthrough:basic_smelting",
-  "category": "basic_smelt",
   "cooktime": 300,
   "group": "zapallo",
   "ingredient": {

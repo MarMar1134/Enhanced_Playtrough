@@ -5,10 +5,10 @@
   "durability_to_consume": 10,
   "ingredients": [
     {
-      "item": "minecraft:shears"
+      "item": "minecraft:leather"
     },
     {
-      "item": "minecraft:leather"
+      "item": "minecraft:shears"
     }
   ],
   "result": {

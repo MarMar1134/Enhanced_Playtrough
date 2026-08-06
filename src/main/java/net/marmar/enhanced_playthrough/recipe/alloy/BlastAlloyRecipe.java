@@ -4,7 +4,6 @@ import net.marmar.enhanced_playthrough.block.EPBlocks;
 import net.marmar.enhanced_playthrough.recipe.EPRecipes;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
-import net.marmar.enhanced_playthrough.recipe.category.AlloyRecipeCategory;
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
@@ -18,15 +17,13 @@ public class BlastAlloyRecipe extends AbstractAlloyRecipe implements Recipe<Simp
     private final NonNullList<Ingredient> inputs;
     private final int alloyTime;
     private final float xpAmount;
-    private final AlloyRecipeCategory category;
     private final String group;
 
-    public BlastAlloyRecipe(NonNullList<Ingredient> pInputs, ItemStack pOutput, int pAlloyTime, float pXpAmount, ResourceLocation pRecipeId, AlloyRecipeCategory pCategory, String pGroup) {
-        super(pInputs, pOutput, pAlloyTime, pXpAmount, pRecipeId, EPRecipes.SUPER_ALLOY_TYPE.get(), pCategory, pGroup);
+    public BlastAlloyRecipe(NonNullList<Ingredient> pInputs, ItemStack pOutput, int pAlloyTime, float pXpAmount, ResourceLocation pRecipeId, String pGroup) {
+        super(pInputs, pOutput, pAlloyTime, pXpAmount, pRecipeId, EPRecipes.SUPER_ALLOY_TYPE.get(), pGroup);
         this.inputs = pInputs;
         this.alloyTime = pAlloyTime;
         this.xpAmount = pXpAmount;
-        this.category = pCategory;
         this.group = pGroup;
     }
 
@@ -40,10 +37,6 @@ public class BlastAlloyRecipe extends AbstractAlloyRecipe implements Recipe<Simp
         return BlastAlloyRecipe.Type.INSTANCE;
     }
 
-    public AlloyRecipeCategory getCategory() {
-        return category;
-    }
-
     @Override
     public ItemStack getToastSymbol() {
         return new ItemStack(EPBlocks.SUPER_ALLOY_FURNACE.get());
@@ -55,15 +48,11 @@ public class BlastAlloyRecipe extends AbstractAlloyRecipe implements Recipe<Simp
     public static class Serializer implements RecipeSerializer<BlastAlloyRecipe>{
         public static final Serializer INSTANCE = new Serializer();
 
-        public final int defaultAlloyTime = 0;
-
         @Override
-        public BlastAlloyRecipe fromJson(ResourceLocation resourceLocation, JsonObject jsonObject) {
-            AlloyRecipeCategory recipeCategory = AlloyRecipeCategory.findCategory(GsonHelper.getAsString(jsonObject, "category"));
-
+        public BlastAlloyRecipe fromJson(ResourceLocation pRecipeId, JsonObject jsonObject) {
             String group = GsonHelper.getAsString(jsonObject, "group");
 
-            int alloyTime = GsonHelper.getAsInt(jsonObject, "alloytime", defaultAlloyTime);
+            int alloyTime = GsonHelper.getAsInt(jsonObject, "alloytime", 200);
 
             float xpAmount = GsonHelper.getAsFloat(jsonObject, "xp");
 
@@ -76,43 +65,39 @@ public class BlastAlloyRecipe extends AbstractAlloyRecipe implements Recipe<Simp
                 inputs.set(i, Ingredient.fromJson(ingredients.get(i)));
             }
 
-            return new BlastAlloyRecipe(inputs, output, alloyTime, xpAmount, resourceLocation, recipeCategory, group);
+            return new BlastAlloyRecipe(inputs, output, alloyTime, xpAmount, pRecipeId, group);
         }
 
         @Override
-        public @Nullable BlastAlloyRecipe fromNetwork(ResourceLocation resourceLocation, FriendlyByteBuf friendlyByteBuf) {
-            AlloyRecipeCategory recipeCategory = friendlyByteBuf.readEnum(AlloyRecipeCategory.class);
+        public @Nullable BlastAlloyRecipe fromNetwork(ResourceLocation pRecipeId, FriendlyByteBuf pBuffer) {
+            String group = pBuffer.readUtf();
 
-            String group = friendlyByteBuf.readUtf();
+            int alloyTime = pBuffer.readVarInt();
 
-            int alloyTime = friendlyByteBuf.readVarInt();
+            float xpAmount = pBuffer.readFloat();
 
-            float xpAmount = friendlyByteBuf.readFloat();
+            NonNullList<Ingredient> inputs = NonNullList.withSize(pBuffer.readInt(), Ingredient.EMPTY);
 
-            NonNullList<Ingredient> inputs = NonNullList.withSize(friendlyByteBuf.readInt(), Ingredient.EMPTY);
+            inputs.replaceAll(ignored -> Ingredient.fromNetwork(pBuffer));
 
-            inputs.replaceAll(ignored -> Ingredient.fromNetwork(friendlyByteBuf));
-
-            ItemStack output = friendlyByteBuf.readItem();
-            return new BlastAlloyRecipe(inputs, output, alloyTime, xpAmount, resourceLocation, recipeCategory, group);
+            ItemStack output = pBuffer.readItem();
+            return new BlastAlloyRecipe(inputs, output, alloyTime, xpAmount, pRecipeId, group);
         }
 
         @Override
-        public void toNetwork(FriendlyByteBuf friendlyByteBuf, BlastAlloyRecipe recipes) {
-            friendlyByteBuf.writeEnum(recipes.category);
+        public void toNetwork(FriendlyByteBuf pBuffer, BlastAlloyRecipe pRecipe) {
+            pBuffer.writeUtf(pRecipe.group);
 
-            friendlyByteBuf.writeUtf(recipes.group);
+            pBuffer.writeVarInt(pRecipe.alloyTime);
 
-            friendlyByteBuf.writeVarInt(recipes.alloyTime);
+            pBuffer.writeFloat(pRecipe.xpAmount);
 
-            friendlyByteBuf.writeFloat(recipes.xpAmount);
+            pBuffer.writeInt(pRecipe.inputs.size());
 
-            friendlyByteBuf.writeInt(recipes.inputs.size());
-
-            for (Ingredient ingredient : recipes.getIngredients()) {
-                ingredient.toNetwork(friendlyByteBuf);
+            for (Ingredient ingredient : pRecipe.getIngredients()) {
+                ingredient.toNetwork(pBuffer);
             }
-            friendlyByteBuf.writeItemStack(recipes.getResultItem(null), false);
+            pBuffer.writeItemStack(pRecipe.getResultItem(null), false);
         }
     }
 }

@@ -1,0 +1,17 @@
+{
+  "values": [
+    "#enhanced_playthrough:grindable/gold",
+    "#enhanced_playthrough:grindable/silver",
+    "#enhanced_playthrough:grindable/aluminum",
+    "#enhanced_playthrough:grindable/copper",
+    "#enhanced_playthrough:grindable/tin",
+    "#enhanced_playthrough:grindable/zinc",
+    "#enhanced_playthrough:grindable/brass",
+    "#enhanced_playthrough:grindable/bronze",
+    "#enhanced_playthrough:grindable/rose_gold",
+    "#enhanced_playthrough:grindable/iron",
+    "#enhanced_playthrough:grindable/green_gold",
+    "#enhanced_playthrough:grindable/steel",
+    "#enhanced_playthrough:grindable/blue_gold"
+  ]
+}

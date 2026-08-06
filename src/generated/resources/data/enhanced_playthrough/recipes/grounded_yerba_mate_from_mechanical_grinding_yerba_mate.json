@@ -1,6 +1,5 @@
 {
   "type": "enhanced_playthrough:mechanical_grinding",
-  "category": "mechanical_grind",
   "group": "grounded_yerba_mate",
   "ingredient": {
     "item": "enhanced_playthrough:yerba_mate"

@@ -1,6 +1,5 @@
 {
   "type": "enhanced_playthrough:mechanical_grinding",
-  "category": "mechanical_grind",
   "group": "light_gray_dye",
   "ingredient": {
     "item": "minecraft:white_tulip"

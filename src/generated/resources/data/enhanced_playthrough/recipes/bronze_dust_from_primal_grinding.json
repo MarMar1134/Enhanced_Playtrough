@@ -1,6 +1,5 @@
 {
   "type": "enhanced_playthrough:primal_grinding",
-  "category": "grind",
   "group": "bronze_dust",
   "ingredient": {
     "tag": "enhanced_playthrough:grindable/bronze"

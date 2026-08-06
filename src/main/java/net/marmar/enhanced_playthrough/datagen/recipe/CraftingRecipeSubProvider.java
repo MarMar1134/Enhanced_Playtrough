@@ -7,7 +7,6 @@ import net.marmar.enhanced_playthrough.item.EPItems;
 import net.marmar.enhanced_playthrough.recipe.crafting.EPShapelessRecipeBuilder;
 import net.minecraft.advancements.critereon.EnterBlockTrigger;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
-import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
@@ -197,9 +196,8 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .save(consumer, recipeName(Items.LEATHER, "from_werellager_hide"));
 
         EPShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EPItems.LEATHER_STRIPS.get(), 3)
-                .requires(Items.SHEARS)
                 .requires(Items.LEATHER)
-                .consumeDurability(true)
+                .requires(Items.SHEARS).consumeDurability()
                 .durabilityToConsume(10)
                 .unlockedBy(getHasName(Items.LEATHER), has(Items.LEATHER))
                 .unlockedBy(getHasName(EPItems.LEATHER_STRIPS.get()), has(EPItems.LEATHER_STRIPS.get()))
@@ -210,6 +208,24 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .requires(Items.STICK)
                 .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
                 .save(consumer);
+
+        //String
+        EPShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.STRING, 2)
+                .requires(ItemTags.WOOL)
+                .requires(Items.SHEARS).consumeDurability()
+                .durabilityToConsume(15)
+                .group("string")
+                .unlockedBy("has_wool", has(ItemTags.WOOL))
+                .unlockedBy(getHasName(Items.STRING), has(Items.STRING))
+                .save(consumer, recipeName(Items.STRING, "from_wool"));
+
+        EPShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.STRING, 2)
+                .requires(Items.COBWEB)
+                .requires(EPTags.Items.DAGGER).consumeDurability()
+                .durabilityToConsume(4)
+                .group("string")
+                .unlockedBy(getHasName(Items.COBWEB), has(Items.COBWEB))
+                .save(consumer, recipeName(Items.STRING, "from_cobweb"));
 
         //Plant fiber
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EPItems.PLANT_FIBER.get())
@@ -459,16 +475,6 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .define('A', EPBlocks.ADOBE_ALLOY_FURNACE.get())
                 .define('I', Blocks.COBBLED_DEEPSLATE)
                 .unlockedBy(getHasName(Blocks.COBBLED_DEEPSLATE), has(Blocks.COBBLED_DEEPSLATE))
-                .save(consumer);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, EPBlocks.SOUL_ALLOY_FURNACE.get())
-                .pattern("###")
-                .pattern("#A#")
-                .pattern("III")
-                .define('#', EPBlocks.SOULSTONE_BRICKS.get())
-                .define('A', EPBlocks.SOUL_FURNACE.get())
-                .define('I', Blocks.BLACKSTONE)
-                .unlockedBy(getHasName(EPBlocks.SOUL_FURNACE.get()), has(EPBlocks.SOUL_FURNACE.get()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, EPBlocks.GEM_POLISHER.get())

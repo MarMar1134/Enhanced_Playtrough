@@ -3,7 +3,6 @@ package net.marmar.enhanced_playthrough.recipe.epsmelt;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import net.marmar.enhanced_playthrough.block.EPBlocks;
-import net.marmar.enhanced_playthrough.recipe.category.ModRecipeCategory;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.GsonHelper;
@@ -16,14 +15,12 @@ import org.jetbrains.annotations.Nullable;
 public class MasonrySmeltingRecipe extends AbstractEPSmeltingRecipe implements Recipe<SimpleContainer> {
     private final Ingredient input;
     private final int cookTime;
-    private final ModRecipeCategory category;
     private final String group;
 
-    public MasonrySmeltingRecipe(Ingredient pInput, ItemStack pOutput, ResourceLocation pRecipeId, int pCookTime, ModRecipeCategory pCategory, String pGroup) {
-        super(pInput, pOutput, pRecipeId, pCookTime, pCategory, pGroup);
+    public MasonrySmeltingRecipe(Ingredient pInput, ItemStack pOutput, ResourceLocation pRecipeId, int pCookTime, String pGroup) {
+        super(pInput, pOutput, pRecipeId, pCookTime, pGroup);
         this.input = pInput;
         cookTime = pCookTime;
-        this.category = pCategory;
         this.group = pGroup;
     }
 
@@ -54,49 +51,42 @@ public class MasonrySmeltingRecipe extends AbstractEPSmeltingRecipe implements R
     public static class Serializer implements RecipeSerializer<MasonrySmeltingRecipe>{
         public static final Serializer INSTANCE = new Serializer();
 
-        public final int defaultCookingTime = 0;
         @Override
-        public MasonrySmeltingRecipe fromJson(ResourceLocation resourceLocation, JsonObject jsonObject) {
-            ModRecipeCategory recipeCategory = ModRecipeCategory.CODEC.byName(GsonHelper.getAsString(jsonObject, "category"));
-
+        public MasonrySmeltingRecipe fromJson(ResourceLocation pRecipeId, JsonObject jsonObject) {
             String group = GsonHelper.getAsString(jsonObject, "group");
 
-            int cookTime = GsonHelper.getAsInt(jsonObject, "cooktime", defaultCookingTime);
+            int cookTime = GsonHelper.getAsInt(jsonObject, "cooktime", 200);
 
             JsonElement ingredientElement = GsonHelper.isArrayNode(jsonObject, "ingredient") ? GsonHelper.getAsJsonArray(jsonObject, "ingredient") : GsonHelper.getAsJsonObject(jsonObject, "ingredient");
             Ingredient ingredient = Ingredient.fromJson(ingredientElement, false);
 
             ItemStack output = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(jsonObject, "output"));
 
-            return new MasonrySmeltingRecipe(ingredient, output,resourceLocation, cookTime, recipeCategory, group);
+            return new MasonrySmeltingRecipe(ingredient, output,pRecipeId, cookTime, group);
         }
 
         @Override
-        public @Nullable MasonrySmeltingRecipe fromNetwork(ResourceLocation resourceLocation, FriendlyByteBuf friendlyByteBuf) {
-            ModRecipeCategory recipeCategory = friendlyByteBuf.readEnum(ModRecipeCategory.class);
+        public @Nullable MasonrySmeltingRecipe fromNetwork(ResourceLocation pRecipeId, FriendlyByteBuf pBuffer) {
+            String group = pBuffer.readUtf();
 
-            String group = friendlyByteBuf.readUtf();
+            int cookTime = pBuffer.readVarInt();
 
-            int cookTime = friendlyByteBuf.readVarInt();
+            Ingredient input = Ingredient.fromNetwork(pBuffer);
 
-            Ingredient input = Ingredient.fromNetwork(friendlyByteBuf);
+            ItemStack output = pBuffer.readItem();
 
-            ItemStack output = friendlyByteBuf.readItem();
-
-            return new MasonrySmeltingRecipe(input, output, resourceLocation, cookTime, recipeCategory, group);
+            return new MasonrySmeltingRecipe(input, output, pRecipeId, cookTime, group);
         }
 
         @Override
-        public void toNetwork(FriendlyByteBuf friendlyByteBuf, MasonrySmeltingRecipe masonrySmeltingRecipe) {
-            friendlyByteBuf.writeEnum(masonrySmeltingRecipe.category);
+        public void toNetwork(FriendlyByteBuf pBuffer, MasonrySmeltingRecipe pRecipe) {
+            pBuffer.writeUtf(pRecipe.group);
 
-            friendlyByteBuf.writeUtf(masonrySmeltingRecipe.group);
+            pBuffer.writeVarInt(pRecipe.cookTime);
 
-            friendlyByteBuf.writeVarInt(masonrySmeltingRecipe.cookTime);
+            pRecipe.input.toNetwork(pBuffer);
 
-            masonrySmeltingRecipe.input.toNetwork(friendlyByteBuf);
-
-            friendlyByteBuf.writeItemStack(masonrySmeltingRecipe.getResultItem(null), false);
+            pBuffer.writeItemStack(pRecipe.getResultItem(null), false);
         }
     }
 }

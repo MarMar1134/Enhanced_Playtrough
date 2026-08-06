@@ -1,6 +1,5 @@
 {
   "type": "enhanced_playthrough:primal_grinding",
-  "category": "grind",
   "group": "peeled_walnut",
   "ingredient": {
     "item": "enhanced_playthrough:walnut"

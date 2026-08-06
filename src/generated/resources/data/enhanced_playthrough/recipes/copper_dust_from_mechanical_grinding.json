@@ -1,6 +1,5 @@
 {
   "type": "enhanced_playthrough:mechanical_grinding",
-  "category": "mechanical_grind",
   "group": "copper_dust",
   "ingredient": {
     "tag": "enhanced_playthrough:grindable/copper"

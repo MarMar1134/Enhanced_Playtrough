@@ -1,0 +1,46 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "TagKey[minecraft:item / enhanced_playthrough:allyable/iron]": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "enhanced_playthrough:allyable/iron"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_coal": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:coal"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "enhanced_playthrough:steel_ingot_from_super_alloying_allyable/iron_and_coal"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "TagKey[minecraft:item / enhanced_playthrough:allyable/iron]",
+      "has_coal",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "enhanced_playthrough:steel_ingot_from_super_alloying_allyable/iron_and_coal"
+    ]
+  },
+  "sends_telemetry_event": false
+}

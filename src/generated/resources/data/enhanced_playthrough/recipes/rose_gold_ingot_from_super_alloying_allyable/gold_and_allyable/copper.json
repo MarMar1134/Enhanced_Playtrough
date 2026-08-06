@@ -1,0 +1,17 @@
+{
+  "type": "enhanced_playthrough:super_ore_alloying",
+  "alloytime": 100,
+  "group": "rose_gold_ingot",
+  "ingredients": [
+    {
+      "tag": "enhanced_playthrough:allyable/gold"
+    },
+    {
+      "tag": "enhanced_playthrough:allyable/copper"
+    }
+  ],
+  "output": {
+    "item": "enhanced_playthrough:rose_gold_ingot"
+  },
+  "xp": 1.0
+}

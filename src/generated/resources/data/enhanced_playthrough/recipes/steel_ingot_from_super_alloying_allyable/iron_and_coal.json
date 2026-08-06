@@ -1,0 +1,17 @@
+{
+  "type": "enhanced_playthrough:super_ore_alloying",
+  "alloytime": 100,
+  "group": "steel_ingot",
+  "ingredients": [
+    {
+      "tag": "enhanced_playthrough:allyable/iron"
+    },
+    {
+      "item": "minecraft:coal"
+    }
+  ],
+  "output": {
+    "item": "enhanced_playthrough:steel_ingot"
+  },
+  "xp": 0.4
+}

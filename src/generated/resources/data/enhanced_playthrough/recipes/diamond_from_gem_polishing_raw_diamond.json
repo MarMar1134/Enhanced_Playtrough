@@ -1,6 +1,5 @@
 {
   "type": "enhanced_playthrough:gem_polishing",
-  "category": "gem_polish",
   "group": "diamond",
   "ingredient": {
     "item": "enhanced_playthrough:raw_diamond"

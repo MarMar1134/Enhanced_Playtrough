@@ -2,6 +2,7 @@ package net.marmar.enhanced_playthrough.recipe.alchemicalduplication;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
+import net.minecraft.core.NonNullList;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
@@ -41,6 +42,13 @@ public class AlchemicalDuplicationRecipe implements Recipe<SimpleContainer> {
     @Override
     public boolean canCraftInDimensions(int i, int i1) {
         return true;
+    }
+
+    @Override
+    public NonNullList<Ingredient> getIngredients() {
+        NonNullList<Ingredient> list = NonNullList.create();
+        list.add(this.input);
+        return list;
     }
 
     @Override

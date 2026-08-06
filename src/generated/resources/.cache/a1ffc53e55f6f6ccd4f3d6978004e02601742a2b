@@ -1,4 +1,4 @@
-// 1.20.1	2026-08-05T14:24:06.1412661	Item Models: enhanced_playthrough
+// 1.20.1	2026-08-06T09:01:46.9737308	Item Models: enhanced_playthrough
 b2df27b0d68c4c96244f2f344cb1fc54663e392f assets/enhanced_playthrough/models/item/adobe_alloy_furnace.json
 9731043a19f6a4326f19981cca25ade3d23cd23d assets/enhanced_playthrough/models/item/adobe_furnace.json
 c56c6fdc1e91add0abd02c8c7acc92cdb3044eb1 assets/enhanced_playthrough/models/item/alchemical_duplicator.json
@@ -798,7 +798,6 @@ cc82e8f041ec949cc28f49f227915a2d490f31e2 assets/enhanced_playthrough/models/item
 c8e1b07b060f68cad75c6ddd667eb9daf766bf53 assets/enhanced_playthrough/models/item/soulstone_slab.json
 9fd3e92705da3cf0ae1db1c471eaf5a5b59a608d assets/enhanced_playthrough/models/item/soulstone_stairs.json
 dc7cad4702479d608ede59f2f8762e8b5c3e04a8 assets/enhanced_playthrough/models/item/soulstone_wall.json
-11533f274cd6c1f290085784ce3f0149b57efc99 assets/enhanced_playthrough/models/item/soul_alloy_furnace.json
 fc6bb57cb0043cea885a2c0d8c54ee8b228d02dc assets/enhanced_playthrough/models/item/soul_furnace.json
 269461f38abe2fad1bed836ac1d8b9663b270534 assets/enhanced_playthrough/models/item/steel_axe.json
 0718edd54f200f73590349e4f5620320fde765cf assets/enhanced_playthrough/models/item/steel_boots.json

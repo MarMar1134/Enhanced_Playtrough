@@ -432,7 +432,6 @@ public class ChileanLangProvider extends AbstractLangProvider {
         addBlock(EPBlocks.SOUL_FURNACE, "Horno de adobe de almas");
         addBlock(EPBlocks.MASONRY_FURNACE, "Horno de mamposteria");
         addBlock(EPBlocks.ADOBE_ALLOY_FURNACE, "Horno de aleación de larillos");
-        addBlock(EPBlocks.SOUL_ALLOY_FURNACE, "Horno de aleación de almas");
         addBlock(EPBlocks.SUPER_ALLOY_FURNACE, "Alto horno de aleación");
         addBlock(EPBlocks.GEM_POLISHER, "Mesa de pulido");
         addBlock(EPBlocks.PRIMAL_GRINDER, "Moledora");

@@ -1,7 +1,6 @@
 {
   "type": "enhanced_playthrough:ore_alloying",
   "alloytime": 200,
-  "category": "simple_alloy",
   "group": "lime",
   "ingredients": [
     {
@@ -14,5 +13,5 @@
   "output": {
     "item": "enhanced_playthrough:lime"
   },
-  "xp": 3.0
+  "xp": 2.0
 }

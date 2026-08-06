@@ -393,7 +393,6 @@ public class EPIBlockLootTables extends BlockLootSubProvider implements IBlockLo
 
         this.dropSelf(EPBlocks.ADOBE_ALLOY_FURNACE.get());
         this.dropSelf(EPBlocks.SUPER_ALLOY_FURNACE.get());
-        this.dropSelf(EPBlocks.SOUL_ALLOY_FURNACE.get());
 
         this.dropSelf(EPBlocks.GEM_POLISHER.get());
 

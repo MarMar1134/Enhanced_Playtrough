@@ -1,14 +1,21 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_required_materials": {
+    "has_coal": {
       "conditions": {
         "items": [
           {
             "items": [
               "minecraft:coal"
             ]
-          },
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_raw_iron": {
+      "conditions": {
+        "items": [
           {
             "items": [
               "minecraft:raw_iron"
@@ -27,7 +34,8 @@
   },
   "requirements": [
     [
-      "has_required_materials",
+      "has_coal",
+      "has_raw_iron",
       "has_the_recipe"
     ]
   ],

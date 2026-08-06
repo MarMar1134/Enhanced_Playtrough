@@ -34,7 +34,7 @@ public class EPShapelessRecipeBuilder extends CraftingRecipeBuilder implements R
     private boolean consumeDurability = false;
     private int durabilityToConsume = 0;
 
-    public EPShapelessRecipeBuilder(RecipeCategory pCategory, ItemLike pResult, int pCount) {
+    protected EPShapelessRecipeBuilder(RecipeCategory pCategory, ItemLike pResult, int pCount) {
         this.category = pCategory;
         this.result = pResult.asItem();
         this.count = pCount;
@@ -90,8 +90,8 @@ public class EPShapelessRecipeBuilder extends CraftingRecipeBuilder implements R
         return this.result;
     }
 
-    public EPShapelessRecipeBuilder consumeDurability(boolean pConsumeDurability) {
-        this.consumeDurability = pConsumeDurability;
+    public EPShapelessRecipeBuilder consumeDurability() {
+        this.consumeDurability = true;
         return this;
     }
 

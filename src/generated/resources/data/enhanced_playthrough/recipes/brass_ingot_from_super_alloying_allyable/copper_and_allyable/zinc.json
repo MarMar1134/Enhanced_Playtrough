@@ -1,0 +1,17 @@
+{
+  "type": "enhanced_playthrough:super_ore_alloying",
+  "alloytime": 100,
+  "group": "brass_ingot",
+  "ingredients": [
+    {
+      "tag": "enhanced_playthrough:allyable/copper"
+    },
+    {
+      "tag": "enhanced_playthrough:allyable/zinc"
+    }
+  ],
+  "output": {
+    "item": "enhanced_playthrough:brass_ingot"
+  },
+  "xp": 0.3
+}

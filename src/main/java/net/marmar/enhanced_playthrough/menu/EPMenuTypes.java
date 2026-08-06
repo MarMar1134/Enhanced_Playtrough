@@ -3,7 +3,6 @@ package net.marmar.enhanced_playthrough.menu;
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.menu.alchemicalduplicator.AlchemicalDuplicatorMenu;
 import net.marmar.enhanced_playthrough.menu.alloyfurnace.AdobeAlloyFurnaceMenu;
-import net.marmar.enhanced_playthrough.menu.alloyfurnace.SoulAlloyFurnaceMenu;
 import net.marmar.enhanced_playthrough.menu.alloyfurnace.SuperAlloyFurnaceMenu;
 import net.marmar.enhanced_playthrough.menu.epfurnace.AdobeFurnaceMenu;
 import net.marmar.enhanced_playthrough.menu.epfurnace.SoulFurnaceMenu;
@@ -37,8 +36,6 @@ public class EPMenuTypes {
             registerMenuType("adobe_alloy_furnace_menu", AdobeAlloyFurnaceMenu::new);
     public static final RegistryObject<MenuType<SuperAlloyFurnaceMenu>> SUPER_ALLOY_FURNACE_MENU =
             registerMenuType("super_alloy_furnace_menu", SuperAlloyFurnaceMenu::new);
-    public static final RegistryObject<MenuType<SoulAlloyFurnaceMenu>> SOUL_ALLOY_FURNACE_MENU =
-            registerMenuType("soul_alloy_furnace_menu", SoulAlloyFurnaceMenu::new);
 
     public static final RegistryObject<MenuType<GemPolisherMenu>> GEM_POLISHER_MENU =
             registerMenuType("gem_polisher_menu", GemPolisherMenu::new);

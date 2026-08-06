@@ -30,7 +30,6 @@ public class EPTabs {
 
                         output.accept(EPBlocks.ADOBE_ALLOY_FURNACE.get());
                         output.accept(EPBlocks.SUPER_ALLOY_FURNACE.get());
-                        output.accept(EPBlocks.SOUL_ALLOY_FURNACE.get());
 
                         output.accept(EPBlocks.GEM_POLISHER.get());
 

@@ -1,0 +1,19 @@
+{
+  "type": "enhanced_playthrough:ep_shapeless_crafting",
+  "category": "misc",
+  "consume_durability": true,
+  "durability_to_consume": 4,
+  "group": "string",
+  "ingredients": [
+    {
+      "item": "minecraft:cobweb"
+    },
+    {
+      "tag": "enhanced_playthrough:tools/daggers"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "minecraft:string"
+  }
+}

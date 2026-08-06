@@ -1,6 +1,5 @@
 {
   "type": "enhanced_playthrough:mechanical_grinding",
-  "category": "mechanical_grind",
   "group": "sulfur",
   "ingredient": {
     "item": "minecraft:blaze_rod"

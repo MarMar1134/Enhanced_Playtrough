@@ -30,6 +30,8 @@ public class EPItemTagGenerator extends ItemTagsProvider {
 
         addIngredientTags();
 
+        addAlloyableTags();
+
         addGrindableTags();
 
         addSmeltToNuggetTags();
@@ -1197,10 +1199,51 @@ public class EPItemTagGenerator extends ItemTagsProvider {
         );
     }
 
+    private void addAlloyableTags(){
+        this.tag(EPTags.Items.ALLOYABLE).addTags(
+                EPTags.Items.GOLD_ALLOYABLE,
+                EPTags.Items.SILVER_ALLOYABLE,
+                EPTags.Items.ALUMINUM_ALLOYABLE,
+                EPTags.Items.TIN_ALLOYABLE,
+                EPTags.Items.ZINC_ALLOYABLE,
+                EPTags.Items.COPPER_ALLOYABLE,
+                EPTags.Items.IRON_ALLOYABLE
+        );
+
+        this.tag(EPTags.Items.GOLD_ALLOYABLE).add(
+                Items.RAW_GOLD, Items.GOLD_INGOT
+        );
+
+        this.tag(EPTags.Items.SILVER_ALLOYABLE).add(
+                EPItems.RAW_SILVER.get(), EPItems.SILVER_INGOT.get()
+        );
+
+        this.tag(EPTags.Items.ALUMINUM_ALLOYABLE).add(
+                EPItems.RAW_ALUMINUM.get(), EPItems.ALUMINUM_INGOT.get()
+        );
+
+        this.tag(EPTags.Items.TIN_ALLOYABLE).add(
+                EPItems.RAW_TIN.get(), EPItems.TIN_INGOT.get()
+        );
+
+        this.tag(EPTags.Items.ZINC_ALLOYABLE).add(
+                EPItems.RAW_ZINC.get(), EPItems.ZINC_INGOT.get()
+        );
+
+        this.tag(EPTags.Items.COPPER_ALLOYABLE).add(
+                Items.RAW_COPPER, Items.COPPER_INGOT
+        );
+
+        this.tag(EPTags.Items.IRON_ALLOYABLE).add(
+                Items.RAW_IRON, Items.IRON_INGOT
+        );
+    }
+
     private void addGrindableTags(){
         this.tag(EPTags.Items.GRINDABLE).addTags(
                 EPTags.Items.GOLD_GRINDABLE,
                 EPTags.Items.SILVER_GRINDABLE,
+                EPTags.Items.ALUMINUM_GRINDABLE,
                 EPTags.Items.COPPER_GRINDABLE,
                 EPTags.Items.TIN_GRINDABLE,
                 EPTags.Items.ZINC_GRINDABLE,

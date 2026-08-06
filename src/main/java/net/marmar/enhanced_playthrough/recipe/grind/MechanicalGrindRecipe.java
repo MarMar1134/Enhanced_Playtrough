@@ -3,7 +3,6 @@ package net.marmar.enhanced_playthrough.recipe.grind;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import net.marmar.enhanced_playthrough.block.EPBlocks;
-import net.marmar.enhanced_playthrough.recipe.category.ModRecipeCategory;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.GsonHelper;
@@ -13,13 +12,11 @@ import org.jetbrains.annotations.Nullable;
 
 public class MechanicalGrindRecipe extends AbstractGrindRecipe {
     private final Ingredient input;
-    private final ModRecipeCategory category;
     private final String group;
 
-    public MechanicalGrindRecipe(Ingredient pInput, ItemStack pOutput, ResourceLocation pRecipeId, ModRecipeCategory pCategory, String pGroup) {
+    public MechanicalGrindRecipe(Ingredient pInput, ItemStack pOutput, ResourceLocation pRecipeId, String pGroup) {
         super(pInput, pOutput, pRecipeId);
         this.input = pInput;
-        this.category = pCategory;
         this.group = pGroup;
     }
 
@@ -46,9 +43,7 @@ public class MechanicalGrindRecipe extends AbstractGrindRecipe {
         public static final Serializer INSTANCE = new Serializer();
 
         @Override
-        public MechanicalGrindRecipe fromJson(ResourceLocation resourceLocation, JsonObject jsonObject) {
-            ModRecipeCategory recipeCategory = ModRecipeCategory.CODEC.byName(GsonHelper.getAsString(jsonObject, "category"));
-
+        public MechanicalGrindRecipe fromJson(ResourceLocation pRecipeId, JsonObject jsonObject) {
             String group = GsonHelper.getAsString(jsonObject, "group");
 
             JsonElement ingredientElement = GsonHelper.isArrayNode(jsonObject, "ingredient") ? GsonHelper.getAsJsonArray(jsonObject, "ingredient") : GsonHelper.getAsJsonObject(jsonObject, "ingredient");
@@ -56,31 +51,27 @@ public class MechanicalGrindRecipe extends AbstractGrindRecipe {
 
             ItemStack output = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(jsonObject, "output"));
 
-            return new MechanicalGrindRecipe(ingredient, output, resourceLocation, recipeCategory, group);
+            return new MechanicalGrindRecipe(ingredient, output, pRecipeId, group);
         }
 
         @Override
-        public @Nullable MechanicalGrindRecipe fromNetwork(ResourceLocation resourceLocation, FriendlyByteBuf friendlyByteBuf) {
-            ModRecipeCategory recipeCategory = friendlyByteBuf.readEnum(ModRecipeCategory.class);
+        public @Nullable MechanicalGrindRecipe fromNetwork(ResourceLocation pRecipeId, FriendlyByteBuf pBuffer) {
+            String group = pBuffer.readUtf();
 
-            String group = friendlyByteBuf.readUtf();
+            Ingredient ingredient = Ingredient.fromNetwork(pBuffer);
 
-            Ingredient ingredient = Ingredient.fromNetwork(friendlyByteBuf);
+            ItemStack output = pBuffer.readItem();
 
-            ItemStack output = friendlyByteBuf.readItem();
-
-            return new MechanicalGrindRecipe(ingredient, output, resourceLocation, recipeCategory, group);
+            return new MechanicalGrindRecipe(ingredient, output, pRecipeId, group);
         }
 
         @Override
-        public void toNetwork(FriendlyByteBuf friendlyByteBuf, MechanicalGrindRecipe mechanicalGrindRecipe) {
-            friendlyByteBuf.writeEnum(mechanicalGrindRecipe.category);
+        public void toNetwork(FriendlyByteBuf pBuffer, MechanicalGrindRecipe pRecipe) {
+            pBuffer.writeUtf(pRecipe.group);
 
-            friendlyByteBuf.writeUtf(mechanicalGrindRecipe.group);
+            pRecipe.input.toNetwork(pBuffer);
 
-            mechanicalGrindRecipe.input.toNetwork(friendlyByteBuf);
-
-            friendlyByteBuf.writeItemStack(mechanicalGrindRecipe.getResultItem(null), false);
+            pBuffer.writeItemStack(pRecipe.getResultItem(null), false);
         }
     }
 }

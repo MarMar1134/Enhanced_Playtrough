@@ -1,7 +1,6 @@
 {
   "type": "enhanced_playthrough:super_ore_alloying",
   "alloytime": 100,
-  "category": "simple_alloy",
   "group": "firebrick",
   "ingredients": [
     {
@@ -12,6 +11,7 @@
     }
   ],
   "output": {
+    "count": 2,
     "item": "enhanced_playthrough:firebrick"
   },
   "xp": 4.0

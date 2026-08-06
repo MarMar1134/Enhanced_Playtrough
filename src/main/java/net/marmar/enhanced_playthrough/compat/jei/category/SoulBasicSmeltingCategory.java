@@ -81,19 +81,9 @@ public class SoulBasicSmeltingCategory implements IRecipeCategory<SoulBasicSmelt
         return this.icon;
     }
 
-    private List<ItemStack> getValidFuels() {
-        return ForgeRegistries.ITEMS.getValues()
-                .stream()
-                .filter(item -> ForgeHooks.getBurnTime(new ItemStack(item), null) > 0)
-                .map(ItemStack::new)
-                .toList();
-    }
-
     @Override
     public void setRecipe(IRecipeLayoutBuilder builder, SoulBasicSmeltingRecipe recipe, IFocusGroup focusGroup) {
         builder.addSlot(RecipeIngredientRole.INPUT, 52, 14).addIngredients(recipe.getIngredient());
-
-        builder.addSlot(RecipeIngredientRole.INPUT, 52, 50).addItemStacks(getValidFuels());
 
         builder.addSlot(RecipeIngredientRole.OUTPUT, 112,32).addItemStack(recipe.getResultItem(null));
     }

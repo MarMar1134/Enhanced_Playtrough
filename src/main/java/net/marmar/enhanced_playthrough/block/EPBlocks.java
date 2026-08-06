@@ -5,7 +5,6 @@ import net.marmar.enhanced_playthrough.block.custom.alchemicalduplicator.Alchemi
 import net.marmar.enhanced_playthrough.block.custom.leatherworker.LeatherworkerStationBlock;
 import net.marmar.enhanced_playthrough.block.custom.plant.*;
 import net.marmar.enhanced_playthrough.block.custom.alloyfurnace.AdobeAlloyFurnaceBlock;
-import net.marmar.enhanced_playthrough.block.custom.alloyfurnace.SoulAlloyFurnaceBlock;
 import net.marmar.enhanced_playthrough.block.custom.alloyfurnace.SuperAlloyFurnaceBlock;
 import net.marmar.enhanced_playthrough.block.custom.epfurnace.AdobeFurnaceBlock;
 import net.marmar.enhanced_playthrough.block.custom.epfurnace.SoulFurnaceBlock;
@@ -466,8 +465,6 @@ public class EPBlocks {
                 () -> new AdobeAlloyFurnaceBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE).noOcclusion()));
         public static final RegistryObject<Block> SUPER_ALLOY_FURNACE = registerBlockWithItem("super_alloy_furnace",
                 () -> new SuperAlloyFurnaceBlock(BlockBehaviour.Properties.copy(Blocks.COBBLED_DEEPSLATE).noOcclusion()));
-        public static final RegistryObject<Block> SOUL_ALLOY_FURNACE = registerBlockWithItem("soul_alloy_furnace",
-                () -> new SoulAlloyFurnaceBlock(BlockBehaviour.Properties.copy(Blocks.BLACKSTONE).noOcclusion()));
 
         //Gem polisher
         public static final RegistryObject<Block> GEM_POLISHER = registerBlockWithItem("gem_polisher",

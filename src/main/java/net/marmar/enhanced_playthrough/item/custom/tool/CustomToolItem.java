@@ -1,6 +1,5 @@
 package net.marmar.enhanced_playthrough.item.custom.tool;
 
-import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.item.custom.tool.weapon.DaggerItem;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.*;

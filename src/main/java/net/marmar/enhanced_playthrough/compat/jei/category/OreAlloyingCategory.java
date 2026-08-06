@@ -80,20 +80,10 @@ public class OreAlloyingCategory implements IRecipeCategory<AlloyRecipe> {
         return this.icon;
     }
 
-    private List<ItemStack> getValidFuels() {
-        return ForgeRegistries.ITEMS.getValues()
-                .stream()
-                .filter(item -> ForgeHooks.getBurnTime(new ItemStack(item), null) > 0)
-                .map(ItemStack::new)
-                .toList();
-    }
-
     @Override
     public void setRecipe(IRecipeLayoutBuilder builder, AlloyRecipe recipe, IFocusGroup focuses) {
         builder.addSlot(RecipeIngredientRole.INPUT, 33, 14).addIngredients(recipe.getIngredients().get(0));
         builder.addSlot(RecipeIngredientRole.INPUT, 70,14).addIngredients(recipe.getIngredients().get(1));
-
-        builder.addSlot(RecipeIngredientRole.INPUT, 52, 50).addItemStacks(getValidFuels());
 
         builder.addSlot(RecipeIngredientRole.OUTPUT, 112, 32).addItemStack(recipe.getResultItem(null));
     }

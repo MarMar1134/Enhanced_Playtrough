@@ -6,6 +6,7 @@ import net.marmar.enhanced_playthrough.block.EPBlocks;
 import net.marmar.enhanced_playthrough.compat.jei.category.*;
 import net.marmar.enhanced_playthrough.compat.jei.itemtransfer.*;
 import net.marmar.enhanced_playthrough.item.EPItems;
+import net.marmar.enhanced_playthrough.menu.screen.alchemicalduplicator.AlchemicalDuplicatorScreen;
 import net.marmar.enhanced_playthrough.menu.screen.alloyfurnace.AdobeAlloyFurnaceScreen;
 import net.marmar.enhanced_playthrough.menu.screen.alloyfurnace.SuperAlloyFurnaceScreen;
 import net.marmar.enhanced_playthrough.menu.screen.leatherworker.LeatherworkerStationScreen;
@@ -16,6 +17,7 @@ import net.marmar.enhanced_playthrough.menu.screen.grinder.MechanicalGrinderScre
 import net.marmar.enhanced_playthrough.menu.screen.grinder.PrimalGrinderScreen;
 import net.marmar.enhanced_playthrough.menu.screen.modfurnace.MasonryFurnaceScreen;
 import net.marmar.enhanced_playthrough.recipe.GemPolishingRecipe;
+import net.marmar.enhanced_playthrough.recipe.alchemicalduplication.AlchemicalDuplicationRecipe;
 import net.marmar.enhanced_playthrough.recipe.epsmelt.MasonrySmeltingRecipe;
 import net.marmar.enhanced_playthrough.recipe.grind.MechanicalGrindRecipe;
 import net.marmar.enhanced_playthrough.recipe.EPRecipes;
@@ -137,7 +139,7 @@ public class EnhancedPlaythroughJEIPlugin implements IModPlugin {
         registration.addRecipeCategories(new MechanicalGrindCategory(registration.getJeiHelpers().getGuiHelper()));
 
         //Alchemical duplication
-        //registration.addRecipeCategories(new AlchemicalDuplicatingCategory(registration.getJeiHelpers().getGuiHelper()));
+        registration.addRecipeCategories(new AlchemicalDuplicatingCategory(registration.getJeiHelpers().getGuiHelper()));
 
         //Leatherworking
         registration.addRecipeCategories(new LeatherworkingCategory(registration.getJeiHelpers().getGuiHelper()));
@@ -180,8 +182,8 @@ public class EnhancedPlaythroughJEIPlugin implements IModPlugin {
         registration.addRecipes(MechanicalGrindCategory.GRINDING_RECIPE_RECIPE_TYPE, mechanicalGrindRecipes);
 
         //Alchemical duplication
-//        List<AlchemicalDuplicationRecipe> alchemicalDuplicationRecipes = recipeManager.getAllRecipesFor(EPRecipes.ALCHEMICAL_DUPLICATING_TYPE.get());
-//        registration.addRecipes(AlchemicalDuplicatingCategory.ALCHEMICAL_DUPLICATING_RECIPE_RECIPE_TYPE, alchemicalDuplicationRecipes);
+        List<AlchemicalDuplicationRecipe> alchemicalDuplicationRecipes = recipeManager.getAllRecipesFor(EPRecipes.ALCHEMICAL_DUPLICATING_TYPE.get());
+        registration.addRecipes(AlchemicalDuplicatingCategory.ALCHEMICAL_DUPLICATING_RECIPE_RECIPE_TYPE, alchemicalDuplicationRecipes);
 
         //Leatherworking
         List<CuringRecipe> leatherworkingRecipes = recipeManager.getAllRecipesFor(EPRecipes.CURING_TYPE.get());
@@ -241,8 +243,8 @@ public class EnhancedPlaythroughJEIPlugin implements IModPlugin {
                 MechanicalGrindCategory.GRINDING_RECIPE_RECIPE_TYPE);
 
         //Alchemical duplication
-//        registration.addRecipeClickArea(AlchemicalDuplicatorScreen.class, 86, 40, 4, 5,
-//                AlchemicalDuplicatingCategory.ALCHEMICAL_DUPLICATING_RECIPE_RECIPE_TYPE);
+        registration.addRecipeClickArea(AlchemicalDuplicatorScreen.class, 86, 40, 4, 5,
+                AlchemicalDuplicatingCategory.ALCHEMICAL_DUPLICATING_RECIPE_RECIPE_TYPE);
 
         //Leatherworker station
         registration.addRecipeClickArea(LeatherworkerStationScreen.class, 93, 35, 32, 15,

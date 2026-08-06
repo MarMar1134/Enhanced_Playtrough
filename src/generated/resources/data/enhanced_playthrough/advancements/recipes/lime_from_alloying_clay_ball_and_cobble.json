@@ -1,14 +1,21 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_required_materials": {
+    "has_clay_ball": {
       "conditions": {
         "items": [
           {
             "items": [
               "minecraft:clay_ball"
             ]
-          },
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_cobble": {
+      "conditions": {
+        "items": [
           {
             "items": [
               "enhanced_playthrough:cobble"
@@ -27,7 +34,8 @@
   },
   "requirements": [
     [
-      "has_required_materials",
+      "has_clay_ball",
+      "has_cobble",
       "has_the_recipe"
     ]
   ],

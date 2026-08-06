@@ -369,7 +369,6 @@ public class EPBlockTagGenerator extends BlockTagsProvider {
                 EPBlocks.SOUL_FURNACE.get(),
                 EPBlocks.MASONRY_FURNACE.get(),
                 EPBlocks.ADOBE_ALLOY_FURNACE.get(),
-                EPBlocks.SOUL_ALLOY_FURNACE.get(),
                 EPBlocks.SUPER_ALLOY_FURNACE.get(),
                 EPBlocks.PRIMAL_GRINDER.get(),
                 EPBlocks.MECHANICAL_GRINDER.get(),
@@ -474,7 +473,6 @@ public class EPBlockTagGenerator extends BlockTagsProvider {
                 //Entities
                 EPBlocks.ADOBE_FURNACE.get(),
                 EPBlocks.SOUL_FURNACE.get(),
-                EPBlocks.SOUL_ALLOY_FURNACE.get(),
                 EPBlocks.PRIMAL_GRINDER.get()
         );
 

@@ -1,6 +1,5 @@
 {
   "type": "enhanced_playthrough:primal_grinding",
-  "category": "grind",
   "group": "pumpkin_flour",
   "ingredient": {
     "item": "minecraft:pumpkin"

@@ -4,6 +4,7 @@ import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.recipe.alchemicalduplication.AlchemicalDuplicationRecipe;
 import net.marmar.enhanced_playthrough.recipe.alloy.AlloyRecipe;
 import net.marmar.enhanced_playthrough.recipe.alloy.BlastAlloyRecipe;
+import net.marmar.enhanced_playthrough.recipe.alloy.PrimitiveAlloyRecipe;
 import net.marmar.enhanced_playthrough.recipe.crafting.EPShapedRecipe;
 import net.marmar.enhanced_playthrough.recipe.crafting.EPShapelessRecipe;
 import net.marmar.enhanced_playthrough.recipe.epsmelt.BasicSmeltingRecipe;
@@ -44,6 +45,12 @@ public class EPRecipes {
                 RECIPE_SERIALIZER.register("masonry_smelting", () -> MasonrySmeltingRecipe.Serializer.INSTANCE);
         public static final RegistryObject<RecipeType<MasonrySmeltingRecipe>> MASONRY_SMELT_TYPE =
                 RECIPE_TYPE.register("masonry_smelting", () -> MasonrySmeltingRecipe.Type.INSTANCE);
+
+        //Primitive ore alloying
+        public static final RegistryObject<RecipeSerializer<PrimitiveAlloyRecipe>> PRIMITIVE_ALLOY_SERIALIZER =
+                    RECIPE_SERIALIZER.register("primitive_ore_alloying", () -> PrimitiveAlloyRecipe.Serializer.INSTANCE);
+        public static final RegistryObject<RecipeType<PrimitiveAlloyRecipe>> PRIMITIVE_ALLOY_TYPE =
+                RECIPE_TYPE.register("primitive_ore_alloying", () -> PrimitiveAlloyRecipe.Type.INSTANCE);
 
         //Ore alloying
         public static final RegistryObject<RecipeSerializer<AlloyRecipe>> ALLOY_SERIALIZER =

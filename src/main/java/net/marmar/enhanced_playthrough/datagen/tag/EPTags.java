@@ -143,8 +143,26 @@ public class EPTags {
         public static final TagKey<Item> MECHANICAL_GRIND_INGREDIENT = ingredientTag("mechanical_grind");
         public static final TagKey<Item> ALCHEMICAL_DUPLICATING_INGREDIENT = ingredientTag("alchemical_duplicating");
 
+        //Alloyable
+        public static final TagKey<Item> ALLOYABLE = itemTag("alloyable");
+        public static final TagKey<Item> GOLD_ALLOYABLE = alloyableTag("gold");
+        public static final TagKey<Item> SILVER_ALLOYABLE = alloyableTag("silver");
+        public static final TagKey<Item> ALUMINUM_ALLOYABLE = alloyableTag("aluminum");
+        public static final TagKey<Item> ZINC_ALLOYABLE = alloyableTag("zinc");
+        public static final TagKey<Item> TIN_ALLOYABLE = alloyableTag("tin");
+        public static final TagKey<Item> COPPER_ALLOYABLE = alloyableTag("copper");
+        public static final TagKey<Item> BRASS_ALLOYABLE = alloyableTag("brass");
+        public static final TagKey<Item> BRONZE_ALLOYABLE = alloyableTag("bronze");
+        public static final TagKey<Item> ROSE_GOLD_ALLOYABLE = alloyableTag("rose_gold");
+        public static final TagKey<Item> IRON_ALLOYABLE = alloyableTag("iron");
+        public static final TagKey<Item> BRONZIUM_ALLOYABLE = alloyableTag("bronzium");
+        public static final TagKey<Item> GREEN_GOLD_ALLOYABLE = alloyableTag("green_gold");
+        public static final TagKey<Item> STEEL_ALLOYABLE = alloyableTag("steel");
+        public static final TagKey<Item> BLUE_GOLD_ALLOYABLE = alloyableTag("blue_gold");
+        public static final TagKey<Item> PURPLE_GOLD_ALLOYABLE = alloyableTag("purple_gold");
+
         //Grindable (for dusts)
-        public static final TagKey<Item> GRINDABLE = itemTag("manufacturable");
+        public static final TagKey<Item> GRINDABLE = itemTag("grindable");
         public static final TagKey<Item> GOLD_GRINDABLE = grindableTag("gold");
         public static final TagKey<Item> SILVER_GRINDABLE = grindableTag("silver");
         public static final TagKey<Item> ALUMINUM_GRINDABLE = grindableTag("aluminum");
@@ -198,6 +216,10 @@ public class EPTags {
 
         private static TagKey<Item> toolsTag(String name){
             return ItemTags.create(new ResourceLocation(EnhancedPlaythrough.MOD_ID,"tools/" + name));
+        }
+
+        private static TagKey<Item> alloyableTag(String name){
+            return ItemTags.create(new ResourceLocation(EnhancedPlaythrough.MOD_ID, "allyable/" + name));
         }
 
         private static TagKey<Item> grindableTag(String name){

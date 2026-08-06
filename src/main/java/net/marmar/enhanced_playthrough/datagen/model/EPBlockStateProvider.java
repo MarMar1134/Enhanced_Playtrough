@@ -189,9 +189,6 @@ public class EPBlockStateProvider extends BlockStateProvider {
 
         furnaceBlock(EPBlocks.ADOBE_ALLOY_FURNACE);
         furnaceBlock(EPBlocks.SUPER_ALLOY_FURNACE);
-        furnaceBlock(EPBlocks.SOUL_ALLOY_FURNACE);
-
-       // simpleBlockWithItem(EPBlocks.GEM_POLISHER.get(), new ModelFile.UncheckedModelFile(modLoc("block/gem_polisher")));
 
         grinderBlock(EPBlocks.PRIMAL_GRINDER);
         grinderBlock(EPBlocks.MECHANICAL_GRINDER);

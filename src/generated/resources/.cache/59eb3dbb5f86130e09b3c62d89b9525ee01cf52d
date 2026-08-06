@@ -1,4 +1,4 @@
-// 1.20.1	2026-08-05T12:49:50.4898007	Loot Tables
+// 1.20.1	2026-08-06T09:01:46.9717303	Loot Tables
 2876cbc680a836d5ddee2832692d949fb4ef4a08 data/enhanced_playthrough/loot_tables/advancements/abrass_your_soul.json
 6fe69585b6fdef5fe87c9206529ab3f067bd7faf data/enhanced_playthrough/loot_tables/advancements/all_flowers.json
 1eeafbc68a3d12b314210c1a8b6a594e785fda3f data/enhanced_playthrough/loot_tables/advancements/get_all_gems.json
@@ -154,7 +154,6 @@ edc02633cd91eb50ff25d76926994029706188c8 data/enhanced_playthrough/loot_tables/b
 d2ab23340d3ed82ae0f9a3af9acb03800d61ddbb data/enhanced_playthrough/loot_tables/blocks/soulstone_slab.json
 965a1b44b62cc6acb59e095c4efaf54643d9e831 data/enhanced_playthrough/loot_tables/blocks/soulstone_stairs.json
 cf0875d041c00834bd24a0d9f7217bf56c6b8128 data/enhanced_playthrough/loot_tables/blocks/soulstone_wall.json
-43a17de2e0806d88ccda93c5ab5ce7cead5bfe29 data/enhanced_playthrough/loot_tables/blocks/soul_alloy_furnace.json
 fec56c8042df5f7cf4d8d40d1ef4e19d10b42a73 data/enhanced_playthrough/loot_tables/blocks/soul_furnace.json
 8c800332d21589e21dd04d7edcfeee733fc4b404 data/enhanced_playthrough/loot_tables/blocks/steel_block.json
 e46e241b8d379ee7d7e8e4841e3aa539da6a2a04 data/enhanced_playthrough/loot_tables/blocks/stripped_apple_log.json

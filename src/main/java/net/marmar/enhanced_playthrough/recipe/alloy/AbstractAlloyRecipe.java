@@ -1,6 +1,5 @@
 package net.marmar.enhanced_playthrough.recipe.alloy;
 
-import net.marmar.enhanced_playthrough.recipe.category.AlloyRecipeCategory;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.resources.ResourceLocation;
@@ -18,17 +17,15 @@ public abstract class AbstractAlloyRecipe implements Recipe<SimpleContainer> {
     protected final int alloyTime;
     protected final float xpAmount;
     protected final ResourceLocation recipeId;
-    private final AlloyRecipeCategory category;
     private final String group;
 
-    public AbstractAlloyRecipe(NonNullList<Ingredient> pInputs, ItemStack pOutput, int pAlloyTime, float pXpAmount, ResourceLocation pRecipeId, RecipeType<?> pType, AlloyRecipeCategory pCategory, String pGroup) {
+    public AbstractAlloyRecipe(NonNullList<Ingredient> pInputs, ItemStack pOutput, int pAlloyTime, float pXpAmount, ResourceLocation pRecipeId, RecipeType<?> pType, String pGroup) {
         this.inputs = pInputs;
         this.output = pOutput;
         this.alloyTime = pAlloyTime;
         this.xpAmount = pXpAmount;
         this.recipeId = pRecipeId;
         this.recipeType = pType;
-        this.category = pCategory;
         this.group = pGroup;
     }
 

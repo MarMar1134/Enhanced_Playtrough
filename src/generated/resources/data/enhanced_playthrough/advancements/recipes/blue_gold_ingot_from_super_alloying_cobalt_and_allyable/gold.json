@@ -1,0 +1,46 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "TagKey[minecraft:item / enhanced_playthrough:allyable/gold]": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "enhanced_playthrough:allyable/gold"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_cobalt": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhanced_playthrough:cobalt"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "enhanced_playthrough:blue_gold_ingot_from_super_alloying_cobalt_and_allyable/gold"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_cobalt",
+      "TagKey[minecraft:item / enhanced_playthrough:allyable/gold]",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "enhanced_playthrough:blue_gold_ingot_from_super_alloying_cobalt_and_allyable/gold"
+    ]
+  },
+  "sends_telemetry_event": false
+}

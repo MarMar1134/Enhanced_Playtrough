@@ -1,6 +1,5 @@
 {
   "type": "enhanced_playthrough:primal_grinding",
-  "category": "grind",
   "group": "lime_dye",
   "ingredient": {
     "item": "enhanced_playthrough:succulent"

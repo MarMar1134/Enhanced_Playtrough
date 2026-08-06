@@ -1,6 +1,5 @@
 {
   "type": "enhanced_playthrough:mechanical_grinding",
-  "category": "mechanical_grind",
   "group": "deepslate_cobble",
   "ingredient": {
     "item": "minecraft:cobbled_deepslate"

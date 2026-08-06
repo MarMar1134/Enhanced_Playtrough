@@ -1,6 +1,5 @@
 package net.marmar.enhanced_playthrough.recipe.epsmelt;
 
-import net.marmar.enhanced_playthrough.recipe.category.ModRecipeCategory;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.SimpleContainer;
@@ -14,15 +13,13 @@ public abstract class AbstractEPSmeltingRecipe implements Recipe<SimpleContainer
     private final ItemStack output;
     private final ResourceLocation recipeId;
     private final int cookTime;
-    private final ModRecipeCategory category;
     private final String group;
 
-    public AbstractEPSmeltingRecipe(Ingredient pInput, ItemStack pOutput, ResourceLocation pRecipeId, int pCookTime, ModRecipeCategory pCategory, String pGroup) {
+    public AbstractEPSmeltingRecipe(Ingredient pInput, ItemStack pOutput, ResourceLocation pRecipeId, int pCookTime, String pGroup) {
         this.input = pInput;
         this.output = pOutput;
         this.recipeId = pRecipeId;
         cookTime = pCookTime;
-        this.category = pCategory;
         this.group = pGroup;
     }
 

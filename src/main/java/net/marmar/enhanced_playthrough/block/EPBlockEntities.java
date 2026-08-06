@@ -3,7 +3,6 @@ package net.marmar.enhanced_playthrough.block;
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.block.custom.alchemicalduplicator.AlchemicalDuplicatorBlockEntity;
 import net.marmar.enhanced_playthrough.block.custom.alloyfurnace.entity.AdobeAlloyFurnaceBlockEntity;
-import net.marmar.enhanced_playthrough.block.custom.alloyfurnace.entity.SoulAlloyFurnaceBlockEntity;
 import net.marmar.enhanced_playthrough.block.custom.alloyfurnace.entity.SuperAlloyFurnaceBlockEntity;
 import net.marmar.enhanced_playthrough.block.custom.epfurnace.entity.AdobeFurnaceBlockEntity;
 import net.marmar.enhanced_playthrough.block.custom.epfurnace.entity.SoulFurnaceBlockEntity;
@@ -25,6 +24,7 @@ public class EPBlockEntities {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES =
             DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, EnhancedPlaythrough.MOD_ID);
 
+    //Furnaces
     public static final RegistryObject<BlockEntityType<AdobeFurnaceBlockEntity>> ADOBE_FURNACE_BLOCK_ENTITY =
             BLOCK_ENTITIES.register("adobe_furnace",
                     () -> BlockEntityType.Builder.of(AdobeFurnaceBlockEntity::new, EPBlocks.ADOBE_FURNACE.get()).build(null));
@@ -36,20 +36,20 @@ public class EPBlockEntities {
             BLOCK_ENTITIES.register("masonry_furnace",
                     () -> BlockEntityType.Builder.of(MasonryFurnaceBlockEntity::new, EPBlocks.MASONRY_FURNACE.get()).build(null));
 
+    //Alloy furnaces
     public static final RegistryObject<BlockEntityType<AdobeAlloyFurnaceBlockEntity>> ADOBE_ALLOY_FURNACE_BLOCK_ENTITY =
             BLOCK_ENTITIES.register("adobe_alloy_furnace",
                     () -> BlockEntityType.Builder.of(AdobeAlloyFurnaceBlockEntity::new, EPBlocks.ADOBE_ALLOY_FURNACE.get()).build(null));
     public static final RegistryObject<BlockEntityType<SuperAlloyFurnaceBlockEntity>> SUPER_ALLOY_FURNACE_BLOCK_ENTITY =
             BLOCK_ENTITIES.register("super_alloy_furnace",
                     () -> BlockEntityType.Builder.of(SuperAlloyFurnaceBlockEntity::new, EPBlocks.SUPER_ALLOY_FURNACE.get()).build(null));
-    public static final RegistryObject<BlockEntityType<SoulAlloyFurnaceBlockEntity>> SOUL_ALLOY_FURNACE_BLOCK_ENTITY =
-            BLOCK_ENTITIES.register("soul_alloy_furnace",
-                    () -> BlockEntityType.Builder.of(SoulAlloyFurnaceBlockEntity::new, EPBlocks.SOUL_ALLOY_FURNACE.get()).build(null));
 
+    //Gem polisher
     public static final RegistryObject<BlockEntityType<GemPolisherBlockEntity>> GEM_POLISHER_BLOCK_ENTITY =
             BLOCK_ENTITIES.register("gem_polisher_block",
                     () -> BlockEntityType.Builder.of(GemPolisherBlockEntity::new, EPBlocks.GEM_POLISHER.get()).build(null));
 
+    //Grinders
     public static final RegistryObject<BlockEntityType<PrimalGrinderBlockEntity>> PRIMAL_GRINDER_BLOCK_ENTITY =
             BLOCK_ENTITIES.register("primal_grinder_block",
                     () -> BlockEntityType.Builder.of(PrimalGrinderBlockEntity::new, EPBlocks.PRIMAL_GRINDER.get()).build(null));
@@ -57,10 +57,12 @@ public class EPBlockEntities {
             BLOCK_ENTITIES.register("mechanical_grinder_block",
                     () -> BlockEntityType.Builder.of(MechanicalGrinderBlockEntity::new, EPBlocks.MECHANICAL_GRINDER.get()).build(null));
 
+    //Alchemical duplicator
     public static final RegistryObject<BlockEntityType<AlchemicalDuplicatorBlockEntity>> ALCHEMICAL_DUPLICATOR_BLOCK_ENTITY =
             BLOCK_ENTITIES.register("alchemical_duplicator_block",
                     () -> BlockEntityType.Builder.of(AlchemicalDuplicatorBlockEntity::new, EPBlocks.ALCHEMICAL_DUPLICATOR.get()).build(null));
 
+    //Leatherwork station
     public static final RegistryObject<BlockEntityType<LeatherworkerStationBlockEntity>> LEATHERWORKER_STATION_BLOCK_ENTITY =
             BLOCK_ENTITIES.register("leatherworker_station_block_entity",
                     () -> BlockEntityType.Builder.of(LeatherworkerStationBlockEntity::new, EPBlocks.LEATHERWORKER_STATION.get()).build(null));

@@ -8,7 +8,6 @@ import net.marmar.enhanced_playthrough.item.custom.food.EPFoodProperties;
 import net.marmar.enhanced_playthrough.item.custom.food.StewItem;
 import net.marmar.enhanced_playthrough.item.custom.tool.*;
 import net.marmar.enhanced_playthrough.item.custom.tool.weapon.AluminumArrowItem;
-import net.marmar.enhanced_playthrough.item.custom.tool.EPToolTier;
 import net.marmar.enhanced_playthrough.entity.boat.EPBoatEntity;
 import net.marmar.enhanced_playthrough.item.custom.armor.EPArmorItem;
 import net.marmar.enhanced_playthrough.item.custom.armor.EPArmorMaterial;

@@ -2,7 +2,6 @@ package net.marmar.enhanced_playthrough.recipe.epsmelt;
 
 import com.google.gson.JsonObject;
 import net.marmar.enhanced_playthrough.recipe.EPRecipes;
-import net.marmar.enhanced_playthrough.recipe.category.ModRecipeCategory;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.advancements.CriterionTriggerInstance;
 import net.minecraft.advancements.RequirementsStrategy;
@@ -27,16 +26,14 @@ public class EPSmeltingRecipeBuilder implements RecipeBuilder {
     private final Ingredient ingredient;
     private final Item result;
     private final int cookTime;
-    private final ModRecipeCategory category;
     private String group;
     private final Advancement.Builder advancement = Advancement.Builder.recipeAdvancement();
     private final RecipeSerializer<?> serializer;
 
-    private EPSmeltingRecipeBuilder(ModRecipeCategory recipeCategory, String pGroup, int cookTime, ItemLike pResult, Ingredient ingredient, RecipeSerializer<?> pSerializer) {
+    private EPSmeltingRecipeBuilder(String pGroup, int cookTime, ItemLike pResult, Ingredient ingredient, RecipeSerializer<?> pSerializer) {
         this.ingredient = ingredient;
         this.result = pResult.asItem();
         this.cookTime = cookTime;
-        this.category = recipeCategory;
         this.group = pGroup;
         this.serializer = pSerializer;
     }
@@ -53,20 +50,20 @@ public class EPSmeltingRecipeBuilder implements RecipeBuilder {
         return this;
     }
 
-    public static EPSmeltingRecipeBuilder genericSmelting(Ingredient input, ItemLike result, int pCookTime, ModRecipeCategory pCategory, String pGroup, RecipeSerializer<? extends AbstractEPSmeltingRecipe> pSerializer){
-        return new EPSmeltingRecipeBuilder(pCategory, pGroup, pCookTime, result, input, pSerializer);
+    public static EPSmeltingRecipeBuilder genericSmelting(Ingredient input, ItemLike result, int pCookTime, String pGroup, RecipeSerializer<? extends AbstractEPSmeltingRecipe> pSerializer){
+        return new EPSmeltingRecipeBuilder(pGroup, pCookTime, result, input, pSerializer);
     }
 
     public static EPSmeltingRecipeBuilder basicSmelting(Ingredient input, ItemLike result, String group){
-        return genericSmelting(input, result, 300, ModRecipeCategory.BASIC_SMELT, group, EPRecipes.BASIC_SMELT_SERIALIZER.get());
+        return genericSmelting(input, result, 300, group, EPRecipes.BASIC_SMELT_SERIALIZER.get());
     }
 
     public static EPSmeltingRecipeBuilder soulBasicSmelting(Ingredient input, ItemLike result, String group){
-        return genericSmelting(input, result, 200, ModRecipeCategory.SOUL_BASIC_SMELT, group, EPRecipes.SOUL_BASIC_SMELT_SERIALIZER.get());
+        return genericSmelting(input, result, 200, group, EPRecipes.SOUL_BASIC_SMELT_SERIALIZER.get());
     }
 
     public static EPSmeltingRecipeBuilder masonrySmelting(Ingredient input, ItemLike result, String group){
-        return genericSmelting(input, result, 100, ModRecipeCategory.MASONRY_SMELT, group, EPRecipes.MASONRY_SMELT_SERIALIZER.get());
+        return genericSmelting(input, result, 100, group, EPRecipes.MASONRY_SMELT_SERIALIZER.get());
     }
 
     @Override
@@ -78,7 +75,7 @@ public class EPSmeltingRecipeBuilder implements RecipeBuilder {
     public void save(Consumer<FinishedRecipe> consumer, ResourceLocation resourceLocation) {
         this.ensureValid(resourceLocation);
         this.advancement.parent(ROOT_RECIPE_ADVANCEMENT).addCriterion("has_the_recipe", RecipeUnlockedTrigger.unlocked(resourceLocation)).rewards(net.minecraft.advancements.AdvancementRewards.Builder.recipe(resourceLocation)).requirements(RequirementsStrategy.OR);
-        consumer.accept(new EPSmeltingRecipeBuilder.Result(resourceLocation, this.ingredient, this.result, this.cookTime, this.category, this.group, this.advancement, resourceLocation.withPrefix("recipes/"), this.serializer));
+        consumer.accept(new EPSmeltingRecipeBuilder.Result(resourceLocation, this.ingredient, this.result, this.cookTime, this.group, this.advancement, resourceLocation.withPrefix("recipes/"), this.serializer));
     }
 
     private void ensureValid(ResourceLocation pId) {
@@ -88,13 +85,11 @@ public class EPSmeltingRecipeBuilder implements RecipeBuilder {
     }
 
     private record Result(ResourceLocation id, Ingredient ingredient, Item result, int alloyTime,
-                          ModRecipeCategory category, String group, Advancement.Builder advancement,
+                          String group, Advancement.Builder advancement,
                           ResourceLocation advancementId, RecipeSerializer<?> serializer) implements FinishedRecipe {
 
         public void serializeRecipeData(JsonObject pJson) {
                 if (!this.group.isEmpty()) pJson.addProperty("group", this.group);
-
-                pJson.addProperty("category", this.category.getSerializedName());
 
                 pJson.addProperty("cooktime", this.alloyTime);
 

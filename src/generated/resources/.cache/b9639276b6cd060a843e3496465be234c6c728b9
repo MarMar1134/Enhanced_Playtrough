@@ -1,4 +1,12 @@
-// 1.20.1	2026-08-05T15:04:41.91336	Tags for minecraft:item mod id enhanced_playthrough
+// 1.20.1	2026-08-06T11:13:52.2436737	Tags for minecraft:item mod id enhanced_playthrough
+fdc88e1c4870c2093abbdbc2b9e0e82405784ab5 data/enhanced_playthrough/tags/items/alloyable.json
+91cf5755eef6ce5bae0c30aefa6873e817134ca3 data/enhanced_playthrough/tags/items/allyable/aluminum.json
+eed039daf6d85d61e7ad1fa25f63355990a5f42c data/enhanced_playthrough/tags/items/allyable/copper.json
+6760b43cb6fa29f7049c0e819df0ad3856190c30 data/enhanced_playthrough/tags/items/allyable/gold.json
+04faad4b86c775e7f3ae9162c01b604a220f40dc data/enhanced_playthrough/tags/items/allyable/iron.json
+ea673e0b13839123e42e3926aa7cb57b2ab88806 data/enhanced_playthrough/tags/items/allyable/silver.json
+e1bc999c6c4d61597d2a65301cf1bf69ab2b342b data/enhanced_playthrough/tags/items/allyable/tin.json
+2acd7c22d1ad4193180fe06ac5fa5d106c3c423d data/enhanced_playthrough/tags/items/allyable/zinc.json
 11efb59cf9317f2a6376cdbe4bd9bac97ca67ab8 data/enhanced_playthrough/tags/items/aluminum.json
 b3b284c126879d981b4f706eb8ea0e63bd17ae12 data/enhanced_playthrough/tags/items/apple_logs.json
 44382910086f1e761a40c6b7f765f6ad0f293204 data/enhanced_playthrough/tags/items/blue_gold.json
@@ -8,6 +16,7 @@ df54e0b850345a258251208dc99253706101e396 data/enhanced_playthrough/tags/items/br
 58d0baffb4f84f2b600f8218ed0249cb4ffa5666 data/enhanced_playthrough/tags/items/cobble.json
 5e4024be6a12d832814e92299646324706307eea data/enhanced_playthrough/tags/items/gold.json
 44d775912e42d83e36be2f6f831c3d998ccada75 data/enhanced_playthrough/tags/items/green_gold.json
+8a6db6af1175381f17ce0a9bbb217d26b75c9e92 data/enhanced_playthrough/tags/items/grindable.json
 91cf5755eef6ce5bae0c30aefa6873e817134ca3 data/enhanced_playthrough/tags/items/grindable/aluminum.json
 23db295dbb4a25781251df12d79ad22452d99cb8 data/enhanced_playthrough/tags/items/grindable/blue_gold.json
 b5386969206b95de9139c983863096419f9d7f1f data/enhanced_playthrough/tags/items/grindable/brass.json
@@ -45,7 +54,6 @@ c0d7fd1590d30795eb290aec37b960e58e34e40a data/enhanced_playthrough/tags/items/in
 80e5501bc57523ca9713ed14d3257f77474fb650 data/enhanced_playthrough/tags/items/ingredients/primal_grind.json
 26dcc4a152371fb2e40d2fd4f78209840059e9c4 data/enhanced_playthrough/tags/items/iron.json
 4e223721e8c3e07e295a2f81d83b27295680a31b data/enhanced_playthrough/tags/items/lemon_logs.json
-a0a45a2bf7dbfd26b15d43ff58ebed80ece3f651 data/enhanced_playthrough/tags/items/manufacturable.json
 0ef6420e93e8504101946579416bf7b5c165b25a data/enhanced_playthrough/tags/items/orange_logs.json
 33e35d6ec29ee2053186b6de9f88e811dc4a1c24 data/enhanced_playthrough/tags/items/ores/basic/copper.json
 4c5a37c4e9dde2e1734b2bbb59edf422e3bbc96b data/enhanced_playthrough/tags/items/ores/basic/sulfur.json
