@@ -25,7 +25,7 @@ public class AlloyFurnaceTransferInfo implements IRecipeTransferInfo<AdobeAlloyF
 
     @Override
     public RecipeType<AlloyRecipe> getRecipeType() {
-        return OreAlloyingCategory.ALLOYING_FURNACE_RECIPE_RECIPE_TYPE;
+        return OreAlloyingCategory.ALLOY_RECIPE_TYPE;
     }
 
     @Override

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "primitive_alloy_furnace",
+  "key": {
+    "#": {
+      "item": "minecraft:mud_bricks"
+    },
+    "C": {
+      "tag": "minecraft:stone_crafting_materials"
+    }
+  },
+  "pattern": [
+    "###",
+    "# #",
+    "CCC"
+  ],
+  "result": {
+    "item": "enhanced_playthrough:primitive_alloy_furnace"
+  },
+  "show_notification": true
+}

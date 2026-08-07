@@ -205,6 +205,7 @@ public class EPItemModelProvider extends ItemModelProvider {
 
         blockWithItem(EPBlocks.MASONRY_FURNACE);
 
+        blockWithItem(EPBlocks.PRIMITIVE_ALLOY_FURNACE);
         blockWithItem(EPBlocks.ADOBE_ALLOY_FURNACE);
         blockWithItem(EPBlocks.SUPER_ALLOY_FURNACE);
 

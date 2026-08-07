@@ -13,24 +13,12 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_adobe_furnace": {
+    "has_primitive_alloy_furnace": {
       "conditions": {
         "items": [
           {
             "items": [
-              "enhanced_playthrough:adobe_furnace"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_raw_tin": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "enhanced_playthrough:raw_tin"
+              "enhanced_playthrough:primitive_alloy_furnace"
             ]
           }
         ]
@@ -46,9 +34,8 @@
   },
   "requirements": [
     [
-      "has_adobe_furnace",
+      "has_primitive_alloy_furnace",
       "has_adobe_alloy_furnace",
-      "has_raw_tin",
       "has_the_recipe"
     ]
   ],

@@ -26,7 +26,7 @@ public class AdobeAlloyFurnaceBlockEntity extends AbstractAlloyFurnaceBlockEntit
     @Nullable
     @Override
     public AbstractContainerMenu createMenu(int i, Inventory inventory, Player player) {
-        return new AdobeAlloyFurnaceMenu(i, inventory, this, this.Data);
+        return new AdobeAlloyFurnaceMenu(i, inventory, this, this.data);
     }
 }
 

@@ -2,20 +2,20 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "A": {
+    "B": {
       "item": "minecraft:mud_bricks"
     },
-    "B": {
+    "I": {
       "item": "enhanced_playthrough:bronze_ingot"
     },
-    "C": {
-      "item": "minecraft:cobblestone"
+    "S": {
+      "tag": "minecraft:stone_crafting_materials"
     }
   },
   "pattern": [
-    "AAA",
-    "ABA",
-    "CCC"
+    "BBB",
+    "BIB",
+    "SSS"
   ],
   "result": {
     "item": "enhanced_playthrough:primal_grinder"

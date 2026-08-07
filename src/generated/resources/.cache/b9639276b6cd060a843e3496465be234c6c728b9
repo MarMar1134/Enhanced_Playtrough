@@ -1,4 +1,4 @@
-// 1.20.1	2026-08-06T11:13:52.2436737	Tags for minecraft:item mod id enhanced_playthrough
+// 1.20.1	2026-08-07T13:24:22.030984	Tags for minecraft:item mod id enhanced_playthrough
 fdc88e1c4870c2093abbdbc2b9e0e82405784ab5 data/enhanced_playthrough/tags/items/alloyable.json
 91cf5755eef6ce5bae0c30aefa6873e817134ca3 data/enhanced_playthrough/tags/items/allyable/aluminum.json
 eed039daf6d85d61e7ad1fa25f63355990a5f42c data/enhanced_playthrough/tags/items/allyable/copper.json
@@ -44,14 +44,15 @@ b389bd8b9048624c130dc909e506478b22aded0b data/enhanced_playthrough/tags/items/in
 d4c382fd80e3db9371b76d593e7c4c9ded30562b data/enhanced_playthrough/tags/items/ingots/steel.json
 70da1cccd82688eb30c7d90cbbf9ab1407efa373 data/enhanced_playthrough/tags/items/ingots/tin.json
 8d992f8bbc2edd3ea62a304b5e336bbaf6c116ec data/enhanced_playthrough/tags/items/ingots/zinc.json
-9248362b80b6139c9763e14a5a9266b30a4d831f data/enhanced_playthrough/tags/items/ingredients.json
+5dc21d84875ef451ac521ba8b50a82497227c4d8 data/enhanced_playthrough/tags/items/ingredients.json
 4162a109f672bddadb69abe88f6342254b40ad60 data/enhanced_playthrough/tags/items/ingredients/alchemical_duplicating.json
-c0d7fd1590d30795eb290aec37b960e58e34e40a data/enhanced_playthrough/tags/items/ingredients/alloy.json
+d510cf04b28705a416a5b128a2bb701fce231baa data/enhanced_playthrough/tags/items/ingredients/alloy.json
 06ae42aba3379240aed92f122c7f762c3702cd2d data/enhanced_playthrough/tags/items/ingredients/basic_smelt.json
 15d7aba76deeda91360fcea869395153c5f5d84c data/enhanced_playthrough/tags/items/ingredients/blast_alloy.json
 5e721bdc414693a14c4480e190f068f275b27533 data/enhanced_playthrough/tags/items/ingredients/masonry.json
 059eab766b1b4ac8bab98359a1db1a2275438309 data/enhanced_playthrough/tags/items/ingredients/mechanical_grind.json
 80e5501bc57523ca9713ed14d3257f77474fb650 data/enhanced_playthrough/tags/items/ingredients/primal_grind.json
+bb572a54973b0fa5e606f9367968bb5a47c7436a data/enhanced_playthrough/tags/items/ingredients/primitive_alloy.json
 26dcc4a152371fb2e40d2fd4f78209840059e9c4 data/enhanced_playthrough/tags/items/iron.json
 4e223721e8c3e07e295a2f81d83b27295680a31b data/enhanced_playthrough/tags/items/lemon_logs.json
 0ef6420e93e8504101946579416bf7b5c165b25a data/enhanced_playthrough/tags/items/orange_logs.json

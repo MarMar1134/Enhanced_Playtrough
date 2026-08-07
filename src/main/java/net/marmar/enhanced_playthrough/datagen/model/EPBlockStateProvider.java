@@ -187,6 +187,7 @@ public class EPBlockStateProvider extends BlockStateProvider {
 
         furnaceBlock(EPBlocks.MASONRY_FURNACE);
 
+        furnaceBlock(EPBlocks.PRIMITIVE_ALLOY_FURNACE);
         furnaceBlock(EPBlocks.ADOBE_ALLOY_FURNACE);
         furnaceBlock(EPBlocks.SUPER_ALLOY_FURNACE);
 

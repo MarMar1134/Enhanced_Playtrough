@@ -28,6 +28,7 @@ public class EPTabs {
 
                         output.accept(EPBlocks.MASONRY_FURNACE.get());
 
+                        output.accept(EPBlocks.PRIMITIVE_ALLOY_FURNACE.get());
                         output.accept(EPBlocks.ADOBE_ALLOY_FURNACE.get());
                         output.accept(EPBlocks.SUPER_ALLOY_FURNACE.get());
 

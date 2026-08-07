@@ -1,5 +1,6 @@
 package net.marmar.enhanced_playthrough.menu.alloyfurnace;
 
+import net.marmar.enhanced_playthrough.block.custom.alloyfurnace.entity.PrimitiveAlloyFurnaceBlockEntity;
 import net.marmar.enhanced_playthrough.datagen.tag.EPTags;
 import net.marmar.enhanced_playthrough.block.custom.alloyfurnace.entity.AbstractAlloyFurnaceBlockEntity;
 import net.marmar.enhanced_playthrough.block.custom.alloyfurnace.entity.SuperAlloyFurnaceBlockEntity;
@@ -120,7 +121,10 @@ public abstract class AbstractAlloyFurnaceMenu extends AbstractContainerMenu {
                     public boolean mayPlace(@NotNull ItemStack stack) {
                         if (blockEntity instanceof SuperAlloyFurnaceBlockEntity){
                             return stack.is(EPTags.Items.BLAST_ALLOY_INGREDIENT);
+                        } else if (blockEntity instanceof PrimitiveAlloyFurnaceBlockEntity){
+                            return stack.is(EPTags.Items.PRIMITIVE_ALLOY_INGREDIENT);
                         }
+
                         return stack.is(EPTags.Items.ALLOY_INGREDIENT);
                     }
 

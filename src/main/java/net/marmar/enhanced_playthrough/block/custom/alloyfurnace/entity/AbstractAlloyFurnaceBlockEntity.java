@@ -61,15 +61,15 @@ public abstract class AbstractAlloyFurnaceBlockEntity extends BlockEntity {
     private final LazyOptional<ItemStackHandler> fuelLazyHandler = LazyOptional.of(() ->fuelHandler);
     private final LazyOptional<ItemStackHandler> outputLazyHandler = LazyOptional.of(() -> outputHandler);
 
-    protected final ContainerData Data;
+    protected final ContainerData data;
     private final RecipeType<? extends AbstractAlloyRecipe> recipeType;
-    private int progress = 0, maxProgress;
+    private int progress = 0, maxProgress = 200; //maxProgress defaults to 200 in case of desync errors
     private int burnTime = 0, maxBurnTime = 0;
 
     public AbstractAlloyFurnaceBlockEntity(@NotNull BlockEntityType<? extends  AbstractAlloyFurnaceBlockEntity> blockEntityType, BlockPos pPos, BlockState pBlockState, RecipeType<? extends AbstractAlloyRecipe> recipeType) {
         super(blockEntityType, pPos, pBlockState);
         this.recipeType = recipeType;
-        this.Data = new ContainerData() {
+        this.data = new ContainerData() {
             @Override
             public int get(int i) {
                 return switch (i){
@@ -97,7 +97,7 @@ public abstract class AbstractAlloyFurnaceBlockEntity extends BlockEntity {
             }
         };
 
-        this.maxProgress = 200;
+        //this.maxProgress = 200;
     }
 
     public ItemStackHandler getFirstInputHandler() {

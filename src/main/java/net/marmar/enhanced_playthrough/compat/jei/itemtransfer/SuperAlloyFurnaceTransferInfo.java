@@ -25,7 +25,7 @@ public class SuperAlloyFurnaceTransferInfo implements IRecipeTransferInfo<SuperA
 
     @Override
     public RecipeType<BlastAlloyRecipe> getRecipeType() {
-        return SuperAlloyingCategory.SUPER_ALLOYING_RECIPE_TYPE;
+        return SuperAlloyingCategory.SUPER_ALLOY_RECIPE_TYPE;
     }
 
     @Override

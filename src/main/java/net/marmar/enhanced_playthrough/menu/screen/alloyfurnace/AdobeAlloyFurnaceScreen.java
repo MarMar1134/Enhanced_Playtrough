@@ -5,7 +5,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Inventory;
 
-public class AdobeAlloyFurnaceScreen extends AbstractAlloyScreen<AdobeAlloyFurnaceMenu> {
+public class AdobeAlloyFurnaceScreen extends AbstractAlloyFurnaceScreen<AdobeAlloyFurnaceMenu> {
     public AdobeAlloyFurnaceScreen(AdobeAlloyFurnaceMenu pMenu, Inventory pPlayerInventory, Component pTitle) {
         super(pMenu, pPlayerInventory, pTitle);
     }

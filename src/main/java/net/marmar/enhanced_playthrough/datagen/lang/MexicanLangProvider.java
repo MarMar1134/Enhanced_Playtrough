@@ -32,8 +32,9 @@ public class MexicanLangProvider extends AbstractLangProvider {
         addJeiCategory("adobe_furnace", "Fundición básica");
         addJeiCategory("soul_furnace", "Fundición básica de almas");
         addJeiCategory("masonry_furnace", "Horno de mamposteria");
-        addJeiCategory("adobe_alloying_furnace", "Aleación");
-        addJeiCategory("super_alloying_furnace", "Alta aleación");
+        addJeiCategory("primitive_alloy_furnace", "Aleación primitiva");
+        addJeiCategory("adobe_alloy_furnace", "Aleación");
+        addJeiCategory("super_alloy_furnace", "Alta aleación");
         addJeiCategory("gem_polisher", "Pulido de gemas");
         addJeiCategory("primal_grinder", "Molienda");
         addJeiCategory("mechanical_grinder", "Molienda mecánizada");
@@ -432,6 +433,7 @@ public class MexicanLangProvider extends AbstractLangProvider {
         addBlock(EPBlocks.ADOBE_FURNACE, "Horno de barro");
         addBlock(EPBlocks.SOUL_FURNACE, "Horno de barro de almas");
         addBlock(EPBlocks.MASONRY_FURNACE, "Horno de mamposteria");
+        addBlock(EPBlocks.PRIMITIVE_ALLOY_FURNACE, "Horno de aleación de barro");
         addBlock(EPBlocks.ADOBE_ALLOY_FURNACE, "Horno de aleación de larillos");
         addBlock(EPBlocks.SUPER_ALLOY_FURNACE, "Alto horno de aleación");
         addBlock(EPBlocks.GEM_POLISHER, "Mesa de pulido");

@@ -12,10 +12,10 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 
 @SuppressWarnings("removal")
-public abstract class AbstractAlloyScreen<T extends AbstractAlloyFurnaceMenu> extends AbstractContainerScreen<T> {
+public abstract class AbstractAlloyFurnaceScreen<T extends AbstractAlloyFurnaceMenu> extends AbstractContainerScreen<T> {
     private static final ResourceLocation Texture =
             new ResourceLocation(EnhancedPlaythrough.MOD_ID, "textures/gui/alloy_furnace_gui.png");
-    public AbstractAlloyScreen(T pMenu, Inventory pPlayerInventory, Component pTitle) {
+    public AbstractAlloyFurnaceScreen(T pMenu, Inventory pPlayerInventory, Component pTitle) {
         super(pMenu, pPlayerInventory, pTitle);
     }
 

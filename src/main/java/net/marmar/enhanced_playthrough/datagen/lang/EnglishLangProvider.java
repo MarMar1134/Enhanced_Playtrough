@@ -32,8 +32,9 @@ public class EnglishLangProvider extends AbstractLangProvider {
         addJeiCategory("adobe_furnace", "Basic smelting");
         addJeiCategory("soul_furnace", "Soul basic smelting");
         addJeiCategory("masonry_furnace", "Masonry furnace");
-        addJeiCategory("adobe_alloying_furnace", "Alloying");
-        addJeiCategory("super_alloying_furnace", "Blast alloying");
+        addJeiCategory("primitive_alloy_furnace", "Primitive alloying");
+        addJeiCategory("adobe_alloy_furnace", "Alloying");
+        addJeiCategory("super_alloy_furnace", "Blast alloying");
         addJeiCategory("gem_polisher", "Gem polishing");
         addJeiCategory("primal_grinder", "Basic grinding");
         addJeiCategory("mechanical_grinder", "Mechanical grinding");
@@ -431,6 +432,7 @@ public class EnglishLangProvider extends AbstractLangProvider {
             addBlock(EPBlocks.ADOBE_FURNACE, "Mud furnace");
             addBlock(EPBlocks.SOUL_FURNACE, "Soul mud furnace");
             addBlock(EPBlocks.MASONRY_FURNACE, "Masonry furnace");
+            addBlock(EPBlocks.PRIMITIVE_ALLOY_FURNACE, "Mud bricks alloy furnace");
             addBlock(EPBlocks.ADOBE_ALLOY_FURNACE, "Bricks alloy furnace");
             addBlock(EPBlocks.SUPER_ALLOY_FURNACE, "Blast alloy furnace");
             addBlock(EPBlocks.GEM_POLISHER, "Gem polisher");

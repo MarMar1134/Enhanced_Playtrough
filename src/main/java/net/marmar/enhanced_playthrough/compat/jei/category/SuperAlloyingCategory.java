@@ -19,10 +19,6 @@ import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.common.ForgeHooks;
-import net.minecraftforge.registries.ForgeRegistries;
-
-import java.util.List;
 
 @SuppressWarnings("removal")
 public class SuperAlloyingCategory implements IRecipeCategory<BlastAlloyRecipe> {
@@ -30,7 +26,7 @@ public class SuperAlloyingCategory implements IRecipeCategory<BlastAlloyRecipe> 
     public static final ResourceLocation TEXTURE = new ResourceLocation(EnhancedPlaythrough.MOD_ID,
             "textures/gui/alloy_furnace_gui.png");
 
-    public static final RecipeType<BlastAlloyRecipe> SUPER_ALLOYING_RECIPE_TYPE =
+    public static final RecipeType<BlastAlloyRecipe> SUPER_ALLOY_RECIPE_TYPE =
             new RecipeType<>(UID, BlastAlloyRecipe.class);
 
     private final IDrawable background;
@@ -62,12 +58,12 @@ public class SuperAlloyingCategory implements IRecipeCategory<BlastAlloyRecipe> 
 
     @Override
     public RecipeType<BlastAlloyRecipe> getRecipeType() {
-        return SUPER_ALLOYING_RECIPE_TYPE;
+        return SUPER_ALLOY_RECIPE_TYPE;
     }
 
     @Override
     public Component getTitle() {
-        return Component.translatable("jei.enhanced_playthrough.super_alloying_furnace");
+        return Component.translatable("jei." + EnhancedPlaythrough.MOD_ID + ".super_alloy_furnace");
     }
 
     @Override

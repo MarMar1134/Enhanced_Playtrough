@@ -1,6 +1,16 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
+    "has_impure_gem": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "enhanced_playthrough:raw_gems"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "has_stone": {
       "conditions": {
         "items": [
@@ -23,6 +33,7 @@
   "requirements": [
     [
       "has_stone",
+      "has_impure_gem",
       "has_the_recipe"
     ]
   ],

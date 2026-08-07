@@ -1,0 +1,50 @@
+{
+  "variants": {
+    "burning=false,facing=down": {
+      "model": "enhanced_playthrough:block/primitive_alloy_furnace",
+      "y": 270
+    },
+    "burning=false,facing=east": {
+      "model": "enhanced_playthrough:block/primitive_alloy_furnace",
+      "y": 270
+    },
+    "burning=false,facing=north": {
+      "model": "enhanced_playthrough:block/primitive_alloy_furnace",
+      "y": 180
+    },
+    "burning=false,facing=south": {
+      "model": "enhanced_playthrough:block/primitive_alloy_furnace"
+    },
+    "burning=false,facing=up": {
+      "model": "enhanced_playthrough:block/primitive_alloy_furnace",
+      "y": 270
+    },
+    "burning=false,facing=west": {
+      "model": "enhanced_playthrough:block/primitive_alloy_furnace",
+      "y": 90
+    },
+    "burning=true,facing=down": {
+      "model": "enhanced_playthrough:block/primitive_alloy_furnace_on",
+      "y": 270
+    },
+    "burning=true,facing=east": {
+      "model": "enhanced_playthrough:block/primitive_alloy_furnace_on",
+      "y": 270
+    },
+    "burning=true,facing=north": {
+      "model": "enhanced_playthrough:block/primitive_alloy_furnace_on",
+      "y": 180
+    },
+    "burning=true,facing=south": {
+      "model": "enhanced_playthrough:block/primitive_alloy_furnace_on"
+    },
+    "burning=true,facing=up": {
+      "model": "enhanced_playthrough:block/primitive_alloy_furnace_on",
+      "y": 270
+    },
+    "burning=true,facing=west": {
+      "model": "enhanced_playthrough:block/primitive_alloy_furnace_on",
+      "y": 90
+    }
+  }
+}

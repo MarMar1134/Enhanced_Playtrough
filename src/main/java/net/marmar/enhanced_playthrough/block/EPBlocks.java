@@ -2,6 +2,7 @@ package net.marmar.enhanced_playthrough.block;
 
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.block.custom.alchemicalduplicator.AlchemicalDuplicatorBlock;
+import net.marmar.enhanced_playthrough.block.custom.alloyfurnace.PrimitiveAlloyFurnaceBlock;
 import net.marmar.enhanced_playthrough.block.custom.leatherworker.LeatherworkerStationBlock;
 import net.marmar.enhanced_playthrough.block.custom.plant.*;
 import net.marmar.enhanced_playthrough.block.custom.alloyfurnace.AdobeAlloyFurnaceBlock;
@@ -461,6 +462,8 @@ public class EPBlocks {
                 () -> new MasonryFurnaceBlock(BlockBehaviour.Properties.copy(EPBlocks.FIREBRICKS.get()).noOcclusion()));
 
         //Alloy furnaces
+        public static final RegistryObject<Block> PRIMITIVE_ALLOY_FURNACE = registerBlockWithItem("primitive_alloy_furnace",
+                () -> new PrimitiveAlloyFurnaceBlock(BlockBehaviour.Properties.copy(Blocks.MUD_BRICKS)));
         public static final RegistryObject<Block> ADOBE_ALLOY_FURNACE = registerBlockWithItem("adobe_alloy_furnace",
                 () -> new AdobeAlloyFurnaceBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE).noOcclusion()));
         public static final RegistryObject<Block> SUPER_ALLOY_FURNACE = registerBlockWithItem("super_alloy_furnace",

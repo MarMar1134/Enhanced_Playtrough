@@ -8,6 +8,7 @@ import net.marmar.enhanced_playthrough.compat.jei.itemtransfer.*;
 import net.marmar.enhanced_playthrough.item.EPItems;
 import net.marmar.enhanced_playthrough.menu.screen.alchemicalduplicator.AlchemicalDuplicatorScreen;
 import net.marmar.enhanced_playthrough.menu.screen.alloyfurnace.AdobeAlloyFurnaceScreen;
+import net.marmar.enhanced_playthrough.menu.screen.alloyfurnace.PrimitiveAlloyFurnaceScreen;
 import net.marmar.enhanced_playthrough.menu.screen.alloyfurnace.SuperAlloyFurnaceScreen;
 import net.marmar.enhanced_playthrough.menu.screen.leatherworker.LeatherworkerStationScreen;
 import net.marmar.enhanced_playthrough.menu.screen.modfurnace.AdobeFurnaceScreen;
@@ -18,6 +19,7 @@ import net.marmar.enhanced_playthrough.menu.screen.grinder.PrimalGrinderScreen;
 import net.marmar.enhanced_playthrough.menu.screen.modfurnace.MasonryFurnaceScreen;
 import net.marmar.enhanced_playthrough.recipe.GemPolishingRecipe;
 import net.marmar.enhanced_playthrough.recipe.alchemicalduplication.AlchemicalDuplicationRecipe;
+import net.marmar.enhanced_playthrough.recipe.alloy.PrimitiveAlloyRecipe;
 import net.marmar.enhanced_playthrough.recipe.epsmelt.MasonrySmeltingRecipe;
 import net.marmar.enhanced_playthrough.recipe.grind.MechanicalGrindRecipe;
 import net.marmar.enhanced_playthrough.recipe.EPRecipes;
@@ -101,8 +103,9 @@ public class EnhancedPlaythroughJEIPlugin implements IModPlugin {
         registration.addRecipeCatalyst(new ItemStack(EPBlocks.MASONRY_FURNACE.get()), MasonrySmeltingCategory.MASONRY_SMELTING_TYPE);
 
         //Alloy furnaces
-        registration.addRecipeCatalyst(new ItemStack(EPBlocks.ADOBE_ALLOY_FURNACE.get()), OreAlloyingCategory.ALLOYING_FURNACE_RECIPE_RECIPE_TYPE);
-        registration.addRecipeCatalyst(new ItemStack(EPBlocks.SUPER_ALLOY_FURNACE.get()), SuperAlloyingCategory.SUPER_ALLOYING_RECIPE_TYPE);
+        registration.addRecipeCatalyst(new ItemStack(EPBlocks.PRIMITIVE_ALLOY_FURNACE.get()), PrimitiveAlloyingCategory.PRIMITIVE_ALLOY_RECIPE_TYPE);
+        registration.addRecipeCatalyst(new ItemStack(EPBlocks.ADOBE_ALLOY_FURNACE.get()), OreAlloyingCategory.ALLOY_RECIPE_TYPE);
+        registration.addRecipeCatalyst(new ItemStack(EPBlocks.SUPER_ALLOY_FURNACE.get()), SuperAlloyingCategory.SUPER_ALLOY_RECIPE_TYPE);
 
         //Gem polishing
         registration.addRecipeCatalyst(new ItemStack(EPBlocks.GEM_POLISHER.get()), GemPolishingCategory.GEM_POLISHER_RECIPE_TYPE);
@@ -128,6 +131,7 @@ public class EnhancedPlaythroughJEIPlugin implements IModPlugin {
         registration.addRecipeCategories(new MasonrySmeltingCategory(registration.getJeiHelpers().getGuiHelper()));
 
         //Alloy furnaces
+        registration.addRecipeCategories(new PrimitiveAlloyingCategory(registration.getJeiHelpers().getGuiHelper()));
         registration.addRecipeCategories(new OreAlloyingCategory(registration.getJeiHelpers().getGuiHelper()));
         registration.addRecipeCategories(new SuperAlloyingCategory(registration.getJeiHelpers().getGuiHelper()));
 
@@ -164,11 +168,14 @@ public class EnhancedPlaythroughJEIPlugin implements IModPlugin {
         registration.addRecipes(MasonrySmeltingCategory.MASONRY_SMELTING_TYPE, masonrySmeltingRecipes);
 
         //Alloying
+        List<PrimitiveAlloyRecipe> primitiveAlloyRecipes = recipeManager.getAllRecipesFor(EPRecipes.PRIMITIVE_ALLOY_TYPE.get());
+        registration.addRecipes(PrimitiveAlloyingCategory.PRIMITIVE_ALLOY_RECIPE_TYPE, primitiveAlloyRecipes);
+
         List<AlloyRecipe> alloyingRecipes = recipeManager.getAllRecipesFor(EPRecipes.ALLOY_TYPE.get());
-        registration.addRecipes(OreAlloyingCategory.ALLOYING_FURNACE_RECIPE_RECIPE_TYPE, alloyingRecipes);
+        registration.addRecipes(OreAlloyingCategory.ALLOY_RECIPE_TYPE, alloyingRecipes);
 
         List<BlastAlloyRecipe> blastAlloyRecipes = recipeManager.getAllRecipesFor(EPRecipes.SUPER_ALLOY_TYPE.get());
-        registration.addRecipes(SuperAlloyingCategory.SUPER_ALLOYING_RECIPE_TYPE, blastAlloyRecipes);
+        registration.addRecipes(SuperAlloyingCategory.SUPER_ALLOY_RECIPE_TYPE, blastAlloyRecipes);
 
         //Gem polishing
         List<GemPolishingRecipe> gemPolishingRecipes = recipeManager.getAllRecipesFor(EPRecipes.POLISHING_TYPE.get());
@@ -200,6 +207,7 @@ public class EnhancedPlaythroughJEIPlugin implements IModPlugin {
         registration.addRecipeTransferHandler(new MasonryFurnaceTransferInfo());
 
         //Ore alloying
+        registration.addRecipeTransferHandler(new PrimitiveAlloyFurnaceTransferInfo());
         registration.addRecipeTransferHandler(new AlloyFurnaceTransferInfo());
         registration.addRecipeTransferHandler(new SuperAlloyFurnaceTransferInfo());
 
@@ -225,11 +233,14 @@ public class EnhancedPlaythroughJEIPlugin implements IModPlugin {
                 MasonrySmeltingCategory.MASONRY_SMELTING_TYPE);
 
         //Ore alloying
+        registration.addRecipeClickArea(PrimitiveAlloyFurnaceScreen.class, 59, 19, 13, 11,
+                PrimitiveAlloyingCategory.PRIMITIVE_ALLOY_RECIPE_TYPE);
+
         registration.addRecipeClickArea(AdobeAlloyFurnaceScreen.class, 59, 19, 13, 11,
-                OreAlloyingCategory.ALLOYING_FURNACE_RECIPE_RECIPE_TYPE);
+                OreAlloyingCategory.ALLOY_RECIPE_TYPE);
 
         registration.addRecipeClickArea(SuperAlloyFurnaceScreen.class, 59, 19, 13, 11,
-                SuperAlloyingCategory.SUPER_ALLOYING_RECIPE_TYPE);
+                SuperAlloyingCategory.SUPER_ALLOY_RECIPE_TYPE);
 
         //Gem polishing
         registration.addRecipeClickArea(GemPolisherScreen.class, 80, 33, 20, 30,

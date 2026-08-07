@@ -37,9 +37,7 @@
   - These alloys will match _Netherite_ tier.
 - Add bosses to the new structures.
 ---
-.
-.
-.
+
 ## Release 1.0
 - Add compatibility with Terrablender.
 ---

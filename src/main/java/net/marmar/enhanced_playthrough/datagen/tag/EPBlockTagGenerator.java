@@ -368,6 +368,7 @@ public class EPBlockTagGenerator extends BlockTagsProvider {
                 EPBlocks.ADOBE_FURNACE.get(),
                 EPBlocks.SOUL_FURNACE.get(),
                 EPBlocks.MASONRY_FURNACE.get(),
+                EPBlocks.PRIMITIVE_ALLOY_FURNACE.get(),
                 EPBlocks.ADOBE_ALLOY_FURNACE.get(),
                 EPBlocks.SUPER_ALLOY_FURNACE.get(),
                 EPBlocks.PRIMAL_GRINDER.get(),
@@ -472,8 +473,7 @@ public class EPBlockTagGenerator extends BlockTagsProvider {
 
                 //Entities
                 EPBlocks.ADOBE_FURNACE.get(),
-                EPBlocks.SOUL_FURNACE.get(),
-                EPBlocks.PRIMAL_GRINDER.get()
+                EPBlocks.SOUL_FURNACE.get()
         );
 
         this.tag(EPTags.Blocks.BAUXITE_ORES).add(
@@ -508,6 +508,7 @@ public class EPBlockTagGenerator extends BlockTagsProvider {
 
                 //Entities
                 EPBlocks.MECHANICAL_GRINDER.get(),
+                EPBlocks.PRIMITIVE_ALLOY_FURNACE.get(),
                 EPBlocks.GEM_POLISHER.get(),
 
                 //Ores
@@ -542,6 +543,10 @@ public class EPBlockTagGenerator extends BlockTagsProvider {
                 Blocks.RAW_IRON_BLOCK,
                 Blocks.HOPPER,
                 EPBlocks.BRONZE_BLOCK.get(),
+
+                EPBlocks.ADOBE_ALLOY_FURNACE.get(),
+                EPBlocks.PRIMAL_GRINDER.get(),
+
                 EPBlocks.NETHER_GARNET_ORE.get()
         );
 

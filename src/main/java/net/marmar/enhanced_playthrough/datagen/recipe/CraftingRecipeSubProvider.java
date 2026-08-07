@@ -10,6 +10,7 @@ import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
@@ -444,15 +445,26 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, EPBlocks.MASONRY_FURNACE.get())
-                .pattern("III")
+                .pattern("BBB")
                 .pattern("BFB")
                 .pattern("CCC")
-                .define('I', EPItems.BRONZE_INGOT.get())
                 .define('B', EPBlocks.FIREBRICKS.get())
                 .define('F', Blocks.FURNACE)
-                .define('C', Blocks.COBBLESTONE)
+                .define('C', ItemTags.STONE_CRAFTING_MATERIALS)
+                .unlockedBy(getHasName(EPBlocks.FIREBRICKS.get()), has(EPBlocks.FIREBRICKS.get()))
                 .unlockedBy(getHasName(Blocks.FURNACE), has(Blocks.FURNACE))
                 .unlockedBy(getHasName(EPBlocks.MASONRY_FURNACE.get()), has(EPBlocks.MASONRY_FURNACE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, EPBlocks.PRIMITIVE_ALLOY_FURNACE.get())
+                .pattern("###")
+                .pattern("# #")
+                .pattern("CCC")
+                .define('#', Blocks.MUD_BRICKS)
+                .define('C', ItemTags.STONE_CRAFTING_MATERIALS)
+                .unlockedBy(getHasName(EPItems.MUD_BRICK.get()), has(EPItems.MUD_BRICK.get()))
+                .unlockedBy(getHasName(EPBlocks.PRIMITIVE_ALLOY_FURNACE.get()), has(EPBlocks.PRIMITIVE_ALLOY_FURNACE.get()))
+                .group("primitive_alloy_furnace")
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, EPBlocks.ADOBE_ALLOY_FURNACE.get())
@@ -460,11 +472,10 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .pattern("#A#")
                 .pattern("III")
                 .define('#', Blocks.BRICKS)
-                .define('A', EPBlocks.ADOBE_FURNACE.get())
-                .define('I', Blocks.COBBLESTONE)
-                .unlockedBy(getHasName(EPBlocks.ADOBE_FURNACE.get()), has(EPBlocks.ADOBE_FURNACE.get()))
+                .define('A', EPBlocks.PRIMITIVE_ALLOY_FURNACE.get())
+                .define('I', Items.IRON_INGOT)
+                .unlockedBy(getHasName(EPBlocks.PRIMITIVE_ALLOY_FURNACE.get()), has(EPBlocks.PRIMITIVE_ALLOY_FURNACE.get()))
                 .unlockedBy(getHasName(EPBlocks.ADOBE_ALLOY_FURNACE.get()), has(EPBlocks.ADOBE_ALLOY_FURNACE.get()))
-                .unlockedBy(getHasName(EPItems.RAW_TIN.get()), has(EPItems.RAW_TIN.get()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, EPBlocks.SUPER_ALLOY_FURNACE.get())
@@ -485,15 +496,16 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                 .define('A', ItemTags.LOGS_THAT_BURN)
                 .define('I', Blocks.STONE)
                 .unlockedBy(getHasName(Blocks.STONE), has(Blocks.STONE))
+                .unlockedBy("has_impure_gem", has(EPTags.Items.RAW_GEMS))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, EPBlocks.PRIMAL_GRINDER.get())
-                .pattern("AAA")
-                .pattern("ABA")
-                .pattern("CCC")
-                .define('A', Blocks.MUD_BRICKS)
-                .define('B', EPItems.BRONZE_INGOT.get())
-                .define('C', Blocks.COBBLESTONE)
+                .pattern("BBB")
+                .pattern("BIB")
+                .pattern("SSS")
+                .define('B', Blocks.MUD_BRICKS)
+                .define('I', EPItems.BRONZE_INGOT.get())
+                .define('S', ItemTags.STONE_CRAFTING_MATERIALS)
                 .unlockedBy(getHasName(EPItems.BRONZE_INGOT.get()), has(EPItems.BRONZE_INGOT.get()))
                 .unlockedBy(getHasName(Blocks.MUD_BRICKS), has(Blocks.MUD_BRICKS))
                 .save(consumer);
@@ -972,8 +984,19 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                     .pattern("BB")
                     .pattern("BB")
                     .define('B', EPItems.MUD_BRICK.get())
-                    .unlockedBy(getHasName(Items.PACKED_MUD), has(Items.PACKED_MUD))
+                    .unlockedBy(getHasName(Items.MUD_BRICKS), has(Items.MUD_BRICKS))
                     .unlockedBy(getHasName(EPItems.MUD_BRICK.get()), has(EPItems.MUD_BRICK.get()))
+                    .save(consumer);
+
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Blocks.FURNACE)
+                    .pattern("III")
+                    .pattern("IFI")
+                    .pattern("###")
+                    .define('I', EPItems.BRONZE_INGOT.get())
+                    .define('F', EPBlocks.ADOBE_FURNACE.get())
+                    .define('#', ItemTags.STONE_CRAFTING_MATERIALS)
+                    .unlockedBy(getHasName(Blocks.FURNACE), has(Blocks.FURNACE))
+                    .unlockedBy(getHasName(EPBlocks.ADOBE_FURNACE.get()), has(EPBlocks.ADOBE_FURNACE.get()))
                     .save(consumer);
 
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Blocks.BLAST_FURNACE)
@@ -984,16 +1007,7 @@ public class CraftingRecipeSubProvider extends RecipeProvider {
                     .define('F', Blocks.FURNACE)
                     .define('#', Blocks.SMOOTH_STONE)
                     .unlockedBy(getHasName(Blocks.FURNACE), has(Blocks.FURNACE))
-                    .save(consumer);
-
-            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Blocks.FURNACE)
-                    .pattern("III")
-                    .pattern("#F#")
-                    .pattern("###")
-                    .define('I', EPItems.BRONZE_INGOT.get())
-                    .define('F', EPBlocks.ADOBE_FURNACE.get())
-                    .define('#', Blocks.COBBLESTONE)
-                    .unlockedBy(getHasName(Blocks.FURNACE), has(Blocks.FURNACE))
+                    .unlockedBy(getHasName(Blocks.BLAST_FURNACE), has(Blocks.BLAST_FURNACE))
                     .save(consumer);
     }
 

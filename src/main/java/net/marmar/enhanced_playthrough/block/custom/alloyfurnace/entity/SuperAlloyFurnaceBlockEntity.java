@@ -26,6 +26,6 @@ public class SuperAlloyFurnaceBlockEntity extends AbstractAlloyFurnaceBlockEntit
     @Nullable
     @Override
     public AbstractContainerMenu createMenu(int i, Inventory inventory, Player player) {
-        return new SuperAlloyFurnaceMenu(i, inventory, this, this.Data);
+        return new SuperAlloyFurnaceMenu(i, inventory, this, this.data);
     }
 }

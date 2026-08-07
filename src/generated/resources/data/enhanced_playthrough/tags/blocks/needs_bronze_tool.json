@@ -8,6 +8,8 @@
     "minecraft:raw_iron_block",
     "minecraft:hopper",
     "enhanced_playthrough:bronze_block",
+    "enhanced_playthrough:adobe_alloy_furnace",
+    "enhanced_playthrough:primal_grinder",
     "enhanced_playthrough:nether_garnet_ore"
   ]
 }

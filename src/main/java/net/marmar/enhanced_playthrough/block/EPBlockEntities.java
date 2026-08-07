@@ -3,6 +3,7 @@ package net.marmar.enhanced_playthrough.block;
 import net.marmar.enhanced_playthrough.EnhancedPlaythrough;
 import net.marmar.enhanced_playthrough.block.custom.alchemicalduplicator.AlchemicalDuplicatorBlockEntity;
 import net.marmar.enhanced_playthrough.block.custom.alloyfurnace.entity.AdobeAlloyFurnaceBlockEntity;
+import net.marmar.enhanced_playthrough.block.custom.alloyfurnace.entity.PrimitiveAlloyFurnaceBlockEntity;
 import net.marmar.enhanced_playthrough.block.custom.alloyfurnace.entity.SuperAlloyFurnaceBlockEntity;
 import net.marmar.enhanced_playthrough.block.custom.epfurnace.entity.AdobeFurnaceBlockEntity;
 import net.marmar.enhanced_playthrough.block.custom.epfurnace.entity.SoulFurnaceBlockEntity;
@@ -37,6 +38,9 @@ public class EPBlockEntities {
                     () -> BlockEntityType.Builder.of(MasonryFurnaceBlockEntity::new, EPBlocks.MASONRY_FURNACE.get()).build(null));
 
     //Alloy furnaces
+    public static final RegistryObject<BlockEntityType<PrimitiveAlloyFurnaceBlockEntity>> PRIMITIVE_ALLOY_FURNACE_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("primitive_alloy_furnace",
+                    () -> BlockEntityType.Builder.of(PrimitiveAlloyFurnaceBlockEntity::new, EPBlocks.PRIMITIVE_ALLOY_FURNACE.get()).build(null));
     public static final RegistryObject<BlockEntityType<AdobeAlloyFurnaceBlockEntity>> ADOBE_ALLOY_FURNACE_BLOCK_ENTITY =
             BLOCK_ENTITIES.register("adobe_alloy_furnace",
                     () -> BlockEntityType.Builder.of(AdobeAlloyFurnaceBlockEntity::new, EPBlocks.ADOBE_ALLOY_FURNACE.get()).build(null));

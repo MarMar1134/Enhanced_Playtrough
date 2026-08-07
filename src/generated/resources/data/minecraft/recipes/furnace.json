@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "#": {
-      "item": "minecraft:cobblestone"
+      "tag": "minecraft:stone_crafting_materials"
     },
     "F": {
       "item": "enhanced_playthrough:adobe_furnace"
@@ -14,7 +14,7 @@
   },
   "pattern": [
     "III",
-    "#F#",
+    "IFI",
     "###"
   ],
   "result": {

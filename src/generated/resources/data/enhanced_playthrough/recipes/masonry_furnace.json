@@ -6,17 +6,14 @@
       "item": "enhanced_playthrough:firebricks"
     },
     "C": {
-      "item": "minecraft:cobblestone"
+      "tag": "minecraft:stone_crafting_materials"
     },
     "F": {
       "item": "minecraft:furnace"
-    },
-    "I": {
-      "item": "enhanced_playthrough:bronze_ingot"
     }
   },
   "pattern": [
-    "III",
+    "BBB",
     "BFB",
     "CCC"
   ],

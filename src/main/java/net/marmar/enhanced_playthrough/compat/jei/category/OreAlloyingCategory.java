@@ -19,10 +19,6 @@ import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.common.ForgeHooks;
-import net.minecraftforge.registries.ForgeRegistries;
-
-import java.util.List;
 
 @SuppressWarnings("removal")
 public class OreAlloyingCategory implements IRecipeCategory<AlloyRecipe> {
@@ -30,7 +26,7 @@ public class OreAlloyingCategory implements IRecipeCategory<AlloyRecipe> {
     public static final ResourceLocation TEXTURE = new ResourceLocation(EnhancedPlaythrough.MOD_ID,
             "textures/gui/alloy_furnace_gui.png");
 
-    public static final RecipeType<AlloyRecipe> ALLOYING_FURNACE_RECIPE_RECIPE_TYPE =
+    public static final RecipeType<AlloyRecipe> ALLOY_RECIPE_TYPE =
             new RecipeType<>(UID, AlloyRecipe.class);
 
     private final IDrawable background;
@@ -62,12 +58,12 @@ public class OreAlloyingCategory implements IRecipeCategory<AlloyRecipe> {
 
     @Override
     public RecipeType<AlloyRecipe> getRecipeType() {
-        return ALLOYING_FURNACE_RECIPE_RECIPE_TYPE;
+        return ALLOY_RECIPE_TYPE;
     }
 
     @Override
     public Component getTitle() {
-        return Component.translatable("jei.enhanced_playthrough.adobe_alloying_furnace");
+        return Component.translatable("jei." + EnhancedPlaythrough.MOD_ID + ".adobe_alloy_furnace");
     }
 
     @Override

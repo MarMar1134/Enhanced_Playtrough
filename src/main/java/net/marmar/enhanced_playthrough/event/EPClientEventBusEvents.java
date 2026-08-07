@@ -18,6 +18,7 @@ import net.marmar.enhanced_playthrough.entity.zombieknight.model.ZombieKnightRen
 import net.marmar.enhanced_playthrough.menu.EPMenuTypes;
 import net.marmar.enhanced_playthrough.menu.screen.alchemicalduplicator.AlchemicalDuplicatorScreen;
 import net.marmar.enhanced_playthrough.menu.screen.alloyfurnace.AdobeAlloyFurnaceScreen;
+import net.marmar.enhanced_playthrough.menu.screen.alloyfurnace.PrimitiveAlloyFurnaceScreen;
 import net.marmar.enhanced_playthrough.menu.screen.alloyfurnace.SuperAlloyFurnaceScreen;
 import net.marmar.enhanced_playthrough.menu.screen.leatherworker.LeatherworkerStationScreen;
 import net.marmar.enhanced_playthrough.menu.screen.modfurnace.AdobeFurnaceScreen;
@@ -125,21 +126,27 @@ public class EPClientEventBusEvents {
 
     @SubscribeEvent
     public static void subscribeMenus(FMLClientSetupEvent onClientSetup){
+        //Furnaces
         MenuScreens.register(EPMenuTypes.ADOBE_FURNACE_MENU.get(), AdobeFurnaceScreen::new);
         MenuScreens.register(EPMenuTypes.SOUL_FURNACE_MENU.get(), SoulFurnaceScreen::new);
-
         MenuScreens.register(EPMenuTypes.MASONRY_FURNACE_MENU.get(), MasonryFurnaceScreen::new);
 
+        //Alloy furnaces
+        MenuScreens.register(EPMenuTypes.PRIMITIVE_ALLOY_FURNACE_MENU.get(), PrimitiveAlloyFurnaceScreen::new);
         MenuScreens.register(EPMenuTypes.ADOBE_ALLOY_FURNACE_MENU.get(), AdobeAlloyFurnaceScreen::new);
         MenuScreens.register(EPMenuTypes.SUPER_ALLOY_FURNACE_MENU.get(), SuperAlloyFurnaceScreen::new);
 
+        //Gem polisher
         MenuScreens.register(EPMenuTypes.GEM_POLISHER_MENU.get(), GemPolisherScreen::new);
 
+        //Grinders
         MenuScreens.register(EPMenuTypes.PRIMAL_GRINDER_MENU.get(), PrimalGrinderScreen::new);
         MenuScreens.register(EPMenuTypes.MECHANICAL_GRINDER_MENU.get(), MechanicalGrinderScreen::new);
 
+        //Alchemical duplicator
         MenuScreens.register(EPMenuTypes.ALCHEMICAL_DUPLICATOR_MENU.get(), AlchemicalDuplicatorScreen::new);
 
+        //Leatherwork station
         MenuScreens.register(EPMenuTypes.LEATHERWORKER_STATION_MENU.get(), LeatherworkerStationScreen::new);
     }
 

@@ -1038,6 +1038,7 @@ public class EPItemTagGenerator extends ItemTagsProvider {
         this.tag(EPTags.Items.INGREDIENTS).addTags(
                 EPTags.Items.BASIC_SMELT_INGREDIENT,
                 EPTags.Items.MASONRY_INGREDIENT,
+                EPTags.Items.PRIMITIVE_ALLOY_INGREDIENT,
                 EPTags.Items.ALLOY_INGREDIENT,
                 EPTags.Items.BLAST_ALLOY_INGREDIENT,
                 EPTags.Items.PRIMAL_GRIND_INGREDIENT,
@@ -1104,19 +1105,25 @@ public class EPItemTagGenerator extends ItemTagsProvider {
                 Blocks.RED_SANDSTONE.asItem()
         );
 
-        this.tag(EPTags.Items.ALLOY_INGREDIENT).add(
+        this.tag(EPTags.Items.PRIMITIVE_ALLOY_INGREDIENT).add(
+                Items.RAW_COPPER,
+                EPItems.RAW_TIN.get(),
+                EPItems.RAW_ZINC.get()
+        );
+
+        this.tag(EPTags.Items.ALLOY_INGREDIENT)
+                .addTag(EPTags.Items.PRIMITIVE_ALLOY_INGREDIENT)
+                .add(
                 EPItems.COBBLE.get(),
                 Items.CLAY_BALL,
-                Items.RAW_COPPER,
                 Items.RAW_IRON,
                 Items.COAL,
-                EPItems.RAW_TIN.get(),
-                EPItems.RAW_ZINC.get(),
                 Items.QUARTZ
         );
 
-        this.tag(EPTags.Items.BLAST_ALLOY_INGREDIENT).addTags(
-                EPTags.Items.ALLOY_INGREDIENT).add(
+        this.tag(EPTags.Items.BLAST_ALLOY_INGREDIENT)
+                .addTags(EPTags.Items.ALLOY_INGREDIENT)
+                .add(
                 Items.RAW_GOLD,
                 Items.COPPER_INGOT,
                 Items.IRON_INGOT,

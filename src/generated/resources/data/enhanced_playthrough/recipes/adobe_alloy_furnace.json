@@ -6,10 +6,10 @@
       "item": "minecraft:bricks"
     },
     "A": {
-      "item": "enhanced_playthrough:adobe_furnace"
+      "item": "enhanced_playthrough:primitive_alloy_furnace"
     },
     "I": {
-      "item": "minecraft:cobblestone"
+      "item": "minecraft:iron_ingot"
     }
   },
   "pattern": [

@@ -137,6 +137,7 @@ public class EPTags {
         public static final TagKey<Item> INGREDIENTS = itemTag("ingredients");
         public static final TagKey<Item> BASIC_SMELT_INGREDIENT = ingredientTag("basic_smelt");
         public static final TagKey<Item> MASONRY_INGREDIENT = ingredientTag("masonry");
+        public static final TagKey<Item> PRIMITIVE_ALLOY_INGREDIENT = ingredientTag("primitive_alloy");
         public static final TagKey<Item> ALLOY_INGREDIENT = ingredientTag("alloy");
         public static final TagKey<Item> BLAST_ALLOY_INGREDIENT = ingredientTag("blast_alloy");
         public static final TagKey<Item> PRIMAL_GRIND_INGREDIENT = ingredientTag("primal_grind");
@@ -151,15 +152,7 @@ public class EPTags {
         public static final TagKey<Item> ZINC_ALLOYABLE = alloyableTag("zinc");
         public static final TagKey<Item> TIN_ALLOYABLE = alloyableTag("tin");
         public static final TagKey<Item> COPPER_ALLOYABLE = alloyableTag("copper");
-        public static final TagKey<Item> BRASS_ALLOYABLE = alloyableTag("brass");
-        public static final TagKey<Item> BRONZE_ALLOYABLE = alloyableTag("bronze");
-        public static final TagKey<Item> ROSE_GOLD_ALLOYABLE = alloyableTag("rose_gold");
         public static final TagKey<Item> IRON_ALLOYABLE = alloyableTag("iron");
-        public static final TagKey<Item> BRONZIUM_ALLOYABLE = alloyableTag("bronzium");
-        public static final TagKey<Item> GREEN_GOLD_ALLOYABLE = alloyableTag("green_gold");
-        public static final TagKey<Item> STEEL_ALLOYABLE = alloyableTag("steel");
-        public static final TagKey<Item> BLUE_GOLD_ALLOYABLE = alloyableTag("blue_gold");
-        public static final TagKey<Item> PURPLE_GOLD_ALLOYABLE = alloyableTag("purple_gold");
 
         //Grindable (for dusts)
         public static final TagKey<Item> GRINDABLE = itemTag("grindable");
