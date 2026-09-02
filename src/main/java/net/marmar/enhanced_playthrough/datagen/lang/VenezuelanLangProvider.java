@@ -133,8 +133,10 @@ public class VenezuelanLangProvider extends AbstractLangProvider {
                     "Iniciaste una nueva aventura en este mundo fantástico, ¡bienvenido!");
             addSurvivalAdvancement("stone_age", "Un asunto adoquinado",
                     "Obtén un pedazo de adoquín");
+            addSurvivalAdvancement("thick_as_thieves", "Como uña y mugre",
+                    "Craftea un horno de aleación de ladrillos");
             addSurvivalAdvancement("unity_makes_strength", "La unión hace la fuerza",
-                    "Craftea un horno de aleación");
+                    "Craftea un horno de aleación de barro");
             addSurvivalAdvancement("ancient_knowledge", "Conocimiento antiguo",
                     "Encuentra el Dominio del Señor Antiguo");
             addSurvivalAdvancement("blossom", "Bombón",
@@ -158,6 +160,8 @@ public class VenezuelanLangProvider extends AbstractLangProvider {
                     "Utiliza tu horno de aleación para fundir algo de acero");
             addSurvivalAdvancement("the_aluminated", "El aluminado",
                     "Obtén un lingote de aluminio");
+            addSurvivalAdvancement("the_conspiration", "La conspiración",
+                    "craftea un horno de mamposteria");
             addSurvivalAdvancement("vale_4", "Quiero vale 4",
                     "Crafteá un duplicador alquímico");
 
@@ -469,6 +473,8 @@ public class VenezuelanLangProvider extends AbstractLangProvider {
             addItem(EPItems.BRASS_NUGGET, "Pepita de latón");
             addItem(EPItems.BRONZE_INGOT, "Lingote de bronce");
             addItem(EPItems.BRONZE_NUGGET, "Pepita de bronce");
+            addItem(EPItems.REDONZE_INGOT, "Lingote de redonze");
+            addItem(EPItems.REDONZE_NUGGET, "Pepita de redonze");
             addItem(EPItems.ROSE_GOLD_INGOT, "Lingote de oro rosado");
             addItem(EPItems.ROSE_GOLD_NUGGET, "Pepita de oro rosado");
             addItem(EPItems.BRONZIUM_INGOT, "Lingote de broncio");

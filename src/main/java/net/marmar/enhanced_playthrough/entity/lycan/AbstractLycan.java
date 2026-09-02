@@ -19,15 +19,15 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 
-public abstract class AbstractLycanMob extends Monster {
-    private static final EntityDataAccessor<Integer> LYCAN_STATE = SynchedEntityData.defineId(AbstractLycanMob.class, EntityDataSerializers.INT);
+public abstract class AbstractLycan extends Monster {
+    private static final EntityDataAccessor<Integer> LYCAN_STATE = SynchedEntityData.defineId(AbstractLycan.class, EntityDataSerializers.INT);
     private final SoundEvent ambientSound;
     private final SoundEvent stepSound;
     private final SoundEvent hurtSound;
     private final SoundEvent deathSound;
     private boolean isTransformed;
 
-    protected AbstractLycanMob(EntityType<? extends Monster> pEntityType, Level pLevel, SoundEvent pAmbientSound, SoundEvent pStepSound, SoundEvent pHurtSound, SoundEvent pDeathSound) {
+    protected AbstractLycan(EntityType<? extends Monster> pEntityType, Level pLevel, SoundEvent pAmbientSound, SoundEvent pStepSound, SoundEvent pHurtSound, SoundEvent pDeathSound) {
         super(pEntityType, pLevel);
         this.ambientSound = pAmbientSound;
         this.stepSound = pStepSound;

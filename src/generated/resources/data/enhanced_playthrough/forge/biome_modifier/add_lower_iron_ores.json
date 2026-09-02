@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#minecraft:is_overworld",
+  "features": "enhanced_playthrough:lower_iron_ores_placed",
+  "step": "underground_ores"
+}

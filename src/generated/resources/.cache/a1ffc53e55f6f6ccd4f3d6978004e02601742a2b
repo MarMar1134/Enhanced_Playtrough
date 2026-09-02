@@ -1,4 +1,4 @@
-// 1.20.1	2026-08-07T13:24:22.0239822	Item Models: enhanced_playthrough
+// 1.20.1	2026-08-16T23:41:11.3302582	Item Models: enhanced_playthrough
 b2df27b0d68c4c96244f2f344cb1fc54663e392f assets/enhanced_playthrough/models/item/adobe_alloy_furnace.json
 9731043a19f6a4326f19981cca25ade3d23cd23d assets/enhanced_playthrough/models/item/adobe_furnace.json
 c56c6fdc1e91add0abd02c8c7acc92cdb3044eb1 assets/enhanced_playthrough/models/item/alchemical_duplicator.json
@@ -589,6 +589,8 @@ b53f1d8ff8a5ac8afc90eb4a49df46a9c3bd9d59 assets/enhanced_playthrough/models/item
 f6aebd04dfc2f18d2fe5b10cf39edb4b2da35954 assets/enhanced_playthrough/models/item/raw_silver.json
 1d92d5b5a3679599d6084b9300c8ee86a11ec67d assets/enhanced_playthrough/models/item/raw_tin.json
 4cdca1396a94004f5b157a5bac095df1fc250a4c assets/enhanced_playthrough/models/item/raw_zinc.json
+76b4abaea52681615298b904d6e5aa8c937226f6 assets/enhanced_playthrough/models/item/redonze_ingot.json
+eb3ecf342c1bbdbeeb956a06ae1a4aaf4a132dce assets/enhanced_playthrough/models/item/redonze_nugget.json
 5829118be073eef70646c60dd5dbd7616dd7c2a2 assets/enhanced_playthrough/models/item/red_terracotta_shard.json
 27c2ecfbb64479b56ac0d5aaa9c7bbb0d6c9c69c assets/enhanced_playthrough/models/item/reeds.json
 a188ccda68bbf8d30f714ebea973c971d3c6ba12 assets/enhanced_playthrough/models/item/reeds_head.json

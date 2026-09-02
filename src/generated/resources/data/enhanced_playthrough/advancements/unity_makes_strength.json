@@ -6,7 +6,7 @@
         "items": [
           {
             "items": [
-              "enhanced_playthrough:adobe_alloy_furnace"
+              "enhanced_playthrough:primitive_alloy_furnace"
             ]
           }
         ]
@@ -23,7 +23,7 @@
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "enhanced_playthrough:adobe_alloy_furnace"
+      "item": "enhanced_playthrough:primitive_alloy_furnace"
     },
     "show_toast": true,
     "title": {

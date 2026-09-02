@@ -41,20 +41,24 @@ public class EPTags {
 
     public static class Items {
         //Forge
+        public static final TagKey<Item> FORGE_ORES = forgeTag("ores");
         public static final TagKey<Item> FORGE_TIN_ORES = forgeTag("ores/tin");
         public static final TagKey<Item> FORGE_ZINC_ORES = forgeTag("ores/zinc");
         public static final TagKey<Item> FORGE_SILVER_ORES = forgeTag("ores/silver");
         public static final TagKey<Item> FORGE_BAUXITE_ORES = forgeTag("ores/bauxite");
         public static final TagKey<Item> FORGE_SAPPHIRE_ORES = forgeTag("ores/sapphire");
         public static final TagKey<Item> FORGE_RUBY_ORES = forgeTag("ores/ruby");
+        public static final TagKey<Item> FORGE_GARNET_ORES = forgeTag("ores/garnet");
         public static final TagKey<Item> FORGE_COBALT_ORES = forgeTag("ores/cobalt");
 
+        public static final TagKey<Item> FORGE_INGOTS = forgeTag("ingots");
         public static final TagKey<Item> FORGE_ALUMINUM_INGOT = forgeTag("ingots/aluminum");
         public static final TagKey<Item> FORGE_TIN_INGOT = forgeTag("ingots/tin");
         public static final TagKey<Item> FORGE_ZINC_INGOT = forgeTag("ingots/zinc");
         public static final TagKey<Item> FORGE_SILVER_INGOT = forgeTag("ingots/silver");
         public static final TagKey<Item> FORGE_BRASS_INGOT = forgeTag("ingots/brass");
         public static final TagKey<Item> FORGE_BRONZE_INGOT = forgeTag("ingots/bronze");
+        public static final TagKey<Item> FORGE_REDONZE_INGOT = forgeTag("ingots/redonze");
         public static final TagKey<Item> FORGE_BRONZIUM_INGOT = forgeTag("ingots/bronzium");
         public static final TagKey<Item> FORGE_STEEL_INGOT = forgeTag("ingots/steel");
         public static final TagKey<Item> FORGE_ROSE_GOLD_INGOT = forgeTag("ingots/rose_gold");
@@ -62,6 +66,7 @@ public class EPTags {
         public static final TagKey<Item> FORGE_BLUE_GOLD_INGOT = forgeTag("ingots/blue_gold");
         public static final TagKey<Item> FORGE_PURPLE_GOLD_INGOT = forgeTag("ingots/purple_gold");
 
+        public static final TagKey<Item> FORGE_NUGGETS = forgeTag("nuggets");
         public static final TagKey<Item> FORGE_ALUMINUM_NUGGET = forgeTag("nuggets/aluminum");
         public static final TagKey<Item> FORGE_TIN_NUGGET = forgeTag("nuggets/tin");
         public static final TagKey<Item> FORGE_ZINC_NUGGET = forgeTag("nuggets/zinc");
@@ -69,6 +74,7 @@ public class EPTags {
         public static final TagKey<Item> FORGE_SILVER_NUGGET = forgeTag("nuggets/silver");
         public static final TagKey<Item> FORGE_BRASS_NUGGET = forgeTag("nuggets/brass");
         public static final TagKey<Item> FORGE_BRONZE_NUGGET = forgeTag("nuggets/bronze");
+        public static final TagKey<Item> FORGE_REDONZE_NUGGET = forgeTag("nuggets/redonze");
         public static final TagKey<Item> FORGE_BRONZIUM_NUGGET = forgeTag("nuggets/bronzium");
         public static final TagKey<Item> FORGE_STEEL_NUGGET = forgeTag("nuggets/steel");
         public static final TagKey<Item> FORGE_ROSE_GOLD_NUGGET = forgeTag("nuggets/rose_gold");
@@ -96,6 +102,7 @@ public class EPTags {
         public static final TagKey<Item> ALUMINUM = itemTag("aluminum");
         public static final TagKey<Item> BRASS = itemTag("brass");
         public static final TagKey<Item> BRONZE = itemTag("bronze");
+        public static final TagKey<Item> REDONZE = itemTag("redonze");
         public static final TagKey<Item> ROSE_GOLD = itemTag("rose_gold");
         public static final TagKey<Item> IRON = itemTag("iron");
         public static final TagKey<Item> BRONZIUM = itemTag("bronzium");
@@ -120,6 +127,7 @@ public class EPTags {
         public static final TagKey<Item> ALUMINUM_INGOT = ingotTag("aluminum");
         public static final TagKey<Item> BRASS_INGOT = ingotTag("brass");
         public static final TagKey<Item> BRONZE_INGOT = ingotTag("bronze");
+        public static final TagKey<Item> REDONZE_INGOT = ingotTag("redonze");
         public static final TagKey<Item> ROSE_GOLD_INGOT = ingotTag("rose_gold");
         public static final TagKey<Item> BRONZIUM_INGOT = ingotTag("bronzium");
         public static final TagKey<Item> GREEN_GOLD_INGOT = ingotTag("green_gold");

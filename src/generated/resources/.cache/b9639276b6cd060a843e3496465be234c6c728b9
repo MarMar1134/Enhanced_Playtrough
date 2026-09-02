@@ -1,4 +1,4 @@
-// 1.20.1	2026-08-07T13:24:22.030984	Tags for minecraft:item mod id enhanced_playthrough
+// 1.20.1	2026-08-16T23:41:11.3382617	Tags for minecraft:item mod id enhanced_playthrough
 fdc88e1c4870c2093abbdbc2b9e0e82405784ab5 data/enhanced_playthrough/tags/items/alloyable.json
 91cf5755eef6ce5bae0c30aefa6873e817134ca3 data/enhanced_playthrough/tags/items/allyable/aluminum.json
 eed039daf6d85d61e7ad1fa25f63355990a5f42c data/enhanced_playthrough/tags/items/allyable/copper.json
@@ -39,6 +39,7 @@ c8229ff4392aafc4f0a722c0a21676106c53de12 data/enhanced_playthrough/tags/items/in
 41626319275fa1bc9234e4a6af0a8d33660fe2a6 data/enhanced_playthrough/tags/items/ingots/bronzium.json
 cb17b6b07a4285c827b9c9c4136b42e1ec699878 data/enhanced_playthrough/tags/items/ingots/green_gold.json
 c4bcf37ab059c86b304bc4945a29f984d4571c0d data/enhanced_playthrough/tags/items/ingots/purple_gold.json
+d95e862472f9ca03ceb978c49110027d7703a19d data/enhanced_playthrough/tags/items/ingots/redonze.json
 8fdc64a179fbd1246b6ae90bb4c0b9de86a47928 data/enhanced_playthrough/tags/items/ingots/rose_gold.json
 b389bd8b9048624c130dc909e506478b22aded0b data/enhanced_playthrough/tags/items/ingots/silver.json
 d4c382fd80e3db9371b76d593e7c4c9ded30562b data/enhanced_playthrough/tags/items/ingots/steel.json
@@ -48,7 +49,7 @@ d4c382fd80e3db9371b76d593e7c4c9ded30562b data/enhanced_playthrough/tags/items/in
 4162a109f672bddadb69abe88f6342254b40ad60 data/enhanced_playthrough/tags/items/ingredients/alchemical_duplicating.json
 d510cf04b28705a416a5b128a2bb701fce231baa data/enhanced_playthrough/tags/items/ingredients/alloy.json
 06ae42aba3379240aed92f122c7f762c3702cd2d data/enhanced_playthrough/tags/items/ingredients/basic_smelt.json
-15d7aba76deeda91360fcea869395153c5f5d84c data/enhanced_playthrough/tags/items/ingredients/blast_alloy.json
+e541afd6dc3c2356ced9b8b6b27bb5604289685a data/enhanced_playthrough/tags/items/ingredients/blast_alloy.json
 5e721bdc414693a14c4480e190f068f275b27533 data/enhanced_playthrough/tags/items/ingredients/masonry.json
 059eab766b1b4ac8bab98359a1db1a2275438309 data/enhanced_playthrough/tags/items/ingredients/mechanical_grind.json
 80e5501bc57523ca9713ed14d3257f77474fb650 data/enhanced_playthrough/tags/items/ingredients/primal_grind.json
@@ -71,6 +72,7 @@ aae115d005c5fe23885c738fc2e13a317ee65c89 data/enhanced_playthrough/tags/items/or
 64ae58872b3379836337e00a0b98acb20093b8ef data/enhanced_playthrough/tags/items/plant_fiber_sources.json
 a29e2e50465ab38a68a2093c12f05c359213acb0 data/enhanced_playthrough/tags/items/purple_gold.json
 c48734bcfcda2db12268011ee56ef74e370665d9 data/enhanced_playthrough/tags/items/raw_gems.json
+22e515a4e25e0db08d5aa020a4e3fd2f915951a7 data/enhanced_playthrough/tags/items/redonze.json
 23b7f237258e89a443190cc767e97e82751d96d1 data/enhanced_playthrough/tags/items/rods/aluminum.json
 e97d3cde796be7b4a1d50272f01c553083aea757 data/enhanced_playthrough/tags/items/rods/purple_gold.json
 41d09bca681706aed453840b7f668293ec7dd711 data/enhanced_playthrough/tags/items/rods/reinforced_stick.json
@@ -95,7 +97,7 @@ a2809eefeb5127ce6cbb247c4ac406b07ce833a8 data/enhanced_playthrough/tags/items/te
 9e678dceaef9047c3e28478a89e0395f7f53db75 data/enhanced_playthrough/tags/items/tools/steel_pickaxe.json
 dd45b2fedd17b120ce07c3e9345d41c34387316a data/enhanced_playthrough/tags/items/walnut_logs.json
 fe50d19446e0ac6b522fe2123595289515c93108 data/forge/tags/items/dusts.json
-8cb40814ca1b6c36a968d3bcdaadec1623b9b33e data/forge/tags/items/ingots.json
+b9bb406d5439f6434d135fe3178f6846bfb2443c data/forge/tags/items/ingots.json
 5cb953245495326a2398eaee4bea383aee7977df data/forge/tags/items/ingots/aluminum.json
 e0e0c5e3b09ac1077d7935e70b6703de286273e4 data/forge/tags/items/ingots/blue_gold.json
 ce47231e83e04d0826e5a4a124a477a3b10117a1 data/forge/tags/items/ingots/brass.json
@@ -103,12 +105,13 @@ c8229ff4392aafc4f0a722c0a21676106c53de12 data/forge/tags/items/ingots/bronze.jso
 41626319275fa1bc9234e4a6af0a8d33660fe2a6 data/forge/tags/items/ingots/bronzium.json
 cb17b6b07a4285c827b9c9c4136b42e1ec699878 data/forge/tags/items/ingots/green_gold.json
 c4bcf37ab059c86b304bc4945a29f984d4571c0d data/forge/tags/items/ingots/purple_gold.json
+d95e862472f9ca03ceb978c49110027d7703a19d data/forge/tags/items/ingots/redonze.json
 8fdc64a179fbd1246b6ae90bb4c0b9de86a47928 data/forge/tags/items/ingots/rose_gold.json
 b389bd8b9048624c130dc909e506478b22aded0b data/forge/tags/items/ingots/silver.json
 d4c382fd80e3db9371b76d593e7c4c9ded30562b data/forge/tags/items/ingots/steel.json
 70da1cccd82688eb30c7d90cbbf9ab1407efa373 data/forge/tags/items/ingots/tin.json
 8d992f8bbc2edd3ea62a304b5e336bbaf6c116ec data/forge/tags/items/ingots/zinc.json
-294eedc61a4d34edd56488b622d97647704492ee data/forge/tags/items/nuggets.json
+16b6c200fa89280b9558e7b8bb793f0ee50f4960 data/forge/tags/items/nuggets.json
 5efd24733b0fd96a28b3f994337adb0d6ef3e259 data/forge/tags/items/nuggets/aluminum.json
 c91212a6e3f0762f07fd8f2000774f55864fd5f1 data/forge/tags/items/nuggets/blue_gold.json
 8244cb5ddfb126c4bb2758da0302b2a6ee8e88c0 data/forge/tags/items/nuggets/brass.json
@@ -117,15 +120,17 @@ c91212a6e3f0762f07fd8f2000774f55864fd5f1 data/forge/tags/items/nuggets/blue_gold
 e6439d1ae54eca3fb927dcb1167addfb8790f726 data/forge/tags/items/nuggets/copper.json
 bf6fa4b08aa1b9583d3debed5453e7cf6ec128d8 data/forge/tags/items/nuggets/green_gold.json
 4a79527621cae3acb17dccfcf6556c8b69bd3084 data/forge/tags/items/nuggets/purple_gold.json
+d2eed38ba95ac1e885233061dfa92578ca5a9ede data/forge/tags/items/nuggets/redonze.json
 3290ae9cfd8f47fd0c9880b653403830e4d5dd81 data/forge/tags/items/nuggets/rose_gold.json
 8b32f43783839c640cc9973fb077190649124295 data/forge/tags/items/nuggets/silver.json
 7ca7f3a8de6fd3ad648b9028751babd424c28020 data/forge/tags/items/nuggets/steel.json
 9f779c209d781d18669c6fd80cce6667f935ca0f data/forge/tags/items/nuggets/tin.json
 74c56f339a0d44f807031dc7def4b63986a1a73f data/forge/tags/items/nuggets/zinc.json
-4aabccc39311325570ddef142e7c3381a4c7952b data/forge/tags/items/ores.json
+8a214689fcf87d736ca8d5a76750a1a40e6da0c8 data/forge/tags/items/ores.json
 245378e75a40ed5a8e70756f73fa0c2f31a2e7df data/forge/tags/items/ores/bauxite.json
 114b85c5020f2489ec29e69f25614b7c3dec9eaf data/forge/tags/items/ores/cobalt.json
 35f574e801971cfdc1a8c96f2ea18013545e1521 data/forge/tags/items/ores/copper.json
+f2053227327088f3927caefc9f0a946f110f2bd7 data/forge/tags/items/ores/garnet.json
 c345152faf407ce69f8a294af98f64164880681b data/forge/tags/items/ores/ruby.json
 9cb9f314e6c061a5a6fefadce0bb401ea2c5d22a data/forge/tags/items/ores/sapphire.json
 aae115d005c5fe23885c738fc2e13a317ee65c89 data/forge/tags/items/ores/silver.json

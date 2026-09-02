@@ -76,6 +76,11 @@ public class EPItems {
         public static final RegistryObject<Item> BRASS_NUGGET = ITEMS.register(
                 "brass_nugget", () -> new Item(new Item.Properties()));
 
+        public static final RegistryObject<Item> REDONZE_INGOT = ITEMS.register(
+                "redonze_ingot", () -> new Item(new Item.Properties()));
+        public static final RegistryObject<Item> REDONZE_NUGGET = ITEMS.register(
+                "redonze_nugget", () -> new Item(new Item.Properties()));
+
         public static final RegistryObject<Item> BRONZIUM_INGOT = ITEMS.register(
                 "bronzium_ingot",() -> new Item(new Item.Properties()));
         public static final RegistryObject<Item> BRONZIUM_NUGGET = ITEMS.register(

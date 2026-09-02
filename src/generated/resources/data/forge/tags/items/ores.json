@@ -1,5 +1,13 @@
 {
   "values": [
+    "#forge:ores/tin",
+    "#forge:ores/zinc",
+    "#forge:ores/silver",
+    "#forge:ores/bauxite",
+    "#forge:ores/sapphire",
+    "#forge:ores/ruby",
+    "#forge:ores/garnet",
+    "#forge:ores/cobalt",
     "#enhanced_playthrough:ores/sulfur",
     "#enhanced_playthrough:ores/tin",
     "#enhanced_playthrough:ores/zinc",

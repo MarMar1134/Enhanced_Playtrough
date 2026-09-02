@@ -39,8 +39,8 @@ public class SurvivalAdvancementGenerator implements ForgeAdvancementProvider.Ad
 
         Advancement unity_makes_strength = Advancement.Builder.advancement()
                 .parent(stone_age)
-                .display(taskDisplayInfo(EPBlocks.ADOBE_ALLOY_FURNACE.get(), "unity_makes_strength"))
-                .addCriterion("has_block", hasItems(EPBlocks.ADOBE_ALLOY_FURNACE.get()))
+                .display(taskDisplayInfo(EPBlocks.PRIMITIVE_ALLOY_FURNACE.get(), "unity_makes_strength"))
+                .addCriterion("has_block", hasItems(EPBlocks.PRIMITIVE_ALLOY_FURNACE.get()))
                 .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "unity_makes_strength"), existingFileHelper);
 
         //Bronze path
@@ -50,22 +50,23 @@ public class SurvivalAdvancementGenerator implements ForgeAdvancementProvider.Ad
                 .addCriterion("has_item", hasItems(EPItems.BRONZE_INGOT.get()))
                 .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "thats_new"), existingFileHelper);
 
-        Advancement abrassive_heat = Advancement.Builder.advancement()
-                .parent(thats_new)
-                .display(taskDisplayInfo(EPItems.BRASS_INGOT.get(), "abrassive_heat"))
-                .addCriterion("has_item", hasItems(EPItems.BRASS_INGOT.get()))
-                .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "abrassive_heat"), existingFileHelper);
+            //Brass branch
+            Advancement abrassive_heat = Advancement.Builder.advancement()
+                    .parent(unity_makes_strength)
+                    .display(taskDisplayInfo(EPItems.BRASS_INGOT.get(), "abrassive_heat"))
+                    .addCriterion("has_item", hasItems(EPItems.BRASS_INGOT.get()))
+                    .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "abrassive_heat"), existingFileHelper);
 
-        Advancement abrass_your_soul = Advancement.Builder.advancement()
-                .parent(abrassive_heat)
-                .display(challengeDisplayInfo(EPItems.BRASS_CHESTPLATE.get(), "abrass_your_soul"))
-                .addCriterion("has_helmet", hasItems(EPItems.BRASS_HELMET.get()))
-                .addCriterion("has_chestplate", hasItems(EPItems.BRASS_CHESTPLATE.get()))
-                .addCriterion("has_leggings", hasItems(EPItems.BRASS_LEGGINGS.get()))
-                .addCriterion("has_boots", hasItems(EPItems.BRASS_BOOTS.get()))
-                .rewards(AdvancementRewards.Builder.loot(advancementReward("abrass_your_soul")))
-                .requirements(RequirementsStrategy.AND)
-                .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "abrass_your_soul"), existingFileHelper);
+            Advancement abrass_your_soul = Advancement.Builder.advancement()
+                    .parent(abrassive_heat)
+                    .display(challengeDisplayInfo(EPItems.BRASS_CHESTPLATE.get(), "abrass_your_soul"))
+                    .addCriterion("has_helmet", hasItems(EPItems.BRASS_HELMET.get()))
+                    .addCriterion("has_chestplate", hasItems(EPItems.BRASS_CHESTPLATE.get()))
+                    .addCriterion("has_leggings", hasItems(EPItems.BRASS_LEGGINGS.get()))
+                    .addCriterion("has_boots", hasItems(EPItems.BRASS_BOOTS.get()))
+                    .rewards(AdvancementRewards.Builder.loot(advancementReward("abrass_your_soul")))
+                    .requirements(RequirementsStrategy.AND)
+                    .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "abrass_your_soul"), existingFileHelper);
 
         Advancement mighty_bronze = Advancement.Builder.advancement()
                 .parent(thats_new)
@@ -73,27 +74,40 @@ public class SurvivalAdvancementGenerator implements ForgeAdvancementProvider.Ad
                 .addCriterion("has_item", hasItems(EPItems.BRONZE_PICKAXE.get()))
                 .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "mighty_bronze"), existingFileHelper);
 
-        Advancement steel_isnt_enough = Advancement.Builder.advancement()
+        Advancement thick_as_thieves = Advancement.Builder.advancement()
                 .parent(mighty_bronze)
+                .display(taskDisplayInfo(EPBlocks.ADOBE_ALLOY_FURNACE.get(), "thick_as_thieves"))
+                .addCriterion("has_bricks_alloy_furnace", hasItems(EPBlocks.ADOBE_ALLOY_FURNACE.get()))
+                .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "thick_as_thieves"), existingFileHelper);
+
+        Advancement steel_isnt_enough = Advancement.Builder.advancement()
+                .parent(thick_as_thieves)
                 .display(taskDisplayInfo(EPItems.STEEL_INGOT.get(), "steel_isnt_enough"))
                 .addCriterion("has_item", hasItems(EPItems.STEEL_INGOT.get()))
                 .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "steel_isnt_enough"), existingFileHelper);
 
-        Advancement the_aluminated = Advancement.Builder.advancement()
-                .parent(steel_isnt_enough)
-                .display(taskDisplayInfo(EPItems.ALUMINUM_INGOT.get(), "the_aluminated"))
-                .addCriterion("has_aluminum_ingot", hasItems(EPItems.ALUMINUM_INGOT.get()))
-                .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "the_aluminated"), existingFileHelper);
+        //Aluminum branch
+            Advancement the_aluminated = Advancement.Builder.advancement()
+                    .parent(steel_isnt_enough)
+                    .display(taskDisplayInfo(EPItems.ALUMINUM_INGOT.get(), "the_aluminated"))
+                    .addCriterion("has_aluminum_ingot", hasItems(EPItems.ALUMINUM_INGOT.get()))
+                    .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "the_aluminated"), existingFileHelper);
 
-        Advancement vale_4 = Advancement.Builder.advancement()
-                .parent(steel_isnt_enough)
-                .display(taskDisplayInfo(EPBlocks.ALCHEMICAL_DUPLICATOR.get(), "vale_4"))
-                .addCriterion("has_alchemical_duplicator", hasItems(EPBlocks.ALCHEMICAL_DUPLICATOR.get()))
-                .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "vale_4"), existingFileHelper);
+            Advancement the_conspiration = Advancement.Builder.advancement()
+                    .parent(the_aluminated)
+                    .display(taskDisplayInfo(EPBlocks.MASONRY_FURNACE.get(), "the_conspiration"))
+                    .addCriterion("has_masonry_furnace", hasItems(EPBlocks.MASONRY_FURNACE.get()))
+                    .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "the_conspiration"), existingFileHelper);
+
+//        Advancement vale_4 = Advancement.Builder.advancement()
+//                .parent(steel_isnt_enough)
+//                .display(taskDisplayInfo(EPBlocks.ALCHEMICAL_DUPLICATOR.get(), "vale_4"))
+//                .addCriterion("has_alchemical_duplicator", hasItems(EPBlocks.ALCHEMICAL_DUPLICATOR.get()))
+//                .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "vale_4"), existingFileHelper);
 
         //Gold path
         Advancement ancient_knowledge = Advancement.Builder.advancement()
-                .parent(unity_makes_strength)
+                .parent(thick_as_thieves)
                 .display(taskDisplayInfo(Items.MAP, "ancient_knowledge"))
                 .addCriterion("is_in_structure", inStructure(EPStructures.ANCIENT_LORDS_DOMAIN))
                 .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "ancient_knowledge"), existingFileHelper);
@@ -127,23 +141,24 @@ public class SurvivalAdvancementGenerator implements ForgeAdvancementProvider.Ad
                 .requirements(RequirementsStrategy.AND)
                 .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "the_goldenpuff_girls"), existingFileHelper);
 
-        Advancement design_choices = Advancement.Builder.advancement()
-                .parent(ancient_knowledge)
-                .display(taskDisplayInfo(EPItems.PURPLE_GOLD_INGOT.get(), "design_choices"))
-                .addCriterion("has_purple_gold_ingot", InventoryChangeTrigger.TriggerInstance.hasItems(EPItems.PURPLE_GOLD_INGOT.get()))
-                .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "design_choices"), existingFileHelper);
+            //Purple gold branch
+            Advancement design_choices = Advancement.Builder.advancement()
+                    .parent(ancient_knowledge)
+                    .display(taskDisplayInfo(EPItems.PURPLE_GOLD_INGOT.get(), "design_choices"))
+                    .addCriterion("has_purple_gold_ingot", InventoryChangeTrigger.TriggerInstance.hasItems(EPItems.PURPLE_GOLD_INGOT.get()))
+                    .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "design_choices"), existingFileHelper);
 
-        Advancement the_man_behind_the_slaughter = Advancement.Builder.advancement()
-                .parent(design_choices)
-                .display(challengeDisplayInfo(EPItems.PURPLE_GOLD_IRON_DAGGER.get(), "the_man_behind_the_slaughter"))
-                .addCriterion("killed_villagers", WeaponKillTrigger.killedWithWeapon(
-                        EntityPredicate.Builder.entity().of(EntityType.VILLAGER)
-                                .flags(EntityFlagsPredicate.Builder.flags().setIsBaby(true).build()),
-                        ItemPredicate.Builder.item().of(EPItems.PURPLE_GOLD_IRON_DAGGER.get()),
-                        MinMaxBounds.Ints.atLeast(5)
-                ))
-                .rewards(AdvancementRewards.Builder.experience(1987))
-                .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "the_man_behind_the_slaughter"), existingFileHelper);
+            Advancement the_man_behind_the_slaughter = Advancement.Builder.advancement()
+                    .parent(design_choices)
+                    .display(challengeDisplayInfo(EPItems.PURPLE_GOLD_IRON_DAGGER.get(), "the_man_behind_the_slaughter"))
+                    .addCriterion("killed_villagers", WeaponKillTrigger.killedWithWeapon(
+                            EntityPredicate.Builder.entity().of(EntityType.VILLAGER)
+                                    .flags(EntityFlagsPredicate.Builder.flags().setIsBaby(true).build()),
+                            ItemPredicate.Builder.item().of(EPItems.PURPLE_GOLD_IRON_DAGGER.get()),
+                            MinMaxBounds.Ints.atLeast(5)
+                    ))
+                    .rewards(AdvancementRewards.Builder.experience(1987))
+                    .save(consumer, new ResourceLocation(EnhancedPlaythrough.MOD_ID, "the_man_behind_the_slaughter"), existingFileHelper);
     }
 
     @Override

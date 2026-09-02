@@ -1,5 +1,5 @@
 {
-  "parent": "enhanced_playthrough:unity_makes_strength",
+  "parent": "enhanced_playthrough:thick_as_thieves",
   "criteria": {
     "is_in_structure": {
       "conditions": {

@@ -1,5 +1,5 @@
 {
-  "parent": "enhanced_playthrough:mighty_bronze",
+  "parent": "enhanced_playthrough:thick_as_thieves",
   "criteria": {
     "has_item": {
       "conditions": {

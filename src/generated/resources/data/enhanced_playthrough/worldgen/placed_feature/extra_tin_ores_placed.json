@@ -1,9 +1,9 @@
 {
-  "feature": "enhanced_playthrough:small_tin_ores",
+  "feature": "enhanced_playthrough:extra_tin_ores",
   "placement": [
     {
       "type": "minecraft:count",
-      "count": 6
+      "count": 8
     },
     {
       "type": "minecraft:in_square"
@@ -13,10 +13,10 @@
       "height": {
         "type": "minecraft:trapezoid",
         "max_inclusive": {
-          "absolute": 140
+          "absolute": 70
         },
         "min_inclusive": {
-          "absolute": 90
+          "absolute": 0
         }
       }
     },

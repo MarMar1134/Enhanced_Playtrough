@@ -27,155 +27,153 @@ public class EPItemModelProvider extends ItemModelProvider {
         super(output, EnhancedPlaythrough.MOD_ID, existingFileHelper);
     }
 
-    @Override
-    protected void registerModels() {
-        //Blocks with item
-            //Polished stone
-            blockWithItem(EPBlocks.POLISHED_STONE_SLAB);
-            blockWithItem(EPBlocks.POLISHED_STONE_STAIRS);
-            wallItem(EPBlocks.POLISHED_STONE_WALL, EPBlocks.POLISHED_STONE);
+    private void registerBlockModels(){
+        //Polished stone
+        blockWithItem(EPBlocks.POLISHED_STONE_SLAB);
+        blockWithItem(EPBlocks.POLISHED_STONE_STAIRS);
+        wallItem(EPBlocks.POLISHED_STONE_WALL, EPBlocks.POLISHED_STONE);
 
-            //Cobbled limestone
-            blockWithItem(EPBlocks.COBBLED_LIMESTONE_SLAB);
-            blockWithItem(EPBlocks.COBBLED_LIMESTONE_STAIRS);
-            wallItem(EPBlocks.COBBLED_LIMESTONE_WALL, EPBlocks.COBBLED_LIMESTONE);
+        //Cobbled limestone
+        blockWithItem(EPBlocks.COBBLED_LIMESTONE_SLAB);
+        blockWithItem(EPBlocks.COBBLED_LIMESTONE_STAIRS);
+        wallItem(EPBlocks.COBBLED_LIMESTONE_WALL, EPBlocks.COBBLED_LIMESTONE);
 
-            //Limestone
-            blockWithItem(EPBlocks.LIMESTONE_SLAB);
-            blockWithItem(EPBlocks.LIMESTONE_STAIRS);
-            wallItem(EPBlocks.LIMESTONE_WALL, EPBlocks.LIMESTONE);
+        //Limestone
+        blockWithItem(EPBlocks.LIMESTONE_SLAB);
+        blockWithItem(EPBlocks.LIMESTONE_STAIRS);
+        wallItem(EPBlocks.LIMESTONE_WALL, EPBlocks.LIMESTONE);
 
-            //Polished limestone
-            blockWithItem(EPBlocks.POLISHED_LIMESTONE_SLAB);
-            blockWithItem(EPBlocks.POLISHED_LIMESTONE_STAIRS);
-            wallItem(EPBlocks.POLISHED_LIMESTONE_WALL, EPBlocks.POLISHED_LIMESTONE);
+        //Polished limestone
+        blockWithItem(EPBlocks.POLISHED_LIMESTONE_SLAB);
+        blockWithItem(EPBlocks.POLISHED_LIMESTONE_STAIRS);
+        wallItem(EPBlocks.POLISHED_LIMESTONE_WALL, EPBlocks.POLISHED_LIMESTONE);
 
-            //Limestone bricks
-            blockWithItem(EPBlocks.LIMESTONE_BRICK_SLAB);
-            blockWithItem(EPBlocks.LIMESTONE_BRICK_STAIRS);
-            wallItem(EPBlocks.LIMESTONE_BRICK_WALL, EPBlocks.LIMESTONE_BRICKS);
+        //Limestone bricks
+        blockWithItem(EPBlocks.LIMESTONE_BRICK_SLAB);
+        blockWithItem(EPBlocks.LIMESTONE_BRICK_STAIRS);
+        wallItem(EPBlocks.LIMESTONE_BRICK_WALL, EPBlocks.LIMESTONE_BRICKS);
 
-            //Cobbled soulstone
-            blockWithItem(EPBlocks.COBBLED_SOULSTONE_SLAB);
-            blockWithItem(EPBlocks.COBBLED_SOULSTONE_STAIRS);
-            wallItem(EPBlocks.COBBLED_SOULSTONE_WALL, EPBlocks.COBBLED_SOULSTONE);
+        //Cobbled soulstone
+        blockWithItem(EPBlocks.COBBLED_SOULSTONE_SLAB);
+        blockWithItem(EPBlocks.COBBLED_SOULSTONE_STAIRS);
+        wallItem(EPBlocks.COBBLED_SOULSTONE_WALL, EPBlocks.COBBLED_SOULSTONE);
 
-            //soulstone
-            blockWithItem(EPBlocks.SOULSTONE_SLAB);
-            blockWithItem(EPBlocks.SOULSTONE_STAIRS);
-            wallItem(EPBlocks.SOULSTONE_WALL, EPBlocks.SOULSTONE);
+        //soulstone
+        blockWithItem(EPBlocks.SOULSTONE_SLAB);
+        blockWithItem(EPBlocks.SOULSTONE_STAIRS);
+        wallItem(EPBlocks.SOULSTONE_WALL, EPBlocks.SOULSTONE);
 
-            //soulstone bricks
-            blockWithItem(EPBlocks.SOULSTONE_BRICK_SLAB);
-            blockWithItem(EPBlocks.SOULSTONE_BRICK_STAIRS);
-            wallItem(EPBlocks.SOULSTONE_BRICK_WALL, EPBlocks.SOULSTONE_BRICKS);
+        //soulstone bricks
+        blockWithItem(EPBlocks.SOULSTONE_BRICK_SLAB);
+        blockWithItem(EPBlocks.SOULSTONE_BRICK_STAIRS);
+        wallItem(EPBlocks.SOULSTONE_BRICK_WALL, EPBlocks.SOULSTONE_BRICKS);
 
-            //Firebrick
-            blockWithItem(EPBlocks.FIREBRICKS);
-            blockWithItem(EPBlocks.FIREBRICK_SLAB);
-            blockWithItem(EPBlocks.FIREBRICK_STAIRS);
-            wallItem(EPBlocks.FIREBRICK_WALL, EPBlocks.FIREBRICKS);
+        //Firebrick
+        blockWithItem(EPBlocks.FIREBRICKS);
+        blockWithItem(EPBlocks.FIREBRICK_SLAB);
+        blockWithItem(EPBlocks.FIREBRICK_STAIRS);
+        wallItem(EPBlocks.FIREBRICK_WALL, EPBlocks.FIREBRICKS);
 
-            //Wood
-                //walnut
-                saplingAndCropItem(EPBlocks.WALNUT_SAPLING);
+        //Wood
+        //walnut
+        saplingAndCropItem(EPBlocks.WALNUT_SAPLING);
 
-                simpleBlockItem(EPBlocks.WALNUT_DOOR);
-                trapdoorItem(EPBlocks.WALNUT_TRAPDOOR);
+        simpleBlockItem(EPBlocks.WALNUT_DOOR);
+        trapdoorItem(EPBlocks.WALNUT_TRAPDOOR);
 
-                buttonItem(EPBlocks.WALNUT_BUTTON, EPBlocks.WALNUT_PLANKS);
+        buttonItem(EPBlocks.WALNUT_BUTTON, EPBlocks.WALNUT_PLANKS);
 
-                blockWithItem(EPBlocks.WALNUT_PRESSURE_PLATE);
+        blockWithItem(EPBlocks.WALNUT_PRESSURE_PLATE);
 
-                blockWithItem(EPBlocks.WALNUT_SLAB);
-                blockWithItem(EPBlocks.WALNUT_STAIRS);
-                fenceItem(EPBlocks.WALNUT_FENCE, EPBlocks.WALNUT_PLANKS);
-                blockWithItem(EPBlocks.WALNUT_FENCEGATE);
+        blockWithItem(EPBlocks.WALNUT_SLAB);
+        blockWithItem(EPBlocks.WALNUT_STAIRS);
+        fenceItem(EPBlocks.WALNUT_FENCE, EPBlocks.WALNUT_PLANKS);
+        blockWithItem(EPBlocks.WALNUT_FENCEGATE);
 
-                simpleItem(EPItems.WALNUT_SIGN);
-                simpleItem(EPItems.WALNUT_HANGING_SIGN);
+        simpleItem(EPItems.WALNUT_SIGN);
+        simpleItem(EPItems.WALNUT_HANGING_SIGN);
 
-                simpleItem(EPItems.WALNUT_BOAT);
-                simpleItem(EPItems.WALNUT_CHEST_BOAT);
+        simpleItem(EPItems.WALNUT_BOAT);
+        simpleItem(EPItems.WALNUT_CHEST_BOAT);
 
-                //Apple
-                saplingAndCropItem(EPBlocks.APPLE_SAPLING);
-                saplingAndCropItem(EPBlocks.GREEN_APPLE_SAPLING);
+        //Apple
+        saplingAndCropItem(EPBlocks.APPLE_SAPLING);
+        saplingAndCropItem(EPBlocks.GREEN_APPLE_SAPLING);
 
-                leavesWithFruitItem(EPBlocks.APPLE_LEAVES_WITH_FRUIT);
-                leavesWithFruitItem(EPBlocks.GREEN_APPLE_LEAVES_WITH_FRUIT);
+        leavesWithFruitItem(EPBlocks.APPLE_LEAVES_WITH_FRUIT);
+        leavesWithFruitItem(EPBlocks.GREEN_APPLE_LEAVES_WITH_FRUIT);
 
-                simpleBlockItem(EPBlocks.APPLE_DOOR);
-                trapdoorItem(EPBlocks.APPLE_TRAPDOOR);
+        simpleBlockItem(EPBlocks.APPLE_DOOR);
+        trapdoorItem(EPBlocks.APPLE_TRAPDOOR);
 
-                buttonItem(EPBlocks.APPLE_BUTTON, EPBlocks.APPLE_PLANKS);
+        buttonItem(EPBlocks.APPLE_BUTTON, EPBlocks.APPLE_PLANKS);
 
-                blockWithItem(EPBlocks.APPLE_PRESSURE_PLATE);
+        blockWithItem(EPBlocks.APPLE_PRESSURE_PLATE);
 
-                blockWithItem(EPBlocks.APPLE_SLAB);
-                blockWithItem(EPBlocks.APPLE_STAIRS);
+        blockWithItem(EPBlocks.APPLE_SLAB);
+        blockWithItem(EPBlocks.APPLE_STAIRS);
 
-                fenceItem(EPBlocks.APPLE_FENCE, EPBlocks.APPLE_PLANKS);
-                blockWithItem(EPBlocks.APPLE_FENCEGATE);
+        fenceItem(EPBlocks.APPLE_FENCE, EPBlocks.APPLE_PLANKS);
+        blockWithItem(EPBlocks.APPLE_FENCEGATE);
 
-                simpleItem(EPItems.APPLE_SIGN);
-                simpleItem(EPItems.APPLE_HANGING_SIGN);
+        simpleItem(EPItems.APPLE_SIGN);
+        simpleItem(EPItems.APPLE_HANGING_SIGN);
 
-                simpleItem(EPItems.APPLE_BOAT);
-                simpleItem(EPItems.APPLE_CHEST_BOAT);
+        simpleItem(EPItems.APPLE_BOAT);
+        simpleItem(EPItems.APPLE_CHEST_BOAT);
 
-                //Orange
-                saplingAndCropItem(EPBlocks.ORANGE_SAPLING);
+        //Orange
+        saplingAndCropItem(EPBlocks.ORANGE_SAPLING);
 
-                leavesWithFruitItem(EPBlocks.ORANGE_LEAVES_WITH_FRUIT);
+        leavesWithFruitItem(EPBlocks.ORANGE_LEAVES_WITH_FRUIT);
 
-                simpleBlockItem(EPBlocks.ORANGE_DOOR);
-                trapdoorItem(EPBlocks.ORANGE_TRAPDOOR);
+        simpleBlockItem(EPBlocks.ORANGE_DOOR);
+        trapdoorItem(EPBlocks.ORANGE_TRAPDOOR);
 
-                buttonItem(EPBlocks.ORANGE_BUTTON, EPBlocks.ORANGE_PLANKS);
+        buttonItem(EPBlocks.ORANGE_BUTTON, EPBlocks.ORANGE_PLANKS);
 
-                blockWithItem(EPBlocks.ORANGE_PRESSURE_PLATE);
+        blockWithItem(EPBlocks.ORANGE_PRESSURE_PLATE);
 
-                blockWithItem(EPBlocks.ORANGE_SLAB);
-                blockWithItem(EPBlocks.ORANGE_STAIRS);
+        blockWithItem(EPBlocks.ORANGE_SLAB);
+        blockWithItem(EPBlocks.ORANGE_STAIRS);
 
-                fenceItem(EPBlocks.ORANGE_FENCE, EPBlocks.ORANGE_PLANKS);
-                blockWithItem(EPBlocks.ORANGE_FENCEGATE);
+        fenceItem(EPBlocks.ORANGE_FENCE, EPBlocks.ORANGE_PLANKS);
+        blockWithItem(EPBlocks.ORANGE_FENCEGATE);
 
-                simpleItem(EPItems.ORANGE_SIGN);
-                simpleItem(EPItems.ORANGE_HANGING_SIGN);
+        simpleItem(EPItems.ORANGE_SIGN);
+        simpleItem(EPItems.ORANGE_HANGING_SIGN);
 
-                simpleItem(EPItems.ORANGE_BOAT);
-                simpleItem(EPItems.ORANGE_CHEST_BOAT);
+        simpleItem(EPItems.ORANGE_BOAT);
+        simpleItem(EPItems.ORANGE_CHEST_BOAT);
 
-                //Lemon
-                saplingAndCropItem(EPBlocks.LEMON_SAPLING);
+        //Lemon
+        saplingAndCropItem(EPBlocks.LEMON_SAPLING);
 
-                leavesWithFruitItem(EPBlocks.LEMON_LEAVES_WITH_FRUIT);
+        leavesWithFruitItem(EPBlocks.LEMON_LEAVES_WITH_FRUIT);
 
-                simpleBlockItem(EPBlocks.LEMON_DOOR);
-                trapdoorItem(EPBlocks.LEMON_TRAPDOOR);
+        simpleBlockItem(EPBlocks.LEMON_DOOR);
+        trapdoorItem(EPBlocks.LEMON_TRAPDOOR);
 
-                buttonItem(EPBlocks.LEMON_BUTTON, EPBlocks.LEMON_PLANKS);
+        buttonItem(EPBlocks.LEMON_BUTTON, EPBlocks.LEMON_PLANKS);
 
-                blockWithItem(EPBlocks.LEMON_PRESSURE_PLATE);
+        blockWithItem(EPBlocks.LEMON_PRESSURE_PLATE);
 
-                blockWithItem(EPBlocks.LEMON_SLAB);
-                blockWithItem(EPBlocks.LEMON_STAIRS);
+        blockWithItem(EPBlocks.LEMON_SLAB);
+        blockWithItem(EPBlocks.LEMON_STAIRS);
 
-                fenceItem(EPBlocks.LEMON_FENCE, EPBlocks.LEMON_PLANKS);
-                blockWithItem(EPBlocks.LEMON_FENCEGATE);
+        fenceItem(EPBlocks.LEMON_FENCE, EPBlocks.LEMON_PLANKS);
+        blockWithItem(EPBlocks.LEMON_FENCEGATE);
 
-                simpleItem(EPItems.LEMON_SIGN);
-                simpleItem(EPItems.LEMON_HANGING_SIGN);
+        simpleItem(EPItems.LEMON_SIGN);
+        simpleItem(EPItems.LEMON_HANGING_SIGN);
 
-                simpleItem(EPItems.LEMON_BOAT);
-                simpleItem(EPItems.LEMON_CHEST_BOAT);
+        simpleItem(EPItems.LEMON_BOAT);
+        simpleItem(EPItems.LEMON_CHEST_BOAT);
 
-                //Lime
-                saplingAndCropItem(EPBlocks.LIME_SAPLING);
+        //Lime
+        saplingAndCropItem(EPBlocks.LIME_SAPLING);
 
-                leavesWithFruitItem(EPBlocks.LIME_LEAVES_WITH_FRUIT);
+        leavesWithFruitItem(EPBlocks.LIME_LEAVES_WITH_FRUIT);
 
         //Calibrated quartz
         blockWithItem(EPBlocks.CALIBRATED_QUARTZ_BLOCK);
@@ -219,6 +217,12 @@ public class EPItemModelProvider extends ItemModelProvider {
         blockWithItem(EPBlocks.ALCHEMICAL_DUPLICATOR);
 
         blockWithItem(EPBlocks.LEATHERWORKER_STATION);
+    }
+
+    @Override
+    protected void registerModels() {
+        //Blocks
+        registerBlockModels();
 
         //Food
         simpleItem(EPItems.ROTTEN_CARROT);
@@ -279,48 +283,65 @@ public class EPItemModelProvider extends ItemModelProvider {
 
         simpleItem(EPItems.CORN_SEEDS);
 
-        //Ores
+        //Sulfur
         simpleItem(EPItems.SULFUR);
 
+        //Copper
         simpleItem(EPItems.COPPER_NUGGET);
 
+        //Tin
         simpleItem(EPItems.RAW_TIN);
         simpleItem(EPItems.TIN_INGOT);
         simpleItem(EPItems.TIN_NUGGET);
 
+        //Zinc
         simpleItem(EPItems.RAW_ZINC);
         simpleItem(EPItems.ZINC_INGOT);
         simpleItem(EPItems.ZINC_NUGGET);
 
+        //Brass
         simpleItem(EPItems.BRASS_INGOT);
         simpleItem(EPItems.BRASS_NUGGET);
 
+        //Bronze
         simpleItem(EPItems.BRONZE_INGOT);
         simpleItem(EPItems.BRONZE_NUGGET);
 
+        //Redonze
+        simpleItem(EPItems.REDONZE_INGOT);
+        simpleItem(EPItems.REDONZE_NUGGET);
+
+        //Rose gold
+        simpleItem(EPItems.ROSE_GOLD_INGOT);
+        simpleItem(EPItems.ROSE_GOLD_NUGGET);
+
+        //Bronzium
+        simpleItem(EPItems.BRONZIUM_INGOT);
+        simpleItem(EPItems.BRONZIUM_NUGGET);
+
+        //Green gold
+        simpleItem(EPItems.GREEN_GOLD_INGOT);
+        simpleItem(EPItems.GREEN_GOLD_NUGGET);
+
+        //Steel
         simpleItem(EPItems.STEEL_INGOT);
         simpleItem(EPItems.STEEL_NUGGET);
 
+        //Silver
         simpleItem(EPItems.RAW_SILVER);
         simpleItem(EPItems.SILVER_INGOT);
         simpleItem(EPItems.SILVER_NUGGET);
 
+        //Aluminum
         simpleItem(EPItems.RAW_ALUMINUM);
         simpleItem(EPItems.ALUMINUM_INGOT);
         simpleItem(EPItems.ALUMINUM_NUGGET);
 
-        simpleItem(EPItems.ROSE_GOLD_INGOT);
-        simpleItem(EPItems.ROSE_GOLD_NUGGET);
-
-        simpleItem(EPItems.BRONZIUM_INGOT);
-        simpleItem(EPItems.BRONZIUM_NUGGET);
-
-        simpleItem(EPItems.GREEN_GOLD_INGOT);
-        simpleItem(EPItems.GREEN_GOLD_NUGGET);
-
+        //Blue gold
         simpleItem(EPItems.BLUE_GOLD_INGOT);
         simpleItem(EPItems.BLUE_GOLD_NUGGET);
 
+        //Purple gold
         simpleItem(EPItems.PURPLE_GOLD_INGOT);
         simpleItem(EPItems.PURPLE_GOLD_NUGGET);
 

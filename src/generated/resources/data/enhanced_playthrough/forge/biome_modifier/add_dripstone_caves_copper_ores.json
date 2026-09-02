@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "minecraft:dripstone_caves",
+  "features": "enhanced_playthrough:dripstone_caves_copper_ores_placed",
+  "step": "underground_ores"
+}

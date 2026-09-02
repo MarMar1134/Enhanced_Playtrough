@@ -1,9 +1,9 @@
 {
-  "feature": "enhanced_playthrough:small_tin_ores",
+  "feature": "enhanced_playthrough:legacy_diamond_ores",
   "placement": [
     {
       "type": "minecraft:count",
-      "count": 7
+      "count": 5
     },
     {
       "type": "minecraft:in_square"
@@ -13,10 +13,10 @@
       "height": {
         "type": "minecraft:trapezoid",
         "max_inclusive": {
-          "absolute": 30
+          "absolute": 24
         },
         "min_inclusive": {
-          "absolute": -40
+          "absolute": 0
         }
       }
     },

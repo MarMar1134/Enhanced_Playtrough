@@ -127,78 +127,82 @@ public class ChileanLangProvider extends AbstractLangProvider {
         addMobEffect("frostbite", "Congelación");
 
         //Advancements
-        //Survival
-        addSurvivalAdvancement("survival_root", "Enhanced Playthrough",
-                "Iniciaste una nueva aventura en este mundo fantástico, ¡bienvenido!");
-        addSurvivalAdvancement("stone_age", "Un asunto adoquinado",
-                "Obtén un pedazo de adoquín");
-        addSurvivalAdvancement("unity_makes_strength", "La unión hace la fuerza",
-                "Craftea un horno de aleación");
-        addSurvivalAdvancement("ancient_knowledge", "Conocimiento antiguo",
-                "Encuentra el Dominio del Señor Antiguo");
-        addSurvivalAdvancement("blossom", "Bombón",
-                "Funde oro y cobre para obtener oro rosado");
-        addSurvivalAdvancement("buttercup", "Bellota",
-                "Funde oro y plata para obtener oro verde");
-        addSurvivalAdvancement("bubbles", "Búrbuja",
-                "Funde oro y cobalto para obtener oro azul");
-        addSurvivalAdvancement("the_goldenpuff_girls", "Las chicas súper-doradas",
-                "Consigue las tres aleaciones de oro");
+            //Survival
+            addSurvivalAdvancement("survival_root", "Enhanced Playthrough",
+                    "Iniciaste una nueva aventura en este mundo fantástico, ¡bienvenido!");
+            addSurvivalAdvancement("stone_age", "Un asunto adoquinado",
+                    "Obtén un pedazo de adoquín");
+            addSurvivalAdvancement("thick_as_thieves", "Como uña y mugre",
+                    "Craftea un horno de aleación de ladrillos");
+            addSurvivalAdvancement("unity_makes_strength", "La unión hace la fuerza",
+                    "Craftea un horno de aleación de barro");
+            addSurvivalAdvancement("ancient_knowledge", "Conocimiento antiguo",
+                    "Encuentra el Dominio del Señor Antiguo");
+            addSurvivalAdvancement("blossom", "Bombón",
+                    "Funde oro y cobre para obtener oro rosado");
+            addSurvivalAdvancement("buttercup", "Bellota",
+                    "Funde oro y plata para obtener oro verde");
+            addSurvivalAdvancement("bubbles", "Búrbuja",
+                    "Funde oro y cobalto para obtener oro azul");
+            addSurvivalAdvancement("the_goldenpuff_girls", "Las chicas súper-doradas",
+                    "Consigue las tres aleaciones de oro");
 
-        addSurvivalAdvancement("thats_new", "Eso... es nuevo",
-                "Obtén un lingote de bronce");
-        addSurvivalAdvancement("abrassive_heat", "Platón, el herrero",
-                "Obtén un lingote de latón");
-        addSurvivalAdvancement("abrass_your_soul", "Amor platónico",
-                "Obtén una armadura de latón");
-        addSurvivalAdvancement("mighty_bronze", "Bronceado divino",
-                "Obtén un pico de bronce");
-        addSurvivalAdvancement("steel_isnt_enough", "No tiende a-cero",
-                "Utiliza tu horno de aleación para fundir algo de acero");
-        addSurvivalAdvancement("the_aluminated", "El aluminado",
-                "Obtén un lingote de aluminio");
-        addSurvivalAdvancement("vale_4", "Quiero vale 4",
-                "Craftéa un duplicador alquímico");
+            addSurvivalAdvancement("thats_new", "Eso... es nuevo",
+                    "Obtén un lingote de bronce");
+            addSurvivalAdvancement( "abrassive_heat", "Platón, el herrero",
+                    "Obtén un lingote de latón");
+            addSurvivalAdvancement("abrass_your_soul", "Amor platónico",
+                    "Obtén una armadura de latón");
+            addSurvivalAdvancement( "mighty_bronze", "Bronceado divino",
+                    "Obtén un pico de bronce");
+            addSurvivalAdvancement("steel_isnt_enough", "No tiende a-cero",
+                    "Utiliza tu horno de aleación para fundir algo de acero");
+            addSurvivalAdvancement("the_aluminated", "El aluminado",
+                    "Obtén un lingote de aluminio");
+            addSurvivalAdvancement("the_conspiration", "La conspiración",
+                    "craftea un horno de mamposteria");
+            addSurvivalAdvancement("vale_4", "Quiero vale 4",
+                    "Crafteá un duplicador alquímico");
 
-        addSurvivalAdvancement("design_choices", "Elección de diseño",
-                "Funde oro y aluminio para obtener oro morado.");
-        addSurvivalAdvancement("the_man_behind_the_slaughter", "Hace años que ocurrió...",
-                "Máta a 5 aldeanos pequeños con una daga de hierro con mango de oro morado.");
+            addSurvivalAdvancement("design_choices", "Elección de diseño",
+                    "Funde oro y aluminio para obtener oro morado.");
+            addSurvivalAdvancement("the_man_behind_the_slaughter", "Hace años que ocurrió...",
+                    "Máta a 5 aldeanos pequeños con una daga de hierro con mango de oro morado.");
 
-        //Gems
-        addGemAdvancement("colours_root", "Los colores del mundo",
-                "Nuestro mundo reluce en colores, ¿que tal si vas a descubrirlos todos?");
+            //Gems
+            addGemAdvancement("colours_root", "Los colores del mundo",
+                    "Nuestro mundo reluce en colores, ¿que tal si vas a descubrirlos todos?");
 
-        addGemAdvancement("has_any_polisher", "Tarea fina",
-                "Craftéa una herramienta de pulido");
-        addGemAdvancement("polish_emerald", "Intento de grinch",
-                "Consigue algunas esmeraldas y cuidalas de los, ¿quienes?");
-        addGemAdvancement("polish_sapphire", "Horizonte azulado",
-                "Consigue algunos záfiros y visita un rato el mar");
-        addGemAdvancement("polish_ruby", "Pajarito enojón",
-                "Consigue algunos rubies y muestrale a los cerdos quién manda");
-        addGemAdvancement("polish_garnet", "El color de mi corazón",
-                "Consigue algunos granates y demuestra tu pasión");
-        addGemAdvancement("polish_diamond", "Estás aquí, Lucy?",
-                "Consigue algunos diamantes para poder ver mejor el cielo");
-        addGemAdvancement("get_all_gems", "Caos por doquier",
-                "Consigue todas las gemas y conviertete en el señor del caos");
+            addGemAdvancement("has_any_polisher", "Tarea fina",
+                    "Craftéa una herramienta de pulido");
+            addGemAdvancement("polish_emerald", "Intento de grinch",
+                    "Consigue algunas esmeraldas y cuidalas de los, ¿quienes?");
+            addGemAdvancement("polish_sapphire", "Horizonte azulado",
+                    "Consigue algunos záfiros y visita un rato el mar");
+            addGemAdvancement("polish_ruby", "Pajarito enojón",
+                    "Consigue algunos rubies y muestrale a los cerdos quién manda");
+            addGemAdvancement("polish_garnet", "El color de mi corazón",
+                    "Consigue algunos granates y demuestra tu pasión");
+            addGemAdvancement("polish_diamond", "Estás aquí, Lucy?",
+                    "Consigue algunos diamantes para poder ver mejor el cielo");
+            addGemAdvancement("get_all_gems", "Caos por doquier",
+                    "Consigue todas las gemas y conviertete en el señor del caos");
 
-        //Flowers
-        addGemAdvancement("first_flower", "La raiz de todo",
-                "Obtén tu primer flor");
-        addGemAdvancement("all_small_flowers", "David",
-                "Obtén todas las flores pequeñas");
-        addGemAdvancement("all_tall_flowers", "Goliat",
-                "Obtén todas las flores altas");
-        addGemAdvancement("all_flowers", "El diario de la botecaria",
-                "Obtén todas las flores");
+            //Flowers
+            addGemAdvancement("first_flower", "La raiz de todo",
+                    "Obtén tu primer flor");
+            addGemAdvancement("all_small_flowers", "David",
+                    "Obtén todas las flores pequeñas");
+            addGemAdvancement("all_tall_flowers", "Goliat",
+                    "Obtén todas las flores altas");
+            addGemAdvancement("all_flowers", "El diario de la botecaria",
+                    "Obtén todas las flores");
 
-        //Rotten crops
-        addGemAdvancement("any_rotten_crop", "... Está horrible",
-                "Obtén un cultivo podrido/venenoso");
-        addGemAdvancement("rotten_stew", "El fuego purifica",
-                "Recolecta tus cultivos podridos y prepara un guiso para luego... cocinarlo");
+            //Rotten crops
+            addGemAdvancement("any_rotten_crop", "... Está horrible",
+                    "Obtén un cultivo podrido/venenoso");
+            addGemAdvancement("rotten_stew", "El fuego purifica",
+                    "Recolecta tus cultivos podridos y prepara un guiso para luego... cocinarlo");
 
         //Entities
         addBoatEntity("Barco");
@@ -469,6 +473,8 @@ public class ChileanLangProvider extends AbstractLangProvider {
         addItem(EPItems.BRASS_NUGGET, "Pepita de latón");
         addItem(EPItems.BRONZE_INGOT, "Lingote de bronce");
         addItem(EPItems.BRONZE_NUGGET, "Pepita de bronce");
+        addItem(EPItems.REDONZE_INGOT, "Lingote de redonze");
+        addItem(EPItems.REDONZE_NUGGET, "Pepita de redonze");
         addItem(EPItems.ROSE_GOLD_INGOT, "Lingote de oro rosado");
         addItem(EPItems.ROSE_GOLD_NUGGET, "Pepita de oro rosado");
         addItem(EPItems.BRONZIUM_INGOT, "Lingote de broncio");

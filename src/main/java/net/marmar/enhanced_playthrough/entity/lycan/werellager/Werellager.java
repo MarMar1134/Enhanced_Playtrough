@@ -1,6 +1,6 @@
 package net.marmar.enhanced_playthrough.entity.lycan.werellager;
 
-import net.marmar.enhanced_playthrough.entity.lycan.AbstractLycanMob;
+import net.marmar.enhanced_playthrough.entity.lycan.AbstractLycan;
 import net.marmar.enhanced_playthrough.util.EPSoundEvents;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.syncher.EntityDataAccessor;
@@ -23,7 +23,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraftforge.common.ForgeMod;
 
-public class Werellager extends AbstractLycanMob {
+public class Werellager extends AbstractLycan {
     private static final EntityDataAccessor<Boolean> ATTACKING = SynchedEntityData.defineId(Werellager.class, EntityDataSerializers.BOOLEAN);
 
     public final AnimationState idleAnimationState = new AnimationState();

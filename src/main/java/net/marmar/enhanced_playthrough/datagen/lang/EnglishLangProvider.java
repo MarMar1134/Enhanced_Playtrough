@@ -132,8 +132,10 @@ public class EnglishLangProvider extends AbstractLangProvider {
                     "You started a new journey on this fantastic world, welcome!");
             addSurvivalAdvancement("stone_age", "A cobbled business",
                     "Get a piece of cobble");
+            addSurvivalAdvancement("thick_as_thieves", "Thick as thieves",
+                    "Craft a mud bricks alloy furnace");
             addSurvivalAdvancement("unity_makes_strength", "Unity makes strength",
-                    "Craft an alloy furnace");
+                    "Craft a bricks alloy furnace");
             addSurvivalAdvancement("ancient_knowledge", "Ancient Knowledge",
                     "Find the Ancient Lord's Domain");
             addSurvivalAdvancement("blossom", "Blossom",
@@ -469,6 +471,8 @@ public class EnglishLangProvider extends AbstractLangProvider {
             addItem(EPItems.BRASS_NUGGET, "Brass nugget");
             addItem(EPItems.BRONZE_INGOT, "Bronze ingot");
             addItem(EPItems.BRONZE_NUGGET, "Bronze nugget");
+            addItem(EPItems.REDONZE_INGOT, "Redonze ingot");
+            addItem(EPItems.REDONZE_NUGGET, "Redonze nugget");
             addItem(EPItems.ROSE_GOLD_INGOT, "Rose gold ingot");
             addItem(EPItems.ROSE_GOLD_NUGGET, "Rose gold nugget");
             addItem(EPItems.BRONZIUM_INGOT, "Bronzium ingot");
